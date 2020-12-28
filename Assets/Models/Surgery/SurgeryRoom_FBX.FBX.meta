@@ -1,0 +1,633 @@
+fileFormatVersion: 2
+guid: c6799c3542651e847935036f31446a0f
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default
+    second: {fileID: 2100000, guid: 8d83e4bdf432e0c42b0c6c6b202ceb08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default
+    second: {fileID: 2100000, guid: 4d3622d22d70a404491d42c1d54797da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 15 - Default
+    second: {fileID: 2100000, guid: a092cddcbefef0e4f92b9d57ff643c85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 16 - Default
+    second: {fileID: 2100000, guid: c9575ca579527d0429b43f5d700cae3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Black Plastic
+    second: {fileID: 2100000, guid: 0c0955b2f73f5cc4081fc3f0a1b683c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Black Textured Plastic
+    second: {fileID: 2100000, guid: 0b8e20287911fe44bba78164a405a1ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Blue
+    second: {fileID: 2100000, guid: e9a00ed21bc7de74ca78fb41f028f207, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Blue Plastic
+    second: {fileID: 2100000, guid: 1b6a7ed439200e84ea75e1467fc17640, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Brushed Stainless Steel
+    second: {fileID: 2100000, guid: 54d59b48258aa5e49b40c63cb150d60c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Casters
+    second: {fileID: 2100000, guid: 42f0bdf4b9a9c254bb875ef313a9c657, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Chrome
+    second: {fileID: 2100000, guid: 6bd30df804bd71a46893a15b26110d53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Clear Plastic
+    second: {fileID: 2100000, guid: 8eda3902380272649824d8acdbcfed69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Clear Plastic (Tinted)
+    second: {fileID: 2100000, guid: 18f93a08a5d08e44da734f4816c6b07e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Dial Face
+    second: {fileID: 2100000, guid: 7788f0f5b00f80841b26f572adc44f5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Dial Hands
+    second: {fileID: 2100000, guid: c8670d0ea4771f845a75c9f498213978, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Gray Plastic
+    second: {fileID: 2100000, guid: d84de1a1ca9b79041883c93610485347, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Green
+    second: {fileID: 2100000, guid: ce852053b4c80b34480a8ea3ceb546f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - LCD
+    second: {fileID: 2100000, guid: fb3da09645c25ed4591b2133af82e8de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Red
+    second: {fileID: 2100000, guid: 15d548c83bd103149a9ba0de2293d292, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Stainless Steel
+    second: {fileID: 2100000, guid: 220b5a18f582708409fb15f884f3b12d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia Tower - Steel
+    second: {fileID: 2100000, guid: 35b821dbd42be354f821135b1a06c1da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anodized Aluminium
+    second: {fileID: 2100000, guid: 6d402a383458a9f4abcaa6add4c35940, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black 2
+    second: {fileID: 2100000, guid: 6bb64293c5d52bf43bb01e7a85a432c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Button Casing
+    second: {fileID: 2100000, guid: 5d306fc7ba3b17d458b56eb5a17d1171, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabinet
+    second: {fileID: 2100000, guid: 72eeb8b2661db714992923decd6a3eab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabinet 2
+    second: {fileID: 2100000, guid: 6ca5daa2f4452d744b37e2fb24c8055d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabinet Glass - Clear Reflective
+    second: {fileID: 2100000, guid: 41cceea5ffc236f46ab16573fc55d609, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabinet Handles
+    second: {fileID: 2100000, guid: 8e7f72d86e0dc06409ab1029c516235b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabinet Shelves
+    second: {fileID: 2100000, guid: cda1bc8567831534493e766c55e81e21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Casters
+    second: {fileID: 2100000, guid: 04ba55eb6acd4f0499e00258093263e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Contamination Tray - Plastic - Clear
+    second: {fileID: 2100000, guid: 5e22073a3a3573542aa4272c34db708a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Contamination Tray - Plastic - Teal
+    second: {fileID: 2100000, guid: 156f299c93acbbc4d9431a4d200c7449, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Contamination Tray - Towel - Blue
+    second: {fileID: 2100000, guid: 3ca3122896e03f04cb0851565d29538a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cork - Natural
+    second: {fileID: 2100000, guid: 4762ff8f43dad8044acf78b10e6a09ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DRE -Material - Box Blue
+    second: {fileID: 2100000, guid: 78ff2d13e659eee4c8b8fece33076ac3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DRE -Material - Box Grey Lt
+    second: {fileID: 2100000, guid: 42c4be6751a134f4abca1cb12560916f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DRE -Material - Box Grey Med
+    second: {fileID: 2100000, guid: 00800a1370dd8f44590bd0bc71cda6d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DRE -Material - Box Red
+    second: {fileID: 2100000, guid: 9461a2261b30bbd408a14db7669332a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DRE -Material - Box Yellow
+    second: {fileID: 2100000, guid: 1603daabdaf75574b8b5175c531efed3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DRE -Material - Label Purple
+    second: {fileID: 2100000, guid: b31f185b310089245968ae294864bc10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default
+    second: {fileID: 2100000, guid: 338e58a409c560a429057116ab683929, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default 2
+    second: {fileID: 2100000, guid: 2a75ee007c3e8fe49a0c2c841bb8fee6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default Floor
+    second: {fileID: 2100000, guid: 4f67306441d5c754bbdf5970e5402e18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dell Monitor - Grey Plastic
+    second: {fileID: 2100000, guid: 01a6da7caa56010418bbe29996738dff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dell Monitor Screen - Black
+    second: {fileID: 2100000, guid: ba495d593ffb6f44494d6b72967278e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door - Frame
+    second: {fileID: 2100000, guid: e8bcdcaa0222d234db0a323dabf77692, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door - Glass - Clear
+    second: {fileID: 2100000, guid: 2fd05945f7d227a46988a4d1af6c6b66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door - Panel
+    second: {fileID: 2100000, guid: 80cf506ca1012ac418be413177a7e349, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frame Material - Plastic
+    second: {fileID: 2100000, guid: 27791c35b9fad5846ab74115f6ee19e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: G. Steel
+    second: {fileID: 2100000, guid: 76e5b33b506f68543aa5105490d56680, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Generic
+    second: {fileID: 2100000, guid: a7d91965a82b20742b3a576b146f9671, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Generic - Monitor Screen
+    second: {fileID: 2100000, guid: 1f281a50f84b1964794717e63b1e3150, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Generic - Plastic - Black
+    second: {fileID: 2100000, guid: 23c1baced2d5f0d4a859a968ae30d3ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Generic - Plastic - White
+    second: {fileID: 2100000, guid: 9aa76cab43ecf0b43999b2aff25c45c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass - Fire Alarm
+    second: {fileID: 2100000, guid: 4f1fe7c2c784abb48927a849de476326, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass - White Transparent
+    second: {fileID: 2100000, guid: 3cca4756a7f6f5845826eb4daa5342d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gypsum Wall Board
+    second: {fileID: 2100000, guid: bca555e0671eeb346aabb7bfb7267cc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LCD - Screen - Black
+    second: {fileID: 2100000, guid: aae7d05c5dddfe1498bcd39946b86d77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LCD TV - Black Plastic
+    second: {fileID: 2100000, guid: 8c655efe9f3869c4999cda4dbc17c854, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LCD TV - Blue LED
+    second: {fileID: 2100000, guid: 6d03c0d36f604304a90ec0525b7206ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LCD TV - Dark Grey Plastic
+    second: {fileID: 2100000, guid: 1b041c61b39139f4093b253317b86828, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light Gray
+    second: {fileID: 2100000, guid: 8891315b8a4deb84ebd2a484dd56dff3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liquid - Red
+    second: {fileID: 2100000, guid: e4e2c21e8c697a44ca347d3670534663, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maquet Blue
+    second: {fileID: 2100000, guid: 406f9e42be17204439eea0d82e02161c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maquet White
+    second: {fileID: 2100000, guid: d1e77a0e3e2e37246a84055c63e265b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal - Paint Beige Gloss
+    second: {fileID: 2100000, guid: c00972e5b11cfce44abec6c19b3204d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal - Paint Beige Matte
+    second: {fileID: 2100000, guid: ca764928a18be4b488dda7f58534488d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal - Paint Grey
+    second: {fileID: 2100000, guid: 1b6649b0f0f91d742a71886f9dc8e480, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal - Stud Layer
+    second: {fileID: 2100000, guid: d3e4ec9656b068f42914c2d4d67c5330, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Paint - Red
+    second: {fileID: 2100000, guid: 1d214f9e9813be54b9365462d2085c83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Paint - Silver
+    second: {fileID: 2100000, guid: 5c29075e87642534fb95441e949e0ed6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Paint - White
+    second: {fileID: 2100000, guid: 0987693689507f94e8be76ad59229357, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neutral Gray
+    second: {fileID: 2100000, guid: 7dbdabfe0b8913941b41f44b3ca6375c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: e12648c2e2ee0af40aed5f08796022ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Panel
+    second: {fileID: 2100000, guid: 81d515b3184d4544a95b63cae2372304, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic - Clear - Cup
+    second: {fileID: 2100000, guid: 45e7fd42c72593e4e9c20fa6a45e3fde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic White
+    second: {fileID: 2100000, guid: 0785797142f5a634886ff0b42580dc00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Render Material 255-255- 256
+    second: {fileID: 2100000, guid: 86db9866df8b3d048bf2f093acdd1f9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Render Material 255-255-255
+    second: {fileID: 2100000, guid: c8892a93dd547374e940c11b61d130fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rubber
+    second: {fileID: 2100000, guid: dddbf58e95798674f8753373b01e42f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rubber Black
+    second: {fileID: 2100000, guid: 7730f45d8ad27864680d70529bcbe5af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rubber Dark Gray
+    second: {fileID: 2100000, guid: 1cd7b1a20583efc44a4926a91df991af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rubber Floor
+    second: {fileID: 2100000, guid: 5140aed42662cbe4aa858c0d73d3912f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rubber Floor - Dark Blue
+    second: {fileID: 2100000, guid: 82985516af908f1499fcfa4e95fee8ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rubber Floor - Dark Blue 2
+    second: {fileID: 2100000, guid: e5a3da3b6597e7f439a811836c817b62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen Glass
+    second: {fileID: 2100000, guid: 6ee0c41710252a346ae7619fa0400bb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Seat Black Leather
+    second: {fileID: 2100000, guid: 9bdb031f6a00b2344b43b696602a5535, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stainless Steel
+    second: {fileID: 2100000, guid: b4ef40559f57edb42923ad2462c7bca0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steel, Chrome Plated
+    second: {fileID: 2100000, guid: 222b09b920271ff4a9bae981ed52d533, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Surgery Room Clock - Rauland - 2521 - Black Plastic
+    second: {fileID: 2100000, guid: beba231ed7352ef48846d8157041bd97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Surgery Room Clock - Rauland - 2521 - Dark Glass
+    second: {fileID: 2100000, guid: df3ed05ab72876042972a65267236f49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Surgery Room Clock - Rauland - 2521 - Grey Plastic
+    second: {fileID: 2100000, guid: 1c3062fe73cd77349b10ee30e63e44f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Surgery Room Clock - Rauland - 2521 - Red
+    second: {fileID: 2100000, guid: 08912a533fcc372409bf2ba7f09d30f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trumpf - Black Plastic
+    second: {fileID: 2100000, guid: 343dfbfb10c858f44ac32f3b7f72c6f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trumpf - Black Screen
+    second: {fileID: 2100000, guid: bb3d7b9cfd7d68b4e99b6dbd8e0b43d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trumpf - Grey Plastic
+    second: {fileID: 2100000, guid: 72efc071adb2e904e9e4589bafae1582, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trumpf - White Plastic
+    second: {fileID: 2100000, guid: 160b120048ef0f5438f475a1aa12ccca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trumpf Anodized Surgery
+    second: {fileID: 2100000, guid: cc890a1bdbba238489f3b77991e8e398, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trumpf Black Plastic Surgery
+    second: {fileID: 2100000, guid: ca8169cd488764d45bd6ce4bad9bdb3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trumpf Cushion Surgery
+    second: {fileID: 2100000, guid: 358fb8b186d715942bb752d53b408068, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trumpf Metal Surgery
+    second: {fileID: 2100000, guid: 4b9ab1cc26be93c42b7f89fe0824d026, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trumpf Stainless Surgery
+    second: {fileID: 2100000, guid: dc124854717acfc4595f30669fb7572b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ventilator - Paint - Grey
+    second: {fileID: 2100000, guid: fd23880c4e6c39741a0e801520b0d8d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 405c34bd4ab8a8446bd6069cb9d9c3b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White Fresnel
+    second: {fileID: 2100000, guid: 9c946e382a7aad342af9797a3cf1c23e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood - Laminate - Top
+    second: {fileID: 2100000, guid: 686e9c8688f353347adc2eb41502a8b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood Solid
+    second: {fileID: 2100000, guid: 593caad759eee4f4180b74e045f14848, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
