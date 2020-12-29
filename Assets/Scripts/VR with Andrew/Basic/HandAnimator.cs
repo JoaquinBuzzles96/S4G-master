@@ -8,6 +8,12 @@ public class HandAnimator : MonoBehaviour
     public float speed = 5.0f;
     public XRController controller = null;
 
+    public CharacterController characterController;
+    public GameObject parent;
+
+    private float turnDegrees;
+    private bool canTurn = true;
+
     private Animator animator = null;
 
     private readonly List<Finger> gripFingers = new List<Finger>
@@ -40,6 +46,8 @@ public class HandAnimator : MonoBehaviour
         // Apply smoothed values
         AnimateFinger(pointFingers);
         AnimateFinger(gripFingers);
+
+        turnDegrees = 45;
     }
 
     private void CheckInputs()
@@ -66,6 +74,34 @@ public class HandAnimator : MonoBehaviour
         {
             SetFingerTargets(gripFingers, gripValue);
         }
+
+        if (controller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 rightPrimaryAxisValue))
+        {
+            if (rightPrimaryAxisValue.x != 0 && canTurn)
+            {
+                if (rightPrimaryAxisValue.x > 0)
+                {
+                    parent.transform.Rotate(new Vector3(0, turnDegrees, 0));
+                    canTurn = false;
+                }
+                else if (rightPrimaryAxisValue.x < 0)
+                {
+                    parent.transform.Rotate(new Vector3(0, -turnDegrees, 0));
+                    canTurn = false;
+                }
+                /*
+                Vector3 direction = new Vector3(rightPrimaryAxisValue.y, 0, rightPrimaryAxisValue.y); //TODO: cambiar esto a que sea solo un giro
+                characterController.Move(direction);
+                */
+            }
+            else if(rightPrimaryAxisValue.x == 0)
+            {
+                canTurn = true;
+            }
+        }
+
+        
+
     }
 
     private void SetFingerTargets(List<Finger> fingers, float value)

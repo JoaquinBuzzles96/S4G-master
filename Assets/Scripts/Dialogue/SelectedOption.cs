@@ -7,6 +7,7 @@ public class SelectedOption : MonoBehaviour
 {
     public Text text;
 
+
     void Start()
     {
         
