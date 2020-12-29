@@ -49,10 +49,10 @@ public class PlayerController : MonoBehaviour
     {
         if (rightController.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 rightPrimaryAxisValue) && rightPrimaryAxisValue != Vector2.zero)
         {
-            Debug.Log("Estamos preparados para detectar movimiento");
+            //Debug.Log("Estamos preparados para detectar movimiento");
             if (rightPrimaryAxisValue.x > 0)
             {
-                Debug.Log("Giramos a la derecha");
+                //Debug.Log("Giramos a la derecha");
                 //mover camara a la der
                 playerCamera.transform.rotation = new Quaternion(playerCamera.transform.rotation.x, playerCamera.transform.rotation.y + turnDegrees, playerCamera.transform.rotation.z, playerCamera.transform.rotation.w);
             }
