@@ -145,7 +145,7 @@ public class DialogueGraphView : GraphView
     {
         var targetEdge = edges.ToList().Where(x => x.output.portName == generatedPort.portName && x.output.node == generatedPort.node);
 
-        if (!targetEdge.Any())
+        if (targetEdge.Any())
         {
             var edge = targetEdge.First();
             edge.input.Disconnect(edge);

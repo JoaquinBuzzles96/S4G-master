@@ -10,7 +10,7 @@ using UnityEditor.Experimental.GraphView;
 public class DialogueGraph : EditorWindow
 {
     private DialogueGraphView _graphView;
-    private string _fileName;
+    private string _fileName = "New Narrative";
 
     [MenuItem("Graph/Dialogue Graph")]
     public static void OpenDialogueGraphWindow()
@@ -49,7 +49,7 @@ public class DialogueGraph : EditorWindow
         var toolbar = new Toolbar();
         //Campo de texto editable
         var fileNameTextField = new TextField("File Name:");
-        fileNameTextField.SetValueWithoutNotify("New Narrative");
+        fileNameTextField.SetValueWithoutNotify(_fileName);
         fileNameTextField.MarkDirtyRepaint();
         fileNameTextField.RegisterValueChangedCallback(evt => _fileName = evt.newValue);
         toolbar.Add(fileNameTextField);
