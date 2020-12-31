@@ -5,12 +5,19 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine.UIElements;
 using System;
 using System.Linq;
+using UnityEditor;
+
 
 public class DialogueGraphView : GraphView
 {
 
     public readonly Vector2 defaultNodeSize = new Vector2(150, 200);
-    public DialogueGraphView()
+
+    public Blackboard Blackboard;
+    public List<ExposedProperty> ExposedProperties = new List<ExposedProperty>();
+    private NodeSearchWindow _searchWindow;
+
+    public DialogueGraphView(EditorWindow editorWindow)
     {
         styleSheets.Add(Resources.Load<StyleSheet>("DialogueGraph"));
         SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale );
@@ -24,6 +31,57 @@ public class DialogueGraphView : GraphView
         grid.StretchToParentSize(); 
 
         AddElement(GenerateEntryPointNode());
+        AddSearchWindow(editorWindow);
+
+    }
+
+    private void AddSearchWindow(EditorWindow editorWindow)
+    {
+        _searchWindow = ScriptableObject.CreateInstance<NodeSearchWindow>();
+        _searchWindow.Init(editorWindow, this);
+        nodeCreationRequest = context => SearchWindow.Open(new SearchWindowContext(context.screenMousePosition), _searchWindow);
+    }
+
+    public void ClearBlackBoardAndExposedProperties()
+    {
+        ExposedProperties.Clear();
+        Blackboard.Clear();
+    }
+
+    public void AddPropertyToBlackBoard(ExposedProperty exposedProperty)
+    {
+        var localPropertyName = exposedProperty.PropertyName;
+        var localPropertyValue = exposedProperty.PropertyValue;
+        while(ExposedProperties.Any(x=> x.PropertyName == localPropertyName))
+        {
+            localPropertyName = $"{localPropertyName}(1)"; //con esto hacemos que los nombre sean unicos
+        }
+
+
+        var property = new ExposedProperty();
+        property.PropertyName = localPropertyName;
+        property.PropertyValue = localPropertyValue;
+        ExposedProperties.Add(property);
+
+        var container = new VisualElement();
+        var blackboardField = new BlackboardField { text = property.PropertyName, typeText = "string property"};
+        container.Add(blackboardField);
+
+        var propertyValueTextField = new TextField("Value")
+        {
+            value = localPropertyValue
+        };
+        propertyValueTextField.RegisterValueChangedCallback(evt => 
+        {
+            var changingPropertyIndex = ExposedProperties.FindIndex(x => x.PropertyName == property.PropertyName);
+            ExposedProperties[changingPropertyIndex].PropertyValue = evt.newValue;
+        });
+        
+        var blackBoardValueRow = new BlackboardRow(blackboardField, propertyValueTextField);
+        container.Add(blackBoardValueRow);
+
+
+        Blackboard.Add(container);
     }
 
     public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
@@ -70,12 +128,12 @@ public class DialogueGraphView : GraphView
         return node;
     }
 
-    public void CreateNode(string nodeName)
+    public void CreateNode(string nodeName, Vector2 position)
     {
-        AddElement(CreateDialogueNode(nodeName));
+        AddElement(CreateDialogueNode(nodeName, position));
     }
 
-    public DialogueNode CreateDialogueNode(string nodeName)
+    public DialogueNode CreateDialogueNode(string nodeName, Vector2 position)
     {
         var dialogueNode = new DialogueNode
         {
@@ -105,7 +163,7 @@ public class DialogueGraphView : GraphView
 
         dialogueNode.RefreshExpandedState();
         dialogueNode.RefreshPorts();
-        dialogueNode.SetPosition(new Rect(Vector2.zero, defaultNodeSize));
+        dialogueNode.SetPosition(new Rect(position, defaultNodeSize));
         return dialogueNode;
     }
 
@@ -155,6 +213,6 @@ public class DialogueGraphView : GraphView
         dialogueNode.outputContainer.Remove(generatedPort);
         dialogueNode.RefreshPorts();
         dialogueNode.RefreshExpandedState();
-        
     }
+
 }

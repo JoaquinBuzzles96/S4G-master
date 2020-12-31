@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 using UnityEditor.UIElements;
 using System;
 using UnityEditor.Experimental.GraphView;
+using System.Linq;
 
 public class DialogueGraph : EditorWindow
 {
@@ -24,18 +25,50 @@ public class DialogueGraph : EditorWindow
         ConstructGraphView();
         GenerateToolbar();
         GenerateMiniMap();
+        GenerateBlackBoard();
+    }
+
+    private void GenerateBlackBoard()
+    {
+        var blackboard = new Blackboard(_graphView);
+        blackboard.Add(new BlackboardSection { title = "Exposed Properties"});
+        blackboard.addItemRequested = _blackBoard =>
+        {
+            _graphView.AddPropertyToBlackBoard(new ExposedProperty());
+        };
+
+        blackboard.editTextRequested = (blackboard1, element, newValue) =>
+        {
+            var oldPropertyName = ((BlackboardField)element).text;
+
+            if (_graphView.ExposedProperties.Any(x => x.PropertyName==newValue))
+            {
+                EditorUtility.DisplayDialog("Error", "This property name already exists, please choice another one!", "OK");
+                return;
+            }
+            
+            var propertyIndex = _graphView.ExposedProperties.FindIndex(x=>x.PropertyName == oldPropertyName);
+            _graphView.ExposedProperties[propertyIndex].PropertyName = newValue;
+            ((BlackboardField)element).text = newValue;
+            
+        };
+
+        blackboard.SetPosition(new Rect(10, 30, 200, 300));
+        _graphView.Add(blackboard);
+        _graphView.Blackboard = blackboard;
     }
 
     private void GenerateMiniMap()
     {
         var miniMap = new MiniMap { anchored = true };
-        miniMap.SetPosition(new Rect(10,30,200,140));
+        var cords = _graphView.contentViewContainer.WorldToLocal(new Vector2(this.maxSize.x - 10, 30));
+        miniMap.SetPosition(new Rect(cords.x, cords.y, 200,140));
         _graphView.Add(miniMap);
     }
 
     private void ConstructGraphView()
     {
-        _graphView = new DialogueGraphView
+        _graphView = new DialogueGraphView(this)
         {
             name = "Dialogue Graph"
         };
@@ -59,11 +92,14 @@ public class DialogueGraph : EditorWindow
         toolbar.Add(new Button(() => RequestDataOperation(false)) { text = "Load Data" });
 
         //Boton de crear nuevo nodo
+        /* Esto ahora se hace desde el desplegable
         var nodeCreateButton = new Button(() => {
             _graphView.CreateNode("Dialogue node");
         });
         nodeCreateButton.text = "Create Node";
         toolbar.Add(nodeCreateButton);
+        */
+
         rootVisualElement.Add(toolbar);
     }
 
