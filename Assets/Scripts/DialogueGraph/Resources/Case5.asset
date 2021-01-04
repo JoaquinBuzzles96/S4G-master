@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
+  m_Name: Case5
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: 2192f66d-5563-468e-95a5-7c44db2d67d1
+    PortName: Next
+    TargetNodeGuid: c0fb51d2-6f7f-4422-9910-4812853098cb
+  - BaseNodeGuid: c0fb51d2-6f7f-4422-9910-4812853098cb
+    PortName: Question 1
+    TargetNodeGuid: 09632ffd-808e-47e1-b80d-5d35d1c941d2
+  DialogueNodeData:
+  - Guid: c0fb51d2-6f7f-4422-9910-4812853098cb
+    DialogueText: SituationID
+    Position: {x: 299, y: 151}
+  - Guid: 09632ffd-808e-47e1-b80d-5d35d1c941d2
+    DialogueText: SituationID
+    Position: {x: 713, y: 201}
+  ExposedProperties: []

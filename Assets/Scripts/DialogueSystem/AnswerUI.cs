@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class AnswerUI : MonoBehaviour
 {
     [System.NonSerialized]
     public Answer answerData;
-    public Text description;
+    public TextMeshProUGUI description;
 
     void Start()
     {

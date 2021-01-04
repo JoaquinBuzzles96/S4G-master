@@ -8,6 +8,10 @@ public class DialogueContainer : ScriptableObject
 {
 
     public List<NodeLinkData> NodeLinks = new List<NodeLinkData>();
-    public List<DialogueNodeData> DialogueNodeData= new List<DialogueNodeData>();
+    //public List<ParentNodeData> ParentNodeData= new List<ParentNodeData>();
+    public List<SituationNodeData> SituationNodeData= new List<SituationNodeData>();
+    public List<QuestionNodeData> QuestionNodeData= new List<QuestionNodeData>();
+    public List<AnswerNodeData> AnswerNodeData= new List<AnswerNodeData>();
+
     public List<ExposedProperty> ExposedProperties = new List<ExposedProperty>();
 }

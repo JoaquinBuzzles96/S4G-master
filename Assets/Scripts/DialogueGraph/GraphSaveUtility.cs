@@ -13,7 +13,7 @@ public class GraphSaveUtility
     private DialogueContainer _containerCache;
 
     private List<Edge> Edges => _targetGraphView.edges.ToList();
-    private List<DialogueNode> Nodes => _targetGraphView.nodes.ToList().Cast<DialogueNode>().ToList();
+    private List<ParentNode> Nodes => _targetGraphView.nodes.ToList().Cast<ParentNode>().ToList();
 
     public static GraphSaveUtility GetInstance(DialogueGraphView targetGraphView)
     {
@@ -58,8 +58,8 @@ public class GraphSaveUtility
         var connectedPorts = Edges.Where(x => x.input.node != null).ToArray();
         for (int i = 0; i < connectedPorts.Length; i++)
         {
-            var outputNode = connectedPorts[i].output.node as DialogueNode;
-            var inputNode = connectedPorts[i].input.node as DialogueNode;
+            var outputNode = connectedPorts[i].output.node as ParentNode;// DialogueNode; //Case en funcion del tipo de nodo (no quitar estos, adaptarlo)
+            var inputNode = connectedPorts[i].input.node as ParentNode;
 
             dialogueContainer.NodeLinks.Add(new NodeLinkData
             {
@@ -70,16 +70,59 @@ public class GraphSaveUtility
         }
 
         //SAVE NODES
-        foreach (var dialogueNode in Nodes.Where(node => !node.EntryPoint))
+        foreach (var node in Nodes.Where(node => !node.EntryPoint))
         {
-            dialogueContainer.DialogueNodeData.Add(new DialogueNodeData
+            switch (node.nodeType)
             {
-                Guid = dialogueNode.GUID,
-                DialogueText = dialogueNode.DialogueText,
-                Position = dialogueNode.GetPosition().position
-            });
+                case NodeType.Situation:
+                    var nodeSituation = node as SituationNode;
+                    dialogueContainer.SituationNodeData.Add(new SituationNodeData
+                    {
+                        Guid = nodeSituation.GUID,
+                        SituationName = nodeSituation.nodeName,
+                        Description = nodeSituation.Description,
+                        Id = nodeSituation.Id,
+                        nodeType = nodeSituation.nodeType,
+                        Position = nodeSituation.GetPosition().position
 
+                    });
+                    break;
+                case NodeType.Question:
+                    var nodeQuestion = node as QuestionNode;
+                    dialogueContainer.QuestionNodeData.Add(new QuestionNodeData
+                    {
+                        Guid = nodeQuestion.GUID,
+                        QuestionName = nodeQuestion.nodeName,
+                        Description = nodeQuestion.Description,
+                        nodeType = nodeQuestion.nodeType,
+                        Position = nodeQuestion.GetPosition().position
+                    });
+                    break;
+                case NodeType.Answer:
+                    var nodeAnswer = node as AnswerNode;
+                    dialogueContainer.AnswerNodeData.Add(new AnswerNodeData
+                    {
+                        Guid = nodeAnswer.GUID,
+                        AnswerName = nodeAnswer.nodeName,
+                        Description = nodeAnswer.Description,
+                        Situation = nodeAnswer.Situation,
+                        IsCorrect = nodeAnswer.IsCorrect,
+                        IsEnd = nodeAnswer.IsEnd,
+                        nodeType = nodeAnswer.nodeType,
+                        Position = nodeAnswer.GetPosition().position
+                    });
+                    break;
+            }
+            //TODO: SEGUIMOS GUARDANDO AQUI UNA LISTA CON TODOS LOS PARENT NODES PARA FACILITAR EL POSTERIOR LINKADO?
+            /*
+            dialogueContainer.ParentNodeData.Add(new ParentNodeData
+            {
+                Guid = node.GUID,
+                Position = node.GetPosition().position
+            });
+            */  
         }
+
         return true;
     }
 
@@ -95,7 +138,7 @@ public class GraphSaveUtility
 
         ClearGraph();
         GenerateNodes();
-        ConnectNodes();
+        ConnectNodes(); 
         CreateExposedProperties();
     }
 
@@ -131,10 +174,33 @@ public class GraphSaveUtility
 
     private void GenerateNodes()
     {
-        foreach (var nodeData in _containerCache.DialogueNodeData)
+        foreach (var nodeData in _containerCache.SituationNodeData)
         {
-            var tempNode = _targetGraphView.CreateDialogueNode(nodeData.DialogueText, Vector2.zero);
+            var tempNode = _targetGraphView.CreateSituationNode(nodeData.SituationName, Vector2.zero);
             tempNode.GUID = nodeData.Guid;
+            //TODO: AÑADIR AQUI LOS PARAMETROS
+            _targetGraphView.AddElement(tempNode);
+
+            var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
+            nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.PortName));
+        }
+
+        foreach (var nodeData in _containerCache.QuestionNodeData)
+        {
+            var tempNode = _targetGraphView.CreateQuestionNode(nodeData.QuestionName, Vector2.zero);
+            tempNode.GUID = nodeData.Guid;
+            //TODO: AÑADIR AQUI LOS PARAMETROS
+            _targetGraphView.AddElement(tempNode);
+
+            var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
+            nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.PortName));
+        }
+
+        foreach (var nodeData in _containerCache.AnswerNodeData)
+        {
+            var tempNode = _targetGraphView.CreateAnswerNode(nodeData.AnswerName, Vector2.zero);
+            tempNode.GUID = nodeData.Guid;
+            //TODO: AÑADIR AQUI LOS PARAMETROS
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
@@ -142,7 +208,7 @@ public class GraphSaveUtility
         }
     }
 
-    private void ConnectNodes()
+    private void ConnectNodesOld()
     {
         for (var i = 0; i < Nodes.Count; i++)
         {
@@ -153,7 +219,35 @@ public class GraphSaveUtility
                 var targetNode = Nodes.First(x=>x.GUID == targetNodeGuid);
                 LinkNodes(Nodes[i].outputContainer[j].Q<Port>(), (Port) targetNode.inputContainer[0]);
 
-                targetNode.SetPosition(new Rect(_containerCache.DialogueNodeData.First(x=>x.Guid == targetNodeGuid).Position, _targetGraphView.defaultNodeSize));
+                targetNode.SetPosition(new Rect(_containerCache.QuestionNodeData.First(x=>x.Guid == targetNodeGuid).Position, _targetGraphView.defaultNodeSize));
+            }
+        }
+    }
+
+    private void ConnectNodes()
+    {
+        for (var i = 0; i < Nodes.Count; i++)
+        {
+            Debug.Log($"nodo: {Nodes[i].GUID}");
+            var connections = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == Nodes[i].GUID).ToList();
+            for (var j = 0; j < connections.Count; j++)
+            {
+                var targetNodeGuid = connections[j].TargetNodeGuid;
+                var targetNode = Nodes.First(x => x.GUID == targetNodeGuid);
+                LinkNodes(Nodes[i].outputContainer[j].Q<Port>(), (Port)targetNode.inputContainer[0]);
+
+                switch (targetNode.nodeType)
+                {
+                    case NodeType.Situation:
+                        targetNode.SetPosition(new Rect(_containerCache.SituationNodeData.First(x => x.Guid == targetNodeGuid).Position, _targetGraphView.defaultNodeSize));
+                        break;
+                    case NodeType.Question:
+                        targetNode.SetPosition(new Rect(_containerCache.QuestionNodeData.First(x => x.Guid == targetNodeGuid).Position, _targetGraphView.defaultNodeSize));
+                        break;
+                    case NodeType.Answer:
+                        targetNode.SetPosition(new Rect(_containerCache.AnswerNodeData.First(x => x.Guid == targetNodeGuid).Position, _targetGraphView.defaultNodeSize));
+                        break;
+                } 
             }
         }
     }

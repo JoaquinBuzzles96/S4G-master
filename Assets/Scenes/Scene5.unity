@@ -1890,7 +1890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aedfd32304b4a84cb3ccee9d18bd5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
+  description: {fileID: 234015889}
 --- !u!1001 &261818027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3408,7 +3408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69f61b4c2232374bbfce60e437b4e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
+  description: {fileID: 1839054206}
   answers:
   - {fileID: 234015888}
   - {fileID: 1036292006}
@@ -4739,7 +4739,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 908768726}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4770,7 +4770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -89.16, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.649, y: 1.497}
+  m_AnchoredPosition: {x: 2.649, y: 1.939}
   m_SizeDelta: {x: 57.055832, y: 42.27072}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726161756
@@ -4785,8 +4785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb0a828c0aac284580123e6ed580c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  situation: {fileID: 0}
-  descriptionText: {fileID: 0}
+  situation: {fileID: 11400000, guid: 276672d719fa72e4dbc1de6c6608639a, type: 2}
+  descriptionText: {fileID: 571394911}
   screen1: {fileID: 2030489334}
   screen2: {fileID: 523089752}
 --- !u!43 &758086013
@@ -6681,6 +6681,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 908768721}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &908768726 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8816811152053694666, guid: 33c9d2730fc1d3240b852a472d1d1eb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 908768721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &924871352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8201,7 +8207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aedfd32304b4a84cb3ccee9d18bd5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
+  description: {fileID: 1036292007}
 --- !u!43 &1042463724
 Mesh:
   m_ObjectHideFlags: 0
@@ -11588,7 +11594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aedfd32304b4a84cb3ccee9d18bd5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
+  description: {fileID: 1352240793}
 --- !u!1001 &1360820600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12451,7 +12457,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1458140507}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 726161756}
+        m_MethodName: ToScreen2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1458140507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15928,7 +15945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aedfd32304b4a84cb3ccee9d18bd5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
+  description: {fileID: 1757968798}
 --- !u!1 &1774846650
 GameObject:
   m_ObjectHideFlags: 0
@@ -23150,7 +23167,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 908768726}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -23201,7 +23218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -214.189, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.86, y: 1.497}
+  m_AnchoredPosition: {x: 5.86, y: 1.931}
   m_SizeDelta: {x: 57.055832, y: 42.27072}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2350119345544868544

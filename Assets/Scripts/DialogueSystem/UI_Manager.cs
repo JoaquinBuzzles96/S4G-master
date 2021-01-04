@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UI_Manager : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class UI_Manager : MonoBehaviour
 
     public Situation situation;
 
-    public Text descriptionText;
+    public TextMeshProUGUI descriptionText;
     public GameObject screen1;
     public GameObject screen2;
     int lastQuestion;

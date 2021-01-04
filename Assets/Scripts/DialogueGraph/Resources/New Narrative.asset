@@ -13,27 +13,49 @@ MonoBehaviour:
   m_Name: New Narrative
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 739b4e51-ae03-4582-927a-93f6493037e1
+  - BaseNodeGuid: c1196b8a-0615-463c-bab6-97acd16e0198
     PortName: Next
-    TargetNodeGuid: ceea1c07-b845-4706-82b8-de30b2c02109
-  - BaseNodeGuid: ceea1c07-b845-4706-82b8-de30b2c02109
-    PortName: Choice 1
-    TargetNodeGuid: ec96d194-7ffb-47b8-a2cc-d2b172f728a0
-  - BaseNodeGuid: ec96d194-7ffb-47b8-a2cc-d2b172f728a0
-    PortName: Choice 1
-    TargetNodeGuid: d38daf76-b27b-4fd0-a121-bd3c8634bcdc
-  DialogueNodeData:
-  - Guid: ceea1c07-b845-4706-82b8-de30b2c02109
-    DialogueText: Dialogue Node
-    Position: {x: 244, y: 40}
-  - Guid: ec96d194-7ffb-47b8-a2cc-d2b172f728a0
-    DialogueText: Dialogue Node
-    Position: {x: 410, y: 236}
-  - Guid: d38daf76-b27b-4fd0-a121-bd3c8634bcdc
-    DialogueText: Dialogue Node
-    Position: {x: 313, y: 403}
-  ExposedProperties:
-  - PropertyName: New String
-    PropertyValue: New Value
-  - PropertyName: New String(1)
-    PropertyValue: New Value
+    TargetNodeGuid: ec928ee4-1825-4fd1-b89d-ee3a7cd0812a
+  - BaseNodeGuid: ec928ee4-1825-4fd1-b89d-ee3a7cd0812a
+    PortName: Question 1
+    TargetNodeGuid: 5eebdf2b-7fd8-44f7-a763-19f6c2463ed5
+  - BaseNodeGuid: 5eebdf2b-7fd8-44f7-a763-19f6c2463ed5
+    PortName: Answer 1
+    TargetNodeGuid: db21dbf1-c169-4d91-8c4a-e626b6bb28b0
+  - BaseNodeGuid: 5eebdf2b-7fd8-44f7-a763-19f6c2463ed5
+    PortName: Answer 2
+    TargetNodeGuid: 07999735-25d6-4643-8e7f-74b266048837
+  - BaseNodeGuid: 07999735-25d6-4643-8e7f-74b266048837
+    PortName: Situation 1
+    TargetNodeGuid: ec928ee4-1825-4fd1-b89d-ee3a7cd0812a
+  SituationNodeData:
+  - Guid: ec928ee4-1825-4fd1-b89d-ee3a7cd0812a
+    SituationName: SituationID
+    Description: Situation Description
+    Id: 0
+    nodeType: 0
+    Position: {x: 156, y: -2}
+  QuestionNodeData:
+  - Guid: 5eebdf2b-7fd8-44f7-a763-19f6c2463ed5
+    QuestionName: QuestionID
+    Description: Question Description
+    nodeType: 1
+    Position: {x: 403, y: 37}
+  AnswerNodeData:
+  - Guid: db21dbf1-c169-4d91-8c4a-e626b6bb28b0
+    AnswerName: AnswerID
+    Description: Answer Description
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    Position: {x: 715, y: 53}
+  - Guid: 07999735-25d6-4643-8e7f-74b266048837
+    AnswerName: AnswerID
+    Description: Answer Description
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    Position: {x: 678, y: -146}
+  ExposedProperties: []

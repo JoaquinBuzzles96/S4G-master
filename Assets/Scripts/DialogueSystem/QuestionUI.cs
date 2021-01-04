@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class QuestionUI : MonoBehaviour
 {
-    public Text description;
+    public TextMeshProUGUI description;
     public Button[] answers;
     [System.NonSerialized]
     public Question questionData;

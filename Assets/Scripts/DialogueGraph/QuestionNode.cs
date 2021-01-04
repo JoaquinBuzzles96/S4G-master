@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Experimental.GraphView;
 
-public class DialogueNode : ParentNode
+public class QuestionNode : ParentNode
 {
 
-    public string SituationName;
-
-    public string Id;
 }
