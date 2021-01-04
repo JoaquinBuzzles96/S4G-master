@@ -12,6 +12,7 @@ public class DialogueGraph : EditorWindow
 {
     private DialogueGraphView _graphView;
     private string _fileName = "New Narrative";
+    //private string caseName = "New Narrative";
 
     [MenuItem("Graph/Dialogue Graph")]
     public static void OpenDialogueGraphWindow()
@@ -106,7 +107,17 @@ public class DialogueGraph : EditorWindow
 
     private void GenerateCase()
     {
-        //TODO
+        //Antes de generarlo guardamos el grafo:
+        RequestDataOperation(true);
+
+        //Generamos en base al caso guardado
+        if (string.IsNullOrEmpty(_fileName))
+        {
+            EditorUtility.DisplayDialog("Invalid case name!", "Please enter a valid case name", "OK");
+        }
+
+        var saveUtility = GraphSaveUtility.GetInstance(_graphView);
+        saveUtility.Generate(_fileName);
     }
 
     private void RequestDataOperation(bool save)

@@ -24,7 +24,7 @@ public class QuestionUI : MonoBehaviour
 
     public void SetupQuestion()
     {
-        description.text = questionData.text;
+        description.text = questionData.Description;
         answers[0].GetComponent<AnswerUI>().SetupAnswer(questionData.posibleAnswers[0]);
         answers[1].GetComponent<AnswerUI>().SetupAnswer(questionData.posibleAnswers[1]);
         answers[2].GetComponent<AnswerUI>().SetupAnswer(questionData.posibleAnswers[2]);

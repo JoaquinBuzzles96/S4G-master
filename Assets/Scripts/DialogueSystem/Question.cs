@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Question", menuName = "Question")]
 public class Question : ScriptableObject
 {
-    
-    public string text;
-    public Situation situation;
-    public Answer[] posibleAnswers;
+    public string questionName;
+    public string Description;
+    //public Situation situation;
+    public List<Answer> posibleAnswers;
 
 }

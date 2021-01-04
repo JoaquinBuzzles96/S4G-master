@@ -5,7 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Situation", menuName = "Situation")]
 public class Situation : ScriptableObject
 {
+    public string situationName;
     public string description;
     public int id;
-    public Question[] questions;
+    public List<Question> questions;
 }

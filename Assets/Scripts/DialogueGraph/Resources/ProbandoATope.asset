@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
-  m_Name: New Narrative
+  m_Name: ProbandoATope
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 0b3696f4-2e48-45f4-84b9-337b8499c1b2
@@ -19,12 +19,12 @@ MonoBehaviour:
   - BaseNodeGuid: 979820d8-23e5-44f7-a150-fd49a3f15933
     PortName: Question 1
     TargetNodeGuid: b0d3a72a-7384-4fd9-951e-4cea4c616e21
-  - BaseNodeGuid: b0d3a72a-7384-4fd9-951e-4cea4c616e21
-    PortName: Answer 1
-    TargetNodeGuid: a46841ef-875a-4662-bcd9-4fecaabeeb99
   - BaseNodeGuid: 979820d8-23e5-44f7-a150-fd49a3f15933
     PortName: Question 2
     TargetNodeGuid: 77c10914-f3d3-4ddb-8fc1-51fcc877a2aa
+  - BaseNodeGuid: b0d3a72a-7384-4fd9-951e-4cea4c616e21
+    PortName: Answer 1
+    TargetNodeGuid: a46841ef-875a-4662-bcd9-4fecaabeeb99
   - BaseNodeGuid: 77c10914-f3d3-4ddb-8fc1-51fcc877a2aa
     PortName: Answer 1
     TargetNodeGuid: 73c2451b-650a-4153-9c83-6b9b3c6b56d1
@@ -33,34 +33,34 @@ MonoBehaviour:
     TargetNodeGuid: 979820d8-23e5-44f7-a150-fd49a3f15933
   SituationNodeData:
   - Guid: 979820d8-23e5-44f7-a150-fd49a3f15933
-    SituationName: SituationID
-    Description: Situation Description
-    Id: 0
+    SituationName: Situacion1
+    Description: asefsefwe
+    Id: 1
     nodeType: 0
     Position: {x: 314, y: 38}
   QuestionNodeData:
   - Guid: b0d3a72a-7384-4fd9-951e-4cea4c616e21
-    QuestionName: QuestionID
-    Description: Question Description
+    QuestionName: Pregunta1
+    Description: SDFNSIUFHNSI
     nodeType: 1
     Position: {x: 599, y: 77}
   - Guid: 77c10914-f3d3-4ddb-8fc1-51fcc877a2aa
-    QuestionName: QuestionID
-    Description: Question Description
+    QuestionName: Pregunta2
+    Description: sdfsiufnhsifsi
     nodeType: 1
     Position: {x: 356, y: 259}
   AnswerNodeData:
   - Guid: 73c2451b-650a-4153-9c83-6b9b3c6b56d1
-    AnswerName: AnswerID
-    Description: Answer Description
+    AnswerName: Respuesta2
+    Description: sfsfsfsa
     Situation: 
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
     Position: {x: 666, y: 358}
   - Guid: a46841ef-875a-4662-bcd9-4fecaabeeb99
-    AnswerName: AnswerID
-    Description: Answer Description
+    AnswerName: Respuesta1
+    Description: sefsfs
     Situation: 
     IsCorrect: 0
     IsEnd: 0

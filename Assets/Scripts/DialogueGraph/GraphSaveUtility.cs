@@ -15,6 +15,10 @@ public class GraphSaveUtility
     private List<Edge> Edges => _targetGraphView.edges.ToList();
     private List<ParentNode> Nodes => _targetGraphView.nodes.ToList().Cast<ParentNode>().ToList();
 
+    private Dictionary<String, Situation> GeneratedSituations = new Dictionary<string, Situation>();
+    private Dictionary<String, Question> GeneratedQuestions = new Dictionary<string, Question>();
+    private Dictionary<String, Answer> GeneratedAnswers = new Dictionary<string, Answer>();
+
     public static GraphSaveUtility GetInstance(DialogueGraphView targetGraphView)
     {
         return new GraphSaveUtility
@@ -38,6 +42,118 @@ public class GraphSaveUtility
         }
 
         AssetDatabase.CreateAsset(dialogueContainer, $"Assets/Scripts/DialogueGraph/Resources/{fileName}.asset");
+        AssetDatabase.SaveAssets();
+    }
+
+    public void Generate(string caseName)
+    {
+        //Comprobamos que las carpetas esten creadas, y si no lo estan las creamos
+        if (!AssetDatabase.IsValidFolder($"Assets/Scripts/DialogueGraph/{caseName}"))
+        {
+            AssetDatabase.CreateFolder("Assets/Scripts/DialogueGraph", caseName);
+            AssetDatabase.CreateFolder($"Assets/Scripts/DialogueGraph/{caseName}", "Situations");
+            AssetDatabase.CreateFolder($"Assets/Scripts/DialogueGraph/{caseName}", "Questions");
+            AssetDatabase.CreateFolder($"Assets/Scripts/DialogueGraph/{caseName}", "Answers");
+        }
+        else 
+        {
+            if (!AssetDatabase.IsValidFolder($"Assets/Scripts/DialogueGraph/{caseName}/Situations"))
+            {
+                AssetDatabase.CreateFolder($"Assets/Scripts/DialogueGraph/{caseName}", "Situations");
+            }
+            if (!AssetDatabase.IsValidFolder($"Assets/Scripts/DialogueGraph/{caseName}/Questions"))
+            {
+                AssetDatabase.CreateFolder($"Assets/Scripts/DialogueGraph/{caseName}", "Questions");
+            }
+            if (!AssetDatabase.IsValidFolder($"Assets/Scripts/DialogueGraph/{caseName}/Answers"))
+            {
+                AssetDatabase.CreateFolder($"Assets/Scripts/DialogueGraph/{caseName}", "Answers");
+            }
+        }
+        
+        _containerCache = Resources.Load<DialogueContainer>(caseName);
+
+        //Generamos los scriptable objects //NODOS
+
+        foreach (var answer in _containerCache.AnswerNodeData)
+        {
+            var answerAux = ScriptableObject.CreateInstance<Answer>();
+            answerAux.Description = answer.Description;
+            answerAux.isCorrect = answer.IsCorrect;
+            answerAux.isEnd = answer.IsEnd;
+            answerAux.answerName = answer.AnswerName;
+
+            GeneratedAnswers.Add(answer.Guid, answerAux);
+        }
+
+        foreach (var question in _containerCache.QuestionNodeData)
+        {
+            var questionAux = ScriptableObject.CreateInstance<Question>();
+            questionAux.Description = question.Description;
+            questionAux.questionName = question.QuestionName;
+            questionAux.posibleAnswers = new List<Answer>();
+
+            GeneratedQuestions.Add(question.Guid, questionAux);
+        }
+
+        foreach (var situation in _containerCache.SituationNodeData)
+        {
+            var situationAux = ScriptableObject.CreateInstance<Situation>();
+            situationAux.description = situation.Description;
+            situationAux.id = int.Parse(situation.Id);
+            situationAux.situationName = situation.SituationName;
+            situationAux.questions = new List<Question>();
+
+            GeneratedSituations.Add(situation.Guid, situationAux);
+        }
+
+        for (int i = 0; i < _containerCache.NodeLinks.Count; i++)
+        {
+            if (GeneratedSituations.ContainsKey(_containerCache.NodeLinks[i].BaseNodeGuid))
+            {
+                //añadir el nodo question que corresponda
+                if (GeneratedQuestions.ContainsKey(_containerCache.NodeLinks[i].TargetNodeGuid)) //solo lo añadimos si va de situation --> question
+                {
+                    GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].questions.Add(GeneratedQuestions[_containerCache.NodeLinks[i].TargetNodeGuid]);
+                }
+            }
+            else if (GeneratedQuestions.ContainsKey(_containerCache.NodeLinks[i].BaseNodeGuid))
+            {
+                //Esto quiere decir que es una question, por lo tanto agregamos el answer correspondiente
+                if (GeneratedAnswers.ContainsKey(_containerCache.NodeLinks[i].TargetNodeGuid)) //solo lo añadimos si va de situation --> question
+                {
+                    GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].posibleAnswers.Add(GeneratedAnswers[_containerCache.NodeLinks[i].TargetNodeGuid]);
+                }
+            }
+            else if (GeneratedAnswers.ContainsKey(_containerCache.NodeLinks[i].BaseNodeGuid))
+            {
+                //esto quiere decir que es un nodo que va de una answer a una situacion, de modo que lo añadimos
+                if (GeneratedSituations.ContainsKey(_containerCache.NodeLinks[i].TargetNodeGuid)) //solo lo añadimos si va de situation --> question
+                {
+                    GeneratedAnswers[_containerCache.NodeLinks[i].BaseNodeGuid].nextSituation = GeneratedSituations[_containerCache.NodeLinks[i].TargetNodeGuid];
+                }
+            }
+
+        }
+
+        for (int i = 0; i < GeneratedSituations.Count; i++)
+        {
+
+        }
+
+        foreach (var item in GeneratedSituations)
+        {
+            AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Situations/{item.Value.situationName}.asset");
+        }
+        foreach (var item in GeneratedQuestions)
+        {
+            AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Questions/{item.Value.questionName}.asset");
+        }
+        foreach (var item in GeneratedAnswers)
+        {
+            AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Answers/{item.Value.answerName}.asset");
+        }
+
         AssetDatabase.SaveAssets();
     }
 
@@ -178,6 +294,9 @@ public class GraphSaveUtility
         {
             var tempNode = _targetGraphView.CreateSituationNode(nodeData.SituationName, Vector2.zero);
             tempNode.GUID = nodeData.Guid;
+            tempNode.nodeName = nodeData.SituationName;
+            tempNode.Description = nodeData.Description;
+            tempNode.Id = nodeData.Id;
             //TODO: AÑADIR AQUI LOS PARAMETROS
             _targetGraphView.AddElement(tempNode);
 
@@ -189,6 +308,8 @@ public class GraphSaveUtility
         {
             var tempNode = _targetGraphView.CreateQuestionNode(nodeData.QuestionName, Vector2.zero);
             tempNode.GUID = nodeData.Guid;
+            tempNode.nodeName = nodeData.QuestionName;
+            tempNode.Description = nodeData.Description;
             //TODO: AÑADIR AQUI LOS PARAMETROS
             _targetGraphView.AddElement(tempNode);
 
@@ -200,6 +321,10 @@ public class GraphSaveUtility
         {
             var tempNode = _targetGraphView.CreateAnswerNode(nodeData.AnswerName, Vector2.zero);
             tempNode.GUID = nodeData.Guid;
+            tempNode.nodeName = nodeData.AnswerName;
+            tempNode.IsCorrect = nodeData.IsCorrect;
+            tempNode.IsEnd = nodeData.IsEnd;
+            tempNode.Description = nodeData.Description;
             //TODO: AÑADIR AQUI LOS PARAMETROS
             _targetGraphView.AddElement(tempNode);
 
@@ -228,7 +353,7 @@ public class GraphSaveUtility
     {
         for (var i = 0; i < Nodes.Count; i++)
         {
-            Debug.Log($"nodo: {Nodes[i].GUID}");
+            //Debug.Log($"nodo: {Nodes[i].GUID}");
             var connections = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == Nodes[i].GUID).ToList();
             for (var j = 0; j < connections.Count; j++)
             {

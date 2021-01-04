@@ -23,7 +23,7 @@ public class AnswerUI : MonoBehaviour
     public void SetupAnswer(Answer _answerData)
     {
         answerData = _answerData;
-        description.text = answerData.text;
+        description.text = answerData.Description;
     }
 
     public void OnSelectAnswer()

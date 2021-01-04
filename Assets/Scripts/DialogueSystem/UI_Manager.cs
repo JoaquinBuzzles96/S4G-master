@@ -75,12 +75,12 @@ public class UI_Manager : MonoBehaviour
 
     public void OnStartButton()
     {
-        currentQuestion = Random.Range(0, situation.questions.Length);
+        currentQuestion = Random.Range(0, situation.questions.Count);
 
         if (currentQuestion == lastQuestion)
         {
             currentQuestion++;
-            currentQuestion = currentQuestion % situation.questions.Length;
+            currentQuestion = currentQuestion % situation.questions.Count;
             //Debug.Log($"Como la pregunta era la misma que la anterior la cambiamos: current: {currentQuestion} last: {lastQuestion}");
         }
 
