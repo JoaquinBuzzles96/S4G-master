@@ -143,15 +143,41 @@ public class GraphSaveUtility
 
         foreach (var item in GeneratedSituations)
         {
-            AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Situations/{item.Value.situationName}.asset");
+            
+            if (AssetDatabase.FindAssets($"Assets/Scripts/DialogueGraph/{caseName}/Situations/{item.Value.situationName}.asset").Length == 0)
+            {
+                AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Situations/{item.Value.situationName}.asset");
+            }
+            else
+            {
+                AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Situations/{item.Value.situationName}(1).asset");
+            }
         }
         foreach (var item in GeneratedQuestions)
         {
-            AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Questions/{item.Value.questionName}.asset");
+            Debug.Log($"{AssetDatabase.FindAssets($"Assets/Scripts/DialogueGraph/{caseName}/Situations/{item.Value.questionName}.asset").Length}");
+            if (AssetDatabase.FindAssets($"Assets/Scripts/DialogueGraph/{caseName}/Questions/{item.Value.questionName}.asset").Length == 0)
+            {
+                AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Questions/{item.Value.questionName}.asset");
+            }
+            else
+            {
+                Debug.Log("Se mete aqui :D");
+                AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Questions/{item.Value.questionName}(1).asset");
+            }
+            
         }
         foreach (var item in GeneratedAnswers)
         {
-            AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Answers/{item.Value.answerName}.asset");
+            if (AssetDatabase.FindAssets($"Assets/Scripts/DialogueGraph/{caseName}/Answers/{item.Value.answerName}.asset").Length == 0)
+            {
+                AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Answers/{item.Value.answerName}.asset");
+            }
+            else
+            {
+                AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Answers/{item.Value.answerName}(1).asset");
+            }
+            
         }
 
         AssetDatabase.SaveAssets();
@@ -229,14 +255,6 @@ public class GraphSaveUtility
                     });
                     break;
             }
-            //TODO: SEGUIMOS GUARDANDO AQUI UNA LISTA CON TODOS LOS PARENT NODES PARA FACILITAR EL POSTERIOR LINKADO?
-            /*
-            dialogueContainer.ParentNodeData.Add(new ParentNodeData
-            {
-                Guid = node.GUID,
-                Position = node.GetPosition().position
-            });
-            */  
         }
 
         return true;
@@ -292,44 +310,35 @@ public class GraphSaveUtility
     {
         foreach (var nodeData in _containerCache.SituationNodeData)
         {
-            var tempNode = _targetGraphView.CreateSituationNode(nodeData.SituationName, Vector2.zero);
+            var tempNode = _targetGraphView.CreateSituationNode(nodeData.SituationName, Vector2.zero, nodeData.Description, nodeData.Id);
             tempNode.GUID = nodeData.Guid;
-            tempNode.nodeName = nodeData.SituationName;
-            tempNode.Description = nodeData.Description;
-            tempNode.Id = nodeData.Id;
-            //TODO: AÑADIR AQUI LOS PARAMETROS
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
             nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.PortName));
+
         }
 
         foreach (var nodeData in _containerCache.QuestionNodeData)
         {
-            var tempNode = _targetGraphView.CreateQuestionNode(nodeData.QuestionName, Vector2.zero);
+            var tempNode = _targetGraphView.CreateQuestionNode(nodeData.QuestionName, Vector2.zero, nodeData.Description);
             tempNode.GUID = nodeData.Guid;
-            tempNode.nodeName = nodeData.QuestionName;
-            tempNode.Description = nodeData.Description;
-            //TODO: AÑADIR AQUI LOS PARAMETROS
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
             nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.PortName));
+
         }
 
         foreach (var nodeData in _containerCache.AnswerNodeData)
         {
-            var tempNode = _targetGraphView.CreateAnswerNode(nodeData.AnswerName, Vector2.zero);
+            var tempNode = _targetGraphView.CreateAnswerNode(nodeData.AnswerName, Vector2.zero, nodeData.Description, nodeData.IsEnd, nodeData.IsCorrect);
             tempNode.GUID = nodeData.Guid;
-            tempNode.nodeName = nodeData.AnswerName;
-            tempNode.IsCorrect = nodeData.IsCorrect;
-            tempNode.IsEnd = nodeData.IsEnd;
-            tempNode.Description = nodeData.Description;
-            //TODO: AÑADIR AQUI LOS PARAMETROS
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
             nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.PortName));
+
         }
     }
 

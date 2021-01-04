@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
+  m_Name: Testing
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: 0b3696f4-2e48-45f4-84b9-337b8499c1b2
+    PortName: Next
+    TargetNodeGuid: 019ee6be-b04d-4418-a156-f18c244643a1
+  - BaseNodeGuid: 019ee6be-b04d-4418-a156-f18c244643a1
+    PortName: Question 1
+    TargetNodeGuid: 5b72cfeb-1401-4936-9b42-6230063533f5
+  - BaseNodeGuid: 019ee6be-b04d-4418-a156-f18c244643a1
+    PortName: Question 2
+    TargetNodeGuid: bcc4e095-2a2b-4f3c-b94b-eb2e80ac7e6a
+  - BaseNodeGuid: bcc4e095-2a2b-4f3c-b94b-eb2e80ac7e6a
+    PortName: Answer 1
+    TargetNodeGuid: 27b3ba1f-a99b-4944-91bc-64bd74c288f9
+  - BaseNodeGuid: bcc4e095-2a2b-4f3c-b94b-eb2e80ac7e6a
+    PortName: Answer 2
+    TargetNodeGuid: 5288eae7-5031-4b02-b839-c5f6e6e80729
+  - BaseNodeGuid: 5b72cfeb-1401-4936-9b42-6230063533f5
+    PortName: Answer 1
+    TargetNodeGuid: 45ab78a6-6688-4016-9c29-c3061a410306
+  - BaseNodeGuid: 27b3ba1f-a99b-4944-91bc-64bd74c288f9
+    PortName: Situation 1
+    TargetNodeGuid: 019ee6be-b04d-4418-a156-f18c244643a1
+  SituationNodeData:
+  - Guid: 019ee6be-b04d-4418-a156-f18c244643a1
+    SituationName: Situation1
+    Description: Situation Description
+    Id: 0
+    nodeType: 0
+    Position: {x: 285, y: 74}
+  QuestionNodeData:
+  - Guid: bcc4e095-2a2b-4f3c-b94b-eb2e80ac7e6a
+    QuestionName: Question1
+    Description: Question Description
+    nodeType: 1
+    Position: {x: 577, y: 106}
+  - Guid: 5b72cfeb-1401-4936-9b42-6230063533f5
+    QuestionName: Question1
+    Description: Question Description
+    nodeType: 1
+    Position: {x: 557, y: -54}
+  AnswerNodeData:
+  - Guid: 27b3ba1f-a99b-4944-91bc-64bd74c288f9
+    AnswerName: Answer2
+    Description: Answer Description
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    Position: {x: 875, y: -37}
+  - Guid: 5288eae7-5031-4b02-b839-c5f6e6e80729
+    AnswerName: Answer3
+    Description: Answer Description
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    Position: {x: 875, y: 218}
+  - Guid: 45ab78a6-6688-4016-9c29-c3061a410306
+    AnswerName: Answer1
+    Description: Answer Description
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    Position: {x: 879, y: -277}
+  ExposedProperties: []

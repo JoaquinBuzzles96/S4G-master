@@ -9,10 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea817924d2f915c49b5c13a83abfa9c2, type: 3}
-  m_Name: Pregunta2
+  m_Script: {fileID: 11500000, guid: 87a024653d317504bb23bc5edca40d49, type: 3}
+  m_Name: Answer2
   m_EditorClassIdentifier: 
-  questionName: Pregunta2
-  Description: sdfsiufnhsifsi
-  posibleAnswers:
-  - {fileID: 0}
+  answerName: Answer2
+  Description: Answer Description
+  situation: {fileID: 0}
+  isCorrect: 0
+  isEnd: 0
+  nextSituation: {fileID: 11400000, guid: 964678bfa2f00aa43ab7426441487ac3, type: 2}

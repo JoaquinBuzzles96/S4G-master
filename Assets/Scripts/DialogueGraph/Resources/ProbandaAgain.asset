@@ -10,60 +10,60 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
-  m_Name: ProbandoATope
+  m_Name: ProbandaAgain
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 0b3696f4-2e48-45f4-84b9-337b8499c1b2
     PortName: Next
     TargetNodeGuid: 979820d8-23e5-44f7-a150-fd49a3f15933
   - BaseNodeGuid: 979820d8-23e5-44f7-a150-fd49a3f15933
-    PortName: Question 1
-    TargetNodeGuid: b0d3a72a-7384-4fd9-951e-4cea4c616e21
-  - BaseNodeGuid: 979820d8-23e5-44f7-a150-fd49a3f15933
     PortName: Question 2
     TargetNodeGuid: 77c10914-f3d3-4ddb-8fc1-51fcc877a2aa
+  - BaseNodeGuid: 979820d8-23e5-44f7-a150-fd49a3f15933
+    PortName: Question 3
+    TargetNodeGuid: b0d3a72a-7384-4fd9-951e-4cea4c616e21
   - BaseNodeGuid: b0d3a72a-7384-4fd9-951e-4cea4c616e21
-    PortName: adada
+    PortName: Answer 1
     TargetNodeGuid: a46841ef-875a-4662-bcd9-4fecaabeeb99
   - BaseNodeGuid: 77c10914-f3d3-4ddb-8fc1-51fcc877a2aa
     PortName: Answer 1
     TargetNodeGuid: 73c2451b-650a-4153-9c83-6b9b3c6b56d1
   - BaseNodeGuid: 73c2451b-650a-4153-9c83-6b9b3c6b56d1
-    PortName: adadwa
+    PortName: Situation 1
     TargetNodeGuid: 979820d8-23e5-44f7-a150-fd49a3f15933
   SituationNodeData:
   - Guid: 979820d8-23e5-44f7-a150-fd49a3f15933
-    SituationName: adadad
-    Description: awdadadea
-    Id: 34
+    SituationName: SituationID
+    Description: adasdawda
+    Id: 345
     nodeType: 0
     Position: {x: 314, y: 38}
   QuestionNodeData:
   - Guid: b0d3a72a-7384-4fd9-951e-4cea4c616e21
-    QuestionName: Pregunta1
-    Description: waedaewaw
+    QuestionName: QuestionID
+    Description: adawdawdew
     nodeType: 1
     Position: {x: 599, y: 77}
   - Guid: 77c10914-f3d3-4ddb-8fc1-51fcc877a2aa
-    QuestionName: Pregunta2
-    Description: afsadsadas
+    QuestionName: QuestionID
+    Description: asfdadada
     nodeType: 1
     Position: {x: 356, y: 259}
   AnswerNodeData:
+  - Guid: 73c2451b-650a-4153-9c83-6b9b3c6b56d1
+    AnswerName: AnswerID
+    Description: adadeawdadadaw
+    Situation: 
+    IsCorrect: 1
+    IsEnd: 0
+    nodeType: 2
+    Position: {x: 666, y: 358}
   - Guid: a46841ef-875a-4662-bcd9-4fecaabeeb99
-    AnswerName: Respuesta1
-    Description: adadada
+    AnswerName: AnswerID
+    Description: adwwadada
     Situation: 
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
     Position: {x: 864, y: 142}
-  - Guid: 73c2451b-650a-4153-9c83-6b9b3c6b56d1
-    AnswerName: qawedqwe
-    Description: adadadadad
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    Position: {x: 737, y: 359}
   ExposedProperties: []

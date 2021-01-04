@@ -146,14 +146,14 @@ public class DialogueGraphView : GraphView
         }
     }
 
-    public SituationNode CreateSituationNode(string nodeName, Vector2 position)
+    public SituationNode CreateSituationNode(string nodeName, Vector2 position, string description = "Situation Description", string id = "0")
     {
         var situationNode = new SituationNode //DEFAULT VALUES
         {
             title = nodeName,
             nodeName = nodeName,
-            Description = "Situation Description",
-            Id = "0",
+            Description = description,
+            Id = id,
             GUID = Guid.NewGuid().ToString(),
             nodeType = NodeType.Situation
         };
@@ -203,16 +203,17 @@ public class DialogueGraphView : GraphView
         situationNode.RefreshExpandedState();
         situationNode.RefreshPorts();
         situationNode.SetPosition(new Rect(position, defaultNodeSize));
+
         return situationNode;
     }
 
-    public QuestionNode CreateQuestionNode(string nodeName, Vector2 position)
+    public QuestionNode CreateQuestionNode(string nodeName, Vector2 position, string description = "Question Description")
     {
         var questionNode = new QuestionNode //DEFAULT VALUES
         {
             title = nodeName,
             nodeName = nodeName,
-            Description = "Question Description",
+            Description = description,
             GUID = Guid.NewGuid().ToString(),
             nodeType = NodeType.Question
         };
@@ -256,14 +257,16 @@ public class DialogueGraphView : GraphView
         return questionNode;
     }
 
-    public AnswerNode CreateAnswerNode(string nodeName, Vector2 position)
+    public AnswerNode CreateAnswerNode(string nodeName, Vector2 position, string description = "Answer Description", bool _isEnd = false, bool _isCorrect = false)
     {
         var answerNode = new AnswerNode //DEFAULT VALUES
         {
             title = nodeName,
             nodeName = nodeName,
-            Description = "Answer Description",
+            Description = description,
             GUID = Guid.NewGuid().ToString(),
+            IsCorrect = _isCorrect,
+            IsEnd = _isEnd,
             nodeType = NodeType.Answer
         };
 
@@ -298,6 +301,35 @@ public class DialogueGraphView : GraphView
         });
         textDescription.SetValueWithoutNotify(answerNode.Description);
         answerNode.mainContainer.Add(textDescription);
+
+        //Text isCorrect
+        var isCorrectText = new TextElement();
+        isCorrectText.text = "isCorrect";
+        answerNode.mainContainer.Add(isCorrectText);
+
+        //Boolean isCorrect
+        var isCorrect = new Toggle();
+        isCorrect.RegisterValueChangedCallback(evt =>
+        {
+            answerNode.IsCorrect = evt.newValue;
+        });
+        isCorrect.SetValueWithoutNotify(answerNode.IsCorrect);
+        answerNode.mainContainer.Add(isCorrect);
+
+        //Text isEnd
+        var isEndText = new TextElement();
+        isEndText.text = "isEnd";
+        answerNode.mainContainer.Add(isEndText);
+
+        //Boolean isEnd
+        var isEnd = new Toggle();
+        isEnd.RegisterValueChangedCallback(evt =>
+        {
+            answerNode.IsEnd = evt.newValue;
+        });
+        isEnd.SetValueWithoutNotify(answerNode.IsEnd);
+        answerNode.mainContainer.Add(isEnd);
+
 
         //Refresh UI
         answerNode.RefreshExpandedState();
