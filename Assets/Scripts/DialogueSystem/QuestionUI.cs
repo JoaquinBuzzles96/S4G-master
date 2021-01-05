@@ -7,27 +7,33 @@ using TMPro;
 public class QuestionUI : MonoBehaviour
 {
     public TextMeshProUGUI description;
-    public Button[] answers;
+    public List<Button> answers;
     [System.NonSerialized]
     public Question questionData;
 
     void Start()
     {
-        //answers = new Button[4];
+        answers = new List<Button>();
     }
 
 
     void Update()
     {
-        
+        //Answer aux = questionData.posibleAnswers[0];
     }
 
     public void SetupQuestion()
     {
         description.text = questionData.Description;
-        answers[0].GetComponent<AnswerUI>().SetupAnswer(questionData.posibleAnswers[0]);
-        answers[1].GetComponent<AnswerUI>().SetupAnswer(questionData.posibleAnswers[1]);
-        answers[2].GetComponent<AnswerUI>().SetupAnswer(questionData.posibleAnswers[2]);
-        answers[3].GetComponent<AnswerUI>().SetupAnswer(questionData.posibleAnswers[3]);
+        int i;
+        for (i = 0; i < questionData.posibleAnswers.Count; i++)
+        {
+            answers[i].GetComponent<AnswerUI>().SetupAnswer(questionData.posibleAnswers[i]);
+        }
+
+        for (int j = i; j < answers.Count; j++)
+        {
+            answers[i].GetComponent<AnswerUI>().ClearAnswer();
+        }
     }
 }

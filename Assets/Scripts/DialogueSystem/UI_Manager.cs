@@ -83,7 +83,7 @@ public class UI_Manager : MonoBehaviour
             currentQuestion = currentQuestion % situation.questions.Count;
             //Debug.Log($"Como la pregunta era la misma que la anterior la cambiamos: current: {currentQuestion} last: {lastQuestion}");
         }
-
+        //Debug.Log("Vamos a configurar el question data");
         screen2.GetComponent<QuestionUI>().questionData = situation.questions[currentQuestion];
         screen2.GetComponent<QuestionUI>().SetupQuestion();
         lastQuestion = currentQuestion;

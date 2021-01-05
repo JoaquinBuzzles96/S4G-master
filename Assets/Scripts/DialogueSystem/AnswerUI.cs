@@ -22,8 +22,15 @@ public class AnswerUI : MonoBehaviour
 
     public void SetupAnswer(Answer _answerData)
     {
+        this.gameObject.SetActive(true);
         answerData = _answerData;
         description.text = answerData.Description;
+    }
+
+    public void ClearAnswer()
+    {
+        description.text = "";
+        this.gameObject.SetActive(false);
     }
 
     public void OnSelectAnswer()
@@ -44,6 +51,7 @@ public class AnswerUI : MonoBehaviour
             }
         }
 
+        Debug.Log("Has seleccionado una respuesta");
 
         /*
         if (answerData.isCorrect)

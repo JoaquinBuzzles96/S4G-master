@@ -84,6 +84,7 @@ public class GraphSaveUtility
             answerAux.answerName = answer.AnswerName;
 
             GeneratedAnswers.Add(answer.Guid, answerAux);
+            Debug.Log($" Answers dictionary -- added {answerAux.answerName}");
         }
 
         foreach (var question in _containerCache.QuestionNodeData)
@@ -94,6 +95,7 @@ public class GraphSaveUtility
             questionAux.posibleAnswers = new List<Answer>();
 
             GeneratedQuestions.Add(question.Guid, questionAux);
+            Debug.Log($" Question dictionary -- added {questionAux.questionName}");
         }
 
         foreach (var situation in _containerCache.SituationNodeData)
@@ -105,6 +107,7 @@ public class GraphSaveUtility
             situationAux.questions = new List<Question>();
 
             GeneratedSituations.Add(situation.Guid, situationAux);
+            Debug.Log($" Situation dictionary -- added {situationAux.situationName}");
         }
 
         for (int i = 0; i < _containerCache.NodeLinks.Count; i++)
@@ -115,6 +118,7 @@ public class GraphSaveUtility
                 if (GeneratedQuestions.ContainsKey(_containerCache.NodeLinks[i].TargetNodeGuid)) //solo lo añadimos si va de situation --> question
                 {
                     GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].questions.Add(GeneratedQuestions[_containerCache.NodeLinks[i].TargetNodeGuid]);
+                    //Debug.Log($" Se añade en la situacion {GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].situationName} la question {GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].questions[GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].questions.Count].questionName}");
                 }
             }
             else if (GeneratedQuestions.ContainsKey(_containerCache.NodeLinks[i].BaseNodeGuid))
@@ -123,6 +127,7 @@ public class GraphSaveUtility
                 if (GeneratedAnswers.ContainsKey(_containerCache.NodeLinks[i].TargetNodeGuid)) //solo lo añadimos si va de situation --> question
                 {
                     GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].posibleAnswers.Add(GeneratedAnswers[_containerCache.NodeLinks[i].TargetNodeGuid]);
+                    //Debug.Log($" Se añade en la question {GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].questionName} la answer {GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].posibleAnswers[GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].posibleAnswers.Count].answerName}");
                 }
             }
             else if (GeneratedAnswers.ContainsKey(_containerCache.NodeLinks[i].BaseNodeGuid))
@@ -131,53 +136,25 @@ public class GraphSaveUtility
                 if (GeneratedSituations.ContainsKey(_containerCache.NodeLinks[i].TargetNodeGuid)) //solo lo añadimos si va de situation --> question
                 {
                     GeneratedAnswers[_containerCache.NodeLinks[i].BaseNodeGuid].nextSituation = GeneratedSituations[_containerCache.NodeLinks[i].TargetNodeGuid];
+                    //Debug.Log($" Se añade en la answer {GeneratedAnswers[_containerCache.NodeLinks[i].BaseNodeGuid].answerName} la situacion {GeneratedAnswers[_containerCache.NodeLinks[i].BaseNodeGuid].nextSituation.situationName}");
                 }
             }
 
         }
 
-        for (int i = 0; i < GeneratedSituations.Count; i++)
-        {
-
-        }
-
         foreach (var item in GeneratedSituations)
         {
-            
-            if (AssetDatabase.FindAssets($"Assets/Scripts/DialogueGraph/{caseName}/Situations/{item.Value.situationName}.asset").Length == 0)
-            {
-                AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Situations/{item.Value.situationName}.asset");
-            }
-            else
-            {
-                AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Situations/{item.Value.situationName}(1).asset");
-            }
+            AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Situations/{item.Value.situationName}.asset");
+
         }
         foreach (var item in GeneratedQuestions)
         {
-            Debug.Log($"{AssetDatabase.FindAssets($"Assets/Scripts/DialogueGraph/{caseName}/Situations/{item.Value.questionName}.asset").Length}");
-            if (AssetDatabase.FindAssets($"Assets/Scripts/DialogueGraph/{caseName}/Questions/{item.Value.questionName}.asset").Length == 0)
-            {
-                AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Questions/{item.Value.questionName}.asset");
-            }
-            else
-            {
-                Debug.Log("Se mete aqui :D");
-                AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Questions/{item.Value.questionName}(1).asset");
-            }
+            AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Questions/{item.Value.questionName}.asset");
             
         }
         foreach (var item in GeneratedAnswers)
         {
-            if (AssetDatabase.FindAssets($"Assets/Scripts/DialogueGraph/{caseName}/Answers/{item.Value.answerName}.asset").Length == 0)
-            {
-                AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Answers/{item.Value.answerName}.asset");
-            }
-            else
-            {
-                AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Answers/{item.Value.answerName}(1).asset");
-            }
-            
+            AssetDatabase.CreateAsset(item.Value, $"Assets/Scripts/DialogueGraph/{caseName}/Answers/{item.Value.answerName}.asset"); 
         }
 
         AssetDatabase.SaveAssets();
