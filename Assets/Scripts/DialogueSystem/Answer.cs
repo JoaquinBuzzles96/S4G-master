@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+[Serializable]
 [CreateAssetMenu(fileName = "New Answer", menuName = "Answer")]
 public class Answer : ScriptableObject
 {

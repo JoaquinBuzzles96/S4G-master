@@ -7,12 +7,13 @@ using TMPro;
 public class AnswerUI : MonoBehaviour
 {
     [System.NonSerialized]
-    public Answer answerData;
+    public AnswerNodeData answerData;
     public TextMeshProUGUI description;
+    public SituationNodeData nextSituation;
 
     void Start()
     {
-        //SetupAnswer();
+
     }
 
     void Update()
@@ -20,11 +21,12 @@ public class AnswerUI : MonoBehaviour
         
     }
 
-    public void SetupAnswer(Answer _answerData)
+    public void SetupAnswer(AnswerNodeData _answerData)
     {
         this.gameObject.SetActive(true);
         answerData = _answerData;
         description.text = answerData.Description;
+        nextSituation = UI_Manager.Instance.dialogueContainer.GetNextSituation(answerData.Guid);
     }
 
     public void ClearAnswer()
@@ -35,23 +37,32 @@ public class AnswerUI : MonoBehaviour
 
     public void OnSelectAnswer()
     {
-        if (answerData.isEnd)
+        if (answerData.IsEnd)
         {
             Debug.Log("Enhorabuena, has acabado la simulacion :D");
         }
         else
         {
-            if (answerData.nextSituation == null)
+            if (nextSituation == null)
             {
                 Debug.Log("No se ha asignado la siguiente situacion");
             }
             else
             {
-                UI_Manager.Instance.ToScreen1(answerData.nextSituation);
+                if (answerData.IsCorrect)
+                {
+                    Debug.Log($"La respuesta {answerData.AnswerName} es correcta, vamos a la situacion {nextSituation.SituationName}");
+                }
+                else
+                {
+                    Debug.Log($"La respuesta {answerData.AnswerName} es erronea, vamos a la situacion {nextSituation.SituationName}");
+                }
+
+                UI_Manager.Instance.ToScreen1(nextSituation);
             }
         }
 
-        Debug.Log("Has seleccionado una respuesta");
+        //Debug.Log("Has seleccionado una respuesta");
 
         /*
         if (answerData.isCorrect)

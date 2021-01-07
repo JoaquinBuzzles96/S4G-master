@@ -16,30 +16,6 @@ MonoBehaviour:
   - BaseNodeGuid: 0aef9768-9168-43cb-a39d-8efa966c4ab1
     PortName: Next
     TargetNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
-  - BaseNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
-    PortName: Question 1
-    TargetNodeGuid: 57c6985b-57bd-4751-9b07-65b2668f1823
-  - BaseNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
-    PortName: Question 2
-    TargetNodeGuid: d73991ac-0701-4b82-9d92-d89f369db8d8
-  - BaseNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
-    PortName: Question 3
-    TargetNodeGuid: 2cf36906-9c25-44ac-b26e-fc8663f0d52f
-  - BaseNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
-    PortName: Question 4
-    TargetNodeGuid: 54575f86-b441-4857-acd8-11854c6ff787
-  - BaseNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
-    PortName: Question 1
-    TargetNodeGuid: 5d4e217f-1827-4565-a6b8-c201af298f98
-  - BaseNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
-    PortName: Question 2
-    TargetNodeGuid: 390017ac-dae2-4be0-9697-77de91a315cd
-  - BaseNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
-    PortName: Question 3
-    TargetNodeGuid: 71882145-2cc4-4af9-a23d-3b5f64333ea7
-  - BaseNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
-    PortName: Question 4
-    TargetNodeGuid: a8814a5c-4baa-4866-a8e9-9e953c0efd4f
   - BaseNodeGuid: 1a37f47f-f926-4c5f-b8f7-c4c73973c15b
     PortName: Question 1
     TargetNodeGuid: 909f50a9-87eb-47ad-8086-02cb1668b0df
@@ -103,6 +79,30 @@ MonoBehaviour:
   - BaseNodeGuid: 75ce8ab0-997b-4af3-8410-d1685b63d485
     PortName: Question 3
     TargetNodeGuid: 17c40a7e-3549-4ddd-adf7-772b9d734d6a
+  - BaseNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
+    PortName: Question 1
+    TargetNodeGuid: 5d4e217f-1827-4565-a6b8-c201af298f98
+  - BaseNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
+    PortName: Question 2
+    TargetNodeGuid: 390017ac-dae2-4be0-9697-77de91a315cd
+  - BaseNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
+    PortName: Question 3
+    TargetNodeGuid: 71882145-2cc4-4af9-a23d-3b5f64333ea7
+  - BaseNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
+    PortName: Question 4
+    TargetNodeGuid: a8814a5c-4baa-4866-a8e9-9e953c0efd4f
+  - BaseNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
+    PortName: Question 1
+    TargetNodeGuid: 57c6985b-57bd-4751-9b07-65b2668f1823
+  - BaseNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
+    PortName: Question 2
+    TargetNodeGuid: d73991ac-0701-4b82-9d92-d89f369db8d8
+  - BaseNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
+    PortName: Question 3
+    TargetNodeGuid: 2cf36906-9c25-44ac-b26e-fc8663f0d52f
+  - BaseNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
+    PortName: Question 4
+    TargetNodeGuid: 54575f86-b441-4857-acd8-11854c6ff787
   - BaseNodeGuid: 5d4e217f-1827-4565-a6b8-c201af298f98
     PortName: Answer 1
     TargetNodeGuid: 88c6156a-798f-4614-b918-64d8e06aaefd
@@ -151,18 +151,6 @@ MonoBehaviour:
   - BaseNodeGuid: 390017ac-dae2-4be0-9697-77de91a315cd
     PortName: Answer 4
     TargetNodeGuid: 417237a3-6d19-4968-b4a8-d057d047c03a
-  - BaseNodeGuid: 57c6985b-57bd-4751-9b07-65b2668f1823
-    PortName: Answer 1
-    TargetNodeGuid: 6ebceace-08fe-46fd-bd1d-44a455cf190d
-  - BaseNodeGuid: 57c6985b-57bd-4751-9b07-65b2668f1823
-    PortName: Answer 2
-    TargetNodeGuid: cc43ce4c-3b3a-4e5b-9c21-5bcfc5bb9fc5
-  - BaseNodeGuid: 57c6985b-57bd-4751-9b07-65b2668f1823
-    PortName: Answer 3
-    TargetNodeGuid: d66e8636-39d3-4af2-9a23-e264bfb25264
-  - BaseNodeGuid: 57c6985b-57bd-4751-9b07-65b2668f1823
-    PortName: Answer 4
-    TargetNodeGuid: 4d51905b-bb72-4248-b82d-bfbda9e0ea08
   - BaseNodeGuid: d73991ac-0701-4b82-9d92-d89f369db8d8
     PortName: Answer 1
     TargetNodeGuid: 1093fd41-d3ff-431d-8570-5140e6ab9d92
@@ -433,6 +421,18 @@ MonoBehaviour:
   - BaseNodeGuid: 17c40a7e-3549-4ddd-adf7-772b9d734d6a
     PortName: Answer 2
     TargetNodeGuid: 8992b4a9-6ac0-4f6c-a896-424102b83690
+  - BaseNodeGuid: 57c6985b-57bd-4751-9b07-65b2668f1823
+    PortName: Answer 1
+    TargetNodeGuid: 6ebceace-08fe-46fd-bd1d-44a455cf190d
+  - BaseNodeGuid: 57c6985b-57bd-4751-9b07-65b2668f1823
+    PortName: Answer 2
+    TargetNodeGuid: cc43ce4c-3b3a-4e5b-9c21-5bcfc5bb9fc5
+  - BaseNodeGuid: 57c6985b-57bd-4751-9b07-65b2668f1823
+    PortName: Answer 3
+    TargetNodeGuid: d66e8636-39d3-4af2-9a23-e264bfb25264
+  - BaseNodeGuid: 57c6985b-57bd-4751-9b07-65b2668f1823
+    PortName: Answer 4
+    TargetNodeGuid: 4d51905b-bb72-4248-b82d-bfbda9e0ea08
   - BaseNodeGuid: c2f3fcc6-4fac-4756-8c54-2c945ce23f1a
     PortName: Situation 1
     TargetNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
@@ -445,9 +445,6 @@ MonoBehaviour:
   - BaseNodeGuid: 8b678192-8ba0-458c-b872-e2089a962a06
     PortName: Situation 1
     TargetNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
-  - BaseNodeGuid: 6ebceace-08fe-46fd-bd1d-44a455cf190d
-    PortName: Situation 1
-    TargetNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
   - BaseNodeGuid: cc43ce4c-3b3a-4e5b-9c21-5bcfc5bb9fc5
     PortName: Situation 1
     TargetNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
@@ -742,21 +739,10 @@ MonoBehaviour:
   - BaseNodeGuid: 5eed72a9-e771-42ae-ac59-e1cd1cbe0b5f
     PortName: Situation 14
     TargetNodeGuid: 918dc3d8-b806-4eb9-a2a9-3395158d6406
+  - BaseNodeGuid: 6ebceace-08fe-46fd-bd1d-44a455cf190d
+    PortName: Situation 1
+    TargetNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
   SituationNodeData:
-  - Guid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
-    SituationName: S1
-    Description: "A surgery is going on, which (laparoscopic cholecystectomy), with
-      a surgical team consisting of two general surgeons, an anaesthesiologist and
-      three nurses (circulating / anaesthesia / instrumentalist).   The phone rings,
-      and is answered by the circulating nurse, who shares the information with the
-      rest of the surgical team.   The obstetric surgeon informs that there is a
-      pregnant woman in labour, who will have to undergo an urgent caesarean section,
-      because the foetus is in distress.    \u201CThey will bring the pregnant woman
-      to the operating room, but we only have a nursing team. We have to find the
-      best way to solve this situation.\u201D "
-    Id: 1
-    nodeType: 0
-    Position: {x: -1807, y: 517}
   - Guid: 1a37f47f-f926-4c5f-b8f7-c4c73973c15b
     SituationName: S3
     Description: "Head surgeon \u2013 \u201CLet us keep the focus. Regarding anaesthesia,
@@ -888,6 +874,20 @@ MonoBehaviour:
     Id: 0
     nodeType: 0
     Position: {x: -1202, y: 1961}
+  - Guid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
+    SituationName: S1
+    Description: "A surgery is going on, which (laparoscopic cholecystectomy), with
+      a surgical team consisting of two general surgeons, an anaesthesiologist and
+      three nurses (circulating / anaesthesia / instrumentalist).   The phone rings,
+      and is answered by the circulating nurse, who shares the information with the
+      rest of the surgical team.   The obstetric surgeon informs that there is a
+      pregnant woman in labour, who will have to undergo an urgent caesarean section,
+      because the foetus is in distress.    \u201CThey will bring the pregnant woman
+      to the operating room, but we only have a nursing team. We have to find the
+      best way to solve this situation.\u201D "
+    Id: 1
+    nodeType: 0
+    Position: {x: -1775, y: 485}
   QuestionNodeData:
   - Guid: 5d4e217f-1827-4565-a6b8-c201af298f98
     QuestionName: S2.1
@@ -913,12 +913,6 @@ MonoBehaviour:
       I don\u2019t care!\u201D"
     nodeType: 1
     Position: {x: -1633, y: 2354}
-  - Guid: 57c6985b-57bd-4751-9b07-65b2668f1823
-    QuestionName: S1.1
-    Description: "Assistant surgeon (arrogant) \u2013 \u201CI don\u2019t care! They
-      have to wait. We have to finish this surgery first.\u201D"
-    nodeType: 1
-    Position: {x: -1777, y: 765}
   - Guid: d73991ac-0701-4b82-9d92-d89f369db8d8
     QuestionName: S1.2
     Description: "Head surgeon (arrogant) \u2013 \u201CI am the one in charge and
@@ -1074,6 +1068,12 @@ MonoBehaviour:
       team is the circulating. He will organise the team.\u201D\_"
     nodeType: 1
     Position: {x: -6928, y: 4383}
+  - Guid: 57c6985b-57bd-4751-9b07-65b2668f1823
+    QuestionName: S1.1
+    Description: "Assistant surgeon (arrogant) \u2013 \u201CI don\u2019t care! They
+      have to wait. We have to finish this surgery first.\u201D"
+    nodeType: 1
+    Position: {x: -1832, y: 779}
   AnswerNodeData:
   - Guid: c2f3fcc6-4fac-4756-8c54-2c945ce23f1a
     AnswerName: A2.4.1
@@ -1111,15 +1111,6 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     Position: {x: 568, y: 2682}
-  - Guid: 6ebceace-08fe-46fd-bd1d-44a455cf190d
-    AnswerName: A1.1.1
-    Description: "Circulating nurse \u2013 \u201CThis is an emergency situation and
-      cannot wait. We have to find a solution.\u201D"
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    Position: {x: -2512, y: 520}
   - Guid: cc43ce4c-3b3a-4e5b-9c21-5bcfc5bb9fc5
     AnswerName: A1.1.2
     Description: "Circulating nurse \u2013 \u201CLet\u2019s take the problem together,
@@ -2124,4 +2115,13 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     Position: {x: 2335, y: 6682}
+  - Guid: 6ebceace-08fe-46fd-bd1d-44a455cf190d
+    AnswerName: A1.1.1
+    Description: "Circulating nurse \u2013 \u201CThis is an emergency situation and
+      cannot wait. We have to find a solution.\u201D"
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    Position: {x: -2567, y: 496}
   ExposedProperties: []

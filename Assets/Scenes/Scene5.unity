@@ -1890,6 +1890,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: {fileID: 234015889}
+  nextSituation:
+    Guid: 
+    SituationName: 
+    Description: 
+    Id: 
+    nodeType: 0
+    Position: {x: 0, y: 0}
 --- !u!1001 &261818027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4776,7 +4783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb0a828c0aac284580123e6ed580c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  situation: {fileID: 11400000, guid: 65ee3209d3fa598438fd78706d448d1a, type: 2}
+  dialogueContainer: {fileID: 11400000, guid: 0a3d2acdd4bcf3649bda8d291ee6e9b6, type: 2}
   descriptionText: {fileID: 571394911}
   screen1: {fileID: 2030489334}
   screen2: {fileID: 523089752}
@@ -8198,6 +8205,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: {fileID: 1036292007}
+  nextSituation:
+    Guid: 
+    SituationName: 
+    Description: 
+    Id: 
+    nodeType: 0
+    Position: {x: 0, y: 0}
 --- !u!43 &1042463724
 Mesh:
   m_ObjectHideFlags: 0
@@ -11584,6 +11598,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: {fileID: 1352240793}
+  nextSituation:
+    Guid: 
+    SituationName: 
+    Description: 
+    Id: 
+    nodeType: 0
+    Position: {x: 0, y: 0}
 --- !u!1001 &1360820600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15934,6 +15955,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: {fileID: 1757968798}
+  nextSituation:
+    Guid: 
+    SituationName: 
+    Description: 
+    Id: 
+    nodeType: 0
+    Position: {x: 0, y: 0}
 --- !u!1 &1774846650
 GameObject:
   m_ObjectHideFlags: 0

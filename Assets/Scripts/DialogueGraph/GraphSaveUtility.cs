@@ -84,7 +84,7 @@ public class GraphSaveUtility
             answerAux.answerName = answer.AnswerName;
 
             GeneratedAnswers.Add(answer.Guid, answerAux);
-            Debug.Log($" Answers dictionary -- added {answerAux.answerName}");
+            //Debug.Log($" Answers dictionary -- added {answerAux.answerName}");
         }
 
         foreach (var question in _containerCache.QuestionNodeData)
@@ -95,7 +95,7 @@ public class GraphSaveUtility
             questionAux.posibleAnswers = new List<Answer>();
 
             GeneratedQuestions.Add(question.Guid, questionAux);
-            Debug.Log($" Question dictionary -- added {questionAux.questionName}");
+            //Debug.Log($" Question dictionary -- added {questionAux.questionName}");
         }
 
         foreach (var situation in _containerCache.SituationNodeData)
@@ -107,7 +107,7 @@ public class GraphSaveUtility
             situationAux.questions = new List<Question>();
 
             GeneratedSituations.Add(situation.Guid, situationAux);
-            Debug.Log($" Situation dictionary -- added {situationAux.situationName}");
+            //Debug.Log($" Situation dictionary -- added {situationAux.situationName}");
         }
 
         for (int i = 0; i < _containerCache.NodeLinks.Count; i++)
@@ -117,6 +117,25 @@ public class GraphSaveUtility
                 //añadir el nodo question que corresponda
                 if (GeneratedQuestions.ContainsKey(_containerCache.NodeLinks[i].TargetNodeGuid)) //solo lo añadimos si va de situation --> question
                 {
+                    /*
+                    if (GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 0)
+                    {
+                        GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].question1 = GeneratedQuestions[_containerCache.NodeLinks[i].TargetNodeGuid];
+                    }
+                    else if (GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 1)
+                    {
+                        GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].question2 = GeneratedQuestions[_containerCache.NodeLinks[i].TargetNodeGuid];
+                    }
+                    else if (GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 2)
+                    {
+                        GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].question3 = GeneratedQuestions[_containerCache.NodeLinks[i].TargetNodeGuid];
+                    }
+                    else if (GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 3)
+                    {
+                        GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].question4 = GeneratedQuestions[_containerCache.NodeLinks[i].TargetNodeGuid];
+                    }
+                    GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].iterator++;
+                    */
                     GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].questions.Add(GeneratedQuestions[_containerCache.NodeLinks[i].TargetNodeGuid]);
                     //Debug.Log($" Se añade en la situacion {GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].situationName} la question {GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].questions[GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].questions.Count].questionName}");
                 }
@@ -126,6 +145,24 @@ public class GraphSaveUtility
                 //Esto quiere decir que es una question, por lo tanto agregamos el answer correspondiente
                 if (GeneratedAnswers.ContainsKey(_containerCache.NodeLinks[i].TargetNodeGuid)) //solo lo añadimos si va de situation --> question
                 {
+                    /*if (GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 0)
+                    {
+                        GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].answer1 = GeneratedAnswers[_containerCache.NodeLinks[i].TargetNodeGuid];
+                    }
+                    else if (GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 1)
+                    {
+                        GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].answer2 = GeneratedAnswers[_containerCache.NodeLinks[i].TargetNodeGuid];
+                    }
+                    else if (GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 2)
+                    {
+                        GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].answer3 = GeneratedAnswers[_containerCache.NodeLinks[i].TargetNodeGuid];
+                    }
+                    else if (GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 3)
+                    {
+                        GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].answer4 = GeneratedAnswers[_containerCache.NodeLinks[i].TargetNodeGuid];
+                    }
+                    GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].iterator++;
+                    */
                     GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].posibleAnswers.Add(GeneratedAnswers[_containerCache.NodeLinks[i].TargetNodeGuid]);
                     //Debug.Log($" Se añade en la question {GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].questionName} la answer {GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].posibleAnswers[GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].posibleAnswers.Count].answerName}");
                 }

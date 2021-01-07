@@ -17,7 +17,10 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
-    public Situation situation;
+    private SituationNodeData situation;
+    private List<QuestionNodeData> questions;
+
+    public DialogueContainer dialogueContainer;
 
     public TextMeshProUGUI descriptionText;
     public GameObject screen1;
@@ -39,7 +42,7 @@ public class UI_Manager : MonoBehaviour
     void Start()
     {
         lastQuestion = -1;
-        SetupUI();
+        SetupUI(dialogueContainer.GetFirstSituation());
     }
 
     void Update()
@@ -47,10 +50,13 @@ public class UI_Manager : MonoBehaviour
         
     }
 
-    public void SetupUI()
+    public void SetupUI(SituationNodeData _situation)
     {
-        descriptionText.text = situation.description;
+        situation = _situation;
+        descriptionText.text = situation.Description;
+        questions = dialogueContainer.GetSituationQuestions(situation.Guid);
 
+        Debug.Log($"Se ha configurado la situacion {situation.SituationName}, tiene {questions.Count} preguntas posibles");
     }
 
     public void ChangeStateUI(GameObject toDisable, GameObject toEnable)
@@ -59,12 +65,11 @@ public class UI_Manager : MonoBehaviour
         toEnable.SetActive(true);
     }
 
-    public void ToScreen1(Situation newSituation)
+    public void ToScreen1(SituationNodeData newSituation)
     {
-        situation = newSituation;
+        SetupUI(newSituation);
         screen1.SetActive(true);
         screen2.SetActive(false);
-        SetupUI();
     }
     public void ToScreen2()
     {
@@ -75,16 +80,18 @@ public class UI_Manager : MonoBehaviour
 
     public void OnStartButton()
     {
-        currentQuestion = Random.Range(0, situation.questions.Count);
+
+        currentQuestion = Random.Range(0, questions.Count);
 
         if (currentQuestion == lastQuestion)
         {
             currentQuestion++;
-            currentQuestion = currentQuestion % situation.questions.Count;
+            currentQuestion = currentQuestion % questions.Count;
             //Debug.Log($"Como la pregunta era la misma que la anterior la cambiamos: current: {currentQuestion} last: {lastQuestion}");
         }
         //Debug.Log("Vamos a configurar el question data");
-        screen2.GetComponent<QuestionUI>().questionData = situation.questions[currentQuestion];
+
+        screen2.GetComponent<QuestionUI>().questionData = questions[currentQuestion];
         screen2.GetComponent<QuestionUI>().SetupQuestion();
         lastQuestion = currentQuestion;
     }
