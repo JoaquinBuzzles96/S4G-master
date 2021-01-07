@@ -457,9 +457,6 @@ MonoBehaviour:
   - BaseNodeGuid: 1093fd41-d3ff-431d-8570-5140e6ab9d92
     PortName: Situation 1
     TargetNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
-  - BaseNodeGuid: 3f6a9dcf-df41-440b-bf1e-b674223f4dbb
-    PortName: Situation 1
-    TargetNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
   - BaseNodeGuid: b8cd03e8-7118-4f2d-a22e-d1d3b57372c8
     PortName: Situation 1
     TargetNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
@@ -469,9 +466,6 @@ MonoBehaviour:
   - BaseNodeGuid: e97263cd-9ca6-4884-b98e-987cd45ebf9e
     PortName: Situation 1
     TargetNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
-  - BaseNodeGuid: f2477a0e-8b7c-4a74-91f9-8592be2365e1
-    PortName: Situation 1
-    TargetNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
   - BaseNodeGuid: 76ca9b6c-f59d-4073-a8e2-9229039ffbca
     PortName: Situation 1
     TargetNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
@@ -740,6 +734,12 @@ MonoBehaviour:
     PortName: Situation 14
     TargetNodeGuid: 918dc3d8-b806-4eb9-a2a9-3395158d6406
   - BaseNodeGuid: 6ebceace-08fe-46fd-bd1d-44a455cf190d
+    PortName: Situation 1
+    TargetNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
+  - BaseNodeGuid: 3f6a9dcf-df41-440b-bf1e-b674223f4dbb
+    PortName: Situation 1
+    TargetNodeGuid: cf3ba237-3044-4afb-a7ef-47e9793b2bd3
+  - BaseNodeGuid: f2477a0e-8b7c-4a74-91f9-8592be2365e1
     PortName: Situation 1
     TargetNodeGuid: f631654a-d2ac-4d54-96c2-35fec72fe8b8
   SituationNodeData:
@@ -1083,6 +1083,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 560, y: 1965}
   - Guid: d2f3580a-99c6-44e8-9909-244dfad95df9
     AnswerName: A2.4.2
@@ -1092,6 +1094,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 562, y: 2198}
   - Guid: 1f4d3c5e-5901-4736-929f-98b29ee3084b
     AnswerName: A2.4.3
@@ -1101,6 +1105,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 560, y: 2440}
   - Guid: 8b678192-8ba0-458c-b872-e2089a962a06
     AnswerName: A2.4.4
@@ -1110,6 +1116,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 568, y: 2682}
   - Guid: cc43ce4c-3b3a-4e5b-9c21-5bcfc5bb9fc5
     AnswerName: A1.1.2
@@ -1119,6 +1127,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio1
     Position: {x: -2467, y: 727}
   - Guid: d66e8636-39d3-4af2-9a23-e264bfb25264
     AnswerName: A1.1.3
@@ -1128,6 +1138,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio1
     Position: {x: -2708, y: 938}
   - Guid: 4d51905b-bb72-4248-b82d-bfbda9e0ea08
     AnswerName: A1.1.4
@@ -1137,25 +1149,9 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio1
     Position: {x: -2583, y: 1152}
-  - Guid: 1093fd41-d3ff-431d-8570-5140e6ab9d92
-    AnswerName: A1.2.1
-    Description: "Circulating nurse \u2013 \u201CThe obstetric surgeon has decided
-      and they will bring the pregnant. We have to look for other options.\u201D"
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    Position: {x: -1845, y: 991}
-  - Guid: 3f6a9dcf-df41-440b-bf1e-b674223f4dbb
-    AnswerName: A1.2.2
-    Description: "Circulating nurse \u2013 \u201CLet\u2019s take the problem together,
-      and calmly try to find the best solution\u201D"
-    Situation: 
-    IsCorrect: 1
-    IsEnd: 0
-    nodeType: 2
-    Position: {x: -1856, y: 1201}
   - Guid: b8cd03e8-7118-4f2d-a22e-d1d3b57372c8
     AnswerName: A1.2.3
     Description: "Circulating nurse \u2013 \u201CThis is an emergency situation and
@@ -1164,6 +1160,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio2
     Position: {x: -1062, y: 992}
   - Guid: e01a3a34-d046-4455-9ca7-e5129ed691cb
     AnswerName: A1.2.4
@@ -1173,6 +1171,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio2
     Position: {x: -1171, y: 1205}
   - Guid: e97263cd-9ca6-4884-b98e-987cd45ebf9e
     AnswerName: A1.3.1
@@ -1182,25 +1182,9 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio3
     Position: {x: -429, y: 1004}
-  - Guid: f2477a0e-8b7c-4a74-91f9-8592be2365e1
-    AnswerName: A1.3.2
-    Description: "Circulating nurse \u2013 \u201CBut this is an emergency situation
-      and cannot wait!\u201D"
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    Position: {x: -524, y: 1212}
-  - Guid: 76ca9b6c-f59d-4073-a8e2-9229039ffbca
-    AnswerName: A1.3.3
-    Description: "Circulating nurse \u2013 \u201CThe obstetric surgeon has decided
-      and they will bring the pregnant. We have to look for other options.\u201D"
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    Position: {x: 12, y: 1001}
   - Guid: 7971da2b-94f2-485c-8ad1-da6383c349ff
     AnswerName: A1.3.4
     Description: "Circulating nurse \u2013 \u201CWe do not have available staff.
@@ -1209,6 +1193,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio3
     Position: {x: 52, y: 1240}
   - Guid: 0abb97e8-5efc-45c0-a5ae-f548f72cffb0
     AnswerName: A1.4.1
@@ -1218,6 +1204,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio4
     Position: {x: 1114, y: 775}
   - Guid: dcb0b814-f3e2-4545-9458-942d69c712b9
     AnswerName: A1.4.2
@@ -1227,6 +1215,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio4
     Position: {x: 1118, y: 998}
   - Guid: e593908f-fe60-494c-bd73-34c4209f49ea
     AnswerName: A1.4.3
@@ -1236,6 +1226,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio4
     Position: {x: 1114, y: 1216}
   - Guid: 16b512e6-3463-4d29-99ef-f838e32b9449
     AnswerName: A1.4.4
@@ -1245,6 +1237,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio4
     Position: {x: 1101, y: 1442}
   - Guid: 035a48ce-6cce-46bf-8bf6-b6d825d2d608
     AnswerName: A2.1.2
@@ -1254,6 +1248,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -3048, y: 2213}
   - Guid: 921bcea6-76a0-4a98-afe5-c3aced1065c5
     AnswerName: A2.1.3
@@ -1263,6 +1259,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -3049, y: 2488}
   - Guid: 88c6156a-798f-4614-b918-64d8e06aaefd
     AnswerName: A2.1.1
@@ -1272,6 +1270,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -3046, y: 1943}
   - Guid: b4720f8f-e992-430f-8860-fce3f559b75d
     AnswerName: A2.1.4
@@ -1281,6 +1281,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -3080, y: 2728}
   - Guid: 417237a3-6d19-4968-b4a8-d057d047c03a
     AnswerName: A2.2.4
@@ -1289,6 +1291,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1451, y: 2868}
   - Guid: 0647759d-bd02-4de4-83da-80d29ad6f282
     AnswerName: A2.2.3
@@ -1298,6 +1302,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1440, y: 2612}
   - Guid: 35cc3344-1aaa-4c06-a605-aaa023ad5e3f
     AnswerName: A2.2.1
@@ -1307,6 +1313,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -2100, y: 2606}
   - Guid: bad798de-12b8-4c5e-aa75-f22bb1df887d
     AnswerName: A2.2.2
@@ -1316,6 +1324,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -2269, y: 2827}
   - Guid: 498e365e-b9a5-4f12-b36f-28aba7c2f880
     AnswerName: A2.3.1
@@ -1325,6 +1335,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -981, y: 2608}
   - Guid: 38f3de2e-1c7d-47eb-9790-635bdb813693
     AnswerName: A2.3.2
@@ -1334,6 +1346,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1035, y: 2867}
   - Guid: ff53d2ef-381f-4483-a960-987cb4ca6010
     AnswerName: A2.3.3
@@ -1343,6 +1357,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -363, y: 2592}
   - Guid: ddd3e111-8b49-438b-ac33-2c29dc2892fb
     AnswerName: A2.3.4
@@ -1352,6 +1368,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -256, y: 2864}
   - Guid: bbaf7233-2783-49fd-9805-a4b7ed7b06a4
     AnswerName: A3.4.1
@@ -1361,6 +1379,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1406, y: 3237}
   - Guid: b6cd800b-7fd0-4231-9129-c014aa422ddd
     AnswerName: A3.4.2
@@ -1370,6 +1390,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1397, y: 3473}
   - Guid: 994069e9-5b24-4032-a552-1f8f45b2adda
     AnswerName: A3.4.3
@@ -1379,6 +1401,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1395, y: 3723}
   - Guid: 47522036-331c-4038-8a22-0026224f136f
     AnswerName: A3.4.4
@@ -1388,6 +1412,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1393, y: 3996}
   - Guid: 588bdad2-2288-4d88-969e-9235513c51c6
     AnswerName: A3.1.2
@@ -1398,6 +1424,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -4966, y: 3424}
   - Guid: 2d3bd878-ecee-41c8-b3fe-37af6e8bb897
     AnswerName: 3.1.4
@@ -1407,6 +1435,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -4744, y: 3838}
   - Guid: e548f8a6-bc30-4c26-af1e-cada7a9940bd
     AnswerName: A3.2.2
@@ -1416,6 +1446,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -4220, y: 4292}
   - Guid: 7d055ecf-9c83-4793-83c0-0e07a8715fc3
     AnswerName: A3.2.3
@@ -1425,6 +1457,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -3703, y: 4077}
   - Guid: a7d12854-3c6a-44dd-ab5e-be840ae11a44
     AnswerName: A3.2.4
@@ -1433,6 +1467,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -3687, y: 4300}
   - Guid: 233c1bb6-40ff-4073-b12b-d98930b37fcc
     AnswerName: A3.3.1
@@ -1442,6 +1478,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -3149, y: 4074}
   - Guid: 352ec4dd-a383-4121-927f-f50aef3fdd46
     AnswerName: A3.3.3
@@ -1451,6 +1489,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -2557, y: 4039}
   - Guid: dc07f81d-c38a-4b66-b8bf-edfe8463482a
     AnswerName: A3.3.4
@@ -1459,6 +1499,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -2353, y: 4291}
   - Guid: 7ffd2a6b-79bb-4ce5-9cc4-188a67475cc0
     AnswerName: A3.2.1
@@ -1468,6 +1510,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -4345, y: 4052}
   - Guid: fddc4f63-f2ba-4d4c-8828-5f7d88f2bbeb
     AnswerName: A3.1.1
@@ -1477,6 +1521,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -4620, y: 3192}
   - Guid: f4907432-981a-4f83-bd78-84fd6b9ac0fb
     AnswerName: A3.1.3
@@ -1486,6 +1532,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -4740, y: 3593}
   - Guid: ce6a1c6b-e1a2-4b40-9b39-e3b306eec709
     AnswerName: A4.1.1
@@ -1495,6 +1543,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -54, y: 3633}
   - Guid: a830e3e7-4c1c-44a3-9eef-d2ee1375a549
     AnswerName: A4.1.2
@@ -1504,6 +1554,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 568, y: 3638}
   - Guid: 1c51d9a9-b190-4860-a830-bb4346646965
     AnswerName: A4.1.3
@@ -1513,6 +1565,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 1216, y: 3637}
   - Guid: bacfa772-d93f-453b-9071-a8da89e94774
     AnswerName: A4.1.4
@@ -1523,6 +1577,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 1817, y: 3617}
   - Guid: 758bd3df-0d8b-4bb3-aa4b-c6001ec97eb1
     AnswerName: A5.1.2
@@ -1532,6 +1588,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 3447, y: 3655}
   - Guid: 9f0df549-4103-45a6-b46b-4d628d1a125a
     AnswerName: A5.1.3
@@ -1541,6 +1599,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 4074, y: 3657}
   - Guid: de792d4c-c8ea-4c7b-a3b4-167563891cc8
     AnswerName: A5.1.4
@@ -1550,6 +1610,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 4657, y: 3655}
   - Guid: be53cada-32ad-4d81-a419-78700c1c4340
     AnswerName: A5.1.1
@@ -1559,6 +1621,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 2939, y: 3649}
   - Guid: a55f56f9-bb72-4ce2-bd0b-f6553f93583c
     AnswerName: A6.1.1
@@ -1568,6 +1632,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -529, y: 4598}
   - Guid: c2f1ec1e-e9bd-4671-91d9-6a317fba3747
     AnswerName: A6.1.3
@@ -1578,6 +1644,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 807, y: 4616}
   - Guid: d02c49b8-3b3d-4d29-9814-15b92bd05655
     AnswerName: A6.1.4
@@ -1588,6 +1656,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 1102, y: 4805}
   - Guid: e6745652-cd0d-4338-baea-cf5a9a7696c5
     AnswerName: A6.1.2
@@ -1598,6 +1668,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -283, y: 4813}
   - Guid: d36b9809-bc41-4d67-bd41-e77752494430
     AnswerName: A7.1.2
@@ -1608,6 +1680,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 2874, y: 4826}
   - Guid: 2fe16d0c-59f0-4d48-8524-91979bb7feb5
     AnswerName: A7.1.1
@@ -1618,6 +1692,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 2901, y: 4567}
   - Guid: a7c490b7-2881-4851-b743-d9a788d8631c
     AnswerName: A7.1.3
@@ -1628,6 +1704,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 3995, y: 4584}
   - Guid: f6de03a7-6e4c-4e8c-972a-b1d6f9681365
     AnswerName: A7.1.4
@@ -1638,6 +1716,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 4032, y: 4810}
   - Guid: 8bf80b6e-1556-4f69-b568-ed0940b04126
     AnswerName: A8.1.1
@@ -1648,6 +1728,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -315, y: 5629}
   - Guid: 51419852-090e-42fb-bd2d-5912439e8a22
     AnswerName: A8.1.3
@@ -1658,6 +1740,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 697, y: 5621}
   - Guid: 3dd78c0d-8a39-46b2-abc4-bfefd9c65a25
     AnswerName: A8.1.4
@@ -1669,6 +1753,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 862, y: 5820}
   - Guid: a70208f5-5189-42c7-83af-69f05dd8d0ec
     AnswerName: A9.1.3
@@ -1678,6 +1764,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 592, y: 6534}
   - Guid: 2c36ed18-d7cf-4154-a7ab-e1ce4760a6a8
     AnswerName: A9.1.1
@@ -1687,6 +1775,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -264, y: 6529}
   - Guid: 0a1e72f9-ae62-42f2-8201-b152ce835e29
     AnswerName: A9.1.2
@@ -1697,6 +1787,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -193, y: 6751}
   - Guid: b478cf99-163b-483a-afdc-138c81a9b83c
     AnswerName: A9.1.4
@@ -1707,6 +1799,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 739, y: 6743}
   - Guid: b151940d-41a6-48eb-b800-35f1d71f9b6a
     AnswerName: A8.1.2
@@ -1717,6 +1811,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -336, y: 5857}
   - Guid: 600ff0fa-265f-4df2-b092-9c8457767b32
     AnswerName: A10.1.1
@@ -1726,6 +1822,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -3673, y: 7925}
   - Guid: bf5ddb19-6b88-4b7e-bb50-eca132ce0f44
     AnswerName: A10.1.2
@@ -1736,6 +1834,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -3591, y: 8117}
   - Guid: 31ca6b9f-8893-44be-ba66-5249d64a4535
     AnswerName: A10.1.3
@@ -1746,6 +1846,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -2811, y: 7922}
   - Guid: 05686dfa-2563-4482-9a06-da3b9b9db96f
     AnswerName: A10.1.4
@@ -1755,6 +1857,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -2602, y: 8119}
   - Guid: 79d86ccf-3071-413b-9c82-6349213fad49
     AnswerName: A11.1.3
@@ -1768,6 +1872,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 3749, y: 6648}
   - Guid: 31d41336-f960-4ddd-b9a5-9fba702501fc
     AnswerName: A11.1.4
@@ -1781,6 +1887,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 3851, y: 6864}
   - Guid: 8dfd5b19-d8f5-43e8-9235-8de78af772c9
     AnswerName: A11.1.2
@@ -1794,6 +1902,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 1477, y: 7005}
   - Guid: 607027a8-3794-45a4-8c40-a5dd1afa203f
     AnswerName: A12.1.1
@@ -1804,6 +1914,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 2717, y: 9244}
   - Guid: 2f017bf2-fc1c-460c-95a7-3efd8f758b0f
     AnswerName: A12.1.3
@@ -1814,6 +1926,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 3910, y: 9231}
   - Guid: 3b55fa3e-2828-450e-afd0-78e8199cb2d8
     AnswerName: A3.3.2
@@ -1823,6 +1937,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -3254, y: 4316}
   - Guid: 03100d55-96cc-426a-ab5f-ccbe1832a566
     AnswerName: A13.1.3
@@ -1832,6 +1948,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -252, y: 7821}
   - Guid: e50d07d8-30dd-48b1-b211-3f2444abd3b2
     AnswerName: A13.1.4
@@ -1843,6 +1961,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -229, y: 8025}
   - Guid: f027f9d7-7cdd-4f5f-acaa-4d923d7cdc8e
     AnswerName: A13.1.2
@@ -1853,6 +1973,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1336, y: 8032}
   - Guid: d00363c8-7235-4017-a241-8605a6f87e75
     AnswerName: A14.1.1
@@ -1863,6 +1985,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -4185, y: 9484}
   - Guid: 6577583e-a9d1-4d2c-bdb0-453106c7bfe3
     AnswerName: A14.1.3
@@ -1872,6 +1996,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -3134, y: 9480}
   - Guid: 6af716a1-ee2b-4eda-896c-e74faa36bc73
     AnswerName: A14.1.4
@@ -1882,6 +2008,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -3135, y: 9693}
   - Guid: c84c1c59-432a-4f86-96cd-6a67503fdbdb
     AnswerName: A13.1.1
@@ -1892,6 +2020,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1247, y: 7830}
   - Guid: e55cc134-785d-4ea1-86a0-9e42a5b02a04
     AnswerName: A14.1.2
@@ -1902,6 +2032,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -4222, y: 9687}
   - Guid: cdd9fad5-f88b-4562-97bb-0e11c28a0958
     AnswerName: A12.1.2
@@ -1913,6 +2045,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 2634, y: 9475}
   - Guid: df31d2e9-679b-4dab-8915-d1f769714712
     AnswerName: A12.1.4
@@ -1924,6 +2058,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 3922, y: 9467}
   - Guid: 732d5bc0-2ab9-4341-b1ed-51edd021e5fc
     AnswerName: A15.1.1
@@ -1934,6 +2070,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1112, y: 10667}
   - Guid: abea825f-6c78-4b55-b5f7-f18bd42a6ac0
     AnswerName: A15.1.2
@@ -1943,6 +2081,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1115, y: 10911}
   - Guid: 6212b559-3808-446f-b253-cf2992faba5e
     AnswerName: A15.1.3
@@ -1953,6 +2093,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -186, y: 10655}
   - Guid: 473219db-8063-408a-adb9-2bc5d48acbbf
     AnswerName: A15.1.4
@@ -1963,6 +2105,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -190, y: 10880}
   - Guid: 9578383c-6e71-41df-96bf-7f1d910f035c
     AnswerName: A16.1.1
@@ -1977,6 +2121,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 1
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1616, y: 12012}
   - Guid: 5f796fa2-ba77-4455-98e8-b5d245693f21
     AnswerName: A16.1.3
@@ -1991,6 +2137,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 1
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1629, y: 12453}
   - Guid: 76d75b55-53fe-48e0-af8e-db6fb6590e70
     AnswerName: A16.1.4
@@ -2002,6 +2150,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 1
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1630, y: 12707}
   - Guid: 381106b2-8ed5-4adf-b2ad-28242c4a9d4b
     AnswerName: A16.1.2
@@ -2016,6 +2166,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 1
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -1612, y: 12239}
   - Guid: 7cb0a89b-ce4f-4656-b25d-558fdaf460ff
     AnswerName: A17.1.1
@@ -2025,6 +2177,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -7624, y: 3655}
   - Guid: 6416d2a9-cae3-4ad7-90ec-d0e6d99e0f49
     AnswerName: A17.1.2
@@ -2034,6 +2188,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -7625, y: 3859}
   - Guid: 30fce76e-976e-40cc-8755-a88d62e8208e
     AnswerName: A17.1.4
@@ -2043,6 +2199,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -6902, y: 3863}
   - Guid: 0a29dfac-dfe4-4617-bf45-9ca510f2d8c5
     AnswerName: A17.1.3
@@ -2052,6 +2210,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -6912, y: 3657}
   - Guid: 8458cff3-c7dc-4f83-b734-508452989d82
     AnswerName: A18.1.1
@@ -2061,6 +2221,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -8200, y: 4546}
   - Guid: 88173a81-3912-458f-9ffe-2f255f4e78f5
     AnswerName: A18.2.2
@@ -2070,6 +2232,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 1
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -7389, y: 4790}
   - Guid: 960ec62e-93ec-4a12-91a2-952aa51f4e6e
     AnswerName: A18.3.1
@@ -2078,6 +2242,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -6520, y: 4558}
   - Guid: 8992b4a9-6ac0-4f6c-a896-424102b83690
     AnswerName: A18.3.2
@@ -2086,6 +2252,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 1
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -6527, y: 4786}
   - Guid: c0ca2a3e-4f0c-4074-b62b-0c3109f6b21a
     AnswerName: A18.2.1
@@ -2095,6 +2263,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -7380, y: 4578}
   - Guid: cb2fd9b6-c36c-42c7-94d9-8bacb3d61a22
     AnswerName: A18.1.2
@@ -2104,6 +2274,8 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 1
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: -8204, y: 4754}
   - Guid: 5eed72a9-e771-42ae-ac59-e1cd1cbe0b5f
     AnswerName: A11.1.1
@@ -2114,6 +2286,8 @@ MonoBehaviour:
     IsCorrect: 1
     IsEnd: 0
     nodeType: 2
+    speaker: 
+    audioId: 
     Position: {x: 2335, y: 6682}
   - Guid: 6ebceace-08fe-46fd-bd1d-44a455cf190d
     AnswerName: A1.1.1
@@ -2123,5 +2297,51 @@ MonoBehaviour:
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio1
     Position: {x: -2567, y: 496}
+  - Guid: f2477a0e-8b7c-4a74-91f9-8592be2365e1
+    AnswerName: A1.3.2
+    Description: "Circulating nurse \u2013 \u201CBut this is an emergency situation
+      and cannot wait!\u201D"
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio3
+    Position: {x: -531, y: 1253}
+  - Guid: 1093fd41-d3ff-431d-8570-5140e6ab9d92
+    AnswerName: A1.2.1
+    Description: "Circulating nurse \u2013 \u201CThe obstetric surgeon has decided
+      and they will bring the pregnant. We have to look for other options.\u201D"
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio2
+    Position: {x: -1845, y: 991}
+  - Guid: 76ca9b6c-f59d-4073-a8e2-9229039ffbca
+    AnswerName: A1.3.3
+    Description: "Circulating nurse \u2013 \u201CThe obstetric surgeon has decided
+      and they will bring the pregnant. We have to look for other options.\u201D"
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio3
+    Position: {x: 11, y: 1001}
+  - Guid: 3f6a9dcf-df41-440b-bf1e-b674223f4dbb
+    AnswerName: A1.2.2
+    Description: "Circulating nurse \u2013 \u201CLet\u2019s take the problem together,
+      and calmly try to find the best solution\u201D"
+    Situation: 
+    IsCorrect: 1
+    IsEnd: 0
+    nodeType: 2
+    speaker: Surgeon1
+    audioId: Audio2
+    Position: {x: -1932, y: 1239}
   ExposedProperties: []

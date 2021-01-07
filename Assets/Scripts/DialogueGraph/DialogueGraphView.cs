@@ -257,7 +257,7 @@ public class DialogueGraphView : GraphView
         return questionNode;
     }
 
-    public AnswerNode CreateAnswerNode(string nodeName, Vector2 position, string description = "Answer Description", bool _isEnd = false, bool _isCorrect = false)
+    public AnswerNode CreateAnswerNode(string nodeName, Vector2 position, string description = "Answer Description", bool _isEnd = false, bool _isCorrect = false, string _audioId = "Audio id", string _speaker = "Speaker")
     {
         var answerNode = new AnswerNode //DEFAULT VALUES
         {
@@ -267,7 +267,10 @@ public class DialogueGraphView : GraphView
             GUID = Guid.NewGuid().ToString(),
             IsCorrect = _isCorrect,
             IsEnd = _isEnd,
-            nodeType = NodeType.Answer
+            nodeType = NodeType.Answer,
+            audioId = _audioId,
+            speaker = _speaker
+
         };
 
         //input
@@ -330,6 +333,23 @@ public class DialogueGraphView : GraphView
         isEnd.SetValueWithoutNotify(answerNode.IsEnd);
         answerNode.mainContainer.Add(isEnd);
 
+        //Audio ID
+        var audioID = new TextField(string.Empty);
+        audioID.RegisterValueChangedCallback(evt =>
+        {
+            answerNode.audioId = evt.newValue;
+        });
+        audioID.SetValueWithoutNotify(answerNode.audioId);
+        answerNode.mainContainer.Add(audioID);
+
+        //Speaker
+        var speakerField = new TextField(string.Empty);
+        speakerField.RegisterValueChangedCallback(evt =>
+        {
+            answerNode.speaker = evt.newValue;
+        });
+        speakerField.SetValueWithoutNotify(answerNode.speaker);
+        answerNode.mainContainer.Add(speakerField);
 
         //Refresh UI
         answerNode.RefreshExpandedState();

@@ -82,6 +82,8 @@ public class GraphSaveUtility
             answerAux.isCorrect = answer.IsCorrect;
             answerAux.isEnd = answer.IsEnd;
             answerAux.answerName = answer.AnswerName;
+            answerAux.speaker = answer.speaker;
+            answerAux.audioId = answer.audioId;
 
             GeneratedAnswers.Add(answer.Guid, answerAux);
             //Debug.Log($" Answers dictionary -- added {answerAux.answerName}");
@@ -117,25 +119,6 @@ public class GraphSaveUtility
                 //añadir el nodo question que corresponda
                 if (GeneratedQuestions.ContainsKey(_containerCache.NodeLinks[i].TargetNodeGuid)) //solo lo añadimos si va de situation --> question
                 {
-                    /*
-                    if (GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 0)
-                    {
-                        GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].question1 = GeneratedQuestions[_containerCache.NodeLinks[i].TargetNodeGuid];
-                    }
-                    else if (GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 1)
-                    {
-                        GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].question2 = GeneratedQuestions[_containerCache.NodeLinks[i].TargetNodeGuid];
-                    }
-                    else if (GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 2)
-                    {
-                        GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].question3 = GeneratedQuestions[_containerCache.NodeLinks[i].TargetNodeGuid];
-                    }
-                    else if (GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 3)
-                    {
-                        GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].question4 = GeneratedQuestions[_containerCache.NodeLinks[i].TargetNodeGuid];
-                    }
-                    GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].iterator++;
-                    */
                     GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].questions.Add(GeneratedQuestions[_containerCache.NodeLinks[i].TargetNodeGuid]);
                     //Debug.Log($" Se añade en la situacion {GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].situationName} la question {GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].questions[GeneratedSituations[_containerCache.NodeLinks[i].BaseNodeGuid].questions.Count].questionName}");
                 }
@@ -145,24 +128,6 @@ public class GraphSaveUtility
                 //Esto quiere decir que es una question, por lo tanto agregamos el answer correspondiente
                 if (GeneratedAnswers.ContainsKey(_containerCache.NodeLinks[i].TargetNodeGuid)) //solo lo añadimos si va de situation --> question
                 {
-                    /*if (GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 0)
-                    {
-                        GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].answer1 = GeneratedAnswers[_containerCache.NodeLinks[i].TargetNodeGuid];
-                    }
-                    else if (GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 1)
-                    {
-                        GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].answer2 = GeneratedAnswers[_containerCache.NodeLinks[i].TargetNodeGuid];
-                    }
-                    else if (GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 2)
-                    {
-                        GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].answer3 = GeneratedAnswers[_containerCache.NodeLinks[i].TargetNodeGuid];
-                    }
-                    else if (GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].iterator == 3)
-                    {
-                        GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].answer4 = GeneratedAnswers[_containerCache.NodeLinks[i].TargetNodeGuid];
-                    }
-                    GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].iterator++;
-                    */
                     GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].posibleAnswers.Add(GeneratedAnswers[_containerCache.NodeLinks[i].TargetNodeGuid]);
                     //Debug.Log($" Se añade en la question {GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].questionName} la answer {GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].posibleAnswers[GeneratedQuestions[_containerCache.NodeLinks[i].BaseNodeGuid].posibleAnswers.Count].answerName}");
                 }
@@ -196,6 +161,7 @@ public class GraphSaveUtility
 
         AssetDatabase.SaveAssets();
     }
+
 
     private void SaveExposedProperties(DialogueContainer dialogueContainer)
     {
@@ -265,6 +231,8 @@ public class GraphSaveUtility
                         IsCorrect = nodeAnswer.IsCorrect,
                         IsEnd = nodeAnswer.IsEnd,
                         nodeType = nodeAnswer.nodeType,
+                        audioId = nodeAnswer.audioId,
+                        speaker = nodeAnswer.speaker,
                         Position = nodeAnswer.GetPosition().position
                     });
                     break;
@@ -346,7 +314,7 @@ public class GraphSaveUtility
 
         foreach (var nodeData in _containerCache.AnswerNodeData)
         {
-            var tempNode = _targetGraphView.CreateAnswerNode(nodeData.AnswerName, Vector2.zero, nodeData.Description, nodeData.IsEnd, nodeData.IsCorrect);
+            var tempNode = _targetGraphView.CreateAnswerNode(nodeData.AnswerName, Vector2.zero, nodeData.Description, nodeData.IsEnd, nodeData.IsCorrect, nodeData.audioId, nodeData.speaker);
             tempNode.GUID = nodeData.Guid;
             _targetGraphView.AddElement(tempNode);
 

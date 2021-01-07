@@ -12,6 +12,8 @@ public class Answer : ScriptableObject
     public Situation situation;
     public bool isCorrect;
     public bool isEnd;
+    public string speaker;
+    public string audioId;
     public Situation nextSituation;
 }
 

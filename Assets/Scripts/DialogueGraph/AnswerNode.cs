@@ -10,4 +10,8 @@ public class AnswerNode : ParentNode
     public bool IsCorrect;
 
     public bool IsEnd;
+
+    public string speaker;
+
+    public string audioId;
 }

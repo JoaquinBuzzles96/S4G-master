@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+//public enum Speaker { Surgeon1, Surgeon2, CirculatingNurse, AnaesthesiaNurse, InstrumentalistNurse, Anaesthesiologist};
+
 [Serializable]
 public class AnswerNodeData
 {
@@ -13,5 +15,7 @@ public class AnswerNodeData
     public bool IsCorrect;
     public bool IsEnd;
     public NodeType nodeType;
+    public string speaker;
+    public string audioId;
     public Vector2 Position;
 }

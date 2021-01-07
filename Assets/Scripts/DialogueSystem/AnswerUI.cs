@@ -58,22 +58,40 @@ public class AnswerUI : MonoBehaviour
                     Debug.Log($"La respuesta {answerData.AnswerName} es erronea, vamos a la situacion {nextSituation.SituationName}");
                 }
 
+                //Tanto el audio como la animacion mejor que lo lleve el UI_Manager aunque lo invoquemos desde aqui
+                //Reproducir audio correspondiente
+                //Reproducir animacion correspondiente
+                if (AudioIsValid(answerData.audioId) && SpeakerIsValid(answerData.speaker))
+                {
+                    UI_Manager.Instance.PlayAudioOnSpeaker(answerData.audioId, answerData.speaker);
+                }
+
                 UI_Manager.Instance.ToScreen1(nextSituation);
             }
         }
+    }
 
-        //Debug.Log("Has seleccionado una respuesta");
+    public bool AudioIsValid(string _audioId)
+    {
+        bool isValid = true;
 
-        /*
-        if (answerData.isCorrect)
+        if (_audioId == "" || _audioId == "Audio id" || _audioId == null)
         {
-            Debug.Log("Es correcto :D");
+            isValid = false;
         }
-        else
+
+        return isValid;
+    }
+
+    public bool SpeakerIsValid(string _speaker)
+    {
+        bool isValid = false;
+        
+        if (_speaker == "Surgeon1" || _speaker == "Surgeon2" || _speaker == "CirculatingNurse" || _speaker == "AnaesthesiaNurse" || _speaker == "InstrumentalistNurse" || _speaker == "Anaesthesiologist")
         {
-            Debug.Log("Fallaste wey!");
+            isValid = true;
         }
-        //Debug.Log($"AnswerData --> {answerData.name}");
-        */
+
+        return isValid;
     }
 }

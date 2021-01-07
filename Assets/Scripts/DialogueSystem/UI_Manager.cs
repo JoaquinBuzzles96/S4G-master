@@ -25,6 +25,8 @@ public class UI_Manager : MonoBehaviour
     public TextMeshProUGUI descriptionText;
     public GameObject screen1;
     public GameObject screen2;
+    public AudioSource audioSource;
+
     int lastQuestion;
     int currentQuestion;
 
@@ -94,6 +96,40 @@ public class UI_Manager : MonoBehaviour
         screen2.GetComponent<QuestionUI>().questionData = questions[currentQuestion];
         screen2.GetComponent<QuestionUI>().SetupQuestion();
         lastQuestion = currentQuestion;
+    }
+
+    public void PlayAudioOnSpeaker(string _audio, string _speaker)
+    {
+        //public enum Speaker { Surgeon1, Surgeon2, CirculatingNurse, AnaesthesiaNurse, InstrumentalistNurse, Anaesthesiologist};
+        switch (_speaker)
+        {
+            case "Surgeon1":
+            case "Surgeon2":
+            case "CirculatingNurse":
+            case "AnaesthesiaNurse":
+            case "InstrumentalistNurse":
+            case "Anaesthesiologist":
+                //Ahora mismo da igual quien lo diga
+                Debug.Log("Se va a reproducir un audio");
+                //TODO: cAMBIAR EL CLIP DEL AUDIO SOURCE EN FUNCION DEL _AUDIOiD
+                audioSource.clip = Resources.Load($"Audio/Case5_EN/{_audio}", typeof(AudioClip)) as AudioClip;
+                //$"Assets/Scripts/DialogueGraph/{caseName}/Answers/
+                if (audioSource.clip != null)
+                {
+                    audioSource.Play();
+                }
+                else
+                {
+                    Debug.Log($"No se ha encontrado el audio Audio/Case5_EN/{_audio}");
+                }
+                
+
+                break;
+            default:
+                Debug.Log($"No se encuentra al speaker {_speaker}");
+                break;
+        }
+
     }
 
 }
