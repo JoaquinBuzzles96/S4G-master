@@ -20,7 +20,7 @@ public class FPSCounterJoaquin : MonoBehaviour
         if (timer <= 0)
         {
             timer = refrehRate;
-            FramesText.text = $"FPS: {1/Time.deltaTime}";
+            FramesText.text = $"FPS: {Time.frameCount/Time.time}";
         }
         else
         {
