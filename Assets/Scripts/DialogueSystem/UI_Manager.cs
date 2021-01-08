@@ -27,6 +27,8 @@ public class UI_Manager : MonoBehaviour
     public GameObject screen2;
     public AudioSource audioSource;
 
+    public string caso;
+
     int lastQuestion;
     int currentQuestion;
 
@@ -43,6 +45,8 @@ public class UI_Manager : MonoBehaviour
     }
     void Start()
     {
+        GetDialogueContainerLanguage();
+
         lastQuestion = -1;
         SetupUI(dialogueContainer.GetFirstSituation());
     }
@@ -111,14 +115,14 @@ public class UI_Manager : MonoBehaviour
             case "Anaesthesiologist":
                 //Ahora mismo da igual quien lo diga
                 Debug.Log("Se va a reproducir un audio");
-                audioSource.clip = Resources.Load($"Audio/Case5_EN/{_audio}", typeof(AudioClip)) as AudioClip;
+                audioSource.clip = Resources.Load($"Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}", typeof(AudioClip)) as AudioClip;
                 if (audioSource.clip != null)
                 {
                     audioSource.Play();
                 }
                 else
                 {
-                    Debug.Log($"No se ha encontrado el audio Audio/Case5_EN/{_audio}");
+                    Debug.Log($"No se ha encontrado el audio Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}");
                 }
                 
 
@@ -128,6 +132,16 @@ public class UI_Manager : MonoBehaviour
                 break;
         }
 
+    }
+
+    public void GetDialogueContainerLanguage()
+    {
+        dialogueContainer = Resources.Load($"Cases/{caso}_{LanguageManager.Instance.languageSelected}") as DialogueContainer;
+        if (dialogueContainer == null)
+        {
+            Debug.Log($"No se ha encontrado la ruta Cases/{caso}_{LanguageManager.Instance.languageSelected}");
+            dialogueContainer = Resources.Load($"Cases/Case5_EN") as DialogueContainer;
+        }
     }
 
 }

@@ -26,7 +26,7 @@ public class LanguageManager : MonoBehaviour
     {
         if (PlayerPrefs.GetString("Language")!= null)
         {
-           PlayerPrefs.GetString("Language", languageSelected);
+            languageSelected = PlayerPrefs.GetString("Language");
         }
     }
     public void SelectLanguage(string languageSiglas)
