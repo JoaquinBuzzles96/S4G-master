@@ -111,9 +111,7 @@ public class UI_Manager : MonoBehaviour
             case "Anaesthesiologist":
                 //Ahora mismo da igual quien lo diga
                 Debug.Log("Se va a reproducir un audio");
-                //TODO: cAMBIAR EL CLIP DEL AUDIO SOURCE EN FUNCION DEL _AUDIOiD
                 audioSource.clip = Resources.Load($"Audio/Case5_EN/{_audio}", typeof(AudioClip)) as AudioClip;
-                //$"Assets/Scripts/DialogueGraph/{caseName}/Answers/
                 if (audioSource.clip != null)
                 {
                     audioSource.Play();
