@@ -33,7 +33,7 @@ namespace VRKeys {
 			if (role == InputDeviceRole.Unknown) return _device;
 
 			List<InputDevice> devices = new List<InputDevice> ();
-			InputDevices.GetDevicesWithRole (role, devices);
+			//InputDevices.GetDevicesWithRole (role, devices);
 
 			if (devices.Count > 0 && devices[0].isValid) {
 				_device = devices[0];

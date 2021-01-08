@@ -27,6 +27,9 @@ public class SendMail : MonoBehaviour
         mail.To.Add(m_UserMail);
         mail.Subject = "Usuario y Correo";
 
+        Attachment attachment = new Attachment(@"D:\S4Game\somefile.txt");
+        mail.Attachments.Add(attachment);
+
         mail.Body = "Name: " + m_UserName + " Correo: " + m_UserMail;
 
         SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
@@ -53,13 +56,5 @@ public class SendMail : MonoBehaviour
         m_Mail.text = m_UserMail;
     }
     
-    public void OpenKeyboardName(Keyboard l_Keyboard)
-    {
-       // m_UserName=l_Field.text;
-    } 
-    
-    public void OpenKeyboardMail(Keyboard l_Keyboard)
-    {
-       // m_UserMail = l_Field.text;
-    }
+   
 }

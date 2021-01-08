@@ -133,7 +133,7 @@ namespace VRKeys {
 		/// Initialization.
 		/// </summary>
 		private IEnumerator Start () {
-			XRDevice.SetTrackingSpaceType (TrackingSpaceType.RoomScale);
+			//XRDevice.SetTrackingSpaceType (TrackingSpaceType.RoomScale);
 
 			playerSpace = new GameObject ("Play Space");
             playerSpace.transform.SetParent(parentPos);
