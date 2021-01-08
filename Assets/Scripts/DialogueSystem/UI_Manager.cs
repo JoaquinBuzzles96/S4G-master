@@ -27,6 +27,10 @@ public class UI_Manager : MonoBehaviour
     public GameObject screen2;
     public AudioSource audioSource;
 
+    public List<Animator> characteres;
+
+    public Dictionary<string, Animator> dictionaryCharacteres;
+
     public string caso;
 
     int lastQuestion;
@@ -46,9 +50,10 @@ public class UI_Manager : MonoBehaviour
     void Start()
     {
         GetDialogueContainerLanguage();
-
+        SetNameToCharacters();
         lastQuestion = -1;
         SetupUI(dialogueContainer.GetFirstSituation());
+
     }
 
     void Update()
@@ -104,32 +109,19 @@ public class UI_Manager : MonoBehaviour
 
     public void PlayAudioOnSpeaker(string _audio, string _speaker)
     {
-        //public enum Speaker { Surgeon1, Surgeon2, CirculatingNurse, AnaesthesiaNurse, InstrumentalistNurse, Anaesthesiologist};
-        switch (_speaker)
-        {
-            case "Surgeon1":
-            case "Surgeon2":
-            case "CirculatingNurse":
-            case "AnaesthesiaNurse":
-            case "InstrumentalistNurse":
-            case "Anaesthesiologist":
-                //Ahora mismo da igual quien lo diga
-                Debug.Log("Se va a reproducir un audio");
-                audioSource.clip = Resources.Load($"Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}", typeof(AudioClip)) as AudioClip;
-                if (audioSource.clip != null)
-                {
-                    audioSource.Play();
-                }
-                else
-                {
-                    Debug.Log($"No se ha encontrado el audio Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}");
-                }
-                
+        //Animacion
+        dictionaryCharacteres[_speaker].SetBool("isTalking", true);
 
-                break;
-            default:
-                Debug.Log($"No se encuentra al speaker {_speaker}");
-                break;
+        //Ahora mismo da igual quien lo diga
+        //Debug.Log("Se va a reproducir un audio");
+        audioSource.clip = Resources.Load($"Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}", typeof(AudioClip)) as AudioClip;
+        if (audioSource.clip != null)
+        {
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.Log($"No se ha encontrado el audio Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}");
         }
 
     }
@@ -141,6 +133,15 @@ public class UI_Manager : MonoBehaviour
         {
             Debug.Log($"No se ha encontrado la ruta Cases/{caso}_{LanguageManager.Instance.languageSelected}");
             dialogueContainer = Resources.Load($"Cases/Case5_EN") as DialogueContainer;
+        }
+    }
+
+    public void SetNameToCharacters()
+    {
+        foreach (var item in characteres)
+        {
+            dictionaryCharacteres.Add(item.gameObject.name, item);
+            Debug.Log($"Se ha añadido el {item.gameObject.name} al diccionario");
         }
     }
 
