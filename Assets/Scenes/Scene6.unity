@@ -783,7 +783,12 @@ PrefabInstance:
     - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_Name
-      value: Scrub (5)
+      value: Anaesthesiologist
+      objectReference: {fileID: 0}
+    - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8668491829385203019, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -808,7 +813,7 @@ PrefabInstance:
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -863,7 +868,7 @@ PrefabInstance:
     - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_Name
-      value: Scrub
+      value: Surgeon1
       objectReference: {fileID: 0}
     - target: {fileID: 8668491829385203019, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -1614,7 +1619,7 @@ PrefabInstance:
     - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_Name
-      value: Scrub (3)
+      value: AnaesthesiaNurse
       objectReference: {fileID: 0}
     - target: {fileID: 8668491829385203019, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -2049,7 +2054,7 @@ PrefabInstance:
     - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_Name
-      value: Scrub (4)
+      value: InstrumentalistNurse
       objectReference: {fileID: 0}
     - target: {fileID: 8668491829385203019, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -2198,7 +2203,7 @@ RectTransform:
   - {fileID: 2030489335}
   - {fileID: 523089753}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -89.16, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2908,7 +2913,7 @@ PrefabInstance:
     - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_Name
-      value: Scrub (1)
+      value: Surgeon2
       objectReference: {fileID: 0}
     - target: {fileID: 8668491829385203019, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -4590,7 +4595,7 @@ PrefabInstance:
     - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_Name
-      value: Scrub (2)
+      value: CirculatingNurse
       objectReference: {fileID: 0}
     - target: {fileID: 8668491829385203019, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -5332,7 +5337,7 @@ Transform:
   - {fileID: 1383832410}
   - {fileID: 1362821973}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1697494510
 GameObject:
@@ -6059,7 +6064,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1822285954
 PrefabInstance:

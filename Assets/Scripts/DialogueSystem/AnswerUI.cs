@@ -27,6 +27,7 @@ public class AnswerUI : MonoBehaviour
         answerData = _answerData;
         description.text = answerData.Description;
         nextSituation = UI_Manager.Instance.dialogueContainer.GetNextSituation(answerData.Guid);
+        //Debug.Log($"Añadimos la respuesta {answerData.Description}");
     }
 
     public void ClearAnswer()

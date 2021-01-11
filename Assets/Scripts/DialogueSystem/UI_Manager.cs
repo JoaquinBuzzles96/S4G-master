@@ -29,7 +29,7 @@ public class UI_Manager : MonoBehaviour
 
     public List<Animator> characteres;
 
-    public Dictionary<string, Animator> dictionaryCharacteres;
+    public Dictionary<string, Animator> dictionaryCharacteres = new Dictionary<string, Animator>();
 
     public string caso;
 
@@ -110,7 +110,16 @@ public class UI_Manager : MonoBehaviour
     public void PlayAudioOnSpeaker(string _audio, string _speaker)
     {
         //Animacion
-        dictionaryCharacteres[_speaker].SetBool("isTalking", true);
+        if (dictionaryCharacteres.ContainsKey(_speaker))
+        {
+            dictionaryCharacteres[_speaker].SetBool("isTalking", true);
+        }
+        else
+        {
+            Debug.Log($"No se ha encontrado el speaker {_speaker}");
+        }
+
+        //SetAnimToFalse(_speaker);
 
         //Ahora mismo da igual quien lo diga
         //Debug.Log("Se va a reproducir un audio");
@@ -124,6 +133,12 @@ public class UI_Manager : MonoBehaviour
             Debug.Log($"No se ha encontrado el audio Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}");
         }
 
+    }
+
+    IEnumerator SetAnimToFalse(string _speaker)
+    {
+        yield return null;
+        dictionaryCharacteres[_speaker].SetBool("isTalking", false);
     }
 
     public void GetDialogueContainerLanguage()
