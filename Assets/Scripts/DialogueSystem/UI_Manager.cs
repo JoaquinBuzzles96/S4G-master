@@ -39,7 +39,7 @@ public class UI_Manager : MonoBehaviour
 
     [HideInInspector]
     public string playereRoute;
-
+    public float lastTime;
     private void Awake()
     {
         // if the singleton hasn't been initialized yet
