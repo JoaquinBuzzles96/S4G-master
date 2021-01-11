@@ -34,9 +34,13 @@ public class DialogueContainer : ScriptableObject
 
         foreach (var situation in NodeLinks)
         {
-            if (situationGUID == situation.BaseNodeGuid)
+            if (situationGUID == situation.BaseNodeGuid) //esto significa que tiene o bien un dialogue o bien una question
             {
-                listAux.Add(GetQuestion(situation.TargetNodeGuid));
+                var aux = GetQuestion(situation.TargetNodeGuid);
+                if (aux != null) //con esto descartamos el posible valor nulo en caso de que no fuese una question
+                {
+                    listAux.Add(aux);
+                } 
             }
         }
 
@@ -90,7 +94,11 @@ public class DialogueContainer : ScriptableObject
         {
             if (answerGUID == answer.BaseNodeGuid)
             {
-                return GetSituation(answer.TargetNodeGuid);
+                var aux = GetSituation(answer.TargetNodeGuid);
+                if (aux != null) //descartamos que sea un dialogueNode
+                {
+                    return aux;
+                }
             }
         }
 

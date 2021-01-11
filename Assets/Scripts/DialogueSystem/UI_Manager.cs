@@ -53,7 +53,7 @@ public class UI_Manager : MonoBehaviour
     }
     void Start()
     {
-        GetDialogueContainerLanguage();
+        //GetDialogueContainerLanguage(); //TODO: descomentar esto, esta comentado solo para probar casos de ejemplo
         SetNameToCharacters();
         lastQuestion = -1;
         SetupUI(dialogueContainer.GetFirstSituation());
@@ -68,34 +68,45 @@ public class UI_Manager : MonoBehaviour
     public void SetupUI(SituationNodeData _situation)
     {
         situation = _situation;
-        //descriptionText.text = situation.Description; //TODO: ESTO VA A CAMBIAR --> texto del dialogue node y el audio que tenga viendo el que lo dice
-        LoadDialogues();
-        descriptionText.text = dialogues[0].DialogueText;
+        descriptionText.text = situation.Description; //TODO: ESTO VA A CAMBIAR --> texto del dialogue node y el audio que tenga viendo el que lo dice
+        
+        /*
+        if (LoadDialogues(situation.Guid))
+        {
+            descriptionText.text = dialogues[0].DialogueText;
+            Debug.LogError($"Se ha asignado el primer dialogo de la situacion {situation.SituationName}, dialogo = {descriptionText.text}");
+        }
+        else
+        {
+            Debug.LogError($"No se han encontrado dialogos para la situacion {situation.SituationName}");
+        }
+        */
         questions = dialogueContainer.GetSituationQuestions(situation.Guid);
 
         AddTextToRoute(situation.SituationName);
 
         Debug.Log($"Se ha configurado la situacion {situation.SituationName}, tiene {questions.Count} preguntas posibles");
+        //foreach (var item in questions){Debug.Log($"{item.QuestionName}");}
     }
 
-    public bool LoadDialogues()
+    public bool LoadDialogues(string guid)
     {
-        int i = 0;
-        var firstElement = dialogueContainer.GetNextDialogueData(situation.Guid);
+        var firstElement = dialogueContainer.GetNextDialogueData(guid);
         if (firstElement != null)
         {
+            Debug.Log($"Se ha añadido el dialogo {dialogues[dialogues.Count].DialogueName}");
             dialogues.Add(firstElement);//suponemos que siempre hay al menos uno
         }
         else
         {
-            return false; ;
+            return false;
         }
         
         bool end = false;
         while (!end)
         {
-            i++;
-            var aux = dialogueContainer.GetNextDialogueData(dialogues[i].Guid);
+            var aux = dialogueContainer.GetNextDialogueData(dialogues[dialogues.Count].Guid);
+            
             if (aux == null)
             {
                 end = true;
@@ -103,8 +114,8 @@ public class UI_Manager : MonoBehaviour
             else
             {
                 dialogues.Add(aux);
+                Debug.Log($"Se ha añadido el dialogo {aux.DialogueName}");
             }
-
         }
 
         return true;
@@ -196,7 +207,7 @@ public class UI_Manager : MonoBehaviour
         foreach (var item in characteres)
         {
             dictionaryCharacteres.Add(item.gameObject.name, item);
-            Debug.Log($"Se ha añadido el {item.gameObject.name} al diccionario");
+            //Debug.Log($"Se ha añadido el {item.gameObject.name} al diccionario");
         }
     }
 

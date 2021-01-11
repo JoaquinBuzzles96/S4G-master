@@ -36,12 +36,12 @@ public class GraphSaveUtility
         }
         SaveExposedProperties(dialogueContainer);
 
-        if (!AssetDatabase.IsValidFolder("Assets/Scripts/DialogueGraph/Resources"))
+        if (!AssetDatabase.IsValidFolder("Assets/Resources/Cases"))
         {
-            AssetDatabase.CreateFolder("Assets/Scripts/DialogueGraph", "Resources");
+            AssetDatabase.CreateFolder("Assets/Resources", "Cases");
         }
 
-        AssetDatabase.CreateAsset(dialogueContainer, $"Assets/Scripts/DialogueGraph/Resources/{fileName}.asset");
+        AssetDatabase.CreateAsset(dialogueContainer, $"Assets/Resources/Cases/{fileName}.asset");
         AssetDatabase.SaveAssets();
     }
 
@@ -258,7 +258,7 @@ public class GraphSaveUtility
 
     public void LoadGraph(string fileName)
     {
-        _containerCache = Resources.Load<DialogueContainer>(fileName);
+        _containerCache = Resources.Load<DialogueContainer>($"Cases/{fileName}");
 
         if (_containerCache == null)
         {
