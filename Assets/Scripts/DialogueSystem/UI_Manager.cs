@@ -36,6 +36,9 @@ public class UI_Manager : MonoBehaviour
     int lastQuestion;
     int currentQuestion;
 
+    [HideInInspector]
+    public string playereRoute;
+
     private void Awake()
     {
         // if the singleton hasn't been initialized yet
@@ -66,6 +69,8 @@ public class UI_Manager : MonoBehaviour
         situation = _situation;
         descriptionText.text = situation.Description;
         questions = dialogueContainer.GetSituationQuestions(situation.Guid);
+
+        AddTextToRoute(situation.SituationName);
 
         Debug.Log($"Se ha configurado la situacion {situation.SituationName}, tiene {questions.Count} preguntas posibles");
     }
@@ -160,4 +165,8 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
+    public void AddTextToRoute(string _text)
+    {
+        playereRoute += "\n" + _text;
+    }
 }

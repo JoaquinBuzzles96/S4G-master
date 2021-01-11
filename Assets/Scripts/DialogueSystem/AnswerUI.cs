@@ -44,6 +44,7 @@ public class AnswerUI : MonoBehaviour
         }
         else
         {
+            UI_Manager.Instance.AddTextToRoute(answerData.AnswerName);
             if (nextSituation == null)
             {
                 Debug.Log("No se ha asignado la siguiente situacion");
@@ -52,6 +53,7 @@ public class AnswerUI : MonoBehaviour
             {
                 if (answerData.IsCorrect)
                 {
+                    
                     Debug.Log($"La respuesta {answerData.AnswerName} es correcta, vamos a la situacion {nextSituation.SituationName}");
                 }
                 else

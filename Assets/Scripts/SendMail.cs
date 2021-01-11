@@ -30,7 +30,7 @@ public class SendMail : MonoBehaviour
         Attachment attachment = new Attachment(@"D:\S4Game\somefile.txt");
         mail.Attachments.Add(attachment);
 
-        mail.Body = "Name: " + m_UserName + " Correo: " + m_UserMail;
+        mail.Body = "Name: " + m_UserName + " Correo: " + m_UserMail + UI_Manager.Instance.playereRoute;
 
         SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
         smtpServer.Port = 587;
