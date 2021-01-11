@@ -15,45 +15,39 @@ MonoBehaviour:
   NodeLinks:
   - BaseNodeGuid: 1fc7c1e4-a957-4a24-9857-ae4885260898
     PortName: Next
-    TargetNodeGuid: 23b8ebff-a764-4e3d-84ac-522c0e16c079
-  - BaseNodeGuid: 23b8ebff-a764-4e3d-84ac-522c0e16c079
+    TargetNodeGuid: 8c1b6fed-5d66-4457-9355-9d3897879741
+  - BaseNodeGuid: 8c1b6fed-5d66-4457-9355-9d3897879741
     PortName: Dialogue
-    TargetNodeGuid: ad53af80-0ef0-4f2c-9ce9-a981698849a0
-  - BaseNodeGuid: 23b8ebff-a764-4e3d-84ac-522c0e16c079
-    PortName: Question 1
-    TargetNodeGuid: 40ff94fb-afc4-4934-9dc0-4e1e494f1487
-  - BaseNodeGuid: 23b8ebff-a764-4e3d-84ac-522c0e16c079
+    TargetNodeGuid: 46b917d7-0120-44da-b59c-c05a2abf5953
+  - BaseNodeGuid: 8c1b6fed-5d66-4457-9355-9d3897879741
     PortName: Question 2
-    TargetNodeGuid: 7d1a7d03-9cd3-4ff0-8090-f29fc47d4175
-  - BaseNodeGuid: 40ff94fb-afc4-4934-9dc0-4e1e494f1487
+    TargetNodeGuid: 1844bbc6-1582-44ef-8cd8-e6081e601cbc
+  - BaseNodeGuid: 8c1b6fed-5d66-4457-9355-9d3897879741
+    PortName: Question 1
+    TargetNodeGuid: 536b744d-f629-4d7a-a56b-078d9601a6c7
+  - BaseNodeGuid: 1844bbc6-1582-44ef-8cd8-e6081e601cbc
     PortName: Answer 1
-    TargetNodeGuid: 63b898c8-fa71-4a71-84a0-5d6dad5038d5
-  - BaseNodeGuid: 7d1a7d03-9cd3-4ff0-8090-f29fc47d4175
-    PortName: Answer 1
-    TargetNodeGuid: cd1abf0c-ca73-45da-a8c9-24a19a2cdb13
-  - BaseNodeGuid: ad53af80-0ef0-4f2c-9ce9-a981698849a0
-    PortName: Dialogue
-    TargetNodeGuid: 97a1c3bd-6a4a-45c5-b7d0-8be2a7cb5ed0
+    TargetNodeGuid: 5606cd41-a5cf-447a-be7c-815bf3199fef
   SituationNodeData:
-  - Guid: 23b8ebff-a764-4e3d-84ac-522c0e16c079
+  - Guid: 8c1b6fed-5d66-4457-9355-9d3897879741
     SituationName: SituationID
     Description: Deprecated field (use description node)
     Id: 0
     nodeType: 0
-    Position: {x: 272, y: 20}
+    Position: {x: 389, y: 25}
   QuestionNodeData:
-  - Guid: 40ff94fb-afc4-4934-9dc0-4e1e494f1487
+  - Guid: 1844bbc6-1582-44ef-8cd8-e6081e601cbc
     QuestionName: QuestionID
     Description: Question Description
     nodeType: 1
-    Position: {x: 654, y: 64}
-  - Guid: 7d1a7d03-9cd3-4ff0-8090-f29fc47d4175
+    Position: {x: 808, y: 21}
+  - Guid: 46b917d7-0120-44da-b59c-c05a2abf5953
     QuestionName: QuestionID
     Description: Question Description
     nodeType: 1
-    Position: {x: 649, y: 242}
+    Position: {x: 967, y: 215}
   AnswerNodeData:
-  - Guid: 63b898c8-fa71-4a71-84a0-5d6dad5038d5
+  - Guid: 5606cd41-a5cf-447a-be7c-815bf3199fef
     AnswerName: AnswerID
     Description: Deprecated field (use description node)
     Situation: 
@@ -62,32 +56,15 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    Position: {x: 963, y: -10}
-  - Guid: cd1abf0c-ca73-45da-a8c9-24a19a2cdb13
-    AnswerName: AnswerID
-    Description: Deprecated field (use description node)
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    Position: {x: 966, y: 263}
+    score: 344
+    Position: {x: 1085, y: -66}
   DialogueNodeData:
-  - Guid: ad53af80-0ef0-4f2c-9ce9-a981698849a0
+  - Guid: 536b744d-f629-4d7a-a56b-078d9601a6c7
     DialogueName: DialogueID
     DialogueText: Text
     Speaker: Surgeon1
     Mood: Calm
     audioId: Audio id
     nodeType: 3
-    Position: {x: 571, y: -222}
-  - Guid: 97a1c3bd-6a4a-45c5-b7d0-8be2a7cb5ed0
-    DialogueName: DialogueID
-    DialogueText: Text
-    Speaker: Surgeon1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 791, y: -213}
+    Position: {x: 671, y: 318}
   ExposedProperties: []

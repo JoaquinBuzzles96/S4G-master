@@ -14,4 +14,6 @@ public class AnswerNode : ParentNode
     public string speaker;
 
     public string audioId;
+
+    public int score;
 }

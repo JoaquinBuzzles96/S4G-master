@@ -149,15 +149,19 @@ public class DialogueGraphView : GraphView
         }
     }
 
-    public SituationNode CreateSituationNode(string nodeName, Vector2 position, string description = "Deprecated field (use description node)", string id = "0")
+    public SituationNode CreateSituationNode(string nodeName, Vector2 position, string description = "Deprecated field (use description node)", string id = "0", string _guid = "")
     {
+        if (_guid == "" || _guid == null)
+        {
+            _guid = Guid.NewGuid().ToString();
+        }
         var situationNode = new SituationNode //DEFAULT VALUES
         {
             title = nodeName,
             nodeName = nodeName,
             Description = description,
             Id = id,
-            GUID = Guid.NewGuid().ToString(),
+            GUID = _guid,
             nodeType = NodeType.Situation
         };
 
@@ -218,14 +222,18 @@ public class DialogueGraphView : GraphView
         return situationNode;
     }
 
-    public QuestionNode CreateQuestionNode(string nodeName, Vector2 position, string description = "Question Description")
+    public QuestionNode CreateQuestionNode(string nodeName, Vector2 position, string description = "Question Description", string _guid = "")
     {
+        if (_guid == "" || _guid == null)
+        {
+            _guid = Guid.NewGuid().ToString();
+        }
         var questionNode = new QuestionNode //DEFAULT VALUES
         {
             title = nodeName,
             nodeName = nodeName,
             Description = description,
-            GUID = Guid.NewGuid().ToString(),
+            GUID = _guid,
             nodeType = NodeType.Question
         };
 
@@ -268,19 +276,24 @@ public class DialogueGraphView : GraphView
         return questionNode;
     }
 
-    public AnswerNode CreateAnswerNode(string nodeName, Vector2 position, string description = "Deprecated field (use description node)", bool _isEnd = false, bool _isCorrect = false, string _audioId = "Audio id", string _speaker = "Speaker")
+    public AnswerNode CreateAnswerNode(string nodeName, Vector2 position, string description = "Deprecated field (use description node)", bool _isEnd = false, bool _isCorrect = false, string _audioId = "Audio id", string _speaker = "Speaker", string _guid = "", int _score = 0)
     {
+        if (_guid == "" || _guid == null)
+        {
+            _guid = Guid.NewGuid().ToString();
+        }
         var answerNode = new AnswerNode //DEFAULT VALUES
         {
             title = nodeName,
             nodeName = nodeName,
             Description = description,
-            GUID = Guid.NewGuid().ToString(),
+            GUID = _guid,
             IsCorrect = _isCorrect,
             IsEnd = _isEnd,
             nodeType = NodeType.Answer,
             audioId = _audioId,
-            speaker = _speaker
+            speaker = _speaker,
+            score = _score
 
         };
 
@@ -364,6 +377,21 @@ public class DialogueGraphView : GraphView
         speakerField.SetValueWithoutNotify(answerNode.speaker);
         answerNode.mainContainer.Add(speakerField);
         */
+
+        //Text isEnd
+        var scoreText = new TextElement();
+        scoreText.text = "Score";
+        answerNode.mainContainer.Add(scoreText);
+
+        //Score value
+        var scoreField = new TextField(string.Empty);
+        scoreField.RegisterValueChangedCallback(evt =>
+        {
+            answerNode.score = int.Parse(evt.newValue);
+        });
+        scoreField.SetValueWithoutNotify(answerNode.score.ToString());
+        answerNode.mainContainer.Add(scoreField);
+
         //Dialogue Output
         var generatedPort = GeneratePort(answerNode, Direction.Output);
         generatedPort.portName = "Dialogue";
@@ -383,14 +411,18 @@ public class DialogueGraphView : GraphView
         return answerNode;
     }
 
-    public DialogueNode CreateDialogueNode(string nodeName, Vector2 position, string dialogueText = "Text", string speaker = "Surgeon1", string mood = "Calm", string _audioId = "Audio id")
+    public DialogueNode CreateDialogueNode(string nodeName, Vector2 position, string dialogueText = "Text", string speaker = "Surgeon1", string mood = "Calm", string _audioId = "Audio id", string _guid = "")
     {
+        if (_guid == "" || _guid == null)
+        {
+            _guid = Guid.NewGuid().ToString();
+        }
         var dialogueNode = new DialogueNode //DEFAULT VALUES
         {
             title = nodeName,
             nodeName = nodeName,
             Description = dialogueText,
-            GUID = Guid.NewGuid().ToString(),
+            GUID = _guid,
             nodeType = NodeType.Dialogue,
             Speaker = speaker,
             mood = mood,

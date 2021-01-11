@@ -233,6 +233,7 @@ public class GraphSaveUtility
                         nodeType = nodeAnswer.nodeType,
                         audioId = nodeAnswer.audioId,
                         speaker = nodeAnswer.speaker,
+                        score = nodeAnswer.score,
                         Position = nodeAnswer.GetPosition().position
                     });
                     break;
@@ -306,8 +307,7 @@ public class GraphSaveUtility
     {
         foreach (var nodeData in _containerCache.SituationNodeData)
         {
-            var tempNode = _targetGraphView.CreateSituationNode(nodeData.SituationName, Vector2.zero, nodeData.Description, nodeData.Id);
-            tempNode.GUID = nodeData.Guid;
+            var tempNode = _targetGraphView.CreateSituationNode(nodeData.SituationName, Vector2.zero, nodeData.Description, nodeData.Id, nodeData.Guid);
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
@@ -317,8 +317,7 @@ public class GraphSaveUtility
 
         foreach (var nodeData in _containerCache.QuestionNodeData)
         {
-            var tempNode = _targetGraphView.CreateQuestionNode(nodeData.QuestionName, Vector2.zero, nodeData.Description);
-            tempNode.GUID = nodeData.Guid;
+            var tempNode = _targetGraphView.CreateQuestionNode(nodeData.QuestionName, Vector2.zero, nodeData.Description, nodeData.Guid);
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
@@ -328,8 +327,7 @@ public class GraphSaveUtility
 
         foreach (var nodeData in _containerCache.AnswerNodeData)
         {
-            var tempNode = _targetGraphView.CreateAnswerNode(nodeData.AnswerName, Vector2.zero, nodeData.Description, nodeData.IsEnd, nodeData.IsCorrect, nodeData.audioId, nodeData.speaker);
-            tempNode.GUID = nodeData.Guid;
+            var tempNode = _targetGraphView.CreateAnswerNode(nodeData.AnswerName, Vector2.zero, nodeData.Description, nodeData.IsEnd, nodeData.IsCorrect, nodeData.audioId, nodeData.speaker, nodeData.Guid, nodeData.score);
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
@@ -339,8 +337,7 @@ public class GraphSaveUtility
 
         foreach (var nodeData in _containerCache.DialogueNodeData)
         {
-            var tempNode = _targetGraphView.CreateDialogueNode(nodeData.DialogueName, Vector2.zero, nodeData.DialogueText, nodeData.Speaker, nodeData.Mood, nodeData.audioId);
-            tempNode.GUID = nodeData.Guid;
+            var tempNode = _targetGraphView.CreateDialogueNode(nodeData.DialogueName, Vector2.zero, nodeData.DialogueText, nodeData.Speaker, nodeData.Mood, nodeData.audioId, nodeData.Guid);
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
@@ -349,28 +346,18 @@ public class GraphSaveUtility
         }
     }
 
-    private void ConnectNodesOld()
+    private void ConnectNodes() //los esta conectando por orden de cracion, hay que cambiar esto para que lo haga por nombre
     {
         for (var i = 0; i < Nodes.Count; i++)
         {
             var connections = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == Nodes[i].GUID).ToList();
-            for (var j =0; j< connections.Count; j++)
+
+            Debug.Log($"Los puertos del nodo {Nodes[i].nodeName} son: ");
+            foreach (var item in connections)
             {
-                var targetNodeGuid = connections[j].TargetNodeGuid;
-                var targetNode = Nodes.First(x=>x.GUID == targetNodeGuid);
-                LinkNodes(Nodes[i].outputContainer[j].Q<Port>(), (Port) targetNode.inputContainer[0]);
-
-                targetNode.SetPosition(new Rect(_containerCache.QuestionNodeData.First(x=>x.Guid == targetNodeGuid).Position, _targetGraphView.defaultNodeSize));
+                Debug.Log($"{item.PortName}");
             }
-        }
-    }
 
-    private void ConnectNodes()
-    {
-        for (var i = 0; i < Nodes.Count; i++)
-        {
-            //Debug.Log($"nodo: {Nodes[i].GUID}");
-            var connections = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == Nodes[i].GUID).ToList();
             for (var j = 0; j < connections.Count; j++)
             {
                 var targetNodeGuid = connections[j].TargetNodeGuid;

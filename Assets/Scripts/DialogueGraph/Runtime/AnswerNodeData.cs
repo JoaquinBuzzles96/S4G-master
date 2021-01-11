@@ -17,5 +17,6 @@ public class AnswerNodeData
     public NodeType nodeType;
     public string speaker;
     public string audioId;
+    public int score;
     public Vector2 Position;
 }
