@@ -8,12 +8,13 @@ public class DialogueContainer : ScriptableObject
 {
 
     public List<NodeLinkData> NodeLinks = new List<NodeLinkData>();
-    //public List<ParentNodeData> ParentNodeData= new List<ParentNodeData>();
     public List<SituationNodeData> SituationNodeData= new List<SituationNodeData>();
     public List<QuestionNodeData> QuestionNodeData= new List<QuestionNodeData>();
     public List<AnswerNodeData> AnswerNodeData= new List<AnswerNodeData>();
-
+    public List<DialogueNodeData> DialogueNodeData = new List<DialogueNodeData>();
     public List<ExposedProperty> ExposedProperties = new List<ExposedProperty>();
+
+
 
     public SituationNodeData GetFirstSituation()
     {
@@ -103,6 +104,36 @@ public class DialogueContainer : ScriptableObject
             if (situation.Guid == situationGUID)
             {
                 return situation;
+            }
+        }
+
+        return null;
+    }
+
+    public DialogueNodeData GetNextDialogueData(string _GUID)
+    {
+        foreach (var node in NodeLinks) //node generico --> dialogue
+        {
+            if (_GUID == node.BaseNodeGuid)
+            {
+                var aux = GetDialogue(node.TargetNodeGuid);
+                if (aux != null)
+                {
+                    return aux;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    public DialogueNodeData GetDialogue(string _GUID)
+    {
+        foreach (var node in DialogueNodeData)
+        {
+            if (node.Guid == _GUID)
+            {
+                return node;
             }
         }
 

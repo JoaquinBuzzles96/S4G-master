@@ -141,12 +141,15 @@ public class DialogueGraphView : GraphView
             case "AnswerID":
                 AddElement(CreateAnswerNode(nodeName, position));
                 break;
+            case "DialogueID":
+                AddElement(CreateDialogueNode(nodeName, position));
+                break;
             default:
                 break;
         }
     }
 
-    public SituationNode CreateSituationNode(string nodeName, Vector2 position, string description = "Situation Description", string id = "0")
+    public SituationNode CreateSituationNode(string nodeName, Vector2 position, string description = "Deprecated field (use description node)", string id = "0")
     {
         var situationNode = new SituationNode //DEFAULT VALUES
         {
@@ -198,6 +201,14 @@ public class DialogueGraphView : GraphView
         });
         situationId.SetValueWithoutNotify(situationNode.Id);
         situationNode.mainContainer.Add(situationId);
+
+        //Dialogue Output
+        var generatedPort = GeneratePort(situationNode, Direction.Output);
+        generatedPort.portName = "Dialogue";
+        generatedPort.portColor = Color.white;
+
+
+        situationNode.outputContainer.Add(generatedPort);
 
         //Refresh UI
         situationNode.RefreshExpandedState();
@@ -257,7 +268,7 @@ public class DialogueGraphView : GraphView
         return questionNode;
     }
 
-    public AnswerNode CreateAnswerNode(string nodeName, Vector2 position, string description = "Answer Description", bool _isEnd = false, bool _isCorrect = false, string _audioId = "Audio id", string _speaker = "Speaker")
+    public AnswerNode CreateAnswerNode(string nodeName, Vector2 position, string description = "Deprecated field (use description node)", bool _isEnd = false, bool _isCorrect = false, string _audioId = "Audio id", string _speaker = "Speaker")
     {
         var answerNode = new AnswerNode //DEFAULT VALUES
         {
@@ -280,11 +291,12 @@ public class DialogueGraphView : GraphView
 
         answerNode.styleSheets.Add(Resources.Load<StyleSheet>("Node")); //en un futuro esto puede cambiar en funcion del tipo de nodo que sea
 
-
+        /*
         //Boton de new question
         var button = new Button(() => { AddChoicePort(answerNode); });
         button.text = "New Situation dest";
         answerNode.titleContainer.Add(button);
+        */
 
         //Texto del nombre
         var textField = new TextField(string.Empty);
@@ -332,7 +344,7 @@ public class DialogueGraphView : GraphView
         });
         isEnd.SetValueWithoutNotify(answerNode.IsEnd);
         answerNode.mainContainer.Add(isEnd);
-
+        /*
         //Audio ID
         var audioID = new TextField(string.Empty);
         audioID.RegisterValueChangedCallback(evt =>
@@ -350,6 +362,18 @@ public class DialogueGraphView : GraphView
         });
         speakerField.SetValueWithoutNotify(answerNode.speaker);
         answerNode.mainContainer.Add(speakerField);
+        */
+        //Dialogue Output
+        var generatedPort = GeneratePort(answerNode, Direction.Output);
+        generatedPort.portName = "Dialogue";
+        generatedPort.portColor = Color.white;
+        answerNode.outputContainer.Add(generatedPort);
+
+        //Situation output
+        var generatedPortSituation = GeneratePort(answerNode, Direction.Output);
+        generatedPortSituation.portName = "Situation";
+        generatedPortSituation.portColor = Color.white;
+        answerNode.outputContainer.Add(generatedPortSituation);
 
         //Refresh UI
         answerNode.RefreshExpandedState();
@@ -358,20 +382,106 @@ public class DialogueGraphView : GraphView
         return answerNode;
     }
 
-    public void AddChoicePort(ParentNode node, string overriddenPortName = "") //TODO: Testear este cambvio de parametro de dialogue node a Node
+    public DialogueNode CreateDialogueNode(string nodeName, Vector2 position, string dialogueText = "Text", string speaker = "Surgeon1", string mood = "Calm", string _audioId = "Audio id")
     {
+        var dialogueNode = new DialogueNode //DEFAULT VALUES
+        {
+            title = nodeName,
+            nodeName = nodeName,
+            Description = dialogueText,
+            GUID = Guid.NewGuid().ToString(),
+            nodeType = NodeType.Dialogue,
+            Speaker = speaker,
+            mood = mood,
+            audioId = _audioId
+        };
+
+        //Input
+        var inputPort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Multi);
+        inputPort.portName = "Input";
+        dialogueNode.inputContainer.Add(inputPort);
+
+        dialogueNode.styleSheets.Add(Resources.Load<StyleSheet>("Node")); //en un futuro esto puede cambiar en funcion del tipo de nodo que sea
+
+        //Texto del nombre
+        var textField = new TextField(string.Empty);
+        textField.RegisterValueChangedCallback(evt =>
+        {
+            dialogueNode.nodeName = evt.newValue;
+            dialogueNode.title = evt.newValue;
+        });
+        textField.SetValueWithoutNotify(dialogueNode.title);
+        dialogueNode.mainContainer.Add(textField);
+
+        //Texto de descripcion
+        var textDescription = new TextField(string.Empty);
+        textDescription.RegisterValueChangedCallback(evt =>
+        {
+            dialogueNode.Description = evt.newValue;
+        });
+        textDescription.SetValueWithoutNotify(dialogueNode.Description);
+        dialogueNode.mainContainer.Add(textDescription);
+
+        //Speaker
+        var speakerField = new TextField(string.Empty);
+        speakerField.RegisterValueChangedCallback(evt =>
+        {
+            dialogueNode.Speaker = evt.newValue;
+        });
+        speakerField.SetValueWithoutNotify(dialogueNode.Speaker);
+        dialogueNode.mainContainer.Add(speakerField);
+
+        //Mood
+        var moodField = new TextField(string.Empty);
+        moodField.RegisterValueChangedCallback(evt =>
+        {
+            dialogueNode.mood = evt.newValue;
+        });
+        moodField.SetValueWithoutNotify(dialogueNode.mood);
+        dialogueNode.mainContainer.Add(moodField);
+
+        //Dialogue audio
+        var audioID = new TextField(string.Empty);
+        audioID.RegisterValueChangedCallback(evt =>
+        {
+            dialogueNode.audioId = evt.newValue;
+        });
+        audioID.SetValueWithoutNotify(dialogueNode.audioId);
+        dialogueNode.mainContainer.Add(audioID);
+
+        //Dialogue Output
+        var generatedPort = GeneratePort(dialogueNode, Direction.Output);
+        generatedPort.portName = "Dialogue";
+        generatedPort.portColor = Color.white;
+        dialogueNode.outputContainer.Add(generatedPort);
+
+        //Refresh UI
+        dialogueNode.RefreshExpandedState();
+        dialogueNode.RefreshPorts();
+        dialogueNode.SetPosition(new Rect(position, defaultNodeSize));
+
+        return dialogueNode;
+    }
+
+    public void AddChoicePort(ParentNode node, string overriddenPortName = "")
+    {
+        if (overriddenPortName == "Dialogue" || overriddenPortName == "Situation")
+        {
+            return;
+        }
         var generatedPort = GeneratePort(node, Direction.Output);
 
         var oldLabel = generatedPort.contentContainer.Q<Label>("type");
         generatedPort.contentContainer.Remove(oldLabel);
 
-        var outputPortCount = node.outputContainer.Query("connector").ToList().Count;
+        var outputPortCount = node.outputContainer.Query("connector").ToList().Count; //hacer que esto no pille el puerto dialogue
+
         var choicePortName = "";
         switch (node.nodeType)
         {
             case NodeType.Situation:
                 generatedPort.portName = $"Question {outputPortCount}";
-                choicePortName = string.IsNullOrEmpty(overriddenPortName) ? $"Question {outputPortCount + 1}" : overriddenPortName;
+                choicePortName = string.IsNullOrEmpty(overriddenPortName) ? $"Question {outputPortCount}" : overriddenPortName;
                 break;  
             case NodeType.Question:
                 generatedPort.portName = $"Answer {outputPortCount}";
@@ -379,8 +489,14 @@ public class DialogueGraphView : GraphView
                 break;
             case NodeType.Answer:
                 generatedPort.portName = $"Situation {outputPortCount}";
-                choicePortName = string.IsNullOrEmpty(overriddenPortName) ? $"Situation {outputPortCount + 1}" : overriddenPortName;
+                choicePortName = string.IsNullOrEmpty(overriddenPortName) ? $"Situation {outputPortCount}" : overriddenPortName;
                 break;
+                
+            case NodeType.Dialogue:
+                generatedPort.portName = $"Next Dialogue {outputPortCount}";
+                choicePortName = string.IsNullOrEmpty(overriddenPortName) ? $"Next Dialogue {outputPortCount + 1}" : overriddenPortName;
+                break;
+                
         }
 
         var textField = new TextField

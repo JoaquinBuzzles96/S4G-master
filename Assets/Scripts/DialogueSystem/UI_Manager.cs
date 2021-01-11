@@ -19,6 +19,7 @@ public class UI_Manager : MonoBehaviour
 
     private SituationNodeData situation;
     private List<QuestionNodeData> questions;
+    private List<DialogueNodeData> dialogues = new List<DialogueNodeData>();
 
     public DialogueContainer dialogueContainer;
 
@@ -64,10 +65,44 @@ public class UI_Manager : MonoBehaviour
     public void SetupUI(SituationNodeData _situation)
     {
         situation = _situation;
-        descriptionText.text = situation.Description;
+        //descriptionText.text = situation.Description; //TODO: ESTO VA A CAMBIAR --> texto del dialogue node y el audio que tenga viendo el que lo dice
+        LoadDialogues();
+        descriptionText.text = dialogues[0].DialogueText;
         questions = dialogueContainer.GetSituationQuestions(situation.Guid);
 
         Debug.Log($"Se ha configurado la situacion {situation.SituationName}, tiene {questions.Count} preguntas posibles");
+    }
+
+    public bool LoadDialogues()
+    {
+        int i = 0;
+        var firstElement = dialogueContainer.GetNextDialogueData(situation.Guid);
+        if (firstElement != null)
+        {
+            dialogues.Add(firstElement);//suponemos que siempre hay al menos uno
+        }
+        else
+        {
+            return false; ;
+        }
+        
+        bool end = false;
+        while (!end)
+        {
+            i++;
+            var aux = dialogueContainer.GetNextDialogueData(dialogues[i].Guid);
+            if (aux == null)
+            {
+                end = true;
+            }
+            else
+            {
+                dialogues.Add(aux);
+            }
+
+        }
+
+        return true;
     }
 
     public void ChangeStateUI(GameObject toDisable, GameObject toEnable)

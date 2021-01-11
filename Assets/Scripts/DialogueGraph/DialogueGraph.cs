@@ -91,7 +91,7 @@ public class DialogueGraph : EditorWindow
         //Boton de guardar
         toolbar.Add(new Button(() => RequestDataOperation(true)) { text = "Save Data"});
         toolbar.Add(new Button(() => RequestDataOperation(false)) { text = "Load Data" });
-        toolbar.Add(new Button(() => GenerateCase()) { text = "Generate Case" });
+        //toolbar.Add(new Button(() => GenerateCase()) { text = "Generate Case" });
 
         //Boton de crear nuevo nodo
         /* Esto ahora se hace desde el desplegable

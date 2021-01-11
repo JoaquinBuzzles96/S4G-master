@@ -45,6 +45,7 @@ public class GraphSaveUtility
         AssetDatabase.SaveAssets();
     }
 
+    //Ya no se utiliza
     public void Generate(string caseName)
     {
         //Comprobamos que las carpetas esten creadas, y si no lo estan las creamos
@@ -175,12 +176,11 @@ public class GraphSaveUtility
             return false;
         }
 
-        //var dialogueContainer = ScriptableObject.CreateInstance<DialogueContainer>();
         //SAVE CONNECTIONS
         var connectedPorts = Edges.Where(x => x.input.node != null).ToArray();
         for (int i = 0; i < connectedPorts.Length; i++)
         {
-            var outputNode = connectedPorts[i].output.node as ParentNode;// DialogueNode; //Case en funcion del tipo de nodo (no quitar estos, adaptarlo)
+            var outputNode = connectedPorts[i].output.node as ParentNode;
             var inputNode = connectedPorts[i].input.node as ParentNode;
 
             dialogueContainer.NodeLinks.Add(new NodeLinkData
@@ -234,6 +234,20 @@ public class GraphSaveUtility
                         audioId = nodeAnswer.audioId,
                         speaker = nodeAnswer.speaker,
                         Position = nodeAnswer.GetPosition().position
+                    });
+                    break;
+                case NodeType.Dialogue:
+                    var nodeDialogue = node as DialogueNode;
+                    dialogueContainer.DialogueNodeData.Add(new DialogueNodeData
+                    {
+                        Guid = nodeDialogue.GUID,
+                        DialogueName = nodeDialogue.nodeName,
+                        DialogueText = nodeDialogue.Description,
+                        nodeType = nodeDialogue.nodeType,
+                        Speaker = nodeDialogue.Speaker,
+                        Mood = nodeDialogue.mood,
+                        audioId = nodeDialogue.audioId,
+                        Position = nodeDialogue.GetPosition().position
                     });
                     break;
             }
@@ -322,6 +336,17 @@ public class GraphSaveUtility
             nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.PortName));
 
         }
+
+        foreach (var nodeData in _containerCache.DialogueNodeData)
+        {
+            var tempNode = _targetGraphView.CreateDialogueNode(nodeData.DialogueName, Vector2.zero, nodeData.DialogueText, nodeData.Speaker, nodeData.Mood, nodeData.audioId);
+            tempNode.GUID = nodeData.Guid;
+            _targetGraphView.AddElement(tempNode);
+
+            var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
+            nodePorts.ForEach(x => _targetGraphView.AddChoicePort(tempNode, x.PortName));
+
+        }
     }
 
     private void ConnectNodesOld()
@@ -363,7 +388,10 @@ public class GraphSaveUtility
                     case NodeType.Answer:
                         targetNode.SetPosition(new Rect(_containerCache.AnswerNodeData.First(x => x.Guid == targetNodeGuid).Position, _targetGraphView.defaultNodeSize));
                         break;
-                } 
+                    case NodeType.Dialogue:
+                        targetNode.SetPosition(new Rect(_containerCache.DialogueNodeData.First(x => x.Guid == targetNodeGuid).Position, _targetGraphView.defaultNodeSize));
+                        break;
+                }
             }
         }
     }

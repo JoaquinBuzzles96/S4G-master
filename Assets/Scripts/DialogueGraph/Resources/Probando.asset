@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
+  m_Name: Probando
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: dc274bb1-4425-4d07-ac2c-9544609e33b8
+    PortName: Next
+    TargetNodeGuid: dc1253d9-9cee-4cfe-b93f-9e2d8d94d2df
+  - BaseNodeGuid: dc1253d9-9cee-4cfe-b93f-9e2d8d94d2df
+    PortName: Dialogue
+    TargetNodeGuid: 54827e0e-ca3c-47fb-b5eb-ebd00d689599
+  - BaseNodeGuid: dc1253d9-9cee-4cfe-b93f-9e2d8d94d2df
+    PortName: Question 1
+    TargetNodeGuid: 7f8e23ab-a77e-48f6-a5fb-00a5eea6c8e9
+  - BaseNodeGuid: 7f8e23ab-a77e-48f6-a5fb-00a5eea6c8e9
+    PortName: Answer 1
+    TargetNodeGuid: 3d1976cf-5a3a-40fe-b317-b254dd56d739
+  - BaseNodeGuid: 7f8e23ab-a77e-48f6-a5fb-00a5eea6c8e9
+    PortName: Answer 2
+    TargetNodeGuid: 52a783dc-c526-4338-a4eb-a0258768585c
+  - BaseNodeGuid: 7f8e23ab-a77e-48f6-a5fb-00a5eea6c8e9
+    PortName: Answer 3
+    TargetNodeGuid: 322c1a26-7cf6-4631-b3fc-5ae39bf9e8bc
+  - BaseNodeGuid: 3d1976cf-5a3a-40fe-b317-b254dd56d739
+    PortName: Dialogue
+    TargetNodeGuid: e8fc99cd-601b-4476-9d5a-fb2641ec1ba8
+  - BaseNodeGuid: 3d1976cf-5a3a-40fe-b317-b254dd56d739
+    PortName: Situation
+    TargetNodeGuid: dc1253d9-9cee-4cfe-b93f-9e2d8d94d2df
+  - BaseNodeGuid: 52a783dc-c526-4338-a4eb-a0258768585c
+    PortName: Dialogue
+    TargetNodeGuid: b900f5b0-d298-440e-86b8-42c13a0f9cd5
+  - BaseNodeGuid: 52a783dc-c526-4338-a4eb-a0258768585c
+    PortName: Situation
+    TargetNodeGuid: dc1253d9-9cee-4cfe-b93f-9e2d8d94d2df
+  - BaseNodeGuid: 54827e0e-ca3c-47fb-b5eb-ebd00d689599
+    PortName: Dialogue
+    TargetNodeGuid: 5ec9d5cb-c08c-4780-8643-578562afa1d1
+  - BaseNodeGuid: 322c1a26-7cf6-4631-b3fc-5ae39bf9e8bc
+    PortName: Situation
+    TargetNodeGuid: dc1253d9-9cee-4cfe-b93f-9e2d8d94d2df
+  - BaseNodeGuid: 322c1a26-7cf6-4631-b3fc-5ae39bf9e8bc
+    PortName: Dialogue
+    TargetNodeGuid: b900f5b0-d298-440e-86b8-42c13a0f9cd5
+  - BaseNodeGuid: b900f5b0-d298-440e-86b8-42c13a0f9cd5
+    PortName: Dialogue
+    TargetNodeGuid: f830a633-261c-4ece-b507-79d8d17bf762
+  SituationNodeData:
+  - Guid: dc1253d9-9cee-4cfe-b93f-9e2d8d94d2df
+    SituationName: SituationID
+    Description: Deprecated field (use description node)
+    Id: 0
+    nodeType: 0
+    Position: {x: 218, y: -8}
+  QuestionNodeData:
+  - Guid: 7f8e23ab-a77e-48f6-a5fb-00a5eea6c8e9
+    QuestionName: QuestionID
+    Description: Question Description
+    nodeType: 1
+    Position: {x: 446, y: 193}
+  AnswerNodeData:
+  - Guid: 3d1976cf-5a3a-40fe-b317-b254dd56d739
+    AnswerName: AnswerID
+    Description: Deprecated field (use description node)
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    Position: {x: 727, y: 170}
+  - Guid: 52a783dc-c526-4338-a4eb-a0258768585c
+    AnswerName: AnswerID
+    Description: Deprecated field (use description node)
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    Position: {x: 716, y: 422}
+  - Guid: 322c1a26-7cf6-4631-b3fc-5ae39bf9e8bc
+    AnswerName: AnswerID
+    Description: Deprecated field (use description node)
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    Position: {x: 750, y: 680}
+  DialogueNodeData:
+  - Guid: 54827e0e-ca3c-47fb-b5eb-ebd00d689599
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 619, y: -96}
+  - Guid: e8fc99cd-601b-4476-9d5a-fb2641ec1ba8
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1076, y: 138}
+  - Guid: 5ec9d5cb-c08c-4780-8643-578562afa1d1
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 828, y: -90}
+  - Guid: b900f5b0-d298-440e-86b8-42c13a0f9cd5
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1062, y: 382}
+  - Guid: f830a633-261c-4ece-b507-79d8d17bf762
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1303, y: 399}
+  ExposedProperties: []

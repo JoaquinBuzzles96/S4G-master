@@ -26,18 +26,22 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
         var tree = new List<SearchTreeEntry>
         {
             new SearchTreeGroupEntry(new GUIContent("Create Elements"), 0),
-            new SearchTreeGroupEntry(new GUIContent("Dialogue"), 1),
+            new SearchTreeGroupEntry(new GUIContent("Node Types"), 1),
             new SearchTreeEntry(new GUIContent("Situation Node", _identationIcon))
             {
-                userData = new DialogueNode(), level = 2
+                userData = new SituationNode(), level = 2
             },
             new SearchTreeEntry(new GUIContent("Question Node", _identationIcon))
             {
-                userData = new QuestionNode(), level = 2 //TODO
+                userData = new QuestionNode(), level = 2 
             },
             new SearchTreeEntry(new GUIContent("Answer Node", _identationIcon))
             {
-                userData = new AnswerNode(), level = 2 //TODO
+                userData = new AnswerNode(), level = 2 
+            },
+            new SearchTreeEntry(new GUIContent("Dialogue Node", _identationIcon))
+            {
+                userData = new DialogueNode(), level = 2
             }
         };
         return tree;
@@ -50,7 +54,7 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
 
         switch (SearchTreeEntry.userData)
         {
-            case DialogueNode dialogueNode:
+            case SituationNode situationNode:
                 _graphView.CreateNode("SituationID", localMousePosition);
                 return true;
             case QuestionNode questionNode:
@@ -58,6 +62,9 @@ public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider
                 return true;
             case AnswerNode answerNode:
                 _graphView.CreateNode("AnswerID", localMousePosition);
+                return true;
+            case DialogueNode dialogueNode:
+                _graphView.CreateNode("DialogueID", localMousePosition);
                 return true;
 
             default:

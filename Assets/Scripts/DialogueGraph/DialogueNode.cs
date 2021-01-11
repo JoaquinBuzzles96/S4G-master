@@ -5,8 +5,8 @@ using UnityEditor.Experimental.GraphView;
 
 public class DialogueNode : ParentNode
 {
+    public string Speaker;
+    public string mood;
+    public string audioId;
 
-    public string SituationName;
-
-    public string Id;
 }
