@@ -28,6 +28,8 @@ public class QuestionUI : MonoBehaviour
         description.text = questionData.Description;
         answersData = UI_Manager.Instance.dialogueContainer.GetQuestionAnswers(questionData.Guid);
 
+        UI_Manager.Instance.AddTextToRoute("To the question: " + questionData.QuestionName + " " + questionData.Description);
+
         Debug.Log($"Se ha configurado la pregunta {questionData.QuestionName}, sus respuestas son {answersData[0].AnswerName}, {answersData[1].AnswerName}, {answersData[2].AnswerName}, {answersData[3].AnswerName}");
 
         int i = 0;

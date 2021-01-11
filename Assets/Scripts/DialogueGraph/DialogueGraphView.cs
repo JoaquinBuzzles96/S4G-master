@@ -322,6 +322,7 @@ public class DialogueGraphView : GraphView
         isCorrectText.text = "isCorrect";
         answerNode.mainContainer.Add(isCorrectText);
 
+        
         //Boolean isCorrect
         var isCorrect = new Toggle();
         isCorrect.RegisterValueChangedCallback(evt =>
