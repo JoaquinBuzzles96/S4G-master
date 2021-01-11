@@ -28,6 +28,7 @@ public class QuestionUI : MonoBehaviour
         description.text = questionData.Description;
         Debug.Log($"Setup description: {questionData.Description}");
 
+        UI_Manager.Instance.lastTime = Time.time;
         answersData = UI_Manager.Instance.dialogueContainer.GetQuestionAnswers(questionData.Guid);
 
         UI_Manager.Instance.AddTextToRoute("To the question: " + questionData.QuestionName + " " + questionData.Description);

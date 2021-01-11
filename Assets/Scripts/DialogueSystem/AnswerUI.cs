@@ -40,13 +40,13 @@ public class AnswerUI : MonoBehaviour
     {
         if (answerData.IsEnd)
         {
+            UI_Manager.Instance.AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
             Debug.Log("Enhorabuena, has acabado la simulacion :D");
             // send mail
         }
         else
         {
-            UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + " " + answerData.Description + "\n");
-            if (nextSituation == null)
+            UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + " " + answerData.Description + "\n" + "Time to answer: " + Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) + " seconds.\n"); if (nextSituation == null)
             {
                 Debug.Log("No se ha asignado la siguiente situacion");
             }
