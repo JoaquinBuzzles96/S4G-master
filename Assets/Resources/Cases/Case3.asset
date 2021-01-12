@@ -13,28 +13,302 @@ MonoBehaviour:
   m_Name: Case3
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: e8e74b32-6cc0-496d-a88a-de98c3cd6a30
-    PortName: Next
-    TargetNodeGuid: df99ef32-67f3-4119-92d1-431e100d61d6
-  - BaseNodeGuid: df99ef32-67f3-4119-92d1-431e100d61d6
+  - BaseNodeGuid: 1a8a2fff-e26c-41f1-9dd8-2c6e80c21b5b
+    PortName: S1
+    TargetNodeGuid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
+  - BaseNodeGuid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
     PortName: Dialogue
-    TargetNodeGuid: 9aa6c40f-ee9c-455d-83f0-5069c8834e11
+    TargetNodeGuid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
+  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    PortName: Answer 1
+    TargetNodeGuid: 7a074eee-6300-4f85-b697-9ac22ddf536a
+  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    PortName: Answer 2
+    TargetNodeGuid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
+  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    PortName: Answer 3
+    TargetNodeGuid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
+  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    PortName: Answer 4
+    TargetNodeGuid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
+  - BaseNodeGuid: 7a074eee-6300-4f85-b697-9ac22ddf536a
+    PortName: Dialogue
+    TargetNodeGuid: c4fe1ad4-468a-44a9-a2e0-77367ed9723d
+  - BaseNodeGuid: 7a074eee-6300-4f85-b697-9ac22ddf536a
+    PortName: Situation
+    TargetNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
+  - BaseNodeGuid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
+    PortName: Dialogue
+    TargetNodeGuid: 8d624d3d-6290-485e-a072-f08bcbbf3039
+  - BaseNodeGuid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
+    PortName: Situation
+    TargetNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
+  - BaseNodeGuid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
+    PortName: Dialogue
+    TargetNodeGuid: d7a7eaf3-ef7b-456b-92f1-5a627bd946dd
+  - BaseNodeGuid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
+    PortName: Dialogue
+    TargetNodeGuid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
+  - BaseNodeGuid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
+    PortName: Dialogue
+    TargetNodeGuid: 5a1b518d-83fc-4f1f-9c70-0df5e62f37f8
+  - BaseNodeGuid: 5a1b518d-83fc-4f1f-9c70-0df5e62f37f8
+    PortName: Dialogue
+    TargetNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+  - BaseNodeGuid: c4fe1ad4-468a-44a9-a2e0-77367ed9723d
+    PortName: Dialogue
+    TargetNodeGuid: 6f4fbb9d-704b-4dc0-8bc1-44762e9087f5
+  - BaseNodeGuid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
+    PortName: Dialogue
+    TargetNodeGuid: 7805dd50-2dcc-4f84-919b-8f43a000746e
+  - BaseNodeGuid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
+    PortName: Dialogue
+    TargetNodeGuid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
+  - BaseNodeGuid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
+    PortName: Situation
+    TargetNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
+  - BaseNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
+    PortName: Dialogue
+    TargetNodeGuid: 8a9b76c5-4b77-4995-a7b9-47f7301a4fbe
+  - BaseNodeGuid: 8a9b76c5-4b77-4995-a7b9-47f7301a4fbe
+    PortName: Dialogue
+    TargetNodeGuid: 4cff95b7-9c2b-4618-b0bb-c657e47cfb6d
+  - BaseNodeGuid: 4cff95b7-9c2b-4618-b0bb-c657e47cfb6d
+    PortName: Dialogue
+    TargetNodeGuid: 51a416c3-ca43-46af-8200-90d6013c16c4
+  - BaseNodeGuid: 51a416c3-ca43-46af-8200-90d6013c16c4
+    PortName: Dialogue
+    TargetNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
+  - BaseNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
+    PortName: Answer 1
+    TargetNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
+  - BaseNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
+    PortName: Answer 2
+    TargetNodeGuid: 53838028-70f5-48dc-8753-38f8a7c0c775
+  - BaseNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
+    PortName: Answer 3
+    TargetNodeGuid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
+  - BaseNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
+    PortName: Answer 4
+    TargetNodeGuid: c9282cbb-7207-4020-92d4-acc4742ef2f2
   SituationNodeData:
-  - Guid: df99ef32-67f3-4119-92d1-431e100d61d6
-    SituationName: SituationID
-    Description: Deprecated field (use description node)
+  - Guid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
+    SituationName: S1
+    Description: 'The location of this scenario is the Endoscopy theatre. The patient
+      is in a colonoscopy position (lying on his left side). The theatre is commonly
+      equipped, see its plan below. The colonoscopy under general anaesthesia is
+      scheduled. '
     Id: 0
     nodeType: 0
-    Position: {x: 186, y: -196}
-  QuestionNodeData: []
-  AnswerNodeData: []
+    Position: {x: 414, y: 191}
+  - Guid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
+    SituationName: S2
+    Description: 
+    Id: 0
+    nodeType: 0
+    Position: {x: 1474, y: 1461}
+  QuestionNodeData:
+  - Guid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    QuestionName: Q1
+    Description: What do you do?
+    nodeType: 1
+    Position: {x: 1567, y: 367}
+  - Guid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
+    QuestionName: Q2
+    Description: What do you do?
+    nodeType: 1
+    Position: {x: 1518, y: 1801}
+  AnswerNodeData:
+  - Guid: 7a074eee-6300-4f85-b697-9ac22ddf536a
+    AnswerName: A1.1
+    Description: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1976, y: 399}
+  - Guid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
+    AnswerName: A1.2
+    Description: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 10
+    Position: {x: 1965, y: 688}
+  - Guid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
+    AnswerName: A1.3
+    Description: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1962, y: 915}
+  - Guid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
+    AnswerName: A1.4
+    Description: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1962, y: 1139}
+  - Guid: 53838028-70f5-48dc-8753-38f8a7c0c775
+    AnswerName: A2.2
+    Description: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1913, y: 2030}
+  - Guid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
+    AnswerName: A2.3
+    Description: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1911, y: 2257}
+  - Guid: c9282cbb-7207-4020-92d4-acc4742ef2f2
+    AnswerName: A2.4
+    Description: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1909, y: 2477}
+  - Guid: 9a3b42a1-0449-420e-9810-f8a3863f5286
+    AnswerName: A2.1
+    Description: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1917, y: 1812}
   DialogueNodeData:
-  - Guid: 9aa6c40f-ee9c-455d-83f0-5069c8834e11
-    DialogueName: DialogueID
-    DialogueText: Text
-    Speaker: Surgeon1
+  - Guid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
+    DialogueName: D1.1
+    DialogueText: 'All team members are on their places, you are the First Endoscopist,
+      you are holding the endoscope and prepared for the insertion. Then you ask:'
+    Speaker: Narrator
     Mood: Calm
     audioId: Audio id
     nodeType: 3
-    Position: {x: 572, y: 281}
+    Position: {x: 1954, y: 180}
+  - Guid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
+    DialogueName: D1.2
+    DialogueText: Are we ready? Can we start?
+    Speaker: Endoscopist 1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2894, y: 179}
+  - Guid: 5a1b518d-83fc-4f1f-9c70-0df5e62f37f8
+    DialogueName: D1.3
+    DialogueText: Yes, everything is OK.
+    Speaker: Anaesthesiologist
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 3161, y: 177}
+  - Guid: 6f4fbb9d-704b-4dc0-8bc1-44762e9087f5
+    DialogueName: D1.5
+    DialogueText: Excuse me, I have not realised it.
+    Speaker: Endoscopy Nurse
+    Mood: Regretful
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2936, y: 411}
+  - Guid: c4fe1ad4-468a-44a9-a2e0-77367ed9723d
+    DialogueName: D1.4
+    DialogueText: You don't have to wear the mask? Do you follow any special rules
+      which I am not aware of?
+    Speaker: Endoscopist 1
+    Mood: Ironic
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2296, y: 403}
+  - Guid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
+    DialogueName: D1.7
+    DialogueText: Take the mask immediately! You should wear it during endoscop,
+      it is a part of common dress code.
+    Speaker: Endoscopist 1
+    Mood: Aggressive
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2227, y: 915}
+  - Guid: 8d624d3d-6290-485e-a072-f08bcbbf3039
+    DialogueName: D1.6
+    DialogueText: You don't have a mask, please put it on.
+    Speaker: Endoscopist 1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2269, y: 681}
+  - Guid: 7805dd50-2dcc-4f84-919b-8f43a000746e
+    DialogueName: D1.8
+    DialogueText: Excuse me, I have not realised it.
+    Speaker: Endoscopy Nurse
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2889, y: 912}
+  - Guid: d7a7eaf3-ef7b-456b-92f1-5a627bd946dd
+    DialogueName: D1.9
+    DialogueText: This is unbelievable! Get out immediately and come back as soon
+      as you know how to be properly dressed to perform.
+    Speaker: Endoscopist 1
+    Mood: Aggressive
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2232, y: 1136}
+  - Guid: 8a9b76c5-4b77-4995-a7b9-47f7301a4fbe
+    DialogueName: D2.1
+    DialogueText: The endoscopy nurse puts the mask on and the procedure starts.
+      You introduce the endoscope and turn to the nurse.
+    Speaker: Narrator
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1899, y: 1462}
+  - Guid: 4cff95b7-9c2b-4618-b0bb-c657e47cfb6d
+    DialogueName: D2.2
+    DialogueText: We are starting the endoscopic mucosal resection of the early rectal
+      cancer. It is a very special type of procedure. Have you checked the endoscopic
+      findings?
+    Speaker: Endoscopist 1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2724, y: 1458}
+  - Guid: 51a416c3-ca43-46af-8200-90d6013c16c4
+    DialogueName: D2.3
+    DialogueText: Yes, I have gone through it.
+    Speaker: Endoscopy nurse
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 3748, y: 1457}
   ExposedProperties: []

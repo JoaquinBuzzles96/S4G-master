@@ -3358,9 +3358,9 @@ MonoBehaviour:
   description: {fileID: 1839054206}
   answers:
   - {fileID: 4624682771386135646}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 769037846}
+  - {fileID: 2025342477}
+  - {fileID: 1741668047}
 --- !u!1 &571394906
 GameObject:
   m_ObjectHideFlags: 0
@@ -3830,7 +3830,6 @@ GameObject:
   - component: {fileID: 726161753}
   - component: {fileID: 726161752}
   - component: {fileID: 726161751}
-  - component: {fileID: 726161750}
   - component: {fileID: 726161756}
   - component: {fileID: 726161757}
   m_Layer: 0
@@ -3840,23 +3839,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &726161750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726161749}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64ee7e787651fb84cb3ff29638cacd55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueDirector: {fileID: 0}
-  dialogueParent: {fileID: 1787968132}
-  characterNameText: {fileID: 871101388}
-  descriptionText: {fileID: 1047608560}
-  optionsParent: {fileID: 485713715}
 --- !u!114 &726161751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3970,7 +3952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb0a828c0aac284580123e6ed580c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueContainer: {fileID: 11400000, guid: 0a3d2acdd4bcf3649bda8d291ee6e9b6, type: 2}
+  dialogueContainer: {fileID: 11400000, guid: dd5957f959bf4e04fab1d32f67279867, type: 2}
   descriptionText: {fileID: 571394911}
   screen1: {fileID: 2030489334}
   screen2: {fileID: 523089752}
@@ -3980,9 +3962,8 @@ MonoBehaviour:
   - {fileID: 991541514}
   - {fileID: 1450196810}
   - {fileID: 478228725}
-  - {fileID: 0}
   - {fileID: 172384950}
-  caso: Case5
+  caso: testing2
   playereRoute: 
   lastTime: 0
 --- !u!82 &726161757
@@ -4640,13 +4621,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: def0b999bf90eaf48ad972dc8f98df24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8a47b132ee4eff48bfeb344ad857e12, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
