@@ -68,19 +68,18 @@ public class UI_Manager : MonoBehaviour
     public void SetupUI(SituationNodeData _situation)
     {
         situation = _situation;
-        descriptionText.text = situation.Description; //TODO: ESTO VA A CAMBIAR --> texto del dialogue node y el audio que tenga viendo el que lo dice
         
-        /*
-        if (LoadDialogues(situation.Guid))
+        if (LoadDialogues(situation.Guid, dialogues))
         {
             descriptionText.text = dialogues[0].DialogueText;
-            Debug.LogError($"Se ha asignado el primer dialogo de la situacion {situation.SituationName}, dialogo = {descriptionText.text}");
+            Debug.Log($"Se ha asignado el primer dialogo de la situacion {situation.SituationName}, dialogo = {descriptionText.text}");
         }
         else
         {
             Debug.LogError($"No se han encontrado dialogos para la situacion {situation.SituationName}");
+            descriptionText.text = situation.Description;
         }
-        */
+        
         questions = dialogueContainer.GetSituationQuestions(situation.Guid);
 
         AddTextToRoute(situation.SituationName);
@@ -89,13 +88,16 @@ public class UI_Manager : MonoBehaviour
         //foreach (var item in questions){Debug.Log($"{item.QuestionName}");}
     }
 
-    public bool LoadDialogues(string guid)
+    public bool LoadDialogues(string guid, List<DialogueNodeData> dialogues)
     {
+        Debug.Log($"Vamos a comprobar si la situacion/respuesta actual tiene algun dialogo asignado");
         var firstElement = dialogueContainer.GetNextDialogueData(guid);
+        Debug.Log($"Hemos obtenido el nodo {firstElement.DialogueName}");
+
         if (firstElement != null)
         {
-            Debug.Log($"Se ha añadido el dialogo {dialogues[dialogues.Count].DialogueName}");
             dialogues.Add(firstElement);//suponemos que siempre hay al menos uno
+            Debug.Log($"Se ha añadido el dialogo {dialogues[dialogues.Count - 1].DialogueName}");
         }
         else
         {
@@ -105,7 +107,7 @@ public class UI_Manager : MonoBehaviour
         bool end = false;
         while (!end)
         {
-            var aux = dialogueContainer.GetNextDialogueData(dialogues[dialogues.Count].Guid);
+            var aux = dialogueContainer.GetNextDialogueData(dialogues[dialogues.Count - 1].Guid);
             
             if (aux == null)
             {
@@ -118,6 +120,7 @@ public class UI_Manager : MonoBehaviour
             }
         }
 
+        Debug.Log("Ya no hay mas dialogos");
         return true;
     }
 

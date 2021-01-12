@@ -10,6 +10,7 @@ public class AnswerUI : MonoBehaviour
     public AnswerNodeData answerData;
     public TextMeshProUGUI description;
     public SituationNodeData nextSituation;
+    private List<DialogueNodeData> dialogues = new List<DialogueNodeData>();
 
     void Start()
     {
@@ -25,7 +26,18 @@ public class AnswerUI : MonoBehaviour
     {
         this.gameObject.SetActive(true);
         answerData = _answerData;
-        description.text = answerData.Description;
+
+        if (UI_Manager.Instance.LoadDialogues(answerData.Guid, dialogues))
+        {
+            description.text = dialogues[0].DialogueText;
+            Debug.Log($"Se ha asignado el primer dialogo de la respuesta {answerData.AnswerName}, dialogo = {description.text}");
+        }
+        else
+        {
+            Debug.LogError($"No se han encontrado dialogos para la respuesta {answerData.AnswerName}");
+            description.text = answerData.Description;
+        }
+
         nextSituation = UI_Manager.Instance.dialogueContainer.GetNextSituation(answerData.Guid);
         //Debug.Log($"Añadimos la respuesta {answerData.Description}");
     }
