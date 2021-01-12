@@ -8,7 +8,7 @@ public class SituationNodeData
 {
     public string Guid;
     public string SituationName;
-    public string Description;
+    public string Context;
     public string Id;
     public NodeType nodeType;
     //public bool EntryPoint = false;

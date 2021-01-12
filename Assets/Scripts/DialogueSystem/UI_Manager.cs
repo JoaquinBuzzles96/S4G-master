@@ -77,7 +77,7 @@ public class UI_Manager : MonoBehaviour
         else
         {
             Debug.LogError($"No se han encontrado dialogos para la situacion {situation.SituationName}");
-            descriptionText.text = situation.Description;
+            descriptionText.text = situation.Context;
         }
         
         questions = dialogueContainer.GetSituationQuestions(situation.Guid);
@@ -217,5 +217,24 @@ public class UI_Manager : MonoBehaviour
     public void AddTextToRoute(string _text)
     {
         playereRoute += "\n" + _text;
+    }
+
+    private void ReadContext()
+    {
+        if (isValid(situation.Context))
+        {
+            //TODO: poner en el panel correspondiente este texto
+        }
+    }
+
+    public bool isValid(string texto)
+    {
+        if (texto == null || texto == "" || texto == "Deprecated field (use description node)")
+        {
+            Debug.LogError($"El texto utilizado no es valido");
+            return false;
+        }
+
+        return true;
     }
 }

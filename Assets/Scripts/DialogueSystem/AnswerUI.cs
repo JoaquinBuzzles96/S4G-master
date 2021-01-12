@@ -35,7 +35,7 @@ public class AnswerUI : MonoBehaviour
         else
         {
             Debug.LogError($"No se han encontrado dialogos para la respuesta {answerData.AnswerName}");
-            description.text = answerData.Description;
+            description.text = answerData.Feedback;
         }
 
         nextSituation = UI_Manager.Instance.dialogueContainer.GetNextSituation(answerData.Guid);
@@ -58,7 +58,7 @@ public class AnswerUI : MonoBehaviour
         }
         else
         {
-            UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + " " + answerData.Description + "\n" + "Time to answer: " + Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) + " seconds.\n"); if (nextSituation == null)
+            UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + " " + answerData.Feedback + "\n" + "Time to answer: " + Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) + " seconds.\n"); if (nextSituation == null)
             {
                 Debug.Log("No se ha asignado la siguiente situacion");
             }

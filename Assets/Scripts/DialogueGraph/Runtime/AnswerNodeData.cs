@@ -10,7 +10,7 @@ public class AnswerNodeData
 {
     public string Guid;
     public string AnswerName;
-    public string Description;
+    public string Feedback;
     public string Situation;
     public bool IsCorrect;
     public bool IsEnd;

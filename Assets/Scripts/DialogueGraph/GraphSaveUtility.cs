@@ -80,7 +80,7 @@ public class GraphSaveUtility
         foreach (var answer in _containerCache.AnswerNodeData)
         {
             var answerAux = ScriptableObject.CreateInstance<Answer>();
-            answerAux.Description = answer.Description;
+            answerAux.Description = answer.Feedback;
             answerAux.isCorrect = answer.IsCorrect;
             answerAux.isEnd = answer.IsEnd;
             answerAux.answerName = answer.AnswerName;
@@ -105,7 +105,7 @@ public class GraphSaveUtility
         foreach (var situation in _containerCache.SituationNodeData)
         {
             var situationAux = ScriptableObject.CreateInstance<Situation>();
-            situationAux.description = situation.Description;
+            situationAux.description = situation.Context;
             situationAux.id = int.Parse(situation.Id);
             situationAux.situationName = situation.SituationName;
             situationAux.questions = new List<Question>();
@@ -205,7 +205,7 @@ public class GraphSaveUtility
                     {
                         Guid = nodeSituation.GUID,
                         SituationName = nodeSituation.nodeName,
-                        Description = nodeSituation.Description,
+                        Context = nodeSituation.Description,
                         Id = nodeSituation.Id,
                         nodeType = nodeSituation.nodeType,
                         Position = nodeSituation.GetPosition().position
@@ -229,7 +229,7 @@ public class GraphSaveUtility
                     {
                         Guid = nodeAnswer.GUID,
                         AnswerName = nodeAnswer.nodeName,
-                        Description = nodeAnswer.Description,
+                        Feedback = nodeAnswer.Description,
                         Situation = nodeAnswer.Situation,
                         IsCorrect = nodeAnswer.IsCorrect,
                         IsEnd = nodeAnswer.IsEnd,
@@ -310,7 +310,7 @@ public class GraphSaveUtility
     {
         foreach (var nodeData in _containerCache.SituationNodeData)
         {
-            var tempNode = _targetGraphView.CreateSituationNode(nodeData.SituationName, Vector2.zero, nodeData.Description, nodeData.Id, nodeData.Guid);
+            var tempNode = _targetGraphView.CreateSituationNode(nodeData.SituationName, Vector2.zero, nodeData.Context, nodeData.Id, nodeData.Guid);
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
@@ -330,7 +330,7 @@ public class GraphSaveUtility
 
         foreach (var nodeData in _containerCache.AnswerNodeData)
         {
-            var tempNode = _targetGraphView.CreateAnswerNode(nodeData.AnswerName, Vector2.zero, nodeData.Description, nodeData.IsEnd, nodeData.IsCorrect, nodeData.audioId, nodeData.speaker, nodeData.Guid, nodeData.score);
+            var tempNode = _targetGraphView.CreateAnswerNode(nodeData.AnswerName, Vector2.zero, nodeData.Feedback, nodeData.IsEnd, nodeData.IsCorrect, nodeData.audioId, nodeData.speaker, nodeData.Guid, nodeData.score);
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
