@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
+  m_Name: sded
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: bdd13f87-fddc-48fe-b1c7-ad8cb1a2e46d
+    PortName: S1
+    TargetNodeGuid: b15a6e13-942a-4c01-abdf-bd390513fd20
+  - BaseNodeGuid: b15a6e13-942a-4c01-abdf-bd390513fd20
+    PortName: Dialogue
+    TargetNodeGuid: ae115fdc-c0f1-4b97-a269-3a5757fa3b3e
+  SituationNodeData:
+  - Guid: b15a6e13-942a-4c01-abdf-bd390513fd20
+    SituationName: SituationID
+    Description: Deprecated field (use description node)
+    Id: 0
+    nodeType: 0
+    Position: {x: 319, y: -65}
+  QuestionNodeData: []
+  AnswerNodeData: []
+  DialogueNodeData:
+  - Guid: ae115fdc-c0f1-4b97-a269-3a5757fa3b3e
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 641, y: 17}
+  ExposedProperties: []

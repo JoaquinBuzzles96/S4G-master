@@ -191,6 +191,8 @@ public class GraphSaveUtility
                 TargetNodeGuid = inputNode.GUID
             });
         }
+        //Se asegura de que el primero sea el del entrypoint
+        OrderConections(dialogueContainer);
 
         //SAVE NODES
         foreach (var node in Nodes.Where(node => !node.EntryPoint))
@@ -347,7 +349,7 @@ public class GraphSaveUtility
         }
     }
 
-    private void ConnectNodes() //los esta conectando por orden de cracion, hay que cambiar esto para que lo haga por nombre
+    private void ConnectNodes() 
     {
         for (var i = 0; i < Nodes.Count; i++)
         {
@@ -365,23 +367,23 @@ public class GraphSaveUtility
             {
                 var targetNodeGuid = connections[j].TargetNodeGuid;
                 var targetNode = Nodes.First(x => x.GUID == targetNodeGuid);
-                //un metodo que dado el nombre de la conexion devuelva la posicion en el output container
+                
                 //Debug.Log($"El nodo {Nodes[i].nodeName} tiene {Nodes[i].outputContainer.childCount} conexiones de salida");
 
                 int posicion = 0;
-
-                for (int k = 0; k < Nodes[i].outputContainer.childCount; k++)
+                bool enc = false;
+                for (int k = 0; k < Nodes[i].outputContainer.childCount && !enc; k++)
                 {
                     //Debug.Log($"output name: {Nodes[i].outputContainer[k].Q<Port>().portName}");
                     if (Nodes[i].outputContainer[k].Q<Port>().portName == connections[j].PortName)
                     {
                         posicion = k;
+                        enc = true;
                     }
                 }
 
-
                 LinkNodes(Nodes[i].outputContainer[posicion].Q<Port>(), (Port)targetNode.inputContainer[0]);
-                //Debug.Log($"Vamos a conectar el output {Nodes[i].outputContainer[j].}");
+                //Debug.Log($"Vamos a conectar el nodo {Nodes[i].nodeName} en el output {Nodes[i].outputContainer[posicion].Q<Port>().portName} con el nodo {targetNode.nodeName}");
 
                 switch (targetNode.nodeType)
                 {
@@ -402,7 +404,7 @@ public class GraphSaveUtility
         }
     }
 
-    private void LinkNodes(Port output, Port input) //puede que el error venga de aqui, que lo crea sin tener en cuenta cual es el output
+    private void LinkNodes(Port output, Port input)
     {
         var tempEdge = new Edge
         {
@@ -412,5 +414,22 @@ public class GraphSaveUtility
         tempEdge?.input.Connect(tempEdge);
         tempEdge?.output.Connect(tempEdge);
         _targetGraphView.Add(tempEdge);
+    }
+
+    private void OrderConections(DialogueContainer dialogueContainer)
+    {
+        if (dialogueContainer.NodeLinks[0].PortName != "S1")
+        {
+            for (int i = 0; i < dialogueContainer.NodeLinks.Count; i++)
+            {
+                if (dialogueContainer.NodeLinks[i].PortName == "S1")
+                {
+                    var aux = dialogueContainer.NodeLinks[0];
+                    dialogueContainer.NodeLinks[0] = dialogueContainer.NodeLinks[i];
+                    dialogueContainer.NodeLinks[i] = aux;
+                    return;
+                }
+            }
+        }
     }
 }

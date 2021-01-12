@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
+  m_Name: NewNarrative2
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: 06805388-0e85-4a8d-a85c-13a5a602fd23
+    PortName: Dialogue
+    TargetNodeGuid: 521d96ad-cf98-4f39-b682-bd45ec093803
+  - BaseNodeGuid: 06805388-0e85-4a8d-a85c-13a5a602fd23
+    PortName: Question 1
+    TargetNodeGuid: b87a16b3-ad40-42ae-8ab2-f3baa0b9252f
+  - BaseNodeGuid: e74740e3-9300-42b1-a150-0b4e90b82f69
+    PortName: S1
+    TargetNodeGuid: 06805388-0e85-4a8d-a85c-13a5a602fd23
+  SituationNodeData:
+  - Guid: 06805388-0e85-4a8d-a85c-13a5a602fd23
+    SituationName: SituationID
+    Description: Deprecated field (use description node)
+    Id: 0
+    nodeType: 0
+    Position: {x: 342, y: 6}
+  QuestionNodeData:
+  - Guid: b87a16b3-ad40-42ae-8ab2-f3baa0b9252f
+    QuestionName: QuestionID
+    Description: Question Description
+    nodeType: 1
+    Position: {x: 637, y: 205}
+  AnswerNodeData: []
+  DialogueNodeData:
+  - Guid: 521d96ad-cf98-4f39-b682-bd45ec093803
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 656, y: -71}
+  ExposedProperties: []

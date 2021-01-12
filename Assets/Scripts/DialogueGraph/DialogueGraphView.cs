@@ -110,12 +110,12 @@ public class DialogueGraphView : GraphView
         {
             title = "START",
             GUID = Guid.NewGuid().ToString(),
-            nodeName = "ENTRYPOINT o lo que quieras",
+            nodeName = "ENTRYPOINT",
             EntryPoint = true
         };
 
         var generatedPort = GeneratePort(node, Direction.Output);
-        generatedPort.portName = "Next";
+        generatedPort.portName = "S1";
         node.outputContainer.Add(generatedPort);
 
         node.capabilities &= ~Capabilities.Movable;

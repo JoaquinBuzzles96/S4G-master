@@ -11,7 +11,7 @@ using System.Linq;
 public class DialogueGraph : EditorWindow
 {
     private DialogueGraphView _graphView;
-    private string _fileName = "New Narrative";
+    private string _fileName = "NewNarrative";
     //private string caseName = "New Narrative";
 
     [MenuItem("Graph/Dialogue Graph")]
