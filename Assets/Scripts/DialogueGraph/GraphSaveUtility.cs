@@ -32,6 +32,7 @@ public class GraphSaveUtility
         var dialogueContainer = ScriptableObject.CreateInstance<DialogueContainer>();
         if (!SaveNodes(dialogueContainer))
         {
+            Debug.LogError($"No se ha podido guardar el grafo {fileName}");
             return;
         }
         SaveExposedProperties(dialogueContainer);
@@ -352,17 +353,35 @@ public class GraphSaveUtility
         {
             var connections = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == Nodes[i].GUID).ToList();
 
+            /*
             Debug.Log($"Los puertos del nodo {Nodes[i].nodeName} son: ");
             foreach (var item in connections)
             {
                 Debug.Log($"{item.PortName}");
             }
+            */
 
             for (var j = 0; j < connections.Count; j++)
             {
                 var targetNodeGuid = connections[j].TargetNodeGuid;
                 var targetNode = Nodes.First(x => x.GUID == targetNodeGuid);
-                LinkNodes(Nodes[i].outputContainer[j].Q<Port>(), (Port)targetNode.inputContainer[0]);
+                //un metodo que dado el nombre de la conexion devuelva la posicion en el output container
+                //Debug.Log($"El nodo {Nodes[i].nodeName} tiene {Nodes[i].outputContainer.childCount} conexiones de salida");
+
+                int posicion = 0;
+
+                for (int k = 0; k < Nodes[i].outputContainer.childCount; k++)
+                {
+                    //Debug.Log($"output name: {Nodes[i].outputContainer[k].Q<Port>().portName}");
+                    if (Nodes[i].outputContainer[k].Q<Port>().portName == connections[j].PortName)
+                    {
+                        posicion = k;
+                    }
+                }
+
+
+                LinkNodes(Nodes[i].outputContainer[posicion].Q<Port>(), (Port)targetNode.inputContainer[0]);
+                //Debug.Log($"Vamos a conectar el output {Nodes[i].outputContainer[j].}");
 
                 switch (targetNode.nodeType)
                 {
@@ -383,7 +402,7 @@ public class GraphSaveUtility
         }
     }
 
-    private void LinkNodes(Port output, Port input)
+    private void LinkNodes(Port output, Port input) //puede que el error venga de aqui, que lo crea sin tener en cuenta cual es el output
     {
         var tempEdge = new Edge
         {

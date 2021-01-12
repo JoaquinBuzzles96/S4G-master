@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
+  m_Name: probando
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: c07f079f-8daf-49fb-b895-1b57dc70feb3
+    PortName: Next
+    TargetNodeGuid: dd8e0dd5-283c-4745-b1e9-50503eb34f2d
+  SituationNodeData:
+  - Guid: dd8e0dd5-283c-4745-b1e9-50503eb34f2d
+    SituationName: SituationID
+    Description: Deprecated field (use description node)
+    Id: 0
+    nodeType: 0
+    Position: {x: 261, y: 223}
+  QuestionNodeData: []
+  AnswerNodeData: []
+  DialogueNodeData: []
+  ExposedProperties: []

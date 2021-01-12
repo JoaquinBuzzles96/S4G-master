@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
+  m_Name: probando2
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: bf165346-9bda-446d-bf32-e1cebdf11ca8
+    PortName: Next
+    TargetNodeGuid: 9dc87095-5cdb-44f9-8e9d-57352354495d
+  - BaseNodeGuid: ddfb3989-d018-49f8-800c-36590ea1953b
+    PortName: Answer 3
+    TargetNodeGuid: 3774febc-097e-4b1e-8509-de1551050f40
+  - BaseNodeGuid: ddfb3989-d018-49f8-800c-36590ea1953b
+    PortName: Answer 1
+    TargetNodeGuid: 1f9ad117-6480-4c2a-9019-9eb66647d7cd
+  - BaseNodeGuid: ddfb3989-d018-49f8-800c-36590ea1953b
+    PortName: Answer 2
+    TargetNodeGuid: 0b7bafc6-7aab-4c69-85b8-d10e5a27ff7d
+  - BaseNodeGuid: 9dc87095-5cdb-44f9-8e9d-57352354495d
+    PortName: Question 2
+    TargetNodeGuid: f87ad010-4d42-4569-b3c3-cfae4d3a9adf
+  - BaseNodeGuid: 9dc87095-5cdb-44f9-8e9d-57352354495d
+    PortName: Question 1
+    TargetNodeGuid: ddfb3989-d018-49f8-800c-36590ea1953b
+  - BaseNodeGuid: 9dc87095-5cdb-44f9-8e9d-57352354495d
+    PortName: Question 3
+    TargetNodeGuid: 38263350-166c-4dcd-9b40-e16fb79d424e
+  - BaseNodeGuid: 9dc87095-5cdb-44f9-8e9d-57352354495d
+    PortName: Dialogue
+    TargetNodeGuid: c233fa94-bebb-4374-971c-8e15304be986
+  SituationNodeData:
+  - Guid: 9dc87095-5cdb-44f9-8e9d-57352354495d
+    SituationName: S1
+    Description: Deprecated field (use description node)
+    Id: 0
+    nodeType: 0
+    Position: {x: 131, y: -14}
+  QuestionNodeData:
+  - Guid: 38263350-166c-4dcd-9b40-e16fb79d424e
+    QuestionName: Q3
+    Description: Question Description
+    nodeType: 1
+    Position: {x: 442, y: 407}
+  - Guid: ddfb3989-d018-49f8-800c-36590ea1953b
+    QuestionName: Q1
+    Description: Question Description
+    nodeType: 1
+    Position: {x: 508, y: 91}
+  - Guid: f87ad010-4d42-4569-b3c3-cfae4d3a9adf
+    QuestionName: q2
+    Description: Question Description
+    nodeType: 1
+    Position: {x: 574, y: 272}
+  AnswerNodeData:
+  - Guid: 0b7bafc6-7aab-4c69-85b8-d10e5a27ff7d
+    AnswerName: A2
+    Description: Deprecated field (use description node)
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 840, y: 48}
+  - Guid: 1f9ad117-6480-4c2a-9019-9eb66647d7cd
+    AnswerName: A1
+    Description: Deprecated field (use description node)
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 832, y: 305}
+  - Guid: 3774febc-097e-4b1e-8509-de1551050f40
+    AnswerName: A3
+    Description: Deprecated field (use description node)
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 712, y: 558}
+  DialogueNodeData:
+  - Guid: c233fa94-bebb-4374-971c-8e15304be986
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 705, y: -81}
+  ExposedProperties: []
