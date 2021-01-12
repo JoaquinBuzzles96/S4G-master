@@ -149,7 +149,7 @@ public class DialogueGraphView : GraphView
         }
     }
 
-    public SituationNode CreateSituationNode(string nodeName, Vector2 position, string description = "Deprecated field (use description node)", string id = "0", string _guid = "")
+    public SituationNode CreateSituationNode(string nodeName, Vector2 position, string description = "", string id = "0", string _guid = "")
     {
         if (_guid == "" || _guid == null)
         {
@@ -188,6 +188,11 @@ public class DialogueGraphView : GraphView
         textField.SetValueWithoutNotify(situationNode.title);
         situationNode.mainContainer.Add(textField);
 
+        //Text context
+        var contextText = new TextElement();
+        contextText.text = "Context:";
+        situationNode.mainContainer.Add(contextText);
+
         //Texto de la descripcion
         var textDescription = new TextField(string.Empty);
         textDescription.RegisterValueChangedCallback(evt =>
@@ -197,6 +202,7 @@ public class DialogueGraphView : GraphView
         textDescription.SetValueWithoutNotify(situationNode.Description);
         situationNode.mainContainer.Add(textDescription);
 
+        /*
         //ID
         var situationId = new TextField(string.Empty);
         situationId.RegisterValueChangedCallback(evt =>
@@ -205,6 +211,7 @@ public class DialogueGraphView : GraphView
         });
         situationId.SetValueWithoutNotify(situationNode.Id);
         situationNode.mainContainer.Add(situationId);
+        */
 
         //Dialogue Output
         var generatedPort = GeneratePort(situationNode, Direction.Output);
@@ -276,7 +283,7 @@ public class DialogueGraphView : GraphView
         return questionNode;
     }
 
-    public AnswerNode CreateAnswerNode(string nodeName, Vector2 position, string description = "Deprecated field (use description node)", bool _isEnd = false, bool _isCorrect = false, string _audioId = "Audio id", string _speaker = "Speaker", string _guid = "", int _score = 0)
+    public AnswerNode CreateAnswerNode(string nodeName, Vector2 position, string description = "", bool _isEnd = false, bool _isCorrect = false, string _audioId = "Audio id", string _speaker = "Speaker", string _guid = "", int _score = 0)
     {
         if (_guid == "" || _guid == null)
         {
@@ -320,6 +327,11 @@ public class DialogueGraphView : GraphView
         });
         textField.SetValueWithoutNotify(answerNode.title);
         answerNode.mainContainer.Add(textField);
+
+        //Text feedback
+        var feedbackText = new TextElement();
+        feedbackText.text = "Feedback:";
+        answerNode.mainContainer.Add(feedbackText);
 
         //Texto de la descripcion
         var textDescription = new TextField(string.Empty);
