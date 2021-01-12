@@ -342,6 +342,7 @@ public class DialogueGraphView : GraphView
         textDescription.SetValueWithoutNotify(answerNode.Description);
         answerNode.mainContainer.Add(textDescription);
 
+        /*
         //Text isCorrect
         var isCorrectText = new TextElement();
         isCorrectText.text = "isCorrect";
@@ -356,7 +357,7 @@ public class DialogueGraphView : GraphView
         });
         isCorrect.SetValueWithoutNotify(answerNode.IsCorrect);
         answerNode.mainContainer.Add(isCorrect);
-
+        */
         //Text isEnd
         var isEndText = new TextElement();
         isEndText.text = "isEnd";
