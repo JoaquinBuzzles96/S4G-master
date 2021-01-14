@@ -50,6 +50,8 @@ public class AnswerUI : MonoBehaviour
 
     public void OnSelectAnswer()
     {
+        //OLD
+        /*
         if (answerData.IsEnd)
         {
             UI_Manager.Instance.AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
@@ -85,6 +87,9 @@ public class AnswerUI : MonoBehaviour
                 UI_Manager.Instance.ToScreen1(nextSituation);
             }
         }
+        */
+
+        UI_Manager.Instance.ToScreen4(answerData, UI_Manager.Instance.screen3);
     }
 
     public bool AudioIsValid(string _audioId)

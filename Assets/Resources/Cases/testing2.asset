@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 1fc7c1e4-a957-4a24-9857-ae4885260898
-    PortName: Next
+    PortName: S1
     TargetNodeGuid: 23b8ebff-a764-4e3d-84ac-522c0e16c079
   - BaseNodeGuid: 23b8ebff-a764-4e3d-84ac-522c0e16c079
     PortName: Dialogue
@@ -31,12 +31,6 @@ MonoBehaviour:
   - BaseNodeGuid: 40ff94fb-afc4-4934-9dc0-4e1e494f1487
     PortName: Answer 3
     TargetNodeGuid: 791d1d12-8520-4eca-9d62-14181057bf29
-  - BaseNodeGuid: 63b898c8-fa71-4a71-84a0-5d6dad5038d5
-    PortName: Dialogue
-    TargetNodeGuid: 15cd1846-85ef-46c5-9661-bbc01b0f7695
-  - BaseNodeGuid: 63b898c8-fa71-4a71-84a0-5d6dad5038d5
-    PortName: Situation
-    TargetNodeGuid: 23b8ebff-a764-4e3d-84ac-522c0e16c079
   - BaseNodeGuid: cd1abf0c-ca73-45da-a8c9-24a19a2cdb13
     PortName: Dialogue
     TargetNodeGuid: 234363cf-d645-4840-8a6b-606f1f321572
@@ -49,73 +43,80 @@ MonoBehaviour:
   - BaseNodeGuid: 791d1d12-8520-4eca-9d62-14181057bf29
     PortName: Situation
     TargetNodeGuid: 23b8ebff-a764-4e3d-84ac-522c0e16c079
+  - BaseNodeGuid: 63b898c8-fa71-4a71-84a0-5d6dad5038d5
+    PortName: Dialogue
+    TargetNodeGuid: 15cd1846-85ef-46c5-9661-bbc01b0f7695
+  - BaseNodeGuid: 63b898c8-fa71-4a71-84a0-5d6dad5038d5
+    PortName: Situation
+    TargetNodeGuid: 23b8ebff-a764-4e3d-84ac-522c0e16c079
   - BaseNodeGuid: ad53af80-0ef0-4f2c-9ce9-a981698849a0
     PortName: Dialogue
     TargetNodeGuid: 97a1c3bd-6a4a-45c5-b7d0-8be2a7cb5ed0
+  - BaseNodeGuid: 15cd1846-85ef-46c5-9661-bbc01b0f7695
+    PortName: Dialogue
+    TargetNodeGuid: a50de180-25ec-4314-887e-bd5c938c9b93
+  - BaseNodeGuid: a50de180-25ec-4314-887e-bd5c938c9b93
+    PortName: Dialogue
+    TargetNodeGuid: f5a6cfda-0709-4170-b09f-4d5d33e5e467
   SituationNodeData:
   - Guid: 23b8ebff-a764-4e3d-84ac-522c0e16c079
     SituationName: S1
-    Description: Deprecated field (use description node)
+    Context: Contexto de ejemplo hulio
     Id: 0
     nodeType: 0
     Position: {x: 272, y: 20}
   QuestionNodeData:
   - Guid: 40ff94fb-afc4-4934-9dc0-4e1e494f1487
     QuestionName: Q1.1
-    Description: Question Description
+    Description: Ves a Jimy triste, que haces?
     nodeType: 1
     Position: {x: 654, y: 64}
   AnswerNodeData:
-  - Guid: 63b898c8-fa71-4a71-84a0-5d6dad5038d5
-    AnswerName: A1.1.1
-    Description: Deprecated field (use description node)
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    Position: {x: 1035, y: -80}
   - Guid: cd1abf0c-ca73-45da-a8c9-24a19a2cdb13
     AnswerName: A1.1.2
-    Description: Deprecated field (use description node)
+    Feedback: 
     Situation: 
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
+    score: 0
     Position: {x: 1159, y: 175}
   - Guid: 791d1d12-8520-4eca-9d62-14181057bf29
     AnswerName: A1.1.3
-    Description: Deprecated field (use description node)
+    Feedback: 
     Situation: 
     IsCorrect: 0
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
+    score: 0
     Position: {x: 1239, y: 394}
+  - Guid: 63b898c8-fa71-4a71-84a0-5d6dad5038d5
+    AnswerName: A1.1.1
+    Feedback: Eres el puto amo
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 1
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1035, y: -80}
   DialogueNodeData:
   - Guid: ad53af80-0ef0-4f2c-9ce9-a981698849a0
     DialogueName: DS1.1
-    DialogueText: Text
+    DialogueText: Hola pepe
     Speaker: Surgeon1
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 571, y: -222}
-  - Guid: 97a1c3bd-6a4a-45c5-b7d0-8be2a7cb5ed0
-    DialogueName: DS1.2
-    DialogueText: Text
-    Speaker: Surgeon1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 791, y: -213}
   - Guid: 15cd1846-85ef-46c5-9661-bbc01b0f7695
     DialogueName: D1.1.1.1
-    DialogueText: Text
+    DialogueText: Que pasa Jimy
     Speaker: Surgeon1
     Mood: Calm
     audioId: Audio id
@@ -123,7 +124,7 @@ MonoBehaviour:
     Position: {x: 1436, y: -172}
   - Guid: 234363cf-d645-4840-8a6b-606f1f321572
     DialogueName: D1.1.2.1
-    DialogueText: Text
+    DialogueText: Text answer 2
     Speaker: Surgeon1
     Mood: Calm
     audioId: Audio id
@@ -131,10 +132,35 @@ MonoBehaviour:
     Position: {x: 1527, y: 101}
   - Guid: 8869bb43-0b2f-4055-a4a7-e52f850b9af8
     DialogueName: D1.1.3.1
-    DialogueText: Text
+    DialogueText: Text answer 3
     Speaker: Surgeon1
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 1595, y: 411}
+  - Guid: 97a1c3bd-6a4a-45c5-b7d0-8be2a7cb5ed0
+    DialogueName: DS1.2
+    DialogueText: Que pasa men?
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 799, y: -370}
+  - Guid: a50de180-25ec-4314-887e-bd5c938c9b93
+    DialogueName: D1.1.1.2
+    DialogueText: Nada ricardo, es que no recuerdo si he cerrado el coche
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1673, y: -193}
+  - Guid: f5a6cfda-0709-4170-b09f-4d5d33e5e467
+    DialogueName: D1.1.1.3
+    DialogueText: Tienes que tener mas cuidado, yo me olvide del freno de mano y
+      ahora vengo en bici
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2089, y: -161}
   ExposedProperties: []
