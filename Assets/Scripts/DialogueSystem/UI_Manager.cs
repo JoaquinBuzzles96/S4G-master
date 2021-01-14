@@ -19,8 +19,11 @@ public class UI_Manager : MonoBehaviour
 
     private SituationNodeData situation;
     private List<QuestionNodeData> questions;
+
     private List<DialogueNodeData> situationDialogues = new List<DialogueNodeData>();
     private List<DialogueNodeData> answerDialogues = new List<DialogueNodeData>();
+    private int currentDialogue = 0; //podemos usar la misma variable para ambos casos ya que nunca se daran al mismo tiempo
+
 
     public DialogueContainer dialogueContainer;
 
@@ -32,14 +35,17 @@ public class UI_Manager : MonoBehaviour
 
     //Screen 2
     public GameObject screen2;
-    public List<TextMeshProUGUI> situationDialogueTexts = new List<TextMeshProUGUI>(); //Array de dialogos de situacion
+    public List<TextMeshProUGUI> situationDialogueTexts = new List<TextMeshProUGUI>();  //Array de dialogos de situacion
+    //public List<DialogueUI> situationDialogesUI = new List<DialogueUI>(); //Array de dialogos de situacion
+
 
     //Screen 3
     public GameObject screen3;
 
     //Screen 4
     public GameObject screen4;
-    public List<TextMeshProUGUI> answerDialogueTexts = new List<TextMeshProUGUI>(); //Array de dialogos de situacion
+    public List<TextMeshProUGUI> answerDialogueTexts = new List<TextMeshProUGUI>(); //Array de dialogos de answer
+    //public List<DialogueUI> answerDialogesUI = new List<DialogueUI>(); //Array de dialogos de answer
 
     //Screen 5
     public GameObject screen5;
@@ -187,9 +193,12 @@ public class UI_Manager : MonoBehaviour
 
     public void ToScreen3(GameObject originScreen) // Answer choose
     {
-        originScreen.SetActive(false);
-        screen3.SetActive(true);
-        SetUpScreen3();
+        if (!CheckMoreDialogues(situationDialogues, situationDialogueTexts)) //si no hay mas dialogos entra aqui
+        {
+            originScreen.SetActive(false);
+            screen3.SetActive(true);
+            SetUpScreen3();
+        }
     }
 
     public void ToScreen4(AnswerNodeData answer,GameObject originScreen) // Answer Dialogue
@@ -305,25 +314,29 @@ public class UI_Manager : MonoBehaviour
 
     public void CheckIfISEnd(GameObject originScreen)
     {
-        //TODO: Vamos a la screen 2 o 5 en funcion del valor isEnd de la respuesta
-        if (choosenAnswer.IsEnd)
+        if (!CheckMoreDialogues(answerDialogues, answerDialogueTexts)) //si no hay mas dialogos entra aqui
         {
-            ToScreen5(choosenAnswer, originScreen);
-        }
-        else
-        {
-            //Check if situation context no es nulo
-            situation = dialogueContainer.GetNextSituation(choosenAnswer.Guid);
-
-            if (isValid(situation.Context))
+            //TODO: Vamos a la screen 2 o 5 en funcion del valor isEnd de la respuesta
+            if (choosenAnswer.IsEnd)
             {
-                ToScreen1(situation, originScreen);
+                ToScreen5(choosenAnswer, originScreen);
             }
             else
             {
-                ToScreen2(originScreen);
+                //Check if situation context no es nulo
+                situation = dialogueContainer.GetNextSituation(choosenAnswer.Guid);
+
+                if (isValid(situation.Context))
+                {
+                    ToScreen1(situation, originScreen);
+                }
+                else
+                {
+                    ToScreen2(originScreen);
+                }
             }
         }
+
     }
 
     public void SetUpContext(SituationNodeData _situation)
@@ -360,10 +373,13 @@ public class UI_Manager : MonoBehaviour
         //situation = _situation; //esto tiene que estar configurado ya
         if (LoadDialogues(situation.Guid, situationDialogues)) 
         {
+            RefreshDialogues(situationDialogues, situationDialogueTexts);
+            /*
             for (int i = 0; i < situationDialogues.Count; i++)
             {
-                situationDialogueTexts[i % 4].text = situationDialogues[i].DialogueText;
+                situationDialogueTexts[i % answerDialogueTexts.Count].text = $"{situationDialogues[i].Speaker} ({situationDialogues[i].Mood}): {situationDialogues[i].DialogueText}";
             }
+            */
 
             Debug.Log($"Se ha asignado el primer dialogo de la situacion {situation.SituationName}, dialogo = {situationDialogues[0].DialogueText}");
         }
@@ -401,11 +417,25 @@ public class UI_Manager : MonoBehaviour
         choosenAnswer = answer;
         if (LoadDialogues(answer.Guid, answerDialogues))
         {
-            //Suponemos que no hay mas de 4 dialogos (de momento)
-            for (int i =0; i < answerDialogues.Count; i++)
+            //Solo ponemos los 4 primeros como mucho
+
+            RefreshDialogues(answerDialogues, answerDialogueTexts);
+
+
+            /*bool end = false;
+            for (int i =0; i < answerDialogueTexts.Count && !end; i++)
             {
-                answerDialogueTexts[i%4].text = answerDialogues[i].DialogueText;
-            } 
+                if (i < answerDialogues.Count - 1)
+                {
+                    answerDialogueTexts[i % answerDialogueTexts.Count].text = $"{answerDialogues[i].Speaker} ({answerDialogues[i].Mood}): {answerDialogues[i].DialogueText}";
+                    currentDialogue = i;
+                }
+                else
+                {
+                    end = true;
+                }
+            }
+            */
 
             Debug.Log($"Se ha asignado el primer dialogo de la answer {answer.AnswerName}, dialogo = {answerDialogues[0].DialogueText}");
         }
@@ -418,6 +448,51 @@ public class UI_Manager : MonoBehaviour
     public void SetUpScreen5(AnswerNodeData answer)
     {
         feedbackText.text = answer.Feedback;
+    }
+
+    private bool CheckMoreDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI)
+    {
+        bool refresh = false;
+        if (currentDialogue < dialoguesData.Count) //esto significaria que quedan dialogos sin mostrar
+        {
+            //en este caso hay que hacer un refresh de la UI
+            refresh = true;
+            Clear(dialoguesUI);
+            RefreshDialogues(dialoguesData, dialoguesUI);
+        }
+        else
+        {
+            currentDialogue = 0; //reseteamos para el siguiente
+        }
+
+        return refresh;
+    }
+
+    private void Clear(List<TextMeshProUGUI> dialoguesUI)
+    {
+        for (int i = 0; i < dialoguesUI.Count; i++)
+        {
+            dialoguesUI[i].text = "-";
+        }
+    }
+
+    private void RefreshDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI)
+    {
+        bool end = false;
+        int i = 0;
+        for (i = 0; i < dialoguesUI.Count && !end; i++)
+        {
+            if (i < answerDialogues.Count - 1)
+            {
+                dialoguesUI[i].text = $"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}";
+                
+            }
+            else
+            {
+                end = true;
+            }
+        }
+        currentDialogue += i;
     }
 
 }
