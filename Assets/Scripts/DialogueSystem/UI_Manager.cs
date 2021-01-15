@@ -36,7 +36,7 @@ public class UI_Manager : MonoBehaviour
     //Screen 2
     public GameObject screen2;
     public List<TextMeshProUGUI> situationDialogueTexts = new List<TextMeshProUGUI>();  //Array de dialogos de situacion
-    //public List<DialogueUI> situationDialogesUI = new List<DialogueUI>(); //Array de dialogos de situacion
+    public GameObject nextButtonSituation;
 
 
     //Screen 3
@@ -45,7 +45,7 @@ public class UI_Manager : MonoBehaviour
     //Screen 4
     public GameObject screen4;
     public List<TextMeshProUGUI> answerDialogueTexts = new List<TextMeshProUGUI>(); //Array de dialogos de answer
-    //public List<DialogueUI> answerDialogesUI = new List<DialogueUI>(); //Array de dialogos de answer
+    public GameObject nextButtonAnswer;
 
     //Screen 5
     public GameObject screen5;
@@ -117,7 +117,7 @@ public class UI_Manager : MonoBehaviour
 
         AddTextToRoute(situation.SituationName);
 
-        Debug.Log($"Se ha configurado la situacion {situation.SituationName}, tiene {questions.Count} preguntas posibles");
+        //Debug.Log($"Se ha configurado la situacion {situation.SituationName}, tiene {questions.Count} preguntas posibles");
         //foreach (var item in questions){Debug.Log($"{item.QuestionName}");}
     }
 
@@ -151,11 +151,11 @@ public class UI_Manager : MonoBehaviour
             else
             {
                 dialogues.Add(aux);
-                Debug.Log($"Se ha añadido el dialogo {aux.DialogueName}");
+                //Debug.Log($"Se ha añadido el dialogo {aux.DialogueName}");
             }
         }
 
-        Debug.Log("Ya no hay mas dialogos");
+        //Debug.Log("Ya no hay mas dialogos");
         return true;
     }
 
@@ -195,7 +195,7 @@ public class UI_Manager : MonoBehaviour
 
     public void ToScreen3(GameObject originScreen) // Answer choose
     {
-        if (!CheckMoreDialogues(situationDialogues, situationDialogueTexts)) //si no hay mas dialogos entra aqui
+        if (!CheckMoreDialogues(situationDialogues, situationDialogueTexts, nextButtonSituation)) //si no hay mas dialogos entra aqui
         {
             originScreen.SetActive(false);
             screen3.SetActive(true);
@@ -235,9 +235,10 @@ public class UI_Manager : MonoBehaviour
         lastQuestion = currentQuestion;
     }
 
-    public void PlayAudioOnSpeaker(string _audio, string _speaker)
+    public float PlayAudioOnSpeaker(string _audio, string _speaker)
     {
         //Animacion
+        //Debug.Log($"Comprobamos si el diccionario contiene {_speaker}");
         if (dictionaryCharacteres.ContainsKey(_speaker))
         {
             dictionaryCharacteres[_speaker].SetBool("isTalking", true);
@@ -247,20 +248,35 @@ public class UI_Manager : MonoBehaviour
             Debug.Log($"No se ha encontrado el speaker {_speaker}");
         }
 
-        //SetAnimToFalse(_speaker);
-
-        //Ahora mismo da igual quien lo diga
-        //Debug.Log("Se va a reproducir un audio");
-        audioSource.clip = Resources.Load($"Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}", typeof(AudioClip)) as AudioClip;
+        //Audio
+        audioSource.clip = Resources.Load(GetAudioPath(_audio), typeof(AudioClip)) as AudioClip;
         if (audioSource.clip != null)
         {
             audioSource.Play();
+            //Debug.Log($"Hacemos una pausa de {audioSource.clip.length + 2.5f}");
+            return audioSource.clip.length + 2.5f;
         }
         else
         {
             Debug.Log($"No se ha encontrado el audio Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}");
+            return 0f;
         }
 
+        
+    }
+
+    private string GetAudioPath(string _audio)
+    {
+        string path = $"Audio/Case5_EN/{_audio}";
+        if (isValid(caso) && LanguageManager.Instance != null)
+        {
+            if (isValid(LanguageManager.Instance.languageSelected))
+            {
+                path = $"Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}";
+            }
+        }
+
+        return path;
     }
 
     IEnumerator SetAnimToFalse(string _speaker)
@@ -316,7 +332,7 @@ public class UI_Manager : MonoBehaviour
 
     public void CheckIfISEnd(GameObject originScreen)
     {
-        if (!CheckMoreDialogues(answerDialogues, answerDialogueTexts)) //si no hay mas dialogos entra aqui
+        if (!CheckMoreDialogues(answerDialogues, answerDialogueTexts, nextButtonAnswer)) //si no hay mas dialogos entra aqui
         {
             //TODO: Vamos a la screen 2 o 5 en funcion del valor isEnd de la respuesta
             if (choosenAnswer.IsEnd)
@@ -375,13 +391,8 @@ public class UI_Manager : MonoBehaviour
         //situation = _situation; //esto tiene que estar configurado ya
         if (LoadDialogues(situation.Guid, situationDialogues)) 
         {
-            RefreshDialogues(situationDialogues, situationDialogueTexts);
-            /*
-            for (int i = 0; i < situationDialogues.Count; i++)
-            {
-                situationDialogueTexts[i % answerDialogueTexts.Count].text = $"{situationDialogues[i].Speaker} ({situationDialogues[i].Mood}): {situationDialogues[i].DialogueText}";
-            }
-            */
+            //RefreshDialogues(situationDialogues, situationDialogueTexts);
+            StartCoroutine(PlayDialogues(situationDialogues, situationDialogueTexts, nextButtonSituation));
 
             Debug.Log($"Se ha asignado el primer dialogo de la situacion {situation.SituationName}, dialogo = {situationDialogues[0].DialogueText}");
         }
@@ -419,25 +430,9 @@ public class UI_Manager : MonoBehaviour
         choosenAnswer = answer;
         if (LoadDialogues(answer.Guid, answerDialogues))
         {
-            //Solo ponemos los 4 primeros como mucho
 
-            RefreshDialogues(answerDialogues, answerDialogueTexts);
-
-
-            /*bool end = false;
-            for (int i =0; i < answerDialogueTexts.Count && !end; i++)
-            {
-                if (i < answerDialogues.Count - 1)
-                {
-                    answerDialogueTexts[i % answerDialogueTexts.Count].text = $"{answerDialogues[i].Speaker} ({answerDialogues[i].Mood}): {answerDialogues[i].DialogueText}";
-                    currentDialogue = i;
-                }
-                else
-                {
-                    end = true;
-                }
-            }
-            */
+            //RefreshDialogues(answerDialogues, answerDialogueTexts);
+            StartCoroutine(PlayDialogues(answerDialogues, answerDialogueTexts, nextButtonAnswer));
 
             Debug.Log($"Se ha asignado el primer dialogo de la answer {answer.AnswerName}, dialogo = {answerDialogues[0].DialogueText}");
         }
@@ -452,7 +447,7 @@ public class UI_Manager : MonoBehaviour
         feedbackText.text = answer.Feedback;
     }
 
-    private bool CheckMoreDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI)
+    private bool CheckMoreDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI, GameObject nextButton)
     {
         bool refresh = false;
         if (currentDialogue < dialoguesData.Count) //esto significaria que quedan dialogos sin mostrar
@@ -460,7 +455,8 @@ public class UI_Manager : MonoBehaviour
             //en este caso hay que hacer un refresh de la UI
             refresh = true;
             Clear(dialoguesUI);
-            RefreshDialogues(dialoguesData, dialoguesUI);
+            //RefreshDialogues(dialoguesData, dialoguesUI);
+            StartCoroutine(PlayDialogues(dialoguesData, dialoguesUI, nextButton));
         }
         else
         {
@@ -488,7 +484,7 @@ public class UI_Manager : MonoBehaviour
             if ((currentDialogue + i) < dialoguesData.Count)
             {
                 dialoguesUI[i].text = $"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}";
-                
+                //PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker);
             }
             else
             {
@@ -499,6 +495,30 @@ public class UI_Manager : MonoBehaviour
         currentDialogue += i;
         //Debug.Log($"Salimos con current: {currentDialogue}");
 
+    }
+
+    IEnumerator PlayDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI, GameObject nextButton)
+    {
+        nextButton.SetActive(false); // lo desactivamos mientras no haya que avanzar de pantalla
+        bool end = false;
+        int i = 0;
+        //Debug.Log($"Entramos y current: {currentDialogue}, i: {i}");
+        for (i = 0; i < dialoguesUI.Count && !end; i++)
+        {
+            if ((currentDialogue + i) < dialoguesData.Count)
+            {
+                dialoguesUI[i].text = $"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}";
+                //Debug.Log($"Hemos puesto el dialogo {currentDialogue + i}, ahora vamos a hacer una pausa");
+                yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker));
+            }
+            else
+            {
+                end = true;
+            }
+        }
+
+        currentDialogue += i;
+        nextButton.SetActive(true);
     }
 
 }

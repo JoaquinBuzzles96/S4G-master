@@ -5105,9 +5105,11 @@ MonoBehaviour:
   contextDescription: {fileID: 0}
   screen2: {fileID: 523089752}
   situationDialogueTexts: []
+  nextButtonSituation: {fileID: 0}
   screen3: {fileID: 0}
   screen4: {fileID: 0}
   answerDialogueTexts: []
+  nextButtonAnswer: {fileID: 0}
   screen5: {fileID: 0}
   feedbackText: {fileID: 0}
   choosenAnswer:
@@ -8446,6 +8448,7 @@ MonoBehaviour:
   - {fileID: 458355941}
   - {fileID: 417865998}
   - {fileID: 93580647}
+  nextButtonSituation: {fileID: 1566488789}
   screen3: {fileID: 366895105}
   screen4: {fileID: 757375344}
   answerDialogueTexts:
@@ -8453,6 +8456,7 @@ MonoBehaviour:
   - {fileID: 1575558307}
   - {fileID: 1842411176}
   - {fileID: 1415219253}
+  nextButtonAnswer: {fileID: 634723503}
   screen5: {fileID: 1986276744}
   feedbackText: {fileID: 1042890870}
   choosenAnswer:
