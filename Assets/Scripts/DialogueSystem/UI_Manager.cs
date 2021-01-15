@@ -79,7 +79,7 @@ public class UI_Manager : MonoBehaviour
     }
     void Start()
     {
-        GetDialogueContainerLanguage(); //TODO: descomentar esto, esta comentado solo para probar casos de ejemplo
+        GetDialogueContainerLanguage();
         SetNameToCharacters();
         lastQuestion = -1;
         SetUpContext(dialogueContainer.GetFirstSituation());
@@ -159,12 +159,6 @@ public class UI_Manager : MonoBehaviour
 
     public void ToScreen1(SituationNodeData newSituation, GameObject originScreen) // Context
     {
-        //OLD
-        /*
-        SetupUI(newSituation);
-        screen1.SetActive(true);
-        screen2.SetActive(false);
-        */
         SetUpContext(newSituation);
         originScreen.SetActive(false);
         screen1.SetActive(true);
@@ -172,14 +166,6 @@ public class UI_Manager : MonoBehaviour
     }
     public void ToScreen2(GameObject originScreen) //Dialogue situation
     {
-        //OLD
-        /*
-        screen2.SetActive(true);
-        screen1.SetActive(false);
-        OnStartButton();
-        */
-
-
         SetUpScreen2(); //Actualizamos los dialogos de la pantalla
         originScreen.SetActive(false);
         screen2.SetActive(true);
@@ -310,14 +296,6 @@ public class UI_Manager : MonoBehaviour
         playereRoute += "\n" + _text;
     }
 
-    private void ReadContext()
-    {
-        if (isValid(situation.Context))
-        {
-            //TODO: poner en el panel correspondiente este texto
-        }
-    }
-
     public bool isValid(string texto)
     {
         if (texto == null || texto == "" || texto == "Deprecated field (use description node)")
@@ -329,13 +307,11 @@ public class UI_Manager : MonoBehaviour
         return true;
     }
 
-    //New functions:
-
     public void CheckIfISEnd(GameObject originScreen)
     {
         if (!CheckMoreDialogues(answerDialogues, answerDialogueTexts, nextButtonAnswer)) //si no hay mas dialogos entra aqui
         {
-            //TODO: Vamos a la screen 2 o 5 en funcion del valor isEnd de la respuesta
+            //Vamos a la screen 2 o 5 en funcion del valor isEnd de la respuesta
             if (choosenAnswer.IsEnd)
             {
                 ToScreen5(choosenAnswer, originScreen);
@@ -365,31 +341,14 @@ public class UI_Manager : MonoBehaviour
         contextDescription.text = situation.Context;
 
         Debug.Log($"Se ha configurado el contexto de la situacion {situation.SituationName}");
-        /*
-        if (LoadDialogues(situation.Guid, dialogues))
-        {
-            descriptionText.text = dialogues[0].DialogueText;
-            Debug.Log($"Se ha asignado el primer dialogo de la situacion {situation.SituationName}, dialogo = {descriptionText.text}");
-        }
-        else
-        {
-            Debug.LogError($"No se han encontrado dialogos para la situacion {situation.SituationName}");
-            descriptionText.text = situation.Context;
-        }
 
-        questions = dialogueContainer.GetSituationQuestions(situation.Guid);
-
-        AddTextToRoute(situation.SituationName);
-
-        Debug.Log($"Se ha configurado la situacion {situation.SituationName}, tiene {questions.Count} preguntas posibles");
-        //foreach (var item in questions){Debug.Log($"{item.QuestionName}");}
-        */
     }
 
     public void SetUpScreen2() //situation dialogues setUp
     {
-        //Volvemos a pedir este parametro aunque en teoria ya lo tenemos, esto es para cubrir el caso en el que nesto sea invocado desde la screen 4
         //situation = _situation; //esto tiene que estar configurado ya
+        AddTextToRoute($"{situation.SituationName}: {situation.Context}"); //LO GUARDAMOS PARA EL CORREO
+
         if (LoadDialogues(situation.Guid, situationDialogues)) 
         {
             //RefreshDialogues(situationDialogues, situationDialogueTexts);
@@ -446,6 +405,10 @@ public class UI_Manager : MonoBehaviour
     public void SetUpScreen5(AnswerNodeData answer)
     {
         feedbackText.text = answer.Feedback;
+        //Add feedback to email
+        AddTextToRoute($"Feedback: {answer.Feedback}");
+        //Send email
+        //TODO: sendMail.SendEmail();
     }
 
     private bool CheckMoreDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI, GameObject nextButton)
@@ -475,29 +438,6 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
-    private void RefreshDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI)
-    {
-        bool end = false;
-        int i = 0;
-        //Debug.Log($"Entramos y current: {currentDialogue}, i: {i}");
-        for (i = 0; i < dialoguesUI.Count && !end; i++)
-        {
-            if ((currentDialogue + i) < dialoguesData.Count)
-            {
-                dialoguesUI[i].text = $"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}";
-                //PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker);
-            }
-            else
-            {
-                end = true;
-            }
-        }
-        
-        currentDialogue += i;
-        //Debug.Log($"Salimos con current: {currentDialogue}");
-
-    }
-
     IEnumerator PlayDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI, GameObject nextButton)
     {
         nextButton.SetActive(false); // lo desactivamos mientras no haya que avanzar de pantalla
@@ -509,6 +449,7 @@ public class UI_Manager : MonoBehaviour
             if ((currentDialogue + i) < dialoguesData.Count)
             {
                 dialoguesUI[i].text = $"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}";
+                AddTextToRoute($"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}");
                 //Debug.Log($"Hemos puesto el dialogo {currentDialogue + i}, ahora vamos a hacer una pausa");
                 yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker));
             }
