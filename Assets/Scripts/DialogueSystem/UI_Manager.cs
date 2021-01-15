@@ -215,13 +215,13 @@ public class UI_Manager : MonoBehaviour
         lastQuestion = currentQuestion;
     }
 
-    public float PlayAudioOnSpeaker(string _audio, string _speaker)
+    public float PlayAudioOnSpeaker(string _audio, string _speaker, string _mood)
     {
         //Animacion
         //Debug.Log($"Comprobamos si el diccionario contiene {_speaker}");
         if (dictionaryCharacteres.ContainsKey(_speaker))
         {
-            dictionaryCharacteres[_speaker].SetBool("isTalking", true);
+            SetMoodAnim(_speaker, _mood);
         }
         else
         {
@@ -243,6 +243,29 @@ public class UI_Manager : MonoBehaviour
         }
 
         
+    }
+
+    private void SetMoodAnim(string _speaker, string _mood)
+    {
+        
+        switch (_mood)
+        {
+            case "Ironic":
+                dictionaryCharacteres[_speaker].SetBool("isIronic", true);
+                break;
+            case "Regretful":
+                dictionaryCharacteres[_speaker].SetBool("isRegret", true);
+                break;
+            case "Agressive":
+                dictionaryCharacteres[_speaker].SetBool("isYelling", true);
+                break;
+            case "Nervous": //tambien hacen la default de momento
+            case "Calmly":
+            default:
+                dictionaryCharacteres[_speaker].SetBool("isTalking", true); //por defecto hacemos la animacion generica
+                break;
+        }
+
     }
 
     private string GetAudioPath(string _audio)
@@ -456,7 +479,7 @@ public class UI_Manager : MonoBehaviour
                 dialoguesUI[i].text = $"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}";
                 AddTextToRoute($"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}");
                 //Debug.Log($"Hemos puesto el dialogo {currentDialogue + i}, ahora vamos a hacer una pausa");
-                yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker));
+                yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker, dialoguesData[currentDialogue + i].Mood));
             }
             else
             {
