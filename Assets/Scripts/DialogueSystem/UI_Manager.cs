@@ -24,10 +24,7 @@ public class UI_Manager : MonoBehaviour
     private List<DialogueNodeData> answerDialogues = new List<DialogueNodeData>();
     private int currentDialogue = 0; //podemos usar la misma variable para ambos casos ya que nunca se daran al mismo tiempo
 
-
     public DialogueContainer dialogueContainer;
-
-    
 
     //Screen 1
     public GameObject screen1;
@@ -37,7 +34,6 @@ public class UI_Manager : MonoBehaviour
     public GameObject screen2;
     public List<TextMeshProUGUI> situationDialogueTexts = new List<TextMeshProUGUI>();  //Array de dialogos de situacion
     public GameObject nextButtonSituation;
-
 
     //Screen 3
     public GameObject screen3;
@@ -219,7 +215,7 @@ public class UI_Manager : MonoBehaviour
     {
         //Animacion
         //Debug.Log($"Comprobamos si el diccionario contiene {_speaker}");
-        if (dictionaryCharacteres.ContainsKey(_speaker))
+        if (dictionaryCharacteres.ContainsKey(_speaker) && _speaker != "Narrator")
         {
             SetMoodAnim(_speaker, _mood);
         }
@@ -282,12 +278,6 @@ public class UI_Manager : MonoBehaviour
         return path;
     }
 
-    IEnumerator SetAnimToFalse(string _speaker)
-    {
-        yield return null;
-        dictionaryCharacteres[_speaker].SetBool("isTalking", false);
-    }
-
     public void GetDialogueContainerLanguage()
     {
         if (LanguageManager.Instance != null)
@@ -314,6 +304,15 @@ public class UI_Manager : MonoBehaviour
             dictionaryCharacteres.Add(item.gameObject.name, item);
             //Debug.Log($"Se ha añadido el {item.gameObject.name} al diccionario");
         }
+
+        /* Case 3:
+        Narrator
+        Endoscopist 1
+        Endoscopy Nurse
+        Anaesthesiologist
+        Endoscopist 2
+        Secretary
+         */
     }
 
     public void AddTextToRoute(string _text)

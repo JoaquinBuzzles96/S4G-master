@@ -1326,7 +1326,7 @@ PrefabInstance:
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -1381,7 +1381,7 @@ PrefabInstance:
     - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_Name
-      value: Anaesthesiologist
+      value: Secretary
       objectReference: {fileID: 0}
     - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -1411,7 +1411,7 @@ PrefabInstance:
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -1466,7 +1466,7 @@ PrefabInstance:
     - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_Name
-      value: Surgeon1
+      value: Endoscopist 1
       objectReference: {fileID: 0}
     - target: {fileID: 8668491829385203019, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -1478,6 +1478,12 @@ PrefabInstance:
 --- !u!95 &202152592 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8668491829385203019, guid: 23e22f37506977d43ae72f984602ba5c,
+    type: 3}
+  m_PrefabInstance: {fileID: 202152591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &202152593 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
     type: 3}
   m_PrefabInstance: {fileID: 202152591}
   m_PrefabAsset: {fileID: 0}
@@ -3586,7 +3592,7 @@ PrefabInstance:
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -4084,7 +4090,7 @@ PrefabInstance:
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -4139,7 +4145,7 @@ PrefabInstance:
     - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_Name
-      value: InstrumentalistNurse
+      value: Endoscopist 2
       objectReference: {fileID: 0}
     - target: {fileID: 8668491829385203019, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -5134,6 +5140,7 @@ MonoBehaviour:
   - {fileID: 172384950}
   caso: Case5
   playereRoute: 
+  totalScore: 0
   lastTime: 0
 --- !u!82 &726161757
 AudioSource:
@@ -6559,7 +6566,7 @@ PrefabInstance:
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -6614,7 +6621,7 @@ PrefabInstance:
     - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_Name
-      value: Surgeon2
+      value: Endoscopy Nurse
       objectReference: {fileID: 0}
     - target: {fileID: 8668491829385203019, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -8479,8 +8486,9 @@ MonoBehaviour:
   - {fileID: 478228725}
   - {fileID: 576469544}
   - {fileID: 172384950}
-  caso: testing2
+  caso: Case3
   playereRoute: 
+  totalScore: 0
   lastTime: 0
 --- !u!114 &1273954992
 MonoBehaviour:
@@ -8596,7 +8604,7 @@ RectTransform:
   - {fileID: 757375345}
   - {fileID: 1986276745}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -252.255, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9411,27 +9419,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 202152593}
     m_Modifications:
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.17
+      value: -1.9976888
       objectReference: {fileID: 0}
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25300002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.44
+      value: 2.941688
       objectReference: {fileID: 0}
     - target: {fileID: 1641184543177515057, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -9471,7 +9479,7 @@ PrefabInstance:
     - target: {fileID: 2350300101431513634, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
       propertyPath: m_Name
-      value: CirculatingNurse
+      value: Anaesthesiologist
       objectReference: {fileID: 0}
     - target: {fileID: 8668491829385203019, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -9976,7 +9984,7 @@ PrefabInstance:
     - target: {fileID: 2080782199842735732, guid: 4a9bb26c1199f134aacecf573ab9a2d5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2080782199842735732, guid: 4a9bb26c1199f134aacecf573ab9a2d5,
         type: 3}
@@ -13771,7 +13779,7 @@ PrefabInstance:
     - target: {fileID: 4864928950619938553, guid: cfc51cb63c327704280de447c67afbcd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4864928950619938553, guid: cfc51cb63c327704280de447c67afbcd,
         type: 3}
