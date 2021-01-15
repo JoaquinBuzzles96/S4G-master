@@ -123,14 +123,16 @@ public class UI_Manager : MonoBehaviour
 
     public bool LoadDialogues(string guid, List<DialogueNodeData> dialogues)
     {
-        Debug.Log($"Vamos a comprobar si la situacion/respuesta actual tiene algun dialogo asignado");
+        //Lo primero es vaciar los dialogos en caso de que ya se hubieran consultado antes
+        dialogues.Clear();
+        //Debug.Log($"Vamos a comprobar si la situacion/respuesta actual tiene algun dialogo asignado");
         var firstElement = dialogueContainer.GetNextDialogueData(guid);
-        Debug.Log($"Hemos obtenido el nodo {firstElement.DialogueName}");
+        //Debug.Log($"Hemos obtenido el nodo {firstElement.DialogueName}");
 
         if (firstElement != null)
         {
             dialogues.Add(firstElement);//suponemos que siempre hay al menos uno
-            Debug.Log($"Se ha añadido el dialogo {dialogues[dialogues.Count - 1].DialogueName}");
+            //Debug.Log($"Se ha añadido el dialogo {dialogues[dialogues.Count - 1].DialogueName}");
         }
         else
         {
@@ -480,9 +482,10 @@ public class UI_Manager : MonoBehaviour
     {
         bool end = false;
         int i = 0;
+        //Debug.Log($"Entramos y current: {currentDialogue}, i: {i}");
         for (i = 0; i < dialoguesUI.Count && !end; i++)
         {
-            if (i < answerDialogues.Count - 1)
+            if ((currentDialogue + i) < dialoguesData.Count)
             {
                 dialoguesUI[i].text = $"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}";
                 
@@ -492,7 +495,10 @@ public class UI_Manager : MonoBehaviour
                 end = true;
             }
         }
+        
         currentDialogue += i;
+        //Debug.Log($"Salimos con current: {currentDialogue}");
+
     }
 
 }
