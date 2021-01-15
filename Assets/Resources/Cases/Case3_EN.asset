@@ -10,48 +10,78 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
-  m_Name: case3
+  m_Name: Case3_EN
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 1a8a2fff-e26c-41f1-9dd8-2c6e80c21b5b
     PortName: S1
     TargetNodeGuid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
-  - BaseNodeGuid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
-    PortName: Dialogue
-    TargetNodeGuid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
-  - BaseNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
-    PortName: Dialogue
-    TargetNodeGuid: 8a9b76c5-4b77-4995-a7b9-47f7301a4fbe
-  - BaseNodeGuid: 341bebb1-f453-44c5-8ac1-25c998c5d2f7
-    PortName: Dialogue
-    TargetNodeGuid: 086299ed-0bb5-401c-a85f-209462d63ecf
   - BaseNodeGuid: 3883b33a-f144-48c8-b765-639ff03eba8f
     PortName: Dialogue
     TargetNodeGuid: 67c00472-5def-4c22-8817-394221de4e63
-  - BaseNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
-    PortName: Dialogue
-    TargetNodeGuid: 770517d2-cd24-4527-aaea-765583db9f5c
+  - BaseNodeGuid: 3883b33a-f144-48c8-b765-639ff03eba8f
+    PortName: Question 1
+    TargetNodeGuid: 3d393f5b-30c8-412a-a646-f32453ff386e
   - BaseNodeGuid: d01aeee4-3215-4418-a6d9-dacfa90b4a3b
     PortName: Dialogue
     TargetNodeGuid: 5b6fa2ca-3b2e-4e25-855c-34efbadd9379
+  - BaseNodeGuid: d01aeee4-3215-4418-a6d9-dacfa90b4a3b
+    PortName: Question 1
+    TargetNodeGuid: e26c01fb-d89a-47da-acb4-dae5ec802908
   - BaseNodeGuid: d9409ee5-4d3b-42bd-8159-48b1145ea39e
     PortName: Dialogue
     TargetNodeGuid: c17ed2a9-732d-4ada-b3bf-2bf30fb41573
+  - BaseNodeGuid: d9409ee5-4d3b-42bd-8159-48b1145ea39e
+    PortName: Question 1
+    TargetNodeGuid: fd793977-ead6-4356-ac6a-3e898676ea44
   - BaseNodeGuid: d0272e95-ae03-454f-9be6-c1602a47e538
     PortName: Dialogue
     TargetNodeGuid: eb1da68f-2d71-4057-bd57-96b8b4c3e322
-  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
-    PortName: Answer 1
-    TargetNodeGuid: 7a074eee-6300-4f85-b697-9ac22ddf536a
-  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
-    PortName: Answer 2
-    TargetNodeGuid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
-  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
-    PortName: Answer 3
-    TargetNodeGuid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
-  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
-    PortName: Answer 4
-    TargetNodeGuid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
+  - BaseNodeGuid: d0272e95-ae03-454f-9be6-c1602a47e538
+    PortName: Question 1
+    TargetNodeGuid: 6b47c6f9-b29d-487b-a485-e55e97bf488c
+  - BaseNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
+    PortName: Dialogue
+    TargetNodeGuid: e38576bb-fdf5-4d38-a9f4-83592a039061
+  - BaseNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
+    PortName: Question 1
+    TargetNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
+  - BaseNodeGuid: 4313c7d6-d1d7-42c4-b3c4-7d83d4a5a67e
+    PortName: Dialogue
+    TargetNodeGuid: 8df33430-149a-4697-b054-ab4785e213fd
+  - BaseNodeGuid: 4313c7d6-d1d7-42c4-b3c4-7d83d4a5a67e
+    PortName: Question 1
+    TargetNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
+  - BaseNodeGuid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
+    PortName: Dialogue
+    TargetNodeGuid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
+  - BaseNodeGuid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
+    PortName: Question 1
+    TargetNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+  - BaseNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
+    PortName: Dialogue
+    TargetNodeGuid: 8a9b76c5-4b77-4995-a7b9-47f7301a4fbe
+  - BaseNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
+    PortName: Question 1
+    TargetNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
+  - BaseNodeGuid: 341bebb1-f453-44c5-8ac1-25c998c5d2f7
+    PortName: Dialogue
+    TargetNodeGuid: 086299ed-0bb5-401c-a85f-209462d63ecf
+  - BaseNodeGuid: 341bebb1-f453-44c5-8ac1-25c998c5d2f7
+    PortName: Question 1
+    TargetNodeGuid: 3d393f5b-30c8-412a-a646-f32453ff386e
+  - BaseNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
+    PortName: Dialogue
+    TargetNodeGuid: 770517d2-cd24-4527-aaea-765583db9f5c
+  - BaseNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
+    PortName: Question 1
+    TargetNodeGuid: e26c01fb-d89a-47da-acb4-dae5ec802908
+  - BaseNodeGuid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
+    PortName: Dialogue
+    TargetNodeGuid: 5edad345-ee46-4cc2-9ee1-1d916951839f
+  - BaseNodeGuid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
+    PortName: Question 1
+    TargetNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
   - BaseNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
     PortName: Answer 1
     TargetNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
@@ -112,6 +142,42 @@ MonoBehaviour:
   - BaseNodeGuid: 6b47c6f9-b29d-487b-a485-e55e97bf488c
     PortName: Answer 4
     TargetNodeGuid: 93c682bd-5144-4c67-bd60-e04b07492871
+  - BaseNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
+    PortName: Answer 1
+    TargetNodeGuid: 3286cfe5-2598-4388-8f63-7a3bb5435597
+  - BaseNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
+    PortName: Answer 2
+    TargetNodeGuid: e12f52f0-16d9-48da-894e-fe622a2c5dae
+  - BaseNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
+    PortName: Answer 3
+    TargetNodeGuid: 52a5f4d7-9357-4fc0-83a4-44b03cfec5ab
+  - BaseNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
+    PortName: Answer 4
+    TargetNodeGuid: 55a14e42-d21f-4360-8887-40e86483439e
+  - BaseNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
+    PortName: Answer 1
+    TargetNodeGuid: 7ec6135e-02d0-4a64-a853-499430a24c06
+  - BaseNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
+    PortName: Answer 2
+    TargetNodeGuid: 93e8669a-40db-45f5-bcc2-95cd2e95422d
+  - BaseNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
+    PortName: Answer 3
+    TargetNodeGuid: c3b8e998-a9bb-4018-a3fc-94abd0ff80db
+  - BaseNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
+    PortName: Answer 4
+    TargetNodeGuid: d01139bc-580c-45c8-91f2-ea0377922a1d
+  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    PortName: Answer 1
+    TargetNodeGuid: 7a074eee-6300-4f85-b697-9ac22ddf536a
+  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    PortName: Answer 2
+    TargetNodeGuid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
+  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    PortName: Answer 3
+    TargetNodeGuid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
+  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    PortName: Answer 4
+    TargetNodeGuid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
   - BaseNodeGuid: 7a074eee-6300-4f85-b697-9ac22ddf536a
     PortName: Dialogue
     TargetNodeGuid: c4fe1ad4-468a-44a9-a2e0-77367ed9723d
@@ -145,6 +211,9 @@ MonoBehaviour:
   - BaseNodeGuid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
     PortName: Dialogue
     TargetNodeGuid: c6196b0e-9291-4239-be5e-fcf282dba917
+  - BaseNodeGuid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
+    PortName: Situation
+    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
   - BaseNodeGuid: c9282cbb-7207-4020-92d4-acc4742ef2f2
     PortName: Dialogue
     TargetNodeGuid: 4ac6c4e9-0e3c-4c8d-b83d-85225152db62
@@ -154,6 +223,9 @@ MonoBehaviour:
   - BaseNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
     PortName: Dialogue
     TargetNodeGuid: de60cf79-82be-4699-a572-971570090c0f
+  - BaseNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
+    PortName: Situation
+    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
   - BaseNodeGuid: edcaefce-5070-4870-bf53-6ebf5ceff51e
     PortName: Dialogue
     TargetNodeGuid: 605fd93c-b56b-4ec5-92e5-bc76556904a1
@@ -220,15 +292,69 @@ MonoBehaviour:
   - BaseNodeGuid: 14d4f636-1978-4f52-9bf1-1e36bc2ef15e
     PortName: Situation
     TargetNodeGuid: d0272e95-ae03-454f-9be6-c1602a47e538
+  - BaseNodeGuid: 80d2fc2e-9a42-423f-a48d-35c4aad42726
+    PortName: Dialogue
+    TargetNodeGuid: 14539d48-cef4-4864-b50d-344f1f06ddf0
+  - BaseNodeGuid: 80d2fc2e-9a42-423f-a48d-35c4aad42726
+    PortName: Situation
+    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
+  - BaseNodeGuid: ad9a1db7-d135-4e2d-9c36-96017b4ac831
+    PortName: Dialogue
+    TargetNodeGuid: 6d29a25b-3b39-4207-96a2-1b982770f363
+  - BaseNodeGuid: ad9a1db7-d135-4e2d-9c36-96017b4ac831
+    PortName: Situation
+    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
+  - BaseNodeGuid: 5fc92988-9e45-46da-ad61-1a33dcbf9582
+    PortName: Dialogue
+    TargetNodeGuid: 61aa688d-d419-4735-8ae1-3c00090c7f89
+  - BaseNodeGuid: 5fc92988-9e45-46da-ad61-1a33dcbf9582
+    PortName: Situation
+    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
+  - BaseNodeGuid: 93c682bd-5144-4c67-bd60-e04b07492871
+    PortName: Dialogue
+    TargetNodeGuid: 97c98238-5955-41a7-acfb-c3c33e7b8868
+  - BaseNodeGuid: 93c682bd-5144-4c67-bd60-e04b07492871
+    PortName: Situation
+    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
+  - BaseNodeGuid: 3286cfe5-2598-4388-8f63-7a3bb5435597
+    PortName: Dialogue
+    TargetNodeGuid: 06037e84-a131-4340-a525-4f80e325b5f8
+  - BaseNodeGuid: 3286cfe5-2598-4388-8f63-7a3bb5435597
+    PortName: Situation
+    TargetNodeGuid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
+  - BaseNodeGuid: e12f52f0-16d9-48da-894e-fe622a2c5dae
+    PortName: Dialogue
+    TargetNodeGuid: 8449993a-0d7c-4107-9a5f-8f516c9961bd
+  - BaseNodeGuid: 52a5f4d7-9357-4fc0-83a4-44b03cfec5ab
+    PortName: Dialogue
+    TargetNodeGuid: e78bcb9d-c988-44aa-8490-811a0c6d8e04
+  - BaseNodeGuid: 52a5f4d7-9357-4fc0-83a4-44b03cfec5ab
+    PortName: Situation
+    TargetNodeGuid: 4313c7d6-d1d7-42c4-b3c4-7d83d4a5a67e
+  - BaseNodeGuid: 55a14e42-d21f-4360-8887-40e86483439e
+    PortName: Dialogue
+    TargetNodeGuid: 5a9365e7-2d1a-4188-9f63-a61e62041993
+  - BaseNodeGuid: 55a14e42-d21f-4360-8887-40e86483439e
+    PortName: Situation
+    TargetNodeGuid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
+  - BaseNodeGuid: 7ec6135e-02d0-4a64-a853-499430a24c06
+    PortName: Dialogue
+    TargetNodeGuid: 274e84f3-4ef8-4270-9f82-e21cb19e0536
+  - BaseNodeGuid: 93e8669a-40db-45f5-bcc2-95cd2e95422d
+    PortName: Dialogue
+    TargetNodeGuid: a245faa7-a5ab-4785-bd88-de46dbd48eb4
+  - BaseNodeGuid: c3b8e998-a9bb-4018-a3fc-94abd0ff80db
+    PortName: Dialogue
+    TargetNodeGuid: 31b5ab0b-7752-4de5-b39a-452ec6de5bec
+  - BaseNodeGuid: d01139bc-580c-45c8-91f2-ea0377922a1d
+    PortName: Dialogue
+    TargetNodeGuid: 442d07ea-24ff-4a37-9ac1-deeb523365d3
   - BaseNodeGuid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
     PortName: Dialogue
     TargetNodeGuid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
   - BaseNodeGuid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
     PortName: Dialogue
     TargetNodeGuid: 5a1b518d-83fc-4f1f-9c70-0df5e62f37f8
-  - BaseNodeGuid: 5a1b518d-83fc-4f1f-9c70-0df5e62f37f8
-    PortName: Dialogue
-    TargetNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
   - BaseNodeGuid: c4fe1ad4-468a-44a9-a2e0-77367ed9723d
     PortName: Dialogue
     TargetNodeGuid: 6f4fbb9d-704b-4dc0-8bc1-44762e9087f5
@@ -241,9 +367,6 @@ MonoBehaviour:
   - BaseNodeGuid: 4cff95b7-9c2b-4618-b0bb-c657e47cfb6d
     PortName: Dialogue
     TargetNodeGuid: 51a416c3-ca43-46af-8200-90d6013c16c4
-  - BaseNodeGuid: 51a416c3-ca43-46af-8200-90d6013c16c4
-    PortName: Dialogue
-    TargetNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
   - BaseNodeGuid: 086299ed-0bb5-401c-a85f-209462d63ecf
     PortName: Dialogue
     TargetNodeGuid: 67c00472-5def-4c22-8817-394221de4e63
@@ -262,9 +385,6 @@ MonoBehaviour:
   - BaseNodeGuid: 36cc2a75-e4a9-460e-b3d9-29d96aca2dae
     PortName: Dialogue
     TargetNodeGuid: 14911ca4-2043-41aa-ba27-3d54b48fd2cf
-  - BaseNodeGuid: 14911ca4-2043-41aa-ba27-3d54b48fd2cf
-    PortName: Dialogue
-    TargetNodeGuid: 3d393f5b-30c8-412a-a646-f32453ff386e
   - BaseNodeGuid: 770517d2-cd24-4527-aaea-765583db9f5c
     PortName: Dialogue
     TargetNodeGuid: 5b6fa2ca-3b2e-4e25-855c-34efbadd9379
@@ -280,9 +400,6 @@ MonoBehaviour:
   - BaseNodeGuid: 7e07876b-0312-43f0-87af-370a2af4563c
     PortName: Dialogue
     TargetNodeGuid: 1a6b1e25-0036-49c5-b860-6004cdd6fdb8
-  - BaseNodeGuid: 1a6b1e25-0036-49c5-b860-6004cdd6fdb8
-    PortName: Dialogue
-    TargetNodeGuid: e26c01fb-d89a-47da-acb4-dae5ec802908
   - BaseNodeGuid: 4793443e-5829-4b20-aab5-72a6c36a3b75
     PortName: Dialogue
     TargetNodeGuid: ec255719-74a5-4a4c-b34a-8bb220f23056
@@ -310,154 +427,28 @@ MonoBehaviour:
   - BaseNodeGuid: 51a140cc-2266-4159-9d1c-24f401e25948
     PortName: Dialogue
     TargetNodeGuid: 14add801-dacf-4872-b07b-7945b1205e97
-  - BaseNodeGuid: 14add801-dacf-4872-b07b-7945b1205e97
-    PortName: Dialogue
-    TargetNodeGuid: fd793977-ead6-4356-ac6a-3e898676ea44
   - BaseNodeGuid: eb1da68f-2d71-4057-bd57-96b8b4c3e322
     PortName: Dialogue
     TargetNodeGuid: d0df4759-dd2a-4988-9422-ebf226d6711b
-  - BaseNodeGuid: d0df4759-dd2a-4988-9422-ebf226d6711b
-    PortName: Dialogue
-    TargetNodeGuid: 6b47c6f9-b29d-487b-a485-e55e97bf488c
-  - BaseNodeGuid: 80d2fc2e-9a42-423f-a48d-35c4aad42726
-    PortName: Dialogue
-    TargetNodeGuid: 14539d48-cef4-4864-b50d-344f1f06ddf0
   - BaseNodeGuid: 14539d48-cef4-4864-b50d-344f1f06ddf0
     PortName: Dialogue
     TargetNodeGuid: 92759ce2-ef61-4a43-8b43-a626d9775529
-  - BaseNodeGuid: ad9a1db7-d135-4e2d-9c36-96017b4ac831
-    PortName: Dialogue
-    TargetNodeGuid: 6d29a25b-3b39-4207-96a2-1b982770f363
-  - BaseNodeGuid: 5fc92988-9e45-46da-ad61-1a33dcbf9582
-    PortName: Dialogue
-    TargetNodeGuid: 61aa688d-d419-4735-8ae1-3c00090c7f89
-  - BaseNodeGuid: 93c682bd-5144-4c67-bd60-e04b07492871
-    PortName: Dialogue
-    TargetNodeGuid: 97c98238-5955-41a7-acfb-c3c33e7b8868
-  - BaseNodeGuid: 80d2fc2e-9a42-423f-a48d-35c4aad42726
-    PortName: Situation
-    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
-  - BaseNodeGuid: ad9a1db7-d135-4e2d-9c36-96017b4ac831
-    PortName: Situation
-    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
-  - BaseNodeGuid: 5fc92988-9e45-46da-ad61-1a33dcbf9582
-    PortName: Situation
-    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
-  - BaseNodeGuid: 93c682bd-5144-4c67-bd60-e04b07492871
-    PortName: Situation
-    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
-  - BaseNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
-    PortName: Dialogue
-    TargetNodeGuid: e38576bb-fdf5-4d38-a9f4-83592a039061
-  - BaseNodeGuid: e38576bb-fdf5-4d38-a9f4-83592a039061
-    PortName: Dialogue
-    TargetNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
-  - BaseNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
-    PortName: Answer 1
-    TargetNodeGuid: 3286cfe5-2598-4388-8f63-7a3bb5435597
-  - BaseNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
-    PortName: Answer 2
-    TargetNodeGuid: e12f52f0-16d9-48da-894e-fe622a2c5dae
-  - BaseNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
-    PortName: Answer 3
-    TargetNodeGuid: 52a5f4d7-9357-4fc0-83a4-44b03cfec5ab
-  - BaseNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
-    PortName: Answer 4
-    TargetNodeGuid: 55a14e42-d21f-4360-8887-40e86483439e
-  - BaseNodeGuid: 3286cfe5-2598-4388-8f63-7a3bb5435597
-    PortName: Dialogue
-    TargetNodeGuid: 06037e84-a131-4340-a525-4f80e325b5f8
-  - BaseNodeGuid: 55a14e42-d21f-4360-8887-40e86483439e
-    PortName: Dialogue
-    TargetNodeGuid: 5a9365e7-2d1a-4188-9f63-a61e62041993
-  - BaseNodeGuid: 52a5f4d7-9357-4fc0-83a4-44b03cfec5ab
-    PortName: Dialogue
-    TargetNodeGuid: e78bcb9d-c988-44aa-8490-811a0c6d8e04
-  - BaseNodeGuid: e12f52f0-16d9-48da-894e-fe622a2c5dae
-    PortName: Dialogue
-    TargetNodeGuid: 8449993a-0d7c-4107-9a5f-8f516c9961bd
-  - BaseNodeGuid: 4313c7d6-d1d7-42c4-b3c4-7d83d4a5a67e
-    PortName: Dialogue
-    TargetNodeGuid: 8df33430-149a-4697-b054-ab4785e213fd
   - BaseNodeGuid: 8df33430-149a-4697-b054-ab4785e213fd
     PortName: Dialogue
     TargetNodeGuid: 5edad345-ee46-4cc2-9ee1-1d916951839f
-  - BaseNodeGuid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
-    PortName: Dialogue
-    TargetNodeGuid: 5edad345-ee46-4cc2-9ee1-1d916951839f
-  - BaseNodeGuid: 52a5f4d7-9357-4fc0-83a4-44b03cfec5ab
-    PortName: Situation
-    TargetNodeGuid: 4313c7d6-d1d7-42c4-b3c4-7d83d4a5a67e
-  - BaseNodeGuid: 55a14e42-d21f-4360-8887-40e86483439e
-    PortName: Situation
-    TargetNodeGuid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
-  - BaseNodeGuid: 3286cfe5-2598-4388-8f63-7a3bb5435597
-    PortName: Situation
-    TargetNodeGuid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
   - BaseNodeGuid: 5edad345-ee46-4cc2-9ee1-1d916951839f
     PortName: Dialogue
     TargetNodeGuid: ee7ac6df-0bfc-4712-9aa5-59a48006cea1
   - BaseNodeGuid: ee7ac6df-0bfc-4712-9aa5-59a48006cea1
     PortName: Dialogue
     TargetNodeGuid: a28344df-f3c7-47ca-b08f-60360ee5e2dd
-  - BaseNodeGuid: a28344df-f3c7-47ca-b08f-60360ee5e2dd
-    PortName: Dialogue
-    TargetNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
-  - BaseNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
-    PortName: Answer 1
-    TargetNodeGuid: 7ec6135e-02d0-4a64-a853-499430a24c06
-  - BaseNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
-    PortName: Answer 2
-    TargetNodeGuid: 93e8669a-40db-45f5-bcc2-95cd2e95422d
-  - BaseNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
-    PortName: Answer 3
-    TargetNodeGuid: c3b8e998-a9bb-4018-a3fc-94abd0ff80db
-  - BaseNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
-    PortName: Answer 4
-    TargetNodeGuid: d01139bc-580c-45c8-91f2-ea0377922a1d
-  - BaseNodeGuid: d01139bc-580c-45c8-91f2-ea0377922a1d
-    PortName: Dialogue
-    TargetNodeGuid: 442d07ea-24ff-4a37-9ac1-deeb523365d3
-  - BaseNodeGuid: c3b8e998-a9bb-4018-a3fc-94abd0ff80db
-    PortName: Dialogue
-    TargetNodeGuid: 31b5ab0b-7752-4de5-b39a-452ec6de5bec
-  - BaseNodeGuid: 93e8669a-40db-45f5-bcc2-95cd2e95422d
-    PortName: Dialogue
-    TargetNodeGuid: a245faa7-a5ab-4785-bd88-de46dbd48eb4
-  - BaseNodeGuid: 7ec6135e-02d0-4a64-a853-499430a24c06
-    PortName: Dialogue
-    TargetNodeGuid: 274e84f3-4ef8-4270-9f82-e21cb19e0536
-  - BaseNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
-    PortName: Situation
-    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
-  - BaseNodeGuid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
-    PortName: Situation
-    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
   SituationNodeData:
-  - Guid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
-    SituationName: S2
-    Context: 
-    Id: 0
-    nodeType: 0
-    Position: {x: 1474, y: 1461}
-  - Guid: 341bebb1-f453-44c5-8ac1-25c998c5d2f7
-    SituationName: S3_4
-    Context: 
-    Id: 0
-    nodeType: 0
-    Position: {x: 1551, y: 2759}
   - Guid: 3883b33a-f144-48c8-b765-639ff03eba8f
     SituationName: S4
     Context: 
     Id: 0
     nodeType: 0
     Position: {x: 1542, y: 3008}
-  - Guid: 2e06cf20-682b-42dc-acbb-1ec178336d90
-    SituationName: S5_6
-    Context: 
-    Id: 0
-    nodeType: 0
-    Position: {x: 1436, y: 4275}
   - Guid: d01aeee4-3215-4418-a6d9-dacfa90b4a3b
     SituationName: S6
     Context: 
@@ -488,24 +479,39 @@ MonoBehaviour:
     Id: 0
     nodeType: 0
     Position: {x: 1181, y: 10293}
+  - Guid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
+    SituationName: S1
+    Context: 'The location of this scenario is the Endoscopy theatre. The patient
+      is in a colonoscopy position (lying on his left side). The theatre is commonly
+      equipped. The colonoscopy under general anaesthesia is scheduled. '
+    Id: 0
+    nodeType: 0
+    Position: {x: 303, y: 179}
+  - Guid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
+    SituationName: S2
+    Context: 
+    Id: 0
+    nodeType: 0
+    Position: {x: 1463, y: 1479}
+  - Guid: 341bebb1-f453-44c5-8ac1-25c998c5d2f7
+    SituationName: S3_4
+    Context: 
+    Id: 0
+    nodeType: 0
+    Position: {x: 1527, y: 2746}
+  - Guid: 2e06cf20-682b-42dc-acbb-1ec178336d90
+    SituationName: S5_6
+    Context: 
+    Id: 0
+    nodeType: 0
+    Position: {x: 1429, y: 4296}
   - Guid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
     SituationName: S11
     Context: 
     Id: 0
     nodeType: 0
     Position: {x: 1190, y: 10568}
-  - Guid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
-    SituationName: S1
-    Context: 
-    Id: 0
-    nodeType: 0
-    Position: {x: 1414, y: 179}
   QuestionNodeData:
-  - Guid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
-    QuestionName: Q1
-    Description: What do you do?
-    nodeType: 1
-    Position: {x: 1567, y: 367}
   - Guid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
     QuestionName: Q2
     Description: What do you do?
@@ -532,8 +538,8 @@ MonoBehaviour:
     nodeType: 1
     Position: {x: 1221, y: 7965}
   - Guid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
-    QuestionName: QuestionID
-    Description: Question Description
+    QuestionName: Q9
+    Description: What do you do?
     nodeType: 1
     Position: {x: 1225, y: 9325}
   - Guid: ba951361-4273-43cc-95ea-6a376751bd0a
@@ -541,6 +547,11 @@ MonoBehaviour:
     Description: What do you do?
     nodeType: 1
     Position: {x: 1042, y: 11143}
+  - Guid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    QuestionName: Q1
+    Description: What do you do?
+    nodeType: 1
+    Position: {x: 1570, y: 389}
   AnswerNodeData:
   - Guid: 7a074eee-6300-4f85-b697-9ac22ddf536a
     AnswerName: A1.1
