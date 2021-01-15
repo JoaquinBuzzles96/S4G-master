@@ -79,15 +79,7 @@ public class UI_Manager : MonoBehaviour
     }
     void Start()
     {
-        //OLD
-        /*
-        //GetDialogueContainerLanguage(); //TODO: descomentar esto, esta comentado solo para probar casos de ejemplo
-        SetNameToCharacters();
-        lastQuestion = -1;
-        SetupUI(dialogueContainer.GetFirstSituation());
-        */
-
-        //GetDialogueContainerLanguage(); //TODO: descomentar esto, esta comentado solo para probar casos de ejemplo
+        GetDialogueContainerLanguage(); //TODO: descomentar esto, esta comentado solo para probar casos de ejemplo
         SetNameToCharacters();
         lastQuestion = -1;
         SetUpContext(dialogueContainer.GetFirstSituation());
@@ -287,11 +279,20 @@ public class UI_Manager : MonoBehaviour
 
     public void GetDialogueContainerLanguage()
     {
-        dialogueContainer = Resources.Load($"Cases/{caso}_{LanguageManager.Instance.languageSelected}") as DialogueContainer;
+        if (LanguageManager.Instance != null)
+        {
+            dialogueContainer = Resources.Load($"Cases/{caso}_{LanguageManager.Instance.languageSelected}") as DialogueContainer;
+        }
+        else
+        {
+            Debug.Log($"No se ha encontrado el languague manager");
+            dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
+        }
+        
         if (dialogueContainer == null)
         {
             Debug.Log($"No se ha encontrado la ruta Cases/{caso}_{LanguageManager.Instance.languageSelected}");
-            dialogueContainer = Resources.Load($"Cases/Case5_EN") as DialogueContainer;
+            dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
         }
     }
 
