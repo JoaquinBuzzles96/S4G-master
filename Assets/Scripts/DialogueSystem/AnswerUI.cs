@@ -88,14 +88,10 @@ public class AnswerUI : MonoBehaviour
             }
         }
         */
-        if (answerData.IsEnd)
-        {
-            UI_Manager.Instance.AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
-        }
-        else 
-        {
-            UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + "\n" + "Time to answer: " + Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) + " seconds.\n");
-        }
+
+        
+        UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + "\n" + "Time to answer: " + Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) + " seconds.\n");
+        UI_Manager.Instance.totalScore += answerData.score;
 
         UI_Manager.Instance.ToScreen4(answerData, UI_Manager.Instance.screen3);
     }

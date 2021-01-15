@@ -13,12 +13,34 @@ using VRKeys;
 
 public class SendMail : MonoBehaviour
 {
-    public string m_UserName = "";
-    public string m_UserMail = "";
+    private static SendMail instance = null;
+
+    // Game Instance Singleton
+    public static SendMail Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+
+    public string m_UserName = "Joaquin"; //default value
+    public string m_UserMail = "joakilm2@gmail.com"; //default value
 
    public TextMeshProUGUI m_Name;
    public TextMeshProUGUI m_Mail;
 
+    private void Awake()
+    {
+        // if the singleton hasn't been initialized yet
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+        instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     public void SendEmail()
     {
@@ -40,6 +62,7 @@ public class SendMail : MonoBehaviour
         ServicePointManager.ServerCertificateValidationCallback =
         delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
         { return true; };
+        Debug.Log($"Enviamos el mail con el feedback al correo {m_UserMail}");
         smtpServer.Send(mail);
     }
 

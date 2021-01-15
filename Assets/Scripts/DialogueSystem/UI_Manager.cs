@@ -65,6 +65,7 @@ public class UI_Manager : MonoBehaviour
 
     [HideInInspector]
     public string playereRoute;
+    public int totalScore; 
     public float lastTime;
     private void Awake()
     {
@@ -82,6 +83,7 @@ public class UI_Manager : MonoBehaviour
         GetDialogueContainerLanguage();
         SetNameToCharacters();
         lastQuestion = -1;
+        totalScore = 0;
         SetUpContext(dialogueContainer.GetFirstSituation());
     }
 
@@ -406,9 +408,12 @@ public class UI_Manager : MonoBehaviour
     {
         feedbackText.text = answer.Feedback;
         //Add feedback to email
+        AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
         AddTextToRoute($"Feedback: {answer.Feedback}");
+        AddTextToRoute($"Final score: {totalScore}");
         //Send email
-        //TODO: sendMail.SendEmail();
+        Debug.Log("Enviamos un mail con la infomacion");
+        SendMail.Instance.SendEmail();
     }
 
     private bool CheckMoreDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI, GameObject nextButton)
@@ -416,14 +421,14 @@ public class UI_Manager : MonoBehaviour
         bool refresh = false;
         if (currentDialogue < dialoguesData.Count) //esto significaria que quedan dialogos sin mostrar
         {
+            Clear(dialoguesUI);
             //en este caso hay que hacer un refresh de la UI
             refresh = true;
-            Clear(dialoguesUI);
-            //RefreshDialogues(dialoguesData, dialoguesUI);
             StartCoroutine(PlayDialogues(dialoguesData, dialoguesUI, nextButton));
         }
         else
         {
+            Clear(dialoguesUI);
             currentDialogue = 0; //reseteamos para el siguiente
         }
 
