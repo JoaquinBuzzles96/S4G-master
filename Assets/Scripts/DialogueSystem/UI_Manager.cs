@@ -428,7 +428,7 @@ public class UI_Manager : MonoBehaviour
 
     public void SetUpScreen5(AnswerNodeData answer)
     {
-        feedbackText.text = answer.Feedback;
+        feedbackText.text = $"{answer.Feedback} /n Score: {totalScore}";
         //Add feedback to email
         AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
         AddTextToRoute($"Feedback: {answer.Feedback}");
