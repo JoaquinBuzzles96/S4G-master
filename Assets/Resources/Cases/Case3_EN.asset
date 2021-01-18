@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
-  m_Name: Case3_EN
+  m_Name: case3_en
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 1a8a2fff-e26c-41f1-9dd8-2c6e80c21b5b
@@ -433,15 +433,15 @@ MonoBehaviour:
   - BaseNodeGuid: 14539d48-cef4-4864-b50d-344f1f06ddf0
     PortName: Dialogue
     TargetNodeGuid: 92759ce2-ef61-4a43-8b43-a626d9775529
-  - BaseNodeGuid: 8df33430-149a-4697-b054-ab4785e213fd
-    PortName: Dialogue
-    TargetNodeGuid: 5edad345-ee46-4cc2-9ee1-1d916951839f
   - BaseNodeGuid: 5edad345-ee46-4cc2-9ee1-1d916951839f
     PortName: Dialogue
     TargetNodeGuid: ee7ac6df-0bfc-4712-9aa5-59a48006cea1
   - BaseNodeGuid: ee7ac6df-0bfc-4712-9aa5-59a48006cea1
     PortName: Dialogue
     TargetNodeGuid: a28344df-f3c7-47ca-b08f-60360ee5e2dd
+  - BaseNodeGuid: 8df33430-149a-4697-b054-ab4785e213fd
+    PortName: Dialogue
+    TargetNodeGuid: 5edad345-ee46-4cc2-9ee1-1d916951839f
   SituationNodeData:
   - Guid: 3883b33a-f144-48c8-b765-639ff03eba8f
     SituationName: S4
@@ -1179,7 +1179,7 @@ MonoBehaviour:
   - Guid: 7e07876b-0312-43f0-87af-370a2af4563c
     DialogueName: D6.4
     DialogueText: Endoscopy nurse repeatedly searches among the tools on the table
-      with accessories. Finally, she passes something to Endoscopist 1.
+      with accessories. Finally, she passes something to you.
     Speaker: Narrator
     Mood: Calm
     audioId: Audio1

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
-  m_Name: Case3_ES
+  m_Name: case3_es
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 1a8a2fff-e26c-41f1-9dd8-2c6e80c21b5b
@@ -253,9 +253,6 @@ MonoBehaviour:
   - BaseNodeGuid: 39d2abe6-516f-4b80-808f-e9537d6cdcde
     PortName: Dialogue
     TargetNodeGuid: 4793443e-5829-4b20-aab5-72a6c36a3b75
-  - BaseNodeGuid: 92569e01-f69f-445f-8322-03538e92273f
-    PortName: Dialogue
-    TargetNodeGuid: a9878c58-02bc-4823-adb4-782026ce6f4f
   - BaseNodeGuid: 2fc296b0-e36f-445f-9cd5-bb2850ef5b34
     PortName: Dialogue
     TargetNodeGuid: f082b37a-e39b-4be2-ad67-2a7994fda7c7
@@ -349,9 +346,9 @@ MonoBehaviour:
   - BaseNodeGuid: d01139bc-580c-45c8-91f2-ea0377922a1d
     PortName: Dialogue
     TargetNodeGuid: 442d07ea-24ff-4a37-9ac1-deeb523365d3
-  - BaseNodeGuid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
+  - BaseNodeGuid: 92569e01-f69f-445f-8322-03538e92273f
     PortName: Dialogue
-    TargetNodeGuid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
+    TargetNodeGuid: a9878c58-02bc-4823-adb4-782026ce6f4f
   - BaseNodeGuid: c4fe1ad4-468a-44a9-a2e0-77367ed9723d
     PortName: Dialogue
     TargetNodeGuid: 6f4fbb9d-704b-4dc0-8bc1-44762e9087f5
@@ -373,39 +370,18 @@ MonoBehaviour:
   - BaseNodeGuid: 7e07876b-0312-43f0-87af-370a2af4563c
     PortName: Dialogue
     TargetNodeGuid: 1a6b1e25-0036-49c5-b860-6004cdd6fdb8
-  - BaseNodeGuid: 4793443e-5829-4b20-aab5-72a6c36a3b75
-    PortName: Dialogue
-    TargetNodeGuid: ec255719-74a5-4a4c-b34a-8bb220f23056
   - BaseNodeGuid: a9878c58-02bc-4823-adb4-782026ce6f4f
     PortName: Dialogue
     TargetNodeGuid: 8054b6bc-a957-4715-8035-619404c530e6
   - BaseNodeGuid: f082b37a-e39b-4be2-ad67-2a7994fda7c7
     PortName: Dialogue
     TargetNodeGuid: df6a1745-c7ea-44b6-b17d-64985f1d3c02
-  - BaseNodeGuid: 3bea7de1-7762-4b9a-b41e-50ab99ef6910
-    PortName: Dialogue
-    TargetNodeGuid: 4d7e8458-3739-46c6-a6bf-301ccf8bf19c
-  - BaseNodeGuid: 4d7e8458-3739-46c6-a6bf-301ccf8bf19c
-    PortName: Dialogue
-    TargetNodeGuid: 03bf28d6-514e-45d5-bb9d-c90555cb77ea
-  - BaseNodeGuid: c17ed2a9-732d-4ada-b3bf-2bf30fb41573
-    PortName: Dialogue
-    TargetNodeGuid: f0abf715-999e-465d-8d28-afad3c0eb252
   - BaseNodeGuid: f0abf715-999e-465d-8d28-afad3c0eb252
     PortName: Dialogue
     TargetNodeGuid: b7d95141-5be1-4b3a-bec3-e2ebdb2c3bb1
-  - BaseNodeGuid: b7d95141-5be1-4b3a-bec3-e2ebdb2c3bb1
-    PortName: Dialogue
-    TargetNodeGuid: 51a140cc-2266-4159-9d1c-24f401e25948
   - BaseNodeGuid: 51a140cc-2266-4159-9d1c-24f401e25948
     PortName: Dialogue
     TargetNodeGuid: 14add801-dacf-4872-b07b-7945b1205e97
-  - BaseNodeGuid: eb1da68f-2d71-4057-bd57-96b8b4c3e322
-    PortName: Dialogue
-    TargetNodeGuid: d0df4759-dd2a-4988-9422-ebf226d6711b
-  - BaseNodeGuid: 14539d48-cef4-4864-b50d-344f1f06ddf0
-    PortName: Dialogue
-    TargetNodeGuid: 92759ce2-ef61-4a43-8b43-a626d9775529
   - BaseNodeGuid: 8df33430-149a-4697-b054-ab4785e213fd
     PortName: Dialogue
     TargetNodeGuid: 5edad345-ee46-4cc2-9ee1-1d916951839f
@@ -415,9 +391,6 @@ MonoBehaviour:
   - BaseNodeGuid: ee7ac6df-0bfc-4712-9aa5-59a48006cea1
     PortName: Dialogue
     TargetNodeGuid: a28344df-f3c7-47ca-b08f-60360ee5e2dd
-  - BaseNodeGuid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
-    PortName: Dialogue
-    TargetNodeGuid: 5a1b518d-83fc-4f1f-9c70-0df5e62f37f8
   - BaseNodeGuid: 8a9b76c5-4b77-4995-a7b9-47f7301a4fbe
     PortName: Dialogue
     TargetNodeGuid: 4cff95b7-9c2b-4618-b0bb-c657e47cfb6d
@@ -436,12 +409,39 @@ MonoBehaviour:
   - BaseNodeGuid: 67c00472-5def-4c22-8817-394221de4e63
     PortName: Dialogue
     TargetNodeGuid: c087547e-17db-470f-b9ce-61c9944922d7
-  - BaseNodeGuid: c087547e-17db-470f-b9ce-61c9944922d7
-    PortName: Dialogue
-    TargetNodeGuid: d72b299d-8157-469a-8def-c66e85fb005d
   - BaseNodeGuid: 5b6fa2ca-3b2e-4e25-855c-34efbadd9379
     PortName: Dialogue
     TargetNodeGuid: c17b55e7-ead9-4413-8fea-0b630bce2619
+  - BaseNodeGuid: 4793443e-5829-4b20-aab5-72a6c36a3b75
+    PortName: Dialogue
+    TargetNodeGuid: ec255719-74a5-4a4c-b34a-8bb220f23056
+  - BaseNodeGuid: 4d7e8458-3739-46c6-a6bf-301ccf8bf19c
+    PortName: Dialogue
+    TargetNodeGuid: 03bf28d6-514e-45d5-bb9d-c90555cb77ea
+  - BaseNodeGuid: c17ed2a9-732d-4ada-b3bf-2bf30fb41573
+    PortName: Dialogue
+    TargetNodeGuid: f0abf715-999e-465d-8d28-afad3c0eb252
+  - BaseNodeGuid: b7d95141-5be1-4b3a-bec3-e2ebdb2c3bb1
+    PortName: Dialogue
+    TargetNodeGuid: 51a140cc-2266-4159-9d1c-24f401e25948
+  - BaseNodeGuid: eb1da68f-2d71-4057-bd57-96b8b4c3e322
+    PortName: Dialogue
+    TargetNodeGuid: d0df4759-dd2a-4988-9422-ebf226d6711b
+  - BaseNodeGuid: 3bea7de1-7762-4b9a-b41e-50ab99ef6910
+    PortName: Dialogue
+    TargetNodeGuid: 4d7e8458-3739-46c6-a6bf-301ccf8bf19c
+  - BaseNodeGuid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
+    PortName: Dialogue
+    TargetNodeGuid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
+  - BaseNodeGuid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
+    PortName: Dialogue
+    TargetNodeGuid: 5a1b518d-83fc-4f1f-9c70-0df5e62f37f8
+  - BaseNodeGuid: c087547e-17db-470f-b9ce-61c9944922d7
+    PortName: Dialogue
+    TargetNodeGuid: d72b299d-8157-469a-8def-c66e85fb005d
+  - BaseNodeGuid: 14539d48-cef4-4864-b50d-344f1f06ddf0
+    PortName: Dialogue
+    TargetNodeGuid: 92759ce2-ef61-4a43-8b43-a626d9775529
   SituationNodeData:
   - Guid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
     SituationName: S2
@@ -820,7 +820,7 @@ MonoBehaviour:
     Position: {x: 1610, y: 9125}
   - Guid: e12f52f0-16d9-48da-894e-fe622a2c5dae
     AnswerName: A9.2
-    Feedback: The personal insults are not acceptable at all.
+    Feedback: Los insultos personales son absolultamente inaceptables.
     Situation: 
     IsCorrect: 0
     IsEnd: 1
@@ -862,17 +862,6 @@ MonoBehaviour:
     audioId: Audio id
     score: 10
     Position: {x: 1516, y: 10888}
-  - Guid: 93e8669a-40db-45f5-bcc2-95cd2e95422d
-    AnswerName: A11.2
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 1
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 10
-    Position: {x: 1518, y: 11139}
   - Guid: c3b8e998-a9bb-4018-a3fc-94abd0ff80db
     AnswerName: A11.3
     Feedback: 
@@ -908,34 +897,18 @@ MonoBehaviour:
     audioId: Audio id
     score: 0
     Position: {x: 1869, y: 5113}
+  - Guid: 93e8669a-40db-45f5-bcc2-95cd2e95422d
+    AnswerName: A11.2
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 1
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 10
+    Position: {x: 740, y: 11181}
   DialogueNodeData:
-  - Guid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
-    DialogueName: D1.1
-    DialogueText: "Todos los miembros del equipo est\xE1n en sus sitios, el Endoscopista
-      1 sosteniendo el endoscopio para la inserci\xF3n.\_"
-    Speaker: Narrador
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1954, y: 180}
-  - Guid: c4fe1ad4-468a-44a9-a2e0-77367ed9723d
-    DialogueName: D1.1.1
-    DialogueText: "\xBFNo tienes que llevar la mascarilla? \xBFSigues alguna regla
-      especial de la que no est\xE9 informado?"
-    Speaker: Endoscopista 1
-    Mood: Ironic
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2296, y: 403}
-  - Guid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
-    DialogueName: D1.1.3
-    DialogueText: "\xA1Coge la mascarilla inmediatamente! Deber\xEDas llevarla durante
-      la endoscopia, es una pare b\xE1scia del c\xF3digo de vestimenta."
-    Speaker: Endoscopista 1
-    Mood: Aggressive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2227, y: 915}
   - Guid: 8d624d3d-6290-485e-a072-f08bcbbf3039
     DialogueName: D1.1.2
     DialogueText: "No tienes la mascarilla puesta, p\xF3ntela."
@@ -947,21 +920,12 @@ MonoBehaviour:
   - Guid: 3b3f2fa7-e420-437c-a37c-3c78c2bd93e5
     DialogueName: D2.1.2
     DialogueText: "Muy bien! Me alegra escuchar eso! Es bueno cuando una enfermera
-      est\xE1 al tanto de el procedimiento planeado de antemano."
+      est\xE1 al tanto del procedimiento planeado de antemano."
     Speaker: Endoscopista 1
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 2168, y: 2022}
-  - Guid: c6196b0e-9291-4239-be5e-fcf282dba917
-    DialogueName: D2.1.3
-    DialogueText: "Excelente, entonces espero que tu trabajo sea mejor que tu c\xF3digo
-      de vestimenta para la endoscopia."
-    Speaker: Endoscopista 1
-    Mood: Ironic
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2156, y: 2256}
   - Guid: 4ac6c4e9-0e3c-4c8d-b83d-85225152db62
     DialogueName: D2.1.4
     DialogueText: Bien.
@@ -972,8 +936,8 @@ MonoBehaviour:
     Position: {x: 2159, y: 2474}
   - Guid: 086299ed-0bb5-401c-a85f-209462d63ecf
     DialogueName: D3.1
-    DialogueText: "La enfermera de endoscopia se pone la m\xE1scara y empieza el
-      procedimiento. Introduces el endoscopio y te giras hacia la enfermera de endoscopia. "
+    DialogueText: 'La enfermera de endoscopia comienza a llorar y sale corriendo
+      del teatro. Tras un rato, entra otra enfermera. '
     Speaker: Narrador
     Mood: Calm
     audioId: Audio id
@@ -982,7 +946,7 @@ MonoBehaviour:
   - Guid: 36cc2a75-e4a9-460e-b3d9-29d96aca2dae
     DialogueName: D4.5
     DialogueText: "S\xED, claro, cual si no. \xBFHas asistido alguna vez durante
-      durante una resecci\xF3n endosc\xF3pica de la mucosa ?\u201D"
+      una resecci\xF3n endosc\xF3pica de la mucosa ?"
     Speaker: Endoscopista 1
     Mood: Calm
     audioId: Audio id
@@ -990,7 +954,7 @@ MonoBehaviour:
     Position: {x: 2377, y: 2980}
   - Guid: 14911ca4-2043-41aa-ba27-3d54b48fd2cf
     DialogueName: D4.6
-    DialogueText: "He visto este tipo de ciruj\xEDas varias veces, pero no la he
+    DialogueText: "He visto este tipo de cirug\xEDas varias veces, pero no la he
       experimentado por mi cuenta, a\xFAn. Con suerte, lo podr\xE9 manejar."
     Speaker: Enfermera de endoscopia
     Mood: Calm
@@ -1035,8 +999,8 @@ MonoBehaviour:
     Position: {x: 2788, y: 5115}
   - Guid: 8054b6bc-a957-4715-8035-619404c530e6
     DialogueName: D6.2.2
-    DialogueText: "Esto no es el forceps Coagrasper, d\xE1melo r\xE1pido, o el paciente
-      se desangrara hasta morir por tu culpa."
+    DialogueText: "Esto no es el f\xF3rceps  Coagrasper, d\xE1melo r\xE1pido, o el
+      paciente se desangrar\xE1 hasta morir por tu culpa."
     Speaker: Endoscopista 1
     Mood: Aggressive
     audioId: Audio id
@@ -1076,7 +1040,7 @@ MonoBehaviour:
     Position: {x: 2107, y: 6164}
   - Guid: 93f8b0be-6fe3-4994-a5e8-27be06812160
     DialogueName: D7.1.2
-    DialogueText: "Disculpa, no te he entendio. Por favor, haba m\xE1s alto, lento
+    DialogueText: "Disculpa, no te he entendido. Por favor, haba m\xE1s alto, lento
       y claro."
     Speaker: Endoscopista 1
     Mood: Calm
@@ -1100,14 +1064,6 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 3
     Position: {x: 1965, y: 6894}
-  - Guid: 97c98238-5955-41a7-acfb-c3c33e7b8868
-    DialogueName: D8.1.4
-    DialogueText: "Probablemente hoy no es t\xFA mejor d\xEDa."
-    Speaker: Endoscopista 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2027, y: 8503}
   - Guid: 61aa688d-d419-4735-8ae1-3c00090c7f89
     DialogueName: D8.1.3
     DialogueText: Seguid trabajando.
@@ -1125,15 +1081,6 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 3
     Position: {x: 2011, y: 7988}
-  - Guid: 14539d48-cef4-4864-b50d-344f1f06ddf0
-    DialogueName: D8.1.1
-    DialogueText: "\xBFC\xF3mo est\xE1 el paciente? \xBFQu\xE9 tal est\xE1 la presi\xF3n
-      sangu\xEDnea?"
-    Speaker: Endoscopista 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2012, y: 7740}
   - Guid: 92759ce2-ef61-4a43-8b43-a626d9775529
     DialogueName: D8.2.1
     DialogueText: Le puede pasar a cualquiera.
@@ -1142,17 +1089,9 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 3
     Position: {x: 2482, y: 7736}
-  - Guid: e38576bb-fdf5-4d38-a9f4-83592a039061
-    DialogueName: D9.1
-    DialogueText: "Dirigiend\xF3te a la enfermera de endoscopia."
-    Speaker: Narrador
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1673, y: 8866}
   - Guid: 06037e84-a131-4340-a525-4f80e325b5f8
     DialogueName: D9.1.1
-    DialogueText: Vete inmediatamente y llama a la jefa de enfermeria.
+    DialogueText: "Vete inmediatamente y llama a la jefa de enfermer\xEDa."
     Speaker: Endoscopista 1
     Mood: Calm
     audioId: Audio id
@@ -1185,14 +1124,6 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 3
     Position: {x: 2346, y: 10294}
-  - Guid: a28344df-f3c7-47ca-b08f-60360ee5e2dd
-    DialogueName: D11.3
-    DialogueText: "Las personas externas no deber\xEDan tener acceso al teatro. "
-    Speaker: Narrador
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1542, y: 10561}
   - Guid: 442d07ea-24ff-4a37-9ac1-deeb523365d3
     DialogueName: D11.1.4
     DialogueText: "Vuelve despu\xE9s."
@@ -1217,14 +1148,6 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 3
     Position: {x: 1775, y: 11383}
-  - Guid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
-    DialogueName: D1.2
-    DialogueText: Estamos listos? Podemos empezar?
-    Speaker: Endoscopista 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2753, y: 171}
   - Guid: 5a1b518d-83fc-4f1f-9c70-0df5e62f37f8
     DialogueName: D1.3
     DialogueText: "S\xED, todo esta bien."
@@ -1260,27 +1183,18 @@ MonoBehaviour:
     Position: {x: 3001, y: 908}
   - Guid: d7a7eaf3-ef7b-456b-92f1-5a627bd946dd
     DialogueName: D1.1.4
-    DialogueText: "!Esto es incre\xEDble! Sal de aqu\xED inmediatamente y vuelve
+    DialogueText: "\xA1Esto es incre\xEDble! Sal de aqu\xED inmediatamente y vuelve
       cuando sepas como vestirte apropiadamente para la operaci\xF3n."
     Speaker: Endoscopista 1
     Mood: Aggressive
     audioId: Audio id
     nodeType: 3
     Position: {x: 2232, y: 1136}
-  - Guid: 274e84f3-4ef8-4270-9f82-e21cb19e0536
-    DialogueName: D11.1.1
-    DialogueText: "Por favor, describa la situaci\xF3n a los pacientes programados
-      y aseg\xFArese de que nadie m\xE1s nos moleste."
-    Speaker: Endoscopista 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1775, y: 10889}
   - Guid: 4cff95b7-9c2b-4618-b0bb-c657e47cfb6d
     DialogueName: D2.2
     DialogueText: "Estamos empezando la resecci\xF3n endosc\xF3pica de la mucosa
-      del c\xE1ncer de recto temprano. Es un tipo procedimiento muy especial. \xBFHas
-      verificado los hallazgos endosc\xF3picos?"
+      del c\xE1ncer de recto temprano. Es un tipo de procedimiento muy especial.
+      \xBFHas verificado los hallazgos endosc\xF3picos?"
     Speaker: Endoscopista 1
     Mood: Calm
     audioId: Audio id
@@ -1288,7 +1202,7 @@ MonoBehaviour:
     Position: {x: 2774, y: 1453}
   - Guid: 51a416c3-ca43-46af-8200-90d6013c16c4
     DialogueName: D2.3
-    DialogueText: "S\xED, he pasado por ello."
+    DialogueText: "S\xED, los he verificado."
     Speaker: Enfermera de endoscopia.
     Mood: Calm
     audioId: Audio id
@@ -1302,15 +1216,6 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 3
     Position: {x: 2167, y: 1812}
-  - Guid: 26b4a5f8-c71d-4ac2-ad58-534ceabf6c08
-    DialogueName: D6.3
-    DialogueText: "Ha estallado el vaso, veo sangrado intenso, p\xE1same el f\xF3rceps.
-      \xA1R\xE1pido!"
-    Speaker: Endoscopista 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1833, y: 4515}
   - Guid: 88643278-47d4-47d2-aa5b-a8728fd32b6b
     DialogueName: D4.4
     DialogueText: "\xBFEs esta?"
@@ -1321,7 +1226,7 @@ MonoBehaviour:
     Position: {x: 2082, y: 2993}
   - Guid: d72b299d-8157-469a-8def-c66e85fb005d
     DialogueName: D4.3
-    DialogueText: Inyector!
+    DialogueText: "\xA1Inyector!"
     Speaker: Endoscopista 1
     Mood: Calm
     audioId: Audio id
@@ -1335,14 +1240,6 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 3
     Position: {x: 2810, y: 2759}
-  - Guid: c087547e-17db-470f-b9ce-61c9944922d7
-    DialogueName: D4.2
-    DialogueText: Disculpa, no te he entendido.
-    Speaker: Enfermera de endoscopia
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2994, y: 2757}
   - Guid: 5b6fa2ca-3b2e-4e25-855c-34efbadd9379
     DialogueName: D6.1
     DialogueText: "Lazo de polipectom\xEDa."
@@ -1369,16 +1266,6 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 3
     Position: {x: 2199, y: 3530}
-  - Guid: 88697d65-8e31-4ec4-a2cd-73c829228490
-    DialogueName: D4.1.4
-    DialogueText: "Perfecto, yo tambi\xE9n creo que podremos manejarlo juntos. En
-      cualquier caso, por favor, aseg\xFArate de que haya una enfermera de repuesto
-      disponible por si necesitas ayuda."
-    Speaker: Endoscopista 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2210, y: 3957}
   - Guid: 1a6b1e25-0036-49c5-b860-6004cdd6fdb8
     DialogueName: D6.5
     DialogueText: Esta no es la herramienta correcta.
@@ -1387,14 +1274,6 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 3
     Position: {x: 3128, y: 4533}
-  - Guid: dc1d5816-25ab-45ed-8146-35e5620ea4d9
-    DialogueName: D4.1.3
-    DialogueText: "\xBFEst\xE1s segura de que pocr\xE1s manejarlo? "
-    Speaker: Endoscopista 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2205, y: 3755}
   - Guid: 4793443e-5829-4b20-aab5-72a6c36a3b75
     DialogueName: D6.1.1
     DialogueText: 'Lanzas el intrumento de vuelta a la enfermera y le gritas:'
@@ -1413,7 +1292,7 @@ MonoBehaviour:
     Position: {x: 3215, y: 4867}
   - Guid: df6a1745-c7ea-44b6-b17d-64985f1d3c02
     DialogueName: D6.3.1
-    DialogueText: "Quer\xEDa un forceps Coagrasper, por favor, d\xE1melo."
+    DialogueText: "Quer\xEDa un f\xF3rceps  Coagrasper, por favor, d\xE1melo."
     Speaker: Endoscopista 1
     Mood: Calm
     audioId: Audio id
@@ -1472,7 +1351,7 @@ MonoBehaviour:
     Position: {x: 2247, y: 7477}
   - Guid: 3bea7de1-7762-4b9a-b41e-50ab99ef6910
     DialogueName: D6.1.4
-    DialogueText: "Esto no es el forceps Coagrasper, \xBFLo has preparado?"
+    DialogueText: "Esto no es el f\xF3rceps  Coagrasper, \xBFLo has preparado?"
     Speaker: Endoscopista 1
     Mood: Calm
     audioId: Audio id
@@ -1481,20 +1360,12 @@ MonoBehaviour:
   - Guid: 7bb8b44c-7bf4-4ee8-939a-33fd283c0119
     DialogueName: D7.1.4
     DialogueText: "No puedes asistir, no puedes hablar, esto ya es lo m\xE1ximo.
-      Podr\xEDa haberme asistido a mi mismo. "
+      Podr\xEDa haberme asistido a m\xED mismo. "
     Speaker: Endoscopista 1
     Mood: Aggressive
     audioId: Audio id
     nodeType: 3
     Position: {x: 1974, y: 7149}
-  - Guid: 8449993a-0d7c-4107-9a5f-8f516c9961bd
-    DialogueName: D9.1.2
-    DialogueText: "\xA1Eres absolutamente \xEDnutil!"
-    Speaker: Endoscopista 1
-    Mood: Aggressive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1990, y: 9386}
   - Guid: e78bcb9d-c988-44aa-8490-811a0c6d8e04
     DialogueName: D9.1.3
     DialogueText: "\xBFHay alguna enfermera disponible para ayudarte? El paciente
@@ -1506,10 +1377,140 @@ MonoBehaviour:
     Position: {x: 1884, y: 9666}
   - Guid: 5a9365e7-2d1a-4188-9f63-a61e62041993
     DialogueName: D9.1.4
-    DialogueText: "\xA1\xBFDeber\xEDa asistirme a mi mismo?!"
+    DialogueText: "\xA1\xBFDeber\xEDa asistirme a m\xED mismo?!"
     Speaker: Endoscopista 1
     Mood: Aggressive
     audioId: Audio id
     nodeType: 3
     Position: {x: 1844, y: 9927}
+  - Guid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
+    DialogueName: D1.1
+    DialogueText: "Todos los miembros del equipo est\xE1n en sus sitios, t\xFA eres
+      el Endoscopista 1  y est\xE1s sosteniendo el endoscopio preparado para la inserci\xF3n.
+      Entonces preguntas:"
+    Speaker: Narrador
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1760, y: 168}
+  - Guid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
+    DialogueName: D1.2
+    DialogueText: "\xBFEstamos listos? \xBFPodemos empezar?"
+    Speaker: Endoscopista 1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2753, y: 171}
+  - Guid: c6196b0e-9291-4239-be5e-fcf282dba917
+    DialogueName: D2.1.3
+    DialogueText: "Excelente, entonces espero que tu trabajo sea mejor que tu c\xF3digo
+      de vestimenta para la endoscopia."
+    Speaker: Endoscopista 1
+    Mood: Ironic
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2160, y: 2251}
+  - Guid: c087547e-17db-470f-b9ce-61c9944922d7
+    DialogueName: D4.2
+    DialogueText: Disculpa, no te he entendido.
+    Speaker: Enfermera de endoscopia
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2994, y: 2757}
+  - Guid: dc1d5816-25ab-45ed-8146-35e5620ea4d9
+    DialogueName: D4.1.3
+    DialogueText: "\xBFEst\xE1s segura de que podr\xE1s manejarlo? "
+    Speaker: Endoscopista 1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2197, y: 3733}
+  - Guid: 88697d65-8e31-4ec4-a2cd-73c829228490
+    DialogueName: D4.1.4
+    DialogueText: "Perfecto, yo tambi\xE9n creo que podremos manejarlo juntos. En
+      cualquier caso, por favor, aseg\xFArate de que haya una enfermera de repuesto
+      disponible por si necesitas ayuda."
+    Speaker: Endoscopista 1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2209, y: 3970}
+  - Guid: 14539d48-cef4-4864-b50d-344f1f06ddf0
+    DialogueName: D8.1.1
+    DialogueText: "\xBFC\xF3mo est\xE1 el paciente? \xBFQu\xE9 tal est\xE1 la presi\xF3n
+      sangu\xEDnea?"
+    Speaker: Endoscopista 1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2012, y: 7740}
+  - Guid: e38576bb-fdf5-4d38-a9f4-83592a039061
+    DialogueName: D9.1
+    DialogueText: "Dirigiend\xF3te a la enfermera de endoscopia."
+    Speaker: Narrador
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1673, y: 8866}
+  - Guid: 8449993a-0d7c-4107-9a5f-8f516c9961bd
+    DialogueName: D9.1.2
+    DialogueText: "\xA1Eres absolutamente in\xFAtil!"
+    Speaker: Endoscopista 1
+    Mood: Aggressive
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1997, y: 9382}
+  - Guid: a28344df-f3c7-47ca-b08f-60360ee5e2dd
+    DialogueName: D11.3
+    DialogueText: "Las personas externas no deber\xEDan tener acceso al teatro. "
+    Speaker: Narrador
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1542, y: 10561}
+  - Guid: 26b4a5f8-c71d-4ac2-ad58-534ceabf6c08
+    DialogueName: D6.3
+    DialogueText: "Ha estallado el vaso, veo sangrado intenso, p\xE1same el f\xF3rceps.
+      \xA1R\xE1pido!"
+    Speaker: Endoscopista 1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1841, y: 4523}
+  - Guid: 97c98238-5955-41a7-acfb-c3c33e7b8868
+    DialogueName: D8.1.4
+    DialogueText: "Probablemente hoy no es t\xFA mejor d\xEDa."
+    Speaker: Endoscopista 1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2042, y: 8500}
+  - Guid: 274e84f3-4ef8-4270-9f82-e21cb19e0536
+    DialogueName: D11.1.1
+    DialogueText: "Por favor, describa la situaci\xF3n a los pacientes programados
+      y aseg\xFArese de que nadie m\xE1s nos moleste."
+    Speaker: Endoscopista 1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1775, y: 10889}
+  - Guid: c4fe1ad4-468a-44a9-a2e0-77367ed9723d
+    DialogueName: D1.1.1
+    DialogueText: "\xBFNo tienes que llevar la mascarilla? \xBFSigues alguna regla
+      especial de la que no est\xE9 informado?"
+    Speaker: Endoscopista 1
+    Mood: Ironic
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2296, y: 403}
+  - Guid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
+    DialogueName: D1.1.3
+    DialogueText: "\xA1Coge la mascarilla inmediatamente! Deber\xEDas llevarla durante
+      la endoscopia, es una parte b\xE1sica  del c\xF3digo de vestimenta."
+    Speaker: Endoscopista 1
+    Mood: Aggressive
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2227, y: 915}
   ExposedProperties: []
