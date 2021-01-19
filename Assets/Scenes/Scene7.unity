@@ -3376,6 +3376,7 @@ MonoBehaviour:
   - {fileID: 769037846}
   - {fileID: 2025342477}
   - {fileID: 1741668047}
+  AnswerContainer: {fileID: 0}
 --- !u!1 &571394906
 GameObject:
   m_ObjectHideFlags: 0
@@ -4021,6 +4022,7 @@ MonoBehaviour:
   dialogueContainer: {fileID: 11400000, guid: dd5957f959bf4e04fab1d32f67279867, type: 2}
   screen1: {fileID: 2030489334}
   contextDescription: {fileID: 0}
+  nextButtonContext: {fileID: 0}
   screen2: {fileID: 523089752}
   situationDialogueTexts: []
   nextButtonSituation: {fileID: 0}
@@ -4030,6 +4032,7 @@ MonoBehaviour:
   nextButtonAnswer: {fileID: 0}
   screen5: {fileID: 0}
   feedbackText: {fileID: 0}
+  nextButtonFeedback: {fileID: 0}
   choosenAnswer:
     Guid: 
     AnswerName: 
@@ -11247,6 +11250,7 @@ MonoBehaviour:
   dialogueContainer: {fileID: 11400000, guid: b489d146a43c88a49b152a10af29b034, type: 2}
   screen1: {fileID: 1000536165907182120}
   contextDescription: {fileID: 1000536166054116091}
+  nextButtonContext: {fileID: 1000536166238291980}
   screen2: {fileID: 1000536167682142408}
   situationDialogueTexts:
   - {fileID: 1000536168020624433}
@@ -11264,6 +11268,7 @@ MonoBehaviour:
   nextButtonAnswer: {fileID: 1000536167719631293}
   screen5: {fileID: 1000536166923683994}
   feedbackText: {fileID: 1000536167858808164}
+  nextButtonFeedback: {fileID: 1000536167454953546}
   choosenAnswer:
     Guid: 
     AnswerName: 
@@ -15743,6 +15748,7 @@ MonoBehaviour:
   - {fileID: 1000536166210379760}
   - {fileID: 1000536167692888312}
   - {fileID: 1000536167736325507}
+  AnswerContainer: {fileID: 1000536166147383437}
 --- !u!224 &1000536167450445073
 RectTransform:
   m_ObjectHideFlags: 0

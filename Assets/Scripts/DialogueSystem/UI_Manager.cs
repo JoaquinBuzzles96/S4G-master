@@ -29,6 +29,7 @@ public class UI_Manager : MonoBehaviour
     //Screen 1
     public GameObject screen1;
     public TextMeshProUGUI contextDescription;
+    public GameObject nextButtonContext;
 
     //Screen 2
     public GameObject screen2;
@@ -46,6 +47,7 @@ public class UI_Manager : MonoBehaviour
     //Screen 5
     public GameObject screen5;
     public TextMeshProUGUI feedbackText;
+    public GameObject nextButtonFeedback;
 
     public AnswerNodeData choosenAnswer;
     public AudioSource audioSource;
@@ -401,6 +403,8 @@ public class UI_Manager : MonoBehaviour
 
         contextDescription.text = situation.Context;
 
+        StartCoroutine(PlaySimpleDialogue(situation.audioId, nextButtonContext));
+
         Debug.Log($"Se ha configurado el contexto de la situacion {situation.SituationName}");
 
     }
@@ -465,7 +469,8 @@ public class UI_Manager : MonoBehaviour
 
     public void SetUpScreen5(AnswerNodeData answer)
     {
-        feedbackText.text = $"{answer.Feedback} /n Score: {totalScore}";
+        StartCoroutine(PlaySimpleDialogue(answer.audioId, nextButtonFeedback));
+        feedbackText.text = $"{answer.Feedback} \n Score: {totalScore}";
         //Add feedback to email
         AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
         AddTextToRoute($"Feedback: {answer.Feedback}");
@@ -473,6 +478,8 @@ public class UI_Manager : MonoBehaviour
         //Send email
         Debug.Log("Enviamos un mail con la infomacion");
         SendMail.Instance.SendEmail();
+
+        
     }
 
     private bool CheckMoreDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI, GameObject nextButton)
@@ -524,6 +531,13 @@ public class UI_Manager : MonoBehaviour
         }
 
         currentDialogue += i;
+        nextButton.SetActive(true);
+    }
+
+    public IEnumerator PlaySimpleDialogue(string audio, GameObject nextButton)
+    {
+        nextButton.SetActive(false);
+        yield return new WaitForSeconds(PlayAudioOnSpeaker(audio, "Narrator", "Calm"));
         nextButton.SetActive(true);
     }
 
