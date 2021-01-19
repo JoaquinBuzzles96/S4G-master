@@ -523,6 +523,14 @@ public class UI_Manager : MonoBehaviour
                 AddTextToRoute($"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}");
                 //Debug.Log($"Hemos puesto el dialogo {currentDialogue + i}, ahora vamos a hacer una pausa");
                 yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker, dialoguesData[currentDialogue + i].Mood));
+                if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + i].Speaker)))
+                {
+                    dictionaryCharacteres[Translate(dialoguesData[currentDialogue + i].Speaker)].SetBool("animFinished", true);
+                }
+                else
+                {
+                    Debug.Log($"No se encontro el speaker {Translate(dialoguesData[currentDialogue + i].Speaker)}");
+                }  
             }
             else
             {
