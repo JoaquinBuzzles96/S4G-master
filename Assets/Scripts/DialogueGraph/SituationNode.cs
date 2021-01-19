@@ -5,4 +5,5 @@ using UnityEngine;
 public class SituationNode : ParentNode
 {
     public string Id;
+    public string audioId;
 }

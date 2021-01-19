@@ -10,6 +10,7 @@ public class SituationNodeData
     public string SituationName;
     public string Context;
     public string Id;
+    public string audioId;
     public NodeType nodeType;
     //public bool EntryPoint = false;
     public Vector2 Position;

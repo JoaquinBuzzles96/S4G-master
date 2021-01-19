@@ -149,7 +149,7 @@ public class DialogueGraphView : GraphView
         }
     }
 
-    public SituationNode CreateSituationNode(string nodeName, Vector2 position, string description = "", string id = "0", string _guid = "")
+    public SituationNode CreateSituationNode(string nodeName, Vector2 position, string description = "", string id = "0", string _guid = "", string _audioId = "Audio id")
     {
         if (_guid == "" || _guid == null)
         {
@@ -162,6 +162,7 @@ public class DialogueGraphView : GraphView
             Description = description,
             Id = id,
             GUID = _guid,
+            audioId = _audioId,
             nodeType = NodeType.Situation
         };
 
@@ -202,6 +203,19 @@ public class DialogueGraphView : GraphView
         textDescription.SetValueWithoutNotify(situationNode.Description);
         situationNode.mainContainer.Add(textDescription);
 
+        //Audio id text
+        var contextTextAudio = new TextElement();
+        contextTextAudio.text = "Context audio id";
+        situationNode.mainContainer.Add(contextTextAudio);
+
+        //Audio ID
+        var audioID = new TextField(string.Empty);
+        audioID.RegisterValueChangedCallback(evt =>
+        {
+            situationNode.audioId = evt.newValue;
+        });
+        audioID.SetValueWithoutNotify(situationNode.audioId);
+        situationNode.mainContainer.Add(audioID);
         /*
         //ID
         var situationId = new TextField(string.Empty);
@@ -229,7 +243,7 @@ public class DialogueGraphView : GraphView
         return situationNode;
     }
 
-    public QuestionNode CreateQuestionNode(string nodeName, Vector2 position, string description = "Question Description", string _guid = "")
+    public QuestionNode CreateQuestionNode(string nodeName, Vector2 position, string description = "Question Description", string _guid = "", string _audioID = "Audio id")
     {
         if (_guid == "" || _guid == null)
         {
@@ -241,6 +255,7 @@ public class DialogueGraphView : GraphView
             nodeName = nodeName,
             Description = description,
             GUID = _guid,
+            audioId = _audioID,
             nodeType = NodeType.Question
         };
 
@@ -275,6 +290,20 @@ public class DialogueGraphView : GraphView
         });
         textDescription.SetValueWithoutNotify(questionNode.Description);
         questionNode.mainContainer.Add(textDescription);
+
+        //Audio id text
+        var questionAudioText = new TextElement();
+        questionAudioText.text = "Question audio id";
+        questionNode.mainContainer.Add(questionAudioText);
+
+        //Audio ID
+        var audioID = new TextField(string.Empty);
+        audioID.RegisterValueChangedCallback(evt =>
+        {
+            questionNode.audioId = evt.newValue;
+        });
+        audioID.SetValueWithoutNotify(questionNode.audioId);
+        questionNode.mainContainer.Add(audioID);
 
         //Refresh UI
         questionNode.RefreshExpandedState();
@@ -371,7 +400,12 @@ public class DialogueGraphView : GraphView
         });
         isEnd.SetValueWithoutNotify(answerNode.IsEnd);
         answerNode.mainContainer.Add(isEnd);
-        /*
+
+        //Audio id text
+        var feedbackAudioText = new TextElement();
+        feedbackAudioText.text = "Feedback audio id";
+        answerNode.mainContainer.Add(feedbackAudioText);
+
         //Audio ID
         var audioID = new TextField(string.Empty);
         audioID.RegisterValueChangedCallback(evt =>
@@ -380,7 +414,7 @@ public class DialogueGraphView : GraphView
         });
         audioID.SetValueWithoutNotify(answerNode.audioId);
         answerNode.mainContainer.Add(audioID);
-
+        /*
         //Speaker
         var speakerField = new TextField(string.Empty);
         speakerField.RegisterValueChangedCallback(evt =>

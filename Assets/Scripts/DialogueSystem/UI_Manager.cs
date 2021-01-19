@@ -243,7 +243,7 @@ public class UI_Manager : MonoBehaviour
 
     private void SetMoodAnim(string _speaker, string _mood)
     {
-        
+        //Ironic, Regretful, Agressive, Nervous. Calmly
         switch (_mood)
         {
             case "Ironic":
@@ -283,6 +283,7 @@ public class UI_Manager : MonoBehaviour
         if (LanguageManager.Instance != null)
         {
             dialogueContainer = Resources.Load($"Cases/{caso}_{LanguageManager.Instance.languageSelected}") as DialogueContainer;
+            Debug.Log($"Cargamos el case Cases/{caso}_{LanguageManager.Instance.languageSelected}");
         }
         else
         {

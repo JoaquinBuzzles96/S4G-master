@@ -207,6 +207,7 @@ public class GraphSaveUtility
                         SituationName = nodeSituation.nodeName,
                         Context = nodeSituation.Description,
                         Id = nodeSituation.Id,
+                        audioId = nodeSituation.audioId,
                         nodeType = nodeSituation.nodeType,
                         Position = nodeSituation.GetPosition().position
 
@@ -219,6 +220,7 @@ public class GraphSaveUtility
                         Guid = nodeQuestion.GUID,
                         QuestionName = nodeQuestion.nodeName,
                         Description = nodeQuestion.Description,
+                        audioId = nodeQuestion.audioId,
                         nodeType = nodeQuestion.nodeType,
                         Position = nodeQuestion.GetPosition().position
                     });
@@ -310,7 +312,7 @@ public class GraphSaveUtility
     {
         foreach (var nodeData in _containerCache.SituationNodeData)
         {
-            var tempNode = _targetGraphView.CreateSituationNode(nodeData.SituationName, Vector2.zero, nodeData.Context, nodeData.Id, nodeData.Guid);
+            var tempNode = _targetGraphView.CreateSituationNode(nodeData.SituationName, Vector2.zero, nodeData.Context, nodeData.Id, nodeData.Guid, nodeData.audioId);
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();
@@ -320,7 +322,7 @@ public class GraphSaveUtility
 
         foreach (var nodeData in _containerCache.QuestionNodeData)
         {
-            var tempNode = _targetGraphView.CreateQuestionNode(nodeData.QuestionName, Vector2.zero, nodeData.Description, nodeData.Guid);
+            var tempNode = _targetGraphView.CreateQuestionNode(nodeData.QuestionName, Vector2.zero, nodeData.Description, nodeData.Guid, nodeData.audioId);
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();

@@ -13,537 +13,94 @@ MonoBehaviour:
   m_Name: Case3
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGuid: 1a8a2fff-e26c-41f1-9dd8-2c6e80c21b5b
+  - BaseNodeGuid: 2c333342-dc43-4273-b673-d943b57664f5
     PortName: S1
-    TargetNodeGuid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
-  - BaseNodeGuid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
+    TargetNodeGuid: 521f03c6-1d68-48e7-96ff-b367e7dc7d4f
+  - BaseNodeGuid: 521f03c6-1d68-48e7-96ff-b367e7dc7d4f
     PortName: Dialogue
-    TargetNodeGuid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
-  - BaseNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
+    TargetNodeGuid: 7aa19eac-9778-4449-9c2d-b043746344c1
+  - BaseNodeGuid: 7aa19eac-9778-4449-9c2d-b043746344c1
     PortName: Dialogue
-    TargetNodeGuid: 8a9b76c5-4b77-4995-a7b9-47f7301a4fbe
-  - BaseNodeGuid: 341bebb1-f453-44c5-8ac1-25c998c5d2f7
-    PortName: Dialogue
-    TargetNodeGuid: 086299ed-0bb5-401c-a85f-209462d63ecf
-  - BaseNodeGuid: 3883b33a-f144-48c8-b765-639ff03eba8f
-    PortName: Dialogue
-    TargetNodeGuid: 67c00472-5def-4c22-8817-394221de4e63
-  - BaseNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
-    PortName: Dialogue
-    TargetNodeGuid: 770517d2-cd24-4527-aaea-765583db9f5c
-  - BaseNodeGuid: d01aeee4-3215-4418-a6d9-dacfa90b4a3b
-    PortName: Dialogue
-    TargetNodeGuid: 5b6fa2ca-3b2e-4e25-855c-34efbadd9379
-  - BaseNodeGuid: d9409ee5-4d3b-42bd-8159-48b1145ea39e
-    PortName: Dialogue
-    TargetNodeGuid: c17ed2a9-732d-4ada-b3bf-2bf30fb41573
-  - BaseNodeGuid: d0272e95-ae03-454f-9be6-c1602a47e538
-    PortName: Dialogue
-    TargetNodeGuid: eb1da68f-2d71-4057-bd57-96b8b4c3e322
-  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    TargetNodeGuid: 51f628e3-d642-4e12-9212-9937db02b8f6
+  - BaseNodeGuid: 521f03c6-1d68-48e7-96ff-b367e7dc7d4f
+    PortName: Question 1
+    TargetNodeGuid: 853c68a4-6907-4f1d-8753-5f9ce5f7a3e1
+  - BaseNodeGuid: 853c68a4-6907-4f1d-8753-5f9ce5f7a3e1
     PortName: Answer 1
-    TargetNodeGuid: 7a074eee-6300-4f85-b697-9ac22ddf536a
-  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    TargetNodeGuid: ca665887-525f-4cf3-9578-3004838e6174
+  - BaseNodeGuid: ca665887-525f-4cf3-9578-3004838e6174
+    PortName: Dialogue
+    TargetNodeGuid: 0c05869b-98c7-44ae-b1c6-668d3de01bae
+  - BaseNodeGuid: 0c05869b-98c7-44ae-b1c6-668d3de01bae
+    PortName: Dialogue
+    TargetNodeGuid: c50afb77-6fd6-4f3c-bc56-ffe83f89640b
+  - BaseNodeGuid: ca665887-525f-4cf3-9578-3004838e6174
+    PortName: Situation
+    TargetNodeGuid: 058fa263-e305-4893-a201-3733fd6835e0
+  - BaseNodeGuid: 853c68a4-6907-4f1d-8753-5f9ce5f7a3e1
     PortName: Answer 2
-    TargetNodeGuid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
-  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    TargetNodeGuid: 75fee5c5-2de7-43e0-923d-3a621a1bc24a
+  - BaseNodeGuid: 853c68a4-6907-4f1d-8753-5f9ce5f7a3e1
     PortName: Answer 3
-    TargetNodeGuid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
-  - BaseNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
+    TargetNodeGuid: 183f8455-0f35-410a-b2c6-5b1a365ff627
+  - BaseNodeGuid: 853c68a4-6907-4f1d-8753-5f9ce5f7a3e1
     PortName: Answer 4
-    TargetNodeGuid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
-  - BaseNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
-    PortName: Answer 1
-    TargetNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
-  - BaseNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
-    PortName: Answer 2
-    TargetNodeGuid: 53838028-70f5-48dc-8753-38f8a7c0c775
-  - BaseNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
-    PortName: Answer 3
-    TargetNodeGuid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
-  - BaseNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
-    PortName: Answer 4
-    TargetNodeGuid: c9282cbb-7207-4020-92d4-acc4742ef2f2
-  - BaseNodeGuid: 3d393f5b-30c8-412a-a646-f32453ff386e
-    PortName: Answer 1
-    TargetNodeGuid: edcaefce-5070-4870-bf53-6ebf5ceff51e
-  - BaseNodeGuid: 3d393f5b-30c8-412a-a646-f32453ff386e
-    PortName: Answer 2
-    TargetNodeGuid: 96c8eaf4-77c2-4a6d-90ea-36c96defc4ff
-  - BaseNodeGuid: 3d393f5b-30c8-412a-a646-f32453ff386e
-    PortName: Answer 3
-    TargetNodeGuid: c8fdcbcd-30ba-43a4-8190-1fdcaa62bea9
-  - BaseNodeGuid: 3d393f5b-30c8-412a-a646-f32453ff386e
-    PortName: Answer 4
-    TargetNodeGuid: 62980a11-00e7-4b8b-aef4-251651a0c0d0
-  - BaseNodeGuid: e26c01fb-d89a-47da-acb4-dae5ec802908
-    PortName: Answer 1
-    TargetNodeGuid: 39d2abe6-516f-4b80-808f-e9537d6cdcde
-  - BaseNodeGuid: e26c01fb-d89a-47da-acb4-dae5ec802908
-    PortName: Answer 2
-    TargetNodeGuid: 92569e01-f69f-445f-8322-03538e92273f
-  - BaseNodeGuid: e26c01fb-d89a-47da-acb4-dae5ec802908
-    PortName: Answer 3
-    TargetNodeGuid: 2fc296b0-e36f-445f-9cd5-bb2850ef5b34
-  - BaseNodeGuid: e26c01fb-d89a-47da-acb4-dae5ec802908
-    PortName: Answer 4
-    TargetNodeGuid: a002e915-cfb5-4ba0-8dd1-070e43c2a717
-  - BaseNodeGuid: fd793977-ead6-4356-ac6a-3e898676ea44
-    PortName: Answer 1
-    TargetNodeGuid: 9cc9d7fb-fbb0-4b3a-9c98-848ad3048fc1
-  - BaseNodeGuid: fd793977-ead6-4356-ac6a-3e898676ea44
-    PortName: Answer 2
-    TargetNodeGuid: db55491f-c2f6-440e-a581-a39b71b1132e
-  - BaseNodeGuid: fd793977-ead6-4356-ac6a-3e898676ea44
-    PortName: Answer 3
-    TargetNodeGuid: a2821bac-50ce-42bc-8193-8e38b4bd6986
-  - BaseNodeGuid: fd793977-ead6-4356-ac6a-3e898676ea44
-    PortName: Answer 4
-    TargetNodeGuid: 14d4f636-1978-4f52-9bf1-1e36bc2ef15e
-  - BaseNodeGuid: 6b47c6f9-b29d-487b-a485-e55e97bf488c
-    PortName: Answer 1
-    TargetNodeGuid: 80d2fc2e-9a42-423f-a48d-35c4aad42726
-  - BaseNodeGuid: 6b47c6f9-b29d-487b-a485-e55e97bf488c
-    PortName: Answer 2
-    TargetNodeGuid: ad9a1db7-d135-4e2d-9c36-96017b4ac831
-  - BaseNodeGuid: 6b47c6f9-b29d-487b-a485-e55e97bf488c
-    PortName: Answer 3
-    TargetNodeGuid: 5fc92988-9e45-46da-ad61-1a33dcbf9582
-  - BaseNodeGuid: 6b47c6f9-b29d-487b-a485-e55e97bf488c
-    PortName: Answer 4
-    TargetNodeGuid: 93c682bd-5144-4c67-bd60-e04b07492871
-  - BaseNodeGuid: 7a074eee-6300-4f85-b697-9ac22ddf536a
+    TargetNodeGuid: 6fbfbaff-404b-4e8c-8b0a-58f6d3a98581
+  - BaseNodeGuid: 75fee5c5-2de7-43e0-923d-3a621a1bc24a
     PortName: Dialogue
-    TargetNodeGuid: c4fe1ad4-468a-44a9-a2e0-77367ed9723d
-  - BaseNodeGuid: 7a074eee-6300-4f85-b697-9ac22ddf536a
+    TargetNodeGuid: 51bba5b0-9f29-4c47-8f67-f3cb50b110c1
+  - BaseNodeGuid: 183f8455-0f35-410a-b2c6-5b1a365ff627
+    PortName: Dialogue
+    TargetNodeGuid: b43871e8-4f78-4157-b8db-9f3fd3ff1706
+  - BaseNodeGuid: b43871e8-4f78-4157-b8db-9f3fd3ff1706
+    PortName: Dialogue
+    TargetNodeGuid: 028e784d-d3c4-4966-ac84-82967319623a
+  - BaseNodeGuid: 6fbfbaff-404b-4e8c-8b0a-58f6d3a98581
+    PortName: Dialogue
+    TargetNodeGuid: 4115fe67-9d82-4dc4-bf48-2ecb762200d5
+  - BaseNodeGuid: 75fee5c5-2de7-43e0-923d-3a621a1bc24a
     PortName: Situation
-    TargetNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
-  - BaseNodeGuid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
-    PortName: Dialogue
-    TargetNodeGuid: 8d624d3d-6290-485e-a072-f08bcbbf3039
-  - BaseNodeGuid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
+    TargetNodeGuid: 8d3da4c7-30ba-440f-9f4d-b54fddcda857
+  - BaseNodeGuid: 183f8455-0f35-410a-b2c6-5b1a365ff627
     PortName: Situation
-    TargetNodeGuid: 3883b33a-f144-48c8-b765-639ff03eba8f
-  - BaseNodeGuid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
-    PortName: Dialogue
-    TargetNodeGuid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
-  - BaseNodeGuid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
+    TargetNodeGuid: 058fa263-e305-4893-a201-3733fd6835e0
+  - BaseNodeGuid: 6fbfbaff-404b-4e8c-8b0a-58f6d3a98581
     PortName: Situation
-    TargetNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
-  - BaseNodeGuid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
-    PortName: Dialogue
-    TargetNodeGuid: d7a7eaf3-ef7b-456b-92f1-5a627bd946dd
-  - BaseNodeGuid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
-    PortName: Situation
-    TargetNodeGuid: 341bebb1-f453-44c5-8ac1-25c998c5d2f7
-  - BaseNodeGuid: 53838028-70f5-48dc-8753-38f8a7c0c775
-    PortName: Dialogue
-    TargetNodeGuid: 3b3f2fa7-e420-437c-a37c-3c78c2bd93e5
-  - BaseNodeGuid: 53838028-70f5-48dc-8753-38f8a7c0c775
-    PortName: Situation
-    TargetNodeGuid: 3883b33a-f144-48c8-b765-639ff03eba8f
-  - BaseNodeGuid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
-    PortName: Dialogue
-    TargetNodeGuid: c6196b0e-9291-4239-be5e-fcf282dba917
-  - BaseNodeGuid: c9282cbb-7207-4020-92d4-acc4742ef2f2
-    PortName: Dialogue
-    TargetNodeGuid: 4ac6c4e9-0e3c-4c8d-b83d-85225152db62
-  - BaseNodeGuid: c9282cbb-7207-4020-92d4-acc4742ef2f2
-    PortName: Situation
-    TargetNodeGuid: 3883b33a-f144-48c8-b765-639ff03eba8f
-  - BaseNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
-    PortName: Dialogue
-    TargetNodeGuid: de60cf79-82be-4699-a572-971570090c0f
-  - BaseNodeGuid: edcaefce-5070-4870-bf53-6ebf5ceff51e
-    PortName: Dialogue
-    TargetNodeGuid: 605fd93c-b56b-4ec5-92e5-bc76556904a1
-  - BaseNodeGuid: edcaefce-5070-4870-bf53-6ebf5ceff51e
-    PortName: Situation
-    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
-  - BaseNodeGuid: 96c8eaf4-77c2-4a6d-90ea-36c96defc4ff
-    PortName: Dialogue
-    TargetNodeGuid: 8cc26d1d-d069-4335-ae8d-27c6a8b24e48
-  - BaseNodeGuid: 96c8eaf4-77c2-4a6d-90ea-36c96defc4ff
-    PortName: Situation
-    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
-  - BaseNodeGuid: c8fdcbcd-30ba-43a4-8190-1fdcaa62bea9
-    PortName: Dialogue
-    TargetNodeGuid: dc1d5816-25ab-45ed-8146-35e5620ea4d9
-  - BaseNodeGuid: c8fdcbcd-30ba-43a4-8190-1fdcaa62bea9
-    PortName: Situation
-    TargetNodeGuid: d01aeee4-3215-4418-a6d9-dacfa90b4a3b
-  - BaseNodeGuid: 62980a11-00e7-4b8b-aef4-251651a0c0d0
-    PortName: Dialogue
-    TargetNodeGuid: 88697d65-8e31-4ec4-a2cd-73c829228490
-  - BaseNodeGuid: 62980a11-00e7-4b8b-aef4-251651a0c0d0
-    PortName: Situation
-    TargetNodeGuid: d01aeee4-3215-4418-a6d9-dacfa90b4a3b
-  - BaseNodeGuid: 39d2abe6-516f-4b80-808f-e9537d6cdcde
-    PortName: Dialogue
-    TargetNodeGuid: 4793443e-5829-4b20-aab5-72a6c36a3b75
-  - BaseNodeGuid: 92569e01-f69f-445f-8322-03538e92273f
-    PortName: Dialogue
-    TargetNodeGuid: a9878c58-02bc-4823-adb4-782026ce6f4f
-  - BaseNodeGuid: 2fc296b0-e36f-445f-9cd5-bb2850ef5b34
-    PortName: Dialogue
-    TargetNodeGuid: f082b37a-e39b-4be2-ad67-2a7994fda7c7
-  - BaseNodeGuid: 2fc296b0-e36f-445f-9cd5-bb2850ef5b34
-    PortName: Situation
-    TargetNodeGuid: d9409ee5-4d3b-42bd-8159-48b1145ea39e
-  - BaseNodeGuid: a002e915-cfb5-4ba0-8dd1-070e43c2a717
-    PortName: Dialogue
-    TargetNodeGuid: 3bea7de1-7762-4b9a-b41e-50ab99ef6910
-  - BaseNodeGuid: a002e915-cfb5-4ba0-8dd1-070e43c2a717
-    PortName: Situation
-    TargetNodeGuid: d9409ee5-4d3b-42bd-8159-48b1145ea39e
-  - BaseNodeGuid: 9cc9d7fb-fbb0-4b3a-9c98-848ad3048fc1
-    PortName: Dialogue
-    TargetNodeGuid: 004fbf90-c7b6-4da8-8923-7c8f1ce073e6
-  - BaseNodeGuid: 9cc9d7fb-fbb0-4b3a-9c98-848ad3048fc1
-    PortName: Situation
-    TargetNodeGuid: d0272e95-ae03-454f-9be6-c1602a47e538
-  - BaseNodeGuid: a2821bac-50ce-42bc-8193-8e38b4bd6986
-    PortName: Dialogue
-    TargetNodeGuid: 43a61855-5dcb-4bf5-9142-b56346ac5818
-  - BaseNodeGuid: a2821bac-50ce-42bc-8193-8e38b4bd6986
-    PortName: Situation
-    TargetNodeGuid: d0272e95-ae03-454f-9be6-c1602a47e538
-  - BaseNodeGuid: db55491f-c2f6-440e-a581-a39b71b1132e
-    PortName: Dialogue
-    TargetNodeGuid: 93f8b0be-6fe3-4994-a5e8-27be06812160
-  - BaseNodeGuid: db55491f-c2f6-440e-a581-a39b71b1132e
-    PortName: Situation
-    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
-  - BaseNodeGuid: 14d4f636-1978-4f52-9bf1-1e36bc2ef15e
-    PortName: Dialogue
-    TargetNodeGuid: 7bb8b44c-7bf4-4ee8-939a-33fd283c0119
-  - BaseNodeGuid: 14d4f636-1978-4f52-9bf1-1e36bc2ef15e
-    PortName: Situation
-    TargetNodeGuid: d0272e95-ae03-454f-9be6-c1602a47e538
-  - BaseNodeGuid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
-    PortName: Dialogue
-    TargetNodeGuid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
-  - BaseNodeGuid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
-    PortName: Dialogue
-    TargetNodeGuid: 5a1b518d-83fc-4f1f-9c70-0df5e62f37f8
-  - BaseNodeGuid: 5a1b518d-83fc-4f1f-9c70-0df5e62f37f8
-    PortName: Dialogue
-    TargetNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
-  - BaseNodeGuid: c4fe1ad4-468a-44a9-a2e0-77367ed9723d
-    PortName: Dialogue
-    TargetNodeGuid: 6f4fbb9d-704b-4dc0-8bc1-44762e9087f5
-  - BaseNodeGuid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
-    PortName: Dialogue
-    TargetNodeGuid: 7805dd50-2dcc-4f84-919b-8f43a000746e
-  - BaseNodeGuid: 8a9b76c5-4b77-4995-a7b9-47f7301a4fbe
-    PortName: Dialogue
-    TargetNodeGuid: 4cff95b7-9c2b-4618-b0bb-c657e47cfb6d
-  - BaseNodeGuid: 4cff95b7-9c2b-4618-b0bb-c657e47cfb6d
-    PortName: Dialogue
-    TargetNodeGuid: 51a416c3-ca43-46af-8200-90d6013c16c4
-  - BaseNodeGuid: 51a416c3-ca43-46af-8200-90d6013c16c4
-    PortName: Dialogue
-    TargetNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
-  - BaseNodeGuid: 086299ed-0bb5-401c-a85f-209462d63ecf
-    PortName: Dialogue
-    TargetNodeGuid: 67c00472-5def-4c22-8817-394221de4e63
-  - BaseNodeGuid: c087547e-17db-470f-b9ce-61c9944922d7
-    PortName: Dialogue
-    TargetNodeGuid: d72b299d-8157-469a-8def-c66e85fb005d
-  - BaseNodeGuid: 67c00472-5def-4c22-8817-394221de4e63
-    PortName: Dialogue
-    TargetNodeGuid: c087547e-17db-470f-b9ce-61c9944922d7
-  - BaseNodeGuid: d72b299d-8157-469a-8def-c66e85fb005d
-    PortName: Dialogue
-    TargetNodeGuid: 88643278-47d4-47d2-aa5b-a8728fd32b6b
-  - BaseNodeGuid: 88643278-47d4-47d2-aa5b-a8728fd32b6b
-    PortName: Dialogue
-    TargetNodeGuid: 36cc2a75-e4a9-460e-b3d9-29d96aca2dae
-  - BaseNodeGuid: 36cc2a75-e4a9-460e-b3d9-29d96aca2dae
-    PortName: Dialogue
-    TargetNodeGuid: 14911ca4-2043-41aa-ba27-3d54b48fd2cf
-  - BaseNodeGuid: 14911ca4-2043-41aa-ba27-3d54b48fd2cf
-    PortName: Dialogue
-    TargetNodeGuid: 3d393f5b-30c8-412a-a646-f32453ff386e
-  - BaseNodeGuid: 770517d2-cd24-4527-aaea-765583db9f5c
-    PortName: Dialogue
-    TargetNodeGuid: 5b6fa2ca-3b2e-4e25-855c-34efbadd9379
-  - BaseNodeGuid: 5b6fa2ca-3b2e-4e25-855c-34efbadd9379
-    PortName: Dialogue
-    TargetNodeGuid: c17b55e7-ead9-4413-8fea-0b630bce2619
-  - BaseNodeGuid: c17b55e7-ead9-4413-8fea-0b630bce2619
-    PortName: Dialogue
-    TargetNodeGuid: 26b4a5f8-c71d-4ac2-ad58-534ceabf6c08
-  - BaseNodeGuid: 26b4a5f8-c71d-4ac2-ad58-534ceabf6c08
-    PortName: Dialogue
-    TargetNodeGuid: 7e07876b-0312-43f0-87af-370a2af4563c
-  - BaseNodeGuid: 7e07876b-0312-43f0-87af-370a2af4563c
-    PortName: Dialogue
-    TargetNodeGuid: 1a6b1e25-0036-49c5-b860-6004cdd6fdb8
-  - BaseNodeGuid: 1a6b1e25-0036-49c5-b860-6004cdd6fdb8
-    PortName: Dialogue
-    TargetNodeGuid: e26c01fb-d89a-47da-acb4-dae5ec802908
-  - BaseNodeGuid: 4793443e-5829-4b20-aab5-72a6c36a3b75
-    PortName: Dialogue
-    TargetNodeGuid: ec255719-74a5-4a4c-b34a-8bb220f23056
-  - BaseNodeGuid: a9878c58-02bc-4823-adb4-782026ce6f4f
-    PortName: Dialogue
-    TargetNodeGuid: 8054b6bc-a957-4715-8035-619404c530e6
-  - BaseNodeGuid: f082b37a-e39b-4be2-ad67-2a7994fda7c7
-    PortName: Dialogue
-    TargetNodeGuid: df6a1745-c7ea-44b6-b17d-64985f1d3c02
-  - BaseNodeGuid: 3bea7de1-7762-4b9a-b41e-50ab99ef6910
-    PortName: Dialogue
-    TargetNodeGuid: 4d7e8458-3739-46c6-a6bf-301ccf8bf19c
-  - BaseNodeGuid: 4d7e8458-3739-46c6-a6bf-301ccf8bf19c
-    PortName: Dialogue
-    TargetNodeGuid: 03bf28d6-514e-45d5-bb9d-c90555cb77ea
-  - BaseNodeGuid: c17ed2a9-732d-4ada-b3bf-2bf30fb41573
-    PortName: Dialogue
-    TargetNodeGuid: f0abf715-999e-465d-8d28-afad3c0eb252
-  - BaseNodeGuid: f0abf715-999e-465d-8d28-afad3c0eb252
-    PortName: Dialogue
-    TargetNodeGuid: b7d95141-5be1-4b3a-bec3-e2ebdb2c3bb1
-  - BaseNodeGuid: b7d95141-5be1-4b3a-bec3-e2ebdb2c3bb1
-    PortName: Dialogue
-    TargetNodeGuid: 51a140cc-2266-4159-9d1c-24f401e25948
-  - BaseNodeGuid: 51a140cc-2266-4159-9d1c-24f401e25948
-    PortName: Dialogue
-    TargetNodeGuid: 14add801-dacf-4872-b07b-7945b1205e97
-  - BaseNodeGuid: 14add801-dacf-4872-b07b-7945b1205e97
-    PortName: Dialogue
-    TargetNodeGuid: fd793977-ead6-4356-ac6a-3e898676ea44
-  - BaseNodeGuid: eb1da68f-2d71-4057-bd57-96b8b4c3e322
-    PortName: Dialogue
-    TargetNodeGuid: d0df4759-dd2a-4988-9422-ebf226d6711b
-  - BaseNodeGuid: d0df4759-dd2a-4988-9422-ebf226d6711b
-    PortName: Dialogue
-    TargetNodeGuid: 6b47c6f9-b29d-487b-a485-e55e97bf488c
-  - BaseNodeGuid: 80d2fc2e-9a42-423f-a48d-35c4aad42726
-    PortName: Dialogue
-    TargetNodeGuid: 14539d48-cef4-4864-b50d-344f1f06ddf0
-  - BaseNodeGuid: 14539d48-cef4-4864-b50d-344f1f06ddf0
-    PortName: Dialogue
-    TargetNodeGuid: 92759ce2-ef61-4a43-8b43-a626d9775529
-  - BaseNodeGuid: ad9a1db7-d135-4e2d-9c36-96017b4ac831
-    PortName: Dialogue
-    TargetNodeGuid: 6d29a25b-3b39-4207-96a2-1b982770f363
-  - BaseNodeGuid: 5fc92988-9e45-46da-ad61-1a33dcbf9582
-    PortName: Dialogue
-    TargetNodeGuid: 61aa688d-d419-4735-8ae1-3c00090c7f89
-  - BaseNodeGuid: 93c682bd-5144-4c67-bd60-e04b07492871
-    PortName: Dialogue
-    TargetNodeGuid: 97c98238-5955-41a7-acfb-c3c33e7b8868
-  - BaseNodeGuid: 80d2fc2e-9a42-423f-a48d-35c4aad42726
-    PortName: Situation
-    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
-  - BaseNodeGuid: ad9a1db7-d135-4e2d-9c36-96017b4ac831
-    PortName: Situation
-    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
-  - BaseNodeGuid: 5fc92988-9e45-46da-ad61-1a33dcbf9582
-    PortName: Situation
-    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
-  - BaseNodeGuid: 93c682bd-5144-4c67-bd60-e04b07492871
-    PortName: Situation
-    TargetNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
-  - BaseNodeGuid: b66366f3-3453-4d55-b5a0-4f65a51361c1
-    PortName: Dialogue
-    TargetNodeGuid: e38576bb-fdf5-4d38-a9f4-83592a039061
-  - BaseNodeGuid: e38576bb-fdf5-4d38-a9f4-83592a039061
-    PortName: Dialogue
-    TargetNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
-  - BaseNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
-    PortName: Answer 1
-    TargetNodeGuid: 3286cfe5-2598-4388-8f63-7a3bb5435597
-  - BaseNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
-    PortName: Answer 2
-    TargetNodeGuid: e12f52f0-16d9-48da-894e-fe622a2c5dae
-  - BaseNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
-    PortName: Answer 3
-    TargetNodeGuid: 52a5f4d7-9357-4fc0-83a4-44b03cfec5ab
-  - BaseNodeGuid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
-    PortName: Answer 4
-    TargetNodeGuid: 55a14e42-d21f-4360-8887-40e86483439e
-  - BaseNodeGuid: 3286cfe5-2598-4388-8f63-7a3bb5435597
-    PortName: Dialogue
-    TargetNodeGuid: 06037e84-a131-4340-a525-4f80e325b5f8
-  - BaseNodeGuid: 55a14e42-d21f-4360-8887-40e86483439e
-    PortName: Dialogue
-    TargetNodeGuid: 5a9365e7-2d1a-4188-9f63-a61e62041993
-  - BaseNodeGuid: 52a5f4d7-9357-4fc0-83a4-44b03cfec5ab
-    PortName: Dialogue
-    TargetNodeGuid: e78bcb9d-c988-44aa-8490-811a0c6d8e04
-  - BaseNodeGuid: e12f52f0-16d9-48da-894e-fe622a2c5dae
-    PortName: Dialogue
-    TargetNodeGuid: 8449993a-0d7c-4107-9a5f-8f516c9961bd
-  - BaseNodeGuid: 4313c7d6-d1d7-42c4-b3c4-7d83d4a5a67e
-    PortName: Dialogue
-    TargetNodeGuid: 8df33430-149a-4697-b054-ab4785e213fd
-  - BaseNodeGuid: 8df33430-149a-4697-b054-ab4785e213fd
-    PortName: Dialogue
-    TargetNodeGuid: 5edad345-ee46-4cc2-9ee1-1d916951839f
-  - BaseNodeGuid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
-    PortName: Dialogue
-    TargetNodeGuid: 5edad345-ee46-4cc2-9ee1-1d916951839f
-  - BaseNodeGuid: 52a5f4d7-9357-4fc0-83a4-44b03cfec5ab
-    PortName: Situation
-    TargetNodeGuid: 4313c7d6-d1d7-42c4-b3c4-7d83d4a5a67e
-  - BaseNodeGuid: 55a14e42-d21f-4360-8887-40e86483439e
-    PortName: Situation
-    TargetNodeGuid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
-  - BaseNodeGuid: 3286cfe5-2598-4388-8f63-7a3bb5435597
-    PortName: Situation
-    TargetNodeGuid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
-  - BaseNodeGuid: 5edad345-ee46-4cc2-9ee1-1d916951839f
-    PortName: Dialogue
-    TargetNodeGuid: ee7ac6df-0bfc-4712-9aa5-59a48006cea1
-  - BaseNodeGuid: ee7ac6df-0bfc-4712-9aa5-59a48006cea1
-    PortName: Dialogue
-    TargetNodeGuid: a28344df-f3c7-47ca-b08f-60360ee5e2dd
-  - BaseNodeGuid: a28344df-f3c7-47ca-b08f-60360ee5e2dd
-    PortName: Dialogue
-    TargetNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
-  - BaseNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
-    PortName: Answer 1
-    TargetNodeGuid: 7ec6135e-02d0-4a64-a853-499430a24c06
-  - BaseNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
-    PortName: Answer 2
-    TargetNodeGuid: 93e8669a-40db-45f5-bcc2-95cd2e95422d
-  - BaseNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
-    PortName: Answer 3
-    TargetNodeGuid: c3b8e998-a9bb-4018-a3fc-94abd0ff80db
-  - BaseNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
-    PortName: Answer 4
-    TargetNodeGuid: d01139bc-580c-45c8-91f2-ea0377922a1d
-  - BaseNodeGuid: d01139bc-580c-45c8-91f2-ea0377922a1d
-    PortName: Dialogue
-    TargetNodeGuid: 442d07ea-24ff-4a37-9ac1-deeb523365d3
-  - BaseNodeGuid: c3b8e998-a9bb-4018-a3fc-94abd0ff80db
-    PortName: Dialogue
-    TargetNodeGuid: 31b5ab0b-7752-4de5-b39a-452ec6de5bec
-  - BaseNodeGuid: 93e8669a-40db-45f5-bcc2-95cd2e95422d
-    PortName: Dialogue
-    TargetNodeGuid: a245faa7-a5ab-4785-bd88-de46dbd48eb4
-  - BaseNodeGuid: 7ec6135e-02d0-4a64-a853-499430a24c06
-    PortName: Dialogue
-    TargetNodeGuid: 274e84f3-4ef8-4270-9f82-e21cb19e0536
-  - BaseNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
-    PortName: Situation
-    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
-  - BaseNodeGuid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
-    PortName: Situation
-    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
+    TargetNodeGuid: 6c0bf430-1fbd-4f16-b395-7bb809773375
   SituationNodeData:
-  - Guid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
+  - Guid: 521f03c6-1d68-48e7-96ff-b367e7dc7d4f
+    SituationName: S1
+    Context: All team members are on their places
+    Id: 0
+    nodeType: 0
+    Position: {x: 310, y: 16}
+  - Guid: 058fa263-e305-4893-a201-3733fd6835e0
     SituationName: S2
     Context: 
     Id: 0
     nodeType: 0
-    Position: {x: 1474, y: 1461}
-  - Guid: 341bebb1-f453-44c5-8ac1-25c998c5d2f7
-    SituationName: S3_4
-    Context: 
-    Id: 0
-    nodeType: 0
-    Position: {x: 1551, y: 2759}
-  - Guid: 3883b33a-f144-48c8-b765-639ff03eba8f
+    Position: {x: 170, y: 426}
+  - Guid: 8d3da4c7-30ba-440f-9f4d-b54fddcda857
     SituationName: S4
     Context: 
     Id: 0
     nodeType: 0
-    Position: {x: 1542, y: 3008}
-  - Guid: 2e06cf20-682b-42dc-acbb-1ec178336d90
-    SituationName: S5_6
+    Position: {x: 149, y: 641}
+  - Guid: 6c0bf430-1fbd-4f16-b395-7bb809773375
+    SituationName: S3
     Context: 
     Id: 0
     nodeType: 0
-    Position: {x: 1436, y: 4275}
-  - Guid: d01aeee4-3215-4418-a6d9-dacfa90b4a3b
-    SituationName: S6
-    Context: 
-    Id: 0
-    nodeType: 0
-    Position: {x: 1436, y: 4515}
-  - Guid: d9409ee5-4d3b-42bd-8159-48b1145ea39e
-    SituationName: S7
-    Context: 
-    Id: 0
-    nodeType: 0
-    Position: {x: 1446, y: 5950}
-  - Guid: d0272e95-ae03-454f-9be6-c1602a47e538
-    SituationName: S8
-    Context: 
-    Id: 0
-    nodeType: 0
-    Position: {x: 1330, y: 7492}
-  - Guid: b66366f3-3453-4d55-b5a0-4f65a51361c1
-    SituationName: S9
-    Context: 
-    Id: 0
-    nodeType: 0
-    Position: {x: 1278, y: 8876}
-  - Guid: 4313c7d6-d1d7-42c4-b3c4-7d83d4a5a67e
-    SituationName: S10
-    Context: 
-    Id: 0
-    nodeType: 0
-    Position: {x: 1181, y: 10293}
-  - Guid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
-    SituationName: S11
-    Context: 
-    Id: 0
-    nodeType: 0
-    Position: {x: 1190, y: 10568}
-  - Guid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
-    SituationName: S1
-    Context: 
-    Id: 0
-    nodeType: 0
-    Position: {x: 1414, y: 179}
+    Position: {x: 181, y: 901}
   QuestionNodeData:
-  - Guid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
-    QuestionName: Q1
+  - Guid: 853c68a4-6907-4f1d-8753-5f9ce5f7a3e1
+    QuestionName: Q1.1
     Description: What do you do?
     nodeType: 1
-    Position: {x: 1567, y: 367}
-  - Guid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
-    QuestionName: Q2
-    Description: What do you do?
-    nodeType: 1
-    Position: {x: 1518, y: 1801}
-  - Guid: 3d393f5b-30c8-412a-a646-f32453ff386e
-    QuestionName: Q4
-    Description: What do you do?
-    nodeType: 1
-    Position: {x: 1425, y: 3298}
-  - Guid: e26c01fb-d89a-47da-acb4-dae5ec802908
-    QuestionName: Q6
-    Description: What do you do?
-    nodeType: 1
-    Position: {x: 1477, y: 4894}
-  - Guid: fd793977-ead6-4356-ac6a-3e898676ea44
-    QuestionName: D7
-    Description: What do you do?
-    nodeType: 1
-    Position: {x: 1330, y: 6431}
-  - Guid: 6b47c6f9-b29d-487b-a485-e55e97bf488c
-    QuestionName: Q8
-    Description: What do you do?
-    nodeType: 1
-    Position: {x: 1221, y: 7965}
-  - Guid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
-    QuestionName: QuestionID
-    Description: Question Description
-    nodeType: 1
-    Position: {x: 1225, y: 9325}
-  - Guid: ba951361-4273-43cc-95ea-6a376751bd0a
-    QuestionName: Q11
-    Description: What do you do?
-    nodeType: 1
-    Position: {x: 1042, y: 11143}
+    Position: {x: 360, y: 226}
   AnswerNodeData:
-  - Guid: 7a074eee-6300-4f85-b697-9ac22ddf536a
-    AnswerName: A1.1
+  - Guid: ca665887-525f-4cf3-9578-3004838e6174
+    AnswerName: A1.1.1
     Feedback: 
     Situation: 
     IsCorrect: 0
@@ -552,9 +109,9 @@ MonoBehaviour:
     speaker: Speaker
     audioId: Audio id
     score: 0
-    Position: {x: 1976, y: 399}
-  - Guid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
-    AnswerName: A1.2
+    Position: {x: 689, y: 200}
+  - Guid: 75fee5c5-2de7-43e0-923d-3a621a1bc24a
+    AnswerName: A1.1.2
     Feedback: 
     Situation: 
     IsCorrect: 0
@@ -563,9 +120,9 @@ MonoBehaviour:
     speaker: Speaker
     audioId: Audio id
     score: 10
-    Position: {x: 1965, y: 688}
-  - Guid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
-    AnswerName: A1.3
+    Position: {x: 693, y: 443}
+  - Guid: 183f8455-0f35-410a-b2c6-5b1a365ff627
+    AnswerName: A1.1.3
     Feedback: 
     Situation: 
     IsCorrect: 0
@@ -574,20 +131,9 @@ MonoBehaviour:
     speaker: Speaker
     audioId: Audio id
     score: 0
-    Position: {x: 1962, y: 915}
-  - Guid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
-    AnswerName: A1.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: -20
-    Position: {x: 1962, y: 1139}
-  - Guid: 53838028-70f5-48dc-8753-38f8a7c0c775
-    AnswerName: A2.2
+    Position: {x: 695, y: 669}
+  - Guid: 6fbfbaff-404b-4e8c-8b0a-58f6d3a98581
+    AnswerName: A1.1.4
     Feedback: 
     Situation: 
     IsCorrect: 0
@@ -596,905 +142,73 @@ MonoBehaviour:
     speaker: Speaker
     audioId: Audio id
     score: 0
-    Position: {x: 1913, y: 2030}
-  - Guid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
-    AnswerName: A2.3
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1911, y: 2257}
-  - Guid: c9282cbb-7207-4020-92d4-acc4742ef2f2
-    AnswerName: A2.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1909, y: 2477}
-  - Guid: 9a3b42a1-0449-420e-9810-f8a3863f5286
-    AnswerName: A2.1
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1917, y: 1812}
-  - Guid: edcaefce-5070-4870-bf53-6ebf5ceff51e
-    AnswerName: A4.1
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1904, y: 3324}
-  - Guid: 96c8eaf4-77c2-4a6d-90ea-36c96defc4ff
-    AnswerName: A4.2
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1914, y: 3553}
-  - Guid: c8fdcbcd-30ba-43a4-8190-1fdcaa62bea9
-    AnswerName: A4.3
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1914, y: 3806}
-  - Guid: 62980a11-00e7-4b8b-aef4-251651a0c0d0
-    AnswerName: A4.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 10
-    Position: {x: 1915, y: 3974}
-  - Guid: 39d2abe6-516f-4b80-808f-e9537d6cdcde
-    AnswerName: A6.1
-    Feedback: Negative emotions linked to physical manifestations of aggression -
-      throwing tools at assistants - are absolutely inappropriate
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 1
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1868, y: 4877}
-  - Guid: 92569e01-f69f-445f-8322-03538e92273f
-    AnswerName: A6.2
-    Feedback: "Negative emotions coupled with the psychological coercion \u201Cthe
-      patient will bleed to death because of you\u201D are absolutely unacceptable"
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 1
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1869, y: 5113}
-  - Guid: 2fc296b0-e36f-445f-9cd5-bb2850ef5b34
-    AnswerName: A6.3
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1873, y: 5374}
-  - Guid: a002e915-cfb5-4ba0-8dd1-070e43c2a717
-    AnswerName: A6.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 10
-    Position: {x: 1867, y: 5619}
-  - Guid: 9cc9d7fb-fbb0-4b3a-9c98-848ad3048fc1
-    AnswerName: Q7.1
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1739, y: 6417}
-  - Guid: a2821bac-50ce-42bc-8193-8e38b4bd6986
-    AnswerName: Q7.3
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1736, y: 6893}
-  - Guid: db55491f-c2f6-440e-a581-a39b71b1132e
-    AnswerName: Q7.2
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 10
-    Position: {x: 1739, y: 6655}
-  - Guid: 14d4f636-1978-4f52-9bf1-1e36bc2ef15e
-    AnswerName: Q7.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1733, y: 7148}
-  - Guid: 80d2fc2e-9a42-423f-a48d-35c4aad42726
-    AnswerName: A8.1
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 10
-    Position: {x: 1679, y: 7742}
-  - Guid: ad9a1db7-d135-4e2d-9c36-96017b4ac831
-    AnswerName: A8.2
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1678, y: 7986}
-  - Guid: 5fc92988-9e45-46da-ad61-1a33dcbf9582
-    AnswerName: A8.3
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1685, y: 8249}
-  - Guid: 93c682bd-5144-4c67-bd60-e04b07492871
-    AnswerName: A8.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1680, y: 8504}
-  - Guid: 3286cfe5-2598-4388-8f63-7a3bb5435597
-    AnswerName: A9.1
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1610, y: 9125}
-  - Guid: e12f52f0-16d9-48da-894e-fe622a2c5dae
-    AnswerName: A9.2
-    Feedback: The personal insults are not acceptable at all.
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 1
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1611, y: 9394}
-  - Guid: 52a5f4d7-9357-4fc0-83a4-44b03cfec5ab
-    AnswerName: A9.3
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 10
-    Position: {x: 1620, y: 9663}
-  - Guid: 55a14e42-d21f-4360-8887-40e86483439e
-    AnswerName: A9.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1628, y: 9928}
-  - Guid: 7ec6135e-02d0-4a64-a853-499430a24c06
-    AnswerName: AnswerID
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 1
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 10
-    Position: {x: 1516, y: 10888}
-  - Guid: 93e8669a-40db-45f5-bcc2-95cd2e95422d
-    AnswerName: AnswerID
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 1
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 10
-    Position: {x: 1518, y: 11139}
-  - Guid: c3b8e998-a9bb-4018-a3fc-94abd0ff80db
-    AnswerName: AnswerID
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 1
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1521, y: 11379}
-  - Guid: d01139bc-580c-45c8-91f2-ea0377922a1d
-    AnswerName: AnswerID
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 1
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1524, y: 11643}
+    Position: {x: 698, y: 907}
   DialogueNodeData:
-  - Guid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
+  - Guid: 7aa19eac-9778-4449-9c2d-b043746344c1
     DialogueName: D1.1
-    DialogueText: 'All team members are on their places, you are the First Endoscopist,
-      you are holding the endoscope and prepared for the insertion. Then you ask:'
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1954, y: 180}
-  - Guid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
-    DialogueName: D1.2
     DialogueText: Are we ready? Can we start?
     Speaker: Endoscopist 1
     Mood: Calm
-    audioId: Audio id
+    audioId: AudioD1.1
     nodeType: 3
-    Position: {x: 2894, y: 179}
-  - Guid: 5a1b518d-83fc-4f1f-9c70-0df5e62f37f8
-    DialogueName: D1.3
-    DialogueText: Yes, everything is OK.
+    Position: {x: 658, y: -78}
+  - Guid: 51f628e3-d642-4e12-9212-9937db02b8f6
+    DialogueName: D1.2
+    DialogueText: Yes, everything is OK
     Speaker: Anaesthesiologist
     Mood: Calm
-    audioId: Audio id
+    audioId: AudioD1.2
     nodeType: 3
-    Position: {x: 3161, y: 177}
-  - Guid: 6f4fbb9d-704b-4dc0-8bc1-44762e9087f5
-    DialogueName: D1.5
-    DialogueText: Excuse me, I have not realised it.
-    Speaker: Endoscopy Nurse
-    Mood: Regretful
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2936, y: 411}
-  - Guid: c4fe1ad4-468a-44a9-a2e0-77367ed9723d
-    DialogueName: D1.1.1
-    DialogueText: You don't have to wear the mask? Do you follow any special rules
-      which I am not aware of?
+    Position: {x: 940, y: -83}
+  - Guid: 0c05869b-98c7-44ae-b1c6-668d3de01bae
+    DialogueName: D1.1.1.1
+    DialogueText: 'You don''t have to wear the mask? Do you follow any special rules
+      which I am not aware of? '
     Speaker: Endoscopist 1
-    Mood: Ironic
-    audioId: Audio id
+    Mood: ironically
+    audioId: AudioD1.1.1.1
     nodeType: 3
-    Position: {x: 2296, y: 403}
-  - Guid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
-    DialogueName: D1.1.3
-    DialogueText: Take the mask immediately! You should wear it during endoscop,
-      it is a part of common dress code.
-    Speaker: Endoscopist 1
-    Mood: Aggressive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2227, y: 915}
-  - Guid: 8d624d3d-6290-485e-a072-f08bcbbf3039
-    DialogueName: D1.1.2
-    DialogueText: You don't have a mask, please put it on.
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2269, y: 681}
-  - Guid: 7805dd50-2dcc-4f84-919b-8f43a000746e
-    DialogueName: D1.8
-    DialogueText: Excuse me, I have not realised it.
-    Speaker: Endoscopy Nurse
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2889, y: 912}
-  - Guid: d7a7eaf3-ef7b-456b-92f1-5a627bd946dd
-    DialogueName: D1.1.4
-    DialogueText: This is unbelievable! Get out immediately and come back as soon
-      as you know how to be properly dressed to perform.
-    Speaker: Endoscopist 1
-    Mood: Aggressive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2232, y: 1136}
-  - Guid: 8a9b76c5-4b77-4995-a7b9-47f7301a4fbe
-    DialogueName: D2.1
-    DialogueText: The endoscopy nurse puts the mask on and the procedure starts.
-      You introduce the endoscope and turn to the nurse.
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1899, y: 1462}
-  - Guid: 4cff95b7-9c2b-4618-b0bb-c657e47cfb6d
-    DialogueName: D2.2
-    DialogueText: We are starting the endoscopic mucosal resection of the early rectal
-      cancer. It is a very special type of procedure. Have you checked the endoscopic
-      findings?
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2724, y: 1458}
-  - Guid: 51a416c3-ca43-46af-8200-90d6013c16c4
-    DialogueName: D2.3
-    DialogueText: Yes, I have gone through it.
+    Position: {x: 915, y: 163}
+  - Guid: c50afb77-6fd6-4f3c-bc56-ffe83f89640b
+    DialogueName: D1.1.1.2
+    DialogueText: Excuse me, I have not realised it
     Speaker: Endoscopy nurse
-    Mood: Calm
-    audioId: Audio id
+    Mood: regretfully
+    audioId: AudioD1.1.1.2
     nodeType: 3
-    Position: {x: 3748, y: 1457}
-  - Guid: de60cf79-82be-4699-a572-971570090c0f
-    DialogueName: D2.1.1
-    DialogueText: "In your case, this is almost the reason to celebrate\u2026"
-    Speaker: Endoscopist 1
-    Mood: Ironic
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2167, y: 1812}
-  - Guid: 3b3f2fa7-e420-437c-a37c-3c78c2bd93e5
-    DialogueName: D2.1.2
-    DialogueText: Very well! I am happy to hear that! It is good when a nurse is
-      aware of the planned procedure beforehand
+    Position: {x: 1578, y: 154}
+  - Guid: 51bba5b0-9f29-4c47-8f67-f3cb50b110c1
+    DialogueName: D1.1.2.1
+    DialogueText: You don't have a mask, please put it on
     Speaker: Endoscopist 1
     Mood: Calm
-    audioId: Audio id
+    audioId: AudioD1.1.2.1
     nodeType: 3
-    Position: {x: 2168, y: 2022}
-  - Guid: c6196b0e-9291-4239-be5e-fcf282dba917
-    DialogueName: D2.1.3
-    DialogueText: 'Excellent, so I hope that your work will better than your endoscopic
-      dress code. '
-    Speaker: Endoscopist 1
-    Mood: Ironic
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2156, y: 2256}
-  - Guid: 4ac6c4e9-0e3c-4c8d-b83d-85225152db62
-    DialogueName: D2.1.4
-    DialogueText: OK.
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2159, y: 2474}
-  - Guid: 086299ed-0bb5-401c-a85f-209462d63ecf
-    DialogueName: D3.1
-    DialogueText: 'Endoscopy nurse begins to cry and runs out of the theatre. After
-      a while, another nurse is coming. '
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1886, y: 2759}
-  - Guid: c087547e-17db-470f-b9ce-61c9944922d7
-    DialogueName: D4.2
-    DialogueText: Sorry I didn't understand you.
-    Speaker: Endoscopy nurse
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2838, y: 2761}
-  - Guid: 67c00472-5def-4c22-8817-394221de4e63
-    DialogueName: D4.1
-    DialogueText: Injector.
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2622, y: 2767}
-  - Guid: d72b299d-8157-469a-8def-c66e85fb005d
-    DialogueName: D4.3
-    DialogueText: Injector!
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 3123, y: 2750}
-  - Guid: 88643278-47d4-47d2-aa5b-a8728fd32b6b
-    DialogueName: D4.4
-    DialogueText: This one?
-    Speaker: Endoscopy nurse
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2089, y: 2984}
-  - Guid: 36cc2a75-e4a9-460e-b3d9-29d96aca2dae
-    DialogueName: D4.5
-    DialogueText: "Yes, of course, which else. Have you ever assisted during the
-      endoscopic mucosal resection?\u201D"
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2377, y: 2980}
-  - Guid: 14911ca4-2043-41aa-ba27-3d54b48fd2cf
-    DialogueName: D4.6
-    DialogueText: I have seen this type of surgery several times, but I have not
-      experienced it myself, yet. Hopefully, I will manage it.
-    Speaker: Endoscopy nurse
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 3067, y: 2980}
-  - Guid: 605fd93c-b56b-4ec5-92e5-bc76556904a1
-    DialogueName: D4.1.1
-    DialogueText: 'Leave immediately and send here a nurse experienced with this
-      type of 0ion.  '
-    Speaker: Endoscopist 1
-    Mood: Aggresive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2355, y: 3326}
-  - Guid: 8cc26d1d-d069-4335-ae8d-27c6a8b24e48
-    DialogueName: D4.1.2
-    DialogueText: 'That is your problem, I do not care, you should have said anything
-      earlier. I am just warning you of any problems! '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2360, y: 3533}
-  - Guid: dc1d5816-25ab-45ed-8146-35e5620ea4d9
-    DialogueName: D4.1.3
-    DialogueText: 'Are you sure that you will manage that? '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2366, y: 3755}
-  - Guid: 88697d65-8e31-4ec4-a2cd-73c829228490
-    DialogueName: D4.1.4
-    DialogueText: 'Perfect, I also believe that we will manage it together. In any
-      case, please make sure that a spare nurse who will come if needed is available
-      to help you. '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2371, y: 3960}
-  - Guid: 770517d2-cd24-4527-aaea-765583db9f5c
-    DialogueName: D5.1
-    DialogueText: 'Endoscopy nurse begins to cry and runs out of the theatre. After
-      a while, another nurse is coming. '
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1812, y: 4284}
-  - Guid: 5b6fa2ca-3b2e-4e25-855c-34efbadd9379
-    DialogueName: D6.1
-    DialogueText: Polypectomy snare.
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2605, y: 4273}
-  - Guid: c17b55e7-ead9-4413-8fea-0b630bce2619
-    DialogueName: D6.2
-    DialogueText: 'Endoscopy nurse passes Endoscopist 1 the snare. Endoscopist 1
-      works, suddenly takes the snare out of the endoscope, gives it to Endoscopy
-      nurse. Endoscopy nurse puts it aside on the table with accessories. '
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2828, y: 4273}
-  - Guid: 26b4a5f8-c71d-4ac2-ad58-534ceabf6c08
-    DialogueName: D6.3
-    DialogueText: The vessel burst, I see the intense bleeding, pass the forceps.
-      Quickly!
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1833, y: 4515}
-  - Guid: 7e07876b-0312-43f0-87af-370a2af4563c
-    DialogueName: D6.4
-    DialogueText: Endoscopy nurse repeatedly searches among the tools on the table
-      with accessories. Finally, she passes something to Endoscopist 1.
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2310, y: 4525}
-  - Guid: 1a6b1e25-0036-49c5-b860-6004cdd6fdb8
-    DialogueName: D6.5
-    DialogueText: This is not the correct tool.
-    Speaker: Endoscopist 2
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 3240, y: 4512}
-  - Guid: ec255719-74a5-4a4c-b34a-8bb220f23056
-    DialogueName: D6.2.1
-    DialogueText: "I didn\u2019t want that! What are you passing me?! "
-    Speaker: Endoscopist 1
-    Mood: Aggressive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 3143, y: 4874}
-  - Guid: 4793443e-5829-4b20-aab5-72a6c36a3b75
-    DialogueName: D6.1.1
-    DialogueText: 'You throw the instrumental back at the nurse and shout:'
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2695, y: 4875}
-  - Guid: a9878c58-02bc-4823-adb4-782026ce6f4f
-    DialogueName: D6.1.2
-    DialogueText: 'You give the tool back to Endoscopy nurse and say:'
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2788, y: 5115}
-  - Guid: 8054b6bc-a957-4715-8035-619404c530e6
-    DialogueName: D6.2.2
-    DialogueText: These not Coagrasper forceps, give it to me quickly, or the patient
-      will bleed to death because of you.
-    Speaker: Endoscopist 1
-    Mood: Aggressive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 3178, y: 5117}
-  - Guid: f082b37a-e39b-4be2-ad67-2a7994fda7c7
-    DialogueName: D6.1.3
-    DialogueText: 'You give the tool back to Endoscopy nurse and say:'
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2112, y: 5369}
-  - Guid: df6a1745-c7ea-44b6-b17d-64985f1d3c02
-    DialogueName: D6.3.1
-    DialogueText: 'I wanted Coagrasper forceps, please pass them to me. '
+    Position: {x: 937, y: 433}
+  - Guid: b43871e8-4f78-4157-b8db-9f3fd3ff1706
+    DialogueName: D1.1.3.1
+    DialogueText: Take the mask immediately! You should wear it during endoscopy,
+      it is a part of common dress code
     Speaker: Surgeon1
     Mood: Calm
-    audioId: Audio id
+    audioId: AudioD1.1.3.1
     nodeType: 3
-    Position: {x: 2463, y: 5368}
-  - Guid: 3bea7de1-7762-4b9a-b41e-50ab99ef6910
-    DialogueName: D6.1.4
-    DialogueText: 'These not Coagrasper forceps, have you prepared them? '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2082, y: 5617}
-  - Guid: 4d7e8458-3739-46c6-a6bf-301ccf8bf19c
-    DialogueName: D6.4.1
-    DialogueText: Please help the nurse.
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2513, y: 5620}
-  - Guid: 03bf28d6-514e-45d5-bb9d-c90555cb77ea
-    DialogueName: D6.4.2
-    DialogueText: 'Endoscopist 2 and Endoscopy nurse search the correct tool together
-      on the table with accessories. '
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2690, y: 5614}
-  - Guid: c17ed2a9-732d-4ada-b3bf-2bf30fb41573
-    DialogueName: D7.1
-    DialogueText: Endoscopy nurse passes the right tool, while you work. He stops
-      the bleeding, return the tool to the nurse
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1786, y: 5953}
-  - Guid: f0abf715-999e-465d-8d28-afad3c0eb252
-    DialogueName: D7.2
-    DialogueText: Bleeding stopped. How is the situation?
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2551, y: 5936}
-  - Guid: b7d95141-5be1-4b3a-bec3-e2ebdb2c3bb1
-    DialogueName: D7.3
-    DialogueText: The patient is stable, we can continue
-    Speaker: Anesthesiologist
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2904, y: 5949}
-  - Guid: 51a140cc-2266-4159-9d1c-24f401e25948
-    DialogueName: D7.4
-    DialogueText: Give me a haemoclip, please.
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1760, y: 6172}
-  - Guid: 14add801-dacf-4872-b07b-7945b1205e97
-    DialogueName: D7.5
-    DialogueText: Mmm...
+    Position: {x: 961, y: 689}
+  - Guid: 028e784d-d3c4-4966-ac84-82967319623a
+    DialogueName: D1.1.3.2
+    DialogueText: Excuse me, I have not realised it.
     Speaker: Endoscopy nurse
-    Mood: Calm
-    audioId: Audio id
+    Mood: regretfully
+    audioId: AudioD1.1.3.2
     nodeType: 3
-    Position: {x: 2107, y: 6164}
-  - Guid: 7bb8b44c-7bf4-4ee8-939a-33fd283c0119
-    DialogueName: D7.1.4
-    DialogueText: "You can\u2019t assist, you can't speak, that's the highlight,
-      I could have assisted myself. "
-    Speaker: Endoscopist 1
-    Mood: Aggressive
-    audioId: Audio id
+    Position: {x: 1688, y: 668}
+  - Guid: 4115fe67-9d82-4dc4-bf48-2ecb762200d5
+    DialogueName: D1.1.4.1
+    DialogueText: This is unbelievable! Get out immediately and come back as soon
+      as you know how to be properly dressed to perform
+    Speaker: 'Endoscopist 1 '
+    Mood: aggressively
+    audioId: AudioD1.1.4.1
     nodeType: 3
-    Position: {x: 1974, y: 7149}
-  - Guid: 93f8b0be-6fe3-4994-a5e8-27be06812160
-    DialogueName: D7.1.2
-    DialogueText: 'I am sorry, I have not understood. Please speak loud, slowly and
-      clearly. '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1974, y: 6655}
-  - Guid: 004fbf90-c7b6-4da8-8923-7c8f1ce073e6
-    DialogueName: D7.1.1
-    DialogueText: "I don\u2019t understand a word. Can you speak understandably and
-      loud? "
-    Speaker: Endoscopist 1
-    Mood: Aggressive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1982, y: 6418}
-  - Guid: 43a61855-5dcb-4bf5-9142-b56346ac5818
-    DialogueName: D7.1.3
-    DialogueText: What? What!
-    Speaker: Endoscopist 1
-    Mood: Aggressive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1965, y: 6894}
-  - Guid: eb1da68f-2d71-4057-bd57-96b8b4c3e322
-    DialogueName: D8.1
-    DialogueText: Endoscopy nurse nervously searches among the tools, then grabs
-      the tool and it falls down.
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1664, y: 7497}
-  - Guid: d0df4759-dd2a-4988-9422-ebf226d6711b
-    DialogueName: D8.2
-    DialogueText: You probably slept badly, didn't you?
-    Speaker: Anaesthesiologist
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2313, y: 7494}
-  - Guid: 97c98238-5955-41a7-acfb-c3c33e7b8868
-    DialogueName: D8.1.4
-    DialogueText: 'You are probably completely out today. '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2027, y: 8503}
-  - Guid: 61aa688d-d419-4735-8ae1-3c00090c7f89
-    DialogueName: D8.1.3
-    DialogueText: Keep working.
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2016, y: 8243}
-  - Guid: 6d29a25b-3b39-4207-96a2-1b982770f363
-    DialogueName: D8.1.2
-    DialogueText: 'Please rather care about your business. The patient is restless,
-      we cannot work properly.  '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2011, y: 7988}
-  - Guid: 14539d48-cef4-4864-b50d-344f1f06ddf0
-    DialogueName: D8.1.1
-    DialogueText: 'How is the patient doing? What about the blood pressure? '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2012, y: 7740}
-  - Guid: 92759ce2-ef61-4a43-8b43-a626d9775529
-    DialogueName: D8.2.1
-    DialogueText: 'It can happen to everyone. '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2482, y: 7736}
-  - Guid: e38576bb-fdf5-4d38-a9f4-83592a039061
-    DialogueName: D9.1
-    DialogueText: Speaking to Endoscopy nurse
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1673, y: 8866}
-  - Guid: 06037e84-a131-4340-a525-4f80e325b5f8
-    DialogueName: D9.1.1
-    DialogueText: 'Leave immediately and call the head nurse. '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1896, y: 9121}
-  - Guid: 8449993a-0d7c-4107-9a5f-8f516c9961bd
-    DialogueName: D9.1.2
-    DialogueText: 'You are absolutely useless!  '
-    Speaker: Endoscopist 1
-    Mood: Aggressive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1990, y: 9396}
-  - Guid: e78bcb9d-c988-44aa-8490-811a0c6d8e04
-    DialogueName: D9.1.3
-    DialogueText: 'Is there a nurse who would be available to help you? The patient
-      is complicated. Do not worry and call her, please. '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1884, y: 9666}
-  - Guid: 5a9365e7-2d1a-4188-9f63-a61e62041993
-    DialogueName: D9.1.4
-    DialogueText: 'Should I assist myself?! '
-    Speaker: Endoscopist 1
-    Mood: Aggressive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1844, y: 9927}
-  - Guid: 8df33430-149a-4697-b054-ab4785e213fd
-    DialogueName: D10.1
-    DialogueText: The second nurse is coming and starts to assist the first one.
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1431, y: 10293}
-  - Guid: 5edad345-ee46-4cc2-9ee1-1d916951839f
-    DialogueName: D11.1
-    DialogueText: 'The secretary enters the room unexpectedly, and talks to you:'
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1896, y: 10293}
-  - Guid: ee7ac6df-0bfc-4712-9aa5-59a48006cea1
-    DialogueName: D11.2
-    DialogueText: 'Are you going to finish the procedure, please? There are four
-      other patients in the waiting room, who have been scheduled and who are nervous. '
-    Speaker: Secretary
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2346, y: 10294}
-  - Guid: a28344df-f3c7-47ca-b08f-60360ee5e2dd
-    DialogueName: D11.3
-    DialogueText: The external disturbing people should not access the theatre.
-    Speaker: Narrator
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1542, y: 10561}
-  - Guid: 274e84f3-4ef8-4270-9f82-e21cb19e0536
-    DialogueName: D11.1.1
-    DialogueText: 'Please describe the scheduled patients the situation and ensure
-      that no one will further disturb us. '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1775, y: 10889}
-  - Guid: 442d07ea-24ff-4a37-9ac1-deeb523365d3
-    DialogueName: D11.1.4
-    DialogueText: Come later.
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1771, y: 11645}
-  - Guid: a245faa7-a5ab-4785-bd88-de46dbd48eb4
-    DialogueName: D11.1.2
-    DialogueText: "Reschedule patients\u2019 appointments for different terms. "
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1775, y: 11142}
-  - Guid: 31b5ab0b-7752-4de5-b39a-452ec6de5bec
-    DialogueName: D11.1.3
-    DialogueText: 'Leave immediately and do not disturb us! '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1775, y: 11383}
+    Position: {x: 931, y: 905}
   ExposedProperties: []
