@@ -59,6 +59,11 @@ public class UI_Manager : MonoBehaviour
     int lastQuestion;
     int currentQuestion;
 
+    //RandomAnims
+    float animTimer = 2.0f;
+    float timer = 0f;
+    int numOfExtraAnims = 2;
+
     [HideInInspector]
     public string playereRoute;
     public int totalScore; 
@@ -85,7 +90,22 @@ public class UI_Manager : MonoBehaviour
 
     void Update()
     {
-        
+        CheckRandomAnims();
+    }
+
+    public void CheckRandomAnims()
+    {
+        //Cada x tiempo metemos una animacion random en un personaje random
+        if (timer >= animTimer)
+        {
+            timer = 0f;
+            string randomCharacter = characteres[Random.Range(0, characteres.Count)].gameObject.name;
+            dictionaryCharacteres[randomCharacter].SetInteger("randomAnim", Random.Range(1, numOfExtraAnims + 1));
+        }
+        else
+        {
+            timer += Time.deltaTime;
+        }
     }
 
     public void SetupUI(SituationNodeData _situation)
@@ -303,6 +323,9 @@ public class UI_Manager : MonoBehaviour
     {
         foreach (var item in characteres)
         {
+            float randomStartDelay = Random.Range(0, 4.5f);//random init delay
+            item.Update(randomStartDelay);
+
             dictionaryCharacteres.Add(item.gameObject.name, item);
             //Debug.Log($"Se ha añadido el {item.gameObject.name} al diccionario");
         }
