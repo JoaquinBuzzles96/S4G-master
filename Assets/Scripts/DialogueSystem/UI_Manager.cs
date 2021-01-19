@@ -266,7 +266,8 @@ public class UI_Manager : MonoBehaviour
 
     private string GetAudioPath(string _audio)
     {
-        string path = $"Audio/Case5_EN/{_audio}";
+        //string path = $"Audio/Case5_EN/{_audio}";
+        string path = $"Audio/Case5_EN/Audio1"; //default value
         if (isValid(caso) && LanguageManager.Instance != null)
         {
             if (isValid(LanguageManager.Instance.languageSelected))
