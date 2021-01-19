@@ -233,15 +233,16 @@ public class UI_Manager : MonoBehaviour
 
     public float PlayAudioOnSpeaker(string _audio, string _speaker, string _mood)
     {
+        string speaker = Translate(_speaker);
         //Animacion
         //Debug.Log($"Comprobamos si el diccionario contiene {_speaker}");
-        if (dictionaryCharacteres.ContainsKey(_speaker) && _speaker != "Narrator")
+        if (dictionaryCharacteres.ContainsKey(speaker) && speaker != "Narrator")
         {
-            SetMoodAnim(_speaker, _mood);
+            SetMoodAnim(speaker, _mood);
         }
         else
         {
-            Debug.Log($"No se ha encontrado el speaker {_speaker}");
+            Debug.Log($"No se ha encontrado el speaker {_speaker} --> {speaker}");
         }
 
         //Audio
@@ -288,14 +289,25 @@ public class UI_Manager : MonoBehaviour
     {
         //string path = $"Audio/Case5_EN/{_audio}";
         string path = $"Audio/Case5_EN/Audio1"; //default value
-        if (isValid(caso) && LanguageManager.Instance != null)
+        if (isValid(caso) && LanguageManager.Instance != null && isValid(_audio))
         {
             if (isValid(LanguageManager.Instance.languageSelected))
             {
                 path = $"Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}";
             }
+            else
+            {
+                Debug.Log("No se ha encontrado el audio por lo que asignamos uno por defecto");
+                path = $"Audio/Case3_ES/Audio1";
+            }
+        }
+        else
+        {
+            Debug.Log("No se ha encontrado el audio por lo que asignamos uno por defecto");
+            path = $"Audio/Case3_ES/Audio1";
         }
 
+        //Debug.Log($"Vamos a devolver el path {path}");
         return path;
     }
 
@@ -347,9 +359,9 @@ public class UI_Manager : MonoBehaviour
 
     public bool isValid(string texto)
     {
-        if (texto == null || texto == "" || texto == "Deprecated field (use description node)")
+        if (texto == null || texto == "" || texto == "Deprecated field (use description node)" || texto == "Audio id")
         {
-            Debug.LogError($"El texto utilizado no es valido");
+            Debug.Log($"El texto utilizado no es valido");
             return false;
         }
 
@@ -403,7 +415,7 @@ public class UI_Manager : MonoBehaviour
             //RefreshDialogues(situationDialogues, situationDialogueTexts);
             StartCoroutine(PlayDialogues(situationDialogues, situationDialogueTexts, nextButtonSituation));
 
-            Debug.Log($"Se ha asignado el primer dialogo de la situacion {situation.SituationName}, dialogo = {situationDialogues[0].DialogueText}");
+            //Debug.Log($"Se ha asignado el primer dialogo de la situacion {situation.SituationName}, dialogo = {situationDialogues[0].DialogueText}");
         }
         else
         {
@@ -513,6 +525,37 @@ public class UI_Manager : MonoBehaviour
 
         currentDialogue += i;
         nextButton.SetActive(true);
+    }
+
+    public string Translate(string toTranslate) //Spanish to English
+    {
+        string aux = toTranslate;
+        //{ Surgeon1, Surgeon2, CirculatingNurse, AnaesthesiaNurse, InstrumentalistNurse, Anaesthesiologist};
+        //Scene 7: Endoscopist1, Endoscopist2, EndoscopyNurse, AnaesthesiaNurse, Anaesthesiologist
+        switch (toTranslate)
+        {
+            case "Endoscopista 1":
+                aux = "Endoscopist1";
+                break;
+            case "Anastesiólogo":
+                aux = "Anaesthesiologist";
+                break;
+            case "Enfermera de endoscopia":
+                aux = "EndoscopyNurse";
+                break;
+            case "Endoscopista 2":
+                aux = "Endoscopist2";
+                break;
+            case "Secretaria":
+                //TODO: CUANDO ESTE LA SECRETARIA
+                break;
+            case "Enfermera de anestesia":
+                aux = "AnaesthesiaNurse";
+                break;
+        }
+
+
+        return aux;
     }
 
 }
