@@ -11,6 +11,7 @@ public class QuestionUI : MonoBehaviour
     [System.NonSerialized]
     public QuestionNodeData questionData;
     private List<AnswerNodeData> answersData;
+    public GameObject AnswerContainer;
 
     void Start()
     {
@@ -48,6 +49,9 @@ public class QuestionUI : MonoBehaviour
             answers[j].GetComponent<AnswerUI>().ClearAnswer();
             //Debug.Log($"El slot {j} esta clear");
         }
-        
+
+        StartCoroutine(UI_Manager.Instance.PlaySimpleDialogue(questionData.audioId, AnswerContainer));
+
     }
+
 }

@@ -3376,6 +3376,7 @@ MonoBehaviour:
   - {fileID: 769037846}
   - {fileID: 2025342477}
   - {fileID: 1741668047}
+  AnswerContainer: {fileID: 0}
 --- !u!1 &571394906
 GameObject:
   m_ObjectHideFlags: 0
@@ -4021,6 +4022,7 @@ MonoBehaviour:
   dialogueContainer: {fileID: 11400000, guid: dd5957f959bf4e04fab1d32f67279867, type: 2}
   screen1: {fileID: 2030489334}
   contextDescription: {fileID: 0}
+  nextButtonContext: {fileID: 0}
   screen2: {fileID: 523089752}
   situationDialogueTexts: []
   nextButtonSituation: {fileID: 0}
@@ -4030,6 +4032,7 @@ MonoBehaviour:
   nextButtonAnswer: {fileID: 0}
   screen5: {fileID: 0}
   feedbackText: {fileID: 0}
+  nextButtonFeedback: {fileID: 0}
   choosenAnswer:
     Guid: 
     AnswerName: 
@@ -11118,7 +11121,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000536165941635007}
   m_LocalRotation: {x: -0, y: -0.8077046, z: -0, w: -0.5895874}
-  m_LocalPosition: {x: 0, y: 0, z: 0.477}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5096}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children:
   - {fileID: 1000536167173744259}
@@ -11133,8 +11136,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -252.255, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.287, y: 1.939}
-  m_SizeDelta: {x: 57.055832, y: 42.27072}
+  m_AnchoredPosition: {x: 6.2974, y: 1.9643}
+  m_SizeDelta: {x: 69.51708, y: 51.50284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1000536165941635004
 AudioSource:
@@ -11247,6 +11250,7 @@ MonoBehaviour:
   dialogueContainer: {fileID: 11400000, guid: b489d146a43c88a49b152a10af29b034, type: 2}
   screen1: {fileID: 1000536165907182120}
   contextDescription: {fileID: 1000536166054116091}
+  nextButtonContext: {fileID: 1000536166238291980}
   screen2: {fileID: 1000536167682142408}
   situationDialogueTexts:
   - {fileID: 1000536168020624433}
@@ -11264,6 +11268,7 @@ MonoBehaviour:
   nextButtonAnswer: {fileID: 1000536167719631293}
   screen5: {fileID: 1000536166923683994}
   feedbackText: {fileID: 1000536167858808164}
+  nextButtonFeedback: {fileID: 1000536167454953546}
   choosenAnswer:
     Guid: 
     AnswerName: 
@@ -11574,7 +11579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.059999466, y: -7.4300003}
+  m_AnchoredPosition: {x: -0.060001373, y: -7.4300003}
   m_SizeDelta: {x: -0.16175461, y: -15.511471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1000536166127964939
@@ -15743,6 +15748,7 @@ MonoBehaviour:
   - {fileID: 1000536166210379760}
   - {fileID: 1000536167692888312}
   - {fileID: 1000536167736325507}
+  AnswerContainer: {fileID: 1000536166147383437}
 --- !u!224 &1000536167450445073
 RectTransform:
   m_ObjectHideFlags: 0

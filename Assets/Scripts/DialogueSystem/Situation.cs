@@ -10,6 +10,7 @@ public class Situation : ScriptableObject
     public string situationName;
     public string description;
     public int id;
+    public string audio_id;
     public List<Question> questions = new List<Question>();
 
     public Question question1;

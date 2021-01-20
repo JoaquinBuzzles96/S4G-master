@@ -12,6 +12,7 @@ public class AnimManager : StateMachineBehaviour
         animator.SetBool("isRegret", false);
         animator.SetBool("isYelling", false);
         animator.SetInteger("randomAnim", 0);
+        animator.SetBool("animFinished", false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
