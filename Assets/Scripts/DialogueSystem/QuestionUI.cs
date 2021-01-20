@@ -27,7 +27,7 @@ public class QuestionUI : MonoBehaviour
     public void SetupQuestion()
     {
         description.text = questionData.Description;
-        Debug.Log($"Setup description: {questionData.Description}");
+        //Debug.Log($"Setup description: {questionData.Description}");
 
         UI_Manager.Instance.lastTime = Time.time;
         answersData = UI_Manager.Instance.dialogueContainer.GetQuestionAnswers(questionData.Guid);

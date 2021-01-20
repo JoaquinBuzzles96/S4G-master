@@ -9,6 +9,11 @@ public class OptionsManager : MonoBehaviour
 
     public List<TextMeshProUGUI> options; //De momento las opciones estan seteadas en el editor, pero dejo esto aqui por si fuera necesario
 
+    public TextMeshProUGUI selectedCase;
+
+    public string prueba;
+    
+
     void Start()
     {
         
@@ -22,5 +27,17 @@ public class OptionsManager : MonoBehaviour
     public void LoadLevel(string scene)
     {
         SceneManager.LoadScene(scene);
+    }
+
+    public void LoadLevelSelected()
+    {
+        Debug.Log($"Vamos a intentar cargar el caso {selectedCase.text}");
+
+        if (selectedCase.text != null && selectedCase.text != "")
+        {
+            LanguageManager.Instance.caseSelected = selectedCase.text;
+            SceneManager.LoadScene("Scene7");
+        }
+        
     }
 }

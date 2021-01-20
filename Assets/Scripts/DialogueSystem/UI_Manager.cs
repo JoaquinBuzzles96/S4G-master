@@ -235,7 +235,10 @@ public class UI_Manager : MonoBehaviour
 
     public float PlayAudioOnSpeaker(string _audio, string _speaker, string _mood)
     {
-        string speaker = Translate(_speaker);
+        string speaker = Translate(_speaker); //spanish to english
+        //Comprobamos el audio de las enfermeras
+        _audio = SpecialCases.Instance.ChechkAudio(_audio, speaker);
+
         //Animacion
         //Debug.Log($"Comprobamos si el diccionario contiene {_speaker}");
         if (dictionaryCharacteres.ContainsKey(speaker) && speaker != "Narrator")
@@ -244,7 +247,11 @@ public class UI_Manager : MonoBehaviour
         }
         else
         {
-            Debug.Log($"No se ha encontrado el speaker {_speaker} --> {speaker}");
+            if (_speaker != "Narrador" && _speaker != "Narrator")
+            {
+                Debug.Log($"No se ha encontrado el speaker {_speaker} --> {speaker}");
+            }
+                
         }
 
         //Audio
@@ -317,6 +324,7 @@ public class UI_Manager : MonoBehaviour
     {
         if (LanguageManager.Instance != null)
         {
+            //caso = LanguageManager.Instance.caseSelected; //TODO: En un futuro funcionara con esto, de momento dejarlo comentado
             dialogueContainer = Resources.Load($"Cases/{caso}_{LanguageManager.Instance.languageSelected}") as DialogueContainer;
             Debug.Log($"Cargamos el case Cases/{caso}_{LanguageManager.Instance.languageSelected}");
         }
@@ -384,6 +392,9 @@ public class UI_Manager : MonoBehaviour
                 //Check if situation context no es nulo
                 situation = dialogueContainer.GetNextSituation(choosenAnswer.Guid);
 
+                //Comprobamos si alguna enfermera ha salido corriendo :')
+                SpecialCases.Instance.CheckSituation(situation.SituationName);
+
                 if (isValid(situation.Context))
                 {
                     ToScreen1(situation, originScreen);
@@ -405,7 +416,7 @@ public class UI_Manager : MonoBehaviour
 
         StartCoroutine(PlaySimpleDialogue(situation.audioId, nextButtonContext));
 
-        Debug.Log($"Se ha configurado el contexto de la situacion {situation.SituationName}");
+        //Debug.Log($"Se ha configurado el contexto de la situacion {situation.SituationName}");
 
     }
 
@@ -447,7 +458,7 @@ public class UI_Manager : MonoBehaviour
 
         lastQuestion = currentQuestion;
 
-        Debug.Log($"Se ha configurado la screen 3 con la pregunta y las respuestas de la situacion {situation.SituationName}, pregunta {questions[currentQuestion].QuestionName}");
+        //Debug.Log($"Se ha configurado la screen 3 con la pregunta y las respuestas de la situacion {situation.SituationName}, pregunta {questions[currentQuestion].QuestionName}");
     }
 
     public void SetUpScreen4(AnswerNodeData answer)
@@ -459,7 +470,7 @@ public class UI_Manager : MonoBehaviour
             //RefreshDialogues(answerDialogues, answerDialogueTexts);
             StartCoroutine(PlayDialogues(answerDialogues, answerDialogueTexts, nextButtonAnswer));
 
-            Debug.Log($"Se ha asignado el primer dialogo de la answer {answer.AnswerName}, dialogo = {answerDialogues[0].DialogueText}");
+            //Debug.Log($"Se ha asignado el primer dialogo de la answer {answer.AnswerName}, dialogo = {answerDialogues[0].DialogueText}");
         }
         else
         {
@@ -529,7 +540,11 @@ public class UI_Manager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log($"No se encontro el speaker {Translate(dialoguesData[currentDialogue + i].Speaker)}");
+                    if (dialoguesData[currentDialogue + i].Speaker != "Narrador" && dialoguesData[currentDialogue + i].Speaker != "Narrator")
+                    {
+                        Debug.Log($"No se encontro el speaker {Translate(dialoguesData[currentDialogue + i].Speaker)}");
+                    }
+                    
                 }  
             }
             else

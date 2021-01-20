@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using TMPro;
+using System;
 
 namespace Michsky.UI.ModernUIPack
 {
@@ -40,6 +41,12 @@ namespace Michsky.UI.ModernUIPack
         // Saving
         public bool saveSelected = false;
         public string dropdownTag = "Dropdown";
+
+        //Joaquin changes
+        [SerializeField]
+        public bool isCasesDropdown;
+
+        List<DialogueContainer> cases = new List<DialogueContainer>();
 
         // Item list
         [SerializeField]
@@ -84,7 +91,14 @@ namespace Michsky.UI.ModernUIPack
                 itemList = itemParent.GetComponent<VerticalLayoutGroup>();
 
                 if (dropdownItems.Count != 0)
+                {
                     SetupDropdown();
+                }
+                else //si esta vacio suponemos que es el dropdown de cases
+                {
+                    SetUpCases();
+                }
+                    
 
                 currentListParent = transform.parent;
             }
@@ -109,6 +123,32 @@ namespace Michsky.UI.ModernUIPack
                     dropdownItems[PlayerPrefs.GetInt(dropdownTag + "Dropdown")].OnItemSelection.Invoke();
                 else
                     ChangeDropdownInfo(PlayerPrefs.GetInt(dropdownTag + "Dropdown"));
+            }
+        }
+
+        private void SetUpCases()
+        {
+            //TODO:
+            InitialLoad();
+            foreach (var item in cases)
+            {
+                Item aux = new Item();
+                aux.itemName = item.name;
+                dropdownItems.Add(aux);
+            }
+
+            SetupDropdown();
+        }
+
+        public void InitialLoad()
+        {
+            var casesArray = Resources.LoadAll("Cases", typeof(DialogueContainer));
+            Debug.Log("Se han obtenido los siguientes casos:");
+            foreach (var item in casesArray)
+            {
+                //Debug.Log($"{item.name}");
+                cases.Add(item as DialogueContainer);
+                //Debug.Log($"{cases[cases.Count-1].name}");
             }
         }
 

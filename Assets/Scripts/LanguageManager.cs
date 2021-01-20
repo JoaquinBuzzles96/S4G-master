@@ -9,6 +9,8 @@ public class LanguageManager : MonoBehaviour
 
     
     public string languageSelected = "EN";
+    public string caseSelected = "Case3";
+
     void Awake()
     {
         if (Instance != null)
@@ -34,5 +36,7 @@ public class LanguageManager : MonoBehaviour
         languageSelected = languageSiglas;
         PlayerPrefs.SetString("Language", languageSelected);
     }
+
+
 }
 
