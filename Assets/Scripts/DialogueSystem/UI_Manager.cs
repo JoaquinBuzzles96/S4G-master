@@ -544,8 +544,10 @@ public class UI_Manager : MonoBehaviour
                     {
                         Debug.Log($"No se encontro el speaker {Translate(dialoguesData[currentDialogue + i].Speaker)}");
                     }
-                    
-                }  
+                }
+                //Antes de empezar el siguiente dialogo y antes de comenzar el siguiente comprobamos si hay que hacer alguna accion concreta:
+                SpecialCases.Instance.CheckSpecialEvent(dialoguesData[currentDialogue + i].DialogueName);
+
             }
             else
             {

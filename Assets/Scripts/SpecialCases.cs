@@ -61,4 +61,25 @@ public class SpecialCases : MonoBehaviour
         }
     }
 
+    public void CheckSpecialEvent(string dialogue_id)//con esto comprobaremos si en el dialogo actual debe darse alguna situacion en concreto
+    {
+        switch (dialogue_id)
+        {
+            case "D11.1": //dialogo en el que entra la secretaria
+                //EnterTheRoom(originPos, targetPos, character);
+                break;
+        }
+
+    }
+
+    public void EnterTheRoom(Vector3 originPos, Vector3 targetPos, GameObject characer)
+    {
+        //activar animacion de andar y comenzar desplazamiento
+    }
+
+    public void ExitRoom(Vector3 targetPos, GameObject character) //el origin no es necesario, se saca del characer
+    {
+        EnterTheRoom(character.transform.position, targetPos, character);
+    }
+
 }
