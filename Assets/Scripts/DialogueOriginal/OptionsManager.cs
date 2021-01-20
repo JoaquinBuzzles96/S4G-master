@@ -32,8 +32,17 @@ public class OptionsManager : MonoBehaviour
 
         if (selectedCase.text != null && selectedCase.text != "")
         {
-            LanguageManager.Instance.caseSelected = selectedCase.text;
-            SceneManager.LoadScene("Scene7");
+            switch (selectedCase.text)
+            {
+                case "Tutorial":
+                    SceneManager.LoadScene("Tutorial");
+                    break;
+                default:
+                    LanguageManager.Instance.caseSelected = selectedCase.text;
+                    SceneManager.LoadScene("Scene7");
+                    break;
+            }
+
         }
         
     }
