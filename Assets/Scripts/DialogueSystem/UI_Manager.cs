@@ -572,18 +572,23 @@ public class UI_Manager : MonoBehaviour
         switch (toTranslate)
         {
             case "Endoscopista 1":
+            case "Endoscopist 1":
                 aux = "Endoscopist1";
                 break;
             case "Anastesiólogo":
                 aux = "Anaesthesiologist";
                 break;
             case "Enfermera de endoscopia":
+            case "Endoscopy nurse":
                 aux = "EndoscopyNurse";
                 break;
             case "Endoscopista 2":
+            case "Endoscopist 2":
                 aux = "Endoscopist2";
                 break;
             case "Secretaria":
+            case "Secretary":
+                //aux = "Secretary";
                 //TODO: CUANDO ESTE LA SECRETARIA
                 break;
             case "Enfermera de anestesia":
