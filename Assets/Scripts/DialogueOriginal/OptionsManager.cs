@@ -10,10 +10,7 @@ public class OptionsManager : MonoBehaviour
     public List<TextMeshProUGUI> options; //De momento las opciones estan seteadas en el editor, pero dejo esto aqui por si fuera necesario
 
     public TextMeshProUGUI selectedCase;
-
-    public string prueba;
     
-
     void Start()
     {
         

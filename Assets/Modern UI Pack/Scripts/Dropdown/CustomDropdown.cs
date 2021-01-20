@@ -130,6 +130,7 @@ namespace Michsky.UI.ModernUIPack
         {
             //TODO:
             InitialLoad();
+            dropdownItems.Add(new Item() { itemName = "Tutorial"});
             foreach (var item in cases)
             {
                 Item aux = new Item();
