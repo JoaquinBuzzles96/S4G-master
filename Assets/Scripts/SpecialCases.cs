@@ -29,6 +29,7 @@ public class SpecialCases : MonoBehaviour
     //Esta clase la utilizaremos para definir todas las variables que usaremos en los casos "especiales" :')
 
     public int currentNurse = 1;
+    public bool playingAnimation = false;
 
     public string ChechkAudio(string audio_id, string _speaker) 
     {
@@ -61,6 +62,7 @@ public class SpecialCases : MonoBehaviour
         }
     }
 
+    //devolver float
     public void CheckSpecialEvent(string dialogue_id)//con esto comprobaremos si en el dialogo actual debe darse alguna situacion en concreto
     {
         switch (dialogue_id)
@@ -75,6 +77,11 @@ public class SpecialCases : MonoBehaviour
     public void EnterTheRoom(Vector3 originPos, Vector3 targetPos, GameObject characer)
     {
         //activar animacion de andar y comenzar desplazamiento
+        playingAnimation = true;
+
+
+        //WHEN ITS FINISH
+        playingAnimation = false;
 
 
     }
