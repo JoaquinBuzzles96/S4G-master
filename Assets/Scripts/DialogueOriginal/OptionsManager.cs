@@ -10,7 +10,12 @@ public class OptionsManager : MonoBehaviour
     public List<TextMeshProUGUI> options; //De momento las opciones estan seteadas en el editor, pero dejo esto aqui por si fuera necesario
 
     public TextMeshProUGUI selectedCase;
-    
+
+    public GameObject panelTutorialTransform;
+
+    public GameObject triggerAreaTutorial;
+    public GameObject teleportAreasTutorial;
+
     void Start()
     {
         
@@ -35,7 +40,13 @@ public class OptionsManager : MonoBehaviour
             switch (selectedCase.text)
             {
                 case "Tutorial":
-                    SceneManager.LoadScene("Tutorial");
+                    //change panel position to 
+
+                    this.gameObject.transform.position = panelTutorialTransform.transform.position;
+                    this.gameObject.transform.rotation = panelTutorialTransform.transform.rotation;
+                    EnableTutorial();
+
+                    //SceneManager.LoadScene("Tutorial");
                     break;
                 default:
                     LanguageManager.Instance.caseSelected = selectedCase.text;
@@ -45,5 +56,11 @@ public class OptionsManager : MonoBehaviour
 
         }
         
+    }
+
+    public void EnableTutorial()
+    {
+        triggerAreaTutorial.SetActive(true);
+        teleportAreasTutorial.SetActive(true);
     }
 }
