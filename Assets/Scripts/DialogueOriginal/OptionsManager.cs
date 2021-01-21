@@ -15,6 +15,7 @@ public class OptionsManager : MonoBehaviour
 
     public GameObject triggerAreaTutorial;
     public GameObject teleportAreasTutorial;
+    public GameObject TutorialPanel;
 
     void Start()
     {
@@ -62,5 +63,6 @@ public class OptionsManager : MonoBehaviour
     {
         triggerAreaTutorial.SetActive(true);
         teleportAreasTutorial.SetActive(true);
+        TutorialPanel.SetActive(true);
     }
 }
