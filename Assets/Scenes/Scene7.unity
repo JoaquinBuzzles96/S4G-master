@@ -3799,6 +3799,12 @@ MonoBehaviour:
   speed: 1
   canMove: 0
   lastPointToLook: {fileID: 122873474}
+--- !u!95 &581662755 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1132255341, guid: 7fa379a6ad7f5d643b19da4a9752aee8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1454833837}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &623293236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7914,6 +7920,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1132255341, guid: 7fa379a6ad7f5d643b19da4a9752aee8, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c29cda73ccea8554d93d2411f98955a5, type: 2}
     - target: {fileID: 3865570411229227521, guid: 7fa379a6ad7f5d643b19da4a9752aee8,
         type: 3}
       propertyPath: m_RootOrder
@@ -7972,7 +7982,7 @@ PrefabInstance:
     - target: {fileID: 4534723925890068667, guid: 7fa379a6ad7f5d643b19da4a9752aee8,
         type: 3}
       propertyPath: m_Name
-      value: SecretarioModel
+      value: Secretary
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fa379a6ad7f5d643b19da4a9752aee8, type: 3}
@@ -11850,6 +11860,7 @@ MonoBehaviour:
   - {fileID: 1049191145}
   - {fileID: 478228725}
   - {fileID: 172384950}
+  - {fileID: 581662755}
   caso: Case3
   playereRoute: 
   totalScore: 0
