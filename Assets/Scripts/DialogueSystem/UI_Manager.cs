@@ -520,7 +520,7 @@ public class UI_Manager : MonoBehaviour
     {
         for (int i = 0; i < dialoguesUI.Count; i++)
         {
-            dialoguesUI[i].text = "-";
+            dialoguesUI[i].text = "";
         }
     }
 
