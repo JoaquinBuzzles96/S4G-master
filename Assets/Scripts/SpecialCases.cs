@@ -28,8 +28,10 @@ public class SpecialCases : MonoBehaviour
 
     //Esta clase la utilizaremos para definir todas las variables que usaremos en los casos "especiales" :')
 
+    #region Case3
     public int currentNurse = 1;
     public bool playingAnimation = false;
+    #endregion
 
     public string ChechkAudio(string audio_id, string _speaker) 
     {
@@ -65,10 +67,14 @@ public class SpecialCases : MonoBehaviour
     //devolver float
     public void CheckSpecialEvent(string dialogue_id)//con esto comprobaremos si en el dialogo actual debe darse alguna situacion en concreto
     {
+        //adaptar para que sirva para todos los casos
         switch (dialogue_id)
         {
-            case "D11.1": //dialogo en el que entra la secretaria
-                //EnterTheRoom(originPos, targetPos, character);
+            case "D11.1": //dialogo en el que entra el secretario
+                SimpleWaypointMovement movement = Case3Resources.Instance.secretary.GetComponent<SimpleWaypointMovement>();
+                Case3Resources.Instance.doorAnim.Play();
+                movement.canMove = true;
+                EnterTheRoom(movement.waypoints[0].transform.position, movement.waypoints[movement.waypoints.Length-1].transform.position, Case3Resources.Instance.secretary);
                 break;
         }
 
@@ -78,11 +84,6 @@ public class SpecialCases : MonoBehaviour
     {
         //activar animacion de andar y comenzar desplazamiento
         playingAnimation = true;
-
-
-        //WHEN ITS FINISH
-        playingAnimation = false;
-
 
     }
 
