@@ -597,9 +597,9 @@ public class UI_Manager : MonoBehaviour
                 aux = "Endoscopist2";
                 break;
             case "Secretaria":
+            case "Secretario":
             case "Secretary":
-                //aux = "Secretary";
-                //TODO: CUANDO ESTE LA SECRETARIA
+                aux = "Secretary";
                 break;
             case "Enfermera de anestesia":
                 aux = "AnaesthesiaNurse";
