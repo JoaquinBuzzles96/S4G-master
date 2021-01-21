@@ -26,6 +26,7 @@ public class UI_Manager : MonoBehaviour
 
     public DialogueContainer dialogueContainer;
 
+
     //Screen 1
     public GameObject screen1;
     public TextMeshProUGUI contextDescription;
@@ -65,6 +66,15 @@ public class UI_Manager : MonoBehaviour
     float animTimer = 2.0f;
     float timer = 0f;
     int numOfExtraAnims = 2;
+
+    //temporal:
+    public TalkAnim endoescopista1;
+    public TalkAnim endoescopista2;
+    public TalkAnim anestesiologo;
+    public TalkAnim enfermeraDeEndoscopia;
+    public TalkAnim enfermeraDeAnestesia;
+
+
 
     [HideInInspector]
     public string playereRoute;
@@ -243,6 +253,7 @@ public class UI_Manager : MonoBehaviour
         if (dictionaryCharacteres.ContainsKey(speaker) && speaker != "Narrator")
         {
             SetMoodAnim(speaker, _mood);
+            SetColorName(0.75f, speaker);
         }
         else
         {
@@ -258,6 +269,7 @@ public class UI_Manager : MonoBehaviour
         if (audioSource.clip != null)
         {
             audioSource.Play();
+            
             //Debug.Log($"Hacemos una pausa de {audioSource.clip.length + 2.5f}");
             return audioSource.clip.length + 2.5f;
         }
@@ -348,6 +360,7 @@ public class UI_Manager : MonoBehaviour
             item.Update(randomStartDelay);
 
             dictionaryCharacteres.Add(item.gameObject.name, item);
+
             //Debug.Log($"Se ha añadido el {item.gameObject.name} al diccionario");
         }
 
@@ -538,9 +551,12 @@ public class UI_Manager : MonoBehaviour
                 AddTextToRoute($"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}");
                 //Debug.Log($"Hemos puesto el dialogo {currentDialogue + i}, ahora vamos a hacer una pausa");
                 yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker, dialoguesData[currentDialogue + i].Mood));
+                Debug.Log($"Vamos a resaltar el dialogo del speaker {dialoguesData[currentDialogue + i].Speaker}");
+                
                 if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + i].Speaker)))
                 {
                     dictionaryCharacteres[Translate(dialoguesData[currentDialogue + i].Speaker)].SetBool("animFinished", true);
+                    SetColorName(0f, Translate(dialoguesData[currentDialogue + i].Speaker));
                 }
                 else
                 {
@@ -608,6 +624,48 @@ public class UI_Manager : MonoBehaviour
 
 
         return aux;
+    }
+
+    public void SetColorName(float color, string speaker)
+    {
+        Debug.Log($"Vamos a intentar iluminar el nombre de {speaker}");
+        
+        switch (speaker)
+        {
+            case "Endoscopista 1":
+            case "Endoscopist 1":
+            case "Endoscopist1":
+                Debug.Log($"VIluminamos el {speaker}");
+                endoescopista1.speed = color;
+                break;
+            case "Anastesiólogo":
+            case "Anaesthesiologist":
+                Debug.Log($"VIluminamos el {speaker}");
+                anestesiologo.speed = color;
+                break;
+            case "Enfermera de endoscopia":
+            case "Endoscopy nurse":
+            case "EndoscopyNurse":
+                Debug.Log($"VIluminamos el {speaker}");
+                enfermeraDeEndoscopia.speed = color;
+                break;
+            case "Endoscopista 2":
+            case "Endoscopist 2":
+            case "Endoscopist2":
+                Debug.Log($"VIluminamos el {speaker}");
+                endoescopista2.speed = color;
+                break;
+            case "Secretaria":
+            case "Secretario":
+            case "Secretary":
+
+                break;
+            case "Enfermera de anestesia":
+            case "AnaesthesiaNurse":
+                Debug.Log($"VIluminamos el {speaker}");
+                enfermeraDeAnestesia.speed = color;
+                break;
+        }
     }
 
 }
