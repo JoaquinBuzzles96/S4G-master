@@ -75,6 +75,8 @@ public class SpecialCases : MonoBehaviour
     public void EnterTheRoom(Vector3 originPos, Vector3 targetPos, GameObject characer)
     {
         //activar animacion de andar y comenzar desplazamiento
+
+
     }
 
     public void ExitRoom(Vector3 targetPos, GameObject character) //el origin no es necesario, se saca del characer
