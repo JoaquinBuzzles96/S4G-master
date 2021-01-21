@@ -479,7 +479,12 @@ public class UI_Manager : MonoBehaviour
 
     public void SetUpScreen5(AnswerNodeData answer)
     {
-        StartCoroutine(PlaySimpleDialogue(answer.audioId, nextButtonFeedback));
+
+        if (isValid(answer.Feedback))
+        {
+            StartCoroutine(PlaySimpleDialogue(answer.audioId, nextButtonFeedback));
+        }
+        
         feedbackText.text = $"{answer.Feedback} \n Score: {totalScore}";
         //Add feedback to email
         AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
@@ -533,10 +538,6 @@ public class UI_Manager : MonoBehaviour
                 AddTextToRoute($"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}");
                 //Debug.Log($"Hemos puesto el dialogo {currentDialogue + i}, ahora vamos a hacer una pausa");
                 yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker, dialoguesData[currentDialogue + i].Mood));
-                while (SpecialCases.Instance.playingAnimation)
-                {
-                    yield return null;
-                }
                 if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + i].Speaker)))
                 {
                     dictionaryCharacteres[Translate(dialoguesData[currentDialogue + i].Speaker)].SetBool("animFinished", true);
@@ -550,6 +551,10 @@ public class UI_Manager : MonoBehaviour
                 }
                 //Antes de empezar el siguiente dialogo y antes de comenzar el siguiente comprobamos si hay que hacer alguna accion concreta:
                 SpecialCases.Instance.CheckSpecialEvent(dialoguesData[currentDialogue + i].DialogueName);
+                while (SpecialCases.Instance.playingAnimation)
+                {
+                    yield return null;
+                }
 
             }
             else
