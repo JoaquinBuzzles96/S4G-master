@@ -77,7 +77,6 @@ public class UI_Manager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
         instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
@@ -534,7 +533,7 @@ public class UI_Manager : MonoBehaviour
                 AddTextToRoute($"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}");
                 //Debug.Log($"Hemos puesto el dialogo {currentDialogue + i}, ahora vamos a hacer una pausa");
                 yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker, dialoguesData[currentDialogue + i].Mood));
-                if (SpecialCases.Instance.playingAnimation)
+                while (SpecialCases.Instance.playingAnimation)
                 {
                     yield return null;
                 }

@@ -70,6 +70,18 @@ public class SpecialCases : MonoBehaviour
         //adaptar para que sirva para todos los casos
         switch (dialogue_id)
         {
+            case "D3.1":
+                SimpleWaypointMovement movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
+                Case3Resources.Instance.doorAnim.Play();
+                movementNurse.canMove = true;
+                EnterTheRoom(movementNurse.waypoints[0].transform.position, movementNurse.waypoints[movementNurse.waypoints.Length - 1].transform.position, Case3Resources.Instance.nurse);
+                break; 
+            case "D5.1":
+                SimpleWaypointMovement movementNurse2 = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
+                Case3Resources.Instance.doorAnim.Play();
+                movementNurse2.canMove = true;
+                EnterTheRoom(movementNurse2.waypoints[0].transform.position, movementNurse2.waypoints[movementNurse2.waypoints.Length - 1].transform.position, Case3Resources.Instance.nurse);
+                break;
             case "D11.1": //dialogo en el que entra el secretario
                 SimpleWaypointMovement movement = Case3Resources.Instance.secretary.GetComponent<SimpleWaypointMovement>();
                 Case3Resources.Instance.doorAnim.Play();

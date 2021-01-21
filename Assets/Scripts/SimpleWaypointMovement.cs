@@ -23,6 +23,8 @@ public class SimpleWaypointMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(SpecialCases.Instance.playingAnimation);
+
         if (canMove)
         {
             if (waypoints[nextWaypoint] != null)
@@ -37,13 +39,17 @@ public class SimpleWaypointMovement : MonoBehaviour
                     this.transform.position = Vector3.MoveTowards(this.transform.position, waypoints[nextWaypoint].position, speed * Time.deltaTime);
                     this.transform.LookAt(waypoints[nextWaypoint]);
                 }
-                else if (nextWaypoint < waypoints.Length)
+                else if (nextWaypoint < waypoints.Length-1)
                 {
+                    Debug.Log("cambio de "+nextWaypoint);
                     nextWaypoint++;
                 }
                 else
                 {
+                    Debug.Log("acaba");
                     SpecialCases.Instance.playingAnimation = false;
+                    canMove = false;
+                    nextWaypoint = 0;
                     this.transform.LookAt(lastPointToLook);
                     if (animator.GetBool("Walk"))
                     {
