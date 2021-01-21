@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
-  m_Name: Case3_ES
+  m_Name: case3_es
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 1a8a2fff-e26c-41f1-9dd8-2c6e80c21b5b
@@ -1020,15 +1020,6 @@ MonoBehaviour:
     audioId: E1D27
     nodeType: 3
     Position: {x: 1760, y: 6172}
-  - Guid: 93f8b0be-6fe3-4994-a5e8-27be06812160
-    DialogueName: D7.1.2
-    DialogueText: "Disculpa, no te he entendido. Por favor, haba m\xE1s alto, lento
-      y claro."
-    Speaker: Endoscopista 1
-    Mood: Calm
-    audioId: E1D29
-    nodeType: 3
-    Position: {x: 1974, y: 6655}
   - Guid: 004fbf90-c7b6-4da8-8923-7c8f1ce073e6
     DialogueName: D7.1.1
     DialogueText: "No he entendido ni una palabra. \xBFPuedes hablar de forma que
@@ -1177,7 +1168,7 @@ MonoBehaviour:
     DialogueText: "\xBFEs esta?"
     Speaker: Enfermera de endoscopia
     Mood: Calm
-    audioId: EN1D6CAMBIAR
+    audioId: EN1D6
     nodeType: 3
     Position: {x: 2082, y: 2993}
   - Guid: d72b299d-8157-469a-8def-c66e85fb005d
@@ -1554,4 +1545,13 @@ MonoBehaviour:
     audioId: EN1D5
     nodeType: 3
     Position: {x: 2107, y: 6164}
+  - Guid: 93f8b0be-6fe3-4994-a5e8-27be06812160
+    DialogueName: D7.1.2
+    DialogueText: "Disculpa, no te he entendido. Por favor, haba m\xE1s alto, lento
+      y claro."
+    Speaker: Endoscopista 1
+    Mood: Calm
+    audioId: E1D29
+    nodeType: 3
+    Position: {x: 1974, y: 6655}
   ExposedProperties: []

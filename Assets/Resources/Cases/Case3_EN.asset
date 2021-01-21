@@ -52,12 +52,6 @@ MonoBehaviour:
   - BaseNodeGuid: 4313c7d6-d1d7-42c4-b3c4-7d83d4a5a67e
     PortName: Question 1
     TargetNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
-  - BaseNodeGuid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
-    PortName: Dialogue
-    TargetNodeGuid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
-  - BaseNodeGuid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
-    PortName: Question 1
-    TargetNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
   - BaseNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
     PortName: Dialogue
     TargetNodeGuid: 8a9b76c5-4b77-4995-a7b9-47f7301a4fbe
@@ -82,6 +76,12 @@ MonoBehaviour:
   - BaseNodeGuid: 3dcdd042-d551-4bf4-85d6-00d8a51007bc
     PortName: Question 1
     TargetNodeGuid: ba951361-4273-43cc-95ea-6a376751bd0a
+  - BaseNodeGuid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
+    PortName: Dialogue
+    TargetNodeGuid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
+  - BaseNodeGuid: bd6126a1-0846-49ea-971a-3d871fb0e3f5
+    PortName: Question 1
+    TargetNodeGuid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
   - BaseNodeGuid: 1730b0eb-8a65-46f9-9522-b0df12e8031f
     PortName: Answer 1
     TargetNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
@@ -388,9 +388,15 @@ MonoBehaviour:
   - BaseNodeGuid: 26b4a5f8-c71d-4ac2-ad58-534ceabf6c08
     PortName: Dialogue
     TargetNodeGuid: 7e07876b-0312-43f0-87af-370a2af4563c
+  - BaseNodeGuid: 7e07876b-0312-43f0-87af-370a2af4563c
+    PortName: Dialogue
+    TargetNodeGuid: d6ac19e5-a187-4305-a9eb-3934b84fdb27
   - BaseNodeGuid: 4793443e-5829-4b20-aab5-72a6c36a3b75
     PortName: Dialogue
     TargetNodeGuid: ec255719-74a5-4a4c-b34a-8bb220f23056
+  - BaseNodeGuid: 3bea7de1-7762-4b9a-b41e-50ab99ef6910
+    PortName: Dialogue
+    TargetNodeGuid: 4d7e8458-3739-46c6-a6bf-301ccf8bf19c
   - BaseNodeGuid: c17ed2a9-732d-4ada-b3bf-2bf30fb41573
     PortName: Dialogue
     TargetNodeGuid: f0abf715-999e-465d-8d28-afad3c0eb252
@@ -430,9 +436,6 @@ MonoBehaviour:
   - BaseNodeGuid: dddb1b57-fdfe-461e-9bd6-38ee5bff5e58
     PortName: Dialogue
     TargetNodeGuid: 67c00472-5def-4c22-8817-394221de4e63
-  - BaseNodeGuid: 4d7e8458-3739-46c6-a6bf-301ccf8bf19c
-    PortName: Dialogue
-    TargetNodeGuid: 03bf28d6-514e-45d5-bb9d-c90555cb77ea
   - BaseNodeGuid: b7d95141-5be1-4b3a-bec3-e2ebdb2c3bb1
     PortName: Dialogue
     TargetNodeGuid: 51a140cc-2266-4159-9d1c-24f401e25948
@@ -445,15 +448,12 @@ MonoBehaviour:
   - BaseNodeGuid: 477ef044-d98f-4b8e-bc79-9085775b6bee
     PortName: Dialogue
     TargetNodeGuid: 92759ce2-ef61-4a43-8b43-a626d9775529
-  - BaseNodeGuid: 7e07876b-0312-43f0-87af-370a2af4563c
-    PortName: Dialogue
-    TargetNodeGuid: d6ac19e5-a187-4305-a9eb-3934b84fdb27
   - BaseNodeGuid: d6ac19e5-a187-4305-a9eb-3934b84fdb27
     PortName: Dialogue
     TargetNodeGuid: 1a6b1e25-0036-49c5-b860-6004cdd6fdb8
-  - BaseNodeGuid: 3bea7de1-7762-4b9a-b41e-50ab99ef6910
+  - BaseNodeGuid: 4d7e8458-3739-46c6-a6bf-301ccf8bf19c
     PortName: Dialogue
-    TargetNodeGuid: 4d7e8458-3739-46c6-a6bf-301ccf8bf19c
+    TargetNodeGuid: 03bf28d6-514e-45d5-bb9d-c90555cb77ea
   SituationNodeData:
   - Guid: 3883b33a-f144-48c8-b765-639ff03eba8f
     SituationName: S4
@@ -1229,15 +1229,6 @@ MonoBehaviour:
     audioId: E1D30
     nodeType: 3
     Position: {x: 1974, y: 7149}
-  - Guid: 93f8b0be-6fe3-4994-a5e8-27be06812160
-    DialogueName: D7.1.2
-    DialogueText: 'I am sorry, I have not understood. Please speak loud, slowly and
-      clearly. '
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: E1D28
-    nodeType: 3
-    Position: {x: 1974, y: 6655}
   - Guid: eb1da68f-2d71-4057-bd57-96b8b4c3e322
     DialogueName: D8.1
     DialogueText: Endoscopy nurse nervously searches among the tools, then grabs
@@ -1570,4 +1561,13 @@ MonoBehaviour:
     audioId: ND4
     nodeType: 3
     Position: {x: 3399, y: 175}
+  - Guid: 93f8b0be-6fe3-4994-a5e8-27be06812160
+    DialogueName: D7.1.2
+    DialogueText: 'I am sorry, I have not understood. Please speak loud, slowly and
+      clearly. '
+    Speaker: Endoscopist 1
+    Mood: Calm
+    audioId: E1D28
+    nodeType: 3
+    Position: {x: 1974, y: 6655}
   ExposedProperties: []
