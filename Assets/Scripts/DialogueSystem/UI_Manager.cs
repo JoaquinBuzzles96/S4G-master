@@ -606,6 +606,7 @@ public class UI_Manager : MonoBehaviour
                 break;
             case "Enfermera de endoscopia":
             case "Endoscopy nurse":
+            case "Endoscopy Nurse":
                 aux = "EndoscopyNurse";
                 break;
             case "Endoscopista 2":
@@ -646,6 +647,7 @@ public class UI_Manager : MonoBehaviour
             case "Enfermera de endoscopia":
             case "Endoscopy nurse":
             case "EndoscopyNurse":
+            case "Endoscopy Nurse":
                 Debug.Log($"VIluminamos el {speaker}");
                 enfermeraDeEndoscopia.speed = color;
                 break;
