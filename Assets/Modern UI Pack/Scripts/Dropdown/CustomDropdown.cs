@@ -134,11 +134,28 @@ namespace Michsky.UI.ModernUIPack
             foreach (var item in cases)
             {
                 Item aux = new Item();
-                aux.itemName = item.name;
-                dropdownItems.Add(aux);
+                //TODO: Split and Delete duplicates
+                string[] parts;
+                parts = item.name.Split("_"[0]);
+                aux.itemName = parts[0].ToUpper();
+                if (!Exists(aux.itemName))
+                {
+                    dropdownItems.Add(aux);
+                }
             }
-
             SetupDropdown();
+        }
+
+        private bool Exists(string element)
+        {
+            foreach (var item in dropdownItems)
+            {
+                if (item.itemName == element)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void InitialLoad()

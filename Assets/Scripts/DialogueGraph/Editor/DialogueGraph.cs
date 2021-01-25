@@ -105,21 +105,6 @@ public class DialogueGraph : EditorWindow
         rootVisualElement.Add(toolbar);
     }
 
-    private void GenerateCase()
-    {
-        //Antes de generarlo guardamos el grafo:
-        RequestDataOperation(true);
-
-        //Generamos en base al caso guardado
-        if (string.IsNullOrEmpty(_fileName))
-        {
-            EditorUtility.DisplayDialog("Invalid case name!", "Please enter a valid case name", "OK");
-        }
-
-        var saveUtility = GraphSaveUtility.GetInstance(_graphView);
-        saveUtility.Generate(_fileName);
-    }
-
     private void RequestDataOperation(bool save)
     {
         if (string.IsNullOrEmpty(_fileName))
