@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+public enum NodeType { Situation, Question, Answer, Dialogue };
 [Serializable]
 public class SituationNodeData
 {
