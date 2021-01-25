@@ -74,34 +74,32 @@ public class SpecialCases : MonoBehaviour
                 SimpleWaypointMovement movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
                 Case3Resources.Instance.doorAnim.Play();
                 movementNurse.canMove = true;
-                EnterTheRoom(movementNurse.waypoints[0].transform.position, movementNurse.waypoints[movementNurse.waypoints.Length - 1].transform.position, Case3Resources.Instance.nurse);
+                playingAnimation = true;
                 break; 
             case "D5.1":
                 SimpleWaypointMovement movementNurse2 = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
                 Case3Resources.Instance.doorAnim.Play();
                 movementNurse2.canMove = true;
-                EnterTheRoom(movementNurse2.waypoints[0].transform.position, movementNurse2.waypoints[movementNurse2.waypoints.Length - 1].transform.position, Case3Resources.Instance.nurse);
+                playingAnimation = true;
                 break;
             case "D11.1": //dialogo en el que entra el secretario
                 SimpleWaypointMovement movement = Case3Resources.Instance.secretary.GetComponent<SimpleWaypointMovement>();
                 Case3Resources.Instance.doorAnim.Play();
                 movement.canMove = true;
-                EnterTheRoom(movement.waypoints[0].transform.position, movement.waypoints[movement.waypoints.Length-1].transform.position, Case3Resources.Instance.secretary);
+                playingAnimation = true;
+                break;
+            case "D1.4": //este es el dialogo en el que el anestesiologo se gira hacia la enfermera de endoscopia
+                //
+                playingAnimation = true;
+
                 break;
         }
 
     }
 
-    public void EnterTheRoom(Vector3 originPos, Vector3 targetPos, GameObject characer)
+    public void TurnsTo(GameObject characet, Vector3 targetDirection)
     {
-        //activar animacion de andar y comenzar desplazamiento
-        playingAnimation = true;
-
+        //activar aniamcion de girar
+        //rotar transform (lookAt targetDirection)
     }
-
-    public void ExitRoom(Vector3 targetPos, GameObject character) //el origin no es necesario, se saca del characer
-    {
-        EnterTheRoom(character.transform.position, targetPos, character);
-    }
-
 }

@@ -480,7 +480,6 @@ public class UI_Manager : MonoBehaviour
                 }
             }
         }
-
     }
 
     public void SetUpContext(SituationNodeData _situation)
