@@ -23,7 +23,7 @@ public class SimpleWaypointMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(SpecialCases.Instance.playingAnimation);
+        //Debug.Log(SpecialCases.Instance.playingAnimation);
 
         if (canMove)
         {

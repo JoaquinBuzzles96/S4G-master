@@ -144,7 +144,7 @@ namespace Michsky.UI.ModernUIPack
         public void InitialLoad()
         {
             var casesArray = Resources.LoadAll("Cases", typeof(DialogueContainer));
-            Debug.Log("Se han obtenido los siguientes casos:");
+            //Debug.Log("Se han obtenido los siguientes casos:");
             foreach (var item in casesArray)
             {
                 //Debug.Log($"{item.name}");

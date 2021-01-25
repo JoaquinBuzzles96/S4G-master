@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
 
 public class UI_Manager : MonoBehaviour
 {
@@ -328,28 +329,90 @@ public class UI_Manager : MonoBehaviour
         }
 
         //Debug.Log($"Vamos a devolver el path {path}");
+        
         return path;
     }
 
     public void GetDialogueContainerLanguage()
     {
+        string path = "";
+        //Application.streamingAssetsPath + "/Resources/Audios/";
+        /*
+        #if UNITY_EDITOR 
         if (LanguageManager.Instance != null)
         {
-            //caso = LanguageManager.Instance.caseSelected; //TODO: En un futuro funcionara con esto, de momento dejarlo comentado
-            dialogueContainer = Resources.Load($"Cases/{caso}_{LanguageManager.Instance.languageSelected}") as DialogueContainer;
+            caso = LanguageManager.Instance.caseSelected; //TODO: En un futuro funcionara con esto, de momento dejarlo comentado
+            path = $"Cases/{caso}_{LanguageManager.Instance.languageSelected}";
+            //dialogueContainer = Resources.Load($"Cases/{caso}_{LanguageManager.Instance.languageSelected}") as DialogueContainer;
             Debug.Log($"Cargamos el case Cases/{caso}_{LanguageManager.Instance.languageSelected}");
         }
         else
         {
+            path = $"Cases/testing2";
             Debug.Log($"No se ha encontrado el languague manager");
-            dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
+            //dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
         }
-        
+
         if (dialogueContainer == null)
         {
+            path = $"Cases/testing2";
             Debug.Log($"No se ha encontrado la ruta Cases/{caso}_{LanguageManager.Instance.languageSelected}");
-            dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
+            //dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
         }
+        #endif
+
+        */
+        
+
+         
+
+        //#if !UNITY_EDITOR
+        if (LanguageManager.Instance != null)
+        {
+            caso = LanguageManager.Instance.caseSelected; //TODO: En un futuro funcionara con esto, de momento dejarlo comentado
+            path = Application.streamingAssetsPath + $"/Resources/Cases/{caso}_{LanguageManager.Instance.languageSelected}";
+            //dialogueContainer = Resources.Load($"Cases/{caso}_{LanguageManager.Instance.languageSelected}") as DialogueContainer;
+            //Debug.Log($"Cargamos el case Cases/{caso}_{LanguageManager.Instance.languageSelected}");
+        }
+        else
+        {
+            path = Application.streamingAssetsPath + $"/Resources/Cases/testing2";
+            //Debug.Log($"No se ha encontrado el languague manager");
+            //dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
+        }
+
+        if (dialogueContainer == null)
+        {
+            path = Application.streamingAssetsPath + $"/Resources/Cases/testing2";
+            //Debug.Log($"No se ha encontrado la ruta Cases/{caso}_{LanguageManager.Instance.languageSelected}");
+            //dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
+        }
+        //#endif
+
+        var casesArray = Resources.LoadAll("Cases", typeof(DialogueContainer));
+        //Debug.Log("Se han obtenido los siguientes casos:");
+        contextDescription.text = "Casos detectados: ";
+        string casePath = $"{caso}_{LanguageManager.Instance.languageSelected}";
+        foreach (var item in casesArray)
+        {
+            //Debug.Log($"{item.name}");
+            contextDescription.text += $" {item.name}";
+            if (item.name == casePath)
+            {
+                dialogueContainer = item as DialogueContainer;
+            }
+            //Debug.Log($"{cases[cases.Count-1].name}");
+        }
+
+        /*
+         #if UNITY_EDITOR
+
+        #endif
+
+        #if UNITY_ANDROID
+
+        #endif
+         */
     }
 
     public void SetNameToCharacters()
