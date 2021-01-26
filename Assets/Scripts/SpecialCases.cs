@@ -31,6 +31,8 @@ public class SpecialCases : MonoBehaviour
     #region Case3
     public int currentNurse = 1;
     public bool playingAnimation = false;
+    public GameObject prop; //utilizaremos esta variable para saber que prop estamos usando, en un futuro sera un array (quiza) de momento con uno basta
+
     #endregion
 
     public string ChechkAudio(string audio_id, string _speaker) 
@@ -48,10 +50,15 @@ public class SpecialCases : MonoBehaviour
                 real_audio_id = audio_id + "3"; ;
             }
 
-            Debug.Log($"Vamos a cargar el audio {real_audio_id} de la enfermera {currentNurse}");
+            //Debug.Log($"Vamos a cargar el audio {real_audio_id} de la enfermera {currentNurse}");
         }
 
         return real_audio_id;
+    }
+
+    public void UpdateNurseName()
+    {
+        UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().canvasName.text = $"Endoscopy \n Nurse {currentNurse}";
     }
 
     public void CheckSituation(string situation_id) //SITUATION 5 AND 3
@@ -67,19 +74,35 @@ public class SpecialCases : MonoBehaviour
     //devolver float
     public void CheckSpecialEvent(string dialogue_id)//con esto comprobaremos si en el dialogo actual debe darse alguna situacion en concreto
     {
+        //TODO: 
+        // test si funciona modificar el path de la enfermera para que a veces salga y a veces no
+        // eliminar herramienta de la mano y lanzarla contra la enfermera
+        // testear si funciona Hacer despaarecer el prop
+
+        SimpleWaypointMovement movementNurse;
+        string anim = "";
+        Vector3 position = Vector3.zero; //usaremos esta variable para asignar la posicion de la mano del personaje que sea
+        //SimpleWaypointMovement movementNurse = null;
         //adaptar para que sirva para todos los casos
         switch (dialogue_id)
         {
+            
             case "D3.1":
-                SimpleWaypointMovement movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
+                movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
                 Case3Resources.Instance.doorAnim.Play();
+                movementNurse.isNurse = true;
+                movementNurse.exitRoom = true;
+                movementNurse.firstTime = true;
                 movementNurse.canMove = true;
                 playingAnimation = true;
                 break; 
             case "D5.1":
-                SimpleWaypointMovement movementNurse2 = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
+                movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
                 Case3Resources.Instance.doorAnim.Play();
-                movementNurse2.canMove = true;
+                movementNurse.isNurse = true;
+                movementNurse.exitRoom = true;
+                movementNurse.firstTime = true;
+                movementNurse.canMove = true;
                 playingAnimation = true;
                 break;
             case "D11.1": //dialogo en el que entra el secretario
@@ -91,10 +114,6 @@ public class SpecialCases : MonoBehaviour
             case "D1.4":
                 //Esta es solo para probar, no pasa realmente: //este es el dialogo en el que el anestesiologo se gira hacia la enfermera de endoscopia
                 //StartCoroutine(TurnsTo(UI_Manager.Instance.dictionaryCharacteres["Anaesthesiologist"].gameObject, UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.transform.position));
-                string anim = "Throw";
-                StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim));
-
-
                 break;
             case "D1.1.1":
             case "D1.1.2":
@@ -103,6 +122,96 @@ public class SpecialCases : MonoBehaviour
                 //Solo de prueba: //en cualquiera de estos el anestesiologo se vuelve
                 //StartCoroutine(TurnsTo(UI_Manager.Instance.dictionaryCharacteres["Anaesthesiologist"].gameObject, UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.transform.position));
                 break;
+
+            case "D1.1": //poner endoscopio en la mano del endoescopista 1
+                position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos.position; 
+                SetProp(position, prop);// lo ponemos en tu mano
+                break;
+            case "D3.2": //entra una enfermera (dividir la anim que esta hecha en dos)
+                UpdateNurseName();
+                movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
+                Case3Resources.Instance.doorAnim.Play();
+                movementNurse.isNurse = true;
+                movementNurse.exitRoom = false;
+                movementNurse.firstTime = true;
+                movementNurse.canMove = true;
+                playingAnimation = true;
+                break;
+            case "D5.2": //entra una enfermera (dividir la anim que esta hecha en dos)
+                UpdateNurseName();
+                movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
+                Case3Resources.Instance.doorAnim.Play();
+                movementNurse.isNurse = true;
+                movementNurse.exitRoom = false;
+                movementNurse.firstTime = true;
+                movementNurse.canMove = true;
+                playingAnimation = true;
+                break;
+            case "D6.2": //la enfermera te da el lazo, extraes el endoscopio y se lo das a la enfermera y la enfermera lo deja en la mesa
+                //me da el lazo
+                anim = "Give"; // en las de dar podemos ahcer que mire a un target
+                StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim));
+                position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos.position;
+                SetProp(position, prop);//lo ponemos en mi mano y lo eliminamos de la suya
+                //TODO: extraigo endoscopio
+
+                //se los das a la enfermera
+                anim = "Give";
+                StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim));
+                position = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().handPos.position;
+                SetProp(position, prop);// lo ponemos en su mano
+                // lo deja en la mesa:
+                //TODO: Ir a la mesa y elimnarlo de su mano
+                //Posicion = mesa.transform
+                SetProp(position, prop);
+                break;
+            case "D6.4": //rebusca en la mesa y te da una herramienta erronea
+                //TODO: Ir a la mesa
+                anim = "LookFor";
+                StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim));
+                position = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().handPos.position;
+                SetProp(position, prop);// lo ponemos en su mano
+                anim = "Give";
+                StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim));
+                position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos.position;
+                SetProp(position, prop);// lo ponemos en tu mano
+                break;
+            case "D6.1.1": //lanzas la herramienta de vuelta
+                anim = "Throw";
+                StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim));
+                //TODO: eliminar herramienta de la mano y lanzarla contra la enfermera
+                DeleteProp(prop);
+                break;
+            case "D6.1.2": //le devuelves la herramienta
+            case "D6.1.3":
+                anim = "Give";
+                StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim));
+                //TODO: Hacer despaarecer el prop
+                DeleteProp(prop);
+                break;
+            case "D6.4.2": // el endoescopista 2 ayuda a la enfermera a buscar el forceps en la mesa
+                //Ir a la mesa ambos
+                //Anim de buscar:
+                anim = "LookFor";
+                StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim));
+                StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist2"].gameObject, anim));
+                //poner el prop en la mano de la enfermera
+                SetProp(position, prop);
+
+                break;
+            case "D7.1": //la enfermera te pasa el forceps
+                anim = "Give";
+                StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim));
+                DeleteProp(prop); //igual es mejor llamar a esto desde la corutina y que desaparezca a mitad de la animacion
+                break;
+            case "D8.1": //la enfermera busca enrviosa la herramienta y se le cae al suelo
+                anim = "LookFor";
+                StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim));
+                //TODO: Animacion de caer al suelo
+                break;
+            case "D10.1": //la segunda enfermera viene y ayuda a la primera enfermera
+                break;
+
 
         }
 
@@ -189,14 +298,15 @@ public class SpecialCases : MonoBehaviour
         }
     }
 
-    public GameObject SetProp(Vector3 coord, GameObject prop)
+    public void SetProp(Vector3 coord, GameObject prop)
     {
-        return Instantiate(prop, coord, prop.transform.rotation);
+        prop.SetActive(true);
+        prop.transform.position = coord;
     }
 
     public void DeleteProp(GameObject prop)
     {
-        Destroy(prop);
+        prop.SetActive(false);
     }
 
 

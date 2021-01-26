@@ -698,25 +698,25 @@ public class UI_Manager : MonoBehaviour
             case "Endoscopista 1":
             case "Endoscopist 1":
             case "Endoscopist1":
-                Debug.Log($"VIluminamos el {speaker}");
+                //Debug.Log($"VIluminamos el {speaker}");
                 endoescopista1.speed = color;
                 break;
             case "Anastesiólogo":
             case "Anaesthesiologist":
-                Debug.Log($"VIluminamos el {speaker}");
+                //Debug.Log($"VIluminamos el {speaker}");
                 anestesiologo.speed = color;
                 break;
             case "Enfermera de endoscopia":
             case "Endoscopy nurse":
             case "EndoscopyNurse":
             case "Endoscopy Nurse":
-                Debug.Log($"VIluminamos el {speaker}");
+                //Debug.Log($"VIluminamos el {speaker}");
                 enfermeraDeEndoscopia.speed = color;
                 break;
             case "Endoscopista 2":
             case "Endoscopist 2":
             case "Endoscopist2":
-                Debug.Log($"VIluminamos el {speaker}");
+                //Debug.Log($"VIluminamos el {speaker}");
                 endoescopista2.speed = color;
                 break;
             case "Secretaria":
@@ -726,7 +726,7 @@ public class UI_Manager : MonoBehaviour
                 break;
             case "Enfermera de anestesia":
             case "AnaesthesiaNurse":
-                Debug.Log($"VIluminamos el {speaker}");
+                //Debug.Log($"VIluminamos el {speaker}");
                 enfermeraDeAnestesia.speed = color;
                 break;
         }

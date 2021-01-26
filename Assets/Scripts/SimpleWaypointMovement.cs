@@ -6,11 +6,17 @@ public class SimpleWaypointMovement : MonoBehaviour
 {
     Animator animator;
     public Transform path;
-     public Transform[] waypoints;
+    public Transform[] waypoints;
+    public Transform[] waypointsExit;
+    public Transform[] waypointsEnter;
     int nextWaypoint = 0;
     public float speed;
     [HideInInspector] public bool canMove;
     public Transform lastPointToLook;
+    public bool exitRoom = true;
+    public bool isNurse = false;
+    Transform[] wayToFollow;
+    public bool firstTime = true;
 
     // Start is called before the first frame update
     void Start()
@@ -27,19 +33,39 @@ public class SimpleWaypointMovement : MonoBehaviour
 
         if (canMove)
         {
-            if (waypoints[nextWaypoint] != null)
+            if (firstTime)
             {
-                if (Vector3.Distance(this.transform.position, waypoints[nextWaypoint].transform.position) > 0.1f)
+                if (isNurse)
+                {
+                    if (exitRoom)
+                    {
+                        wayToFollow = waypointsExit;
+                    }
+                    else
+                    {
+                        wayToFollow = waypointsEnter;
+                    }
+                }
+                else
+                {
+                    wayToFollow = waypoints;
+                }
+                firstTime = false;
+            }
+
+            if (wayToFollow[nextWaypoint] != null)
+            {
+                if (Vector3.Distance(this.transform.position, wayToFollow[nextWaypoint].transform.position) > 0.1f)
                 {
                     if (!animator.GetBool("Walk"))
                     {
                         animator.SetBool("Walk", true);
                     }
                    // Vector3 vectorToGo = new Vector3(waypoints[nextWaypoint].position.x, this.gameObject.transform.position.y, waypoints[nextWaypoint].position.z);
-                    this.transform.position = Vector3.MoveTowards(this.transform.position, waypoints[nextWaypoint].position, speed * Time.deltaTime);
-                    this.transform.LookAt(waypoints[nextWaypoint]);
+                    this.transform.position = Vector3.MoveTowards(this.transform.position, wayToFollow[nextWaypoint].position, speed * Time.deltaTime);
+                    this.transform.LookAt(wayToFollow[nextWaypoint]);
                 }
-                else if (nextWaypoint < waypoints.Length-1)
+                else if (nextWaypoint < wayToFollow.Length-1)
                 {
                     Debug.Log("cambio de "+nextWaypoint);
                     nextWaypoint++;

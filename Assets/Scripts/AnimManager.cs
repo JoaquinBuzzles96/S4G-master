@@ -16,6 +16,8 @@ public class AnimManager : StateMachineBehaviour
         animator.SetBool("turnLeft", false);
         animator.SetBool("turnRight", false);
         animator.SetBool("Throw", false);
+        animator.SetBool("Give", false);
+        animator.SetBool("LookFor", false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
