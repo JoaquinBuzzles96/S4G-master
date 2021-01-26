@@ -81,7 +81,8 @@ public class SpecialCases : MonoBehaviour
 
         SimpleWaypointMovement movementNurse;
         string anim = "";
-        Vector3 position = Vector3.zero; //usaremos esta variable para asignar la posicion de la mano del personaje que sea
+        Transform position; //usaremos esta variable para asignar la posicion de la mano del personaje que sea
+        prop = Case3Resources.Instance.fakeProp;
         //SimpleWaypointMovement movementNurse = null;
         //adaptar para que sirva para todos los casos
         switch (dialogue_id)
@@ -124,7 +125,7 @@ public class SpecialCases : MonoBehaviour
                 break;
 
             case "D1.1": //poner endoscopio en la mano del endoescopista 1
-                position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos.position; 
+                position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos;
                 SetProp(position, prop);// lo ponemos en tu mano
                 break;
             case "D3.2": //entra una enfermera (dividir la anim que esta hecha en dos)
@@ -151,14 +152,14 @@ public class SpecialCases : MonoBehaviour
                 //me da el lazo
                 anim = "Give"; // en las de dar podemos ahcer que mire a un target
                 StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim));
-                position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos.position;
+                position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos;
                 SetProp(position, prop);//lo ponemos en mi mano y lo eliminamos de la suya
                 //TODO: extraigo endoscopio
 
                 //se los das a la enfermera
                 anim = "Give";
                 StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim));
-                position = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().handPos.position;
+                position = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().handPos;
                 SetProp(position, prop);// lo ponemos en su mano
                 // lo deja en la mesa:
                 //TODO: Ir a la mesa y elimnarlo de su mano
@@ -169,11 +170,11 @@ public class SpecialCases : MonoBehaviour
                 //TODO: Ir a la mesa
                 anim = "LookFor";
                 StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim));
-                position = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().handPos.position;
+                position = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().handPos;
                 SetProp(position, prop);// lo ponemos en su mano
                 anim = "Give";
                 StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim));
-                position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos.position;
+                position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos;
                 SetProp(position, prop);// lo ponemos en tu mano
                 break;
             case "D6.1.1": //lanzas la herramienta de vuelta
@@ -196,6 +197,7 @@ public class SpecialCases : MonoBehaviour
                 StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim));
                 StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist2"].gameObject, anim));
                 //poner el prop en la mano de la enfermera
+                position = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().handPos;
                 SetProp(position, prop);
 
                 break;
@@ -298,10 +300,10 @@ public class SpecialCases : MonoBehaviour
         }
     }
 
-    public void SetProp(Vector3 coord, GameObject prop)
+    public void SetProp(Transform coord, GameObject prop)
     {
         prop.SetActive(true);
-        prop.transform.position = coord;
+        prop.GetComponent<FollowPoint>().target = coord;
     }
 
     public void DeleteProp(GameObject prop)

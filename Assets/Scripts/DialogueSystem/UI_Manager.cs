@@ -692,17 +692,22 @@ public class UI_Manager : MonoBehaviour
     public void SetColorName(float color, string speaker)
     {
         Debug.Log($"Vamos a intentar iluminar el nombre de {speaker}");
-        
+        speaker = speaker.ToLower();
         switch (speaker)
         {
             case "Endoscopista 1":
             case "Endoscopist 1":
             case "Endoscopist1":
+            case "endoscopist1":
+            case "endoscopist 1":
                 //Debug.Log($"VIluminamos el {speaker}");
                 endoescopista1.speed = color;
                 break;
             case "Anastesiólogo":
             case "Anaesthesiologist":
+            case "Anesthesiologist":
+            case "anesthesiologist":
+            case "anaesthesiologist":
                 //Debug.Log($"VIluminamos el {speaker}");
                 anestesiologo.speed = color;
                 break;
@@ -710,22 +715,31 @@ public class UI_Manager : MonoBehaviour
             case "Endoscopy nurse":
             case "EndoscopyNurse":
             case "Endoscopy Nurse":
+            case "endoscopy nurse":
+            case "endoscopynurse":
                 //Debug.Log($"VIluminamos el {speaker}");
                 enfermeraDeEndoscopia.speed = color;
                 break;
             case "Endoscopista 2":
+            case "endoscopista 2":
             case "Endoscopist 2":
+            case "endoscopist 2":
             case "Endoscopist2":
+            case "endoscopist2":
                 //Debug.Log($"VIluminamos el {speaker}");
                 endoescopista2.speed = color;
                 break;
             case "Secretaria":
             case "Secretario":
             case "Secretary":
+            case "secretary":
 
                 break;
             case "Enfermera de anestesia":
             case "AnaesthesiaNurse":
+            case "anaesthesiaNurse":
+            case "anaesthesianurse":
+            case "anaesthesia nurse":
                 //Debug.Log($"VIluminamos el {speaker}");
                 enfermeraDeAnestesia.speed = color;
                 break;

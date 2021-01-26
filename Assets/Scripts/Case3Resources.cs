@@ -29,5 +29,6 @@ public class Case3Resources : MonoBehaviour
     public GameObject secretary;
     public GameObject nurse;
     public Animation doorAnim;
+    public GameObject fakeProp;
 
 }

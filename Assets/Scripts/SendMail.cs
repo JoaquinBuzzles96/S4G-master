@@ -27,7 +27,7 @@ public class SendMail : MonoBehaviour
     public string m_UserName = "Joaquin"; //default value
     public string m_UserMail = "joakilm2@gmail.com"; //default value
 
-   public TextMeshProUGUI m_Name;
+   public TextMeshProUGUI m_NameMail;
    public TextMeshProUGUI m_Mail;
 
     private void Awake()
@@ -70,7 +70,7 @@ public class SendMail : MonoBehaviour
     public void SaveName(Keyboard l_Field)
     {
         m_UserName=l_Field.text;
-        m_Name.text = m_UserName;
+        m_NameMail.text = m_UserName;
     } 
     
     public void SaveMail(Keyboard l_Field)
