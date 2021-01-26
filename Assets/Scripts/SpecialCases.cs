@@ -88,18 +88,120 @@ public class SpecialCases : MonoBehaviour
                 movement.canMove = true;
                 playingAnimation = true;
                 break;
-            case "D1.4": //este es el dialogo en el que el anestesiologo se gira hacia la enfermera de endoscopia
-                //
-                playingAnimation = true;
+            case "D1.4":
+                //Esta es solo para probar, no pasa realmente: //este es el dialogo en el que el anestesiologo se gira hacia la enfermera de endoscopia
+                //StartCoroutine(TurnsTo(UI_Manager.Instance.dictionaryCharacteres["Anaesthesiologist"].gameObject, UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.transform.position));
+                string anim = "Throw";
+                StartCoroutine(PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim));
+
 
                 break;
+            case "D1.1.1":
+            case "D1.1.2":
+            case "D1.1.3":
+            case "D1.1.4":
+                //Solo de prueba: //en cualquiera de estos el anestesiologo se vuelve
+                //StartCoroutine(TurnsTo(UI_Manager.Instance.dictionaryCharacteres["Anaesthesiologist"].gameObject, UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.transform.position));
+                break;
+
         }
 
     }
 
-    public void TurnsTo(GameObject characet, Vector3 targetDirection)
+    IEnumerator TurnsTo(GameObject characer, Vector3 targetPosition) //para volver a la posicion original basta con indicar que se giren hacia en endoescopista 1
     {
-        //activar aniamcion de girar
-        //rotar transform (lookAt targetDirection)
+        playingAnimation = true;
+        //activar aniamcion de girar (hay que comprobar hacia donde gira y en funcion de eso poner derecha o izquierda)
+        Animator animator = characer.GetComponent<Animator>();
+        float turnAnimDuration = 0f;
+        float rotationSpeed = 1f;
+        if (targetPosition.x < characer.transform.position.x && changed(characer.transform.position.y, targetPosition.y))
+        {
+            Debug.Log("Movemos a la derecha");
+            //animator.SetBool("turnRight", true);
+            //turnAnimDuration = GetDuration("RightTurn", animator);
+        }
+        else if (changed(characer.transform.position.y, targetPosition.y))
+        {
+            Debug.Log("Movemos a la izquierda");
+            //animator.SetBool("turnLeft", true);
+            //turnAnimDuration = GetDuration("LeftTurn", animator);
+        }
+
+        Debug.Log($"Almacenamos la duracion de la animación actual de girarase = {turnAnimDuration}");
+
+        //Opcion 1 (con animacion haciendo cosas raras)
+        //yield return new WaitForSeconds(turnAnimDuration);
+        //characer.transform.LookAt(targetPosition);
+
+
+        //Opcion 2 (sin animacion)
+        while (Vector3.Distance(characer.transform.forward, targetPosition - characer.transform.position) > 0.2f)//characer.transform.rotation != Quaternion.LookRotation(targetPosition - characer.transform.position)
+        {
+            Debug.Log($"Seguimos girando hasta que encontremos al player");
+            characer.transform.rotation = Quaternion.Lerp(characer.transform.rotation, Quaternion.LookRotation(targetPosition - characer.transform.position), Time.deltaTime * rotationSpeed);
+            yield return null;
+        }
+
+        playingAnimation = false;
     }
+
+    IEnumerator PlaySimpleAnim(GameObject character, string animName)
+    {
+        playingAnimation = true;
+        //IMPORTANTE: La animacion y la transicion deben de tener el mismo nombre para que funcione bien
+        //Si se queda en bucle la animacion revisar si se ha añadido el animManager y el false a la animacion dentro del mismo 
+        Animator animator = character.GetComponent<Animator>();
+        animator.SetBool(animName, true);
+        float animDuration = GetDuration(animName, animator);
+
+        yield return new WaitForSeconds(animDuration);
+
+        playingAnimation = false;
+    }
+
+    public float GetDuration(string animationName, Animator anim)
+    {
+        float duration = 0f;
+
+        AnimationClip[] clips = anim.runtimeAnimatorController.animationClips;
+        foreach (AnimationClip clip in clips)
+        {
+            if (animationName == clip.name)
+            {
+                duration = clip.length;
+                break;
+            }
+        }
+
+        return duration;
+    }
+
+    bool changed(float a, float b)
+    {
+        if ((int)a == (int)b)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public GameObject SetProp(Vector3 coord, GameObject prop)
+    {
+        return Instantiate(prop, coord, prop.transform.rotation);
+    }
+
+    public void DeleteProp(GameObject prop)
+    {
+        Destroy(prop);
+    }
+
+
+
+
+
+
 }
