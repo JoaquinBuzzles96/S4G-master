@@ -18,6 +18,7 @@ public class AnimManager : StateMachineBehaviour
         animator.SetBool("Throw", false);
         animator.SetBool("Give", false);
         animator.SetBool("LookFor", false);
+        animator.SetBool("EndoscopeAnim", false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -35,32 +35,12 @@ public class SimpleWaypointMovement : MonoBehaviour
 
         if (canMove)
         {
-            /*
-            if (firstTime)
-            {
-                if (isNurse)
-                {
-                    if (exitRoom)
-                    {
-                        wayToFollow = waypointsExit;
-                    }
-                    else
-                    {
-                        wayToFollow = waypointsEnter;
-                    }
-                }
-                else
-                {
-                    wayToFollow = waypoints;
-                }
-                firstTime = false;
-            }
-            */
 
             if (wayToFollow[nextWaypoint] != null)
             {
                 if (Vector3.Distance(this.transform.position, wayToFollow[nextWaypoint].transform.position) > 0.1f)
                 {
+                    Debug.Log("Caminamos hacia el waypoint " + nextWaypoint);
                     if (!animator.GetBool("Walk"))
                     {
                         animator.SetBool("Walk", true);
@@ -71,12 +51,12 @@ public class SimpleWaypointMovement : MonoBehaviour
                 }
                 else if (nextWaypoint < wayToFollow.Length-1)
                 {
-                    Debug.Log("cambio de "+nextWaypoint);
+                    //Debug.Log("cambio de "+nextWaypoint);
                     nextWaypoint++;
                 }
                 else
                 {
-                    Debug.Log("acaba");
+                    //Debug.Log("acaba");
                     //SpecialCases.Instance.playingAnimation = false; //esto lo gestionaremos fuera, ya que llegar al destino no siemore significa que se acaba este evento
                     canMove = false;
                     nextWaypoint = 0;
@@ -92,6 +72,7 @@ public class SimpleWaypointMovement : MonoBehaviour
 
     public void SetPathAndPlay(Transform[] _waypoints)
     {
+        //ClearWaypoints(); // No deberia ser necesario pero por si acaso
         waypoints = _waypoints;
         wayToFollow = waypoints;
         canMove = true;
@@ -99,7 +80,7 @@ public class SimpleWaypointMovement : MonoBehaviour
 
     public void ResetPosition()
     {
-        ClearWaypoints();
+        //ClearWaypoints();
         waypoints[0] = originalPos;
         wayToFollow = waypoints;
         canMove = true;

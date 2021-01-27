@@ -4518,6 +4518,7 @@ Transform:
   - {fileID: 3260478058213544986}
   - {fileID: 1639706474}
   - {fileID: 915850835}
+  - {fileID: 1850594374}
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12152,6 +12153,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839054201}
   m_CullTransparentMesh: 0
+--- !u!1 &1850594373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1850594374}
+  m_Layer: 0
+  m_Name: FloorPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1850594374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850594373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.67, y: 0, z: -1.732}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 638445681}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1879854783
 GameObject:
   m_ObjectHideFlags: 0
@@ -12186,6 +12217,7 @@ MonoBehaviour:
   doorAnim: {fileID: 1122656829}
   fakeProp: {fileID: 1593531019}
   tablePoint: {fileID: 200662527}
+  floorPoint: {fileID: 1850594373}
   waypointsExit:
   - {fileID: 3260478058213544992}
   - {fileID: 3260478058213544991}

@@ -613,7 +613,7 @@ public class UI_Manager : MonoBehaviour
                 AddTextToRoute($"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}");
                 //Debug.Log($"Hemos puesto el dialogo {currentDialogue + i}, ahora vamos a hacer una pausa");
                 yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker, dialoguesData[currentDialogue + i].Mood));
-                Debug.Log($"Vamos a resaltar el dialogo del speaker {dialoguesData[currentDialogue + i].Speaker}");
+                //Debug.Log($"Vamos a resaltar el dialogo del speaker {dialoguesData[currentDialogue + i].Speaker}");
                 
                 if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + i].Speaker)))
                 {
@@ -691,7 +691,7 @@ public class UI_Manager : MonoBehaviour
 
     public void SetColorName(float color, string speaker)
     {
-        Debug.Log($"Vamos a intentar iluminar el nombre de {speaker}");
+        //Debug.Log($"Vamos a intentar iluminar el nombre de {speaker}");
         speaker = speaker.ToLower();
         switch (speaker)
         {

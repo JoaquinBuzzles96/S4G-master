@@ -31,6 +31,7 @@ public class Case3Resources : MonoBehaviour
     public Animation doorAnim;
     public GameObject fakeProp;
     public GameObject tablePoint;
+    public GameObject floorPoint;
 
     public Transform[] waypointsExit;
     public Transform[] waypointsEnter;
