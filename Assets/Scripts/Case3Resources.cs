@@ -30,5 +30,12 @@ public class Case3Resources : MonoBehaviour
     public GameObject nurse;
     public Animation doorAnim;
     public GameObject fakeProp;
+    public GameObject tablePoint;
+
+    public Transform[] waypointsExit;
+    public Transform[] waypointsEnter;
+    public Transform[] waypointsSecretary;
+    public Transform[] waypointsToTable1;
+    public Transform[] waypointsToTable2;
 
 }

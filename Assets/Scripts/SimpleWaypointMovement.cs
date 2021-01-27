@@ -17,22 +17,25 @@ public class SimpleWaypointMovement : MonoBehaviour
     public bool isNurse = false;
     Transform[] wayToFollow;
     public bool firstTime = true;
+    Transform originalPos;
 
-    // Start is called before the first frame update
     void Start()
     {
         animator = this.GetComponent<Animator>();
         waypoints = path.GetComponentsInChildren<Transform>();
-
+        GameObject gameObjectInitPoint = new GameObject("InitPos");
+        var instance = Instantiate(gameObjectInitPoint, this.transform.position, this.transform.rotation);
+        originalPos = instance.transform; //si le asigno directamente la transform hara un puntero e ira actualizando la posicion, y no queremos eso
+        wayToFollow = waypoints; //por si acaso se le llamase sin nada, pero siempre deberia indicarse antes de llamar
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Debug.Log(SpecialCases.Instance.playingAnimation);
 
         if (canMove)
         {
+            /*
             if (firstTime)
             {
                 if (isNurse)
@@ -52,6 +55,7 @@ public class SimpleWaypointMovement : MonoBehaviour
                 }
                 firstTime = false;
             }
+            */
 
             if (wayToFollow[nextWaypoint] != null)
             {
@@ -73,7 +77,7 @@ public class SimpleWaypointMovement : MonoBehaviour
                 else
                 {
                     Debug.Log("acaba");
-                    SpecialCases.Instance.playingAnimation = false;
+                    //SpecialCases.Instance.playingAnimation = false; //esto lo gestionaremos fuera, ya que llegar al destino no siemore significa que se acaba este evento
                     canMove = false;
                     nextWaypoint = 0;
                     this.transform.LookAt(lastPointToLook);
@@ -84,5 +88,25 @@ public class SimpleWaypointMovement : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SetPathAndPlay(Transform[] _waypoints)
+    {
+        waypoints = _waypoints;
+        wayToFollow = waypoints;
+        canMove = true;
+    }
+
+    public void ResetPosition()
+    {
+        ClearWaypoints();
+        waypoints[0] = originalPos;
+        wayToFollow = waypoints;
+        canMove = true;
+    }
+
+    public void ClearWaypoints()
+    {
+        System.Array.Clear(waypoints, 0, waypoints.Length);
     }
 }
