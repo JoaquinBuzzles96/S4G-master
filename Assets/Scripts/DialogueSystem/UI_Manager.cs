@@ -664,6 +664,7 @@ public class UI_Manager : MonoBehaviour
                 aux = "Endoscopist1";
                 break;
             case "Anastesiólogo":
+            case "Anesthesiologist":
                 aux = "Anaesthesiologist";
                 break;
             case "Enfermera de endoscopia":

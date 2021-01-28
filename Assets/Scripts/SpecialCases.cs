@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -37,7 +38,9 @@ public class SpecialCases : MonoBehaviour
     SimpleWaypointMovement endoscopist2Mov;
     string anim = "";
     Transform position; //usaremos esta variable para asignar la posicion de la mano del personaje que sea
-    
+
+    public string currentTool = "";
+    public string nurseTool = "";
 
     #endregion
 
@@ -64,13 +67,15 @@ public class SpecialCases : MonoBehaviour
 
     public void UpdateNurseName()
     {
+        Debug.Log($"currentNurse = {currentNurse}");
         UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().canvasName.text = $"Endoscopy \n Nurse {currentNurse}";
+        UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurseExtra"].gameObject.GetComponent<HandPosition>().canvasName.text = $"Endoscopy \n Nurse {currentNurse + 1}";
     }
 
     public void CheckSituation(string situation_id) //SITUATION 5 AND 3
     {
         //Check if nurse cry
-        if (situation_id == "S3_4" || situation_id == "S5")
+        if (situation_id == "S3_4" || situation_id == "S5_6")
         {
             currentNurse++;
             Debug.Log($"Cambiamos a la enfermera {currentNurse}");
@@ -108,6 +113,8 @@ public class SpecialCases : MonoBehaviour
             case "D1.1.2":
             case "D1.1.3":
             case "D1.1.4":
+                //Esta es solo para probar, no pasa realmente: //este es el dialogo en el que el anestesiologo se gira hacia la enfermera de endoscopia
+                //StartCoroutine(TurnsTo(UI_Manager.Instance.dictionaryCharacteres["Anaesthesiologist"].gameObject, UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.transform.position));
                 //Solo de prueba: //en cualquiera de estos el anestesiologo se vuelve
                 //StartCoroutine(TurnsTo(UI_Manager.Instance.dictionaryCharacteres["Anaesthesiologist"].gameObject, UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.transform.position));
                 break;
@@ -117,6 +124,9 @@ public class SpecialCases : MonoBehaviour
                 break;
             case "D3.2": //entra una enfermera (dividir la anim que esta hecha en dos)
                 StartCoroutine(CaseD32());
+                break;
+            case "D4.3": //la enfermera coge una herramienta de la mesa y pregunta si es correcta (inyector)
+                StartCoroutine(CaseD43());
                 break;
             case "D5.2": //entra una enfermera (dividir la anim que esta hecha en dos)
                 StartCoroutine(CaseD52());
@@ -137,6 +147,12 @@ public class SpecialCases : MonoBehaviour
             case "D6.4.3": // el endoescopista 2 ayuda a la enfermera a buscar el forceps en la mesa
                 StartCoroutine(CaseD643());
                 break;
+            case "D6.4.0": // el endoescopista 2  se gira hacia la enfermera
+                StartCoroutine(CaseD640());
+                break;
+            case "D6.5": // el endoescopista 2 vuelve a su posicion inicial
+                StartCoroutine(CaseD65());
+                break;
             case "D7.1": //la enfermera te pasa el forceps
                 StartCoroutine(CaseD71());
                 break;
@@ -148,6 +164,7 @@ public class SpecialCases : MonoBehaviour
                 break;
             case "D10.1": //la segunda enfermera viene y ayuda a la primera enfermera
                 //playingAnimation = true;
+                StartCoroutine(CaseD101());
                 break;
         }
     }
@@ -157,6 +174,7 @@ public class SpecialCases : MonoBehaviour
         Debug.Log($"Vamos a hacer el caso D1.1: ponemos el endoscopio en la mano del endoescopista");
         playingAnimation = true;
         prop = GetProp("Endoscope");
+        currentTool = "Endoscope";
         position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos;
         SetProp(position, prop);// lo ponemos en tu mano
         yield return null;
@@ -169,7 +187,7 @@ public class SpecialCases : MonoBehaviour
         playingAnimation = true;
         movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
         Case3Resources.Instance.doorAnim.Play();
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsExit);
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -184,7 +202,7 @@ public class SpecialCases : MonoBehaviour
         UpdateNurseName();
         movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
         Case3Resources.Instance.doorAnim.Play();
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsEnter);
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsEnter, Case3Resources.Instance.endoscopist1LookPoint);
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -192,13 +210,28 @@ public class SpecialCases : MonoBehaviour
         playingAnimation = false;
     }
 
-    IEnumerator CaseD51() //es igual que el 31
+    IEnumerator CaseD43()
+    {
+        Debug.Log($"Pregunta si es este el inyector (va a la mesa y lo coge antes)");
+        playingAnimation = true;
+
+        yield return GoToTableAndTakeObject("Inyector");
+
+        //Se lo da al endoescopista1
+        //Animacion de dar
+        anim = "Give";
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim, "Inyector", "Endoscopist1");
+
+        playingAnimation = false;
+    }
+
+    IEnumerator CaseD51() 
     {
         Debug.Log($"Vamos a hacer el caso D5.1: La enfermera sale llorando");
         playingAnimation = true;
         movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
         Case3Resources.Instance.doorAnim.Play();
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsExit);
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -213,7 +246,7 @@ public class SpecialCases : MonoBehaviour
         UpdateNurseName();
         movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
         Case3Resources.Instance.doorAnim.Play();
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsEnter);
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsEnter, Case3Resources.Instance.endoscopist1LookPoint);
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -226,79 +259,77 @@ public class SpecialCases : MonoBehaviour
         Debug.Log($"Vamos a hacer el caso D6.2: La enfermera te da el lazo, extraes el endoscopio y se lo das a la enfermera y la enfermera lo deja en la mesa");
         //la enfermera te da el lazo, extraes el endoscopio y se lo das a la enfermera y la enfermera lo deja en la mesa
         playingAnimation = true;
-        Debug.Log($"Ponemos el lazo en la mano de la enfermera");
-        //Ponemos el lazo en la mano de la enfermera
-        prop = GetProp("Lazo");
-        position = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().handPos;
-        SetProp(position, prop);
+
+        //La enfermera va a la mesa y busca el lazo, lo ponemos en la mano y vuelve
+        yield return GoToTableAndTakeObject("Lazo");
 
         Debug.Log($"Hace la animacion de dartelo");
         //Animacion de darme el lazo
         anim = "Give"; // en las de dar podemos hacer que mire a un target
-        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim);
-
-        Debug.Log($"Lo ponemos en tu mano");
-        //Ponemos el lazo en la mano del endoescopista
-        position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos;
-        SetProp(position, prop);//lo ponemos en mi mano y lo eliminamos de la suya
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim, "Lazo", "Endoscopist1");
 
         //TODO: Tenemos que quitar el lazo de tu mano para sacar el endoscopio¿?
 
         //TODO: extraigo endoscopio  ¿animacion?
-        Debug.Log($"Extraemos el endoscopio");
+        //Debug.Log($"Extraemos el endoscopio");
         //Animacion de sacar el endoscopio
         anim = "EndoscopeAnim"; // en las de dar podemos ahcer que mire a un target
         yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim);
 
-        Debug.Log($"Lo ponemos en tu mano");
+        //Debug.Log($"Lo ponemos en tu mano");
         //Lo ponemos en tu mano
         prop = GetProp("Endoscope");
         position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos;
         SetProp(position, prop);
 
-        Debug.Log($"Animacion de darselo a la enfermera");
+        //Debug.Log($"Animacion de darselo a la enfermera");
         //Se los das a la enfermera
         anim = "Give";
-        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim);
-        position = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().handPos;
-        SetProp(position, prop);// lo ponemos en su mano
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim, "Endoscope", "EndoscopyNurse");
 
-        Debug.Log($"La enfermera va a la mesa");
-        //ir a la mesa:
+        //Debug.Log($"La enfermera va a la mesa");
+        yield return GoToTableAndLeaveObject("Endoscope");
+
+        /*
+                 //ir a la mesa:
         movementNurse = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
         //vementNurse.canMove = true;
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1);
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
         }
 
-        Debug.Log($"Lo deja en la mesa");
-        // lo deja en la mesa:
-        position = Case3Resources.Instance.tablePoint.transform;
-        SetProp(position, prop);
+        //animacion de dejar en la mesa
+        anim = "LookFor";
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim);
 
-        Debug.Log($"La enfermera se vuelve a su sitio");
+
+        //Debug.Log($"Lo deja en la mesa");
+        // lo deja en la mesa:
+        GameObject posAux = new GameObject();
+        posAux.transform.position = Case3Resources.Instance.positionsDictionary[prop.name];
+        //Case3Resources.Instance.tablePoint.transform;
+        SetProp(posAux.transform, prop);
+
+        //Debug.Log($"La enfermera se vuelve a su sitio");
         //vuelve a su sitio
         movementNurse.ResetPosition();
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
         }
+         */
 
         playingAnimation = false;
     }
 
-    IEnumerator CaseD64()
+    IEnumerator GoToTableAndTakeObject(string tableObject)
     {
-        Debug.Log($"Vamos a hacer el caso D6.4: Rebusca en la mesa y te da una herramienta erronea");
-        //rebusca en la mesa y te da una herramienta erronea
-        playingAnimation = true;
-
         Debug.Log("La enfermera va a la mesa");
         //Ir a la mesa
         movementNurse = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1);
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -309,9 +340,19 @@ public class SpecialCases : MonoBehaviour
         anim = "LookFor";
         yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim);
 
+        //si tenemos una herramienta en la mano la dejamos en la mesa antes de coger la nueva
+        if (nurseTool != null && nurseTool != "")
+        {
+            prop = GetProp(nurseTool);
+            GameObject posAux = new GameObject();
+            posAux.transform.position = Case3Resources.Instance.positionsDictionary[prop.name];
+            //Case3Resources.Instance.tablePoint.transform;
+            SetProp(posAux.transform, prop);
+        }
+
         Debug.Log("Ponemos el objeto en la mano de la enfermera");
         //Aparecer el objeto en la mano
-        prop = GetProp("HerramientaErronea");
+        prop = GetProp(tableObject);
         position = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().handPos;
         SetProp(position, prop);// lo ponemos en su mano
 
@@ -323,16 +364,59 @@ public class SpecialCases : MonoBehaviour
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
         }
+    }
+
+    IEnumerator GoToTableAndLeaveObject(string tableObject)
+    {
+        Debug.Log("La enfermera va a la mesa");
+        //Ir a la mesa
+        movementNurse = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
+        while (movementNurse.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+
+        Debug.Log("La enfermera hace la animacion de buscar");
+        //Animacion de buscar
+        anim = "LookFor";
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim);
+
+        Debug.Log($"Ponemos la herramienta en la mesa");
+        prop = GetProp(tableObject);
+        GameObject posAux = new GameObject();
+        posAux.transform.position = Case3Resources.Instance.positionsDictionary[prop.name];
+        //Case3Resources.Instance.tablePoint.transform;
+        SetProp(posAux.transform, prop);
+
+        Debug.Log("La enfermera se vuelve a su sitio");
+        //volver a su sitio
+        movementNurse = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
+        movementNurse.ResetPosition();
+        while (movementNurse.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+    }
+
+    IEnumerator CaseD64()
+    {
+        Debug.Log($"Vamos a hacer el caso D6.4: La enfermera Rebusca en la mesa y te da una herramienta erronea");
+        //rebusca en la mesa y te da una herramienta erronea
+        playingAnimation = true;
+
+        //antes de esto le devolvemos la herramienta que estamos usando
+        //animacion de dar herramienta
+        anim = "Give";
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim, currentTool, "EndoscopyNurse");
+
+
+        yield return GoToTableAndTakeObject("HerramientaErronea");
 
         Debug.Log("La enfermera te da el objeto");
         //Animacion de dar
         anim = "Give";
-        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim);
-
-        Debug.Log("Ponemos la herramienta en tu mano");
-        //Poner la herramienta en tu mano
-        position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos;
-        SetProp(position, prop);// lo ponemos en tu mano
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim, "HerramientaErronea", "Endoscopist1");
 
         playingAnimation = false;
     }
@@ -348,21 +432,22 @@ public class SpecialCases : MonoBehaviour
         yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim);
 
         Debug.Log($"movimiento de la herramienta");
+        /*
         //eliminar herramienta de la mano y lanzarla contra la enfermera //bastaria con ponerle un follow point que se vaya moviendo //To test
         float interpolationRatio = 0;
         float speed = 2f;
         Vector3 origin = prop.transform.position;
         Vector3 target = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.transform.position;
-        prop.GetComponent<FollowPoint>().target = null; //de esta forma nos hara caso a nosotros y no al follow point
+        //prop.GetComponent<FollowPoint>().target = null; //de esta forma nos hara caso a nosotros y no al follow point
 
         //fake movement
         while (interpolationRatio < 1)
         {
             interpolationRatio += Time.deltaTime * speed;
-            prop.transform.position = Vector3.Lerp(origin, target, interpolationRatio);
+            prop.GetComponent<FollowPoint>().target = Vector3.Lerp(origin, target, interpolationRatio);
             yield return null;
         }
-
+        */
         //DeleteProp(prop); //temporal
         playingAnimation = false;
     }
@@ -375,38 +460,9 @@ public class SpecialCases : MonoBehaviour
 
         Debug.Log($"Haces la animacion de darsela");
         anim = "Give";
-        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim);
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim, "HerramientaErronea", "EndoscopyNurse");
 
-        // lo ponemos en la mano de la enfermera
-        Debug.Log($"Ponemos la herramienta en la mano de la enfermera");
-        prop = GetProp("HerramientaErronea");
-        position = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().handPos;
-        SetProp(position, prop);
-
-        //ir a la mesa
-        Debug.Log($"La enfermera hace la animacion de ir a la mesa");
-        movementNurse = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1);
-        while (movementNurse.canMove)
-        {
-            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
-        }
-
-        // lo deja en la mesa:
-        Debug.Log($"Ponemos la herramienta en la mesa");
-        prop = GetProp("HerramientaErronea");
-        position = Case3Resources.Instance.tablePoint.transform;
-        SetProp(position, prop);
-
-        //volver a su sitio
-        Debug.Log($"La enfermera vuelve a su sitio");
-        movementNurse = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
-        movementNurse.ResetPosition();
-        while (movementNurse.canMove)
-        {
-            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
-        }
-        //DeleteProp(prop);
+        yield return GoToTableAndLeaveObject("HerramientaErronea");
 
         playingAnimation = false;
     }
@@ -421,7 +477,7 @@ public class SpecialCases : MonoBehaviour
         Debug.Log($"La enfermera va a la mesa");
         //ir a la mesa enfermera
         movementNurse = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1);
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
         while (movementNurse.canMove) //este while igual nos lo podemos machacar en este contexto, y que se quede esperando en el siguiente
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -429,7 +485,7 @@ public class SpecialCases : MonoBehaviour
         Debug.Log($"El Endoscopist2 va a la mesa");
         //ir a la mesa endoescopista 2
         endoscopist2Mov = UI_Manager.Instance.dictionaryCharacteres["Endoscopist2"].gameObject.GetComponent<SimpleWaypointMovement>();
-        endoscopist2Mov.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1);
+        endoscopist2Mov.SetPathAndPlay(Case3Resources.Instance.waypointsToTable2, Case3Resources.Instance.tableLookPoint);
         while (endoscopist2Mov.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -468,14 +524,24 @@ public class SpecialCases : MonoBehaviour
         Debug.Log($"La enfermera te da la herramienta");
         //Te da la herramienta
         anim = "Give";
-        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim);
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim, "Herramienta", "Endoscopist1");
 
-        Debug.Log($"Ponemos la herramienta en tu mano");
-        //poner el prop en tu mano
-        prop = GetProp("Herramienta");
-        position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos;
-        SetProp(position, prop);
+        playingAnimation = false;
+    }
 
+    IEnumerator CaseD640()
+    {
+        playingAnimation = true;
+        //El end2 se gira hacia la enfermera
+        yield return TurnsTo(UI_Manager.Instance.dictionaryCharacteres["Endoscopist2"].gameObject, UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.transform.position);
+        playingAnimation = false;
+    }
+    IEnumerator CaseD65()
+    {
+        //el endoscopista 2 vuelve a su pos inicial
+        playingAnimation = true;
+
+        yield return TurnsTo(UI_Manager.Instance.dictionaryCharacteres["Endoscopist2"].gameObject, UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.transform.position);
         playingAnimation = false;
     }
 
@@ -484,12 +550,7 @@ public class SpecialCases : MonoBehaviour
         //la enfermera te pasa el forceps
         playingAnimation = true;
         anim = "Give";
-        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim);
-
-        //Poner el prop en tu mano
-        prop = GetProp("Forceps");
-        position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos;
-        SetProp(position, prop);
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim, "Forceps", "Endoscopist1");
 
         //DeleteProp(prop); //igual es mejor llamar a esto desde la corutina y que desaparezca a mitad de la animacion
 
@@ -503,7 +564,7 @@ public class SpecialCases : MonoBehaviour
 
         //ir a la mesa enfermera
         movementNurse = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1);
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
         while (movementNurse.canMove) //este while igual nos lo podemos machacar en este contexto, y que se quede esperando en el siguiente
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -549,13 +610,26 @@ public class SpecialCases : MonoBehaviour
         playingAnimation = false;
     }
 
-    IEnumerator TurnsTo(GameObject characer, Vector3 targetPosition) //para volver a la posicion original basta con indicar que se giren hacia en endoescopista 1
+    IEnumerator CaseD101()
     {
         playingAnimation = true;
+        UpdateNurseName();
+        SimpleWaypointMovement movement = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurseExtra"].gameObject.GetComponent<SimpleWaypointMovement>();
+        Case3Resources.Instance.doorAnim.Play();
+        movement.SetPathAndPlay(Case3Resources.Instance.waypointsEnterExtra, Case3Resources.Instance.endoscopist1LookPoint);
+        while (movement.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+        playingAnimation = false;
+    }
+
+    IEnumerator TurnsTo(GameObject characer, Vector3 targetPosition) //para volver a la posicion original basta con indicar que se giren hacia en endoescopista 1
+    {
         //activar aniamcion de girar (hay que comprobar hacia donde gira y en funcion de eso poner derecha o izquierda)
         Animator animator = characer.GetComponent<Animator>();
         float turnAnimDuration = 0f;
-        float rotationSpeed = 1f;
+        float rotationSpeed = 2f;
         if (targetPosition.x < characer.transform.position.x && changed(characer.transform.position.y, targetPosition.y))
         {
             Debug.Log("Movemos a la derecha");
@@ -569,25 +643,26 @@ public class SpecialCases : MonoBehaviour
             //turnAnimDuration = GetDuration("LeftTurn", animator);
         }
 
-        Debug.Log($"Almacenamos la duracion de la animación actual de girarase = {turnAnimDuration}");
+        //Debug.Log($"Almacenamos la duracion de la animación actual de girarase = {turnAnimDuration}");
 
         //Opcion 1 (con animacion haciendo cosas raras)
         //yield return new WaitForSeconds(turnAnimDuration);
         //characer.transform.LookAt(targetPosition);
 
-
+        float duration = 2f;
         //Opcion 2 (sin animacion)
-        while (Vector3.Distance(characer.transform.forward, targetPosition - characer.transform.position) > 0.2f)//characer.transform.rotation != Quaternion.LookRotation(targetPosition - characer.transform.position)
+        //Math.Abs(Vector3.Distance(characer.transform.forward, targetPosition - characer.transform.position)) > 0.2f
+        while (duration > 0)//characer.transform.rotation != Quaternion.LookRotation(targetPosition - characer.transform.position)
         {
-            Debug.Log($"Seguimos girando hasta que encontremos al player");
+            duration -= Time.deltaTime;
+            Debug.Log($"Seguimos girando hasta que encontremos al player, distancia: {Math.Abs(Vector3.Distance(characer.transform.forward, targetPosition - characer.transform.position))}");
             characer.transform.rotation = Quaternion.Lerp(characer.transform.rotation, Quaternion.LookRotation(targetPosition - characer.transform.position), Time.deltaTime * rotationSpeed);
             yield return null;
         }
 
-        playingAnimation = false;
     }
 
-    IEnumerator PlaySimpleAnim(GameObject character, string animName)
+    IEnumerator PlaySimpleAnim(GameObject character, string animName, string propName = "Herramienta", string target = "Endoscopist1")
     {
         playingAnimation = true;
         //IMPORTANTE: La animacion y la transicion deben de tener el mismo nombre para que funcione bien
@@ -596,7 +671,28 @@ public class SpecialCases : MonoBehaviour
         animator.SetBool(animName, true);
         float animDuration = GetDuration(animName, animator);
 
-        yield return new WaitForSeconds(animDuration);
+        if (animName == "Give")
+        {
+            //a mitad de la animacion hace desaparecer el objeto de la mano
+            yield return new WaitForSeconds(animDuration * 0.75f);
+
+            prop = GetProp(propName);
+            position = UI_Manager.Instance.dictionaryCharacteres[target].gameObject.GetComponent<HandPosition>().handPos;
+            SetProp(position, prop);
+
+            yield return new WaitForSeconds(animDuration * 0.25f + 0.4f);
+
+            if (target == "Endoscopist1")
+            {
+                currentTool = propName;
+            }
+        }
+        else
+        {
+            yield return new WaitForSeconds(animDuration + 0.4f); //esperamos un poco de tiempo adicional 
+        }
+
+        
     }
 
     public float GetDuration(string animationName, Animator anim)
@@ -642,7 +738,14 @@ public class SpecialCases : MonoBehaviour
 
     public GameObject GetProp(string propName)
     {
-        return prop;//TODO: esto debera ser un buscar en un array de posibles herramientaas, de momento solo hay una
+        GameObject aux = prop; //default prop
+        //Consultar un diccionario de herramientas en el case 3 resources
+        if (Case3Resources.Instance.toolsDictionary.ContainsKey(propName))
+        {
+            aux = Case3Resources.Instance.toolsDictionary[propName];
+        }
+
+        return aux;
     }
 
 

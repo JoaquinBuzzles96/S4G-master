@@ -35,8 +35,29 @@ public class Case3Resources : MonoBehaviour
 
     public Transform[] waypointsExit;
     public Transform[] waypointsEnter;
+    public Transform[] waypointsEnterExtra;
     public Transform[] waypointsSecretary;
     public Transform[] waypointsToTable1;
     public Transform[] waypointsToTable2;
+    public Transform tableLookPoint;
+    public Transform endoscopist1LookPoint;
+    public Dictionary<string, Vector3> positionsDictionary; //en este diccionario guardaremos las posiciones originales de cada objeto en la mesa
+    
+
+    public GameObject[] tools; //para que se vea en el inspector :)
+    public Dictionary<string, GameObject> toolsDictionary;
+    
+
+    private void Start()
+    {
+        toolsDictionary = new Dictionary<string, GameObject>();
+        positionsDictionary = new Dictionary<string, Vector3>(); 
+        foreach (var item in tools)
+        {
+            toolsDictionary.Add(item.name, item);
+            positionsDictionary.Add(item.name, item.transform.position);
+            item.GetComponent<FollowPoint>().target = item.transform;
+        }
+    }
 
 }

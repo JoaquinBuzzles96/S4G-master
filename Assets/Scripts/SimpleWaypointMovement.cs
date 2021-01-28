@@ -26,6 +26,7 @@ public class SimpleWaypointMovement : MonoBehaviour
         GameObject gameObjectInitPoint = new GameObject("InitPos");
         var instance = Instantiate(gameObjectInitPoint, this.transform.position, this.transform.rotation);
         originalPos = instance.transform; //si le asigno directamente la transform hara un puntero e ira actualizando la posicion, y no queremos eso
+        originalPos.position = new Vector3(originalPos.position.x, 0.36f, originalPos.position.z);
         wayToFollow = waypoints; //por si acaso se le llamase sin nada, pero siempre deberia indicarse antes de llamar
     }
 
@@ -40,7 +41,7 @@ public class SimpleWaypointMovement : MonoBehaviour
             {
                 if (Vector3.Distance(this.transform.position, wayToFollow[nextWaypoint].transform.position) > 0.1f)
                 {
-                    Debug.Log("Caminamos hacia el waypoint " + nextWaypoint);
+                    Debug.Log("La "+ this.gameObject.name +"camina hacia el waypoint " + nextWaypoint);
                     if (!animator.GetBool("Walk"))
                     {
                         animator.SetBool("Walk", true);
@@ -70,19 +71,30 @@ public class SimpleWaypointMovement : MonoBehaviour
         }
     }
 
-    public void SetPathAndPlay(Transform[] _waypoints)
+    public void SetPathAndPlay(Transform[] _waypoints, Transform lookPoint)
     {
         //ClearWaypoints(); // No deberia ser necesario pero por si acaso
-        waypoints = _waypoints;
-        wayToFollow = waypoints;
+        //waypoints = _waypoints;
+        lastPointToLook = lookPoint;
+        wayToFollow = _waypoints;
+
+        Debug.Log("Por lo tanto el way to follow es: ");
+        foreach (var item in wayToFollow)
+        {
+            Debug.Log($"{item.position}");
+        }
+
         canMove = true;
     }
 
     public void ResetPosition()
     {
         //ClearWaypoints();
-        waypoints[0] = originalPos;
-        wayToFollow = waypoints;
+        //waypoints[0] = originalPos;
+        lastPointToLook = Case3Resources.Instance.endoscopist1LookPoint;
+        Transform[] comeBackPoints = new Transform[1];
+        comeBackPoints[0] = originalPos;
+        wayToFollow = comeBackPoints;
         canMove = true;
     }
 
