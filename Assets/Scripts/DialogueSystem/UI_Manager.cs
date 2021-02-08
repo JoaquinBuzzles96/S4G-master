@@ -227,7 +227,6 @@ public class UI_Manager : MonoBehaviour
 
     public void OnStartButton()
     {
-
         currentQuestion = Random.Range(0, questions.Count);
 
         if (currentQuestion == lastQuestion)
@@ -306,7 +305,7 @@ public class UI_Manager : MonoBehaviour
 
     }
 
-    private string GetAudioPath(string _audio)
+    public string GetAudioPath(string _audio)
     {
         //string path = $"Audio/Case5_EN/{_audio}";
         string path = $"Audio/Case5_EN/Audio1"; //default value
@@ -568,8 +567,6 @@ public class UI_Manager : MonoBehaviour
         //Send email
         Debug.Log("Enviamos un mail con la infomacion");
         SendMail.Instance.SendEmail();
-
-        
     }
 
     private bool CheckMoreDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI, GameObject nextButton)
@@ -745,6 +742,16 @@ public class UI_Manager : MonoBehaviour
                 enfermeraDeAnestesia.speed = color;
                 break;
         }
+    }
+
+    public void SetupTutorial()
+    {
+      OptionsManager.Instance.ResetScene();
+    }
+
+    public void Exit()
+    {
+        ExitGame.Instance.ExitGameMethod();
     }
 
 }

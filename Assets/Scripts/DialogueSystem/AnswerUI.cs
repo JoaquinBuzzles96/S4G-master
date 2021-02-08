@@ -50,48 +50,10 @@ public class AnswerUI : MonoBehaviour
 
     public void OnSelectAnswer()
     {
-        //OLD
-        /*
-        if (answerData.IsEnd)
-        {
-            UI_Manager.Instance.AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
-            Debug.Log("Enhorabuena, has acabado la simulacion :D");
-            // send mail
-        }
-        else
-        {
-            UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + " " + answerData.Feedback + "\n" + "Time to answer: " + Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) + " seconds.\n"); if (nextSituation == null)
-            {
-                Debug.Log("No se ha asignado la siguiente situacion");
-            }
-            else
-            {
-                if (answerData.IsCorrect)
-                {
-                    
-                    Debug.Log($"La respuesta {answerData.AnswerName} es correcta, vamos a la situacion {nextSituation.SituationName}");
-                }
-                else
-                {
-                    Debug.Log($"La respuesta {answerData.AnswerName} es erronea, vamos a la situacion {nextSituation.SituationName}");
-                }
 
-                //Tanto el audio como la animacion mejor que lo lleve el UI_Manager aunque lo invoquemos desde aqui
-                //Reproducir audio correspondiente
-                //Reproducir animacion correspondiente
-                if (AudioIsValid(answerData.audioId) && SpeakerIsValid(answerData.speaker))
-                {
-                    UI_Manager.Instance.PlayAudioOnSpeaker(answerData.audioId, answerData.speaker);
-                }
-
-                UI_Manager.Instance.ToScreen1(nextSituation);
-            }
-        }
-        */
-
-        
         UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + "\n" + "Time to answer: " + Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) + " seconds.\n");
         UI_Manager.Instance.totalScore += answerData.score;
+        //UI_Manager.Instance.screen2.GetComponent<QuestionUI>().answered = true;
 
         UI_Manager.Instance.ToScreen4(answerData, UI_Manager.Instance.screen3);
     }
