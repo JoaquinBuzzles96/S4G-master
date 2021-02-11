@@ -558,6 +558,8 @@ public class UI_Manager : MonoBehaviour
         {
             StartCoroutine(PlaySimpleDialogue(answer.audioId, nextButtonFeedback));
         }
+
+        StartCoroutine(SpecialCases.Instance.ExitRoom());
         
         feedbackText.text = $"{answer.Feedback} \n Score: {totalScore}";
         //Add feedback to email
@@ -757,6 +759,11 @@ public class UI_Manager : MonoBehaviour
     public void Destroy()
     {
         Destroy(this.gameObject);
+    }
+
+    public void Testing()
+    {
+        StartCoroutine(SpecialCases.Instance.ExitRoom());
     }
 
 }

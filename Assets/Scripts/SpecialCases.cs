@@ -41,6 +41,7 @@ public class SpecialCases : MonoBehaviour
 
     public string currentTool = "";
     public string nurseTool = "";
+    bool isExtraNurse = false;
 
     #endregion
 
@@ -613,6 +614,7 @@ public class SpecialCases : MonoBehaviour
     IEnumerator CaseD101()
     {
         playingAnimation = true;
+        isExtraNurse = true;
         UpdateNurseName();
         SimpleWaypointMovement movement = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurseExtra"].gameObject.GetComponent<SimpleWaypointMovement>();
         Case3Resources.Instance.doorAnim.Play();
@@ -748,10 +750,47 @@ public class SpecialCases : MonoBehaviour
         return aux;
     }
 
+    public IEnumerator ExitRoom()
+    {
+        //Todos abandonan la habitación
+        Case3Resources.Instance.doorAnim.Play(); //revisar esto
+
+        //anestesiologo
+        SimpleWaypointMovement aux = Case3Resources.Instance.anaesthesiologist.GetComponent<SimpleWaypointMovement>();
+        aux.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
+
+        yield return new WaitForSeconds(1);
+
+        //Nurse
+        aux = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
+        aux.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
+
+        yield return new WaitForSeconds(1);
+
+        //anestesiologa
+        aux = Case3Resources.Instance.anaesthesistNurse.GetComponent<SimpleWaypointMovement>();
+        aux.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
+
+        yield return new WaitForSeconds(1);
+        //Extra nurse
+        if (isExtraNurse)
+        {
+            aux = Case3Resources.Instance.extraNurse.GetComponent<SimpleWaypointMovement>();
+            aux.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
+            isExtraNurse = false;
+        }
+
+        yield return new WaitForSeconds(1);
+
+        //Endoescopista2
+        aux = Case3Resources.Instance.endoscopist2.GetComponent<SimpleWaypointMovement>();
+        aux.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
+
+    }
+
     public void Destroy()
     {
         Destroy(this.gameObject);
     }
-
 
 }

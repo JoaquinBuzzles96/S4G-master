@@ -28,6 +28,11 @@ public class Case3Resources : MonoBehaviour
 
     public GameObject secretary;
     public GameObject nurse;
+    public GameObject endoscopist2;
+    public GameObject anaesthesiologist;
+    public GameObject anaesthesistNurse;
+    public GameObject extraNurse;
+
     public Animation doorAnim;
     public GameObject fakeProp;
     public GameObject tablePoint;
