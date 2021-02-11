@@ -117,6 +117,9 @@ public class OptionsManager : MonoBehaviour
          SetSettingsActive(true); //nombre y correo activos por si lo quieren cambiar
          EnableTutorial(false); //panel de las instrucciones
         */
+        UI_Manager.Instance.Destroy();
+        SpecialCases.Instance.Destroy();
         Destroy(this.gameObject);
+        
     }
 }

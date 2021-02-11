@@ -748,6 +748,10 @@ public class SpecialCases : MonoBehaviour
         return aux;
     }
 
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
+    }
 
 
 }

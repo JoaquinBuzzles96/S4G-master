@@ -754,4 +754,9 @@ public class UI_Manager : MonoBehaviour
         ExitGame.Instance.ExitGameMethod();
     }
 
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
+    }
+
 }
