@@ -658,6 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1641184543177515057}
   - component: {fileID: 8668491829385203019}
+  - component: {fileID: 7388844676260536005}
   m_Layer: 0
   m_Name: Scrub
   m_TagString: Untagged
@@ -707,6 +708,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &7388844676260536005
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350300101431513634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2934748
+  m_Height: 2.1243663
+  m_Direction: 1
+  m_Center: {x: 0.0073618293, y: 0.79629636, z: 0}
 --- !u!1 &2352083772485854791
 GameObject:
   m_ObjectHideFlags: 0

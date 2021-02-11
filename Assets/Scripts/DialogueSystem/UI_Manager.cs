@@ -607,12 +607,42 @@ public class UI_Manager : MonoBehaviour
         {
             if ((currentDialogue + i) < dialoguesData.Count)
             {
+                string tagToCheck = "";
+
+                if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + i].Speaker)))
+                {
+                    tagToCheck = Translate(dialoguesData[currentDialogue + i].Speaker);
+                }
+                else
+                {
+                    tagToCheck = "NOT_CHECK";
+                }
+
+                    //Girarse para escuchar
+                if (tagToCheck != "NOT_CHECK" && tagToCheck != "Endoscopist1")
+                {
+                    //TODO: FLECHOTE
+                    //Enable arrow
+                    Debug.Log($"Vamos a buscar al personaje {tagToCheck}");
+
+                    while (!CheckIfTargetFieldOfView(tagToCheck))
+                    {
+
+                        yield return null;
+                    }
+                    //Disable Arrow
+                }
+
+                //Actualizar Panel
                 dialoguesUI[i].text = $"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}";
                 AddTextToRoute($"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}");
-                //Debug.Log($"Hemos puesto el dialogo {currentDialogue + i}, ahora vamos a hacer una pausa");
+
+                //Audio
                 yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker, dialoguesData[currentDialogue + i].Mood));
-                //Debug.Log($"Vamos a resaltar el dialogo del speaker {dialoguesData[currentDialogue + i].Speaker}");
+
                 
+
+                //Animacion al hablar
                 if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + i].Speaker)))
                 {
                     dictionaryCharacteres[Translate(dialoguesData[currentDialogue + i].Speaker)].SetBool("animFinished", true);
@@ -625,21 +655,14 @@ public class UI_Manager : MonoBehaviour
                         Debug.Log($"No se encontro el speaker {Translate(dialoguesData[currentDialogue + i].Speaker)}");
                     }
                 }
-                //Antes de empezar el siguiente dialogo y antes de comenzar el siguiente comprobamos si hay que hacer alguna accion concreta:
+
+                //Eventos especiales
                 SpecialCases.Instance.CheckSpecialEvent(dialoguesData[currentDialogue + i].DialogueName);
                 while (SpecialCases.Instance.playingAnimation)
                 {
                     yield return null;
                 }
 
-                //TODO: COMPORBAR AQUI SI TIENES QUE MIRAR A ALGUIEN PARA SEGUIR
-                //Enable arrow
-                while (CheckIfTargetFieldOfView())
-                {
-                    
-                    yield return null;
-                }
-                //Disable Arrow
 
             }
             else
@@ -652,10 +675,20 @@ public class UI_Manager : MonoBehaviour
         nextButton.SetActive(true);
     }
 
-    bool CheckIfTargetFieldOfView()
+    bool CheckIfTargetFieldOfView(string tagToCheck)
     {
         bool isTragetInFieldOfView = false;
+        RaycastHit hitInfo;
 
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hitInfo))
+        {
+            Debug.Log($"Chocamos con algo de nombre {hitInfo.collider.gameObject.name} y etiqueta {hitInfo.collider.tag}");
+            if (hitInfo.collider.gameObject.name == tagToCheck) //comprobar si esta mirando al doctor que corresponda
+            {
+                Debug.Log($"Estamos mirando {tagToCheck}");
+                isTragetInFieldOfView = true;
+            }
+        }
 
         return isTragetInFieldOfView;
     }

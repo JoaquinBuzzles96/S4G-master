@@ -4609,6 +4609,20 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1454833837}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &581662756
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581662753}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.23807257
+  m_Height: 2.3706174
+  m_Direction: 1
+  m_Center: {x: -0.022116482, y: 0.6853087, z: -0.02468121}
 --- !u!1 &618122081
 GameObject:
   m_ObjectHideFlags: 0
@@ -8129,6 +8143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Endoscopist1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388844676260536005, guid: 23e22f37506977d43ae72f984602ba5c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8668491829385203019, guid: 23e22f37506977d43ae72f984602ba5c,
         type: 3}
@@ -37031,7 +37050,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5828301427992603800, guid: ebcf3cbdede086c4cbb1bd57ca198660, type: 3}
+  - {fileID: 2100000, guid: fe1f05fbe28883245827b86497578e84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
