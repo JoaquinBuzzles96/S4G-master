@@ -76,7 +76,6 @@ public class UI_Manager : MonoBehaviour
     public TalkAnim enfermeraDeAnestesia;
 
 
-
     [HideInInspector]
     public string playereRoute;
     public int totalScore; 
@@ -633,6 +632,15 @@ public class UI_Manager : MonoBehaviour
                     yield return null;
                 }
 
+                //TODO: COMPORBAR AQUI SI TIENES QUE MIRAR A ALGUIEN PARA SEGUIR
+                //Enable arrow
+                while (CheckIfTargetFieldOfView())
+                {
+                    
+                    yield return null;
+                }
+                //Disable Arrow
+
             }
             else
             {
@@ -642,6 +650,14 @@ public class UI_Manager : MonoBehaviour
 
         currentDialogue += i;
         nextButton.SetActive(true);
+    }
+
+    bool CheckIfTargetFieldOfView()
+    {
+        bool isTragetInFieldOfView = false;
+
+
+        return isTragetInFieldOfView;
     }
 
     public IEnumerator PlaySimpleDialogue(string audio, GameObject nextButton)
