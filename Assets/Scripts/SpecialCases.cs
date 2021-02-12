@@ -57,7 +57,7 @@ public class SpecialCases : MonoBehaviour
             }
             else if (currentNurse == 3)
             {
-                real_audio_id = audio_id + "3"; ;
+                real_audio_id = audio_id + "3";
             }
 
             //Debug.Log($"Vamos a cargar el audio {real_audio_id} de la enfermera {currentNurse}");
@@ -68,6 +68,7 @@ public class SpecialCases : MonoBehaviour
 
     public void UpdateNurseName()
     {
+        Case3Resources.Instance.mask.SetActive(true);
         Debug.Log($"currentNurse = {currentNurse}");
         UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().canvasName.text = $"Endoscopy \n Nurse {currentNurse}";
         UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurseExtra"].gameObject.GetComponent<HandPosition>().canvasName.text = $"Endoscopy \n Nurse {currentNurse + 1}";
@@ -106,30 +107,21 @@ public class SpecialCases : MonoBehaviour
             case "D11.1": //dialogo en el que entra el secretario
                 StartCoroutine(CaseD111());
                 break;
-            case "D1.4":
-                //Esta es solo para probar, no pasa realmente: //este es el dialogo en el que el anestesiologo se gira hacia la enfermera de endoscopia
-                //StartCoroutine(TurnsTo(UI_Manager.Instance.dictionaryCharacteres["Anaesthesiologist"].gameObject, UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.transform.position));
-                break;
-            case "D1.1.1":
-            case "D1.1.2":
-            case "D1.1.3":
-            case "D1.1.4":
-                //Esta es solo para probar, no pasa realmente: //este es el dialogo en el que el anestesiologo se gira hacia la enfermera de endoscopia
-                //StartCoroutine(TurnsTo(UI_Manager.Instance.dictionaryCharacteres["Anaesthesiologist"].gameObject, UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.transform.position));
-                //Solo de prueba: //en cualquiera de estos el anestesiologo se vuelve
-                //StartCoroutine(TurnsTo(UI_Manager.Instance.dictionaryCharacteres["Anaesthesiologist"].gameObject, UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.transform.position));
-                break;
-
             case "D1.1": //poner endoscopio en la mano del endoescopista 1
                 StartCoroutine(CaseD11());
                 break;
-            case "D3.2": //entra una enfermera (dividir la anim que esta hecha en dos)
+            case "D1.1.2": //La enfermera se pone la mascarilla
+            case "D1.5": //La enfermera se pone la mascarilla
+            case "D1.8": //La enfermera se pone la mascarilla
+                StartCoroutine(CaseD112());
+                break;
+            case "D3.2": //entra una enfermera
                 StartCoroutine(CaseD32());
                 break;
             case "D4.3": //la enfermera coge una herramienta de la mesa y pregunta si es correcta (inyector)
                 StartCoroutine(CaseD43());
                 break;
-            case "D5.2": //entra una enfermera (dividir la anim que esta hecha en dos)
+            case "D5.2": //entra una enfermera
                 StartCoroutine(CaseD52());
                 break;
             case "D6.2": //la enfermera te da el lazo, extraes el endoscopio y se lo das a la enfermera y la enfermera lo deja en la mesa
@@ -180,6 +172,20 @@ public class SpecialCases : MonoBehaviour
         SetProp(position, prop);// lo ponemos en tu mano
         yield return null;
         playingAnimation = false;
+    }
+
+    IEnumerator CaseD112()
+    {
+        //La enfermera se pone la mascarilla
+        //Case3Resources.Instance.animMascarilla.SetActive(true);//activar la mascarilla de la animacion
+        //play anim
+        UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].SetBool("maskAnim", true);
+
+        //Esperar hasta que acabe la animacion -- dura 4.5
+        yield return new WaitForSeconds(4.5f);
+
+        //Case3Resources.Instance.animMascarilla.SetActive(false); //desactivamos la mascarilla de la animacion
+        Case3Resources.Instance.mask.SetActive(true);//activar al final
     }
 
     IEnumerator CaseD31()

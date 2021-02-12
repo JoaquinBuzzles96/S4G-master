@@ -63,7 +63,7 @@ public class QuestionUI : MonoBehaviour
 
     IEnumerator QuestionTimer()
     {
-        int timer = 15; //segundos que tienes para responder
+        int timer = 25; //segundos que tienes para responder
         timerText.text = $"{timer}";
 
 

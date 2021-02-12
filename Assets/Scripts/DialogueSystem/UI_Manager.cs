@@ -363,9 +363,6 @@ public class UI_Manager : MonoBehaviour
 
         */
         
-
-         
-
         //#if !UNITY_EDITOR
         if (LanguageManager.Instance != null)
         {
@@ -426,15 +423,6 @@ public class UI_Manager : MonoBehaviour
 
             //Debug.Log($"Se ha añadido el {item.gameObject.name} al diccionario");
         }
-
-        /* Case 3:
-        Narrator
-        Endoscopist 1
-        Endoscopy Nurse
-        Anaesthesiologist
-        Endoscopist 2
-        Secretary
-         */
     }
 
     public void AddTextToRoute(string _text)
@@ -604,28 +592,29 @@ public class UI_Manager : MonoBehaviour
         nextButton.SetActive(false); // lo desactivamos mientras no haya que avanzar de pantalla
         bool end = false;
         int i = 0;
+        int j = 0; //como norma general sera igual que la i, pero si hay algun dialogo de narrador esta se incrementara y la i no
         //Debug.Log($"Entramos y current: {currentDialogue}, i: {i}");
         for (i = 0; i < dialoguesUI.Count && !end; i++)
         {
-            if ((currentDialogue + i) < dialoguesData.Count)
+            if ((currentDialogue + j) < dialoguesData.Count)
             {
                 string tagToCheck = "";
 
-                if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + i].Speaker)))
+                //Girarse para escuchar
+                if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + j].Speaker)))
                 {
-                    tagToCheck = Translate(dialoguesData[currentDialogue + i].Speaker);
+                    tagToCheck = Translate(dialoguesData[currentDialogue + j].Speaker);
                 }
                 else
                 {
                     tagToCheck = "NOT_CHECK";
                 }
 
-                    //Girarse para escuchar
                 if (tagToCheck != "NOT_CHECK" && tagToCheck != "Endoscopist1")
                 {
                     //Enable arrow
                     generalArrow.SetActive(true);
-                    generalArrow.GetComponent<LookTarget>().target = dictionaryCharacteres[Translate(dialoguesData[currentDialogue + i].Speaker)].gameObject.transform;
+                    generalArrow.GetComponent<LookTarget>().target = dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)].gameObject.transform;
 
                     Debug.Log($"Vamos a buscar al personaje {tagToCheck}");
 
@@ -638,37 +627,43 @@ public class UI_Manager : MonoBehaviour
                     generalArrow.SetActive(false);
                 }
 
-                //Actualizar Panel
-                dialoguesUI[i].text = $"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}";
-                AddTextToRoute($"{dialoguesData[currentDialogue + i].Speaker} ({dialoguesData[currentDialogue + i].Mood}): {dialoguesData[currentDialogue + i].DialogueText}");
-
-                //Audio
-                yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + i].audioId, dialoguesData[currentDialogue + i].Speaker, dialoguesData[currentDialogue + i].Mood));
-
-                
-
-                //Animacion al hablar
-                if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + i].Speaker)))
+                //Si es el narrador no se pone ni en el panel, ni el audio, ni la animacion de hablar
+                if (Translate(dialoguesData[currentDialogue + j].Speaker) != "Narrator")
                 {
-                    dictionaryCharacteres[Translate(dialoguesData[currentDialogue + i].Speaker)].SetBool("animFinished", true);
-                    SetColorName(0f, Translate(dialoguesData[currentDialogue + i].Speaker));
+                    //Actualizar Panel
+                    dialoguesUI[i].text = $"{dialoguesData[currentDialogue + j].Speaker} ({dialoguesData[currentDialogue + j].Mood}): {dialoguesData[currentDialogue + j].DialogueText}";
+                    //Email
+                    AddTextToRoute($"{dialoguesData[currentDialogue + j].Speaker} ({dialoguesData[currentDialogue + j].Mood}): {dialoguesData[currentDialogue + j].DialogueText}");
+
+                    //Audio
+                    yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + j].audioId, dialoguesData[currentDialogue + j].Speaker, dialoguesData[currentDialogue + j].Mood));
+
+                    //Animacion al hablar
+                    if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + j].Speaker)))
+                    {
+                        dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)].SetBool("animFinished", true);
+                        SetColorName(0f, Translate(dialoguesData[currentDialogue + j].Speaker));
+                    }
+                    else
+                    {
+                        if (dialoguesData[currentDialogue + j].Speaker != "Narrador" && dialoguesData[currentDialogue + j].Speaker != "Narrator")
+                        {
+                            Debug.Log($"No se encontro el speaker {Translate(dialoguesData[currentDialogue + j].Speaker)}");
+                        }
+                    }
                 }
                 else
                 {
-                    if (dialoguesData[currentDialogue + i].Speaker != "Narrador" && dialoguesData[currentDialogue + i].Speaker != "Narrator")
-                    {
-                        Debug.Log($"No se encontro el speaker {Translate(dialoguesData[currentDialogue + i].Speaker)}");
-                    }
+                    i--; //lo decrementamos para que no ocupe este slot en la UI y pase al siguiente
                 }
-
                 //Eventos especiales
-                SpecialCases.Instance.CheckSpecialEvent(dialoguesData[currentDialogue + i].DialogueName);
+                SpecialCases.Instance.CheckSpecialEvent(dialoguesData[currentDialogue + j].DialogueName);
                 while (SpecialCases.Instance.playingAnimation)
                 {
                     yield return null;
                 }
 
-
+                j++;
             }
             else
             {
@@ -676,7 +671,7 @@ public class UI_Manager : MonoBehaviour
             }
         }
 
-        currentDialogue += i;
+        currentDialogue += j;
         nextButton.SetActive(true);
     }
 
