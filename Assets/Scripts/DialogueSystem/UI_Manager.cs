@@ -27,6 +27,10 @@ public class UI_Manager : MonoBehaviour
 
     public DialogueContainer dialogueContainer;
 
+    //Arrows
+    public GameObject leftArrow;
+    public GameObject rightArrow;
+    public GameObject generalArrow;
 
     //Screen 1
     public GameObject screen1;
@@ -621,16 +625,19 @@ public class UI_Manager : MonoBehaviour
                     //Girarse para escuchar
                 if (tagToCheck != "NOT_CHECK" && tagToCheck != "Endoscopist1")
                 {
-                    //TODO: FLECHOTE
                     //Enable arrow
+                    generalArrow.SetActive(true);
+                    generalArrow.GetComponent<LookTarget>().target = dictionaryCharacteres[Translate(dialoguesData[currentDialogue + i].Speaker)].gameObject.transform;
+
                     Debug.Log($"Vamos a buscar al personaje {tagToCheck}");
 
                     while (!CheckIfTargetFieldOfView(tagToCheck))
                     {
-
                         yield return null;
                     }
+
                     //Disable Arrow
+                    generalArrow.SetActive(false);
                 }
 
                 //Actualizar Panel
