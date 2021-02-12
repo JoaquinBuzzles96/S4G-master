@@ -24,7 +24,9 @@ public class SendMail : MonoBehaviour
         }
     }
 
+    [System.NonSerialized]
     public string m_UserName = "Joaquin"; //default value
+    [System.NonSerialized]
     public string m_UserMail = "joakilm2@gmail.com"; //default value
 
    public TextMeshProUGUI m_NameMail;
@@ -32,7 +34,6 @@ public class SendMail : MonoBehaviour
 
     private void Awake()
     {
-        // if the singleton hasn't been initialized yet
         if (instance != null && instance != this)
         {
             Destroy(this.gameObject);
@@ -45,18 +46,19 @@ public class SendMail : MonoBehaviour
     public void SendEmail()
     {
         MailMessage mail = new MailMessage();
-        mail.From = new MailAddress("serroddev@gmail.com");
+        mail.From = new MailAddress("joakilm3@gmail.com");
         mail.To.Add(m_UserMail);
-        mail.Subject = "Usuario y Correo";
+        mail.Subject = "S4G TEST";
         /*
         Attachment attachment = new Attachment(@"D:\S4Game\somefile.txt");
         mail.Attachments.Add(attachment);
-        */  
+        */
         mail.Body = "Name: " + m_UserName + " Correo: " + m_UserMail + UI_Manager.Instance.playereRoute;
 
         SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
         smtpServer.Port = 587;
-        smtpServer.Credentials = new System.Net.NetworkCredential("serroddev@gmail.com", "sergikovic63") as ICredentialsByHost;
+        smtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;//testing
+        smtpServer.Credentials = new System.Net.NetworkCredential("joakilm3@gmail.com", "ViralTesting96@") as ICredentialsByHost;
         smtpServer.EnableSsl = true;
 
         ServicePointManager.ServerCertificateValidationCallback =

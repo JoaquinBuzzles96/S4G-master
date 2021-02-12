@@ -81,7 +81,7 @@ public class UI_Manager : MonoBehaviour
 
 
     [HideInInspector]
-    public string playereRoute;
+    public string playereRoute = "";
     public int totalScore; 
     public float lastTime;
     private void Awake()
@@ -819,7 +819,7 @@ public class UI_Manager : MonoBehaviour
 
     public void Testing()
     {
-        StartCoroutine(SpecialCases.Instance.ExitRoom());
+        SendMail.Instance.SendEmail();
     }
 
 }
