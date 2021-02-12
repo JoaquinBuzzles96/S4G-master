@@ -28,8 +28,6 @@ public class UI_Manager : MonoBehaviour
     public DialogueContainer dialogueContainer;
 
     //Arrows
-    public GameObject leftArrow;
-    public GameObject rightArrow;
     public GameObject generalArrow;
 
     //Screen 1
