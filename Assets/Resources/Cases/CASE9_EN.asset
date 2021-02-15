@@ -1,0 +1,1301 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
+  m_Name: CASE9_EN
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: 9ea25a24-f21b-4145-ac91-089ee21d0638
+    PortName: S1
+    TargetNodeGuid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
+  - BaseNodeGuid: 0402f13f-22f1-4208-ac64-068cd0d956fc
+    PortName: Dialogue
+    TargetNodeGuid: bc378e38-87ad-4a68-849b-03dec343a44f
+  - BaseNodeGuid: 0402f13f-22f1-4208-ac64-068cd0d956fc
+    PortName: Question 1
+    TargetNodeGuid: 82cc2164-cf96-4458-b497-5ccd7ccada65
+  - BaseNodeGuid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
+    PortName: Dialogue
+    TargetNodeGuid: cda23f46-81b6-4b44-a2c4-516d5eb5d76f
+  - BaseNodeGuid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
+    PortName: Question 1
+    TargetNodeGuid: c42e9b8c-45af-48a2-8eb8-4e179472349d
+  - BaseNodeGuid: da5e8e19-5126-4db1-ba6e-d292d219164a
+    PortName: Dialogue
+    TargetNodeGuid: bf95baea-0c81-445d-ab24-9b95689bfc99
+  - BaseNodeGuid: c93e26f3-f254-4e43-a47c-bcf40cfb17f6
+    PortName: Dialogue
+    TargetNodeGuid: 60bebcaf-9c44-4f75-abf3-769532b83cef
+  - BaseNodeGuid: c93e26f3-f254-4e43-a47c-bcf40cfb17f6
+    PortName: Question 1
+    TargetNodeGuid: 02f094b5-feaf-4298-9269-f803c7cbc17f
+  - BaseNodeGuid: 9344286c-ac5d-414a-a9bf-6dc306eca2a7
+    PortName: Dialogue
+    TargetNodeGuid: 231c3f1b-0b6a-409f-8c85-172db5e71698
+  - BaseNodeGuid: a88006e0-0920-4e1f-beb5-a15f25e98dea
+    PortName: Dialogue
+    TargetNodeGuid: be2d041a-4f0b-4784-9506-823782f351fd
+  - BaseNodeGuid: a88006e0-0920-4e1f-beb5-a15f25e98dea
+    PortName: Question 1
+    TargetNodeGuid: daac4b68-b27b-4352-a8f0-deae9a51189b
+  - BaseNodeGuid: e01ca662-a051-444a-b15a-0806c0043764
+    PortName: Dialogue
+    TargetNodeGuid: d86215b5-365b-4661-9347-829da9031d3f
+  - BaseNodeGuid: 5022c95d-f440-42a8-99a8-69e26840c617
+    PortName: Dialogue
+    TargetNodeGuid: e1470763-a0a8-4d92-8a5f-b5e114189291
+  - BaseNodeGuid: 5022c95d-f440-42a8-99a8-69e26840c617
+    PortName: Question 1
+    TargetNodeGuid: fce65e63-c5bf-4b82-a779-faa388b5f722
+  - BaseNodeGuid: fe2bc9bf-6ce5-473d-9ac2-a9f306e23e46
+    PortName: Dialogue
+    TargetNodeGuid: 4446ec08-e9b7-4b38-8114-008828341a15
+  - BaseNodeGuid: fe2bc9bf-6ce5-473d-9ac2-a9f306e23e46
+    PortName: Question 1
+    TargetNodeGuid: 281e910e-57d5-4941-94d0-d63d22290e61
+  - BaseNodeGuid: c42e9b8c-45af-48a2-8eb8-4e179472349d
+    PortName: Answer 1
+    TargetNodeGuid: e1c090cb-5f7e-43ed-9fd8-a177e0cc37b3
+  - BaseNodeGuid: c42e9b8c-45af-48a2-8eb8-4e179472349d
+    PortName: Answer 2
+    TargetNodeGuid: 2c3d4fad-6c19-4adb-9367-18ebfaa6c9a9
+  - BaseNodeGuid: c42e9b8c-45af-48a2-8eb8-4e179472349d
+    PortName: Answer 3
+    TargetNodeGuid: 74124c11-9ec5-4f2e-a096-92d8d73693cc
+  - BaseNodeGuid: c42e9b8c-45af-48a2-8eb8-4e179472349d
+    PortName: Answer 4
+    TargetNodeGuid: dcdd2b33-f7b7-4644-9aef-a334728c7feb
+  - BaseNodeGuid: 82cc2164-cf96-4458-b497-5ccd7ccada65
+    PortName: Answer 1
+    TargetNodeGuid: f2a309a3-d899-46c6-85ae-791f9edc1345
+  - BaseNodeGuid: 82cc2164-cf96-4458-b497-5ccd7ccada65
+    PortName: Answer 2
+    TargetNodeGuid: eabeacf3-fbb1-4e91-9b70-a997fd9f3e00
+  - BaseNodeGuid: 82cc2164-cf96-4458-b497-5ccd7ccada65
+    PortName: Answer 3
+    TargetNodeGuid: 39d033ba-ea98-4ca3-93cc-6d2b91988969
+  - BaseNodeGuid: 82cc2164-cf96-4458-b497-5ccd7ccada65
+    PortName: Answer 4
+    TargetNodeGuid: f28bf13a-593d-4ab3-85f6-ede8924f1a66
+  - BaseNodeGuid: 02f094b5-feaf-4298-9269-f803c7cbc17f
+    PortName: Answer 1
+    TargetNodeGuid: c8fb2126-ff09-4294-b774-59401b014df1
+  - BaseNodeGuid: 02f094b5-feaf-4298-9269-f803c7cbc17f
+    PortName: Answer 2
+    TargetNodeGuid: cbe87677-560a-4584-a7de-4d1be0118bee
+  - BaseNodeGuid: 02f094b5-feaf-4298-9269-f803c7cbc17f
+    PortName: Answer 3
+    TargetNodeGuid: 80aa5fc7-1bb0-4ed6-8d31-594d3b3d1e07
+  - BaseNodeGuid: 02f094b5-feaf-4298-9269-f803c7cbc17f
+    PortName: Answer 4
+    TargetNodeGuid: ccff181b-c43c-4145-a394-5ffa7bdd5c66
+  - BaseNodeGuid: daac4b68-b27b-4352-a8f0-deae9a51189b
+    PortName: Answer 1
+    TargetNodeGuid: 47c178a6-7265-495a-9b2b-17cae6b214a7
+  - BaseNodeGuid: daac4b68-b27b-4352-a8f0-deae9a51189b
+    PortName: Answer 2
+    TargetNodeGuid: 671adb7e-0237-4abd-a47f-3bbd30040a21
+  - BaseNodeGuid: daac4b68-b27b-4352-a8f0-deae9a51189b
+    PortName: Answer 3
+    TargetNodeGuid: 6c41301b-52e4-424e-b639-dd606d05037e
+  - BaseNodeGuid: daac4b68-b27b-4352-a8f0-deae9a51189b
+    PortName: Answer 4
+    TargetNodeGuid: 4fffad77-81c2-4b84-a6bd-25378fb6445c
+  - BaseNodeGuid: fce65e63-c5bf-4b82-a779-faa388b5f722
+    PortName: Answer 1
+    TargetNodeGuid: 8e1aca9b-8fe8-4b7d-9041-1b6b50e5dc31
+  - BaseNodeGuid: fce65e63-c5bf-4b82-a779-faa388b5f722
+    PortName: Answer 2
+    TargetNodeGuid: 688d93a2-6c2c-49d3-a420-ef16dc838bb0
+  - BaseNodeGuid: fce65e63-c5bf-4b82-a779-faa388b5f722
+    PortName: Answer 3
+    TargetNodeGuid: 43e6c32e-8950-4347-b45e-e79061c20338
+  - BaseNodeGuid: fce65e63-c5bf-4b82-a779-faa388b5f722
+    PortName: Answer 4
+    TargetNodeGuid: f22fc8fe-7480-429f-90f1-ee9d032449d6
+  - BaseNodeGuid: 281e910e-57d5-4941-94d0-d63d22290e61
+    PortName: Answer 1
+    TargetNodeGuid: 47b7dbee-e919-4404-aa3d-2f235887ffe4
+  - BaseNodeGuid: 281e910e-57d5-4941-94d0-d63d22290e61
+    PortName: Answer 2
+    TargetNodeGuid: 5c07f340-e12c-4742-b9ca-5d5e22377771
+  - BaseNodeGuid: 281e910e-57d5-4941-94d0-d63d22290e61
+    PortName: Answer 3
+    TargetNodeGuid: 6636090c-d4c3-4d7c-9d4e-91847020740c
+  - BaseNodeGuid: 281e910e-57d5-4941-94d0-d63d22290e61
+    PortName: Answer 4
+    TargetNodeGuid: a62341e1-44e2-4e30-bfae-87a5de6f0eb1
+  - BaseNodeGuid: e1c090cb-5f7e-43ed-9fd8-a177e0cc37b3
+    PortName: Dialogue
+    TargetNodeGuid: 8508d279-8133-4394-a347-7b57bec71d07
+  - BaseNodeGuid: e1c090cb-5f7e-43ed-9fd8-a177e0cc37b3
+    PortName: Situation
+    TargetNodeGuid: 0402f13f-22f1-4208-ac64-068cd0d956fc
+  - BaseNodeGuid: 2c3d4fad-6c19-4adb-9367-18ebfaa6c9a9
+    PortName: Dialogue
+    TargetNodeGuid: b3f6ba6b-aef6-486d-afe8-a37e785e44fd
+  - BaseNodeGuid: 2c3d4fad-6c19-4adb-9367-18ebfaa6c9a9
+    PortName: Situation
+    TargetNodeGuid: c93e26f3-f254-4e43-a47c-bcf40cfb17f6
+  - BaseNodeGuid: 74124c11-9ec5-4f2e-a096-92d8d73693cc
+    PortName: Dialogue
+    TargetNodeGuid: 7ec2fdf2-49b0-479c-885d-5c769149247d
+  - BaseNodeGuid: 74124c11-9ec5-4f2e-a096-92d8d73693cc
+    PortName: Situation
+    TargetNodeGuid: da5e8e19-5126-4db1-ba6e-d292d219164a
+  - BaseNodeGuid: dcdd2b33-f7b7-4644-9aef-a334728c7feb
+    PortName: Dialogue
+    TargetNodeGuid: e88c4fc7-ce27-4f6e-8724-a6bc440ba4e6
+  - BaseNodeGuid: dcdd2b33-f7b7-4644-9aef-a334728c7feb
+    PortName: Situation
+    TargetNodeGuid: 0402f13f-22f1-4208-ac64-068cd0d956fc
+  - BaseNodeGuid: f2a309a3-d899-46c6-85ae-791f9edc1345
+    PortName: Dialogue
+    TargetNodeGuid: 96290377-beeb-4aaa-be6b-f32e9fa7961d
+  - BaseNodeGuid: f2a309a3-d899-46c6-85ae-791f9edc1345
+    PortName: Situation
+    TargetNodeGuid: 9344286c-ac5d-414a-a9bf-6dc306eca2a7
+  - BaseNodeGuid: eabeacf3-fbb1-4e91-9b70-a997fd9f3e00
+    PortName: Dialogue
+    TargetNodeGuid: 58a69c90-8a68-46d1-8d94-bf00be992304
+  - BaseNodeGuid: eabeacf3-fbb1-4e91-9b70-a997fd9f3e00
+    PortName: Situation
+    TargetNodeGuid: c93e26f3-f254-4e43-a47c-bcf40cfb17f6
+  - BaseNodeGuid: 39d033ba-ea98-4ca3-93cc-6d2b91988969
+    PortName: Dialogue
+    TargetNodeGuid: 3228a076-a350-4425-866c-696bfad9196a
+  - BaseNodeGuid: 39d033ba-ea98-4ca3-93cc-6d2b91988969
+    PortName: Situation
+    TargetNodeGuid: 9344286c-ac5d-414a-a9bf-6dc306eca2a7
+  - BaseNodeGuid: f28bf13a-593d-4ab3-85f6-ede8924f1a66
+    PortName: Dialogue
+    TargetNodeGuid: 80cedc7c-3187-49c3-af05-d95e9e656a39
+  - BaseNodeGuid: f28bf13a-593d-4ab3-85f6-ede8924f1a66
+    PortName: Situation
+    TargetNodeGuid: c93e26f3-f254-4e43-a47c-bcf40cfb17f6
+  - BaseNodeGuid: c8fb2126-ff09-4294-b774-59401b014df1
+    PortName: Dialogue
+    TargetNodeGuid: 4f5261ba-8af7-4e96-9d6b-313708b39beb
+  - BaseNodeGuid: cbe87677-560a-4584-a7de-4d1be0118bee
+    PortName: Dialogue
+    TargetNodeGuid: e000cb1f-7272-4abc-a8d1-43aab1ab731a
+  - BaseNodeGuid: 80aa5fc7-1bb0-4ed6-8d31-594d3b3d1e07
+    PortName: Dialogue
+    TargetNodeGuid: bda6a3dd-a186-4fea-b11d-179ed7b5d569
+  - BaseNodeGuid: ccff181b-c43c-4145-a394-5ffa7bdd5c66
+    PortName: Dialogue
+    TargetNodeGuid: f78c82b2-99c6-4f77-af8b-29788d2c0367
+  - BaseNodeGuid: 47c178a6-7265-495a-9b2b-17cae6b214a7
+    PortName: Dialogue
+    TargetNodeGuid: 659bbdff-6a55-41c1-99ed-2f1e9ae30d56
+  - BaseNodeGuid: 671adb7e-0237-4abd-a47f-3bbd30040a21
+    PortName: Dialogue
+    TargetNodeGuid: 70554632-544c-43db-aa5d-f006255872cd
+  - BaseNodeGuid: 6c41301b-52e4-424e-b639-dd606d05037e
+    PortName: Dialogue
+    TargetNodeGuid: d2106456-6512-4165-9491-17e9893d8ec0
+  - BaseNodeGuid: 4fffad77-81c2-4b84-a6bd-25378fb6445c
+    PortName: Dialogue
+    TargetNodeGuid: 8be65f7e-9aad-4ae0-a162-c83a67593b4a
+  - BaseNodeGuid: 8e1aca9b-8fe8-4b7d-9041-1b6b50e5dc31
+    PortName: Dialogue
+    TargetNodeGuid: 07a77f5c-ecfa-412e-ad17-72d898e6ef85
+  - BaseNodeGuid: 688d93a2-6c2c-49d3-a420-ef16dc838bb0
+    PortName: Dialogue
+    TargetNodeGuid: 14288836-2e68-41fb-95c9-ed9ad95d4d2e
+  - BaseNodeGuid: 43e6c32e-8950-4347-b45e-e79061c20338
+    PortName: Dialogue
+    TargetNodeGuid: 494836a7-8614-49b9-b044-22d686877c72
+  - BaseNodeGuid: f22fc8fe-7480-429f-90f1-ee9d032449d6
+    PortName: Dialogue
+    TargetNodeGuid: 90ea4d28-80dc-48e6-b1d3-d8e50011686e
+  - BaseNodeGuid: 47b7dbee-e919-4404-aa3d-2f235887ffe4
+    PortName: Dialogue
+    TargetNodeGuid: 51fb1025-90ab-47f5-94b0-8af7dea2b8da
+  - BaseNodeGuid: 6636090c-d4c3-4d7c-9d4e-91847020740c
+    PortName: Dialogue
+    TargetNodeGuid: 6ad7b373-73e0-4a81-a48e-a2ec5be073cf
+  - BaseNodeGuid: a62341e1-44e2-4e30-bfae-87a5de6f0eb1
+    PortName: Dialogue
+    TargetNodeGuid: 3c52a01f-6a5f-41aa-835a-a785911856aa
+  - BaseNodeGuid: 5c07f340-e12c-4742-b9ca-5d5e22377771
+    PortName: Dialogue
+    TargetNodeGuid: 2be07dfc-fd1b-4279-90d3-4af790ef7364
+  - BaseNodeGuid: cda23f46-81b6-4b44-a2c4-516d5eb5d76f
+    PortName: Dialogue
+    TargetNodeGuid: 91ae87f8-3f48-4b43-a4b0-46ef8eb7c0ea
+  - BaseNodeGuid: e88c4fc7-ce27-4f6e-8724-a6bc440ba4e6
+    PortName: Dialogue
+    TargetNodeGuid: 5c749cd5-9865-43e9-9bb2-ea97f9f8d4c6
+  - BaseNodeGuid: b3f6ba6b-aef6-486d-afe8-a37e785e44fd
+    PortName: Dialogue
+    TargetNodeGuid: 57ec52d9-fbf5-492d-9674-71c4d5181ebb
+  - BaseNodeGuid: 8508d279-8133-4394-a347-7b57bec71d07
+    PortName: Dialogue
+    TargetNodeGuid: 0cc61106-375e-41f3-9999-cbaa41124163
+  - BaseNodeGuid: 58a69c90-8a68-46d1-8d94-bf00be992304
+    PortName: Dialogue
+    TargetNodeGuid: 594aa9dc-9aef-4ab4-8f27-f9c3dcacc1e7
+  - BaseNodeGuid: 80cedc7c-3187-49c3-af05-d95e9e656a39
+    PortName: Dialogue
+    TargetNodeGuid: 21a9d97a-3170-4034-aa1a-bc57530c8f45
+  - BaseNodeGuid: 21a9d97a-3170-4034-aa1a-bc57530c8f45
+    PortName: Dialogue
+    TargetNodeGuid: 42854203-8009-498b-b048-0f716bc5fe0e
+  - BaseNodeGuid: 42854203-8009-498b-b048-0f716bc5fe0e
+    PortName: Dialogue
+    TargetNodeGuid: e060e8af-e819-4240-ab2e-422eee5ed867
+  - BaseNodeGuid: 60bebcaf-9c44-4f75-abf3-769532b83cef
+    PortName: Dialogue
+    TargetNodeGuid: 22cb81a7-4c13-4277-b169-512594a23b13
+  - BaseNodeGuid: 4e6cd056-23b8-4f70-85cc-7c8e3093d9d3
+    PortName: Dialogue
+    TargetNodeGuid: 933617af-102a-43f6-b20a-9274652bb93a
+  - BaseNodeGuid: 22cb81a7-4c13-4277-b169-512594a23b13
+    PortName: Dialogue
+    TargetNodeGuid: 4e6cd056-23b8-4f70-85cc-7c8e3093d9d3
+  - BaseNodeGuid: 9e97d40a-b0e9-4244-b8b1-095fec3e4453
+    PortName: Dialogue
+    TargetNodeGuid: 89050349-5f0d-4974-8504-60a9b097f572
+  - BaseNodeGuid: 933617af-102a-43f6-b20a-9274652bb93a
+    PortName: Dialogue
+    TargetNodeGuid: ec0367cf-fca1-4f1c-baa8-4e91be09c587
+  - BaseNodeGuid: ec0367cf-fca1-4f1c-baa8-4e91be09c587
+    PortName: Dialogue
+    TargetNodeGuid: 9e97d40a-b0e9-4244-b8b1-095fec3e4453
+  - BaseNodeGuid: 4f5261ba-8af7-4e96-9d6b-313708b39beb
+    PortName: Dialogue
+    TargetNodeGuid: a3951b9e-90b8-4061-a3d8-fa2ba164f861
+  - BaseNodeGuid: a3951b9e-90b8-4061-a3d8-fa2ba164f861
+    PortName: Dialogue
+    TargetNodeGuid: 08f529d7-69e0-4169-8a8a-5f07f9c7172e
+  - BaseNodeGuid: 08f529d7-69e0-4169-8a8a-5f07f9c7172e
+    PortName: Dialogue
+    TargetNodeGuid: 4d958568-66ec-4b2b-a349-a8d24e9f8a03
+  - BaseNodeGuid: e000cb1f-7272-4abc-a8d1-43aab1ab731a
+    PortName: Dialogue
+    TargetNodeGuid: 03d3460a-3e39-426e-be88-25cc434bd435
+  - BaseNodeGuid: bda6a3dd-a186-4fea-b11d-179ed7b5d569
+    PortName: Dialogue
+    TargetNodeGuid: 27fa9393-7793-4511-9f10-fa89f3f6d09e
+  - BaseNodeGuid: 27fa9393-7793-4511-9f10-fa89f3f6d09e
+    PortName: Dialogue
+    TargetNodeGuid: 1ad9ed41-cad6-4314-9399-28d870213a33
+  - BaseNodeGuid: 1ad9ed41-cad6-4314-9399-28d870213a33
+    PortName: Dialogue
+    TargetNodeGuid: faf97ec3-06bc-43a0-990b-0ddb1795dd7d
+  - BaseNodeGuid: f78c82b2-99c6-4f77-af8b-29788d2c0367
+    PortName: Dialogue
+    TargetNodeGuid: aeed0beb-3254-4f91-98bb-75419323295e
+  - BaseNodeGuid: be2d041a-4f0b-4784-9506-823782f351fd
+    PortName: Dialogue
+    TargetNodeGuid: 3b75368d-110e-434a-90eb-834e42ecb50b
+  - BaseNodeGuid: 3b75368d-110e-434a-90eb-834e42ecb50b
+    PortName: Dialogue
+    TargetNodeGuid: 6b409dec-965d-44f8-961d-0df48506f439
+  - BaseNodeGuid: 6b409dec-965d-44f8-961d-0df48506f439
+    PortName: Dialogue
+    TargetNodeGuid: f5833c3a-6595-4a22-91c1-c836e4751a58
+  - BaseNodeGuid: d2106456-6512-4165-9491-17e9893d8ec0
+    PortName: Dialogue
+    TargetNodeGuid: 591dcd13-d1d6-40f3-923d-a238a7444777
+  - BaseNodeGuid: 8be65f7e-9aad-4ae0-a162-c83a67593b4a
+    PortName: Dialogue
+    TargetNodeGuid: 3363e736-2d9e-4f02-afb2-fd96f9f4febe
+  - BaseNodeGuid: 3363e736-2d9e-4f02-afb2-fd96f9f4febe
+    PortName: Dialogue
+    TargetNodeGuid: 06c18128-7ac2-4605-a84b-1e2b2e0eb70e
+  - BaseNodeGuid: e1470763-a0a8-4d92-8a5f-b5e114189291
+    PortName: Dialogue
+    TargetNodeGuid: 7c3735ee-de0f-4d66-8b8c-8832b5dfe64f
+  - BaseNodeGuid: 51fb1025-90ab-47f5-94b0-8af7dea2b8da
+    PortName: Dialogue
+    TargetNodeGuid: 34e45f98-b8f2-474f-aa83-17219ca746e3
+  - BaseNodeGuid: 34e45f98-b8f2-474f-aa83-17219ca746e3
+    PortName: Dialogue
+    TargetNodeGuid: 3139aeac-2b43-4f38-8c66-92c7bed9c86b
+  - BaseNodeGuid: 3139aeac-2b43-4f38-8c66-92c7bed9c86b
+    PortName: Dialogue
+    TargetNodeGuid: cd10b6af-14c2-45fe-9a3d-456cc9d2201d
+  - BaseNodeGuid: 3c52a01f-6a5f-41aa-835a-a785911856aa
+    PortName: Dialogue
+    TargetNodeGuid: e6d3c927-5a0a-429e-86d7-9619862d4bc6
+  - BaseNodeGuid: e6d3c927-5a0a-429e-86d7-9619862d4bc6
+    PortName: Dialogue
+    TargetNodeGuid: d8595655-66fa-4609-83d0-f1e60abfc7d2
+  - BaseNodeGuid: d8595655-66fa-4609-83d0-f1e60abfc7d2
+    PortName: Dialogue
+    TargetNodeGuid: abddef60-edf7-491e-9541-8c34ba2ac291
+  - BaseNodeGuid: bf95baea-0c81-445d-ab24-9b95689bfc99
+    PortName: Dialogue
+    TargetNodeGuid: 60bebcaf-9c44-4f75-abf3-769532b83cef
+  - BaseNodeGuid: da5e8e19-5126-4db1-ba6e-d292d219164a
+    PortName: Question 1
+    TargetNodeGuid: 02f094b5-feaf-4298-9269-f803c7cbc17f
+  - BaseNodeGuid: cbe87677-560a-4584-a7de-4d1be0118bee
+    PortName: Situation
+    TargetNodeGuid: 9344286c-ac5d-414a-a9bf-6dc306eca2a7
+  - BaseNodeGuid: 80aa5fc7-1bb0-4ed6-8d31-594d3b3d1e07
+    PortName: Situation
+    TargetNodeGuid: a88006e0-0920-4e1f-beb5-a15f25e98dea
+  - BaseNodeGuid: c8fb2126-ff09-4294-b774-59401b014df1
+    PortName: Situation
+    TargetNodeGuid: e01ca662-a051-444a-b15a-0806c0043764
+  - BaseNodeGuid: ccff181b-c43c-4145-a394-5ffa7bdd5c66
+    PortName: Situation
+    TargetNodeGuid: e01ca662-a051-444a-b15a-0806c0043764
+  - BaseNodeGuid: 231c3f1b-0b6a-409f-8c85-172db5e71698
+    PortName: Dialogue
+    TargetNodeGuid: be2d041a-4f0b-4784-9506-823782f351fd
+  - BaseNodeGuid: 9344286c-ac5d-414a-a9bf-6dc306eca2a7
+    PortName: Question 1
+    TargetNodeGuid: daac4b68-b27b-4352-a8f0-deae9a51189b
+  - BaseNodeGuid: 671adb7e-0237-4abd-a47f-3bbd30040a21
+    PortName: Situation
+    TargetNodeGuid: e01ca662-a051-444a-b15a-0806c0043764
+  - BaseNodeGuid: 6c41301b-52e4-424e-b639-dd606d05037e
+    PortName: Situation
+    TargetNodeGuid: 5022c95d-f440-42a8-99a8-69e26840c617
+  - BaseNodeGuid: 4fffad77-81c2-4b84-a6bd-25378fb6445c
+    PortName: Situation
+    TargetNodeGuid: 5022c95d-f440-42a8-99a8-69e26840c617
+  - BaseNodeGuid: d86215b5-365b-4661-9347-829da9031d3f
+    PortName: Dialogue
+    TargetNodeGuid: e1470763-a0a8-4d92-8a5f-b5e114189291
+  - BaseNodeGuid: e01ca662-a051-444a-b15a-0806c0043764
+    PortName: Question 1
+    TargetNodeGuid: fce65e63-c5bf-4b82-a779-faa388b5f722
+  - BaseNodeGuid: 8e1aca9b-8fe8-4b7d-9041-1b6b50e5dc31
+    PortName: Situation
+    TargetNodeGuid: fe2bc9bf-6ce5-473d-9ac2-a9f306e23e46
+  - BaseNodeGuid: 688d93a2-6c2c-49d3-a420-ef16dc838bb0
+    PortName: Situation
+    TargetNodeGuid: fe2bc9bf-6ce5-473d-9ac2-a9f306e23e46
+  - BaseNodeGuid: 43e6c32e-8950-4347-b45e-e79061c20338
+    PortName: Situation
+    TargetNodeGuid: fe2bc9bf-6ce5-473d-9ac2-a9f306e23e46
+  - BaseNodeGuid: f22fc8fe-7480-429f-90f1-ee9d032449d6
+    PortName: Situation
+    TargetNodeGuid: fe2bc9bf-6ce5-473d-9ac2-a9f306e23e46
+  SituationNodeData:
+  - Guid: 0402f13f-22f1-4208-ac64-068cd0d956fc
+    SituationName: S2
+    Context: 
+    Id: 0
+    audioId: Audio id
+    nodeType: 0
+    Position: {x: 612, y: 1565}
+  - Guid: c93e26f3-f254-4e43-a47c-bcf40cfb17f6
+    SituationName: S4
+    Context: 
+    Id: 0
+    audioId: Audio id
+    nodeType: 0
+    Position: {x: 477, y: 3198}
+  - Guid: 5022c95d-f440-42a8-99a8-69e26840c617
+    SituationName: S8
+    Context: 
+    Id: 0
+    audioId: Audio id
+    nodeType: 0
+    Position: {x: 152, y: 6746}
+  - Guid: da5e8e19-5126-4db1-ba6e-d292d219164a
+    SituationName: S3
+    Context: 
+    Id: 0
+    audioId: Audio id
+    nodeType: 0
+    Position: {x: 181, y: 2940}
+  - Guid: 9344286c-ac5d-414a-a9bf-6dc306eca2a7
+    SituationName: S5
+    Context: 
+    Id: 0
+    audioId: Audio id
+    nodeType: 0
+    Position: {x: 245, y: 4611}
+  - Guid: a88006e0-0920-4e1f-beb5-a15f25e98dea
+    SituationName: S6
+    Context: 
+    Id: 0
+    audioId: Audio id
+    nodeType: 0
+    Position: {x: 183, y: 5059}
+  - Guid: e01ca662-a051-444a-b15a-0806c0043764
+    SituationName: S7
+    Context: 
+    Id: 0
+    audioId: Audio id
+    nodeType: 0
+    Position: {x: 130, y: 6455}
+  - Guid: fe2bc9bf-6ce5-473d-9ac2-a9f306e23e46
+    SituationName: S9
+    Context: 
+    Id: 0
+    audioId: Audio id
+    nodeType: 0
+    Position: {x: -94, y: 8365}
+  - Guid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
+    SituationName: S1
+    Context: The stage location is the endoscopy theatre. The patient is in position
+      for colonoscopy. The theatre has the common equipment. There are students in.
+    Id: 0
+    audioId: Audio id
+    nodeType: 0
+    Position: {x: 234, y: 148}
+  QuestionNodeData:
+  - Guid: 82cc2164-cf96-4458-b497-5ccd7ccada65
+    QuestionName: Q2
+    Description: Question Description
+    audioId: Audio id
+    nodeType: 1
+    Position: {x: 829, y: 1825}
+  - Guid: 02f094b5-feaf-4298-9269-f803c7cbc17f
+    QuestionName: Q4
+    Description: Question Description
+    audioId: Audio id
+    nodeType: 1
+    Position: {x: 538, y: 3611}
+  - Guid: daac4b68-b27b-4352-a8f0-deae9a51189b
+    QuestionName: Q6
+    Description: Question Description
+    audioId: Audio id
+    nodeType: 1
+    Position: {x: 498, y: 5546}
+  - Guid: fce65e63-c5bf-4b82-a779-faa388b5f722
+    QuestionName: Q8
+    Description: Question Description
+    audioId: Audio id
+    nodeType: 1
+    Position: {x: 453, y: 7346}
+  - Guid: 281e910e-57d5-4941-94d0-d63d22290e61
+    QuestionName: Q9
+    Description: Question Description
+    audioId: Audio id
+    nodeType: 1
+    Position: {x: 391, y: 8921}
+  - Guid: c42e9b8c-45af-48a2-8eb8-4e179472349d
+    QuestionName: Q1
+    Description: Question Description
+    audioId: Audio id
+    nodeType: 1
+    Position: {x: 810, y: 495}
+  AnswerNodeData:
+  - Guid: 2c3d4fad-6c19-4adb-9367-18ebfaa6c9a9
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1266, y: 691}
+  - Guid: dcdd2b33-f7b7-4644-9aef-a334728c7feb
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1271, y: 1259}
+  - Guid: eabeacf3-fbb1-4e91-9b70-a997fd9f3e00
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1258, y: 1962}
+  - Guid: f28bf13a-593d-4ab3-85f6-ede8924f1a66
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1251, y: 2499}
+  - Guid: c8fb2126-ff09-4294-b774-59401b014df1
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 961, y: 3514}
+  - Guid: cbe87677-560a-4584-a7de-4d1be0118bee
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 964, y: 3792}
+  - Guid: ccff181b-c43c-4145-a394-5ffa7bdd5c66
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 961, y: 4323}
+  - Guid: 47c178a6-7265-495a-9b2b-17cae6b214a7
+    AnswerName: AnswerID
+    Feedback: Negative emotions linked to physical manifestations of aggression -
+      throwing tools at assistants - are absolutely inappropriate
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 1
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 901, y: 5374}
+  - Guid: 671adb7e-0237-4abd-a47f-3bbd30040a21
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 896, y: 5661}
+  - Guid: 6c41301b-52e4-424e-b639-dd606d05037e
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 896, y: 5955}
+  - Guid: 4fffad77-81c2-4b84-a6bd-25378fb6445c
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 900, y: 6220}
+  - Guid: 8e1aca9b-8fe8-4b7d-9041-1b6b50e5dc31
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 870, y: 7171}
+  - Guid: 688d93a2-6c2c-49d3-a420-ef16dc838bb0
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 873, y: 7458}
+  - Guid: 43e6c32e-8950-4347-b45e-e79061c20338
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 870, y: 7736}
+  - Guid: f22fc8fe-7480-429f-90f1-ee9d032449d6
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 864, y: 8040}
+  - Guid: 47b7dbee-e919-4404-aa3d-2f235887ffe4
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 1
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 826, y: 8693}
+  - Guid: 6636090c-d4c3-4d7c-9d4e-91847020740c
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 1
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 815, y: 9276}
+  - Guid: a62341e1-44e2-4e30-bfae-87a5de6f0eb1
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 1
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 806, y: 9555}
+  - Guid: 5c07f340-e12c-4742-b9ca-5d5e22377771
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 1
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 816, y: 8988}
+  - Guid: 80aa5fc7-1bb0-4ed6-8d31-594d3b3d1e07
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 962, y: 4060}
+  - Guid: 74124c11-9ec5-4f2e-a096-92d8d73693cc
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1268, y: 978}
+  - Guid: 39d033ba-ea98-4ca3-93cc-6d2b91988969
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1251, y: 2242}
+  - Guid: f2a309a3-d899-46c6-85ae-791f9edc1345
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1258, y: 1650}
+  - Guid: e1c090cb-5f7e-43ed-9fd8-a177e0cc37b3
+    AnswerName: AnswerID
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1260, y: 422}
+  DialogueNodeData:
+  - Guid: cda23f46-81b6-4b44-a2c4-516d5eb5d76f
+    DialogueName: D1.1
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1282, y: 116}
+  - Guid: 91ae87f8-3f48-4b43-a4b0-46ef8eb7c0ea
+    DialogueName: D1.2
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1552, y: 122}
+  - Guid: e88c4fc7-ce27-4f6e-8724-a6bc440ba4e6
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1564, y: 1239}
+  - Guid: bc378e38-87ad-4a68-849b-03dec343a44f
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 975, y: 1576}
+  - Guid: b3f6ba6b-aef6-486d-afe8-a37e785e44fd
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1550, y: 686}
+  - Guid: 8508d279-8133-4394-a347-7b57bec71d07
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1572, y: 419}
+  - Guid: 0cc61106-375e-41f3-9999-cbaa41124163
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1832, y: 421}
+  - Guid: 57ec52d9-fbf5-492d-9674-71c4d5181ebb
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1786, y: 676}
+  - Guid: 7ec2fdf2-49b0-479c-885d-5c769149247d
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1543, y: 977}
+  - Guid: 5c749cd5-9865-43e9-9bb2-ea97f9f8d4c6
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1830, y: 1228}
+  - Guid: 96290377-beeb-4aaa-be6b-f32e9fa7961d
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1561, y: 1654}
+  - Guid: 58a69c90-8a68-46d1-8d94-bf00be992304
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1552, y: 1964}
+  - Guid: 594aa9dc-9aef-4ab4-8f27-f9c3dcacc1e7
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1813, y: 1967}
+  - Guid: 3228a076-a350-4425-866c-696bfad9196a
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1524, y: 2251}
+  - Guid: 80cedc7c-3187-49c3-af05-d95e9e656a39
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1518, y: 2501}
+  - Guid: 21a9d97a-3170-4034-aa1a-bc57530c8f45
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1728, y: 2498}
+  - Guid: 42854203-8009-498b-b048-0f716bc5fe0e
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1953, y: 2498}
+  - Guid: e060e8af-e819-4240-ab2e-422eee5ed867
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2191, y: 2494}
+  - Guid: bf95baea-0c81-445d-ab24-9b95689bfc99
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1013, y: 2897}
+  - Guid: 60bebcaf-9c44-4f75-abf3-769532b83cef
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 995, y: 3199}
+  - Guid: 4e6cd056-23b8-4f70-85cc-7c8e3093d9d3
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1443, y: 3198}
+  - Guid: 22cb81a7-4c13-4277-b169-512594a23b13
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1225, y: 3197}
+  - Guid: 9e97d40a-b0e9-4244-b8b1-095fec3e4453
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2051, y: 3198}
+  - Guid: 933617af-102a-43f6-b20a-9274652bb93a
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1662, y: 3197}
+  - Guid: ec0367cf-fca1-4f1c-baa8-4e91be09c587
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1849, y: 3197}
+  - Guid: 89050349-5f0d-4974-8504-60a9b097f572
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2246, y: 3199}
+  - Guid: 4f5261ba-8af7-4e96-9d6b-313708b39beb
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1215, y: 3515}
+  - Guid: 08f529d7-69e0-4169-8a8a-5f07f9c7172e
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1638, y: 3516}
+  - Guid: 4d958568-66ec-4b2b-a349-a8d24e9f8a03
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1854, y: 3518}
+  - Guid: e000cb1f-7272-4abc-a8d1-43aab1ab731a
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1221, y: 3794}
+  - Guid: 03d3460a-3e39-426e-be88-25cc434bd435
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1442, y: 3794}
+  - Guid: bda6a3dd-a186-4fea-b11d-179ed7b5d569
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1181, y: 4063}
+  - Guid: 27fa9393-7793-4511-9f10-fa89f3f6d09e
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1402, y: 4062}
+  - Guid: 1ad9ed41-cad6-4314-9399-28d870213a33
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1625, y: 4062}
+  - Guid: faf97ec3-06bc-43a0-990b-0ddb1795dd7d
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1843, y: 4062}
+  - Guid: f78c82b2-99c6-4f77-af8b-29788d2c0367
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1187, y: 4322}
+  - Guid: aeed0beb-3254-4f91-98bb-75419323295e
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1398, y: 4321}
+  - Guid: 231c3f1b-0b6a-409f-8c85-172db5e71698
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 978, y: 4660}
+  - Guid: be2d041a-4f0b-4784-9506-823782f351fd
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 915, y: 5025}
+  - Guid: 3b75368d-110e-434a-90eb-834e42ecb50b
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1163, y: 5021}
+  - Guid: 6b409dec-965d-44f8-961d-0df48506f439
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1395, y: 5018}
+  - Guid: f5833c3a-6595-4a22-91c1-c836e4751a58
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1609, y: 5015}
+  - Guid: 70554632-544c-43db-aa5d-f006255872cd
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1193, y: 5666}
+  - Guid: d2106456-6512-4165-9491-17e9893d8ec0
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1200, y: 5961}
+  - Guid: 591dcd13-d1d6-40f3-923d-a238a7444777
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1450, y: 5960}
+  - Guid: 8be65f7e-9aad-4ae0-a162-c83a67593b4a
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1139, y: 6220}
+  - Guid: 3363e736-2d9e-4f02-afb2-fd96f9f4febe
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1355, y: 6220}
+  - Guid: 06c18128-7ac2-4605-a84b-1e2b2e0eb70e
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1576, y: 6219}
+  - Guid: 07a77f5c-ecfa-412e-ad17-72d898e6ef85
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1176, y: 7168}
+  - Guid: 494836a7-8614-49b9-b044-22d686877c72
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1153, y: 7734}
+  - Guid: 14288836-2e68-41fb-95c9-ed9ad95d4d2e
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1172, y: 7460}
+  - Guid: 90ea4d28-80dc-48e6-b1d3-d8e50011686e
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1151, y: 8039}
+  - Guid: 4446ec08-e9b7-4b38-8114-008828341a15
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 840, y: 8476}
+  - Guid: 2be07dfc-fd1b-4279-90d3-4af790ef7364
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1076, y: 8986}
+  - Guid: 6ad7b373-73e0-4a81-a48e-a2ec5be073cf
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1057, y: 9276}
+  - Guid: 51fb1025-90ab-47f5-94b0-8af7dea2b8da
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1068, y: 8692}
+  - Guid: 34e45f98-b8f2-474f-aa83-17219ca746e3
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1283, y: 8693}
+  - Guid: 3139aeac-2b43-4f38-8c66-92c7bed9c86b
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1504, y: 8696}
+  - Guid: cd10b6af-14c2-45fe-9a3d-456cc9d2201d
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1720, y: 8699}
+  - Guid: abddef60-edf7-491e-9541-8c34ba2ac291
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1758, y: 9561}
+  - Guid: 3c52a01f-6a5f-41aa-835a-a785911856aa
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1062, y: 9558}
+  - Guid: e6d3c927-5a0a-429e-86d7-9619862d4bc6
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1295, y: 9558}
+  - Guid: d8595655-66fa-4609-83d0-f1e60abfc7d2
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1523, y: 9558}
+  - Guid: 659bbdff-6a55-41c1-99ed-2f1e9ae30d56
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1760, y: 5388}
+  - Guid: e1470763-a0a8-4d92-8a5f-b5e114189291
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 725, y: 6762}
+  - Guid: 7c3735ee-de0f-4d66-8b8c-8832b5dfe64f
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 996, y: 6760}
+  - Guid: d86215b5-365b-4661-9347-829da9031d3f
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 814, y: 6485}
+  - Guid: a3951b9e-90b8-4061-a3d8-fa2ba164f861
+    DialogueName: DialogueID
+    DialogueText: Text
+    Speaker: Surgeon1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1435, y: 3516}
+  ExposedProperties: []
