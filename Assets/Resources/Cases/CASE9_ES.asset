@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
-  m_Name: CASE9_EN
+  m_Name: CASE9_ES
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 9ea25a24-f21b-4145-ac91-089ee21d0638
@@ -434,14 +434,6 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 0
     Position: {x: 130, y: 6455}
-  - Guid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
-    SituationName: S1
-    Context: The stage location is the endoscopy theatre. The patient is in position
-      for colonoscopy. The theatre has the common equipment. There are students in.
-    Id: 0
-    audioId: Audio id
-    nodeType: 0
-    Position: {x: 234, y: 148}
   - Guid: fe2bc9bf-6ce5-473d-9ac2-a9f306e23e46
     SituationName: S9
     Context: 
@@ -456,6 +448,15 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 0
     Position: {x: 301, y: 2913}
+  - Guid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
+    SituationName: S1
+    Context: "El lugar del escenario es la sala de endoscopia. El paciente est\xE1
+      en posici\xF3n para la colonoscopia. El quir\xF3fano cuenta con el equipo com\xFAn.
+      Hay estudiantes dentro."
+    Id: 0
+    audioId: Audio id
+    nodeType: 0
+    Position: {x: 216, y: 155}
   QuestionNodeData:
   - Guid: 82cc2164-cf96-4458-b497-5ccd7ccada65
     QuestionName: Q2
@@ -758,12 +759,12 @@ MonoBehaviour:
     speaker: Speaker
     audioId: Audio id
     score: 0
-    Position: {x: 1274, y: 1658}
+    Position: {x: 1264, y: 1678}
   DialogueNodeData:
   - Guid: e88c4fc7-ce27-4f6e-8724-a6bc440ba4e6
     DialogueName: D1.1.4
-    DialogueText: Stop talking immediately and pay attention to me. Later, I will
-      not explain you anything and I will test you.
+    DialogueText: "Dejad de hablar inmediatamente y prestadme atenci\xF3n. Despu\xE9s,
+      no explicar\xE9 nada y os pondr\xE9 a prueba."
     Speaker: Endoscopist1
     Mood: Aggressive
     audioId: Audio id
@@ -771,23 +772,16 @@ MonoBehaviour:
     Position: {x: 1564, y: 1239}
   - Guid: 0cc61106-375e-41f3-9999-cbaa41124163
     DialogueName: D1.1.1.1
-    DialogueText: Excuse us, we discussed the case.
+    DialogueText: "Disc\xFAlpenos, estamos discutiendo el caso."
     Speaker: Student
     Mood: Regretful
     audioId: Audio id
     nodeType: 3
     Position: {x: 1832, y: 421}
-  - Guid: 7ec2fdf2-49b0-479c-885d-5c769149247d
-    DialogueName: D1.1.3
-    DialogueText: Shut up immediately or I'll kick you out of the room.
-    Speaker: Endoscopist1
-    Mood: Aggresive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1543, y: 977}
   - Guid: 58a69c90-8a68-46d1-8d94-bf00be992304
     DialogueName: D2.1.2
-    DialogueText: Please add premedication to the patient according to the plan.
+    DialogueText: "Por favor, a\xF1ade la premedicaci\xF3n al paciente seg\xFAn el
+      plan."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -795,25 +789,16 @@ MonoBehaviour:
     Position: {x: 1552, y: 1964}
   - Guid: 3228a076-a350-4425-866c-696bfad9196a
     DialogueName: D2.1.3
-    DialogueText: Well, amazing, if you hadn't told me, I wouldn't have known. I'm
-      glad you're finally noticing the patient.
+    DialogueText: "Bueno, incre\xEDble, si no me lo hubieras dicho, no lo habr\xEDa
+      sabido. Me alegro de que por fin te des cuenta del paciente."
     Speaker: Endoscopist1
     Mood: Ironic
     audioId: Audio id
     nodeType: 3
     Position: {x: 1524, y: 2251}
-  - Guid: 21a9d97a-3170-4034-aa1a-bc57530c8f45
-    DialogueName: D2.1.4.1
-    DialogueText: TextDuring the procedure, it is necessary to maintain adequate
-      analgesia so that the patient does not feel any pain.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1728, y: 2498}
   - Guid: bf95baea-0c81-445d-ab24-9b95689bfc99
     DialogueName: D3.1
-    DialogueText: Stop upsetting the doctor or something will go wrong.
+    DialogueText: "Dejad de molestar al m\xE9dico o algo ir\xE1 mal."
     Speaker: Surgeon1
     Mood: Calm
     audioId: Audio id
@@ -821,7 +806,7 @@ MonoBehaviour:
     Position: {x: 1013, y: 2897}
   - Guid: 60bebcaf-9c44-4f75-abf3-769532b83cef
     DialogueName: D4.1
-    DialogueText: Injector.
+    DialogueText: Inyector.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -829,7 +814,7 @@ MonoBehaviour:
     Position: {x: 995, y: 3199}
   - Guid: 22cb81a7-4c13-4277-b169-512594a23b13
     DialogueName: D4.2
-    DialogueText: Submucosal injection.
+    DialogueText: "Inyecci\xF3n submucosa."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -837,8 +822,8 @@ MonoBehaviour:
     Position: {x: 1225, y: 3197}
   - Guid: 933617af-102a-43f6-b20a-9274652bb93a
     DialogueName: D4.4
-    DialogueText: The vessel burst, I see the intense bleeding, pass the forceps.
-      Quickly!
+    DialogueText: "Ha estallado el vaso, veo sangrado intenso, p\xE1same el f\xF3rceps.
+      \xA1R\xE1pido!"
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -846,7 +831,7 @@ MonoBehaviour:
     Position: {x: 1662, y: 3197}
   - Guid: 4f5261ba-8af7-4e96-9d6b-313708b39beb
     DialogueName: D4.1.1
-    DialogueText: Please pass me these forceps.
+    DialogueText: "Por favor, p\xE1same los forceps."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -854,7 +839,8 @@ MonoBehaviour:
     Position: {x: 1215, y: 3515}
   - Guid: e000cb1f-7272-4abc-a8d1-43aab1ab731a
     DialogueName: D4.1.2
-    DialogueText: Stop talking to each other immediately! I can't hear my own words.
+    DialogueText: "\xA1Dejad de hablar inmediatamente! No puedo escuchar mis propias
+      palabras."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -862,7 +848,7 @@ MonoBehaviour:
     Position: {x: 1221, y: 3794}
   - Guid: bda6a3dd-a186-4fea-b11d-179ed7b5d569
     DialogueName: D4.1.3
-    DialogueText: Wait a moment, please.
+    DialogueText: Esperad un momento, por favor.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -870,7 +856,8 @@ MonoBehaviour:
     Position: {x: 1181, y: 4063}
   - Guid: f78c82b2-99c6-4f77-af8b-29788d2c0367
     DialogueName: D4.1.4
-    DialogueText: Please be quiet now, we will discuss everything in a moment.
+    DialogueText: Por favor,  guardad silencio ahora, lo discutiremos todo en un
+      momento.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -878,7 +865,7 @@ MonoBehaviour:
     Position: {x: 1187, y: 4322}
   - Guid: 70554632-544c-43db-aa5d-f006255872cd
     DialogueName: D6.1.2
-    DialogueText: Can you please help her with the Coagraspers?
+    DialogueText: "\xBFPuedes ayudarla con los Coagraspers?"
     Speaker: Endoscopist1
     Mood: Angry
     audioId: Audio id
@@ -886,7 +873,7 @@ MonoBehaviour:
     Position: {x: 1193, y: 5666}
   - Guid: d2106456-6512-4165-9491-17e9893d8ec0
     DialogueName: D6.1.3
-    DialogueText: Please help the nurse to find the right graspers.
+    DialogueText: Por favor, ayude a la enfermera a encontrar los graspers adecuados.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -894,7 +881,7 @@ MonoBehaviour:
     Position: {x: 1200, y: 5961}
   - Guid: 659bbdff-6a55-41c1-99ed-2f1e9ae30d56
     DialogueName: D6.1.1
-    DialogueText: "I didn\u2019t want that! What are you passing me?!"
+    DialogueText: "\xA1No quer\xEDa eso! \xA1\xBFQu\xE9 me est\xE1s pasando?!"
     Speaker: Endoscopist1
     Mood: Angry
     audioId: Audio id
@@ -902,7 +889,7 @@ MonoBehaviour:
     Position: {x: 1760, y: 5388}
   - Guid: 2be07dfc-fd1b-4279-90d3-4af790ef7364
     DialogueName: D9.1.2
-    DialogueText: Thanks everybody.
+    DialogueText: Gracias a todos.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -910,9 +897,9 @@ MonoBehaviour:
     Position: {x: 1044, y: 8826}
   - Guid: 6ad7b373-73e0-4a81-a48e-a2ec5be073cf
     DialogueName: D9.1.3
-    DialogueText: You have seen an interesting performance, now I will write an examination
-      report. Go and wait for me in the seminar room, I'll be with you in a moment
-      and we'll discuss everything you saw.
+    DialogueText: "Hab\xE9is visto una actuaci\xF3n interesante, ahora voy a escribir
+      un informe sobre la examinaci\xF3n. Esperadme en la sala de seminarios, estar\xE9
+      con vosotros en un momento y discutiremos todo lo que hemos visto."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -920,8 +907,8 @@ MonoBehaviour:
     Position: {x: 1025, y: 9116}
   - Guid: 51fb1025-90ab-47f5-94b0-8af7dea2b8da
     DialogueName: D9.1.1
-    DialogueText: It's done, the lesion was removed, we will inform you about the
-      next steps with the result of the histological examination.
+    DialogueText: "Ya est\xE1 hecho, la lesi\xF3n fue extirpada, le informaremos
+      sobre los pr\xF3ximos pasos con el resultado del examen histol\xF3gico."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -929,8 +916,8 @@ MonoBehaviour:
     Position: {x: 1036, y: 8532}
   - Guid: 3c52a01f-6a5f-41aa-835a-a785911856aa
     DialogueName: D9.1.4
-    DialogueText: Thank you for your assistance, colleague, if you have any ambiguities
-      to perform, we will discuss them later.
+    DialogueText: "Gracias por su asistencia, compa\xF1eros, si ten\xE9is alguna
+      ambig\xFCedad que realizar, la discutiremos m\xE1s tarde."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -938,7 +925,7 @@ MonoBehaviour:
     Position: {x: 1030, y: 9398}
   - Guid: 07a77f5c-ecfa-412e-ad17-72d898e6ef85
     DialogueName: D8.1.1
-    DialogueText: Of course, this is not a problem
+    DialogueText: Por supuesto, no hay problema.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -946,8 +933,8 @@ MonoBehaviour:
     Position: {x: 1144, y: 7008}
   - Guid: 14288836-2e68-41fb-95c9-ed9ad95d4d2e
     DialogueName: D8.1.2
-    DialogueText: You must be crazy! Can't you see how much work I have here? Leave
-      immediately and arrange it differently!
+    DialogueText: "\xA1Debes estar loco! \xBFNo ves el trabajo que tengo aqu\xED?
+      \xA1Vete inmediatamente y organ\xEDzalo de otra manera!"
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -955,8 +942,8 @@ MonoBehaviour:
     Position: {x: 1140, y: 7300}
   - Guid: 90ea4d28-80dc-48e6-b1d3-d8e50011686e
     DialogueName: D8.1.4
-    DialogueText: I'm sorry, but it's not suitable now, please make an appointment
-      with colleague XY.
+    DialogueText: "Lo siento, pero no es adecuado ahora, por favor, pida una cita
+      con el compa\xF1ero XY."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -964,7 +951,7 @@ MonoBehaviour:
     Position: {x: 1119, y: 7879}
   - Guid: 4446ec08-e9b7-4b38-8114-008828341a15
     DialogueName: D9.1
-    DialogueText: So, we just finished.
+    DialogueText: Y con esto, hemos terminado.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -972,24 +959,15 @@ MonoBehaviour:
     Position: {x: 291, y: 8192}
   - Guid: 8508d279-8133-4394-a347-7b57bec71d07
     DialogueName: D1.1.1
-    DialogueText: Am I disturbing you, guys?
+    DialogueText: "Chicos, \xBFOs estoy molestando?"
     Speaker: Endoscopist1
     Mood: Ironic
     audioId: Audio id
     nodeType: 3
     Position: {x: 1574, y: 419}
-  - Guid: b3f6ba6b-aef6-486d-afe8-a37e785e44fd
-    DialogueName: D1.1.2
-    DialogueText: Students, please pay attention to my presentation. We will discuss
-      everything again in detail, after the examination.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1550, y: 686}
   - Guid: 4e6cd056-23b8-4f70-85cc-7c8e3093d9d3
     DialogueName: D4.3
-    DialogueText: Polypectomy snare.
+    DialogueText: "Asa de polipectom\xEDa."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -997,7 +975,7 @@ MonoBehaviour:
     Position: {x: 1443, y: 3198}
   - Guid: 231c3f1b-0b6a-409f-8c85-172db5e71698
     DialogueName: D5.1
-    DialogueText: Stop upsetting the doctor or something will go wrong.
+    DialogueText: "Dejad de molestar al m\xE9dico o algo ir\xE1 mal."
     Speaker: Endoscopy nurse
     Mood: Calm
     audioId: Audio id
@@ -1005,8 +983,8 @@ MonoBehaviour:
     Position: {x: 795, y: 4611}
   - Guid: cda23f46-81b6-4b44-a2c4-516d5eb5d76f
     DialogueName: D1.1
-    DialogueText: We have just approached ascending colon and identified the large
-      sessile polyp.
+    DialogueText: "Acabamos de abordar el colon ascendente e identificamos el gran
+      p\xF3lipo s\xE9sil."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -1014,9 +992,10 @@ MonoBehaviour:
     Position: {x: 1284, y: 147}
   - Guid: 91ae87f8-3f48-4b43-a4b0-46ef8eb7c0ea
     DialogueName: D1.2
-    DialogueText: In the middle of the screen there is a typical tubulovillous adenoma.
-      Can everybody see it? It is important now to choose the best treatment option.
-      The lesion is benign and therefore we can choose the endoscopic mucosal resection.
+    DialogueText: "En el centro de la pantalla hay un t\xEDpico adenoma tubulovelloso. 
+      \xBFPod\xE9is verlo todos? Ahora es importante elegir la mejor opci\xF3n de
+      tratamiento. La lesi\xF3n es benigna y por lo tanto podemos elegir la resecci\xF3n
+      endosc\xF3pica de la mucosa."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -1032,7 +1011,7 @@ MonoBehaviour:
     Position: {x: 1121, y: 7574}
   - Guid: 57ec52d9-fbf5-492d-9674-71c4d5181ebb
     DialogueName: D1.1.2.1
-    DialogueText: Excuse us, we discussed the case.
+    DialogueText: "Disc\xFAlpenos, estamos discutiendo el caso."
     Speaker: Student
     Mood: Regretful
     audioId: Audio id
@@ -1040,23 +1019,15 @@ MonoBehaviour:
     Position: {x: 2320, y: 676}
   - Guid: 5c749cd5-9865-43e9-9bb2-ea97f9f8d4c6
     DialogueName: D1.1.4.1
-    DialogueText: Excuse us, we discussed the case.
+    DialogueText: "Disc\xFAlpenos, estamos discutiendo el caso."
     Speaker: Student
     Mood: Regretful
     audioId: Audio id
     nodeType: 3
     Position: {x: 2301, y: 1235}
-  - Guid: bc378e38-87ad-4a68-849b-03dec343a44f
-    DialogueName: D2.1
-    DialogueText: Now you have to listen and not discuss!
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 848, y: 1513}
   - Guid: bb239408-937a-4bcb-82a6-564a8b5d6ec9
     DialogueName: D2.2
-    DialogueText: Patient begins to become restless.
+    DialogueText: El paciente comienza a estar inquieto.
     Speaker: Endoscopy nurse
     Mood: Calm
     audioId: Audio id
@@ -1064,7 +1035,7 @@ MonoBehaviour:
     Position: {x: 1154, y: 1507}
   - Guid: 96290377-beeb-4aaa-be6b-f32e9fa7961d
     DialogueName: D2.1.1
-    DialogueText: Please calm down when I teach students.
+    DialogueText: "Por favor, tranquilizate cuando ense\xF1e a los alumnos."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -1072,149 +1043,67 @@ MonoBehaviour:
     Position: {x: 1577, y: 1661}
   - Guid: 594aa9dc-9aef-4ab4-8f27-f9c3dcacc1e7
     DialogueName: D2.1.2.1
-    DialogueText: During the procedure, it is necessary to maintain adequate analgesia
-      so that the patient does not feel any pain.
+    DialogueText: "Durante el procedimiento, es necesario mantener una analgesia
+      adecuada para que el paciente no sienta ning\xFAn dolor."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 1987, y: 1951}
-  - Guid: 80cedc7c-3187-49c3-af05-d95e9e656a39
-    DialogueName: D2.1.4
-    DialogueText: OK. Thanks for information
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1518, y: 2497}
   - Guid: e060e8af-e819-4240-ab2e-422eee5ed867
     DialogueName: D2.1.4.3
-    DialogueText: Thank you, Doctor, not yet, please continue.
+    DialogueText: "Gracias, doctor, por ahora no, por favor, contin\xFAe."
     Speaker: Patient
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 2954, y: 2478}
-  - Guid: 42854203-8009-498b-b048-0f716bc5fe0e
-    DialogueName: D2.1.4.2
-    DialogueText: Do you feel any pain? Do you want to get painkillers?
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2511, y: 2508}
   - Guid: ec0367cf-fca1-4f1c-baa8-4e91be09c587
     DialogueName: D4.5
-    DialogueText: Anything wrong? Can you please explain us what the problem is?
+    DialogueText: "\xBFHay algo mal? \xBFPuede explicarnos cu\xE1l es el problema?"
     Speaker: Student
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 2147, y: 3195}
-  - Guid: 89050349-5f0d-4974-8504-60a9b097f572
-    DialogueName: D4.7
-    DialogueText: Sorry, is there any problem?
-    Speaker: Patient
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 3157, y: 3181}
   - Guid: 9e97d40a-b0e9-4244-b8b1-095fec3e4453
     DialogueName: D4.6
-    DialogueText: Is it dangerous? How can we stop the bleeding of this intensity?
+    DialogueText: "\xBFEs peligroso? \xBFC\xF3mo podemos detener una hemorragia de
+      esta intensidad?"
     Speaker: Student
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 2650, y: 3199}
-  - Guid: 08f529d7-69e0-4169-8a8a-5f07f9c7172e
-    DialogueName: D4.1.1.2
-    DialogueText: Wait a moment, please.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2094, y: 3516}
-  - Guid: 4d958568-66ec-4b2b-a349-a8d24e9f8a03
-    DialogueName: D4.1.1.3
-    DialogueText: Please take over the communication with students now.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2310, y: 3518}
-  - Guid: a3951b9e-90b8-4061-a3d8-fa2ba164f861
-    DialogueName: D4.1.1.1
-    DialogueText: Don't worry, we will solve everything, the blood vessels started
-      to bleed intensively and we wil stop it.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1438, y: 3503}
   - Guid: 03d3460a-3e39-426e-be88-25cc434bd435
     DialogueName: D4.1.2.1
-    DialogueText: Give me the graspers immediately!!
+    DialogueText: "\xA1Dame las pinzas de inmediato!"
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 1709, y: 3796}
-  - Guid: 27fa9393-7793-4511-9f10-fa89f3f6d09e
-    DialogueName: D4.1.3.1
-    DialogueText: Please take over the communication with students now and explain
-      the situation.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1472, y: 4057}
-  - Guid: 1ad9ed41-cad6-4314-9399-28d870213a33
-    DialogueName: D4.1.3.2
-    DialogueText: Don't worry, we will solve everything, the blood vessels started
-      to bleed intensively and we have to stop it.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 2078, y: 4057}
   - Guid: faf97ec3-06bc-43a0-990b-0ddb1795dd7d
     DialogueName: D4.1.3.3
-    DialogueText: Please pass me these forceps.
+    DialogueText: "Por favor, p\xE1same los forceps."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 2784, y: 4057}
-  - Guid: aeed0beb-3254-4f91-98bb-75419323295e
-    DialogueName: D4.1.4.1
-    DialogueText: Please pass me these forceps.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1604, y: 4321}
   - Guid: be2d041a-4f0b-4784-9506-823782f351fd
     DialogueName: D6.1
-    DialogueText: Can you please pass me those Coagaspers fast? It's flooding with
-      blood and I can't see anything.
+    DialogueText: "\xBFPuedes pasarme r\xE1pido esos Coagraspers? Se est\xE1 inundando
+      de sangre y no puedo ver nada."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 666, y: 5036}
-  - Guid: 3b75368d-110e-434a-90eb-834e42ecb50b
-    DialogueName: D6.2
-    DialogueText: I'm sorry, but I'm afraid it won't turn out well.
-    Speaker: Patient
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1360, y: 5031}
   - Guid: 6b409dec-965d-44f8-961d-0df48506f439
     DialogueName: D6.3
-    DialogueText: You can see that the visibility is not ideal now and we will have
-      a big problem with dealing with it.
+    DialogueText: "Como pod\xE9is observar la visibilidad no es la ideal ahora y
+      tendremos un gran problema para lidiar con ella."
     Speaker: Endoscopist2
     Mood: Calm
     audioId: Audio id
@@ -1222,73 +1111,32 @@ MonoBehaviour:
     Position: {x: 1724, y: 5025}
   - Guid: f5833c3a-6595-4a22-91c1-c836e4751a58
     DialogueName: D6.4
-    DialogueText: Will the surgery be needed?
+    DialogueText: "\xBFSer\xE1 necesaria una cirug\xEDa?"
     Speaker: Student
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 2474, y: 5020}
-  - Guid: 591dcd13-d1d6-40f3-923d-a238a7444777
-    DialogueName: D6.1.3.1
-    DialogueText: Please silence for now I will explain you everything later.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1597, y: 5960}
-  - Guid: 3363e736-2d9e-4f02-afb2-fd96f9f4febe
-    DialogueName: D6.1.4.1
-    DialogueText: Please silence for now I will explain you everything later.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1572, y: 6217}
   - Guid: 8be65f7e-9aad-4ae0-a162-c83a67593b4a
     DialogueName: D6.1.4
-    DialogueText: Please help the nurse to find the right graspers.
+    DialogueText: Por favor, ayude a la enfermera a encontrar los graspers adecuados.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 1139, y: 6220}
-  - Guid: 06c18128-7ac2-4605-a84b-1e2b2e0eb70e
-    DialogueName: D6.1.4.2
-    DialogueText: Don't worry it's all under control.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1987, y: 6222}
   - Guid: d86215b5-365b-4661-9347-829da9031d3f
     DialogueName: D7.1
-    DialogueText: I am sorry, very sorry. I don't understand what's going on, it
-      has never happened to me.
+    DialogueText: Lo siento, lo siento mucho. No entiendo lo que pasa, no me ha pasado
+      nunca.
     Speaker: Endoscopy nurse
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 485, y: 6450}
-  - Guid: e1470763-a0a8-4d92-8a5f-b5e114189291
-    DialogueName: D8.1
-    DialogueText: OK, we just stopped the bleeding, now we must finish the mucosectomy.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 780, y: 6725}
-  - Guid: 7c3735ee-de0f-4d66-8b8c-8832b5dfe64f
-    DialogueName: D8.2
-    DialogueText: I'm sorry, but there is another group of students at the front
-      desk who would like to see this endoscopy. Can I let them in?
-    Speaker: Secretary
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1299, y: 6731}
   - Guid: 1083843d-d886-4d67-aae0-eff3904148ed
     DialogueName: D8.1.1.1
-    DialogueText: Please move a bit.
+    DialogueText: Por favor, moveos un poco.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -1296,9 +1144,9 @@ MonoBehaviour:
     Position: {x: 1464, y: 7011}
   - Guid: 34e45f98-b8f2-474f-aa83-17219ca746e3
     DialogueName: D9.1.1.1
-    DialogueText: You have seen an interesting performance, now I will write an examination
-      report. Go and wait for me in the seminar room, I'll be with you in a moment
-      and we'll discuss everything you saw.
+    DialogueText: "Hab\xE9is visto una actuaci\xF3n interesante, ahora voy a escribir
+      un informe sobre la examinaci\xF3n. Esperadme en la sala de seminarios, estar\xE9
+      con vosotros en un momento y discutiremos todo lo que hemos visto."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -1306,8 +1154,8 @@ MonoBehaviour:
     Position: {x: 1871, y: 8533}
   - Guid: cd10b6af-14c2-45fe-9a3d-456cc9d2201d
     DialogueName: D9.1.1.3
-    DialogueText: Thank you for your assistance, in the end we did it well, please
-      take it positively, one learns from mistakes.
+    DialogueText: Gracias por la asistencia, al final lo hicimos bien, por favor
+      tomadlo como algo positivo, de los errores se aprende.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -1315,8 +1163,8 @@ MonoBehaviour:
     Position: {x: 3860, y: 8535}
   - Guid: 3139aeac-2b43-4f38-8c66-92c7bed9c86b
     DialogueName: D9.1.1.2
-    DialogueText: Thank you for your assistance, colleague, if you have any ambiguities
-      to perform, we will discuss them later.
+    DialogueText: "Gracias por su asistencia, compa\xF1eros, si ten\xE9is alguna
+      ambig\xFCedad que realizar, la discutiremos m\xE1s tarde."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -1324,8 +1172,8 @@ MonoBehaviour:
     Position: {x: 3155, y: 8527}
   - Guid: e6d3c927-5a0a-429e-86d7-9619862d4bc6
     DialogueName: D9.1.4.1
-    DialogueText: Thank you for your assistance, in the end we did it well, please
-      take it positively, one learns from mistakes.
+    DialogueText: Gracias por la asistencia, al final lo hicimos bien, por favor
+      tomadlo como algo positivo, de los errores se aprende.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -1333,7 +1181,7 @@ MonoBehaviour:
     Position: {x: 1775, y: 9389}
   - Guid: d8595655-66fa-4609-83d0-f1e60abfc7d2
     DialogueName: D9.1.4.2
-    DialogueText: Everything is OK don't worry.
+    DialogueText: "Todo est\xE1 bien, no se preocupe."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
@@ -1341,11 +1189,173 @@ MonoBehaviour:
     Position: {x: 2541, y: 9394}
   - Guid: abddef60-edf7-491e-9541-8c34ba2ac291
     DialogueName: D9.1.4.3
-    DialogueText: You have seen an interesting performance, I hope you will remember
-      all my steps.
+    DialogueText: "Hab\xE9is visto una actuaci\xF3n interesante, espero que record\xE9is
+      todos mis pasos."
     Speaker: Endoscopist1
     Mood: Calm
     audioId: Audio id
     nodeType: 3
     Position: {x: 2781, y: 9391}
+  - Guid: b3f6ba6b-aef6-486d-afe8-a37e785e44fd
+    DialogueName: D1.1.2
+    DialogueText: "Estudiantes, por favor, prestad atenci\xF3n a mi presentaci\xF3n.
+      Volveremos a discutir todo en detalle, despu\xE9s de la examinaci\xF3n."
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1506, y: 679}
+  - Guid: 7ec2fdf2-49b0-479c-885d-5c769149247d
+    DialogueName: D1.1.3
+    DialogueText: "Callaos inmediatamente o te echar\xE9 de la habitaci\xF3n."
+    Speaker: Endoscopist1
+    Mood: Aggresive
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1543, y: 977}
+  - Guid: bc378e38-87ad-4a68-849b-03dec343a44f
+    DialogueName: D2.1
+    DialogueText: Ahora hay que escuchar y no discutir.
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 863, y: 1504}
+  - Guid: 80cedc7c-3187-49c3-af05-d95e9e656a39
+    DialogueName: D2.1.4
+    DialogueText: "Vale, gracias por la informaci\xF3n."
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1518, y: 2497}
+  - Guid: 21a9d97a-3170-4034-aa1a-bc57530c8f45
+    DialogueName: D2.1.4.1
+    DialogueText: "Durante el procedimiento, es necesario mantener una analgesia
+      adecuada para que el paciente no sienta ning\xFAn dolor."
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1756, y: 2503}
+  - Guid: 42854203-8009-498b-b048-0f716bc5fe0e
+    DialogueName: D2.1.4.2
+    DialogueText: "\xBFSientes dolor? \xBFQuieres que te den analg\xE9sicos?"
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2546, y: 2502}
+  - Guid: 89050349-5f0d-4974-8504-60a9b097f572
+    DialogueName: D4.7
+    DialogueText: "Disculpe, \xBFhay alg\xFAn problema?"
+    Speaker: Patient
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 3157, y: 3181}
+  - Guid: a3951b9e-90b8-4061-a3d8-fa2ba164f861
+    DialogueName: D4.1.1.1
+    DialogueText: "No te preocupes, lo solucionaremos todo, los vasos sangu\xEDneos
+      comenzaron a sangrar intensamente y lo detendremos."
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1438, y: 3498}
+  - Guid: 08f529d7-69e0-4169-8a8a-5f07f9c7172e
+    DialogueName: D4.1.1.2
+    DialogueText: Esperad un momento, por favor.
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2236, y: 3498}
+  - Guid: 4d958568-66ec-4b2b-a349-a8d24e9f8a03
+    DialogueName: D4.1.1.3
+    DialogueText: "Por favor, toma el mando de la comunicaci\xF3n con los estudiantes
+      ahora."
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2489, y: 3500}
+  - Guid: 27fa9393-7793-4511-9f10-fa89f3f6d09e
+    DialogueName: D4.1.3.1
+    DialogueText: "Por favor, toma el mando de la comunicaci\xF3n con los estudiantes
+      ahora."
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1472, y: 4057}
+  - Guid: 1ad9ed41-cad6-4314-9399-28d870213a33
+    DialogueName: D4.1.3.2
+    DialogueText: "No te preocupes, lo solucionaremos todo, los vasos sangu\xEDneos
+      comenzaron a sangrar intensamente y lo detendremos."
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1958, y: 4058}
+  - Guid: aeed0beb-3254-4f91-98bb-75419323295e
+    DialogueName: D4.1.4.1
+    DialogueText: "Por favor, p\xE1same los forceps."
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1702, y: 4321}
+  - Guid: 3b75368d-110e-434a-90eb-834e42ecb50b
+    DialogueName: D6.2
+    DialogueText: Lo siento, pero tengo miedo de que no salga bien.
+    Speaker: Patient
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1343, y: 5029}
+  - Guid: 591dcd13-d1d6-40f3-923d-a238a7444777
+    DialogueName: D6.1.3.1
+    DialogueText: "Por favor, silencio por ahora, te lo explicar\xE9 todo m\xE1s
+      tarde."
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1691, y: 5959}
+  - Guid: 3363e736-2d9e-4f02-afb2-fd96f9f4febe
+    DialogueName: D6.1.4.1
+    DialogueText: "Por favor, silencio por ahora, te lo explicar\xE9 todo m\xE1s
+      tarde."
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1603, y: 6219}
+  - Guid: 06c18128-7ac2-4605-a84b-1e2b2e0eb70e
+    DialogueName: D6.1.4.2
+    DialogueText: "No te preocupes, todo est\xE1 bajo control."
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2035, y: 6221}
+  - Guid: e1470763-a0a8-4d92-8a5f-b5e114189291
+    DialogueName: D8.1
+    DialogueText: "Bien, acabamos de detener la hemorragia, ahora debemos terminar
+      la mucosectom\xEDa."
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 655, y: 6719}
+  - Guid: 7c3735ee-de0f-4d66-8b8c-8832b5dfe64f
+    DialogueName: D8.2
+    DialogueText: "Lo siento, pero hay otro grupo de estudiantes en la recepci\xF3n
+      que quieren ver esta endoscopia. \xBFPuedo dejarlos entrar?"
+    Speaker: Secretary
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1262, y: 6717}
   ExposedProperties: []
