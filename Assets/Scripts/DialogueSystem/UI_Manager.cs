@@ -366,7 +366,7 @@ public class UI_Manager : MonoBehaviour
         //#if !UNITY_EDITOR
         if (LanguageManager.Instance != null)
         {
-            caso = LanguageManager.Instance.caseSelected; //TODO: En un futuro funcionara con esto, de momento dejarlo comentado
+            caso = LanguageManager.Instance.caseSelected;
             path = Application.streamingAssetsPath + $"/Resources/Cases/{caso}_{LanguageManager.Instance.languageSelected}";
             //dialogueContainer = Resources.Load($"Cases/{caso}_{LanguageManager.Instance.languageSelected}") as DialogueContainer;
             //Debug.Log($"Cargamos el case Cases/{caso}_{LanguageManager.Instance.languageSelected}");

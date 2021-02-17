@@ -68,7 +68,7 @@ public class OptionsManager : MonoBehaviour
 
     public void LoadLevelSelected()
     {
-        Debug.Log($"Vamos a intentar cargar el caso {selectedCase.text}");
+        Debug.Log($"Vamos a intentar cargar el caso {selectedCase.text} con el idioma {LanguageManager.Instance.languageSelected}");
 
         if (selectedCase.text != null && selectedCase.text != "")
         {
@@ -118,6 +118,7 @@ public class OptionsManager : MonoBehaviour
          EnableTutorial(false); //panel de las instrucciones
         */
         UI_Manager.Instance.Destroy();
+        Debug.Log("Vamos a destruir el special cases ");
         SpecialCases.Instance.Destroy();
         Destroy(this.gameObject);
         
