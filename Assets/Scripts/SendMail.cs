@@ -25,7 +25,7 @@ public class SendMail : MonoBehaviour
     }
 
     [System.NonSerialized]
-    public string m_UserName = "Joaquin"; //default value
+    public string m_UserName = "Usuario Default"; //default value
     [System.NonSerialized]
     public string m_UserMail = "joakilm2@gmail.com"; //default value
 
@@ -53,6 +53,11 @@ public class SendMail : MonoBehaviour
         Attachment attachment = new Attachment(@"D:\S4Game\somefile.txt");
         mail.Attachments.Add(attachment);
         */
+        if (UI_Manager.Instance.playereRoute == null || UI_Manager.Instance.playereRoute == "")
+        {
+            UI_Manager.Instance.playereRoute = "\n Testing";
+        }
+
         mail.Body = "Name: " + m_UserName + " Correo: " + m_UserMail + UI_Manager.Instance.playereRoute;//"probando TT";
 
         SmtpClient smtpServer = new SmtpClient("mail.viralstudios.es");//mail.viralstudios.es//"smtp.gmail.com"
@@ -70,6 +75,10 @@ public class SendMail : MonoBehaviour
         smtpServer.Send(mail);
     }
 
+    public void testEmail()
+    {
+        Debug.Log($"Enviamos el mail con el feedback al correo {m_UserMail}, nombre: {m_UserName}");
+    }
 
     public void SaveName(Keyboard l_Field)
     {
@@ -80,6 +89,7 @@ public class SendMail : MonoBehaviour
     public void SaveMail(Keyboard l_Field)
     {
         m_UserMail = l_Field.text;
+        Debug.Log($"Acabamos de guardar el mail {l_Field.text}, el valor de m_Usermail es: {m_UserMail}");
         m_Mail.text = m_UserMail;
     }
     
