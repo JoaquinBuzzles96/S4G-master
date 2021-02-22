@@ -5,6 +5,10 @@ using UnityEngine.UI;
 using TMPro;
 using System.IO;
 
+public enum Status {Situation, Answer };
+
+public enum Cases { DefaultCase, Case3, Case9 };
+
 public class UI_Manager : MonoBehaviour
 {
     private static UI_Manager instance = null;
@@ -24,7 +28,8 @@ public class UI_Manager : MonoBehaviour
     private List<DialogueNodeData> situationDialogues = new List<DialogueNodeData>();
     private List<DialogueNodeData> answerDialogues = new List<DialogueNodeData>();
     private int currentDialogue = 0; //podemos usar la misma variable para ambos casos ya que nunca se daran al mismo tiempo
-
+    private Status currentStatus = Status.Situation;
+    public Cases currentCase = Cases.DefaultCase;
     public DialogueContainer dialogueContainer;
 
     //Arrows
@@ -55,6 +60,8 @@ public class UI_Manager : MonoBehaviour
 
     public AnswerNodeData choosenAnswer;
     public AudioSource audioSource;
+
+    public GameObject ExitButton;
 
     public List<Animator> characteres;
 
@@ -95,7 +102,7 @@ public class UI_Manager : MonoBehaviour
     void Start()
     {
         GetDialogueContainerLanguage();
-        SetNameToCharacters();
+        SetUpCharacrteres();
         lastQuestion = -1;
         totalScore = 0;
         SetUpContext(dialogueContainer.GetFirstSituation());
@@ -204,12 +211,12 @@ public class UI_Manager : MonoBehaviour
 
     public void ToScreen3(GameObject originScreen) // Answer choose
     {
-        if (!CheckMoreDialogues(situationDialogues, situationDialogueTexts, nextButtonSituation)) //si no hay mas dialogos entra aqui
-        {
+        //if (!CheckMoreDialogues(situationDialogues, situationDialogueTexts, nextButtonSituation)) //si no hay mas dialogos entra aqui
+        //{
             originScreen.SetActive(false);
             screen3.SetActive(true);
             SetUpScreen3();
-        }
+        //}
     }
 
     public void ToScreen4(AnswerNodeData answer,GameObject originScreen) // Answer Dialogue
@@ -261,8 +268,7 @@ public class UI_Manager : MonoBehaviour
             if (_speaker != "Narrador" && _speaker != "Narrator")
             {
                 Debug.Log($"No se ha encontrado el speaker {_speaker} --> {speaker}");
-            }
-                
+            }    
         }
 
         //Audio
@@ -279,8 +285,6 @@ public class UI_Manager : MonoBehaviour
             Debug.Log($"No se ha encontrado el audio Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}");
             return 0f;
         }
-
-        
     }
 
     private void SetMoodAnim(string _speaker, string _mood)
@@ -366,8 +370,24 @@ public class UI_Manager : MonoBehaviour
         //#if !UNITY_EDITOR
         if (LanguageManager.Instance != null)
         {
+            Debug.Log($"El Languague manager no es nulo, contiene es caso: {LanguageManager.Instance.caseSelected} y languague {LanguageManager.Instance.languageSelected}");
             caso = LanguageManager.Instance.caseSelected;
             path = Application.streamingAssetsPath + $"/Resources/Cases/{caso}_{LanguageManager.Instance.languageSelected}";
+
+            //Este valor se asigna para mas adelante utilizar unos eventos y animaciones especificas u otras
+            switch (caso)
+            {
+                case "CASE3":
+                    currentCase = Cases.Case3;
+                    break;
+                case "CASE9":
+                    currentCase = Cases.Case9;
+                    break;
+                default:
+                    currentCase = Cases.DefaultCase; //sin nada de animaciones especificas
+                    break;
+            }
+
             //dialogueContainer = Resources.Load($"Cases/{caso}_{LanguageManager.Instance.languageSelected}") as DialogueContainer;
             //Debug.Log($"Cargamos el case Cases/{caso}_{LanguageManager.Instance.languageSelected}");
         }
@@ -414,14 +434,47 @@ public class UI_Manager : MonoBehaviour
 
     public void SetNameToCharacters()
     {
+        //Metemos en el diccionario los personajes de todas las situaciones
         foreach (var item in characteres)
         {
             float randomStartDelay = Random.Range(0, 4.5f);//random init delay
             item.Update(randomStartDelay);
 
             dictionaryCharacteres.Add(item.gameObject.name, item);
-
+            item.gameObject.SetActive(false);
             //Debug.Log($"Se ha añadido el {item.gameObject.name} al diccionario");
+        }
+
+        
+
+    }
+
+    public void SetUpCharacrteres()
+    {
+        //Metemos en el diccionario los personajes de todas las situaciones
+        SetNameToCharacters();
+
+        //Llegados a este punto damos por supuesto que en el diccionario estan todos los personajes
+
+        //En funcion del caso activamos los personajes que participaran
+        if (currentCase == Cases.Case3)
+        {
+            dictionaryCharacteres["Endoscopist1"].gameObject.SetActive(true);
+            dictionaryCharacteres["Endoscopist2"].gameObject.SetActive(true);
+            dictionaryCharacteres["EndoscopyNurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["AnaesthesiaNurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
+            dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
+            dictionaryCharacteres["EndoscopyNurseExtra"].gameObject.SetActive(true);
+        }
+        else if (currentCase == Cases.Case9)
+        {
+            dictionaryCharacteres["Endoscopist1"].gameObject.SetActive(true);
+            dictionaryCharacteres["Endoscopist2"].gameObject.SetActive(true); // Hara de equivalente a surgeon1
+            dictionaryCharacteres["EndoscopyNurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
+            dictionaryCharacteres["Student"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
     }
 
@@ -443,8 +496,8 @@ public class UI_Manager : MonoBehaviour
 
     public void CheckIfISEnd(GameObject originScreen)
     {
-        if (!CheckMoreDialogues(answerDialogues, answerDialogueTexts, nextButtonAnswer)) //si no hay mas dialogos entra aqui
-        {
+        //if (!CheckMoreDialogues(answerDialogues, answerDialogueTexts, nextButtonAnswer)) //si no hay mas dialogos entra aqui
+        //{
             //Vamos a la screen 2 o 5 en funcion del valor isEnd de la respuesta
             if (choosenAnswer.IsEnd)
             {
@@ -467,7 +520,7 @@ public class UI_Manager : MonoBehaviour
                     ToScreen2(originScreen);
                 }
             }
-        }
+       //}
     }
 
     public void SetUpContext(SituationNodeData _situation)
@@ -476,6 +529,7 @@ public class UI_Manager : MonoBehaviour
 
         contextDescription.text = situation.Context;
 
+        nextButtonContext.SetActive(false);
         StartCoroutine(PlaySimpleDialogue(situation.audioId)); //TESTING: , nextButtonContext
 
         //Debug.Log($"Se ha configurado el contexto de la situacion {situation.SituationName}");
@@ -490,6 +544,7 @@ public class UI_Manager : MonoBehaviour
         if (LoadDialogues(situation.Guid, situationDialogues)) 
         {
             //RefreshDialogues(situationDialogues, situationDialogueTexts);
+            currentStatus = Status.Situation;
             StartCoroutine(PlayDialogues(situationDialogues, situationDialogueTexts, nextButtonSituation));
 
             //Debug.Log($"Se ha asignado el primer dialogo de la situacion {situation.SituationName}, dialogo = {situationDialogues[0].DialogueText}");
@@ -502,6 +557,9 @@ public class UI_Manager : MonoBehaviour
 
     public void SetUpScreen3() //Asignar la pregunta y las 4 posibles respuestas
     {
+        generalArrow.SetActive(true);
+        generalArrow.GetComponent<LookTarget>().target = this.transform;//PANEL
+
         //En este caso si podemos suponer que la situacion que tenemos es la correcta, de modo que no es necesario pasarla por parametro
         questions = dialogueContainer.GetSituationQuestions(situation.Guid);
 
@@ -520,16 +578,22 @@ public class UI_Manager : MonoBehaviour
 
         lastQuestion = currentQuestion;
 
+
+        //Poner aqui que la flecha espere (en caso de que se quiera implementar, seria necesario ampliar el collider en ese caso)
+
         //Debug.Log($"Se ha configurado la screen 3 con la pregunta y las respuestas de la situacion {situation.SituationName}, pregunta {questions[currentQuestion].QuestionName}");
     }
 
     public void SetUpScreen4(AnswerNodeData answer)
     {
+        generalArrow.SetActive(false);
+
         choosenAnswer = answer;
         if (LoadDialogues(answer.Guid, answerDialogues))
         {
 
             //RefreshDialogues(answerDialogues, answerDialogueTexts);
+            currentStatus = Status.Answer;
             StartCoroutine(PlayDialogues(answerDialogues, answerDialogueTexts, nextButtonAnswer));
 
             //Debug.Log($"Se ha asignado el primer dialogo de la answer {answer.AnswerName}, dialogo = {answerDialogues[0].DialogueText}");
@@ -558,6 +622,8 @@ public class UI_Manager : MonoBehaviour
         //Send email
         Debug.Log("Enviamos un mail con la infomacion");
         SendMail.Instance.SendEmail();
+
+        ExitButton.SetActive(true);
     }
 
     private bool CheckMoreDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI, GameObject nextButton)
@@ -579,6 +645,25 @@ public class UI_Manager : MonoBehaviour
         return refresh;
     }
 
+    private bool CheckMoreDialoguesNoNext(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI)
+    {
+        bool refresh = false;
+        if (currentDialogue < dialoguesData.Count) //esto significaria que quedan dialogos sin mostrar
+        {
+            Clear(dialoguesUI);
+            //en este caso hay que hacer un refresh de la UI
+            refresh = true;
+            //StartCoroutine(PlayDialogues(dialoguesData, dialoguesUI, nextButton));
+        }
+        else
+        {
+            Clear(dialoguesUI);
+            currentDialogue = 0; //reseteamos para el siguiente
+        }
+
+        return refresh;
+    }
+
     private void Clear(List<TextMeshProUGUI> dialoguesUI)
     {
         for (int i = 0; i < dialoguesUI.Count; i++)
@@ -590,89 +675,115 @@ public class UI_Manager : MonoBehaviour
     IEnumerator PlayDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI, GameObject nextButton)
     {
         nextButton.SetActive(false); // lo desactivamos mientras no haya que avanzar de pantalla
-        bool end = false;
-        int i = 0;
-        int j = 0; //como norma general sera igual que la i, pero si hay algun dialogo de narrador esta se incrementara y la i no
-        //Debug.Log($"Entramos y current: {currentDialogue}, i: {i}");
-        for (i = 0; i < dialoguesUI.Count && !end; i++)
+        bool endDialogues = false;
+
+        while (!endDialogues)
         {
-            if ((currentDialogue + j) < dialoguesData.Count)
+            bool end = false;
+            int i = 0;
+            int j = 0; //como norma general sera igual que la i, pero si hay algun dialogo de narrador esta se incrementara y la i no
+                       //Debug.Log($"Entramos y current: {currentDialogue}, i: {i}");
+            for (i = 0; i < dialoguesUI.Count && !end; i++)
             {
-                string tagToCheck = "";
-
-                //Girarse para escuchar
-                if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + j].Speaker)))
+                if ((currentDialogue + j) < dialoguesData.Count)
                 {
-                    tagToCheck = Translate(dialoguesData[currentDialogue + j].Speaker);
-                }
-                else
-                {
-                    tagToCheck = "NOT_CHECK";
-                }
+                    string tagToCheck = "";
 
-                if (tagToCheck != "NOT_CHECK" && tagToCheck != "Endoscopist1")
-                {
-                    //Enable arrow
-                    generalArrow.SetActive(true);
-                    generalArrow.GetComponent<LookTarget>().target = dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)].gameObject.transform;
+                    //Girarse para escuchar
+                    if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + j].Speaker)))
+                    {
+                        tagToCheck = Translate(dialoguesData[currentDialogue + j].Speaker);
+                    }
+                    else
+                    {
+                        tagToCheck = "NOT_CHECK";
+                    }
 
-                    Debug.Log($"Vamos a buscar al personaje {tagToCheck}");
+                    if (tagToCheck != "NOT_CHECK" && tagToCheck != "Endoscopist1")
+                    {
+                        //Enable arrow
+                        generalArrow.SetActive(true);
+                        generalArrow.GetComponent<LookTarget>().target = dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)].gameObject.transform;
 
-                    while (!CheckIfTargetFieldOfView(tagToCheck))
+                        //Debug.Log($"Vamos a buscar al personaje {tagToCheck}");
+
+                        while (!CheckIfTargetFieldOfView(tagToCheck))
+                        {
+                            yield return null;
+                        }
+
+                        //Disable Arrow
+                        generalArrow.SetActive(false);
+                    }
+
+                    //Si es el narrador no se pone ni en el panel, ni el audio, ni la animacion de hablar
+                    if (Translate(dialoguesData[currentDialogue + j].Speaker) != "Narrator")
+                    {
+                        //Actualizar Panel
+                        dialoguesUI[i].text = $"{dialoguesData[currentDialogue + j].Speaker} ({dialoguesData[currentDialogue + j].Mood}): {dialoguesData[currentDialogue + j].DialogueText}";
+                        //Email
+                        AddTextToRoute($"{dialoguesData[currentDialogue + j].Speaker} ({dialoguesData[currentDialogue + j].Mood}): {dialoguesData[currentDialogue + j].DialogueText}");
+
+                        //Audio
+                        yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + j].audioId, dialoguesData[currentDialogue + j].Speaker, dialoguesData[currentDialogue + j].Mood));
+
+                        //Animacion al hablar
+                        if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + j].Speaker)))
+                        {
+                            dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)].SetBool("animFinished", true);
+                            SetColorName(0f, Translate(dialoguesData[currentDialogue + j].Speaker));
+                        }
+                        else
+                        {
+                            if (dialoguesData[currentDialogue + j].Speaker != "Narrador" && dialoguesData[currentDialogue + j].Speaker != "Narrator")
+                            {
+                                Debug.Log($"No se encontro el speaker {Translate(dialoguesData[currentDialogue + j].Speaker)}");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        i--; //lo decrementamos para que no ocupe este slot en la UI y pase al siguiente
+                    }
+                    //Eventos especiales
+                    SpecialCases.Instance.CheckSpecialEvent(dialoguesData[currentDialogue + j].DialogueName);
+                    while (SpecialCases.Instance.playingAnimation)
                     {
                         yield return null;
                     }
 
-                    //Disable Arrow
-                    generalArrow.SetActive(false);
-                }
-
-                //Si es el narrador no se pone ni en el panel, ni el audio, ni la animacion de hablar
-                if (Translate(dialoguesData[currentDialogue + j].Speaker) != "Narrator")
-                {
-                    //Actualizar Panel
-                    dialoguesUI[i].text = $"{dialoguesData[currentDialogue + j].Speaker} ({dialoguesData[currentDialogue + j].Mood}): {dialoguesData[currentDialogue + j].DialogueText}";
-                    //Email
-                    AddTextToRoute($"{dialoguesData[currentDialogue + j].Speaker} ({dialoguesData[currentDialogue + j].Mood}): {dialoguesData[currentDialogue + j].DialogueText}");
-
-                    //Audio
-                    yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + j].audioId, dialoguesData[currentDialogue + j].Speaker, dialoguesData[currentDialogue + j].Mood));
-
-                    //Animacion al hablar
-                    if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + j].Speaker)))
-                    {
-                        dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)].SetBool("animFinished", true);
-                        SetColorName(0f, Translate(dialoguesData[currentDialogue + j].Speaker));
-                    }
-                    else
-                    {
-                        if (dialoguesData[currentDialogue + j].Speaker != "Narrador" && dialoguesData[currentDialogue + j].Speaker != "Narrator")
-                        {
-                            Debug.Log($"No se encontro el speaker {Translate(dialoguesData[currentDialogue + j].Speaker)}");
-                        }
-                    }
+                    j++;
                 }
                 else
                 {
-                    i--; //lo decrementamos para que no ocupe este slot en la UI y pase al siguiente
+                    end = true;
                 }
-                //Eventos especiales
-                SpecialCases.Instance.CheckSpecialEvent(dialoguesData[currentDialogue + j].DialogueName);
-                while (SpecialCases.Instance.playingAnimation)
-                {
-                    yield return null;
-                }
+            }
 
-                j++;
+            currentDialogue += j;
+
+            if (!CheckMoreDialoguesNoNext(dialoguesData, dialoguesUI))
+            {
+                endDialogues = true;//Tenemos que ser conscientes de si estamos en una situacion o en una respuesta
             }
             else
             {
-                end = true;
+                //Debug.Log($"Hay mas dialogos, por lo que limpiamos la pantalla y seguimos. currentDiag = {currentDialogue}");
             }
         }
 
-        currentDialogue += j;
-        nextButton.SetActive(true);
+        //Debug.Log($"No quedan más dialogos, y stamos en status = {currentStatus}");
+        //EN FUNCION DE DONDE ESTEMOS VAMOS A LLAMAMOS A CheckIfIsEnd o GoToScreen3
+        if (currentStatus == Status.Situation)
+        {
+            ToScreen3(screen2);
+        }
+        else if (currentStatus == Status.Answer)
+        {
+            CheckIfISEnd(screen4);
+        }
+
+        //nextButton.SetActive(true);
     }
 
     bool CheckIfTargetFieldOfView(string tagToCheck)
@@ -682,10 +793,10 @@ public class UI_Manager : MonoBehaviour
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hitInfo))
         {
-            Debug.Log($"Chocamos con algo de nombre {hitInfo.collider.gameObject.name} y etiqueta {hitInfo.collider.tag}");
+            //Debug.Log($"Chocamos con algo de nombre {hitInfo.collider.gameObject.name} y etiqueta {hitInfo.collider.tag}");
             if (hitInfo.collider.gameObject.name == tagToCheck) //comprobar si esta mirando al doctor que corresponda
             {
-                Debug.Log($"Estamos mirando {tagToCheck}");
+                //Debug.Log($"Estamos mirando {tagToCheck}");
                 isTragetInFieldOfView = true;
             }
         }
@@ -697,15 +808,15 @@ public class UI_Manager : MonoBehaviour
     {
         if (nextButton != null)
         {
-            nextButton.SetActive(false);
             yield return new WaitForSeconds(PlayAudioOnSpeaker(audio, "Narrator", "Calm"));
             nextButton.SetActive(true);
         }
-        else
+        else //TESTING: En caso de no querer eliminar el boton de start eliminamos esto
         {
             yield return new WaitForSeconds(PlayAudioOnSpeaker(audio, "Narrator", "Calm"));
+            //Si estamos en el context, que es cuando no hay next button, entonces vamos automaticamente a la situacion
+            ToScreen2(screen1);
         }
-
     }
 
     public string Translate(string toTranslate) //Spanish to English
