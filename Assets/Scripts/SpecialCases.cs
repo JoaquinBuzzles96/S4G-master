@@ -48,19 +48,22 @@ public class SpecialCases : MonoBehaviour
     public string ChechkAudio(string audio_id, string _speaker) 
     {
         string real_audio_id = audio_id;
-        //Debug.Log($"Vamos a comprobar el audio del speaker {_speaker}");
-        if (_speaker == "EndoscopyNurse")//tenemos que comprobar cual de ellas es :')
+        if (UI_Manager.Instance.currentCase == Cases.Case3)
         {
-            if (currentNurse == 2)
+            //Debug.Log($"Vamos a comprobar el audio del speaker {_speaker}");
+            if (_speaker == "EndoscopyNurse")//tenemos que comprobar cual de ellas es :')
             {
-                real_audio_id = audio_id + "2";
-            }
-            else if (currentNurse == 3)
-            {
-                real_audio_id = audio_id + "3";
-            }
+                if (currentNurse == 2)
+                {
+                    real_audio_id = audio_id + "2";
+                }
+                else if (currentNurse == 3)
+                {
+                    real_audio_id = audio_id + "3";
+                }
 
-            //Debug.Log($"Vamos a cargar el audio {real_audio_id} de la enfermera {currentNurse}");
+                //Debug.Log($"Vamos a cargar el audio {real_audio_id} de la enfermera {currentNurse}");
+            }
         }
 
         return real_audio_id;
@@ -76,31 +79,29 @@ public class SpecialCases : MonoBehaviour
 
     public void CheckSituation(string situation_id) //SITUATION 5 AND 3
     {
-        //Check if nurse cry
-        if (situation_id == "S3_4" || situation_id == "S5_6")
+        if (UI_Manager.Instance.currentCase == Cases.Case3)
         {
-            currentNurse++;
-            Debug.Log($"Cambiamos a la enfermera {currentNurse}");
+            //Check if nurse cry
+            if (situation_id == "S3_4" || situation_id == "S5_6")
+            {
+                currentNurse++;
+                Debug.Log($"Cambiamos a la enfermera {currentNurse}");
+            }
         }
+
     }
 
-    //devolver float
-    public void CheckSpecialEvent(string dialogue_id)//con esto comprobaremos si en el dialogo actual debe darse alguna situacion en concreto
-    {
-        //TODO: 
-        // test si funciona modificar el path de la enfermera para que a veces salga y a veces no
-        // eliminar herramienta de la mano y lanzarla contra la enfermera
-        // testear si funciona Hacer despaarecer el prop
-        prop = Case3Resources.Instance.fakeProp;
 
+    public void CheckSpecialEventCase3(string dialogue_id)
+    {
+        prop = Case3Resources.Instance.fakeProp;
         //SimpleWaypointMovement movementNurse = null;
         //adaptar para que sirva para todos los casos
         switch (dialogue_id)
         {
-            
             case "D3.1": //sale llorando
                 StartCoroutine(CaseD31());
-                break; 
+                break;
             case "D5.1": //sale llorando
                 StartCoroutine(CaseD51());
                 break;
@@ -159,6 +160,19 @@ public class SpecialCases : MonoBehaviour
                 //playingAnimation = true;
                 StartCoroutine(CaseD101());
                 break;
+        }
+    }
+
+    //Devolver float
+    public void CheckSpecialEvent(string dialogue_id)//con esto comprobaremos si en el dialogo actual debe darse alguna situacion en concreto
+    {
+        if (UI_Manager.Instance.currentCase == Cases.Case3)
+        {
+            CheckSpecialEventCase3(dialogue_id);
+        }
+        else if (UI_Manager.Instance.currentCase == Cases.Case9)
+        {
+
         }
     }
 

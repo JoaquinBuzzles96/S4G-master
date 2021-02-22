@@ -78,10 +78,10 @@ public class SimpleWaypointMovement : MonoBehaviour
         lastPointToLook = lookPoint;
         wayToFollow = _waypoints;
 
-        Debug.Log("Por lo tanto el way to follow es: ");
+        //Debug.Log("Por lo tanto el way to follow es: ");
         foreach (var item in wayToFollow)
         {
-            Debug.Log($"{item.position}");
+            //Debug.Log($"{item.position}");
         }
 
         canMove = true;

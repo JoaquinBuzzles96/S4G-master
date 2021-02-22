@@ -7,6 +7,8 @@ using System.IO;
 
 public enum Status {Situation, Answer };
 
+public enum Cases { DefaultCase, Case3, Case9 };
+
 public class UI_Manager : MonoBehaviour
 {
     private static UI_Manager instance = null;
@@ -27,6 +29,7 @@ public class UI_Manager : MonoBehaviour
     private List<DialogueNodeData> answerDialogues = new List<DialogueNodeData>();
     private int currentDialogue = 0; //podemos usar la misma variable para ambos casos ya que nunca se daran al mismo tiempo
     private Status currentStatus = Status.Situation;
+    public Cases currentCase = Cases.DefaultCase;
     public DialogueContainer dialogueContainer;
 
     //Arrows
@@ -99,7 +102,7 @@ public class UI_Manager : MonoBehaviour
     void Start()
     {
         GetDialogueContainerLanguage();
-        SetNameToCharacters();
+        SetUpCharacrteres();
         lastQuestion = -1;
         totalScore = 0;
         SetUpContext(dialogueContainer.GetFirstSituation());
@@ -265,8 +268,7 @@ public class UI_Manager : MonoBehaviour
             if (_speaker != "Narrador" && _speaker != "Narrator")
             {
                 Debug.Log($"No se ha encontrado el speaker {_speaker} --> {speaker}");
-            }
-                
+            }    
         }
 
         //Audio
@@ -283,8 +285,6 @@ public class UI_Manager : MonoBehaviour
             Debug.Log($"No se ha encontrado el audio Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}");
             return 0f;
         }
-
-        
     }
 
     private void SetMoodAnim(string _speaker, string _mood)
@@ -370,8 +370,24 @@ public class UI_Manager : MonoBehaviour
         //#if !UNITY_EDITOR
         if (LanguageManager.Instance != null)
         {
+            Debug.Log($"El Languague manager no es nulo, contiene es caso: {LanguageManager.Instance.caseSelected} y languague {LanguageManager.Instance.languageSelected}");
             caso = LanguageManager.Instance.caseSelected;
             path = Application.streamingAssetsPath + $"/Resources/Cases/{caso}_{LanguageManager.Instance.languageSelected}";
+
+            //Este valor se asigna para mas adelante utilizar unos eventos y animaciones especificas u otras
+            switch (caso)
+            {
+                case "CASE3":
+                    currentCase = Cases.Case3;
+                    break;
+                case "CASE9":
+                    currentCase = Cases.Case9;
+                    break;
+                default:
+                    currentCase = Cases.DefaultCase; //sin nada de animaciones especificas
+                    break;
+            }
+
             //dialogueContainer = Resources.Load($"Cases/{caso}_{LanguageManager.Instance.languageSelected}") as DialogueContainer;
             //Debug.Log($"Cargamos el case Cases/{caso}_{LanguageManager.Instance.languageSelected}");
         }
@@ -418,14 +434,47 @@ public class UI_Manager : MonoBehaviour
 
     public void SetNameToCharacters()
     {
+        //Metemos en el diccionario los personajes de todas las situaciones
         foreach (var item in characteres)
         {
             float randomStartDelay = Random.Range(0, 4.5f);//random init delay
             item.Update(randomStartDelay);
 
             dictionaryCharacteres.Add(item.gameObject.name, item);
-
+            item.gameObject.SetActive(false);
             //Debug.Log($"Se ha añadido el {item.gameObject.name} al diccionario");
+        }
+
+        
+
+    }
+
+    public void SetUpCharacrteres()
+    {
+        //Metemos en el diccionario los personajes de todas las situaciones
+        SetNameToCharacters();
+
+        //Llegados a este punto damos por supuesto que en el diccionario estan todos los personajes
+
+        //En funcion del caso activamos los personajes que participaran
+        if (currentCase == Cases.Case3)
+        {
+            dictionaryCharacteres["Endoscopist1"].gameObject.SetActive(true);
+            dictionaryCharacteres["Endoscopist2"].gameObject.SetActive(true);
+            dictionaryCharacteres["EndoscopyNurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["AnaesthesiaNurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
+            dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
+            dictionaryCharacteres["EndoscopyNurseExtra"].gameObject.SetActive(true);
+        }
+        else if (currentCase == Cases.Case9)
+        {
+            dictionaryCharacteres["Endoscopist1"].gameObject.SetActive(true);
+            dictionaryCharacteres["Endoscopist2"].gameObject.SetActive(true); // Hara de equivalente a surgeon1
+            dictionaryCharacteres["EndoscopyNurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
+            dictionaryCharacteres["Student"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
     }
 
@@ -719,11 +768,11 @@ public class UI_Manager : MonoBehaviour
             }
             else
             {
-                Debug.Log($"Hay mas dialogos, por lo que limpiamos la pantalla y seguimos. currentDiag = {currentDialogue}");
+                //Debug.Log($"Hay mas dialogos, por lo que limpiamos la pantalla y seguimos. currentDiag = {currentDialogue}");
             }
         }
 
-        Debug.Log($"No quedan más dialogos, y stamos en status = {currentStatus}");
+        //Debug.Log($"No quedan más dialogos, y stamos en status = {currentStatus}");
         //EN FUNCION DE DONDE ESTEMOS VAMOS A LLAMAMOS A CheckIfIsEnd o GoToScreen3
         if (currentStatus == Status.Situation)
         {
