@@ -215,7 +215,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-106118
+  m_Name: pb_Mesh-162664
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -400,7 +400,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1000536167454953547}
-  - {fileID: 777020029}
   m_Father: {fileID: 1000536166923683995}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -505,7 +504,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-105364
+  m_Name: pb_Mesh-161910
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1770,7 +1769,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-101432
+  m_Name: pb_Mesh-157978
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3598,7 +3597,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-102530
+  m_Name: pb_Mesh-159076
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5418,6 +5417,7 @@ MonoBehaviour:
     score: 0
     Position: {x: 0, y: 0}
   audioSource: {fileID: 726161757}
+  ExitButton: {fileID: 0}
   characteres:
   - {fileID: 0}
   - {fileID: 991541514}
@@ -5925,7 +5925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &777020029
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5938,13 +5938,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 618122082}
-  m_Father: {fileID: 18336486}
-  m_RootOrder: 1
+  m_Father: {fileID: 1000536165941634983}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 28.098583}
-  m_SizeDelta: {x: 57.055832, y: 7.4561787}
+  m_AnchoredPosition: {x: 27.3, y: 3.7}
+  m_SizeDelta: {x: 12.465767, y: 7.4561787}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &777020030
 MonoBehaviour:
@@ -8153,7 +8153,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-106108
+  m_Name: pb_Mesh-162654
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12350,7 +12350,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-105398
+  m_Name: pb_Mesh-161944
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18826,6 +18826,7 @@ RectTransform:
   - {fileID: 1000536167450445073}
   - {fileID: 1000536167573767267}
   - {fileID: 1000536166923683995}
+  - {fileID: 777020029}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -39.100002, z: 0}
@@ -18978,6 +18979,7 @@ MonoBehaviour:
     score: 0
     Position: {x: 0, y: 0}
   audioSource: {fileID: 1000536165941635004}
+  ExitButton: {fileID: 777020028}
   characteres:
   - {fileID: 991541514}
   - {fileID: 486864079}
@@ -19926,8 +19928,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 3.85}
-  m_SizeDelta: {x: 57.055832, y: 7.4561787}
+  m_AnchoredPosition: {x: 2.082, y: 3.85}
+  m_SizeDelta: {x: 27.963017, y: 7.4561787}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1000536166238292016
 MonoBehaviour:
@@ -20076,7 +20078,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 1
+    lineCount: 5
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

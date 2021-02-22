@@ -14,7 +14,11 @@ public class HandAnimator : MonoBehaviour
     private float turnDegrees;
     private bool canTurn = true;
 
+    bool isExitButtonActive = false;
+
     private Animator animator = null;
+    private float cooldown;
+    private float cooldownValue = 0.3f;
 
     private readonly List<Finger> gripFingers = new List<Finger>
     {
@@ -74,6 +78,23 @@ public class HandAnimator : MonoBehaviour
         {
             SetFingerTargets(gripFingers, gripValue);
         }
+
+        controller.inputDevice.TryGetFeatureValue(CommonUsages.gripButton, out bool gripButton);
+        //Boton de salir
+        if (gripButton && cooldown <= 0f)
+        {
+            Debug.Log("Se esta pulsando el boton de salir");
+
+            isExitButtonActive = !isExitButtonActive;
+
+            UI_Manager.Instance.ExitButton.SetActive(isExitButtonActive);
+            cooldown = cooldownValue;
+        }
+        else
+        {
+            cooldown -= Time.deltaTime;
+        }
+
 
         if (controller.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 rightPrimaryAxisValue))
         {

@@ -58,6 +58,8 @@ public class UI_Manager : MonoBehaviour
     public AnswerNodeData choosenAnswer;
     public AudioSource audioSource;
 
+    public GameObject ExitButton;
+
     public List<Animator> characteres;
 
     public Dictionary<string, Animator> dictionaryCharacteres = new Dictionary<string, Animator>();
@@ -571,6 +573,8 @@ public class UI_Manager : MonoBehaviour
         //Send email
         Debug.Log("Enviamos un mail con la infomacion");
         SendMail.Instance.SendEmail();
+
+        ExitButton.SetActive(true);
     }
 
     private bool CheckMoreDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI, GameObject nextButton)
