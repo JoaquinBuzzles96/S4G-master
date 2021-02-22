@@ -476,7 +476,7 @@ public class UI_Manager : MonoBehaviour
 
         contextDescription.text = situation.Context;
 
-        StartCoroutine(PlaySimpleDialogue(situation.audioId, nextButtonContext));
+        StartCoroutine(PlaySimpleDialogue(situation.audioId)); //TESTING: , nextButtonContext
 
         //Debug.Log($"Se ha configurado el contexto de la situacion {situation.SituationName}");
 
@@ -693,11 +693,19 @@ public class UI_Manager : MonoBehaviour
         return isTragetInFieldOfView;
     }
 
-    public IEnumerator PlaySimpleDialogue(string audio, GameObject nextButton)
+    public IEnumerator PlaySimpleDialogue(string audio, GameObject nextButton = null)
     {
-        nextButton.SetActive(false);
-        yield return new WaitForSeconds(PlayAudioOnSpeaker(audio, "Narrator", "Calm"));
-        nextButton.SetActive(true);
+        if (nextButton != null)
+        {
+            nextButton.SetActive(false);
+            yield return new WaitForSeconds(PlayAudioOnSpeaker(audio, "Narrator", "Calm"));
+            nextButton.SetActive(true);
+        }
+        else
+        {
+            yield return new WaitForSeconds(PlayAudioOnSpeaker(audio, "Narrator", "Calm"));
+        }
+
     }
 
     public string Translate(string toTranslate) //Spanish to English
