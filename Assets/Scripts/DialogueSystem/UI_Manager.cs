@@ -506,6 +506,9 @@ public class UI_Manager : MonoBehaviour
 
     public void SetUpScreen3() //Asignar la pregunta y las 4 posibles respuestas
     {
+        generalArrow.SetActive(true);
+        generalArrow.GetComponent<LookTarget>().target = this.transform;//PANEL
+
         //En este caso si podemos suponer que la situacion que tenemos es la correcta, de modo que no es necesario pasarla por parametro
         questions = dialogueContainer.GetSituationQuestions(situation.Guid);
 
@@ -524,11 +527,16 @@ public class UI_Manager : MonoBehaviour
 
         lastQuestion = currentQuestion;
 
+
+        //Poner aqui que la flecha espere (en caso de que se quiera implementar, seria necesario ampliar el collider en ese caso)
+
         //Debug.Log($"Se ha configurado la screen 3 con la pregunta y las respuestas de la situacion {situation.SituationName}, pregunta {questions[currentQuestion].QuestionName}");
     }
 
     public void SetUpScreen4(AnswerNodeData answer)
     {
+        generalArrow.SetActive(false);
+
         choosenAnswer = answer;
         if (LoadDialogues(answer.Guid, answerDialogues))
         {

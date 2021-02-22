@@ -606,6 +606,8 @@ public class SpecialCases : MonoBehaviour
     }
     IEnumerator CaseD111()
     {
+        UI_Manager.Instance.generalArrow.SetActive(true);
+        UI_Manager.Instance.generalArrow.GetComponent<LookTarget>().target = UI_Manager.Instance.dictionaryCharacteres["Secretary"].gameObject.transform;
         playingAnimation = true;
         SimpleWaypointMovement movement = Case3Resources.Instance.secretary.GetComponent<SimpleWaypointMovement>();
         Case3Resources.Instance.doorAnim.Play();

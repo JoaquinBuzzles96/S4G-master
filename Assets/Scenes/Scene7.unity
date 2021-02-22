@@ -215,7 +215,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-311904
+  m_Name: pb_Mesh-106118
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -505,7 +505,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-310856
+  m_Name: pb_Mesh-105364
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1770,7 +1770,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-306912
+  m_Name: pb_Mesh-101432
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3598,7 +3598,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-308014
+  m_Name: pb_Mesh-102530
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8153,7 +8153,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-311894
+  m_Name: pb_Mesh-106108
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12350,7 +12350,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-310890
+  m_Name: pb_Mesh-105398
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19011,6 +19011,7 @@ GameObject:
   - component: {fileID: 1000536165941634978}
   - component: {fileID: 1000536165941635005}
   - component: {fileID: 1000536165941635004}
+  - component: {fileID: 1000536165941635008}
   m_Layer: 0
   m_Name: MainPanelNew
   m_TagString: Untagged
@@ -19018,6 +19019,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1000536165941635008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000536165941635007}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 23.27, z: 0}
 --- !u!1 &1000536166054116081
 GameObject:
   m_ObjectHideFlags: 0

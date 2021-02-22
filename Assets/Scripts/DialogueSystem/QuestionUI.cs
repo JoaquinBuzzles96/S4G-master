@@ -94,6 +94,7 @@ public class QuestionUI : MonoBehaviour
         if (!answered)
         {
             //Pierdes puntos si llegas a este punto
+            UI_Manager.Instance.totalScore -= 5;
         }
 
         //Para la siguiente
