@@ -15,6 +15,8 @@ public class QuestionUI : MonoBehaviour
     private List<AnswerNodeData> answersData;
     public GameObject AnswerContainer;
 
+    public GameObject countdownBar;
+
     void Start()
     {
 
@@ -64,6 +66,7 @@ public class QuestionUI : MonoBehaviour
     IEnumerator QuestionTimer()
     {
         int timer = 25; //segundos que tienes para responder
+        countdownBar.transform.localScale = new Vector3(1, 1, 1);
         timerText.text = $"{timer}";
 
 
@@ -71,36 +74,18 @@ public class QuestionUI : MonoBehaviour
         yield return new WaitForSeconds(UI_Manager.Instance.audioSource.clip.length + 2.5f);
 
         //en un futuro esto se sacara del question data, de momento lo seteamos a mano
-
-        /*
-        float normalizedTime = 0;
-        while (normalizedTime <= 1f)
-        {
-            //countdownImage.fillAmount = normalizedTime; //por si ponemos una imagen de carga o algo por el estilo
-            normalizedTime += Time.deltaTime / timer;
-            yield return null;
-        }
-        */
-
-        //OPCION ACTUAL
-        /*
-        while (timer >= 0 && !answered)
-        {
-            //UPDATE UI
-            timerText.text = $"{timer}";
-            yield return new WaitForSeconds(1);
-            timer--;
-            
-        }*/
-
-        //OPCION MOLONA
+ 
         float normalizedTime = 1f;
+        float integerTimer = timer;
         while (normalizedTime > 0f && !answered)
         {
             //UPDATE UI
-            Debug.Log($"% de tiempo: {normalizedTime}");
+            //Debug.Log($"% de tiempo: {normalizedTime}");
             normalizedTime -= Time.deltaTime / timer;
-            timerText.text = $"{normalizedTime}";
+            countdownBar.transform.localScale = new Vector3(normalizedTime, 1, 1);
+            integerTimer -= Time.deltaTime;
+            timerText.text = $"{(int)integerTimer}";
+
             yield return null; //Igual esto hay que hacerlo sin corroutina
 
         }
