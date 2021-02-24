@@ -296,7 +296,7 @@ public class SpecialCases : MonoBehaviour
 
         //TODO: extraigo endoscopio  ¿animacion?
         //Debug.Log($"Extraemos el endoscopio");
-        //Animacion de sacar el endoscopio
+        //Animacion de sacar el endoscopio //TODO
         anim = "EndoscopeAnim"; // en las de dar podemos ahcer que mire a un target
         yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim);
 
@@ -313,37 +313,6 @@ public class SpecialCases : MonoBehaviour
 
         //Debug.Log($"La enfermera va a la mesa");
         yield return GoToTableAndLeaveObject("Endoscope");
-
-        /*
-                 //ir a la mesa:
-        movementNurse = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
-        //vementNurse.canMove = true;
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
-        while (movementNurse.canMove)
-        {
-            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
-        }
-
-        //animacion de dejar en la mesa
-        anim = "LookFor";
-        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim);
-
-
-        //Debug.Log($"Lo deja en la mesa");
-        // lo deja en la mesa:
-        GameObject posAux = new GameObject();
-        posAux.transform.position = Case3Resources.Instance.positionsDictionary[prop.name];
-        //Case3Resources.Instance.tablePoint.transform;
-        SetProp(posAux.transform, prop);
-
-        //Debug.Log($"La enfermera se vuelve a su sitio");
-        //vuelve a su sitio
-        movementNurse.ResetPosition();
-        while (movementNurse.canMove)
-        {
-            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
-        }
-         */
 
         playingAnimation = false;
     }
@@ -711,7 +680,7 @@ public class SpecialCases : MonoBehaviour
             // Si ya tiene algo en la mano ponerlo en la mesa
             if (target == "Endoscopist1" && currentTool != null && currentTool != "Herramienta")
             {
-                SetProp(Case3Resources.Instance.ExtraTablePos.transform, GetProp(currentTool));
+                Case3Resources.Instance.PutInExtraTable(GetProp(currentTool));
             }
 
             //Ponemos la herramienta en la mano
