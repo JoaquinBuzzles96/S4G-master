@@ -193,13 +193,16 @@ public class SpecialCases : MonoBehaviour
         //La enfermera se pone la mascarilla
         //Case3Resources.Instance.animMascarilla.SetActive(true);//activar la mascarilla de la animacion
         //play anim
+        playingAnimation = true;
         UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].SetBool("maskAnim", true);
 
         //Esperar hasta que acabe la animacion -- dura 4.5
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(5.5f);
+
+        playingAnimation = false;
 
         //Case3Resources.Instance.animMascarilla.SetActive(false); //desactivamos la mascarilla de la animacion
-        Case3Resources.Instance.mask.SetActive(true);//activar al final
+        //Case3Resources.Instance.mask.SetActive(true);//activar al final //Esto ahora lo hace desde el aimator al acabar la animacion
     }
 
     IEnumerator CaseD31()
@@ -702,6 +705,13 @@ public class SpecialCases : MonoBehaviour
 
             prop = GetProp(propName);
             position = UI_Manager.Instance.dictionaryCharacteres[target].gameObject.GetComponent<HandPosition>().handPos;
+            // Si ya tiene algo en la mano ponerlo en la mesa
+            if (target == "Endoscopist1" && (currentTool == null ||currentTool == "Herramienta"))
+            {
+                SetProp(Case3Resources.Instance.ExtraTablePos.transform, GetProp(currentTool));
+            }
+
+            //Ponemos la herramienta en la mano
             SetProp(position, prop);
 
             yield return new WaitForSeconds(animDuration * 0.25f + 0.4f);
@@ -710,6 +720,8 @@ public class SpecialCases : MonoBehaviour
             {
                 currentTool = propName;
             }
+
+
         }
         else
         {

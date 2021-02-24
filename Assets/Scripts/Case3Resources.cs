@@ -53,6 +53,8 @@ public class Case3Resources : MonoBehaviour
 
     public GameObject[] tools; //para que se vea en el inspector :)
     public Dictionary<string, GameObject> toolsDictionary;
+
+    public GameObject ExtraTablePos;
     
 
     private void Start()
