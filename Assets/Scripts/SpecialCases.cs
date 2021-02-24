@@ -377,6 +377,7 @@ public class SpecialCases : MonoBehaviour
         Debug.Log("Ponemos el objeto en la mano de la enfermera");
         //Aparecer el objeto en la mano
         prop = GetProp(tableObject);
+        nurseTool = tableObject;
         position = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().handPos;
         SetProp(position, prop);// lo ponemos en su mano
 
@@ -412,6 +413,7 @@ public class SpecialCases : MonoBehaviour
         posAux.transform.position = Case3Resources.Instance.positionsDictionary[prop.name];
         //Case3Resources.Instance.tablePoint.transform;
         SetProp(posAux.transform, prop);
+        nurseTool = "";
 
         Debug.Log("La enfermera se vuelve a su sitio");
         //volver a su sitio
@@ -441,6 +443,7 @@ public class SpecialCases : MonoBehaviour
         //Animacion de dar
         anim = "Give";
         yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject, anim, "HerramientaErronea", "Endoscopist1");
+        nurseTool = "";
 
         playingAnimation = false;
     }
@@ -706,13 +709,14 @@ public class SpecialCases : MonoBehaviour
             prop = GetProp(propName);
             position = UI_Manager.Instance.dictionaryCharacteres[target].gameObject.GetComponent<HandPosition>().handPos;
             // Si ya tiene algo en la mano ponerlo en la mesa
-            if (target == "Endoscopist1" && (currentTool == null ||currentTool == "Herramienta"))
+            if (target == "Endoscopist1" && currentTool != null && currentTool != "Herramienta")
             {
                 SetProp(Case3Resources.Instance.ExtraTablePos.transform, GetProp(currentTool));
             }
 
             //Ponemos la herramienta en la mano
             SetProp(position, prop);
+            currentTool = propName;
 
             yield return new WaitForSeconds(animDuration * 0.25f + 0.4f);
 
