@@ -16,6 +16,7 @@ public class FollowPoint : MonoBehaviour
         if (target != null)
         {
             this.transform.position = target.position;
+            this.transform.rotation = target.rotation;
         }
         
     }
