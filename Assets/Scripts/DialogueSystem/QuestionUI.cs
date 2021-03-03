@@ -17,15 +17,35 @@ public class QuestionUI : MonoBehaviour
 
     public GameObject countdownBar;
 
+    //Hacer que una imagen siga la barra de tiempo - Juan
+    public GameObject imageAmbulance;
+    Transform startPosition;
+    bool activarMoverImagen;
+    bool activarLerpImagen;
+    public float speed = 1.0F;
+    float startTime;
+    float journeyLength;
+    public GameObject imageHospital;
+
+
+
     void Start()
     {
-
+        //Juan
+        startPosition.transform.position = imageAmbulance.transform.position;
     }
 
 
     void Update()
     {
 
+        //Juan
+        if (activarMoverImagen)
+        {
+            float distCovered = (Time.time - startTime) * speed;
+            float fractionOfJourney = distCovered / journeyLength;
+            imageAmbulance.transform.position = Vector3.Lerp(startPosition.transform.position, imageHospital.transform.position, fractionOfJourney);
+        }
     }
 
     public void SetupQuestion()
@@ -79,6 +99,14 @@ public class QuestionUI : MonoBehaviour
         float integerTimer = timer;
         while (normalizedTime > 0f && !answered)
         {
+            //Juan
+            if (activarLerpImagen == false)
+            {
+                StartLerpImage();
+                activarLerpImagen = true;
+            }
+            activarMoverImagen = true;
+
             //UPDATE UI
             //Debug.Log($"% de tiempo: {normalizedTime}");
             normalizedTime -= Time.deltaTime / timer;
@@ -87,7 +115,6 @@ public class QuestionUI : MonoBehaviour
             timerText.text = $"{(int)integerTimer}";
 
             yield return null; //Igual esto hay que hacerlo sin corroutina
-
         }
 
         if (!answered)
@@ -98,6 +125,22 @@ public class QuestionUI : MonoBehaviour
 
         //Para la siguiente
         answered = false;
+    }
+
+    //Juan
+    void StartLerpImage()
+    {
+        startTime = Time.time;
+        journeyLength = Vector3.Distance(startPosition.position, imageHospital.transform.position);
+    }
+    
+    public void ResetImage()
+    {
+        //Deja la imagen en su sitio inicial.
+        imageAmbulance.transform.position = startPosition.position;
+
+        activarLerpImagen = false;
+        activarMoverImagen = false;
     }
 
 }
