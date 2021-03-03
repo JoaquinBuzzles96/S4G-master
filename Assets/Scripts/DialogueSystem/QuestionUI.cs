@@ -31,6 +31,7 @@ public class QuestionUI : MonoBehaviour
 
     void Start()
     {
+
         //Juan
         startPosition.transform.position = imageAmbulance.transform.position;
     }
