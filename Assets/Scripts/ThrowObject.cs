@@ -17,9 +17,30 @@ public class ThrowObject : MonoBehaviour
     }
     public void ReleaseObject()
     {
-        objectToThrow.transform.parent = null;
+        //Asignar el objeto que este en handPos en este momento
+        objectToThrow = SpecialCases.Instance.GetProp(SpecialCases.Instance.currentTool);
 
-        rb.useGravity = true;
-        rb.AddForce(direction * force);
+        if (objectToThrow != null)
+        {
+            Debug.Log($"Vamos a lanzar la herramienta {SpecialCases.Instance.currentTool}");
+            //Activamos el collider
+            objectToThrow.GetComponent<BoxCollider>().enabled = true;
+            objectToThrow.GetComponent<FollowPoint>().target = null;
+
+            rb = objectToThrow.GetComponent<Rigidbody>();
+            direction = (objectiveToThrow.transform.position - this.transform.position).normalized;
+
+
+            //objectToThrow.transform.parent = null;
+
+            rb.useGravity = true;
+            rb.AddForce(direction * force);
+        }
+        else
+        {
+            Debug.Log("No tiene ningun objeto en la mano ahora");
+        }
+
+
     }
 }

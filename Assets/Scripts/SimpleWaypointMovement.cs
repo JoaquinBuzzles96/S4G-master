@@ -41,7 +41,7 @@ public class SimpleWaypointMovement : MonoBehaviour
             {
                 if (Vector3.Distance(this.transform.position, wayToFollow[nextWaypoint].transform.position) > 0.1f)
                 {
-                    Debug.Log("La "+ this.gameObject.name +"camina hacia el waypoint " + nextWaypoint);
+                    //Debug.Log("La "+ this.gameObject.name +"camina hacia el waypoint " + nextWaypoint);
                     if (!animator.GetBool("Walk"))
                     {
                         animator.SetBool("Walk", true);

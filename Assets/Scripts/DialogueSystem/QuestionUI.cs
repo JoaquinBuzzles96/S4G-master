@@ -17,23 +17,20 @@ public class QuestionUI : MonoBehaviour
 
     public GameObject countdownBar;
 
-    //Hacer que una imagen siga la barra de tiempo - Juan
+    //Hacer que una imagen siga la barra de tiempo
     public GameObject imageAmbulance;
-    Transform startPosition;
-    bool activarMoverImagen;
-    bool activarLerpImagen;
-    public float speed = 1.0F;
-    float startTime;
-    float journeyLength;
     public GameObject imageHospital;
+    public Vector3 originalPosition;
 
 
 
     void Start()
     {
-
+        
+        //originalPosition = imageAmbulance.transform.position;
+        //Debug.Log($"Guardamos la posicion inicial de la ambulancia {originalPosition}, deberia ser 24,22,09, original position position = { imageAmbulance.transform.position}");
         //Juan
-        startPosition.transform.position = imageAmbulance.transform.position;
+        // startPosition.transform.position = imageAmbulance.transform.position;
     }
 
 
@@ -41,16 +38,19 @@ public class QuestionUI : MonoBehaviour
     {
 
         //Juan
+        /*
         if (activarMoverImagen)
         {
             float distCovered = (Time.time - startTime) * speed;
             float fractionOfJourney = distCovered / journeyLength;
             imageAmbulance.transform.position = Vector3.Lerp(startPosition.transform.position, imageHospital.transform.position, fractionOfJourney);
         }
+        */
     }
 
     public void SetupQuestion()
     {
+        
         description.text = questionData.Description;
         //Debug.Log($"Setup description: {questionData.Description}");
 
@@ -77,6 +77,15 @@ public class QuestionUI : MonoBehaviour
             //Debug.Log($"El slot {j} esta clear");
         }
 
+        if (originalPosition != Vector3.zero)
+        {
+            imageAmbulance.transform.position = originalPosition;
+        }
+        else
+        {
+            originalPosition = imageAmbulance.transform.position;
+        }
+
         StartCoroutine(UI_Manager.Instance.PlaySimpleDialogue(questionData.audioId, AnswerContainer));
 
         //Iniciamos el timer:
@@ -98,15 +107,27 @@ public class QuestionUI : MonoBehaviour
  
         float normalizedTime = 1f;
         float integerTimer = timer;
+
+        float t = 0; //representara la distancia recorrida
+        Vector3 startPosition_ = imageAmbulance.transform.position;// originalPosition;
+        Vector3 target = imageHospital.transform.position;
+        float timeToReachTarget = timer;
+
         while (normalizedTime > 0f && !answered)
         {
             //Juan
+            /*
             if (activarLerpImagen == false)
             {
                 StartLerpImage();
                 activarLerpImagen = true;
             }
             activarMoverImagen = true;
+            */
+
+            //Ambulancia
+            t += Time.deltaTime / timeToReachTarget;
+            imageAmbulance.transform.position = Vector3.Lerp(startPosition_, target, t);
 
             //UPDATE UI
             //Debug.Log($"% de tiempo: {normalizedTime}");
@@ -126,22 +147,6 @@ public class QuestionUI : MonoBehaviour
 
         //Para la siguiente
         answered = false;
-    }
-
-    //Juan
-    void StartLerpImage()
-    {
-        startTime = Time.time;
-        journeyLength = Vector3.Distance(startPosition.position, imageHospital.transform.position);
-    }
-    
-    public void ResetImage()
-    {
-        //Deja la imagen en su sitio inicial.
-        imageAmbulance.transform.position = startPosition.position;
-
-        activarLerpImagen = false;
-        activarMoverImagen = false;
     }
 
 }
