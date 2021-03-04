@@ -29,23 +29,13 @@ public class QuestionUI : MonoBehaviour
         
         //originalPosition = imageAmbulance.transform.position;
         //Debug.Log($"Guardamos la posicion inicial de la ambulancia {originalPosition}, deberia ser 24,22,09, original position position = { imageAmbulance.transform.position}");
-        //Juan
-        // startPosition.transform.position = imageAmbulance.transform.position;
     }
 
 
     void Update()
     {
 
-        //Juan
-        /*
-        if (activarMoverImagen)
-        {
-            float distCovered = (Time.time - startTime) * speed;
-            float fractionOfJourney = distCovered / journeyLength;
-            imageAmbulance.transform.position = Vector3.Lerp(startPosition.transform.position, imageHospital.transform.position, fractionOfJourney);
-        }
-        */
+
     }
 
     public void SetupQuestion()
@@ -115,15 +105,6 @@ public class QuestionUI : MonoBehaviour
 
         while (normalizedTime > 0f && !answered)
         {
-            //Juan
-            /*
-            if (activarLerpImagen == false)
-            {
-                StartLerpImage();
-                activarLerpImagen = true;
-            }
-            activarMoverImagen = true;
-            */
 
             //Ambulancia
             t += Time.deltaTime / timeToReachTarget;
