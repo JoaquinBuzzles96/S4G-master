@@ -3,7 +3,12 @@ guid: e63691f55a4ac2b4ebd22aefe11b79de
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_rugoso.001
+    second: {fileID: 2100000, guid: 68f0f857f13865643a6ff6f8c8f35526, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
