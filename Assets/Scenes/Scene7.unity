@@ -215,7 +215,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-67708
+  m_Name: pb_Mesh-364246
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -737,13 +737,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!54 &20866528
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20866526}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &20866529
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20866526}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.27, y: 0.04, z: 0.05}
+  m_Center: {x: -0.08, y: 0, z: 0}
 --- !u!43 &22160959
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-66362
+  m_Name: pb_Mesh-362900
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4291,7 +4320,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-63166
+  m_Name: pb_Mesh-359704
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5043,7 +5072,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-63536
+  m_Name: pb_Mesh-360074
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12459,7 +12488,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-67568
+  m_Name: pb_Mesh-364106
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15621,7 +15650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1285727816
 Transform:
   m_ObjectHideFlags: 0
@@ -15629,8 +15658,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285727815}
-  m_LocalRotation: {x: -0.23174691, y: -0.00034296347, z: -0.033247694, w: 0.9722077}
-  m_LocalPosition: {x: -0.0034, y: 0.0093, z: 0.0402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.11344217, y: 0.11344217, z: 0.11344217}
   m_Children: []
   m_Father: {fileID: 3040935680368024934}
@@ -18448,7 +18477,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-66418
+  m_Name: pb_Mesh-362956
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19576,6 +19605,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1701482928}
   - component: {fileID: 1701482929}
+  - component: {fileID: 1701482930}
+  - component: {fileID: 1701482931}
   m_Layer: 0
   m_Name: Inyector
   m_TagString: Untagged
@@ -19611,6 +19642,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!54 &1701482930
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701482927}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1701482931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701482927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1.12, y: 0.31, z: 0.4}
+  m_Center: {x: -0.22, y: 0.17, z: -0.02}
 --- !u!1 &1703546362
 GameObject:
   m_ObjectHideFlags: 0
@@ -21274,6 +21334,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1870908833}
   - component: {fileID: 1870908834}
+  - component: {fileID: 1870908835}
+  - component: {fileID: 1870908836}
   m_Layer: 0
   m_Name: Forceps
   m_TagString: Untagged
@@ -21309,6 +21371,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!54 &1870908835
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870908832}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1870908836
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870908832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 3.17, y: 0.37, z: 0.87}
+  m_Center: {x: -0.93, y: 0, z: 0.09}
 --- !u!1 &1879854783
 GameObject:
   m_ObjectHideFlags: 0
@@ -24289,6 +24380,8 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652674144848}
   - component: {fileID: 919132149006262507}
+  - component: {fileID: 919132149006262508}
+  - component: {fileID: 919132149006262509}
   m_Layer: 0
   m_Name: Endoscope
   m_TagString: Untagged
@@ -24309,6 +24402,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!54 &919132149006262508
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149006262506}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &919132149006262509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149006262506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 320.7, y: 30.97, z: 61.2}
+  m_Center: {x: -82.75, y: 16.69, z: 0}
 --- !u!1 &919132149030980125
 GameObject:
   m_ObjectHideFlags: 0
@@ -24335,6 +24457,8 @@ GameObject:
   m_Component:
   - component: {fileID: 543450653405590109}
   - component: {fileID: 327996857}
+  - component: {fileID: 919132149481859304}
+  - component: {fileID: 919132149481859305}
   m_Layer: 0
   m_Name: Lazo
   m_TagString: Untagged
@@ -24342,6 +24466,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &919132149481859304
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149481859303}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &919132149481859305
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149481859303}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 17.89, y: 1, z: 1}
+  m_Center: {x: -3.34, y: 0, z: 0}
 --- !u!1 &921391926273212530
 GameObject:
   m_ObjectHideFlags: 0
@@ -25013,12 +25166,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 10
+  m_fontSize: 2
   m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 10
+  m_fontSizeMax: 2
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -25400,7 +25553,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 2.5
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -26115,7 +26268,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 2.5
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -26386,7 +26539,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 2.5
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -26660,7 +26813,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 2.5
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -26919,7 +27072,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 3
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -27125,7 +27278,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 2.5
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -28366,7 +28519,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 2.5
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -28586,7 +28739,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 2.5
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -28921,7 +29074,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 2.5
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -30074,7 +30227,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 2.5
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -30454,7 +30607,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 2.5
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -30810,7 +30963,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 2.5
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -31071,7 +31224,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 3
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -31363,7 +31516,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.1
-  m_fontSizeMax: 72
+  m_fontSizeMax: 2.5
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
