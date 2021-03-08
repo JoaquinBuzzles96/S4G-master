@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
-  m_Name: Case3_EN
+  m_Name: CASE3_EN
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 1a8a2fff-e26c-41f1-9dd8-2c6e80c21b5b
@@ -584,105 +584,6 @@ MonoBehaviour:
     nodeType: 1
     Position: {x: 1221, y: 7965}
   AnswerNodeData:
-  - Guid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
-    AnswerName: A1.2
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 10
-    Position: {x: 1965, y: 688}
-  - Guid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
-    AnswerName: A1.3
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1962, y: 915}
-  - Guid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
-    AnswerName: A1.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: -20
-    Position: {x: 1962, y: 1139}
-  - Guid: 53838028-70f5-48dc-8753-38f8a7c0c775
-    AnswerName: A2.2
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1913, y: 2030}
-  - Guid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
-    AnswerName: A2.3
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1911, y: 2257}
-  - Guid: c9282cbb-7207-4020-92d4-acc4742ef2f2
-    AnswerName: A2.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1909, y: 2477}
-  - Guid: 9a3b42a1-0449-420e-9810-f8a3863f5286
-    AnswerName: A2.1
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1917, y: 1812}
-  - Guid: edcaefce-5070-4870-bf53-6ebf5ceff51e
-    AnswerName: A4.1
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1904, y: 3324}
-  - Guid: 96c8eaf4-77c2-4a6d-90ea-36c96defc4ff
-    AnswerName: A4.2
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1914, y: 3553}
   - Guid: c8fdcbcd-30ba-43a4-8190-1fdcaa62bea9
     AnswerName: A4.3
     Feedback: 
@@ -938,6 +839,105 @@ MonoBehaviour:
     audioId: Audio id
     score: 0
     Position: {x: 1976, y: 399}
+  - Guid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
+    AnswerName: A1.2
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 10
+    Position: {x: 1973, y: 650}
+  - Guid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
+    AnswerName: A1.3
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1980, y: 905}
+  - Guid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
+    AnswerName: A1.4
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: -20
+    Position: {x: 1990, y: 1179}
+  - Guid: 9a3b42a1-0449-420e-9810-f8a3863f5286
+    AnswerName: A2.1
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: -20
+    Position: {x: 1922, y: 1733}
+  - Guid: 53838028-70f5-48dc-8753-38f8a7c0c775
+    AnswerName: A2.2
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 10
+    Position: {x: 1923, y: 1985}
+  - Guid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
+    AnswerName: A2.3
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: -20
+    Position: {x: 1921, y: 2224}
+  - Guid: c9282cbb-7207-4020-92d4-acc4742ef2f2
+    AnswerName: A2.4
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 10
+    Position: {x: 1923, y: 2479}
+  - Guid: edcaefce-5070-4870-bf53-6ebf5ceff51e
+    AnswerName: A4.1
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: -20
+    Position: {x: 1904, y: 3231}
+  - Guid: 96c8eaf4-77c2-4a6d-90ea-36c96defc4ff
+    AnswerName: A4.2
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: -20
+    Position: {x: 1909, y: 3536}
   DialogueNodeData:
   - Guid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
     DialogueName: D1.2
