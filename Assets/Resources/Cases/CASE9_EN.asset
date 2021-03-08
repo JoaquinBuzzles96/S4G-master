@@ -503,7 +503,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    score: 0
+    score: 10
     Position: {x: 1266, y: 691}
   - Guid: dcdd2b33-f7b7-4644-9aef-a334728c7feb
     AnswerName: A1.4
@@ -525,7 +525,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    score: 0
+    score: 10
     Position: {x: 1258, y: 1962}
   - Guid: f28bf13a-593d-4ab3-85f6-ede8924f1a66
     AnswerName: A2.4
@@ -536,7 +536,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    score: 0
+    score: 10
     Position: {x: 1251, y: 2499}
   - Guid: c8fb2126-ff09-4294-b774-59401b014df1
     AnswerName: A4.1
@@ -547,7 +547,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    score: 0
+    score: 10
     Position: {x: 961, y: 3514}
   - Guid: cbe87677-560a-4584-a7de-4d1be0118bee
     AnswerName: A4.2
@@ -558,7 +558,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    score: 0
+    score: -20
     Position: {x: 964, y: 3792}
   - Guid: ccff181b-c43c-4145-a394-5ffa7bdd5c66
     AnswerName: A4.4
@@ -569,7 +569,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    score: 0
+    score: 10
     Position: {x: 961, y: 4323}
   - Guid: 47c178a6-7265-495a-9b2b-17cae6b214a7
     AnswerName: A6.1
@@ -603,19 +603,8 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    score: 0
+    score: 10
     Position: {x: 896, y: 5955}
-  - Guid: 4fffad77-81c2-4b84-a6bd-25378fb6445c
-    AnswerName: A6.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 900, y: 6220}
   - Guid: 80aa5fc7-1bb0-4ed6-8d31-594d3b3d1e07
     AnswerName: A4.3
     Feedback: 
@@ -636,7 +625,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    score: 0
+    score: -20
     Position: {x: 1268, y: 978}
   - Guid: 39d033ba-ea98-4ca3-93cc-6d2b91988969
     AnswerName: A2.3
@@ -647,7 +636,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    score: 0
+    score: -20
     Position: {x: 1251, y: 2242}
   - Guid: e1c090cb-5f7e-43ed-9fd8-a177e0cc37b3
     AnswerName: A1.1
@@ -669,7 +658,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    score: 0
+    score: 10
     Position: {x: 794, y: 8533}
   - Guid: 6636090c-d4c3-4d7c-9d4e-91847020740c
     AnswerName: A9.3
@@ -746,7 +735,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    score: 0
+    score: 10
     Position: {x: 832, y: 7880}
   - Guid: f2a309a3-d899-46c6-85ae-791f9edc1345
     AnswerName: A2.1
@@ -757,8 +746,19 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: Audio id
-    score: 0
+    score: -20
     Position: {x: 1274, y: 1658}
+  - Guid: 4fffad77-81c2-4b84-a6bd-25378fb6445c
+    AnswerName: A6.4
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 10
+    Position: {x: 898, y: 6211}
   DialogueNodeData:
   - Guid: e88c4fc7-ce27-4f6e-8724-a6bc440ba4e6
     DialogueName: D1.1.4
