@@ -43,5 +43,7 @@ public class BlinkObject : MonoBehaviour
         arrow.gameObject.GetComponent<Renderer>().material.color = originalColor;
         speed = originalSpeed;
         isActive = false;
+        countDownBar.color = Color.white;
+        timerText.color = Color.white;
     }
 }
