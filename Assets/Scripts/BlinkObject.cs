@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class BlinkObject : MonoBehaviour
 {
@@ -9,10 +11,16 @@ public class BlinkObject : MonoBehaviour
     public float speed;
     public float originalSpeed = 3.0f;
 
+    public GameObject arrow;
+
+    //Como este script solo se utilizara para la cuenta atras aprovechamos para modificar el color de la barra y de la cuenta atras
+    public TextMeshProUGUI timerText;
+    public Image countDownBar;
+
     void Start()
     {
         isActive = false;
-        originalColor = this.gameObject.GetComponent<Renderer>().material.color;
+        originalColor = arrow.gameObject.GetComponent<Renderer>().material.color;
         speed = originalSpeed;
     }
 
@@ -21,13 +29,18 @@ public class BlinkObject : MonoBehaviour
     {
         if (isActive)
         {
-            this.gameObject.GetComponent<Renderer>().material.color = Color.Lerp(originalColor, Color.red, Mathf.PingPong(Time.time * speed, 1.0f));
+            // Arrow
+            arrow.gameObject.GetComponent<Renderer>().material.color = Color.Lerp(originalColor, Color.red, Mathf.PingPong(Time.time * speed, 1.0f));
+            //Text
+            timerText.color = Color.Lerp(Color.white, Color.red, Mathf.PingPong(Time.time * speed, 1.0f));
+            //Bar
+            countDownBar.color = Color.Lerp(Color.white, Color.red, Mathf.PingPong(Time.time * speed, 1.0f));
         }
     }
 
     public void ResetValues()
     {
-        this.gameObject.GetComponent<Renderer>().material.color = originalColor;
+        arrow.gameObject.GetComponent<Renderer>().material.color = originalColor;
         speed = originalSpeed;
         isActive = false;
     }

@@ -215,7 +215,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-17842
+  m_Name: pb_Mesh-167644
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -743,7 +743,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16490
+  m_Name: pb_Mesh-166292
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4297,7 +4297,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-14374
+  m_Name: pb_Mesh-164176
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5144,7 +5144,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-14744
+  m_Name: pb_Mesh-164546
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12573,7 +12573,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-17704
+  m_Name: pb_Mesh-167506
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14592,7 +14592,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219126084}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -17843,7 +17843,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-16544
+  m_Name: pb_Mesh-166346
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22180,20 +22180,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2082216586}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2082216589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082216587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9daa74debae585342b28e5ecd263b4ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isActive: 0
-  speed: 3
 --- !u!1 &2084566153
 GameObject:
   m_ObjectHideFlags: 0
@@ -30397,7 +30383,7 @@ MonoBehaviour:
   imageAmbulance: {fileID: 1034072170}
   imageHospital: {fileID: 1089047910}
   originalPosition: {x: 0, y: 0, z: 0}
-  arrowBlink: {fileID: 2082216589}
+  arrowBlink: {fileID: 1000536167450445076}
 --- !u!224 &1000536167450445073
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30433,6 +30419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000536167450445073}
   - component: {fileID: 1000536167450445072}
+  - component: {fileID: 1000536167450445076}
   m_Layer: 0
   m_Name: Screen3_answers
   m_TagString: Untagged
@@ -30440,6 +30427,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &1000536167450445076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000536167450445075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daa74debae585342b28e5ecd263b4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
+  speed: 0
+  originalSpeed: 3
+  arrow: {fileID: 2082216587}
+  timerText: {fileID: 666731587}
+  countDownBar: {fileID: 301504318}
 --- !u!114 &1000536167454953544
 MonoBehaviour:
   m_ObjectHideFlags: 0

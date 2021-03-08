@@ -25,8 +25,9 @@ public class QuestionUI : MonoBehaviour
     public BlinkObject arrowBlink;
 
     AnswerNodeData correctAnswer;
+    int maxScore;
 
-    int timerLimit = 15;
+    int timerLimit = 25;
     int scorePenalty = 5;
     int scorePenalty2 = 5;
 
@@ -59,15 +60,17 @@ public class QuestionUI : MonoBehaviour
 
         int i = 0;
         correctAnswer = null;
+        maxScore = 0;
         //Cargamos todas las respuestas
         for (i = 0; i < answersData.Count; i++)
         {
             //Debug.Log($"Vamos a configurar el slot {i} con {answersData[i].AnswerName}, longitud de answers = {answers.Count}, longitud de answersData = {answersData.Count}");
             answers[i].GetComponent<AnswerUI>().SetupAnswer(answersData[i]);
 
-            if (answersData[i].IsCorrect) //si es la correcta la guardamos por si no contesta pasar automaticamente cuando se acabe el tiempo
+            if (answersData[i].score > maxScore) //si es la correcta la guardamos por si no contesta pasar automaticamente cuando se acabe el tiempo (nos quedamos con la mas correcta)
             {
                 correctAnswer = answersData[i];
+                maxScore = answersData[i].score;
             }
             //Debug.Log($"El slot {i} tiene la respuesta {answersData[i].AnswerName}");
         }
