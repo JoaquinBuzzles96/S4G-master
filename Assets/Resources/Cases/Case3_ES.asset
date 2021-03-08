@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
-  m_Name: Case3_ES
+  m_Name: CASE3_ES
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 1a8a2fff-e26c-41f1-9dd8-2c6e80c21b5b
@@ -600,17 +600,6 @@ MonoBehaviour:
     audioId: Audio id
     score: 10
     Position: {x: 1965, y: 688}
-  - Guid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
-    AnswerName: A1.3
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1962, y: 915}
   - Guid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
     AnswerName: A1.4
     Feedback: 
@@ -622,94 +611,6 @@ MonoBehaviour:
     audioId: Audio id
     score: -20
     Position: {x: 1962, y: 1139}
-  - Guid: 53838028-70f5-48dc-8753-38f8a7c0c775
-    AnswerName: A2.2
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1913, y: 2030}
-  - Guid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
-    AnswerName: A2.3
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1911, y: 2257}
-  - Guid: c9282cbb-7207-4020-92d4-acc4742ef2f2
-    AnswerName: A2.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1909, y: 2477}
-  - Guid: 9a3b42a1-0449-420e-9810-f8a3863f5286
-    AnswerName: A2.1
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1917, y: 1812}
-  - Guid: edcaefce-5070-4870-bf53-6ebf5ceff51e
-    AnswerName: A4.1
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1904, y: 3324}
-  - Guid: 96c8eaf4-77c2-4a6d-90ea-36c96defc4ff
-    AnswerName: A4.2
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1914, y: 3553}
-  - Guid: c8fdcbcd-30ba-43a4-8190-1fdcaa62bea9
-    AnswerName: A4.3
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 1914, y: 3806}
-  - Guid: 62980a11-00e7-4b8b-aef4-251651a0c0d0
-    AnswerName: A4.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 10
-    Position: {x: 1915, y: 3974}
   - Guid: 2fc296b0-e36f-445f-9cd5-bb2850ef5b34
     AnswerName: A6.3
     Feedback: 
@@ -933,6 +834,105 @@ MonoBehaviour:
     audioId: Feedback3
     score: 0
     Position: {x: 1586, y: 9400}
+  - Guid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
+    AnswerName: A1.3
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1956, y: 927}
+  - Guid: edcaefce-5070-4870-bf53-6ebf5ceff51e
+    AnswerName: A4.1
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: -20
+    Position: {x: 1904, y: 3248}
+  - Guid: 96c8eaf4-77c2-4a6d-90ea-36c96defc4ff
+    AnswerName: A4.2
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: -20
+    Position: {x: 1905, y: 3504}
+  - Guid: c8fdcbcd-30ba-43a4-8190-1fdcaa62bea9
+    AnswerName: A4.3
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 1921, y: 3750}
+  - Guid: 62980a11-00e7-4b8b-aef4-251651a0c0d0
+    AnswerName: A4.4
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 10
+    Position: {x: 1917, y: 3993}
+  - Guid: 9a3b42a1-0449-420e-9810-f8a3863f5286
+    AnswerName: A2.1
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: -20
+    Position: {x: 1917, y: 1700}
+  - Guid: 53838028-70f5-48dc-8753-38f8a7c0c775
+    AnswerName: A2.2
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 10
+    Position: {x: 1914, y: 1971}
+  - Guid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
+    AnswerName: A2.3
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: -20
+    Position: {x: 1907, y: 2240}
+  - Guid: c9282cbb-7207-4020-92d4-acc4742ef2f2
+    AnswerName: A2.4
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 10
+    Position: {x: 1906, y: 2498}
   DialogueNodeData:
   - Guid: 8d624d3d-6290-485e-a072-f08bcbbf3039
     DialogueName: D1.1.2
@@ -1427,15 +1427,6 @@ MonoBehaviour:
     audioId: E1D2
     nodeType: 3
     Position: {x: 2296, y: 403}
-  - Guid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
-    DialogueName: D1.1.3
-    DialogueText: "\xA1Coge la mascarilla inmediatamente! Deber\xEDas llevarla durante
-      la endoscopia, es una parte b\xE1sica  del c\xF3digo de vestimenta."
-    Speaker: Endoscopista 1
-    Mood: Aggressive
-    audioId: E1D4
-    nodeType: 3
-    Position: {x: 2227, y: 915}
   - Guid: 51a416c3-ca43-46af-8200-90d6013c16c4
     DialogueName: D2.3
     DialogueText: "S\xED, los he verificado."
@@ -1554,4 +1545,13 @@ MonoBehaviour:
     audioId: E1D29
     nodeType: 3
     Position: {x: 1974, y: 6655}
+  - Guid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
+    DialogueName: D1.1.3
+    DialogueText: "\xA1Coge la mascarilla inmediatamente! Deber\xEDas llevarla durante
+      la endoscopia, es una parte b\xE1sica  del c\xF3digo de vestimenta."
+    Speaker: Endoscopista 1
+    Mood: Aggressive
+    audioId: E1D4
+    nodeType: 3
+    Position: {x: 2227, y: 915}
   ExposedProperties: []
