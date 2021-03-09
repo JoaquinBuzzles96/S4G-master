@@ -47,8 +47,8 @@ public class QuestionUI : MonoBehaviour
 
     public void SetupQuestion()
     {
-        
-        description.text = questionData.Description;
+
+        description.text = $"(id: {questionData.QuestionName}) {questionData.Description})";
         //Debug.Log($"Setup description: {questionData.Description}");
 
         UI_Manager.Instance.lastTime = Time.time;
