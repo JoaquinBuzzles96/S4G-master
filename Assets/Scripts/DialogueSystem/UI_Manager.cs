@@ -84,6 +84,11 @@ public class UI_Manager : MonoBehaviour
     public TalkAnim enfermeraDeEndoscopia;
     public TalkAnim enfermeraDeAnestesia;
 
+    //Camera positions
+    public GameObject cameraPositionFirstPerson;
+    public GameObject cameraPositionThirdPerson;
+    public GameObject cameraCurrentPos;
+
 
     [HideInInspector]
     public string playereRoute = "";
@@ -390,6 +395,19 @@ public class UI_Manager : MonoBehaviour
 
             //dialogueContainer = Resources.Load($"Cases/{caso}_{LanguageManager.Instance.languageSelected}") as DialogueContainer;
             //Debug.Log($"Cargamos el case Cases/{caso}_{LanguageManager.Instance.languageSelected}");
+            if (LanguageManager.Instance.isThirdPerson)
+            {
+                //ponemos la camara en tercera persona
+                cameraCurrentPos.transform.position = cameraPositionThirdPerson.transform.position;
+                cameraCurrentPos.transform.rotation = cameraPositionThirdPerson.transform.rotation;
+            }
+            else
+            {
+                //ponemos la camara en primera persona
+                cameraCurrentPos.transform.position = cameraPositionFirstPerson.transform.position;
+                cameraCurrentPos.transform.rotation = cameraPositionFirstPerson.transform.rotation;
+            }
+
         }
         else
         {
@@ -444,9 +462,6 @@ public class UI_Manager : MonoBehaviour
             item.gameObject.SetActive(false);
             //Debug.Log($"Se ha añadido el {item.gameObject.name} al diccionario");
         }
-
-        
-
     }
 
     public void SetUpCharacrteres()

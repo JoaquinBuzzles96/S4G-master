@@ -11,6 +11,8 @@ public class LanguageManager : MonoBehaviour
     public string languageSelected = "EN";
     public string caseSelected = "Case3";
 
+    public bool isThirdPerson;
+
     void Awake()
     {
         if (Instance != null)
@@ -30,6 +32,8 @@ public class LanguageManager : MonoBehaviour
         {
             languageSelected = PlayerPrefs.GetString("Language");
         }
+
+        isThirdPerson = false;
     }
     public void SelectLanguage(string languageSiglas)
     {
