@@ -53,9 +53,6 @@ MonoBehaviour:
     PortName: Question 1
     TargetNodeGuid: fce65e63-c5bf-4b82-a779-faa388b5f722
   - BaseNodeGuid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
-    PortName: Dialogue
-    TargetNodeGuid: cda23f46-81b6-4b44-a2c4-516d5eb5d76f
-  - BaseNodeGuid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
     PortName: Question 1
     TargetNodeGuid: c42e9b8c-45af-48a2-8eb8-4e179472349d
   - BaseNodeGuid: fe2bc9bf-6ce5-473d-9ac2-a9f306e23e46
@@ -199,12 +196,6 @@ MonoBehaviour:
   - BaseNodeGuid: 6c41301b-52e4-424e-b639-dd606d05037e
     PortName: Situation
     TargetNodeGuid: 5022c95d-f440-42a8-99a8-69e26840c617
-  - BaseNodeGuid: 4fffad77-81c2-4b84-a6bd-25378fb6445c
-    PortName: Dialogue
-    TargetNodeGuid: 8be65f7e-9aad-4ae0-a162-c83a67593b4a
-  - BaseNodeGuid: 4fffad77-81c2-4b84-a6bd-25378fb6445c
-    PortName: Situation
-    TargetNodeGuid: 5022c95d-f440-42a8-99a8-69e26840c617
   - BaseNodeGuid: 80aa5fc7-1bb0-4ed6-8d31-594d3b3d1e07
     PortName: Dialogue
     TargetNodeGuid: bda6a3dd-a186-4fea-b11d-179ed7b5d569
@@ -271,6 +262,12 @@ MonoBehaviour:
   - BaseNodeGuid: f2a309a3-d899-46c6-85ae-791f9edc1345
     PortName: Situation
     TargetNodeGuid: 9344286c-ac5d-414a-a9bf-6dc306eca2a7
+  - BaseNodeGuid: 4fffad77-81c2-4b84-a6bd-25378fb6445c
+    PortName: Dialogue
+    TargetNodeGuid: 8be65f7e-9aad-4ae0-a162-c83a67593b4a
+  - BaseNodeGuid: 4fffad77-81c2-4b84-a6bd-25378fb6445c
+    PortName: Situation
+    TargetNodeGuid: 5022c95d-f440-42a8-99a8-69e26840c617
   - BaseNodeGuid: e88c4fc7-ce27-4f6e-8724-a6bc440ba4e6
     PortName: Dialogue
     TargetNodeGuid: 5c749cd5-9865-43e9-9bb2-ea97f9f8d4c6
@@ -391,6 +388,12 @@ MonoBehaviour:
   - BaseNodeGuid: d8595655-66fa-4609-83d0-f1e60abfc7d2
     PortName: Dialogue
     TargetNodeGuid: abddef60-edf7-491e-9541-8c34ba2ac291
+  - BaseNodeGuid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
+    PortName: Dialogue
+    TargetNodeGuid: 446d17ed-9032-4f8e-b996-554cb371b238
+  - BaseNodeGuid: 446d17ed-9032-4f8e-b996-554cb371b238
+    PortName: Dialogue
+    TargetNodeGuid: cda23f46-81b6-4b44-a2c4-516d5eb5d76f
   SituationNodeData:
   - Guid: 0402f13f-22f1-4208-ac64-068cd0d956fc
     SituationName: S2
@@ -434,14 +437,6 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 0
     Position: {x: 130, y: 6455}
-  - Guid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
-    SituationName: S1
-    Context: The stage location is the endoscopy theatre. The patient is in position
-      for colonoscopy. The theatre has the common equipment. There are students in.
-    Id: 0
-    audioId: Audio id
-    nodeType: 0
-    Position: {x: 234, y: 148}
   - Guid: fe2bc9bf-6ce5-473d-9ac2-a9f306e23e46
     SituationName: S9
     Context: 
@@ -456,6 +451,15 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 0
     Position: {x: 301, y: 2913}
+  - Guid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
+    SituationName: S1
+    Context: 'All endoscopy team members are dressed according to the endoscopy theatre
+      dress code, in a blue gown. Students are dressed in green gown with surgical
+      masks. '
+    Id: 0
+    audioId: Context
+    nodeType: 0
+    Position: {x: 185, y: 144}
   QuestionNodeData:
   - Guid: 82cc2164-cf96-4458-b497-5ccd7ccada65
     QuestionName: Q2
@@ -766,7 +770,7 @@ MonoBehaviour:
       not explain you anything and I will test you.
     Speaker: Endoscopist1
     Mood: Aggressive
-    audioId: Audio id
+    audioId: D1.1.4
     nodeType: 3
     Position: {x: 1564, y: 1239}
   - Guid: 0cc61106-375e-41f3-9999-cbaa41124163
@@ -774,23 +778,15 @@ MonoBehaviour:
     DialogueText: Excuse us, we discussed the case.
     Speaker: Student
     Mood: Regretful
-    audioId: Audio id
+    audioId: D1.1.1.1
     nodeType: 3
     Position: {x: 1832, y: 421}
-  - Guid: 7ec2fdf2-49b0-479c-885d-5c769149247d
-    DialogueName: D1.1.3
-    DialogueText: Shut up immediately or I'll kick you out of the room.
-    Speaker: Endoscopist1
-    Mood: Aggresive
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1543, y: 977}
   - Guid: 58a69c90-8a68-46d1-8d94-bf00be992304
     DialogueName: D2.1.2
     DialogueText: Please add premedication to the patient according to the plan.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.1.2
     nodeType: 3
     Position: {x: 1552, y: 1964}
   - Guid: 3228a076-a350-4425-866c-696bfad9196a
@@ -799,16 +795,16 @@ MonoBehaviour:
       glad you're finally noticing the patient.
     Speaker: Endoscopist1
     Mood: Ironic
-    audioId: Audio id
+    audioId: D2.1.3
     nodeType: 3
     Position: {x: 1524, y: 2251}
   - Guid: 21a9d97a-3170-4034-aa1a-bc57530c8f45
     DialogueName: D2.1.4.1
-    DialogueText: TextDuring the procedure, it is necessary to maintain adequate
-      analgesia so that the patient does not feel any pain.
+    DialogueText: During the procedure, it is necessary to maintain adequate analgesia
+      so that the patient does not feel any pain.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.1.2.1
     nodeType: 3
     Position: {x: 1728, y: 2498}
   - Guid: bf95baea-0c81-445d-ab24-9b95689bfc99
@@ -816,7 +812,7 @@ MonoBehaviour:
     DialogueText: Stop upsetting the doctor or something will go wrong.
     Speaker: Surgeon1
     Mood: Calm
-    audioId: Audio id
+    audioId: D3.1
     nodeType: 3
     Position: {x: 1013, y: 2897}
   - Guid: 60bebcaf-9c44-4f75-abf3-769532b83cef
@@ -824,7 +820,7 @@ MonoBehaviour:
     DialogueText: Injector.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.1
     nodeType: 3
     Position: {x: 995, y: 3199}
   - Guid: 22cb81a7-4c13-4277-b169-512594a23b13
@@ -832,7 +828,7 @@ MonoBehaviour:
     DialogueText: Submucosal injection.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.2
     nodeType: 3
     Position: {x: 1225, y: 3197}
   - Guid: 933617af-102a-43f6-b20a-9274652bb93a
@@ -841,7 +837,7 @@ MonoBehaviour:
       Quickly!
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.4
     nodeType: 3
     Position: {x: 1662, y: 3197}
   - Guid: 4f5261ba-8af7-4e96-9d6b-313708b39beb
@@ -849,7 +845,7 @@ MonoBehaviour:
     DialogueText: Please pass me these forceps.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.1.1
     nodeType: 3
     Position: {x: 1215, y: 3515}
   - Guid: e000cb1f-7272-4abc-a8d1-43aab1ab731a
@@ -857,7 +853,7 @@ MonoBehaviour:
     DialogueText: Stop talking to each other immediately! I can't hear my own words.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.1.2
     nodeType: 3
     Position: {x: 1221, y: 3794}
   - Guid: bda6a3dd-a186-4fea-b11d-179ed7b5d569
@@ -865,7 +861,7 @@ MonoBehaviour:
     DialogueText: Wait a moment, please.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.1.1.2
     nodeType: 3
     Position: {x: 1181, y: 4063}
   - Guid: f78c82b2-99c6-4f77-af8b-29788d2c0367
@@ -873,7 +869,7 @@ MonoBehaviour:
     DialogueText: Please be quiet now, we will discuss everything in a moment.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.1.4
     nodeType: 3
     Position: {x: 1187, y: 4322}
   - Guid: 70554632-544c-43db-aa5d-f006255872cd
@@ -881,7 +877,7 @@ MonoBehaviour:
     DialogueText: Can you please help her with the Coagraspers?
     Speaker: Endoscopist1
     Mood: Angry
-    audioId: Audio id
+    audioId: D6.1.2
     nodeType: 3
     Position: {x: 1193, y: 5666}
   - Guid: d2106456-6512-4165-9491-17e9893d8ec0
@@ -889,7 +885,7 @@ MonoBehaviour:
     DialogueText: Please help the nurse to find the right graspers.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D6.1.3
     nodeType: 3
     Position: {x: 1200, y: 5961}
   - Guid: 659bbdff-6a55-41c1-99ed-2f1e9ae30d56
@@ -897,7 +893,7 @@ MonoBehaviour:
     DialogueText: "I didn\u2019t want that! What are you passing me?!"
     Speaker: Endoscopist1
     Mood: Angry
-    audioId: Audio id
+    audioId: D6.1.1
     nodeType: 3
     Position: {x: 1760, y: 5388}
   - Guid: 2be07dfc-fd1b-4279-90d3-4af790ef7364
@@ -905,7 +901,7 @@ MonoBehaviour:
     DialogueText: Thanks everybody.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1.2
     nodeType: 3
     Position: {x: 1044, y: 8826}
   - Guid: 6ad7b373-73e0-4a81-a48e-a2ec5be073cf
@@ -915,7 +911,7 @@ MonoBehaviour:
       and we'll discuss everything you saw.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1.1.1
     nodeType: 3
     Position: {x: 1025, y: 9116}
   - Guid: 51fb1025-90ab-47f5-94b0-8af7dea2b8da
@@ -924,7 +920,7 @@ MonoBehaviour:
       next steps with the result of the histological examination.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1.1
     nodeType: 3
     Position: {x: 1036, y: 8532}
   - Guid: 3c52a01f-6a5f-41aa-835a-a785911856aa
@@ -933,7 +929,7 @@ MonoBehaviour:
       to perform, we will discuss them later.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1.1.2
     nodeType: 3
     Position: {x: 1030, y: 9398}
   - Guid: 07a77f5c-ecfa-412e-ad17-72d898e6ef85
@@ -941,7 +937,7 @@ MonoBehaviour:
     DialogueText: Of course, this is not a problem
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.1.1
     nodeType: 3
     Position: {x: 1144, y: 7008}
   - Guid: 14288836-2e68-41fb-95c9-ed9ad95d4d2e
@@ -950,7 +946,7 @@ MonoBehaviour:
       immediately and arrange it differently!
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.1.2
     nodeType: 3
     Position: {x: 1140, y: 7300}
   - Guid: 90ea4d28-80dc-48e6-b1d3-d8e50011686e
@@ -959,7 +955,7 @@ MonoBehaviour:
       with colleague XY.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.1.4
     nodeType: 3
     Position: {x: 1119, y: 7879}
   - Guid: 4446ec08-e9b7-4b38-8114-008828341a15
@@ -967,7 +963,7 @@ MonoBehaviour:
     DialogueText: So, we just finished.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1
     nodeType: 3
     Position: {x: 291, y: 8192}
   - Guid: 8508d279-8133-4394-a347-7b57bec71d07
@@ -975,7 +971,7 @@ MonoBehaviour:
     DialogueText: Am I disturbing you, guys?
     Speaker: Endoscopist1
     Mood: Ironic
-    audioId: Audio id
+    audioId: D1.1.1
     nodeType: 3
     Position: {x: 1574, y: 419}
   - Guid: b3f6ba6b-aef6-486d-afe8-a37e785e44fd
@@ -984,7 +980,7 @@ MonoBehaviour:
       everything again in detail, after the examination.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D1.1.2
     nodeType: 3
     Position: {x: 1550, y: 686}
   - Guid: 4e6cd056-23b8-4f70-85cc-7c8e3093d9d3
@@ -992,7 +988,7 @@ MonoBehaviour:
     DialogueText: Polypectomy snare.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.3
     nodeType: 3
     Position: {x: 1443, y: 3198}
   - Guid: 231c3f1b-0b6a-409f-8c85-172db5e71698
@@ -1000,34 +996,15 @@ MonoBehaviour:
     DialogueText: Stop upsetting the doctor or something will go wrong.
     Speaker: Endoscopy nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D3.1
     nodeType: 3
     Position: {x: 795, y: 4611}
-  - Guid: cda23f46-81b6-4b44-a2c4-516d5eb5d76f
-    DialogueName: D1.1
-    DialogueText: We have just approached ascending colon and identified the large
-      sessile polyp.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1284, y: 147}
-  - Guid: 91ae87f8-3f48-4b43-a4b0-46ef8eb7c0ea
-    DialogueName: D1.2
-    DialogueText: In the middle of the screen there is a typical tubulovillous adenoma.
-      Can everybody see it? It is important now to choose the best treatment option.
-      The lesion is benign and therefore we can choose the endoscopic mucosal resection.
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1838, y: 141}
   - Guid: 494836a7-8614-49b9-b044-22d686877c72
     DialogueName: D8.1.3
     DialogueText: No!
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.1.3
     nodeType: 3
     Position: {x: 1121, y: 7574}
   - Guid: 57ec52d9-fbf5-492d-9674-71c4d5181ebb
@@ -1035,7 +1012,7 @@ MonoBehaviour:
     DialogueText: Excuse us, we discussed the case.
     Speaker: Student
     Mood: Regretful
-    audioId: Audio id
+    audioId: D1.1.1.1
     nodeType: 3
     Position: {x: 2320, y: 676}
   - Guid: 5c749cd5-9865-43e9-9bb2-ea97f9f8d4c6
@@ -1043,7 +1020,7 @@ MonoBehaviour:
     DialogueText: Excuse us, we discussed the case.
     Speaker: Student
     Mood: Regretful
-    audioId: Audio id
+    audioId: D1.1.1.1
     nodeType: 3
     Position: {x: 2301, y: 1235}
   - Guid: bc378e38-87ad-4a68-849b-03dec343a44f
@@ -1051,7 +1028,7 @@ MonoBehaviour:
     DialogueText: Now you have to listen and not discuss!
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.1
     nodeType: 3
     Position: {x: 848, y: 1513}
   - Guid: bb239408-937a-4bcb-82a6-564a8b5d6ec9
@@ -1059,7 +1036,7 @@ MonoBehaviour:
     DialogueText: Patient begins to become restless.
     Speaker: Endoscopy nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.2
     nodeType: 3
     Position: {x: 1154, y: 1507}
   - Guid: 96290377-beeb-4aaa-be6b-f32e9fa7961d
@@ -1067,7 +1044,7 @@ MonoBehaviour:
     DialogueText: Please calm down when I teach students.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.1.1
     nodeType: 3
     Position: {x: 1577, y: 1661}
   - Guid: 594aa9dc-9aef-4ab4-8f27-f9c3dcacc1e7
@@ -1076,7 +1053,7 @@ MonoBehaviour:
       so that the patient does not feel any pain.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.1.2.1
     nodeType: 3
     Position: {x: 1987, y: 1951}
   - Guid: 80cedc7c-3187-49c3-af05-d95e9e656a39
@@ -1084,7 +1061,7 @@ MonoBehaviour:
     DialogueText: OK. Thanks for information
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.1.4
     nodeType: 3
     Position: {x: 1518, y: 2497}
   - Guid: e060e8af-e819-4240-ab2e-422eee5ed867
@@ -1092,7 +1069,7 @@ MonoBehaviour:
     DialogueText: Thank you, Doctor, not yet, please continue.
     Speaker: Patient
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.1.4.3
     nodeType: 3
     Position: {x: 2954, y: 2478}
   - Guid: 42854203-8009-498b-b048-0f716bc5fe0e
@@ -1100,7 +1077,7 @@ MonoBehaviour:
     DialogueText: Do you feel any pain? Do you want to get painkillers?
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.1.4.2
     nodeType: 3
     Position: {x: 2511, y: 2508}
   - Guid: ec0367cf-fca1-4f1c-baa8-4e91be09c587
@@ -1108,7 +1085,7 @@ MonoBehaviour:
     DialogueText: Anything wrong? Can you please explain us what the problem is?
     Speaker: Student
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.5
     nodeType: 3
     Position: {x: 2147, y: 3195}
   - Guid: 89050349-5f0d-4974-8504-60a9b097f572
@@ -1116,7 +1093,7 @@ MonoBehaviour:
     DialogueText: Sorry, is there any problem?
     Speaker: Patient
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.7
     nodeType: 3
     Position: {x: 3157, y: 3181}
   - Guid: 9e97d40a-b0e9-4244-b8b1-095fec3e4453
@@ -1124,7 +1101,7 @@ MonoBehaviour:
     DialogueText: Is it dangerous? How can we stop the bleeding of this intensity?
     Speaker: Student
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.6
     nodeType: 3
     Position: {x: 2650, y: 3199}
   - Guid: 08f529d7-69e0-4169-8a8a-5f07f9c7172e
@@ -1132,7 +1109,7 @@ MonoBehaviour:
     DialogueText: Wait a moment, please.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.1.1.2
     nodeType: 3
     Position: {x: 2094, y: 3516}
   - Guid: 4d958568-66ec-4b2b-a349-a8d24e9f8a03
@@ -1140,7 +1117,7 @@ MonoBehaviour:
     DialogueText: Please take over the communication with students now.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.1.1.3
     nodeType: 3
     Position: {x: 2310, y: 3518}
   - Guid: a3951b9e-90b8-4061-a3d8-fa2ba164f861
@@ -1149,7 +1126,7 @@ MonoBehaviour:
       to bleed intensively and we wil stop it.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.1.1.1
     nodeType: 3
     Position: {x: 1438, y: 3503}
   - Guid: 03d3460a-3e39-426e-be88-25cc434bd435
@@ -1157,7 +1134,7 @@ MonoBehaviour:
     DialogueText: Give me the graspers immediately!!
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.1.2.1
     nodeType: 3
     Position: {x: 1709, y: 3796}
   - Guid: 27fa9393-7793-4511-9f10-fa89f3f6d09e
@@ -1166,7 +1143,7 @@ MonoBehaviour:
       the situation.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.1.3.1
     nodeType: 3
     Position: {x: 1472, y: 4057}
   - Guid: 1ad9ed41-cad6-4314-9399-28d870213a33
@@ -1175,7 +1152,7 @@ MonoBehaviour:
       to bleed intensively and we have to stop it.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.1.1.1
     nodeType: 3
     Position: {x: 2078, y: 4057}
   - Guid: faf97ec3-06bc-43a0-990b-0ddb1795dd7d
@@ -1191,7 +1168,7 @@ MonoBehaviour:
     DialogueText: Please pass me these forceps.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D4.1.1
     nodeType: 3
     Position: {x: 1604, y: 4321}
   - Guid: be2d041a-4f0b-4784-9506-823782f351fd
@@ -1200,24 +1177,16 @@ MonoBehaviour:
       blood and I can't see anything.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D6.1
     nodeType: 3
     Position: {x: 666, y: 5036}
-  - Guid: 3b75368d-110e-434a-90eb-834e42ecb50b
-    DialogueName: D6.2
-    DialogueText: I'm sorry, but I'm afraid it won't turn out well.
-    Speaker: Patient
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 1360, y: 5031}
   - Guid: 6b409dec-965d-44f8-961d-0df48506f439
     DialogueName: D6.3
     DialogueText: You can see that the visibility is not ideal now and we will have
       a big problem with dealing with it.
     Speaker: Endoscopist2
     Mood: Calm
-    audioId: Audio id
+    audioId: D6.3
     nodeType: 3
     Position: {x: 1724, y: 5025}
   - Guid: f5833c3a-6595-4a22-91c1-c836e4751a58
@@ -1225,7 +1194,7 @@ MonoBehaviour:
     DialogueText: Will the surgery be needed?
     Speaker: Student
     Mood: Calm
-    audioId: Audio id
+    audioId: D6.4
     nodeType: 3
     Position: {x: 2474, y: 5020}
   - Guid: 591dcd13-d1d6-40f3-923d-a238a7444777
@@ -1233,7 +1202,7 @@ MonoBehaviour:
     DialogueText: Please silence for now I will explain you everything later.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D6.1.3.1
     nodeType: 3
     Position: {x: 1597, y: 5960}
   - Guid: 3363e736-2d9e-4f02-afb2-fd96f9f4febe
@@ -1241,7 +1210,7 @@ MonoBehaviour:
     DialogueText: Please silence for now I will explain you everything later.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D6.1.3.1
     nodeType: 3
     Position: {x: 1572, y: 6217}
   - Guid: 8be65f7e-9aad-4ae0-a162-c83a67593b4a
@@ -1249,7 +1218,7 @@ MonoBehaviour:
     DialogueText: Please help the nurse to find the right graspers.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D6.1.3
     nodeType: 3
     Position: {x: 1139, y: 6220}
   - Guid: 06c18128-7ac2-4605-a84b-1e2b2e0eb70e
@@ -1257,7 +1226,7 @@ MonoBehaviour:
     DialogueText: Don't worry it's all under control.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D6.1.4.2
     nodeType: 3
     Position: {x: 1987, y: 6222}
   - Guid: d86215b5-365b-4661-9347-829da9031d3f
@@ -1266,7 +1235,7 @@ MonoBehaviour:
       has never happened to me.
     Speaker: Endoscopy nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D7.1
     nodeType: 3
     Position: {x: 485, y: 6450}
   - Guid: e1470763-a0a8-4d92-8a5f-b5e114189291
@@ -1274,7 +1243,7 @@ MonoBehaviour:
     DialogueText: OK, we just stopped the bleeding, now we must finish the mucosectomy.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.1
     nodeType: 3
     Position: {x: 780, y: 6725}
   - Guid: 7c3735ee-de0f-4d66-8b8c-8832b5dfe64f
@@ -1283,7 +1252,7 @@ MonoBehaviour:
       desk who would like to see this endoscopy. Can I let them in?
     Speaker: Secretary
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.2
     nodeType: 3
     Position: {x: 1299, y: 6731}
   - Guid: 1083843d-d886-4d67-aae0-eff3904148ed
@@ -1291,7 +1260,7 @@ MonoBehaviour:
     DialogueText: Please move a bit.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.1.1.1
     nodeType: 3
     Position: {x: 1464, y: 7011}
   - Guid: 34e45f98-b8f2-474f-aa83-17219ca746e3
@@ -1301,7 +1270,7 @@ MonoBehaviour:
       and we'll discuss everything you saw.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D91.1.1
     nodeType: 3
     Position: {x: 1871, y: 8533}
   - Guid: cd10b6af-14c2-45fe-9a3d-456cc9d2201d
@@ -1328,7 +1297,7 @@ MonoBehaviour:
       take it positively, one learns from mistakes.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1.1.3
     nodeType: 3
     Position: {x: 1775, y: 9389}
   - Guid: d8595655-66fa-4609-83d0-f1e60abfc7d2
@@ -1336,7 +1305,7 @@ MonoBehaviour:
     DialogueText: Everything is OK don't worry.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1.4.2
     nodeType: 3
     Position: {x: 2541, y: 9394}
   - Guid: abddef60-edf7-491e-9541-8c34ba2ac291
@@ -1345,7 +1314,51 @@ MonoBehaviour:
       all my steps.
     Speaker: Endoscopist1
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1.4.3
     nodeType: 3
     Position: {x: 2781, y: 9391}
+  - Guid: cda23f46-81b6-4b44-a2c4-516d5eb5d76f
+    DialogueName: D1.1
+    DialogueText: We have just approached ascending colon and identified the large
+      sessile polyp.
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: D1.1
+    nodeType: 3
+    Position: {x: 1648, y: 141}
+  - Guid: 91ae87f8-3f48-4b43-a4b0-46ef8eb7c0ea
+    DialogueName: D1.2
+    DialogueText: In the middle of the screen there is a typical tubulovillous adenoma.
+      Can everybody see it? It is important now to choose the best treatment option.
+      The lesion is benign and therefore we can choose the endoscopic mucosal resection.
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: D1.2
+    nodeType: 3
+    Position: {x: 2202, y: 135}
+  - Guid: 446d17ed-9032-4f8e-b996-554cb371b238
+    DialogueName: Context2
+    DialogueText: All team members are on their places, the Endoscopist 1 performs
+      colonoscopy.
+    Speaker: Narrator
+    Mood: Calm
+    audioId: Context2
+    nodeType: 3
+    Position: {x: 1195, y: -79}
+  - Guid: 7ec2fdf2-49b0-479c-885d-5c769149247d
+    DialogueName: D1.1.3
+    DialogueText: Shut up immediately or I'll kick you out of the room.
+    Speaker: Endoscopist1
+    Mood: Aggresive
+    audioId: D1.1.3
+    nodeType: 3
+    Position: {x: 1543, y: 977}
+  - Guid: 3b75368d-110e-434a-90eb-834e42ecb50b
+    DialogueName: D6.2
+    DialogueText: I'm sorry, but I'm afraid it won't turn out well.
+    Speaker: Patient
+    Mood: Calm
+    audioId: D6.2
+    nodeType: 3
+    Position: {x: 1360, y: 5031}
   ExposedProperties: []
