@@ -144,14 +144,11 @@ namespace Michsky.UI.ModernUIPack
 
                     //TODO:Temporal, solo para testear la 3 persona
                     //Añadimos un item caseX_thirdPerson
-
+                    /*
                     Item aux2 = new Item();
-                    if (aux.itemName == "Case3" || aux.itemName == "CASE3")
-                    {
-                        aux2.itemName = aux.itemName + "_ThirdPerson";
-                        dropdownItems.Add(aux2);
-                    }
-
+                    aux2.itemName = aux.itemName + "_ThirdPerson";
+                    dropdownItems.Add(aux2);
+                    */
                 }
             }
             SetupDropdown();
