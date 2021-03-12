@@ -47,6 +47,8 @@ public class OptionsManager : MonoBehaviour
     public GameObject nameButton;
     public GameObject mailButton;
 
+    public bool isThirdPerson;
+
     void Start()
     {
         originPos = this.gameObject.transform.position;
@@ -54,6 +56,8 @@ public class OptionsManager : MonoBehaviour
 
         secondPos = panelTutorialTransform.transform.position;
         secondRotation = panelTutorialTransform.transform.rotation;
+
+        isThirdPerson = false;
     }
 
     void Update()
@@ -72,6 +76,25 @@ public class OptionsManager : MonoBehaviour
 
         if (selectedCase.text != null && selectedCase.text != "")
         {
+            string[] parts;
+            parts = selectedCase.text.Split("_"[0]);
+
+            for (int i = 0; i < parts.Length; i++)
+            {
+                Debug.Log($"Hemos dividido el caso en {parts[i]}");
+            }
+
+            if (parts.Length > 1 && parts[1] == "ThirdPerson")
+            {
+                Debug.Log($"Es tercera persona {parts[0]}");
+                LanguageManager.Instance.isThirdPerson = true;
+            }
+            else
+            {
+                LanguageManager.Instance.isThirdPerson = false;
+            }
+
+
             switch (selectedCase.text)
             {
                 case "Tutorial":
@@ -90,7 +113,7 @@ public class OptionsManager : MonoBehaviour
                     break;
                     */
                 default:
-                    LanguageManager.Instance.caseSelected = selectedCase.text;
+                    LanguageManager.Instance.caseSelected = parts[0];
                     SceneManager.LoadScene("Scene7");
 
 

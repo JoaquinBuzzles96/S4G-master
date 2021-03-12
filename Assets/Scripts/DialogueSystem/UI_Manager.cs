@@ -89,6 +89,13 @@ public class UI_Manager : MonoBehaviour
     public string playereRoute = "";
     public int totalScore; 
     public float lastTime;
+
+
+    //Camera positions
+    public GameObject cameraPositionFirstPerson;
+    public GameObject cameraPositionThirdPerson;
+    public GameObject cameraCurrentPos;
+
     private void Awake()
     {
         // if the singleton hasn't been initialized yet
@@ -366,7 +373,20 @@ public class UI_Manager : MonoBehaviour
         #endif
 
         */
-        
+
+        if (LanguageManager.Instance.isThirdPerson)
+        {
+            //ponemos la camara en tercera persona
+            cameraCurrentPos.transform.position = cameraPositionThirdPerson.transform.position;
+            cameraCurrentPos.transform.rotation = cameraPositionThirdPerson.transform.rotation;
+        }
+        else
+        {
+            //ponemos la camara en primera persona
+            cameraCurrentPos.transform.position = cameraPositionFirstPerson.transform.position;
+            cameraCurrentPos.transform.rotation = cameraPositionFirstPerson.transform.rotation;
+        }
+
         //#if !UNITY_EDITOR
         if (LanguageManager.Instance != null)
         {

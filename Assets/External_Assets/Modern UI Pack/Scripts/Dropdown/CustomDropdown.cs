@@ -128,13 +128,13 @@ namespace Michsky.UI.ModernUIPack
 
         private void SetUpCases()
         {
-            //TODO:
+
             InitialLoad();
             dropdownItems.Add(new Item() { itemName = "Tutorial"});
             foreach (var item in cases)
             {
                 Item aux = new Item();
-                //TODO: Split and Delete duplicates
+
                 string[] parts;
                 parts = item.name.Split("_"[0]);
                 aux.itemName = parts[0].ToUpper();
@@ -142,13 +142,14 @@ namespace Michsky.UI.ModernUIPack
                 {
                     dropdownItems.Add(aux);
 
-                    //TODO:Temporal, solo para testear la 3 persona
                     //Añadimos un item caseX_thirdPerson
-                    /*
+
                     Item aux2 = new Item();
-                    aux2.itemName = aux.itemName + "_ThirdPerson";
-                    dropdownItems.Add(aux2);
-                    */
+                    if (aux.itemName == "Case3" || aux.itemName == "CASE3")
+                    {
+                        aux2.itemName = aux.itemName + "_ThirdPerson";
+                        dropdownItems.Add(aux2);
+                    }
                 }
             }
             SetupDropdown();
