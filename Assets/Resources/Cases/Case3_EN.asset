@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
-  m_Name: Case3_EN
+  m_Name: CASE3_EN
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 1a8a2fff-e26c-41f1-9dd8-2c6e80c21b5b
@@ -178,60 +178,6 @@ MonoBehaviour:
   - BaseNodeGuid: 6b47c6f9-b29d-487b-a485-e55e97bf488c
     PortName: Answer 4
     TargetNodeGuid: 93c682bd-5144-4c67-bd60-e04b07492871
-  - BaseNodeGuid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
-    PortName: Dialogue
-    TargetNodeGuid: 8d624d3d-6290-485e-a072-f08bcbbf3039
-  - BaseNodeGuid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
-    PortName: Situation
-    TargetNodeGuid: 3883b33a-f144-48c8-b765-639ff03eba8f
-  - BaseNodeGuid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
-    PortName: Dialogue
-    TargetNodeGuid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
-  - BaseNodeGuid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
-    PortName: Situation
-    TargetNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
-  - BaseNodeGuid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
-    PortName: Dialogue
-    TargetNodeGuid: d7a7eaf3-ef7b-456b-92f1-5a627bd946dd
-  - BaseNodeGuid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
-    PortName: Situation
-    TargetNodeGuid: 341bebb1-f453-44c5-8ac1-25c998c5d2f7
-  - BaseNodeGuid: 53838028-70f5-48dc-8753-38f8a7c0c775
-    PortName: Dialogue
-    TargetNodeGuid: 3b3f2fa7-e420-437c-a37c-3c78c2bd93e5
-  - BaseNodeGuid: 53838028-70f5-48dc-8753-38f8a7c0c775
-    PortName: Situation
-    TargetNodeGuid: 3883b33a-f144-48c8-b765-639ff03eba8f
-  - BaseNodeGuid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
-    PortName: Dialogue
-    TargetNodeGuid: c6196b0e-9291-4239-be5e-fcf282dba917
-  - BaseNodeGuid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
-    PortName: Situation
-    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
-  - BaseNodeGuid: c9282cbb-7207-4020-92d4-acc4742ef2f2
-    PortName: Dialogue
-    TargetNodeGuid: 4ac6c4e9-0e3c-4c8d-b83d-85225152db62
-  - BaseNodeGuid: c9282cbb-7207-4020-92d4-acc4742ef2f2
-    PortName: Situation
-    TargetNodeGuid: 3883b33a-f144-48c8-b765-639ff03eba8f
-  - BaseNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
-    PortName: Dialogue
-    TargetNodeGuid: de60cf79-82be-4699-a572-971570090c0f
-  - BaseNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
-    PortName: Situation
-    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
-  - BaseNodeGuid: edcaefce-5070-4870-bf53-6ebf5ceff51e
-    PortName: Dialogue
-    TargetNodeGuid: 605fd93c-b56b-4ec5-92e5-bc76556904a1
-  - BaseNodeGuid: edcaefce-5070-4870-bf53-6ebf5ceff51e
-    PortName: Situation
-    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
-  - BaseNodeGuid: 96c8eaf4-77c2-4a6d-90ea-36c96defc4ff
-    PortName: Dialogue
-    TargetNodeGuid: 8cc26d1d-d069-4335-ae8d-27c6a8b24e48
-  - BaseNodeGuid: 96c8eaf4-77c2-4a6d-90ea-36c96defc4ff
-    PortName: Situation
-    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
   - BaseNodeGuid: c8fdcbcd-30ba-43a4-8190-1fdcaa62bea9
     PortName: Dialogue
     TargetNodeGuid: dc1d5816-25ab-45ed-8146-35e5620ea4d9
@@ -349,6 +295,60 @@ MonoBehaviour:
   - BaseNodeGuid: 7a074eee-6300-4f85-b697-9ac22ddf536a
     PortName: Situation
     TargetNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
+  - BaseNodeGuid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
+    PortName: Dialogue
+    TargetNodeGuid: 8d624d3d-6290-485e-a072-f08bcbbf3039
+  - BaseNodeGuid: 9129368a-1672-4e2c-b6e8-b6e26d6f3a19
+    PortName: Situation
+    TargetNodeGuid: 3883b33a-f144-48c8-b765-639ff03eba8f
+  - BaseNodeGuid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
+    PortName: Dialogue
+    TargetNodeGuid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
+  - BaseNodeGuid: 13d9471a-28ee-42eb-a4b7-1bf8ef444f20
+    PortName: Situation
+    TargetNodeGuid: b74045b5-cb07-4ee3-beb4-fa26ca6f5f3b
+  - BaseNodeGuid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
+    PortName: Dialogue
+    TargetNodeGuid: d7a7eaf3-ef7b-456b-92f1-5a627bd946dd
+  - BaseNodeGuid: 09ae6d9f-6048-4967-a4f8-b71d99cdfd1d
+    PortName: Situation
+    TargetNodeGuid: 341bebb1-f453-44c5-8ac1-25c998c5d2f7
+  - BaseNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
+    PortName: Dialogue
+    TargetNodeGuid: de60cf79-82be-4699-a572-971570090c0f
+  - BaseNodeGuid: 9a3b42a1-0449-420e-9810-f8a3863f5286
+    PortName: Situation
+    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
+  - BaseNodeGuid: 53838028-70f5-48dc-8753-38f8a7c0c775
+    PortName: Dialogue
+    TargetNodeGuid: 3b3f2fa7-e420-437c-a37c-3c78c2bd93e5
+  - BaseNodeGuid: 53838028-70f5-48dc-8753-38f8a7c0c775
+    PortName: Situation
+    TargetNodeGuid: 3883b33a-f144-48c8-b765-639ff03eba8f
+  - BaseNodeGuid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
+    PortName: Dialogue
+    TargetNodeGuid: c6196b0e-9291-4239-be5e-fcf282dba917
+  - BaseNodeGuid: 7aa39792-d4e9-4b40-b513-a3bddd983d4c
+    PortName: Situation
+    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
+  - BaseNodeGuid: c9282cbb-7207-4020-92d4-acc4742ef2f2
+    PortName: Dialogue
+    TargetNodeGuid: 4ac6c4e9-0e3c-4c8d-b83d-85225152db62
+  - BaseNodeGuid: c9282cbb-7207-4020-92d4-acc4742ef2f2
+    PortName: Situation
+    TargetNodeGuid: 3883b33a-f144-48c8-b765-639ff03eba8f
+  - BaseNodeGuid: edcaefce-5070-4870-bf53-6ebf5ceff51e
+    PortName: Dialogue
+    TargetNodeGuid: 605fd93c-b56b-4ec5-92e5-bc76556904a1
+  - BaseNodeGuid: edcaefce-5070-4870-bf53-6ebf5ceff51e
+    PortName: Situation
+    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
+  - BaseNodeGuid: 96c8eaf4-77c2-4a6d-90ea-36c96defc4ff
+    PortName: Dialogue
+    TargetNodeGuid: 8cc26d1d-d069-4335-ae8d-27c6a8b24e48
+  - BaseNodeGuid: 96c8eaf4-77c2-4a6d-90ea-36c96defc4ff
+    PortName: Situation
+    TargetNodeGuid: 2e06cf20-682b-42dc-acbb-1ec178336d90
   - BaseNodeGuid: 2b6edaf5-6a9f-4f8f-b16b-0995d8689036
     PortName: Dialogue
     TargetNodeGuid: 5a1b518d-83fc-4f1f-9c70-0df5e62f37f8
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   - Guid: 605fd93c-b56b-4ec5-92e5-bc76556904a1
     DialogueName: D4.1.1
     DialogueText: 'Leave immediately and send here a nurse experienced with this
-      type of 0ion.  '
+      type of surgery.  '
     Speaker: Endoscopist 1
     Mood: Aggresive
     audioId: E1D14
