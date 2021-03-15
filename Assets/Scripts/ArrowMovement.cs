@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArrowMovement : MonoBehaviour
 {
     float maxMovement = 0.5f;
-    float speed = 0.75f;
+    float speed = 0.5f;
     float originalY;
     void Start()
     {
