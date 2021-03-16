@@ -740,10 +740,11 @@ public class UI_Manager : MonoBehaviour
                     if (Translate(dialoguesData[currentDialogue + j].Speaker) != "Narrator")
                     {
                         //Actualizar Panel
-                        dialoguesUI[i].text = $"(id: {dialoguesData[currentDialogue + j].DialogueName}) {dialoguesData[currentDialogue + j].Speaker} ({dialoguesData[currentDialogue + j].Mood}): {dialoguesData[currentDialogue + j].DialogueText}";
+                        dialoguesUI[i].text = $"(id: {dialoguesData[currentDialogue + j].DialogueName}) {dialoguesData[currentDialogue + j].Speaker}: {dialoguesData[currentDialogue + j].DialogueText}";
+                        //dialoguesUI[i].text = $"(id: {dialoguesData[currentDialogue + j].DialogueName}) {dialoguesData[currentDialogue + j].Speaker} ({dialoguesData[currentDialogue + j].Mood}): {dialoguesData[currentDialogue + j].DialogueText}";
                         //Email
-                        AddTextToRoute($"{dialoguesData[currentDialogue + j].Speaker} ({dialoguesData[currentDialogue + j].Mood}): {dialoguesData[currentDialogue + j].DialogueText}");
-
+                        AddTextToRoute($"{dialoguesData[currentDialogue + j].Speaker}: {dialoguesData[currentDialogue + j].DialogueText}");
+                        //AddTextToRoute($"{dialoguesData[currentDialogue + j].Speaker} ({dialoguesData[currentDialogue + j].Mood}): {dialoguesData[currentDialogue + j].DialogueText}");
                         //Audio
                         yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + j].audioId, dialoguesData[currentDialogue + j].Speaker, dialoguesData[currentDialogue + j].Mood));
 

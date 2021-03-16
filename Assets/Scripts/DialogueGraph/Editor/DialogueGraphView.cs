@@ -231,8 +231,6 @@ public class DialogueGraphView : GraphView
         var generatedPort = GeneratePort(situationNode, Direction.Output);
         generatedPort.portName = "Dialogue";
         generatedPort.portColor = Color.white;
-
-
         situationNode.outputContainer.Add(generatedPort);
 
         //Refresh UI
@@ -243,7 +241,7 @@ public class DialogueGraphView : GraphView
         return situationNode;
     }
 
-    public QuestionNode CreateQuestionNode(string nodeName, Vector2 position, string description = "Question Description", string _guid = "", string _audioID = "Audio id")
+    public QuestionNode CreateQuestionNode(string nodeName, Vector2 position, string description = "Question Description", string _speaker = "Narrator", string _guid = "", string _audioID = "Audio id")
     {
         if (_guid == "" || _guid == null)
         {
@@ -256,7 +254,8 @@ public class DialogueGraphView : GraphView
             Description = description,
             GUID = _guid,
             audioId = _audioID,
-            nodeType = NodeType.Question
+            nodeType = NodeType.Question,
+            speaker = _speaker
         };
 
         //input
@@ -291,6 +290,15 @@ public class DialogueGraphView : GraphView
         textDescription.SetValueWithoutNotify(questionNode.Description);
         questionNode.mainContainer.Add(textDescription);
 
+        //Speaker
+        var speakerField = new TextField(string.Empty);
+        speakerField.RegisterValueChangedCallback(evt =>
+        {
+            questionNode.speaker = evt.newValue;
+        });
+        speakerField.SetValueWithoutNotify(questionNode.speaker);
+        questionNode.mainContainer.Add(speakerField);
+
         //Audio id text
         var questionAudioText = new TextElement();
         questionAudioText.text = "Question audio id";
@@ -304,6 +312,14 @@ public class DialogueGraphView : GraphView
         });
         audioID.SetValueWithoutNotify(questionNode.audioId);
         questionNode.mainContainer.Add(audioID);
+
+        /*
+        //Dialogue Output
+        var generatedPort = GeneratePort(questionNode, Direction.Output);
+        generatedPort.portName = "Dialogue";
+        generatedPort.portColor = Color.white;
+        questionNode.outputContainer.Add(generatedPort);
+        */
 
         //Refresh UI
         questionNode.RefreshExpandedState();

@@ -48,7 +48,16 @@ public class QuestionUI : MonoBehaviour
     public void SetupQuestion()
     {
 
-        description.text = $"(id: {questionData.QuestionName}) {questionData.Description})";
+        string speaker = questionData.speaker;
+        if (speaker == " " || speaker == "Narrador" || speaker == "" || speaker == "Narrator" || string.IsNullOrEmpty(speaker))
+        {
+            description.text = $"(id: {questionData.QuestionName}) {questionData.Description}";
+        }
+        else
+        {
+            description.text = $"(id: {questionData.QuestionName}) {questionData.speaker}: {questionData.Description}";
+        }
+
         //Debug.Log($"Setup description: {questionData.Description}");
 
         UI_Manager.Instance.lastTime = Time.time;

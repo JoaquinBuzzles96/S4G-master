@@ -102,6 +102,7 @@ public class GraphSaveUtility
                         QuestionName = nodeQuestion.nodeName,
                         Description = nodeQuestion.Description,
                         audioId = nodeQuestion.audioId,
+                        speaker = nodeQuestion.speaker,
                         nodeType = nodeQuestion.nodeType,
                         Position = nodeQuestion.GetPosition().position
                     });

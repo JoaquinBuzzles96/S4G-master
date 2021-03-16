@@ -10,6 +10,7 @@ public class QuestionNodeData
     public string QuestionName;
     public string Description;
     public string audioId;
+    public string speaker;
     public NodeType nodeType;
     public Vector2 Position;
 }
