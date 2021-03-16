@@ -204,7 +204,7 @@ public class GraphSaveUtility
 
         foreach (var nodeData in _containerCache.QuestionNodeData)
         {
-            var tempNode = _targetGraphView.CreateQuestionNode(nodeData.QuestionName, Vector2.zero, nodeData.Description, nodeData.Guid, nodeData.audioId);
+            var tempNode = _targetGraphView.CreateQuestionNode(nodeData.QuestionName, Vector2.zero, nodeData.Description, nodeData.speaker, nodeData.Guid, nodeData.audioId);
             _targetGraphView.AddElement(tempNode);
 
             var nodePorts = _containerCache.NodeLinks.Where(x => x.BaseNodeGuid == nodeData.Guid).ToList();

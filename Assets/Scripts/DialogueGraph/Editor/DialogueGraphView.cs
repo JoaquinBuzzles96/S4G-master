@@ -254,8 +254,8 @@ public class DialogueGraphView : GraphView
             Description = description,
             GUID = _guid,
             audioId = _audioID,
-            nodeType = NodeType.Question,
-            speaker = _speaker
+            speaker = _speaker,
+            nodeType = NodeType.Question
         };
 
         //input
@@ -290,6 +290,7 @@ public class DialogueGraphView : GraphView
         textDescription.SetValueWithoutNotify(questionNode.Description);
         questionNode.mainContainer.Add(textDescription);
 
+        
         //Speaker
         var speakerField = new TextField(string.Empty);
         speakerField.RegisterValueChangedCallback(evt =>
@@ -299,6 +300,7 @@ public class DialogueGraphView : GraphView
         speakerField.SetValueWithoutNotify(questionNode.speaker);
         questionNode.mainContainer.Add(speakerField);
 
+        
         //Audio id text
         var questionAudioText = new TextElement();
         questionAudioText.text = "Question audio id";
