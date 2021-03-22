@@ -174,6 +174,10 @@ public class SpecialCases : MonoBehaviour
         {
 
         }
+        else if (UI_Manager.Instance.currentCase== Cases.Case5)
+        {
+
+        }
     }
 
     IEnumerator CaseD11()
