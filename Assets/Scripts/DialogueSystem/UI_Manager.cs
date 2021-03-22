@@ -7,7 +7,7 @@ using System.IO;
 
 public enum Status {Situation, Answer };
 
-public enum Cases { DefaultCase, Case3, Case9 };
+public enum Cases { DefaultCase, Case3, Case9, Case5 };
 
 public class UI_Manager : MonoBehaviour
 {
@@ -403,6 +403,9 @@ public class UI_Manager : MonoBehaviour
                 case "CASE9":
                     currentCase = Cases.Case9;
                     break;
+                case "CASE5":
+                    currentCase = Cases.Case5;
+                    break;
                 default:
                     currentCase = Cases.DefaultCase; //sin nada de animaciones especificas
                     break;
@@ -494,6 +497,17 @@ public class UI_Manager : MonoBehaviour
             dictionaryCharacteres["EndoscopyNurse"].gameObject.SetActive(true);
             dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
             dictionaryCharacteres["Student"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
+        }
+        else if (currentCase == Cases.Case5)
+        {
+            dictionaryCharacteres["Head surgeon"].gameObject.SetActive(true);
+            dictionaryCharacteres["Assistant surgeon"].gameObject.SetActive(true); // Hara de equivalente a surgeon1
+            dictionaryCharacteres["Circulating Nurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["Instrumentalist Nurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
+            dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
+            dictionaryCharacteres["AnaesthesiaNurse"].gameObject.SetActive(true); // De estos igual hay que poner varios
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
     }
