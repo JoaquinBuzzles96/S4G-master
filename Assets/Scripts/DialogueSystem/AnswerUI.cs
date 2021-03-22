@@ -50,7 +50,7 @@ public class AnswerUI : MonoBehaviour
 
     public void OnSelectAnswer()
     {
-
+        QuestionUI.Instance.arrowBlink.ResetValues();
         UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + "\n" + "Time to answer: " + Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) + " seconds.\n");
         UI_Manager.Instance.totalScore += answerData.score;
         //UI_Manager.Instance.screen2.GetComponent<QuestionUI>().answered = true;

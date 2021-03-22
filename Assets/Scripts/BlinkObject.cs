@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class BlinkObject : MonoBehaviour
 {
     public bool isActive;
-    Color originalColor;
+    public Color32 originalColor = new Color32(79, 143, 212, 217);
     public float speed;
     public float originalSpeed = 3.0f;
 
@@ -20,7 +20,8 @@ public class BlinkObject : MonoBehaviour
     void Start()
     {
         isActive = false;
-        originalColor = arrow.gameObject.GetComponent<Renderer>().material.color;
+        //originalColor = arrow.gameObject.GetComponent<Renderer>().material.GetColor("_BaseColor");
+        
         speed = originalSpeed;
     }
 
@@ -30,7 +31,7 @@ public class BlinkObject : MonoBehaviour
         if (isActive)
         {
             // Arrow
-            arrow.gameObject.GetComponent<Renderer>().material.color = Color.Lerp(originalColor, Color.red, Mathf.PingPong(Time.time * speed, 1.0f));
+            arrow.gameObject.GetComponent<Renderer>().material.color = Color32.Lerp(originalColor, Color.red, Mathf.PingPong(Time.time * speed, 1.0f));
             //Text
             timerText.color = Color.Lerp(Color.white, Color.red, Mathf.PingPong(Time.time * speed, 1.0f));
             //Bar
@@ -45,5 +46,10 @@ public class BlinkObject : MonoBehaviour
         isActive = false;
         countDownBar.color = Color.white;
         timerText.color = Color.white;
+    }
+
+    public void ResetArrowColor()
+    {
+        arrow.gameObject.GetComponent<Renderer>().material.color = originalColor;
     }
 }

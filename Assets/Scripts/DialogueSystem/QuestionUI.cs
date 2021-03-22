@@ -6,6 +6,28 @@ using TMPro;
 
 public class QuestionUI : MonoBehaviour
 {
+    private static QuestionUI instance = null;
+
+    // Game Instance Singleton
+    public static QuestionUI Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        // if the singleton hasn't been initialized yet
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        instance = this;
+        //DontDestroyOnLoad(this.gameObject);
+    }
+
     public TextMeshProUGUI description;
     public TextMeshProUGUI timerText;
     public bool answered = false;
@@ -119,6 +141,10 @@ public class QuestionUI : MonoBehaviour
         timerText.text = $"{timer}";
 
         bool penalty1 = true;
+        arrowBlink.ResetValues();
+        //Para la siguiente
+        answered = false;
+
 
         //esperamos a que acabe el audio antes de empezar el timer:
         yield return new WaitForSeconds(UI_Manager.Instance.audioSource.clip.length + 1f);
