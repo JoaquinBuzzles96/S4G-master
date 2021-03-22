@@ -334,15 +334,6 @@ MonoBehaviour:
   - BaseNodeGuid: f40a0d1e-401b-4345-a545-6f1a22ce5428
     PortName: Answer 4
     TargetNodeGuid: 5507c308-a181-48fa-9289-7c9610ecc873
-  - BaseNodeGuid: d215d87d-efe1-44fd-9094-de36ecad32f1
-    PortName: Answer 1
-    TargetNodeGuid: d5c0d0d4-9cdb-419b-b71b-c238da7a00a0
-  - BaseNodeGuid: d215d87d-efe1-44fd-9094-de36ecad32f1
-    PortName: Answer 2
-    TargetNodeGuid: 41678863-dfd6-4446-a288-825403827520
-  - BaseNodeGuid: d215d87d-efe1-44fd-9094-de36ecad32f1
-    PortName: Answer 3
-    TargetNodeGuid: a36a072e-5d8a-48df-b710-c418a9d54a0d
   - BaseNodeGuid: a3ead894-6c74-4313-a2f8-ad46d5103905
     PortName: Answer 1
     TargetNodeGuid: 6fc30c25-bc16-4c4b-8d42-a931fb20eaf5
@@ -481,6 +472,18 @@ MonoBehaviour:
   - BaseNodeGuid: 6b0626fd-0f51-4dc7-9013-9df5c280928e
     PortName: Answer 4
     TargetNodeGuid: 1944d4fe-0b23-43f2-a199-9114ebb3519e
+  - BaseNodeGuid: d215d87d-efe1-44fd-9094-de36ecad32f1
+    PortName: Answer 1
+    TargetNodeGuid: d5c0d0d4-9cdb-419b-b71b-c238da7a00a0
+  - BaseNodeGuid: d215d87d-efe1-44fd-9094-de36ecad32f1
+    PortName: Answer 2
+    TargetNodeGuid: 41678863-dfd6-4446-a288-825403827520
+  - BaseNodeGuid: d215d87d-efe1-44fd-9094-de36ecad32f1
+    PortName: Answer 3
+    TargetNodeGuid: a36a072e-5d8a-48df-b710-c418a9d54a0d
+  - BaseNodeGuid: d215d87d-efe1-44fd-9094-de36ecad32f1
+    PortName: Answer 4
+    TargetNodeGuid: 4c678f63-72d6-4050-b9a4-45b825feef3d
   - BaseNodeGuid: df970370-c4b1-4bab-94e2-cec698d12a83
     PortName: Dialogue
     TargetNodeGuid: 41bd4f28-b318-4b57-bb17-c538ae30cb9c
@@ -988,12 +991,6 @@ MonoBehaviour:
   - BaseNodeGuid: a36a072e-5d8a-48df-b710-c418a9d54a0d
     PortName: Situation
     TargetNodeGuid: 3dd7506f-94e1-493f-8354-62dc27564e92
-  - BaseNodeGuid: 4c678f63-72d6-4050-b9a4-45b825feef3d
-    PortName: Dialogue
-    TargetNodeGuid: 33979fd1-9bd4-4d8b-8809-0460a68c19c5
-  - BaseNodeGuid: 4c678f63-72d6-4050-b9a4-45b825feef3d
-    PortName: Situation
-    TargetNodeGuid: 3dd7506f-94e1-493f-8354-62dc27564e92
   - BaseNodeGuid: 89cbdc44-2ccc-40b9-9df4-dd1eafddb697
     PortName: Dialogue
     TargetNodeGuid: 378cebab-9d00-4ec4-a923-4e04b46b2af4
@@ -1046,6 +1043,12 @@ MonoBehaviour:
     PortName: Dialogue
     TargetNodeGuid: e35a868e-9915-4363-abde-e0f51db1d9f1
   - BaseNodeGuid: 573c2bc4-60f2-462e-b63c-841e6b0daa3d
+    PortName: Situation
+    TargetNodeGuid: 44cc4391-32e6-43c5-ba64-ab32784f0c28
+  - BaseNodeGuid: ec046e7f-dd70-4ae5-8323-8a0ecf538b2a
+    PortName: Dialogue
+    TargetNodeGuid: cd79b58a-56b0-413f-8203-5fc3301ae9e4
+  - BaseNodeGuid: ec046e7f-dd70-4ae5-8323-8a0ecf538b2a
     PortName: Situation
     TargetNodeGuid: 44cc4391-32e6-43c5-ba64-ab32784f0c28
   - BaseNodeGuid: 5f2b00ab-565d-41a7-b8ef-2aba2f5e3f05
@@ -1111,6 +1114,12 @@ MonoBehaviour:
   - BaseNodeGuid: 8a9b1aa3-1266-40e2-afee-846d3822f424
     PortName: Dialogue
     TargetNodeGuid: 71cda9c8-a385-4afb-928f-daa9fe332a52
+  - BaseNodeGuid: 4c678f63-72d6-4050-b9a4-45b825feef3d
+    PortName: Dialogue
+    TargetNodeGuid: 33979fd1-9bd4-4d8b-8809-0460a68c19c5
+  - BaseNodeGuid: 4c678f63-72d6-4050-b9a4-45b825feef3d
+    PortName: Situation
+    TargetNodeGuid: 3dd7506f-94e1-493f-8354-62dc27564e92
   - BaseNodeGuid: 2e68eebe-664c-4e89-bbcd-42049931a5d2
     PortName: Dialogue
     TargetNodeGuid: 2dc43f10-d861-4fae-9467-266ff8deda86
@@ -1216,9 +1225,6 @@ MonoBehaviour:
   - BaseNodeGuid: ed107580-caa7-4b36-ae3a-603c34013f4a
     PortName: Dialogue
     TargetNodeGuid: dcba35a1-ea2d-4677-a388-0d016742128e
-  - BaseNodeGuid: cd79b58a-56b0-413f-8203-5fc3301ae9e4
-    PortName: Dialogue
-    TargetNodeGuid: 0115223e-1490-4128-9092-b45f15760d74
   - BaseNodeGuid: 2a1fbd36-41c4-4847-8b80-b1585eb9b182
     PortName: Dialogue
     TargetNodeGuid: 416cd1b3-897d-496d-a635-a912069e4648
@@ -1291,15 +1297,9 @@ MonoBehaviour:
   - BaseNodeGuid: 1f91a2f4-32ad-42c5-a916-b69787229732
     PortName: Dialogue
     TargetNodeGuid: 501fa176-2f77-4a51-83fc-8f6156ca4ff7
-  - BaseNodeGuid: ec046e7f-dd70-4ae5-8323-8a0ecf538b2a
+  - BaseNodeGuid: cd79b58a-56b0-413f-8203-5fc3301ae9e4
     PortName: Dialogue
-    TargetNodeGuid: cd79b58a-56b0-413f-8203-5fc3301ae9e4
-  - BaseNodeGuid: ec046e7f-dd70-4ae5-8323-8a0ecf538b2a
-    PortName: Situation
-    TargetNodeGuid: 44cc4391-32e6-43c5-ba64-ab32784f0c28
-  - BaseNodeGuid: d215d87d-efe1-44fd-9094-de36ecad32f1
-    PortName: Answer 4
-    TargetNodeGuid: 4c678f63-72d6-4050-b9a4-45b825feef3d
+    TargetNodeGuid: 0115223e-1490-4128-9092-b45f15760d74
   SituationNodeData:
   - Guid: abd5bafc-1545-4e55-8b5e-cc58d15acc82
     SituationName: S2
@@ -1309,7 +1309,7 @@ MonoBehaviour:
     nodeType: 0
     Position: {x: 1605, y: 1196}
   - Guid: c1a76ec5-eafc-4a32-b923-1e0aa2ff90eb
-    SituationName: D1
+    SituationName: S1
     Context: A 46-years-old male patient is scheduled for kidney transplantation
       due to a severe polycystic kidney disease. The surgical team consists of an
       urologist and a surgeon experienced in transplantation as an assistant, an
