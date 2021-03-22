@@ -105,6 +105,10 @@ public class OptionsManager : MonoBehaviour
                     TutorialPanel.SetActive(true);
                     //SceneManager.LoadScene("Tutorial");
                     break;
+                case "CASE5":
+                    LanguageManager.Instance.caseSelected = parts[0];
+                    SceneManager.LoadScene("Scene5");
+                    break;
                     /*
                 case "CASE3_ThirdPerson":
                     selectedCase.text = "CASE3";

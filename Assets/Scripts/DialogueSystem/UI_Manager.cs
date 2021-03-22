@@ -559,10 +559,19 @@ public class UI_Manager : MonoBehaviour
 
     public void SetUpContext(SituationNodeData _situation)
     {
+        Debug.Log($"Vamos a cargar la situacion {_situation}");
+
         situation = _situation;
 
-        contextDescription.text = situation.Context;
-
+        if (situation.Context != null)
+        {
+            contextDescription.text = situation.Context;
+        }
+        else
+        {
+            contextDescription.text = "No se ha encontrado el contexto";
+        }
+        
         nextButtonContext.SetActive(false);
         StartCoroutine(PlaySimpleDialogue(situation.audioId)); //TESTING: , nextButtonContext
 
