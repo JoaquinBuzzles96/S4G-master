@@ -492,6 +492,7 @@ public class UI_Manager : MonoBehaviour
             dictionaryCharacteres["Endoscopist1"].gameObject.SetActive(true);
             dictionaryCharacteres["Endoscopist2"].gameObject.SetActive(true); // Hara de equivalente a surgeon1
             dictionaryCharacteres["EndoscopyNurse"].gameObject.SetActive(true);
+            Case3Resources.Instance.mask.SetActive(true);
             dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
             dictionaryCharacteres["Student"].gameObject.SetActive(true); // De estos igual hay que poner varios
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
