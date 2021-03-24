@@ -7,7 +7,7 @@ using System.IO;
 
 public enum Status {Situation, Answer };
 
-public enum Cases { DefaultCase, Case3, Case9 };
+public enum Cases { DefaultCase, Case3, Case9, Case5 };
 
 public class UI_Manager : MonoBehaviour
 {
@@ -72,6 +72,8 @@ public class UI_Manager : MonoBehaviour
     int lastQuestion;
     int currentQuestion;
 
+    List<string> playedSituationsList;
+
     //RandomAnims
     float animTimer = 2.0f;
     float timer = 0f;
@@ -108,6 +110,7 @@ public class UI_Manager : MonoBehaviour
     }
     void Start()
     {
+        playedSituationsList = new List<string>();
         GetDialogueContainerLanguage();
         SetUpCharacrteres();
         lastQuestion = -1;
@@ -209,6 +212,7 @@ public class UI_Manager : MonoBehaviour
         screen1.SetActive(true);
 
     }
+
     public void ToScreen2(GameObject originScreen) //Dialogue situation
     {
         SetUpScreen2(); //Actualizamos los dialogos de la pantalla
@@ -403,6 +407,9 @@ public class UI_Manager : MonoBehaviour
                 case "CASE9":
                     currentCase = Cases.Case9;
                     break;
+                case "CASE5":
+                    currentCase = Cases.Case5;
+                    break;
                 default:
                     currentCase = Cases.DefaultCase; //sin nada de animaciones especificas
                     break;
@@ -495,6 +502,20 @@ public class UI_Manager : MonoBehaviour
             Case3Resources.Instance.mask.SetActive(true);
             dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
             dictionaryCharacteres["Student"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            dictionaryCharacteres["Student2"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            dictionaryCharacteres["Student3"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            dictionaryCharacteres["Student4"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
+        }
+        else if (currentCase == Cases.Case5)
+        {
+            dictionaryCharacteres["Head surgeon"].gameObject.SetActive(true);
+            dictionaryCharacteres["Assistant surgeon"].gameObject.SetActive(true); // Hara de equivalente a surgeon1
+            dictionaryCharacteres["Circulating Nurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["Instrumentalist Nurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
+            dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
+            dictionaryCharacteres["AnaesthesiaNurse"].gameObject.SetActive(true); // De estos igual hay que poner varios
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
     }
@@ -532,24 +553,35 @@ public class UI_Manager : MonoBehaviour
                 //Comprobamos si alguna enfermera ha salido corriendo :')
                 SpecialCases.Instance.CheckSituation(situation.SituationName);
 
-                if (isValid(situation.Context))
-                {
-                    ToScreen1(situation, originScreen);
-                }
-                else
-                {
-                    ToScreen2(originScreen);
-                }
+            //Aqui comprobar si la situation ya se ha puesto antes y si el contexto es valido
+            if (isValid(situation.Context) && !IsSituationAlreadyPlayed(situation.SituationName))
+            {
+                ToScreen1(situation, originScreen);
+            }
+            else
+            {
+                ToScreen2(originScreen);
+            }
             }
        //}
     }
 
     public void SetUpContext(SituationNodeData _situation)
     {
+        Debug.Log($"Vamos a cargar la situacion {_situation}");
+
         situation = _situation;
 
-        contextDescription.text = situation.Context;
-
+        if (situation.Context != null)
+        {
+            contextDescription.text = situation.Context;
+            playedSituationsList.Add(situation.SituationName);
+        }
+        else
+        {
+            contextDescription.text = "No se ha encontrado el contexto";
+        }
+        
         nextButtonContext.SetActive(false);
         StartCoroutine(PlaySimpleDialogue(situation.audioId)); //TESTING: , nextButtonContext
 
@@ -943,6 +975,7 @@ public class UI_Manager : MonoBehaviour
 
     public void Exit()
     {
+        playedSituationsList.Clear();
         ExitGame.Instance.ExitGameMethod();
     }
 
@@ -954,6 +987,21 @@ public class UI_Manager : MonoBehaviour
     public void Testing()
     {
         SendMail.Instance.SendEmail();
+    }
+
+    public bool IsSituationAlreadyPlayed(string situation)
+    {
+        bool found = false;
+
+        for (int i = 0; i < playedSituationsList.Count && !found; i++)
+        {
+            if (playedSituationsList[i] == situation)
+            {
+                found = true;
+            }
+        }
+
+        return found;
     }
 
 }

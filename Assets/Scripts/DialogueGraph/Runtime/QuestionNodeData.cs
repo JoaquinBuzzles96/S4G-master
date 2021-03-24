@@ -13,4 +13,5 @@ public class QuestionNodeData
     public string speaker;
     public NodeType nodeType;
     public Vector2 Position;
+
 }
