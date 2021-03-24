@@ -72,6 +72,8 @@ public class UI_Manager : MonoBehaviour
     int lastQuestion;
     int currentQuestion;
 
+    List<string> playedSituationsList;
+
     //RandomAnims
     float animTimer = 2.0f;
     float timer = 0f;
@@ -108,6 +110,7 @@ public class UI_Manager : MonoBehaviour
     }
     void Start()
     {
+        playedSituationsList = new List<string>();
         GetDialogueContainerLanguage();
         SetUpCharacrteres();
         lastQuestion = -1;
@@ -209,6 +212,7 @@ public class UI_Manager : MonoBehaviour
         screen1.SetActive(true);
 
     }
+
     public void ToScreen2(GameObject originScreen) //Dialogue situation
     {
         SetUpScreen2(); //Actualizamos los dialogos de la pantalla
@@ -549,14 +553,15 @@ public class UI_Manager : MonoBehaviour
                 //Comprobamos si alguna enfermera ha salido corriendo :')
                 SpecialCases.Instance.CheckSituation(situation.SituationName);
 
-                if (isValid(situation.Context))
-                {
-                    ToScreen1(situation, originScreen);
-                }
-                else
-                {
-                    ToScreen2(originScreen);
-                }
+            //Aqui comprobar si la situation ya se ha puesto antes y si el contexto es valido
+            if (isValid(situation.Context) && !IsSituationAlreadyPlayed(situation.SituationName))
+            {
+                ToScreen1(situation, originScreen);
+            }
+            else
+            {
+                ToScreen2(originScreen);
+            }
             }
        //}
     }
@@ -570,6 +575,7 @@ public class UI_Manager : MonoBehaviour
         if (situation.Context != null)
         {
             contextDescription.text = situation.Context;
+            playedSituationsList.Add(situation.SituationName);
         }
         else
         {
@@ -969,6 +975,7 @@ public class UI_Manager : MonoBehaviour
 
     public void Exit()
     {
+        playedSituationsList.Clear();
         ExitGame.Instance.ExitGameMethod();
     }
 
@@ -980,6 +987,21 @@ public class UI_Manager : MonoBehaviour
     public void Testing()
     {
         SendMail.Instance.SendEmail();
+    }
+
+    public bool IsSituationAlreadyPlayed(string situation)
+    {
+        bool found = false;
+
+        for (int i = 0; i < playedSituationsList.Count && !found; i++)
+        {
+            if (playedSituationsList[i] == situation)
+            {
+                found = true;
+            }
+        }
+
+        return found;
     }
 
 }
