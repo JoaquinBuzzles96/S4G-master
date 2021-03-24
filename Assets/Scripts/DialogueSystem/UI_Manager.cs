@@ -498,6 +498,9 @@ public class UI_Manager : MonoBehaviour
             Case3Resources.Instance.mask.SetActive(true);
             dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
             dictionaryCharacteres["Student"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            dictionaryCharacteres["Student2"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            dictionaryCharacteres["Student3"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            dictionaryCharacteres["Student4"].gameObject.SetActive(true); // De estos igual hay que poner varios
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
         else if (currentCase == Cases.Case5)
