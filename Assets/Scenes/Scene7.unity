@@ -24808,7 +24808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1971272839
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28546,6 +28546,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Endoscopist2
       objectReference: {fileID: 0}
+    - target: {fileID: 5217734176298632194, guid: 5e9e3cb92e303fd4493f760eb88e423d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.406
+      objectReference: {fileID: 0}
     - target: {fileID: 5448960653500674490, guid: 5e9e3cb92e303fd4493f760eb88e423d,
         type: 3}
       propertyPath: m_Camera
@@ -30392,7 +30397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1000536166234086856
 MonoBehaviour:
   m_ObjectHideFlags: 0

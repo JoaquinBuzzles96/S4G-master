@@ -509,13 +509,13 @@ public class UI_Manager : MonoBehaviour
         }
         else if (currentCase == Cases.Case5)
         {
-            dictionaryCharacteres["Head surgeon"].gameObject.SetActive(true);
-            dictionaryCharacteres["Assistant surgeon"].gameObject.SetActive(true); // Hara de equivalente a surgeon1
-            dictionaryCharacteres["Circulating Nurse"].gameObject.SetActive(true);
-            dictionaryCharacteres["Instrumentalist Nurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["HeadSurgeon"].gameObject.SetActive(true);
+            dictionaryCharacteres["AssistantSurgeon"].gameObject.SetActive(true); // Hara de equivalente a surgeon1
+            dictionaryCharacteres["CirculatingNurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["AnaesthesiaNurse"].gameObject.SetActive(true);
             dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
             dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
-            dictionaryCharacteres["AnaesthesiaNurse"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            dictionaryCharacteres["InstrumentalistNurse"].gameObject.SetActive(true); // De estos igual hay que poner varios
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
     }
