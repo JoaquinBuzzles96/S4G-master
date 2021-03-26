@@ -15916,7 +15916,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219126084}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -28546,10 +28546,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Endoscopist2
       objectReference: {fileID: 0}
+    - target: {fileID: 2398710081837751015, guid: 5e9e3cb92e303fd4493f760eb88e423d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2398710081837751015, guid: 5e9e3cb92e303fd4493f760eb88e423d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5217734176298632194, guid: 5e9e3cb92e303fd4493f760eb88e423d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.406
+      value: 0.196
+      objectReference: {fileID: 0}
+    - target: {fileID: 5217734176298632194, guid: 5e9e3cb92e303fd4493f760eb88e423d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.785
       objectReference: {fileID: 0}
     - target: {fileID: 5448960653500674490, guid: 5e9e3cb92e303fd4493f760eb88e423d,
         type: 3}
