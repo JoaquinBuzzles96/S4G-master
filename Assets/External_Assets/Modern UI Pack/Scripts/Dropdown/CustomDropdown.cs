@@ -96,10 +96,11 @@ namespace Michsky.UI.ModernUIPack
                 }
                 else //si esta vacio suponemos que es el dropdown de cases
                 {
+                    //Debug.Log($"Vamos a hacer el setup de los Cases");
                     SetUpCases();
                 }
-                    
 
+                Debug.Log($"No ha habido errores");
                 currentListParent = transform.parent;
             }
 
@@ -152,6 +153,7 @@ namespace Michsky.UI.ModernUIPack
                     }
                 }
             }
+            //Debug.Log($"Ahora vamos a hacer el setup del dropdown");
             SetupDropdown();
         }
 
@@ -219,6 +221,7 @@ namespace Michsky.UI.ModernUIPack
                 if (invokeAtStart == true)
                     dropdownItems[i].OnItemSelection.Invoke();
             }
+
 
             selectedText.text = dropdownItems[selectedItemIndex].itemName;
             selectedImage.sprite = dropdownItems[selectedItemIndex].itemIcon;
