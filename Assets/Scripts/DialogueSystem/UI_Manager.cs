@@ -378,18 +378,7 @@ public class UI_Manager : MonoBehaviour
 
         */
 
-        if (LanguageManager.Instance.isThirdPerson)
-        {
-            //ponemos la camara en tercera persona
-            cameraCurrentPos.transform.position = cameraPositionThirdPerson.transform.position;
-            cameraCurrentPos.transform.rotation = cameraPositionThirdPerson.transform.rotation;
-        }
-        else
-        {
-            //ponemos la camara en primera persona
-            cameraCurrentPos.transform.position = cameraPositionFirstPerson.transform.position;
-            cameraCurrentPos.transform.rotation = cameraPositionFirstPerson.transform.rotation;
-        }
+
 
         //#if !UNITY_EDITOR
         if (LanguageManager.Instance != null)
@@ -425,6 +414,25 @@ public class UI_Manager : MonoBehaviour
             //dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
         }
 
+        if (LanguageManager.Instance.isThirdPerson || currentCase == Cases.Case5)
+        {
+            //ponemos la camara en tercera persona
+            cameraCurrentPos.transform.position = cameraPositionThirdPerson.transform.position;
+            cameraCurrentPos.transform.rotation = cameraPositionThirdPerson.transform.rotation;
+
+            //Si estamos en tercera persona activamos el face to player del panel de respuestas:
+            //this.gameObject.GetComponent<FrontPlayer>().enabled = true;
+
+        }
+        else
+        {
+            //ponemos la camara en primera persona
+            cameraCurrentPos.transform.position = cameraPositionFirstPerson.transform.position;
+            cameraCurrentPos.transform.rotation = cameraPositionFirstPerson.transform.rotation;
+            //this.gameObject.GetComponent<FrontPlayer>().enabled = false;
+        }
+
+
         if (dialogueContainer == null)
         {
             path = Application.streamingAssetsPath + $"/Resources/Cases/testing2";
@@ -435,12 +443,12 @@ public class UI_Manager : MonoBehaviour
 
         var casesArray = Resources.LoadAll("Cases", typeof(DialogueContainer));
         //Debug.Log("Se han obtenido los siguientes casos:");
-        contextDescription.text = "Casos detectados: ";
+        contextDescription.text = "Si estas viendo esto es que el caso no ha cargado bien, ve al UI_MANAGER";
         string casePath = $"{caso}_{LanguageManager.Instance.languageSelected}";
         foreach (var item in casesArray)
         {
             //Debug.Log($"{item.name}");
-            contextDescription.text += $" {item.name}";
+            //contextDescription.text += $" {item.name}";
             if (item.name == casePath)
             {
                 dialogueContainer = item as DialogueContainer;
@@ -502,20 +510,20 @@ public class UI_Manager : MonoBehaviour
             Case3Resources.Instance.mask.SetActive(true);
             dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
             dictionaryCharacteres["Student"].gameObject.SetActive(true); // De estos igual hay que poner varios
-            dictionaryCharacteres["Student2"].gameObject.SetActive(true); // De estos igual hay que poner varios
-            dictionaryCharacteres["Student3"].gameObject.SetActive(true); // De estos igual hay que poner varios
-            dictionaryCharacteres["Student4"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            //dictionaryCharacteres["Student2"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            //dictionaryCharacteres["Student3"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            //dictionaryCharacteres["Student4"].gameObject.SetActive(true); // De estos igual hay que poner varios
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
         else if (currentCase == Cases.Case5)
         {
-            dictionaryCharacteres["Head surgeon"].gameObject.SetActive(true);
-            dictionaryCharacteres["Assistant surgeon"].gameObject.SetActive(true); // Hara de equivalente a surgeon1
-            dictionaryCharacteres["Circulating Nurse"].gameObject.SetActive(true);
-            dictionaryCharacteres["Instrumentalist Nurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["HeadSurgeon"].gameObject.SetActive(true);
+            dictionaryCharacteres["AssistantSurgeon"].gameObject.SetActive(true); // Hara de equivalente a surgeon1
+            dictionaryCharacteres["CirculatingNurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["AnaesthesiaNurse"].gameObject.SetActive(true);
             dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
             dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
-            dictionaryCharacteres["AnaesthesiaNurse"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            dictionaryCharacteres["InstrumentalistNurse"].gameObject.SetActive(true); // De estos igual hay que poner varios
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
     }
@@ -553,15 +561,15 @@ public class UI_Manager : MonoBehaviour
                 //Comprobamos si alguna enfermera ha salido corriendo :')
                 SpecialCases.Instance.CheckSituation(situation.SituationName);
 
-            //Aqui comprobar si la situation ya se ha puesto antes y si el contexto es valido
-            if (isValid(situation.Context) && !IsSituationAlreadyPlayed(situation.SituationName))
-            {
-                ToScreen1(situation, originScreen);
-            }
-            else
-            {
-                ToScreen2(originScreen);
-            }
+                //Aqui comprobar si la situation ya se ha puesto antes y si el contexto es valido
+                if (isValid(situation.Context) && !IsSituationAlreadyPlayed(situation.SituationName))
+                {
+                    ToScreen1(situation, originScreen);
+                }
+                else
+                {
+                    ToScreen2(originScreen);
+                }
             }
        //}
     }

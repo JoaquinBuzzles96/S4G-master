@@ -101324,7 +101324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &385406008483551212
 GameObject:
   m_ObjectHideFlags: 0
@@ -119679,7 +119679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58fcab5b57b436243b8513a03c15af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NameMail: {fileID: 0}
+  m_NameMail: {fileID: 1851947666}
   m_Mail: {fileID: 5774234147682430872}
 --- !u!114 &5774234147559644446
 MonoBehaviour:
@@ -119694,7 +119694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   options: []
-  selectedCase: {fileID: 0}
+  selectedCase: {fileID: 5775717314591695768}
   panelTutorialTransform: {fileID: 1529371217646400484}
   originPos: {x: 0, y: 0, z: 0}
   originRotation: {x: 0, y: 0, z: 0, w: 0}
@@ -122585,7 +122585,7 @@ MonoBehaviour:
   isCasesDropdown: 0
   dropdownItems:
   - itemName: English
-    itemIcon: {fileID: 21300000, guid: 029e049b7b633af4089920f10dbf69d9, type: 3}
+    itemIcon: {fileID: 0}
     OnItemSelection:
       m_PersistentCalls:
         m_Calls:
@@ -122601,7 +122601,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - itemName: "Espa\xF1ol"
-    itemIcon: {fileID: 21300000, guid: e7f5d551fd1925040bd01a8ec66c0ae0, type: 3}
+    itemIcon: {fileID: 0}
     OnItemSelection:
       m_PersistentCalls:
         m_Calls:
@@ -122617,7 +122617,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - itemName: "Portugu\xEAs"
-    itemIcon: {fileID: 21300000, guid: 27f889dcba1d16e4382107e471321a38, type: 3}
+    itemIcon: {fileID: 0}
     OnItemSelection:
       m_PersistentCalls:
         m_Calls:
@@ -122633,7 +122633,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - itemName: "\u010Ce\u0161tina"
-    itemIcon: {fileID: 21300000, guid: e55e4ef66043a8747866894761ac06be, type: 3}
+    itemIcon: {fileID: 0}
     OnItemSelection:
       m_PersistentCalls:
         m_Calls:
@@ -122649,7 +122649,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - itemName: "Ma\u010Farsk\xFD"
-    itemIcon: {fileID: 21300000, guid: f4bd70bd7d1d65a448438dc918ac4cec, type: 3}
+    itemIcon: {fileID: 0}
     OnItemSelection:
       m_PersistentCalls:
         m_Calls:
@@ -122688,7 +122688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropdownAnimator: {fileID: 0}
   triggerObject: {fileID: 5774864022388573827}
-  selectedText: {fileID: 0}
+  selectedText: {fileID: 5775717314591695768}
   selectedImage: {fileID: 5887839656119177345}
   itemParent: {fileID: 5998353275848662955}
   itemObject: {fileID: 1168081051609938, guid: a10f1ce858922584bbbcc45f2e1d1ab1, type: 3}
@@ -123207,7 +123207,7 @@ MonoBehaviour:
   background: {fileID: 0}
   contentBackground: {fileID: 5887428805858260141}
   mainIcon: {fileID: 5887839656119177345}
-  mainText: {fileID: 0}
+  mainText: {fileID: 5775717314591695768}
   expandIcon: {fileID: 5888413090566392273}
   itemBackground: {fileID: 114720380713692834, guid: a10f1ce858922584bbbcc45f2e1d1ab1,
     type: 3}

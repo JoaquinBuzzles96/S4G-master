@@ -23,7 +23,7 @@ public class Case3Resources : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     public GameObject secretary;
@@ -59,8 +59,13 @@ public class Case3Resources : MonoBehaviour
 
     private void Start()
     {
+        InitDictionary();
+    }
+
+    public void InitDictionary()
+    {
         toolsDictionary = new Dictionary<string, GameObject>();
-        positionsDictionary = new Dictionary<string, Vector3>(); 
+        positionsDictionary = new Dictionary<string, Vector3>();
         foreach (var item in tools)
         {
             toolsDictionary.Add(item.name, item);
