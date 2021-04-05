@@ -518,12 +518,14 @@ public class UI_Manager : MonoBehaviour
         else if (currentCase == Cases.Case5)
         {
             dictionaryCharacteres["HeadSurgeon"].gameObject.SetActive(true);
+            dictionaryCharacteres["HeadSurgeon"].gameObject.GetComponent<CapsuleCollider>().enabled = true; //activamos el collider para que el raycast funcione
             dictionaryCharacteres["AssistantSurgeon"].gameObject.SetActive(true); // Hara de equivalente a surgeon1
             dictionaryCharacteres["CirculatingNurse"].gameObject.SetActive(true);
             dictionaryCharacteres["AnaesthesiaNurse"].gameObject.SetActive(true);
             dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
             dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
             dictionaryCharacteres["InstrumentalistNurse"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            Case3Resources.Instance.mask.SetActive(true);
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
     }
@@ -911,7 +913,27 @@ public class UI_Manager : MonoBehaviour
                 aux = "Secretary";
                 break;
             case "Enfermera de anestesia":
+            case "Anaesthesia Nurse":
+            case "Anaesthesia nurse":
                 aux = "AnaesthesiaNurse";
+                break;
+            case "Circulating Nurse":
+            case "Circulating nurse":
+            case "Circulatingnurse":
+                aux = "CirculatingNurse";
+                break;
+            case "Head Surgeon":
+            case "Head surgeon":
+            case "Headsurgeon":
+                aux = "HeadSurgeon";
+                break;
+            case "Assistant Surgeon":
+            case "Assistant surgeon":
+                aux = "AssistantSurgeon";
+                break;
+            case "Instrumentalist Nurse":
+            case "Instrumentalist nurse":
+                aux = "InstrumentalistNurse";
                 break;
         }
 
