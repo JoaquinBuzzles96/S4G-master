@@ -31,18 +31,6 @@ MonoBehaviour:
   - BaseNodeGuid: abd5bafc-1545-4e55-8b5e-cc58d15acc82
     PortName: Dialogue
     TargetNodeGuid: c30e7872-4f43-4d57-b753-f6319476e84b
-  - BaseNodeGuid: c1a76ec5-eafc-4a32-b923-1e0aa2ff90eb
-    PortName: Question 1
-    TargetNodeGuid: c5c8e152-9085-4e76-94dd-4cbafee67a3c
-  - BaseNodeGuid: c1a76ec5-eafc-4a32-b923-1e0aa2ff90eb
-    PortName: Question 2
-    TargetNodeGuid: 3a2fbd9a-b5c3-4f1b-b472-07d3d3b22906
-  - BaseNodeGuid: c1a76ec5-eafc-4a32-b923-1e0aa2ff90eb
-    PortName: Question 3
-    TargetNodeGuid: 603d47b1-5583-43cd-995c-69a2ff81fb38
-  - BaseNodeGuid: c1a76ec5-eafc-4a32-b923-1e0aa2ff90eb
-    PortName: Question 4
-    TargetNodeGuid: c8dd7154-9141-466c-a374-20f1c7a4b5db
   - BaseNodeGuid: cfa9e814-5fbe-49de-a7e5-acc39690639d
     PortName: Question 1
     TargetNodeGuid: b631a8e4-5dca-4c61-8881-35d0ffac77f9
@@ -112,18 +100,21 @@ MonoBehaviour:
   - BaseNodeGuid: 9984a22b-992a-4a1a-bfec-0db5a18b77e8
     PortName: Question 1
     TargetNodeGuid: 931f69ec-4945-499a-b118-184192860364
-  - BaseNodeGuid: d98974e5-8d58-46dd-b607-fd171a8bb38a
-    PortName: Answer 1
-    TargetNodeGuid: 68493b2a-5386-4b43-8b21-7091481f8e17
-  - BaseNodeGuid: d98974e5-8d58-46dd-b607-fd171a8bb38a
-    PortName: Answer 2
-    TargetNodeGuid: 3dca0dd8-816f-4fb2-a031-f3fc65a4e1c1
-  - BaseNodeGuid: d98974e5-8d58-46dd-b607-fd171a8bb38a
-    PortName: Answer 3
-    TargetNodeGuid: 0919e767-7d09-4a0c-bd24-cc8ceda4421c
-  - BaseNodeGuid: d98974e5-8d58-46dd-b607-fd171a8bb38a
-    PortName: Answer 4
-    TargetNodeGuid: d98532fe-6246-4e80-95e1-0fb87d62a15d
+  - BaseNodeGuid: c1a76ec5-eafc-4a32-b923-1e0aa2ff90eb
+    PortName: Question 1
+    TargetNodeGuid: c5c8e152-9085-4e76-94dd-4cbafee67a3c
+  - BaseNodeGuid: c1a76ec5-eafc-4a32-b923-1e0aa2ff90eb
+    PortName: Question 2
+    TargetNodeGuid: 3a2fbd9a-b5c3-4f1b-b472-07d3d3b22906
+  - BaseNodeGuid: c1a76ec5-eafc-4a32-b923-1e0aa2ff90eb
+    PortName: Question 3
+    TargetNodeGuid: 603d47b1-5583-43cd-995c-69a2ff81fb38
+  - BaseNodeGuid: c1a76ec5-eafc-4a32-b923-1e0aa2ff90eb
+    PortName: Question 4
+    TargetNodeGuid: c8dd7154-9141-466c-a374-20f1c7a4b5db
+  - BaseNodeGuid: c1a76ec5-eafc-4a32-b923-1e0aa2ff90eb
+    PortName: Dialogue
+    TargetNodeGuid: a9eb996a-0dcb-4821-af97-a1c7b26df026
   - BaseNodeGuid: 0438df04-1891-4e5f-bd9b-0b70e7578120
     PortName: Answer 1
     TargetNodeGuid: 788119bc-88ed-437f-9ea5-03100d98a370
@@ -232,18 +223,6 @@ MonoBehaviour:
   - BaseNodeGuid: 994a054f-25fd-4799-ba55-aac31d363f8d
     PortName: Answer 4
     TargetNodeGuid: 9194f8cb-0d70-4fde-b63c-1b7b3ec0aa71
-  - BaseNodeGuid: 931f69ec-4945-499a-b118-184192860364
-    PortName: Answer 1
-    TargetNodeGuid: 061d85fa-affd-4cdb-92d8-7acccf95dfce
-  - BaseNodeGuid: 931f69ec-4945-499a-b118-184192860364
-    PortName: Answer 2
-    TargetNodeGuid: 60a073b8-b8d8-41c2-a153-2a0a4c41681f
-  - BaseNodeGuid: 931f69ec-4945-499a-b118-184192860364
-    PortName: Answer 3
-    TargetNodeGuid: 02c1430a-9aea-4244-a23c-449ca699af16
-  - BaseNodeGuid: 931f69ec-4945-499a-b118-184192860364
-    PortName: Answer 4
-    TargetNodeGuid: 85353f91-941b-4e70-b75c-ba7592292902
   - BaseNodeGuid: 0ee46719-0022-44d9-9b41-934fe6f059ec
     PortName: Answer 1
     TargetNodeGuid: a904a52c-a5b5-46ee-9b2e-a223086a8cfb
@@ -256,30 +235,6 @@ MonoBehaviour:
   - BaseNodeGuid: 0ee46719-0022-44d9-9b41-934fe6f059ec
     PortName: Answer 4
     TargetNodeGuid: 3423c378-8494-47fe-aa16-3ed22da5262d
-  - BaseNodeGuid: b631a8e4-5dca-4c61-8881-35d0ffac77f9
-    PortName: Answer 1
-    TargetNodeGuid: 6c049e57-bbd3-4dd3-a1a1-68e4c50e164e
-  - BaseNodeGuid: b631a8e4-5dca-4c61-8881-35d0ffac77f9
-    PortName: Answer 2
-    TargetNodeGuid: 84ba6054-bd26-4262-a782-4c995c6c6de8
-  - BaseNodeGuid: b631a8e4-5dca-4c61-8881-35d0ffac77f9
-    PortName: Answer 3
-    TargetNodeGuid: b63fbfc5-00a1-4520-ab81-6187685fd6a5
-  - BaseNodeGuid: b631a8e4-5dca-4c61-8881-35d0ffac77f9
-    PortName: Answer 4
-    TargetNodeGuid: f90fef97-3be7-4a0f-92be-e170c3f0a6c3
-  - BaseNodeGuid: c798ca12-73e5-459e-b5d5-d1c17a59e358
-    PortName: Answer 1
-    TargetNodeGuid: e6f548e9-ed71-4dc3-ad9c-55b021d9be6d
-  - BaseNodeGuid: c798ca12-73e5-459e-b5d5-d1c17a59e358
-    PortName: Answer 2
-    TargetNodeGuid: 2928f197-cee5-48aa-8633-b62915075c70
-  - BaseNodeGuid: c798ca12-73e5-459e-b5d5-d1c17a59e358
-    PortName: Answer 3
-    TargetNodeGuid: 5d6f149a-ad46-482f-913e-36393fd55925
-  - BaseNodeGuid: c798ca12-73e5-459e-b5d5-d1c17a59e358
-    PortName: Answer 4
-    TargetNodeGuid: e9749392-ab8f-40ef-aa8b-84beb7cfd855
   - BaseNodeGuid: f40a0d1e-401b-4345-a545-6f1a22ce5428
     PortName: Answer 1
     TargetNodeGuid: 4ac99628-f681-487f-b4a3-53d3ca33dc48
@@ -292,18 +247,6 @@ MonoBehaviour:
   - BaseNodeGuid: f40a0d1e-401b-4345-a545-6f1a22ce5428
     PortName: Answer 4
     TargetNodeGuid: 5507c308-a181-48fa-9289-7c9610ecc873
-  - BaseNodeGuid: a3ead894-6c74-4313-a2f8-ad46d5103905
-    PortName: Answer 1
-    TargetNodeGuid: 6fc30c25-bc16-4c4b-8d42-a931fb20eaf5
-  - BaseNodeGuid: a3ead894-6c74-4313-a2f8-ad46d5103905
-    PortName: Answer 2
-    TargetNodeGuid: cd520167-3365-431c-abcd-4899a37f86d0
-  - BaseNodeGuid: a3ead894-6c74-4313-a2f8-ad46d5103905
-    PortName: Answer 3
-    TargetNodeGuid: 010a98ff-5978-45b0-9303-043c15a87467
-  - BaseNodeGuid: a3ead894-6c74-4313-a2f8-ad46d5103905
-    PortName: Answer 4
-    TargetNodeGuid: 4c5548ec-2a59-4398-aa25-a46fd0e56a24
   - BaseNodeGuid: 88d824be-f78b-4ffa-86d8-2faf29f87493
     PortName: Answer 1
     TargetNodeGuid: eed1b562-461c-4c02-808d-0addf6044c4a
@@ -352,30 +295,6 @@ MonoBehaviour:
   - BaseNodeGuid: e92ea62e-e786-4e8d-ad8b-f96a3501c2bf
     PortName: Answer 4
     TargetNodeGuid: d019c673-251b-4ca1-8d9e-85c2dcc1fff3
-  - BaseNodeGuid: 26624ade-865b-4572-b61d-9b1fb750da37
-    PortName: Answer 1
-    TargetNodeGuid: 7ea32405-24b9-4876-be8d-3b22488dae20
-  - BaseNodeGuid: 26624ade-865b-4572-b61d-9b1fb750da37
-    PortName: Answer 2
-    TargetNodeGuid: 573c2bc4-60f2-462e-b63c-841e6b0daa3d
-  - BaseNodeGuid: 26624ade-865b-4572-b61d-9b1fb750da37
-    PortName: Answer 3
-    TargetNodeGuid: ec046e7f-dd70-4ae5-8323-8a0ecf538b2a
-  - BaseNodeGuid: 26624ade-865b-4572-b61d-9b1fb750da37
-    PortName: Answer 4
-    TargetNodeGuid: 5f2b00ab-565d-41a7-b8ef-2aba2f5e3f05
-  - BaseNodeGuid: 8681cec5-cb65-4f30-b5c4-b4d3577e3bf6
-    PortName: Answer 1
-    TargetNodeGuid: 2e594f29-56da-4f15-8df6-940f72009aac
-  - BaseNodeGuid: 8681cec5-cb65-4f30-b5c4-b4d3577e3bf6
-    PortName: Answer 2
-    TargetNodeGuid: 0a3cffb5-ab31-4b06-942b-a64b1fe73807
-  - BaseNodeGuid: 8681cec5-cb65-4f30-b5c4-b4d3577e3bf6
-    PortName: Answer 3
-    TargetNodeGuid: 8c5d5600-2e8b-403a-af9d-ff6e6df7f9b4
-  - BaseNodeGuid: 8681cec5-cb65-4f30-b5c4-b4d3577e3bf6
-    PortName: Answer 4
-    TargetNodeGuid: 868a80bc-cb1b-4895-abec-385d5f6c6b04
   - BaseNodeGuid: aeb44a96-5455-46ab-98b4-de3c6a595018
     PortName: Answer 1
     TargetNodeGuid: 4ced5605-5a06-42bb-8cdf-f69666c07282
@@ -388,24 +307,12 @@ MonoBehaviour:
   - BaseNodeGuid: aeb44a96-5455-46ab-98b4-de3c6a595018
     PortName: Answer 4
     TargetNodeGuid: 0b1825b5-7bfc-4a38-b93e-43f776863b62
-  - BaseNodeGuid: d9d2b60b-8a41-46dd-a1ab-4fdb3e0cfe6e
-    PortName: Answer 1
-    TargetNodeGuid: 1e91117c-980e-4e0d-bbce-0a30bb2ebc37
-  - BaseNodeGuid: d9d2b60b-8a41-46dd-a1ab-4fdb3e0cfe6e
-    PortName: Answer 2
-    TargetNodeGuid: bcb26369-bf61-4149-b70d-11c71862740b
   - BaseNodeGuid: da3d2fd8-7086-40ae-aa72-e462cd565fe7
     PortName: Answer 1
     TargetNodeGuid: 9e26deb0-45ac-47a5-8fa0-3d1b622c6b70
   - BaseNodeGuid: da3d2fd8-7086-40ae-aa72-e462cd565fe7
     PortName: Answer 2
     TargetNodeGuid: ba26fcf7-ec76-4983-b4ca-45417d61ed5f
-  - BaseNodeGuid: 5de6836b-3042-4a74-9236-cf632ab926ea
-    PortName: Answer 1
-    TargetNodeGuid: a4eaad26-070d-440f-8bff-14cda7b0c144
-  - BaseNodeGuid: 5de6836b-3042-4a74-9236-cf632ab926ea
-    PortName: Answer 2
-    TargetNodeGuid: 8a9b1aa3-1266-40e2-afee-846d3822f424
   - BaseNodeGuid: 2382846c-32c1-4863-9cf8-15f703821c94
     PortName: Answer 1
     TargetNodeGuid: 05b4567b-b98f-4d59-b954-3447d03918e2
@@ -442,6 +349,102 @@ MonoBehaviour:
   - BaseNodeGuid: d215d87d-efe1-44fd-9094-de36ecad32f1
     PortName: Answer 4
     TargetNodeGuid: 4c678f63-72d6-4050-b9a4-45b825feef3d
+  - BaseNodeGuid: d98974e5-8d58-46dd-b607-fd171a8bb38a
+    PortName: Answer 1
+    TargetNodeGuid: 68493b2a-5386-4b43-8b21-7091481f8e17
+  - BaseNodeGuid: d98974e5-8d58-46dd-b607-fd171a8bb38a
+    PortName: Answer 2
+    TargetNodeGuid: 3dca0dd8-816f-4fb2-a031-f3fc65a4e1c1
+  - BaseNodeGuid: d98974e5-8d58-46dd-b607-fd171a8bb38a
+    PortName: Answer 3
+    TargetNodeGuid: 0919e767-7d09-4a0c-bd24-cc8ceda4421c
+  - BaseNodeGuid: d98974e5-8d58-46dd-b607-fd171a8bb38a
+    PortName: Answer 4
+    TargetNodeGuid: d98532fe-6246-4e80-95e1-0fb87d62a15d
+  - BaseNodeGuid: c798ca12-73e5-459e-b5d5-d1c17a59e358
+    PortName: Answer 1
+    TargetNodeGuid: e6f548e9-ed71-4dc3-ad9c-55b021d9be6d
+  - BaseNodeGuid: c798ca12-73e5-459e-b5d5-d1c17a59e358
+    PortName: Answer 2
+    TargetNodeGuid: 2928f197-cee5-48aa-8633-b62915075c70
+  - BaseNodeGuid: c798ca12-73e5-459e-b5d5-d1c17a59e358
+    PortName: Answer 3
+    TargetNodeGuid: 5d6f149a-ad46-482f-913e-36393fd55925
+  - BaseNodeGuid: c798ca12-73e5-459e-b5d5-d1c17a59e358
+    PortName: Answer 4
+    TargetNodeGuid: e9749392-ab8f-40ef-aa8b-84beb7cfd855
+  - BaseNodeGuid: a3ead894-6c74-4313-a2f8-ad46d5103905
+    PortName: Answer 1
+    TargetNodeGuid: 6fc30c25-bc16-4c4b-8d42-a931fb20eaf5
+  - BaseNodeGuid: a3ead894-6c74-4313-a2f8-ad46d5103905
+    PortName: Answer 2
+    TargetNodeGuid: cd520167-3365-431c-abcd-4899a37f86d0
+  - BaseNodeGuid: a3ead894-6c74-4313-a2f8-ad46d5103905
+    PortName: Answer 3
+    TargetNodeGuid: 010a98ff-5978-45b0-9303-043c15a87467
+  - BaseNodeGuid: a3ead894-6c74-4313-a2f8-ad46d5103905
+    PortName: Answer 4
+    TargetNodeGuid: 4c5548ec-2a59-4398-aa25-a46fd0e56a24
+  - BaseNodeGuid: 26624ade-865b-4572-b61d-9b1fb750da37
+    PortName: Answer 1
+    TargetNodeGuid: 7ea32405-24b9-4876-be8d-3b22488dae20
+  - BaseNodeGuid: 26624ade-865b-4572-b61d-9b1fb750da37
+    PortName: Answer 2
+    TargetNodeGuid: 573c2bc4-60f2-462e-b63c-841e6b0daa3d
+  - BaseNodeGuid: 26624ade-865b-4572-b61d-9b1fb750da37
+    PortName: Answer 3
+    TargetNodeGuid: ec046e7f-dd70-4ae5-8323-8a0ecf538b2a
+  - BaseNodeGuid: 26624ade-865b-4572-b61d-9b1fb750da37
+    PortName: Answer 4
+    TargetNodeGuid: 5f2b00ab-565d-41a7-b8ef-2aba2f5e3f05
+  - BaseNodeGuid: 8681cec5-cb65-4f30-b5c4-b4d3577e3bf6
+    PortName: Answer 1
+    TargetNodeGuid: 2e594f29-56da-4f15-8df6-940f72009aac
+  - BaseNodeGuid: 8681cec5-cb65-4f30-b5c4-b4d3577e3bf6
+    PortName: Answer 2
+    TargetNodeGuid: 0a3cffb5-ab31-4b06-942b-a64b1fe73807
+  - BaseNodeGuid: 8681cec5-cb65-4f30-b5c4-b4d3577e3bf6
+    PortName: Answer 3
+    TargetNodeGuid: 8c5d5600-2e8b-403a-af9d-ff6e6df7f9b4
+  - BaseNodeGuid: 8681cec5-cb65-4f30-b5c4-b4d3577e3bf6
+    PortName: Answer 4
+    TargetNodeGuid: 868a80bc-cb1b-4895-abec-385d5f6c6b04
+  - BaseNodeGuid: 931f69ec-4945-499a-b118-184192860364
+    PortName: Answer 1
+    TargetNodeGuid: 061d85fa-affd-4cdb-92d8-7acccf95dfce
+  - BaseNodeGuid: 931f69ec-4945-499a-b118-184192860364
+    PortName: Answer 2
+    TargetNodeGuid: 60a073b8-b8d8-41c2-a153-2a0a4c41681f
+  - BaseNodeGuid: 931f69ec-4945-499a-b118-184192860364
+    PortName: Answer 3
+    TargetNodeGuid: 02c1430a-9aea-4244-a23c-449ca699af16
+  - BaseNodeGuid: 931f69ec-4945-499a-b118-184192860364
+    PortName: Answer 4
+    TargetNodeGuid: 85353f91-941b-4e70-b75c-ba7592292902
+  - BaseNodeGuid: b631a8e4-5dca-4c61-8881-35d0ffac77f9
+    PortName: Answer 1
+    TargetNodeGuid: 6c049e57-bbd3-4dd3-a1a1-68e4c50e164e
+  - BaseNodeGuid: b631a8e4-5dca-4c61-8881-35d0ffac77f9
+    PortName: Answer 2
+    TargetNodeGuid: 84ba6054-bd26-4262-a782-4c995c6c6de8
+  - BaseNodeGuid: b631a8e4-5dca-4c61-8881-35d0ffac77f9
+    PortName: Answer 3
+    TargetNodeGuid: b63fbfc5-00a1-4520-ab81-6187685fd6a5
+  - BaseNodeGuid: b631a8e4-5dca-4c61-8881-35d0ffac77f9
+    PortName: Answer 4
+    TargetNodeGuid: f90fef97-3be7-4a0f-92be-e170c3f0a6c3
+  - BaseNodeGuid: d9d2b60b-8a41-46dd-a1ab-4fdb3e0cfe6e
+    PortName: Answer 1
+    TargetNodeGuid: 1e91117c-980e-4e0d-bbce-0a30bb2ebc37
+  - BaseNodeGuid: d9d2b60b-8a41-46dd-a1ab-4fdb3e0cfe6e
+    PortName: Answer 2
+    TargetNodeGuid: bcb26369-bf61-4149-b70d-11c71862740b
+  - BaseNodeGuid: 5de6836b-3042-4a74-9236-cf632ab926ea
+    PortName: Answer 1
+    TargetNodeGuid: a4eaad26-070d-440f-8bff-14cda7b0c144
+  - BaseNodeGuid: 5de6836b-3042-4a74-9236-cf632ab926ea
+    PortName: Answer 2
+    TargetNodeGuid: 8a9b1aa3-1266-40e2-afee-846d3822f424
   - BaseNodeGuid: df970370-c4b1-4bab-94e2-cec698d12a83
     PortName: Dialogue
     TargetNodeGuid: 41bd4f28-b318-4b57-bb17-c538ae30cb9c
@@ -1168,9 +1171,6 @@ MonoBehaviour:
   - BaseNodeGuid: 50dd8984-1c2e-43e7-a8cf-4f5545ee2ac7
     PortName: Dialogue
     TargetNodeGuid: 7bfa77f4-ec02-47b4-a45b-cf327533cc8d
-  - BaseNodeGuid: 7bfa77f4-ec02-47b4-a45b-cf327533cc8d
-    PortName: Dialogue
-    TargetNodeGuid: 82e1b80d-d7e5-410b-b02f-69f5e96e2fdb
   - BaseNodeGuid: 4f0c7fad-d6f7-48f1-86ae-cbb95201680c
     PortName: Dialogue
     TargetNodeGuid: 406708ad-d85b-4c0c-a2bf-16b55df0bf8c
@@ -1183,12 +1183,6 @@ MonoBehaviour:
   - BaseNodeGuid: 2a1fbd36-41c4-4847-8b80-b1585eb9b182
     PortName: Dialogue
     TargetNodeGuid: 416cd1b3-897d-496d-a635-a912069e4648
-  - BaseNodeGuid: e111291c-417b-4407-9fb2-95f6816cbd29
-    PortName: Dialogue
-    TargetNodeGuid: 357ee41a-5397-450b-9955-19e61a2d8233
-  - BaseNodeGuid: ad5395bb-1817-4af3-ab5a-66497944c05b
-    PortName: Dialogue
-    TargetNodeGuid: 17f55fc2-5e76-4451-9b97-68c5999b08ba
   - BaseNodeGuid: 9e2c4c9c-d6df-4194-9b78-c61298579762
     PortName: Dialogue
     TargetNodeGuid: 2a348c16-6c79-4ae6-936c-bf050fe7bb59
@@ -1255,9 +1249,15 @@ MonoBehaviour:
   - BaseNodeGuid: cd79b58a-56b0-413f-8203-5fc3301ae9e4
     PortName: Dialogue
     TargetNodeGuid: 0115223e-1490-4128-9092-b45f15760d74
-  - BaseNodeGuid: c1a76ec5-eafc-4a32-b923-1e0aa2ff90eb
+  - BaseNodeGuid: 7bfa77f4-ec02-47b4-a45b-cf327533cc8d
     PortName: Dialogue
-    TargetNodeGuid: a9eb996a-0dcb-4821-af97-a1c7b26df026
+    TargetNodeGuid: 82e1b80d-d7e5-410b-b02f-69f5e96e2fdb
+  - BaseNodeGuid: e111291c-417b-4407-9fb2-95f6816cbd29
+    PortName: Dialogue
+    TargetNodeGuid: 357ee41a-5397-450b-9955-19e61a2d8233
+  - BaseNodeGuid: ad5395bb-1817-4af3-ab5a-66497944c05b
+    PortName: Dialogue
+    TargetNodeGuid: 17f55fc2-5e76-4451-9b97-68c5999b08ba
   SituationNodeData:
   - Guid: abd5bafc-1545-4e55-8b5e-cc58d15acc82
     SituationName: S2
@@ -1551,23 +1551,6 @@ MonoBehaviour:
     speaker: Assistant surgeon
     nodeType: 1
     Position: {x: 2271, y: 704}
-  - Guid: c798ca12-73e5-459e-b5d5-d1c17a59e358
-    QuestionName: Q7
-    Description: "It\u2019s always the same! You make me go to the other room, and
-      you will see what happens. Nonsense\u2026"
-    audioId: D7
-    speaker: Nurse Anaesthesist
-    nodeType: 1
-    Position: {x: -335, y: 6179}
-  - Guid: a3ead894-6c74-4313-a2f8-ad46d5103905
-    QuestionName: Q10
-    Description: The proposal would be that in this room only the circulating nurse
-      would stay, the instrumentalist and nurse anaesthetist would go in the other
-      room.
-    audioId: D10
-    speaker: Circulating nurse
-    nodeType: 1
-    Position: {x: -492, y: 7568}
   - Guid: 26624ade-865b-4572-b61d-9b1fb750da37
     QuestionName: Q15
     Description: 'Thus being, the timings to mobilise resources will be: the instrumentalist
@@ -1585,14 +1568,6 @@ MonoBehaviour:
     speaker: Circulating nurse
     nodeType: 1
     Position: {x: -64, y: 10785}
-  - Guid: 931f69ec-4945-499a-b118-184192860364
-    QuestionName: Q4
-    Description: Anaesthesia is settled. The assistant surgeon and I cannot leave
-      the room. The nursing team, how can we solve that?
-    audioId: D4
-    speaker: Head Surgeon
-    nodeType: 1
-    Position: {x: -569, y: 4542}
   - Guid: b631a8e4-5dca-4c61-8881-35d0ffac77f9
     QuestionName: Q6
     Description: "That isn\u2019t helping towards a solution! In this situation how
@@ -1616,6 +1591,31 @@ MonoBehaviour:
     speaker: Head surgeon
     nodeType: 1
     Position: {x: 5677, y: 11176}
+  - Guid: 931f69ec-4945-499a-b118-184192860364
+    QuestionName: Q4
+    Description: Anaesthesia is settled. The assistant surgeon and I cannot leave
+      the room. The nursing team, how can we solve that?
+    audioId: D4
+    speaker: Head Surgeon
+    nodeType: 1
+    Position: {x: -569, y: 4542}
+  - Guid: c798ca12-73e5-459e-b5d5-d1c17a59e358
+    QuestionName: Q7
+    Description: "It\u2019s always the same! You make me go to the other room, and
+      you will see what happens. Nonsense\u2026"
+    audioId: D7
+    speaker: Nurse Anaesthesist
+    nodeType: 1
+    Position: {x: -335, y: 6179}
+  - Guid: a3ead894-6c74-4313-a2f8-ad46d5103905
+    QuestionName: Q10
+    Description: The proposal would be that in this room only the circulating nurse
+      would stay, the instrumentalist and nurse anaesthetist would go in the other
+      room.
+    audioId: D10
+    speaker: Circulating nurse
+    nodeType: 1
+    Position: {x: -492, y: 7568}
   AnswerNodeData:
   - Guid: df970370-c4b1-4bab-94e2-cec698d12a83
     AnswerName: A1.1.2
@@ -2401,18 +2401,6 @@ MonoBehaviour:
     audioId: END1
     score: 0
     Position: {x: 469, y: 11123}
-  - Guid: 8c5d5600-2e8b-403a-af9d-ff6e6df7f9b4
-    AnswerName: A16.3
-    Feedback: "Then, everybody goes back to work and let\u2019s do our best for these
-      patients"
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 1
-    nodeType: 2
-    speaker: Speaker
-    audioId: END1
-    score: 0
-    Position: {x: 462, y: 10819}
   - Guid: 061d85fa-affd-4cdb-92d8-7acccf95dfce
     AnswerName: A4.1
     Feedback: 
@@ -2834,6 +2822,18 @@ MonoBehaviour:
     audioId: Audio id
     score: 0
     Position: {x: 4525, y: 6633}
+  - Guid: 8c5d5600-2e8b-403a-af9d-ff6e6df7f9b4
+    AnswerName: A16.3
+    Feedback: "Then, everybody goes back to work and let\u2019s do our best for these
+      patients"
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 1
+    nodeType: 2
+    speaker: Speaker
+    audioId: END1
+    score: 0
+    Position: {x: 462, y: 10819}
   DialogueNodeData:
   - Guid: 7f96e052-6347-43b3-866a-7247b0a6a90d
     DialogueName: D1.1.3
@@ -3152,7 +3152,7 @@ MonoBehaviour:
   - Guid: e467c16a-6ead-4c1f-a64c-fc6046083a4e
     DialogueName: D3.1.3
     DialogueText: I already contributed; I cannot solve it on my own.
-    Speaker: 'Anaesthetist '
+    Speaker: Anaesthesiologist
     Mood: Angry
     audioId: D3.1.3
     nodeType: 3
@@ -3184,7 +3184,7 @@ MonoBehaviour:
   - Guid: 36359dc2-51ac-4f39-a897-8079c9dffa06
     DialogueName: D3.2.3
     DialogueText: I already contributed; I cannot solve it on my own.
-    Speaker: 'Anaesthetist '
+    Speaker: 'Anaesthesiologist '
     Mood: Angry
     audioId: D3.1.3
     nodeType: 3
@@ -3193,7 +3193,7 @@ MonoBehaviour:
     DialogueName: D3.4.2
     DialogueText: This is not the first time it happens, but we always could work
       it through if we analyse the options.
-    Speaker: 'Anaesthetist '
+    Speaker: 'Anaesthesiologist '
     Mood: Calm
     audioId: D3.3.2
     nodeType: 3
@@ -3208,15 +3208,6 @@ MonoBehaviour:
     audioId: D3.3.2.1
     nodeType: 3
     Position: {x: 5873, y: 2656}
-  - Guid: 269cb5e9-638c-4484-b77f-b0002d305e73
-    DialogueName: D3.3.2
-    DialogueText: This is not the first time it happens, but we always could work
-      it through if we analyse the options.
-    Speaker: 'Anaesthetist '
-    Mood: Calm
-    audioId: D3.3.2
-    nodeType: 3
-    Position: {x: 5262, y: 1561}
   - Guid: ca1a3313-e0c5-4ff1-81bb-8fc0df7eca2f
     DialogueName: D3.3.2.1
     DialogueText: My suggestion is that the circulating nurse supports this room.
@@ -3230,7 +3221,7 @@ MonoBehaviour:
   - Guid: 63019c16-6eed-47f1-8922-119ad87c85fa
     DialogueName: D3.4.3
     DialogueText: I already contributed; I cannot solve it on my own.
-    Speaker: 'Anaesthetist '
+    Speaker: 'Anaesthesiologist '
     Mood: Angry
     audioId: D3.1.3
     nodeType: 3
@@ -3238,7 +3229,7 @@ MonoBehaviour:
   - Guid: a678d475-f2fb-423e-8c77-c091fe2ef0c1
     DialogueName: D3.3.3
     DialogueText: I already contributed; I cannot solve it on my own.
-    Speaker: 'Anaesthetist '
+    Speaker: 'Anaesthesiologist '
     Mood: Angry
     audioId: D3.1.3
     nodeType: 3
@@ -3585,7 +3576,7 @@ MonoBehaviour:
     DialogueName: D16.1
     DialogueText: Let it be registered that I do not assume the responsibility if
       something goes wrong.
-    Speaker: Surgeon1
+    Speaker: Assistant surgeon
     Mood: Calm
     audioId: D16.1
     nodeType: 3
@@ -4285,4 +4276,13 @@ MonoBehaviour:
     audioId: D6.3
     nodeType: 3
     Position: {x: 4671, y: 4696}
+  - Guid: 269cb5e9-638c-4484-b77f-b0002d305e73
+    DialogueName: D3.3.2
+    DialogueText: This is not the first time it happens, but we always could work
+      it through if we analyse the options.
+    Speaker: 'Anaesthesiologist '
+    Mood: Calm
+    audioId: D3.3.2
+    nodeType: 3
+    Position: {x: 5262, y: 1561}
   ExposedProperties: []
