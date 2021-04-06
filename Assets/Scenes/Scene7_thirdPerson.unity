@@ -215,7 +215,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-227798
+  m_Name: pb_Mesh-206622
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -505,7 +505,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-227044
+  m_Name: pb_Mesh-205868
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1770,7 +1770,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-223112
+  m_Name: pb_Mesh-201936
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3598,7 +3598,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-224210
+  m_Name: pb_Mesh-203034
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4157,6 +4157,11 @@ MonoBehaviour:
   - {fileID: 2025342477}
   - {fileID: 1741668047}
   AnswerContainer: {fileID: 0}
+  countdownBar: {fileID: 0}
+  imageAmbulance: {fileID: 0}
+  imageHospital: {fileID: 0}
+  originalPosition: {x: 0, y: 0, z: 0}
+  arrowBlink: {fileID: 0}
 --- !u!1 &571394906
 GameObject:
   m_ObjectHideFlags: 0
@@ -5390,6 +5395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb0a828c0aac284580123e6ed580c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCase: 0
   dialogueContainer: {fileID: 11400000, guid: dd5957f959bf4e04fab1d32f67279867, type: 2}
   generalArrow: {fileID: 0}
   screen1: {fileID: 2030489334}
@@ -5418,6 +5424,7 @@ MonoBehaviour:
     score: 0
     Position: {x: 0, y: 0}
   audioSource: {fileID: 726161757}
+  ExitButton: {fileID: 0}
   characteres:
   - {fileID: 0}
   - {fileID: 991541514}
@@ -5433,6 +5440,9 @@ MonoBehaviour:
   playereRoute: 
   totalScore: 0
   lastTime: 0
+  cameraPositionFirstPerson: {fileID: 0}
+  cameraPositionThirdPerson: {fileID: 0}
+  cameraCurrentPos: {fileID: 0}
 --- !u!82 &726161757
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8198,7 +8208,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-227788
+  m_Name: pb_Mesh-206612
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12395,7 +12405,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-227078
+  m_Name: pb_Mesh-205902
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12850,8 +12860,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e00fbdff4d20ae84e9ef2c0d1733e158, type: 2}
+  m_sharedMaterial: {fileID: -3612754992411922532, guid: e00fbdff4d20ae84e9ef2c0d1733e158,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14987,6 +14998,7 @@ MonoBehaviour:
   - {fileID: 1688755253}
   - {fileID: 186502818}
   - {fileID: 674162515}
+  ExtraTablePositions: []
 --- !u!4 &1879854785
 Transform:
   m_ObjectHideFlags: 0
@@ -19036,6 +19048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb0a828c0aac284580123e6ed580c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCase: 0
   dialogueContainer: {fileID: 11400000, guid: 06edb9da3e232ac499770b559e6907a7, type: 2}
   generalArrow: {fileID: 938210115}
   screen1: {fileID: 1000536165907182120}
@@ -19072,6 +19085,7 @@ MonoBehaviour:
     score: 0
     Position: {x: 0, y: 0}
   audioSource: {fileID: 1000536165941635004}
+  ExitButton: {fileID: 0}
   characteres:
   - {fileID: 991541514}
   - {fileID: 486864079}
@@ -19089,6 +19103,9 @@ MonoBehaviour:
   playereRoute: 
   totalScore: 0
   lastTime: 0
+  cameraPositionFirstPerson: {fileID: 0}
+  cameraPositionThirdPerson: {fileID: 0}
+  cameraCurrentPos: {fileID: 0}
 --- !u!1 &1000536165941635007
 GameObject:
   m_ObjectHideFlags: 0
@@ -19249,8 +19266,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Context
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e00fbdff4d20ae84e9ef2c0d1733e158, type: 2}
+  m_sharedMaterial: {fileID: -3612754992411922532, guid: e00fbdff4d20ae84e9ef2c0d1733e158,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23548,6 +23566,11 @@ MonoBehaviour:
   - {fileID: 1000536167692888312}
   - {fileID: 1000536167736325507}
   AnswerContainer: {fileID: 1000536166147383437}
+  countdownBar: {fileID: 0}
+  imageAmbulance: {fileID: 0}
+  imageHospital: {fileID: 0}
+  originalPosition: {x: 0, y: 0, z: 0}
+  arrowBlink: {fileID: 0}
 --- !u!224 &1000536167450445073
 RectTransform:
   m_ObjectHideFlags: 0
