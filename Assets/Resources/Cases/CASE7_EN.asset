@@ -112,6 +112,12 @@ MonoBehaviour:
   - BaseNodeGuid: 68d94713-8c33-41dc-b669-b0a13f522709
     PortName: Question 1
     TargetNodeGuid: ff4559c8-ccdb-43cb-9116-157d109c76f8
+  - BaseNodeGuid: aa0fcd70-9e79-4d6c-96de-c38423971f24
+    PortName: Question 1
+    TargetNodeGuid: 2ae82b88-3bba-45f6-8012-58804f2c062a
+  - BaseNodeGuid: aa0fcd70-9e79-4d6c-96de-c38423971f24
+    PortName: Dialogue
+    TargetNodeGuid: 0526b190-3520-4491-8365-6552a06b049d
   - BaseNodeGuid: 0ff13a64-207b-4a0a-bdd0-222b4e07fa6e
     PortName: Answer 1
     TargetNodeGuid: 240db88b-01df-48ab-913c-e61caa447ece
@@ -328,6 +334,18 @@ MonoBehaviour:
   - BaseNodeGuid: 89312341-df1a-45e1-a51d-42216beedf7d
     PortName: Answer 4
     TargetNodeGuid: ff09d774-d497-4fab-b58c-4bbeec0d86b1
+  - BaseNodeGuid: 2ae82b88-3bba-45f6-8012-58804f2c062a
+    PortName: Answer 1
+    TargetNodeGuid: 0dea0356-cf41-472a-8a4e-6621ce80cac6
+  - BaseNodeGuid: 2ae82b88-3bba-45f6-8012-58804f2c062a
+    PortName: Answer 2
+    TargetNodeGuid: 64702935-08ee-40d8-a77d-74f04f46ed47
+  - BaseNodeGuid: 2ae82b88-3bba-45f6-8012-58804f2c062a
+    PortName: Answer 3
+    TargetNodeGuid: 2f5f8e5b-738b-43dd-b019-a6b3cc3e2862
+  - BaseNodeGuid: 2ae82b88-3bba-45f6-8012-58804f2c062a
+    PortName: Answer 4
+    TargetNodeGuid: bc02d34e-0f1f-4e41-bd30-f85e442befd6
   - BaseNodeGuid: 240db88b-01df-48ab-913c-e61caa447ece
     PortName: Dialogue
     TargetNodeGuid: 38ca1a5d-cebc-49b7-a178-7fe126fbde7e
@@ -526,9 +544,15 @@ MonoBehaviour:
   - BaseNodeGuid: cafdf153-3b16-4c98-b443-0f7f28c77ff9
     PortName: Dialogue
     TargetNodeGuid: b50e185c-9c9a-4dc1-8a60-fa7480f10e1e
+  - BaseNodeGuid: cafdf153-3b16-4c98-b443-0f7f28c77ff9
+    PortName: Situation
+    TargetNodeGuid: aa0fcd70-9e79-4d6c-96de-c38423971f24
   - BaseNodeGuid: a36ee115-081d-47e4-9953-21405c385016
     PortName: Dialogue
     TargetNodeGuid: 7a9e5541-b642-49e1-bebe-9cb2cdfef34e
+  - BaseNodeGuid: a36ee115-081d-47e4-9953-21405c385016
+    PortName: Situation
+    TargetNodeGuid: aa0fcd70-9e79-4d6c-96de-c38423971f24
   - BaseNodeGuid: c8a9e3db-77e0-4868-8dc0-ca42723f13ec
     PortName: Dialogue
     TargetNodeGuid: c9e4d93f-3454-4205-9266-e99a269cd579
@@ -709,6 +733,18 @@ MonoBehaviour:
   - BaseNodeGuid: ff09d774-d497-4fab-b58c-4bbeec0d86b1
     PortName: Situation
     TargetNodeGuid: e2175b04-98bb-418d-b1a8-515e51ad16dc
+  - BaseNodeGuid: 0dea0356-cf41-472a-8a4e-6621ce80cac6
+    PortName: Dialogue
+    TargetNodeGuid: cff0a532-8ad6-496c-9ce8-0f5ea674d4f3
+  - BaseNodeGuid: 64702935-08ee-40d8-a77d-74f04f46ed47
+    PortName: Dialogue
+    TargetNodeGuid: baec2e82-43e8-4f61-aa4b-1565271311c9
+  - BaseNodeGuid: 2f5f8e5b-738b-43dd-b019-a6b3cc3e2862
+    PortName: Dialogue
+    TargetNodeGuid: a0154e47-da62-4960-aa75-9ec503216aca
+  - BaseNodeGuid: bc02d34e-0f1f-4e41-bd30-f85e442befd6
+    PortName: Dialogue
+    TargetNodeGuid: 0485736f-215e-4131-b171-0af092cc6ec4
   - BaseNodeGuid: 38ca1a5d-cebc-49b7-a178-7fe126fbde7e
     PortName: Dialogue
     TargetNodeGuid: a7d52d54-8039-4006-8f75-429b0bbee04e
@@ -850,72 +886,36 @@ MonoBehaviour:
   - BaseNodeGuid: 507dadc1-f065-47ae-b1fd-749dea43efef
     PortName: Dialogue
     TargetNodeGuid: 4c570daf-d34b-4d51-b858-54f5e5c6a442
-  - BaseNodeGuid: cafdf153-3b16-4c98-b443-0f7f28c77ff9
-    PortName: Situation
-    TargetNodeGuid: aa0fcd70-9e79-4d6c-96de-c38423971f24
-  - BaseNodeGuid: a36ee115-081d-47e4-9953-21405c385016
-    PortName: Situation
-    TargetNodeGuid: aa0fcd70-9e79-4d6c-96de-c38423971f24
-  - BaseNodeGuid: aa0fcd70-9e79-4d6c-96de-c38423971f24
-    PortName: Question 1
-    TargetNodeGuid: 2ae82b88-3bba-45f6-8012-58804f2c062a
-  - BaseNodeGuid: 2ae82b88-3bba-45f6-8012-58804f2c062a
-    PortName: Answer 1
-    TargetNodeGuid: 0dea0356-cf41-472a-8a4e-6621ce80cac6
-  - BaseNodeGuid: 2ae82b88-3bba-45f6-8012-58804f2c062a
-    PortName: Answer 2
-    TargetNodeGuid: 64702935-08ee-40d8-a77d-74f04f46ed47
-  - BaseNodeGuid: 2ae82b88-3bba-45f6-8012-58804f2c062a
-    PortName: Answer 3
-    TargetNodeGuid: 2f5f8e5b-738b-43dd-b019-a6b3cc3e2862
-  - BaseNodeGuid: 2ae82b88-3bba-45f6-8012-58804f2c062a
-    PortName: Answer 4
-    TargetNodeGuid: bc02d34e-0f1f-4e41-bd30-f85e442befd6
-  - BaseNodeGuid: aa0fcd70-9e79-4d6c-96de-c38423971f24
-    PortName: Dialogue
-    TargetNodeGuid: 0526b190-3520-4491-8365-6552a06b049d
-  - BaseNodeGuid: 0526b190-3520-4491-8365-6552a06b049d
-    PortName: Dialogue
-    TargetNodeGuid: 055858b6-1da1-416a-95e4-2aaa72923437
   - BaseNodeGuid: 055858b6-1da1-416a-95e4-2aaa72923437
     PortName: Dialogue
     TargetNodeGuid: 2d93c662-6647-4f68-a927-3dce0ddc8a81
-  - BaseNodeGuid: 0dea0356-cf41-472a-8a4e-6621ce80cac6
+  - BaseNodeGuid: 0526b190-3520-4491-8365-6552a06b049d
     PortName: Dialogue
-    TargetNodeGuid: cff0a532-8ad6-496c-9ce8-0f5ea674d4f3
-  - BaseNodeGuid: cff0a532-8ad6-496c-9ce8-0f5ea674d4f3
-    PortName: Dialogue
-    TargetNodeGuid: 7ccc10bd-2a36-43a2-9c49-f465720152c0
-  - BaseNodeGuid: 64702935-08ee-40d8-a77d-74f04f46ed47
-    PortName: Dialogue
-    TargetNodeGuid: baec2e82-43e8-4f61-aa4b-1565271311c9
-  - BaseNodeGuid: baec2e82-43e8-4f61-aa4b-1565271311c9
-    PortName: Dialogue
-    TargetNodeGuid: 670dee49-601c-4867-9c8c-12cdf8b94ddf
-  - BaseNodeGuid: 2f5f8e5b-738b-43dd-b019-a6b3cc3e2862
-    PortName: Dialogue
-    TargetNodeGuid: a0154e47-da62-4960-aa75-9ec503216aca
+    TargetNodeGuid: 055858b6-1da1-416a-95e4-2aaa72923437
   - BaseNodeGuid: a0154e47-da62-4960-aa75-9ec503216aca
     PortName: Dialogue
     TargetNodeGuid: 25794bb7-11bf-4de1-9cc8-b2448a3776f3
-  - BaseNodeGuid: bc02d34e-0f1f-4e41-bd30-f85e442befd6
-    PortName: Dialogue
-    TargetNodeGuid: 0485736f-215e-4131-b171-0af092cc6ec4
-  - BaseNodeGuid: 0485736f-215e-4131-b171-0af092cc6ec4
-    PortName: Dialogue
-    TargetNodeGuid: bd414572-6d6d-44a4-b94b-4fbd2ec18d9d
-  - BaseNodeGuid: bd414572-6d6d-44a4-b94b-4fbd2ec18d9d
-    PortName: Dialogue
-    TargetNodeGuid: 28615468-204c-47ec-9831-baae28519281
   - BaseNodeGuid: 25794bb7-11bf-4de1-9cc8-b2448a3776f3
     PortName: Dialogue
     TargetNodeGuid: 564f8fe5-85b2-4978-aaec-585a030839f2
-  - BaseNodeGuid: 670dee49-601c-4867-9c8c-12cdf8b94ddf
+  - BaseNodeGuid: bd414572-6d6d-44a4-b94b-4fbd2ec18d9d
     PortName: Dialogue
-    TargetNodeGuid: a02a8acf-0598-4bdc-859b-110b4a4277f4
+    TargetNodeGuid: 28615468-204c-47ec-9831-baae28519281
+  - BaseNodeGuid: baec2e82-43e8-4f61-aa4b-1565271311c9
+    PortName: Dialogue
+    TargetNodeGuid: 670dee49-601c-4867-9c8c-12cdf8b94ddf
+  - BaseNodeGuid: cff0a532-8ad6-496c-9ce8-0f5ea674d4f3
+    PortName: Dialogue
+    TargetNodeGuid: 7ccc10bd-2a36-43a2-9c49-f465720152c0
   - BaseNodeGuid: 7ccc10bd-2a36-43a2-9c49-f465720152c0
     PortName: Dialogue
     TargetNodeGuid: 63aa3768-838f-4412-b332-74c98f50fa4d
+  - BaseNodeGuid: 0485736f-215e-4131-b171-0af092cc6ec4
+    PortName: Dialogue
+    TargetNodeGuid: bd414572-6d6d-44a4-b94b-4fbd2ec18d9d
+  - BaseNodeGuid: 670dee49-601c-4867-9c8c-12cdf8b94ddf
+    PortName: Dialogue
+    TargetNodeGuid: a02a8acf-0598-4bdc-859b-110b4a4277f4
   SituationNodeData:
   - Guid: 36ff957a-4d51-4c5f-aad8-6d3fcf183744
     SituationName: S1B
@@ -1023,14 +1023,14 @@ MonoBehaviour:
     nodeType: 0
     Position: {x: 5954, y: 4235}
   - Guid: 752a0222-b409-4923-9a2a-de7fb6256280
-    SituationName: S1A
+    SituationName: S1
     Context: All team members are on their places, the main surgeon has successfully
       completed the stomach section, so it is the moment to start the side-to-side
       jejunojejunal anastomosis. At this moment, the main surgeon asks for a 45mm
       golden stapler and the instrumentalist and responsible nurse realize that are
       not any left.
     Id: 0
-    audioId: Audio id
+    audioId: S1
     nodeType: 0
     Position: {x: -1791, y: 482}
   - Guid: 6518560a-7914-4aec-bc6c-7bbca7e0ca2b
@@ -1058,77 +1058,77 @@ MonoBehaviour:
   - Guid: 0ff13a64-207b-4a0a-bdd0-222b4e07fa6e
     QuestionName: Q1A
     Description: How would you react?
-    audioId: Audio id
+    audioId: Q1
     speaker: Narrator
     nodeType: 1
     Position: {x: 479, y: 514}
   - Guid: 792a9256-6b56-4617-80bf-390fd1eea8a6
     QuestionName: Q3
     Description: How would you answer?
-    audioId: Audio id
+    audioId: Q3
     speaker: Narrator
     nodeType: 1
     Position: {x: 78, y: 1697}
   - Guid: 8582dc4a-256d-4617-a81e-c2855a14e5e6
     QuestionName: Q1B
     Description: How would you proceed?
-    audioId: Audio id
+    audioId: Q2
     speaker: Narrator
     nodeType: 1
     Position: {x: 2534, y: 578}
   - Guid: 7d3a7ddf-f30b-47d7-b523-f77f8b089e4e
     QuestionName: Q4B
     Description: How would you answer?
-    audioId: Audio id
+    audioId: Q3
     speaker: Narrator
     nodeType: 1
     Position: {x: 3164, y: 1789}
   - Guid: ff4559c8-ccdb-43cb-9116-157d109c76f8
     QuestionName: Q12A
     Description: How would you react?
-    audioId: Audio id
+    audioId: Q3
     speaker: Narrator
     nodeType: 1
     Position: {x: 1294, y: 4401}
   - Guid: b3d60f42-66d3-40e0-a9a4-2160b6e4694a
     QuestionName: Q2
     Description: How would you react?
-    audioId: Audio id
+    audioId: Q1
     speaker: Narrator
     nodeType: 1
     Position: {x: 5295, y: 713}
   - Guid: 4f23b467-24c4-4009-90f2-c892e74ea790
     QuestionName: Q4A
     Description: How would you answer?
-    audioId: Audio id
+    audioId: Q3
     speaker: Narrator
     nodeType: 1
     Position: {x: 1597, y: 1817}
   - Guid: ebf90eaf-538b-4be9-81d1-0ec19926cc6b
     QuestionName: Q5
     Description: How would you answer?
-    audioId: Audio id
+    audioId: Q3
     speaker: Narrator
     nodeType: 1
     Position: {x: 4581, y: 1762}
   - Guid: ed566e74-c970-47f4-99c9-37125e0456f3
     QuestionName: Q6
     Description: Great! Shall I open the stapler?
-    audioId: Audio id
+    audioId: Q1
     speaker: Instrumentalist
     nodeType: 1
     Position: {x: 5885, y: 1697}
   - Guid: 2ec71803-ca35-44ae-9c9e-d016a55394fb
     QuestionName: Q7
     Description: How would you finish the intervention?
-    audioId: Audio id
+    audioId: Q4
     speaker: Narrator
     nodeType: 1
     Position: {x: -48, y: 3071}
   - Guid: a4ffefb0-0ea8-4bc7-8fea-76c7dd78b1b9
     QuestionName: Q8
     Description: The patient is unstable; we need to finish within 10 minutes.
-    audioId: Audio id
+    audioId: Q1
     speaker: Anaesthesiologist
     nodeType: 1
     Position: {x: 1056, y: 3179}
@@ -1136,49 +1136,49 @@ MonoBehaviour:
     QuestionName: Q10
     Description: "Are you sure? I\u2019ve never seen you perform an intracorporeal
       knot."
-    audioId: Audio id
+    audioId: Q1
     speaker: Camera Assistant
     nodeType: 1
     Position: {x: 3841, y: 3286}
   - Guid: 5746b981-54ed-42f6-89fe-cf58ecc4fd9a
     QuestionName: Q11A
     Description: "I thought you had more experience on this\u2026"
-    audioId: Audio id
+    audioId: Q11A
     speaker: Camera assistant
     nodeType: 1
     Position: {x: 5219, y: 3329}
   - Guid: 0946bc3e-1880-4998-9aac-49185ae0a640
     QuestionName: Q11B
     Description: " I thought you had more experience on this\u2026"
-    audioId: Audio id
+    audioId: Q11B
     speaker: Camera assistant
     nodeType: 1
     Position: {x: -155, y: 4370}
   - Guid: f4b00e84-1ad7-400f-9092-4fe417e58009
     QuestionName: Q12B
     Description: How would you react?
-    audioId: Audio id
+    audioId: Q1
     speaker: Narrator
     nodeType: 1
     Position: {x: 2538, y: 4352}
   - Guid: 195063cc-7338-4655-aebd-7894e49da16d
     QuestionName: Q13A
     Description: Are you sure that the reinforce suture is enough?
-    audioId: Audio id
+    audioId: Q13A
     speaker: Camera assistant
     nodeType: 1
     Position: {x: 3770, y: 4373}
   - Guid: 0fd502c2-5f69-4929-9bc9-e0e06b1f8792
     QuestionName: Q13B
     Description: Are you sure that the reinforce suture is enough?
-    audioId: Audio id
+    audioId: Q13A
     speaker: Camera assistant
     nodeType: 1
     Position: {x: 6212, y: 4253}
   - Guid: 89312341-df1a-45e1-a51d-42216beedf7d
     QuestionName: Q9
     Description: Great! How are we solving the complication? Shall I open the stapler?
-    audioId: Audio id
+    audioId: Q1
     speaker: Instrumentalist
     nodeType: 1
     Position: {x: 2458, y: 3158}
@@ -1186,7 +1186,7 @@ MonoBehaviour:
     QuestionName: Q15
     Description: "See? I was right\u2026 I don\u2019t know why you did this without
       enough experience"
-    audioId: Audio id
+    audioId: Q1
     speaker: Camera assistant
     nodeType: 1
     Position: {x: 824, y: 5568}
@@ -1199,7 +1199,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A1A.1
     score: 10
     Position: {x: 791, y: 103}
   - Guid: 848cf83f-2a86-4e33-b618-d765b080960b
@@ -1210,7 +1210,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A1A.3
     score: 0
     Position: {x: 789, y: 659}
   - Guid: e2a26e77-e8e9-4e3d-abef-51ef54e7430b
@@ -1221,7 +1221,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A1A.4
     score: 0
     Position: {x: 792, y: 933}
   - Guid: 9fe9f287-6a8f-4bb8-856d-e9699cf59b9c
@@ -1232,7 +1232,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A1B.1
     score: 0
     Position: {x: 2984, y: 50}
   - Guid: 0282ad48-99ce-470b-89f5-65e12d1656b9
@@ -1243,7 +1243,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A1B.3
     score: 0
     Position: {x: 2994, y: 686}
   - Guid: 35637fa3-4022-41bc-9f30-e3eb581e09f9
@@ -1254,7 +1254,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A1B.4
     score: 0
     Position: {x: 3002, y: 968}
   - Guid: 69e10304-8c6b-4c0b-a34e-6d7a42bceab2
@@ -1265,7 +1265,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A1B.2
     score: 10
     Position: {x: 2988, y: 397}
   - Guid: 732dbaae-d20f-44e0-9298-02423f71edeb
@@ -1276,7 +1276,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A4A.1
     score: 0
     Position: {x: 1926, y: 1210}
   - Guid: ce1939e9-71e8-4f03-b842-ffb9d477d99d
@@ -1287,7 +1287,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A4A.2
     score: 0
     Position: {x: 1927, y: 1509}
   - Guid: bfe7f060-d009-44f7-ac5d-3f9493b30fdd
@@ -1298,7 +1298,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A4A.3
     score: 10
     Position: {x: 1931, y: 1824}
   - Guid: ed5f45bc-0705-41ad-bb9f-db3eb2f1d09a
@@ -1309,7 +1309,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A4A.4
     score: 0
     Position: {x: 1934, y: 2134}
   - Guid: dfa91cd0-280a-4746-9f39-7fc4f4293942
@@ -1320,7 +1320,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A4B.1
     score: 10
     Position: {x: 3520, y: 1273}
   - Guid: 48f1670e-d13a-4176-8e65-a0bdee153fbc
@@ -1331,7 +1331,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A4B.2
     score: 0
     Position: {x: 3524, y: 1564}
   - Guid: c131cf1b-9db9-4b8a-b3cd-8df3202e6163
@@ -1342,7 +1342,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A4B.3
     score: 10
     Position: {x: 3529, y: 1838}
   - Guid: 14705494-8e12-4fa5-bcab-7e5aebbc46f2
@@ -1353,7 +1353,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A4B.4
     score: 0
     Position: {x: 3529, y: 2101}
   - Guid: 3a7b78df-2048-4377-ab00-6c16abf84e76
@@ -1364,7 +1364,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A7.1
     score: 10
     Position: {x: 260, y: 2653}
   - Guid: d38c2f00-05aa-494d-928f-bf6c5d98b06d
@@ -1375,7 +1375,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A7.2
     score: 0
     Position: {x: 264, y: 2941}
   - Guid: cefafa1d-6f0d-47d8-9320-b38995be8ded
@@ -1386,7 +1386,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A7.3
     score: 10
     Position: {x: 269, y: 3225}
   - Guid: e126f8bc-a0ac-47e8-91ef-fcd39483e5b5
@@ -1397,7 +1397,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A8.2
     score: 0
     Position: {x: 1467, y: 3045}
   - Guid: 8301f032-0925-4966-9168-497b52a41d56
@@ -1408,7 +1408,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A8.3
     score: 0
     Position: {x: 1470, y: 3329}
   - Guid: 9f1f6f80-8ed9-44c3-b062-72df30354563
@@ -1419,7 +1419,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A8.4
     score: 0
     Position: {x: 1474, y: 3602}
   - Guid: 8114898d-5b21-491e-b8e8-e7d6d7ff3b7b
@@ -1430,7 +1430,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A8.1
     score: 0
     Position: {x: 1467, y: 2752}
   - Guid: 6d3564a2-ef95-4d10-83c0-6d42fab9483d
@@ -1441,7 +1441,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A3.2
     score: 10
     Position: {x: 405, y: 1648}
   - Guid: d120473e-9f13-4a12-a059-c3c664cff11e
@@ -1452,7 +1452,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A3.3
     score: 0
     Position: {x: 409, y: 1928}
   - Guid: 5b609cab-7308-4e83-92a0-46d94b9e11ce
@@ -1463,7 +1463,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A3.4
     score: 5
     Position: {x: 405, y: 2208}
   - Guid: 33e2df78-c4fb-4e7b-9505-87bd598c58cf
@@ -1474,7 +1474,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A3.1
     score: 0
     Position: {x: 438, y: 1367}
   - Guid: ed249e0f-52d3-4dbd-8895-a41538879652
@@ -1485,7 +1485,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A10.1
     score: 10
     Position: {x: 4294, y: 2707}
   - Guid: f14dc8cd-3124-4da2-967c-2331cd2162ba
@@ -1496,7 +1496,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A10.3
     score: 0
     Position: {x: 4292, y: 3313}
   - Guid: a4228aeb-ff3d-47e3-9fed-0bf03525e79f
@@ -1507,7 +1507,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A10.2
     score: 10
     Position: {x: 4289, y: 3015}
   - Guid: dbffab81-bca5-4518-8953-7ca2c05576d1
@@ -1518,7 +1518,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A10.4
     score: 0
     Position: {x: 4295, y: 3604}
   - Guid: b4b13865-645d-4f5b-9086-ba473f7c93c9
@@ -1529,7 +1529,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A11A.1
     score: 0
     Position: {x: 5552, y: 2790}
   - Guid: b2aa33b1-7abe-45e4-b6d7-2e93ef738c6e
@@ -1540,20 +1540,9 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A11A.2
     score: 10
     Position: {x: 5559, y: 3075}
-  - Guid: c4bb3047-6278-417e-a2a4-cd1281b77c97
-    AnswerName: A11A.4
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 10
-    Position: {x: 5558, y: 3680}
   - Guid: e7f33c2d-17b4-4c9f-857d-e8ad9620daa8
     AnswerName: A11A.3
     Feedback: 
@@ -1562,7 +1551,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A11A.3
     score: 0
     Position: {x: 5555, y: 3382}
   - Guid: cafdf153-3b16-4c98-b443-0f7f28c77ff9
@@ -1573,7 +1562,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A11B.1
     score: 0
     Position: {x: 223, y: 3938}
   - Guid: a36ee115-081d-47e4-9953-21405c385016
@@ -1584,7 +1573,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A11B.2
     score: 10
     Position: {x: 221, y: 4226}
   - Guid: c8a9e3db-77e0-4868-8dc0-ca42723f13ec
@@ -1595,7 +1584,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A11B.3
     score: 0
     Position: {x: 227, y: 4494}
   - Guid: 3ac8b620-b4ad-480b-8eaf-1378bc6d6045
@@ -1606,7 +1595,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A11B.4
     score: 10
     Position: {x: 231, y: 4764}
   - Guid: 7f5fe663-17b3-4eb6-bcc6-a0a049ea0acd
@@ -1617,7 +1606,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A12A.1
     score: 0
     Position: {x: 1569, y: 3925}
   - Guid: f59516f3-5fbc-4c28-83e2-846913c55ba8
@@ -1628,7 +1617,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A12A.2
     score: 0
     Position: {x: 1573, y: 4201}
   - Guid: 5bc50a7b-539e-4fe7-94db-9d33ed25cb2a
@@ -1639,7 +1628,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A12A.4
     score: 0
     Position: {x: 1576, y: 4770}
   - Guid: f26b4695-05c5-4335-8a2d-a2dc057dd3b3
@@ -1650,7 +1639,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A12B.2
     score: 0
     Position: {x: 2870, y: 4228}
   - Guid: 8978e489-9a1b-47cc-b808-2a39da069e74
@@ -1661,7 +1650,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A12B.3
     score: 10
     Position: {x: 2888, y: 4517}
   - Guid: eb0403a4-51df-45f8-9d21-a045b1e43d6f
@@ -1672,7 +1661,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A12B.4
     score: 0
     Position: {x: 2890, y: 4809}
   - Guid: 163104ec-56b6-49da-9bf7-f68d81bea01f
@@ -1683,7 +1672,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A12A.3
     score: 10
     Position: {x: 1572, y: 4484}
   - Guid: 73984c8d-907c-49c0-b66b-b38b95601ea8
@@ -1694,7 +1683,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A13A.1
     score: 10
     Position: {x: 4121, y: 4005}
   - Guid: 0590666a-860b-49ef-96ae-e9b4821ff699
@@ -1705,7 +1694,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A13A.2
     score: 0
     Position: {x: 4129, y: 4263}
   - Guid: e47eaaec-563d-4f27-97ce-12ab06874be2
@@ -1716,7 +1705,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A13A.4
     score: 10
     Position: {x: 4128, y: 4824}
   - Guid: 44d59bd6-4f63-44f9-84ea-af6b05b3171f
@@ -1727,7 +1716,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A13A.3
     score: 0
     Position: {x: 4121, y: 4541}
   - Guid: d8f2b453-e63a-4d3d-9d23-117793a9bec3
@@ -1738,7 +1727,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A1A.2
     score: 0
     Position: {x: 789, y: 381}
   - Guid: 68577b16-d950-489b-9960-7495e24ba1e7
@@ -1749,7 +1738,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A12B.1
     score: 0
     Position: {x: 2868, y: 3939}
   - Guid: b420d367-8fdd-472e-8d51-d9998385589e
@@ -1760,7 +1749,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A2.3
     score: 0
     Position: {x: 5791, y: 735}
   - Guid: 045a083b-9bd7-47ee-933b-7928d4675edd
@@ -1771,7 +1760,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A2.2
     score: 0
     Position: {x: 5787, y: 382}
   - Guid: 5649333f-cf55-4bcf-ba04-95f142d099d2
@@ -1782,7 +1771,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A2.1
     score: 0
     Position: {x: 5787, y: 96}
   - Guid: d1b3c58d-ddc8-4816-bac1-61683961e241
@@ -1793,7 +1782,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A2.4
     score: 0
     Position: {x: 5801, y: 1030}
   - Guid: d468ea97-b729-49e0-8d3b-2ab48a485217
@@ -1804,7 +1793,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: Q5.1
     score: 0
     Position: {x: 4868, y: 1314}
   - Guid: 2398716b-f318-4f53-8b0b-dfd6d0fd6547
@@ -1815,7 +1804,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: Q5.2
     score: 10
     Position: {x: 4870, y: 1595}
   - Guid: 1ea1d932-5674-4e84-9e74-136ec801bd39
@@ -1826,7 +1815,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: Q5.3
     score: 0
     Position: {x: 4872, y: 1861}
   - Guid: 814dac4b-79ea-443f-bce4-503f4f9cc33a
@@ -1837,7 +1826,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: Q5.4
     score: 10
     Position: {x: 4873, y: 2127}
   - Guid: c9584778-2150-441e-a9dc-a2620b33f1b4
@@ -1848,7 +1837,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A6.1
     score: 0
     Position: {x: 6219, y: 1293}
   - Guid: b7da4a77-86bf-4e26-b7d5-9ea46b7eb061
@@ -1859,7 +1848,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A6.2
     score: 10
     Position: {x: 6226, y: 1559}
   - Guid: 63f47a94-dc20-47aa-bec7-c7b05ab69955
@@ -1870,7 +1859,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A6.4
     score: 0
     Position: {x: 6226, y: 2092}
   - Guid: 525b6ae9-b16c-48ed-ad47-952d8ab8a6df
@@ -1881,7 +1870,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A9.2
     score: 0
     Position: {x: 2925, y: 3069}
   - Guid: ec57f32f-4ec2-4256-95d9-6348ef4bbc9a
@@ -1892,7 +1881,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A9.1
     score: 0
     Position: {x: 2917, y: 2797}
   - Guid: 17c7bed1-4471-4234-a042-8f3a635a90cc
@@ -1903,7 +1892,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A9.3
     score: 0
     Position: {x: 2925, y: 3342}
   - Guid: b8b0c40c-bdb3-49b9-aa0c-38f5d002d9c9
@@ -1914,7 +1903,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A13B.1
     score: 10
     Position: {x: 6565, y: 3888}
   - Guid: 9f66c84a-854b-4928-aed0-02a1f3302d05
@@ -1925,7 +1914,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A13B.2
     score: 0
     Position: {x: 6572, y: 4172}
   - Guid: fa78b737-4fc3-47b2-ac7c-1206371f0586
@@ -1936,7 +1925,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A13B.3
     score: 0
     Position: {x: 6576, y: 4452}
   - Guid: 6631a936-7f41-4cfe-9b0a-d65975d4ed6d
@@ -1947,7 +1936,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A13B.4
     score: 10
     Position: {x: 6590, y: 4743}
   - Guid: 141bd3ca-0329-4801-86d6-9d2354e56334
@@ -1958,7 +1947,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A6.3
     score: 0
     Position: {x: 6228, y: 1830}
   - Guid: e26a9853-734a-4117-a685-5a08cbb63437
@@ -1969,7 +1958,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A7.4
     score: 0
     Position: {x: 271, y: 3513}
   - Guid: ff09d774-d497-4fab-b58c-4bbeec0d86b1
@@ -1980,7 +1969,7 @@ MonoBehaviour:
     IsEnd: 0
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A9.4
     score: 0
     Position: {x: 2918, y: 3609}
   - Guid: 0dea0356-cf41-472a-8a4e-6621ce80cac6
@@ -1991,7 +1980,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A15.1
     score: 0
     Position: {x: 1363, y: 5157}
   - Guid: 64702935-08ee-40d8-a77d-74f04f46ed47
@@ -2002,7 +1991,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A15.2
     score: 0
     Position: {x: 1362, y: 5421}
   - Guid: 2f5f8e5b-738b-43dd-b019-a6b3cc3e2862
@@ -2013,7 +2002,7 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A15.3
     score: 0
     Position: {x: 1359, y: 5679}
   - Guid: bc02d34e-0f1f-4e41-bd30-f85e442befd6
@@ -2024,9 +2013,20 @@ MonoBehaviour:
     IsEnd: 1
     nodeType: 2
     speaker: Speaker
-    audioId: Audio id
+    audioId: A15.4
     score: 10
     Position: {x: 1362, y: 5936}
+  - Guid: c4bb3047-6278-417e-a2a4-cd1281b77c97
+    AnswerName: A11A.4
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: A11A.4
+    score: 10
+    Position: {x: 5558, y: 3680}
   DialogueNodeData:
   - Guid: 3d115133-5201-45fd-9788-8dd176aa7d1e
     DialogueName: D1A.1.3
@@ -2034,7 +2034,7 @@ MonoBehaviour:
       enough with taking care of the patient\u2026"
     Speaker: Main surgeon
     Mood: Angry
-    audioId: Audio id
+    audioId: D1A.1.3
     nodeType: 3
     Position: {x: 1082, y: 653}
   - Guid: cc7e3bb0-2eda-4b58-bfcc-4a1501acb601
@@ -2042,7 +2042,7 @@ MonoBehaviour:
     DialogueText: "How can it be? Don\u2019t you know how to do your job?"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D1A.1.2
     nodeType: 3
     Position: {x: 1043, y: 373}
   - Guid: 38ca1a5d-cebc-49b7-a178-7fe126fbde7e
@@ -2050,7 +2050,7 @@ MonoBehaviour:
     DialogueText: Well, we need to overcome this unforeseen.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D1A.1.1
     nodeType: 3
     Position: {x: 1070, y: 114}
   - Guid: 6d7f57b4-2d56-4b63-9552-6c36975bfb40
@@ -2059,7 +2059,7 @@ MonoBehaviour:
       team!"
     Speaker: Main surgeon
     Mood: Angry
-    audioId: Audio id
+    audioId: D1A.1.4
     nodeType: 3
     Position: {x: 1060, y: 930}
   - Guid: a7d52d54-8039-4006-8f75-429b0bbee04e
@@ -2068,7 +2068,7 @@ MonoBehaviour:
       need to call the closest hospital."
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D1A.1.1.1
     nodeType: 3
     Position: {x: 1394, y: 114}
   - Guid: 4b1c18ed-4684-45f7-aee4-4f6d4c20d531
@@ -2077,7 +2077,7 @@ MonoBehaviour:
       we can continue!"
     Speaker: Main Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D1B.4
     nodeType: 3
     Position: {x: 3192, y: 970}
   - Guid: b9ce1a13-3b43-4dcf-86f2-6bd2bce11ee7
@@ -2085,7 +2085,7 @@ MonoBehaviour:
     DialogueText: " Well, that\u2019s your opinion\u2026"
     Speaker: Main Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D1B.3
     nodeType: 3
     Position: {x: 3234, y: 686}
   - Guid: c4c311c2-cd85-46a4-a15e-f06ec0783e38
@@ -2094,7 +2094,7 @@ MonoBehaviour:
       monitor the patient."
     Speaker: Main surgeon
     Mood: Angry
-    audioId: Audio id
+    audioId: D4A.1
     nodeType: 3
     Position: {x: 2138, y: 1215}
   - Guid: ee115971-d09a-40bf-8a77-17c6674c61cd
@@ -2102,7 +2102,7 @@ MonoBehaviour:
     DialogueText: "Sure, I\u2019ll do my best to finish as soon as possible."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D4A.3
     nodeType: 3
     Position: {x: 2193, y: 1810}
   - Guid: 96a87062-870a-4e69-9aca-f37408f49f33
@@ -2110,7 +2110,7 @@ MonoBehaviour:
     DialogueText: "Sure, I\u2019ll do my best to finish as soon as possible."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D4B.1
     nodeType: 3
     Position: {x: 3766, y: 1286}
   - Guid: 6ccc7828-8067-46a2-be33-e8d8f725f238
@@ -2119,7 +2119,7 @@ MonoBehaviour:
       soon."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D4B.2
     nodeType: 3
     Position: {x: 3768, y: 1567}
   - Guid: b4c0c96f-afff-4554-ad66-e4b5da67c2b8
@@ -2127,7 +2127,7 @@ MonoBehaviour:
     DialogueText: "I\u2019m sure you can do your work and keep the patient alive."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D4B.4
     nodeType: 3
     Position: {x: 3773, y: 2105}
   - Guid: d538bfc3-1e88-44e9-9e05-490416636cf3
@@ -2135,7 +2135,7 @@ MonoBehaviour:
     DialogueText: ' Well done, but for the next time, we need to learn from the mistakes.'
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D7.3
     nodeType: 3
     Position: {x: 498, y: 3227}
   - Guid: 228def21-4516-4944-badd-d3b9884a70a8
@@ -2143,7 +2143,7 @@ MonoBehaviour:
     DialogueText: Great, but this is the last time I work with this team.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D7.4
     nodeType: 3
     Position: {x: 498, y: 3514}
   - Guid: 049e33b8-0e4a-4be2-aa79-e73f4ade5a92
@@ -2152,7 +2152,7 @@ MonoBehaviour:
       patient.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D7.1
     nodeType: 3
     Position: {x: 510, y: 2653}
   - Guid: 4c5634d0-62f4-4a60-b840-6dc457844c88
@@ -2160,7 +2160,7 @@ MonoBehaviour:
     DialogueText: Ok.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.1
     nodeType: 3
     Position: {x: 1699, y: 2746}
   - Guid: c91013da-5516-4220-9869-39fe596ad0e9
@@ -2168,7 +2168,7 @@ MonoBehaviour:
     DialogueText: We have the stapler!
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.1.1
     nodeType: 3
     Position: {x: 1925, y: 2745}
   - Guid: 6210051a-e791-473d-bc25-63658efdd095
@@ -2176,7 +2176,7 @@ MonoBehaviour:
     DialogueText: "It\u2019s true, we need to hurry, but it won\u2019t take long"
     Speaker: Main surgeon
     Mood: Angry
-    audioId: Audio id
+    audioId: D8.4
     nodeType: 3
     Position: {x: 1696, y: 3608}
   - Guid: 9ae08e33-4b4e-4a5e-a054-38a6c1856e39
@@ -2185,7 +2185,7 @@ MonoBehaviour:
       just in case.'
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D10.1
     nodeType: 3
     Position: {x: 4548, y: 2714}
   - Guid: 6ac5f7c9-0810-4646-910a-32996c5bac23
@@ -2193,7 +2193,7 @@ MonoBehaviour:
     DialogueText: ' I recently took a course on this.'
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D10.2
     nodeType: 3
     Position: {x: 4544, y: 3022}
   - Guid: 37c955a4-f186-4d51-86de-c26945b2d655
@@ -2201,7 +2201,7 @@ MonoBehaviour:
     DialogueText: Are you questioning my skills?
     Speaker: Main surgeon
     Mood: Angry
-    audioId: Audio id
+    audioId: D10.3
     nodeType: 3
     Position: {x: 4544, y: 3315}
   - Guid: a5d097e7-d235-4804-b58b-aaa34ac92762
@@ -2209,7 +2209,7 @@ MonoBehaviour:
     DialogueText: Are you kidding me?
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D10.4
     nodeType: 3
     Position: {x: 4546, y: 3603}
   - Guid: 75ec7621-b6ba-4e20-b2d4-75c7886e8ad8
@@ -2217,7 +2217,7 @@ MonoBehaviour:
     DialogueText: This is a complicated patient and complications might arise.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D11A.2
     nodeType: 3
     Position: {x: 5799, y: 3083}
   - Guid: 5cb702fa-408f-47c6-8a19-7774ced67a08
@@ -2225,7 +2225,7 @@ MonoBehaviour:
     DialogueText: ' Mind your business and leave me work in peace.'
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D11A.1
     nodeType: 3
     Position: {x: 5782, y: 2796}
   - Guid: 4bb02653-3965-4b7a-92ca-6077216b1c65
@@ -2233,7 +2233,7 @@ MonoBehaviour:
     DialogueText: We need to work as a team to overcome the situation.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D11A.4
     nodeType: 3
     Position: {x: 5805, y: 3676}
   - Guid: 483343e5-9222-46c9-b217-811c1e52d2c7
@@ -2242,7 +2242,7 @@ MonoBehaviour:
       but it doesn\u2019t grant you to treat us like this."
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D1B
     nodeType: 3
     Position: {x: 2269, y: 399}
   - Guid: b50e185c-9c9a-4dc1-8a60-fa7480f10e1e
@@ -2250,23 +2250,15 @@ MonoBehaviour:
     DialogueText: Mind your business and leave me work in peace.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D11B.1
     nodeType: 3
     Position: {x: 432, y: 3939}
-  - Guid: 7a9e5541-b642-49e1-bebe-9cb2cdfef34e
-    DialogueName: D11B.2
-    DialogueText: This is a complicated patient and complications might arise.
-    Speaker: Main surgeon
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 447, y: 4224}
   - Guid: c9e4d93f-3454-4205-9266-e99a269cd579
     DialogueName: D11B.3
     DialogueText: This is the best I can do with this team.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D11B.3
     nodeType: 3
     Position: {x: 426, y: 4488}
   - Guid: 9cb338a7-dce4-4f24-91be-022c57352997
@@ -2274,7 +2266,7 @@ MonoBehaviour:
     DialogueText: Teamwork is important, but technical skills are way more important.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D12A.1
     nodeType: 3
     Position: {x: 1848, y: 3929}
   - Guid: 9828b140-cdaa-4349-832f-e2c513e1665d
@@ -2282,7 +2274,7 @@ MonoBehaviour:
     DialogueText: "Well, this all about the surgeons\u2019 work\u2026"
     Speaker: Camera assistant
     Mood: Calm
-    audioId: Audio id
+    audioId: D12B.0
     nodeType: 3
     Position: {x: 2552, y: 4120}
   - Guid: 36362a07-99ce-46cf-bfb7-ea45f4db25d8
@@ -2291,7 +2283,7 @@ MonoBehaviour:
       good job."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.1
     nodeType: 3
     Position: {x: 4324, y: 4010}
   - Guid: 7c1e4dcf-394a-49ab-bc31-813c7e0988e6
@@ -2299,7 +2291,7 @@ MonoBehaviour:
     DialogueText: I know who to do my job
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.3
     nodeType: 3
     Position: {x: 4339, y: 4547}
   - Guid: 173b1591-05e6-4f87-a6b5-50f3289b3309
@@ -2307,7 +2299,7 @@ MonoBehaviour:
     DialogueText: "Well, I\u2019m just saying I would do another suture\u2026"
     Speaker: Camera assistant
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.3.1
     nodeType: 3
     Position: {x: 4541, y: 4547}
   - Guid: bbbeff11-0a2d-436a-8825-6e9ef3012e6b
@@ -2315,7 +2307,7 @@ MonoBehaviour:
     DialogueText: " I\u2019m not sure, apparently, it\u2019s ok."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.4
     nodeType: 3
     Position: {x: 4338, y: 4824}
   - Guid: e8dba44c-5928-48eb-a2cf-e6015b287839
@@ -2323,7 +2315,7 @@ MonoBehaviour:
     DialogueText: Why?
     Speaker: Main Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: A3.4
     nodeType: 3
     Position: {x: 647, y: 2206}
   - Guid: 61ae29e3-b720-491b-bcda-10d64c84ab53
@@ -2331,7 +2323,7 @@ MonoBehaviour:
     DialogueText: ' This is the best I can do with this team.'
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D11A.3
     nodeType: 3
     Position: {x: 5792, y: 3382}
   - Guid: 81e656de-5c31-4a14-b086-ddeaef9fd0fb
@@ -2341,7 +2333,7 @@ MonoBehaviour:
       starting the procedure"
     Speaker: Main Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D1B.2
     nodeType: 3
     Position: {x: 3148, y: 373}
   - Guid: 964b0c51-8a55-4d1c-afa4-629a224ddbbd
@@ -2351,7 +2343,7 @@ MonoBehaviour:
       procedure.
     Speaker: Main Surgeon
     Mood: Angry
-    audioId: Audio id
+    audioId: D1B.1
     nodeType: 3
     Position: {x: 3146, y: 39}
   - Guid: 8cfc2a34-0ab5-478b-bd93-1cb847bee75c
@@ -2359,24 +2351,16 @@ MonoBehaviour:
     DialogueText: " You\u2019re right, but we misidentified the reference number."
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D1B.1.1
     nodeType: 3
     Position: {x: 4078, y: 49}
-  - Guid: 9dc44579-6f45-482b-a4d3-df4c5be21e73
-    DialogueName: D1B.2.1
-    DialogueText: We will double check it from now on.
-    Speaker: Instrumentalist
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 4129, y: 366}
   - Guid: 19c4b421-4dde-4060-995a-a3905395733e
     DialogueName: D1B.1.2
     DialogueText: " I\u2019m sorry, but there isn\u2019t any. To get one, we would
       need to call the closest hospital."
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D1B.1.2
     nodeType: 3
     Position: {x: 4542, y: 52}
   - Guid: 8ab11780-239a-4290-bc22-c4fab8372c54
@@ -2385,7 +2369,7 @@ MonoBehaviour:
       need to call the closest hospital."
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D1B.2.2
     nodeType: 3
     Position: {x: 4468, y: 359}
   - Guid: 3f620098-4aeb-46b0-8c0f-01629bc534fc
@@ -2394,7 +2378,7 @@ MonoBehaviour:
       need to call the closest hospital."
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D1B.3.1
     nodeType: 3
     Position: {x: 3470, y: 684}
   - Guid: 3946060f-b17a-440d-8b33-96ce478454cc
@@ -2403,7 +2387,7 @@ MonoBehaviour:
       need to call the closest hospital."
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D1B.4.1
     nodeType: 3
     Position: {x: 3695, y: 967}
   - Guid: b120fe29-1b39-4588-b3af-f248cc0e1983
@@ -2411,7 +2395,7 @@ MonoBehaviour:
     DialogueText: Call immediately and get the staples as soon as possible!
     Speaker: Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D1B.4.2
     nodeType: 3
     Position: {x: 4277, y: 963}
   - Guid: afac19cb-08a7-48c8-a636-22f76bbf6a29
@@ -2420,7 +2404,7 @@ MonoBehaviour:
       with a manual suture."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.3
     nodeType: 3
     Position: {x: 6019, y: 736}
   - Guid: 1d9ee27b-36a7-4813-8826-c876783540ab
@@ -2429,7 +2413,7 @@ MonoBehaviour:
       the staples as soon as possible!"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.4
     nodeType: 3
     Position: {x: 6050, y: 1050}
   - Guid: 6ed3bfed-e0ce-4d42-85c0-696a12d47a13
@@ -2437,7 +2421,7 @@ MonoBehaviour:
     DialogueText: "Let\u2019s continue, I will use a black extra thick"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.1
     nodeType: 3
     Position: {x: 6012, y: 86}
   - Guid: fa911695-66d8-4b3f-aa8d-cd025baa979a
@@ -2446,7 +2430,7 @@ MonoBehaviour:
       in the other hospital?
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D2
     nodeType: 3
     Position: {x: 5170, y: 471}
   - Guid: 60bf7faf-cfa1-4281-b72f-5f08a741585a
@@ -2454,7 +2438,7 @@ MonoBehaviour:
     DialogueText: Ok. But, shall we call for the staples even though?
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D3
     nodeType: 3
     Position: {x: -123, y: 1449}
   - Guid: d072ee59-5bd9-4397-b4f9-9a46b1321421
@@ -2462,7 +2446,7 @@ MonoBehaviour:
     DialogueText: "Haven\u2019t you heard? We are continuing! "
     Speaker: Main Surgeon
     Mood: Angry
-    audioId: Audio id
+    audioId: D3.1
     nodeType: 3
     Position: {x: 663, y: 1365}
   - Guid: 4f3adef3-a76f-475f-a7b1-489c263ee5cc
@@ -2471,7 +2455,7 @@ MonoBehaviour:
       work on it, just in case.
     Speaker: Main Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D3.2
     nodeType: 3
     Position: {x: 630, y: 1656}
   - Guid: a07a81d4-382e-4a44-80f6-c0ce8711232e
@@ -2479,7 +2463,7 @@ MonoBehaviour:
     DialogueText: "Why are you questioning my decisions? I\u2019m the one deciding!"
     Speaker: Main Surgeon
     Mood: Angry
-    audioId: Audio id
+    audioId: D3.3
     nodeType: 3
     Position: {x: 630, y: 1925}
   - Guid: 3e13e11c-eeb4-4a07-abb5-b6c725098f7d
@@ -2487,7 +2471,7 @@ MonoBehaviour:
     DialogueText: Well, that sounds right. Please, make the call.
     Speaker: Main Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: A3.4.2
     nodeType: 3
     Position: {x: 1419, y: 2207}
   - Guid: ac3d1c7b-2633-4cdb-af50-658eebecd518
@@ -2496,7 +2480,7 @@ MonoBehaviour:
       we really need them later on.'
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: A3.4.1
     nodeType: 3
     Position: {x: 812, y: 2203}
   - Guid: 562b8581-e165-4963-969c-7c9410d4197b
@@ -2505,7 +2489,7 @@ MonoBehaviour:
       much longer, because the patient might be at risk.'
     Speaker: Anaesthesiologist
     Mood: Calm
-    audioId: Audio id
+    audioId: D4A
     nodeType: 3
     Position: {x: 1199, y: 1439}
   - Guid: f5065643-d3e8-4629-a9f0-65699f2cfd36
@@ -2513,7 +2497,7 @@ MonoBehaviour:
     DialogueText: This is a teamwork, and we all play a role here.
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D4A.1.1
     nodeType: 3
     Position: {x: 2647, y: 1212}
   - Guid: 667721da-2fa1-459a-a393-06123b74e96d
@@ -2521,7 +2505,7 @@ MonoBehaviour:
     DialogueText: "That\u2019s true, but I\u2019ve made a decision."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D4A.2
     nodeType: 3
     Position: {x: 2171, y: 1500}
   - Guid: 3b71702e-c1d0-40c4-95ba-1e4efd647281
@@ -2530,7 +2514,7 @@ MonoBehaviour:
       soon."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D4A.4
     nodeType: 3
     Position: {x: 2117, y: 2134}
   - Guid: b59f7270-bf8b-469c-a10b-2e1f73c13fde
@@ -2538,7 +2522,7 @@ MonoBehaviour:
     DialogueText: I hope so...
     Speaker: Anaesthesiologist
     Mood: Calm
-    audioId: Audio id
+    audioId: D4A.4.1
     nodeType: 3
     Position: {x: 2569, y: 2130}
   - Guid: 00882b6d-d749-4367-9dc6-9691d7c9e8c2
@@ -2547,7 +2531,7 @@ MonoBehaviour:
       much longer, because the patient might be at risk.'
     Speaker: Anaesthesiologist
     Mood: Calm
-    audioId: Audio id
+    audioId: D4B
     nodeType: 3
     Position: {x: 2525, y: 1550}
   - Guid: 68423c37-5a7d-4267-ac50-8b88b2ce415f
@@ -2555,23 +2539,15 @@ MonoBehaviour:
     DialogueText: " That\u2019s right, let\u2019s keep the focus."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D4B.3
     nodeType: 3
     Position: {x: 3775, y: 1841}
-  - Guid: f6a0ec47-dd5d-4d14-a853-76b36172a833
-    DialogueName: D5.1
-    DialogueText: "Why don\u2019t you turn up the monitors volume?"
-    Speaker: Surgeon
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 5103, y: 1317}
   - Guid: 89dceb4f-1dcc-4f71-add0-f73e315e3d69
     DialogueName: D5.2
     DialogueText: "Don\u2019t worry, we\u2019ll turn down the radio volume "
     Speaker: Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D5.2
     nodeType: 3
     Position: {x: 5108, y: 1594}
   - Guid: 0361537f-36ef-46b3-a156-039d02ba9b34
@@ -2579,7 +2555,7 @@ MonoBehaviour:
     DialogueText: Yes, please.
     Speaker: Main Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D6.2
     nodeType: 3
     Position: {x: 6419, y: 1557}
   - Guid: 49ace5a3-c12b-4646-853a-e324c0a66bda
@@ -2587,7 +2563,7 @@ MonoBehaviour:
     DialogueText: I'm already waiting for it.
     Speaker: Main Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D6.3
     nodeType: 3
     Position: {x: 6425, y: 1826}
   - Guid: 436ed1b1-6bb3-4cdd-8abb-0f80f826aac4
@@ -2595,7 +2571,7 @@ MonoBehaviour:
     DialogueText: Of course
     Speaker: Main Surgeon
     Mood: Angry
-    audioId: Audio id
+    audioId: D6.1
     nodeType: 3
     Position: {x: 6407, y: 1293}
   - Guid: 721c9dd7-65b6-477e-898a-bbec1d075117
@@ -2603,7 +2579,7 @@ MonoBehaviour:
     DialogueText: What do you think?
     Speaker: Main Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D6.4
     nodeType: 3
     Position: {x: 6431, y: 2088}
   - Guid: 809550c3-fc13-4dd3-858f-4b7d2d18b954
@@ -2611,7 +2587,7 @@ MonoBehaviour:
     DialogueText: " I don\u2019t find this appropriate; I cannot hear the alarms."
     Speaker: Anaesthesiologist
     Mood: Calm
-    audioId: Audio id
+    audioId: D5
     nodeType: 3
     Position: {x: 4464, y: 1514}
   - Guid: 8f18dcb5-2c41-44e5-a226-9f2c3f280cdb
@@ -2619,7 +2595,7 @@ MonoBehaviour:
     DialogueText: Please, turn it down
     Speaker: Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D5.2.1
     nodeType: 3
     Position: {x: 5424, y: 1589}
   - Guid: 8fffce7a-0f20-4c50-87ba-0d2a42f1c8ad
@@ -2627,7 +2603,7 @@ MonoBehaviour:
     DialogueText: You might turn up the volume to hear it better
     Speaker: Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D5.3
     nodeType: 3
     Position: {x: 5090, y: 1856}
   - Guid: 42288395-7e1b-4321-86ce-5e5df37cbe4c
@@ -2635,7 +2611,7 @@ MonoBehaviour:
     DialogueText: We have the stapler!
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D5.3.1
     nodeType: 3
     Position: {x: 5405, y: 1847}
   - Guid: 755bf4ab-e2d1-4138-ad67-2678ff43d2a9
@@ -2643,7 +2619,7 @@ MonoBehaviour:
     DialogueText: "That\u2019s ok, I didn\u2019t realize."
     Speaker: Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D5.4
     nodeType: 3
     Position: {x: 5082, y: 2128}
   - Guid: dd337353-d163-48b8-a95d-cfeac73817d1
@@ -2651,7 +2627,7 @@ MonoBehaviour:
     DialogueText: Please, turn it off.
     Speaker: Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D5.4.1
     nodeType: 3
     Position: {x: 5274, y: 2127}
   - Guid: 394d4316-baf6-4bb3-8e9f-666c055a537b
@@ -2659,7 +2635,7 @@ MonoBehaviour:
     DialogueText: We have the stapler!
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D5.4.2
     nodeType: 3
     Position: {x: 5476, y: 2127}
   - Guid: 2a520996-6e50-42cd-afff-45024f56a027
@@ -2667,7 +2643,7 @@ MonoBehaviour:
     DialogueText: Thanks, the stapler is now correctly placed.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D7
     nodeType: 3
     Position: {x: -108, y: 2832}
   - Guid: 3ad43652-9363-41c9-80fa-e0a2db644768
@@ -2675,7 +2651,7 @@ MonoBehaviour:
     DialogueText: "Finally, I don\u2019t want this to happen again."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D7.2
     nodeType: 3
     Position: {x: 498, y: 2947}
   - Guid: 72b63d81-c727-46fa-865d-8a63eecd2d43
@@ -2683,7 +2659,7 @@ MonoBehaviour:
     DialogueText: We have the stapler!
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.2.1
     nodeType: 3
     Position: {x: 2045, y: 3036}
   - Guid: 39c61742-811e-412f-99b7-0ea11dd71b4c
@@ -2691,7 +2667,7 @@ MonoBehaviour:
     DialogueText: "I know, but I can\u2019t work faster, this is so much pressure!"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.2
     nodeType: 3
     Position: {x: 1655, y: 3042}
   - Guid: 50f6568d-c480-45b0-aace-8cf516703446
@@ -2699,7 +2675,7 @@ MonoBehaviour:
     DialogueText: We have the stapler!
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.4.1
     nodeType: 3
     Position: {x: 2069, y: 3605}
   - Guid: 3bfc6a8d-fe85-4b8c-b086-f03261f593df
@@ -2707,7 +2683,7 @@ MonoBehaviour:
     DialogueText: We have the stapler!
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D8.3.1
     nodeType: 3
     Position: {x: 2081, y: 3331}
   - Guid: 89f0cc0f-dfe1-4db7-9354-2af2b67e4fd7
@@ -2715,7 +2691,7 @@ MonoBehaviour:
     DialogueText: Your comments put on me more pressure than I already have.
     Speaker: Main surgeon
     Mood: Angry
-    audioId: Audio id
+    audioId: D8.3
     nodeType: 3
     Position: {x: 1658, y: 3323}
   - Guid: f7f906e9-99cb-4005-8f35-c9e85be6a117
@@ -2723,7 +2699,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.3.1
     nodeType: 3
     Position: {x: 3361, y: 3352}
   - Guid: 0db36ae8-8380-4380-880a-e9f8c54c4210
@@ -2731,7 +2707,7 @@ MonoBehaviour:
     DialogueText: " I can\u2019t use it now, it\u2019s too late for it!"
     Speaker: Main surgeon
     Mood: Angry
-    audioId: Audio id
+    audioId: D9.1
     nodeType: 3
     Position: {x: 3130, y: 2803}
   - Guid: 124c5ee3-50ce-4c43-8a61-75c19b74fe06
@@ -2739,7 +2715,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1.1
     nodeType: 3
     Position: {x: 3389, y: 2804}
   - Guid: 546c8627-c112-4c58-b0fe-0e2cac83724f
@@ -2747,7 +2723,7 @@ MonoBehaviour:
     DialogueText: ' Hurry up, we have to control this before the patient dies.'
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.2
     nodeType: 3
     Position: {x: 3140, y: 3073}
   - Guid: fbbd3bc4-27bb-4a8f-923a-d7e6988c19af
@@ -2755,7 +2731,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.2.1
     nodeType: 3
     Position: {x: 3527, y: 3072}
   - Guid: 73481f4e-b701-4a04-83f4-a6a18384dce0
@@ -2763,7 +2739,7 @@ MonoBehaviour:
     DialogueText: " Don\u2019t disturb, I\u2019m almost done."
     Speaker: Main surgeon
     Mood: Angry
-    audioId: Audio id
+    audioId: D9.3
     nodeType: 3
     Position: {x: 3123, y: 3341}
   - Guid: 4407d6e5-de0b-4fc9-b657-84f120e14dcd
@@ -2772,7 +2748,7 @@ MonoBehaviour:
       suture."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D11A
     nodeType: 3
     Position: {x: 5001, y: 3113}
   - Guid: a3ed8c9e-75a8-4007-9b2e-3fead6bb81c3
@@ -2781,7 +2757,7 @@ MonoBehaviour:
       suture"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D11B
     nodeType: 3
     Position: {x: -345, y: 4134}
   - Guid: f3109cfc-a29d-4ba3-94fb-56a63a6ee1d9
@@ -2789,7 +2765,7 @@ MonoBehaviour:
     DialogueText: We need to work as a team to overcome the situation.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D11B.4
     nodeType: 3
     Position: {x: 434, y: 4762}
   - Guid: 9fd3481c-7b35-4e41-a50c-264ae1765189
@@ -2797,7 +2773,7 @@ MonoBehaviour:
     DialogueText: "Well, this all about the surgeons\u2019 work\u2026"
     Speaker: Camera assistant
     Mood: Calm
-    audioId: Audio id
+    audioId: D12A.0
     nodeType: 3
     Position: {x: 1217, y: 4173}
   - Guid: 60defc1c-7f92-4b9a-b4c7-25d035a33b36
@@ -2805,7 +2781,7 @@ MonoBehaviour:
     DialogueText: "Everything is going ok, we\u2019re doing a great teamwork."
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D12A
     nodeType: 3
     Position: {x: 839, y: 4173}
   - Guid: 01c3e2b3-16b7-4f28-8a81-539e0f68af8f
@@ -2813,7 +2789,7 @@ MonoBehaviour:
     DialogueText: "This is teamwok, despite not everybody thinks the same\u2026"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D12A.2
     nodeType: 3
     Position: {x: 1785, y: 4192}
   - Guid: 64479ce9-b959-4a67-8727-a9aa7ce0e6c9
@@ -2821,7 +2797,7 @@ MonoBehaviour:
     DialogueText: "Of course! It\u2019s all on me, I\u2019m doing all the work."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D12A.4
     nodeType: 3
     Position: {x: 1796, y: 4762}
   - Guid: f62b96de-bf9c-4acf-ba35-377de902293e
@@ -2829,7 +2805,7 @@ MonoBehaviour:
     DialogueText: "Everything is going ok, we\u2019re doing a great teamwork"
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D12B
     nodeType: 3
     Position: {x: 2193, y: 4120}
   - Guid: 3dc1e2ba-2f31-4fbc-9e89-ba388d7b7492
@@ -2837,7 +2813,7 @@ MonoBehaviour:
     DialogueText: Teamwork is important, but technical skills are way more important.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D12B.1
     nodeType: 3
     Position: {x: 3102, y: 3942}
   - Guid: 33b07d5d-66e5-40c6-aa77-700054d677f2
@@ -2845,7 +2821,7 @@ MonoBehaviour:
     DialogueText: "This is teamwok, despite not everybody thinks the same\u2026"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D12B.2
     nodeType: 3
     Position: {x: 3078, y: 4237}
   - Guid: 9e78312f-300b-4706-b16d-5ad1479de108
@@ -2854,7 +2830,7 @@ MonoBehaviour:
       not make it.'
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D12B.3
     nodeType: 3
     Position: {x: 3065, y: 4516}
   - Guid: 14f39c1a-86f7-4f1f-a875-2e7fa82d9565
@@ -2862,7 +2838,7 @@ MonoBehaviour:
     DialogueText: "Of course! It\u2019s all on me, I\u2019m doing all the work."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D12B.4
     nodeType: 3
     Position: {x: 3082, y: 4810}
   - Guid: 1347faf7-b20c-45d0-9e31-0ec32e0ae4fb
@@ -2871,7 +2847,7 @@ MonoBehaviour:
       finished."
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.1.1
     nodeType: 3
     Position: {x: 4781, y: 4012}
   - Guid: 3769729a-2ae6-4d26-beb8-443678ad8fc7
@@ -2879,7 +2855,7 @@ MonoBehaviour:
     DialogueText: " It\u2019s not about doubting, but I would do another suture\u2026"
     Speaker: Camera assistant
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.2.1
     nodeType: 3
     Position: {x: 4677, y: 4266}
   - Guid: e32854de-9e0c-4113-b969-6c362f562883
@@ -2887,7 +2863,7 @@ MonoBehaviour:
     DialogueText: " I\u2019ll suture the skin and then you can recover the patient."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.1.2
     nodeType: 3
     Position: {x: 5213, y: 4009}
   - Guid: cd69ad93-20d0-46a8-ad01-c3e9d2def6df
@@ -2895,7 +2871,7 @@ MonoBehaviour:
     DialogueText: "Great! There\u2019s no leak in the suture! Well done, we are finished."
     Speaker: 'Instrumentalist '
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.2.2
     nodeType: 3
     Position: {x: 5080, y: 4265}
   - Guid: 97c67f70-55d6-4aaf-9317-94346e21a48b
@@ -2903,7 +2879,7 @@ MonoBehaviour:
     DialogueText: Oh, no! the suture is leaking as the instestine has torn!
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.3.2
     nodeType: 3
     Position: {x: 4871, y: 4548}
   - Guid: d7a724c9-f1f2-4b48-aa84-9c6110dfb208
@@ -2911,7 +2887,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.3.3
     nodeType: 3
     Position: {x: 5234, y: 4550}
   - Guid: 6fb1a180-8c48-4367-8f38-30d7f06bf878
@@ -2919,7 +2895,7 @@ MonoBehaviour:
     DialogueText: ": I\u2019ll suture the skin and then you can recover the patient."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.2.3
     nodeType: 3
     Position: {x: 5509, y: 4260}
   - Guid: d624d115-8b00-4465-a7dc-f4a113363a3e
@@ -2928,7 +2904,7 @@ MonoBehaviour:
       good job."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B.1
     nodeType: 3
     Position: {x: 6808, y: 3896}
   - Guid: 67872a85-d1ed-4c5c-9438-0c7caacbbf57
@@ -2936,7 +2912,7 @@ MonoBehaviour:
     DialogueText: "Well, I\u2019m just saying I would do another suture\u2026"
     Speaker: Camera assistant
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B.3.1
     nodeType: 3
     Position: {x: 7027, y: 4453}
   - Guid: 4fe903a0-b470-4b7c-b3b1-b82aff7ed699
@@ -2944,7 +2920,7 @@ MonoBehaviour:
     DialogueText: I know who to do my job.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B.3
     nodeType: 3
     Position: {x: 6824, y: 4451}
   - Guid: 61400b25-182b-48e7-b4fa-434cf9692703
@@ -2952,7 +2928,7 @@ MonoBehaviour:
     DialogueText: " I\u2019m done, let\u2019s check the suture with methylene blue."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B
     nodeType: 3
     Position: {x: 6088, y: 4051}
   - Guid: e13a1a82-a2df-4a3c-8306-95256f18176f
@@ -2960,7 +2936,7 @@ MonoBehaviour:
     DialogueText: "Of course I\u2019m sure, are you doubting about me?"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B.2
     nodeType: 3
     Position: {x: 6816, y: 4170}
   - Guid: d78fa642-a8ab-4a7f-9876-cfdae6213c74
@@ -2968,23 +2944,15 @@ MonoBehaviour:
     DialogueText: "Great! There\u2019s no leak in the suture! Well done, we are finished."
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B.1.1
     nodeType: 3
     Position: {x: 7257, y: 3896}
-  - Guid: 04caf85f-5d48-4042-8008-6c5e1c4b890f
-    DialogueName: D13B.2.1
-    DialogueText: "It\u2019s not about doubting, but I would do another suture\u2026"
-    Speaker: Camera assistant
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 7158, y: 4169}
   - Guid: ec55a562-73b2-4412-8c59-aa53f93d56ce
     DialogueName: D13B.4
     DialogueText: " I\u2019m not sure, apparently, it\u2019s ok"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B.4
     nodeType: 3
     Position: {x: 6815, y: 4751}
   - Guid: 24a6aa64-5df3-46ba-89da-484ffa752ece
@@ -2992,7 +2960,7 @@ MonoBehaviour:
     DialogueText: "I\u2019ll suture the skin and then you can recover the patient."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B.1.2
     nodeType: 3
     Position: {x: 7681, y: 3899}
   - Guid: 188f326b-d622-4662-a9f8-caf37d895338
@@ -3000,23 +2968,15 @@ MonoBehaviour:
     DialogueText: "I\u2019ll suture the skin and then you can recover the patient."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B.2.3
     nodeType: 3
     Position: {x: 7987, y: 4179}
-  - Guid: b5b4adcd-a934-456a-9c9a-32e8785c57c4
-    DialogueName: D13B.2.2
-    DialogueText: "Great! There\u2019s no leak in the suture! Well done, we are finished."
-    Speaker: Instrumentalist
-    Mood: Calm
-    audioId: Audio id
-    nodeType: 3
-    Position: {x: 7551, y: 4176}
   - Guid: 0c50cafa-6cfe-4d2a-a9da-d886035d17d8
     DialogueName: D13B.3.2
     DialogueText: ' Oh, no! the suture is leaking as the instestine has torn!'
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B.3.2
     nodeType: 3
     Position: {x: 7375, y: 4454}
   - Guid: 02cd66cc-67ed-45f8-b8db-8390e35507f5
@@ -3024,7 +2984,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B.3.3
     nodeType: 3
     Position: {x: 7752, y: 4455}
   - Guid: f5bc7eaf-ab35-451f-9072-4284c3030bcd
@@ -3033,7 +2993,7 @@ MonoBehaviour:
       have asked for the stapler when we realized it was missing.
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B.4.1
     nodeType: 3
     Position: {x: 7047, y: 4747}
   - Guid: 76a8b6d1-adb3-41b8-821b-bc28adc3f256
@@ -3041,7 +3001,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13B.4.2
     nodeType: 3
     Position: {x: 7851, y: 4742}
   - Guid: 8e5097a0-d8af-4bc8-a0cf-74999225376f
@@ -3049,7 +3009,7 @@ MonoBehaviour:
     DialogueText: " I\u2019ll go to stockage room, to check if we have one there."
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D1A.3
     nodeType: 3
     Position: {x: 298, y: 181}
   - Guid: 09af7611-3f6a-4213-805e-03a08337c981
@@ -3057,7 +3017,7 @@ MonoBehaviour:
     DialogueText: Give me a 45 mm golden stapler, please.
     Speaker: Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D1A.1
     nodeType: 3
     Position: {x: -210, y: 187}
   - Guid: 1ccf5775-f21a-42e3-afb7-cd7442aed48a
@@ -3065,7 +3025,7 @@ MonoBehaviour:
     DialogueText: " I\u2019m sorry, there is no stapler here."
     Speaker: Instrumentist
     Mood: Calm
-    audioId: Audio id
+    audioId: D1A.2
     nodeType: 3
     Position: {x: 68, y: 182}
   - Guid: 4009e591-b71b-4ac1-a935-eb391ca42847
@@ -3073,7 +3033,7 @@ MonoBehaviour:
     DialogueText: "Of course I\u2019m sure, are you doubting about me?"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.2
     nodeType: 3
     Position: {x: 4344, y: 4265}
   - Guid: 507dadc1-f065-47ae-b1fd-749dea43efef
@@ -3081,7 +3041,7 @@ MonoBehaviour:
     DialogueText: Oh, no! the suture is leaking as the instestine has torn!
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.4.1
     nodeType: 3
     Position: {x: 4565, y: 4823}
   - Guid: 4c570daf-d34b-4d51-b858-54f5e5c6a442
@@ -3089,7 +3049,7 @@ MonoBehaviour:
     DialogueText: We have the stapler!
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A.4.2
     nodeType: 3
     Position: {x: 4924, y: 4829}
   - Guid: 7daf30df-4100-4a71-8e49-fcae7d6b3c4f
@@ -3097,7 +3057,7 @@ MonoBehaviour:
     DialogueText: "I\u2019m done, let\u2019s check the suture with methylene blue."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D13A
     nodeType: 3
     Position: {x: 3558, y: 4130}
   - Guid: 3638a011-6bfd-48c0-9b75-ce1b442c4374
@@ -3105,7 +3065,7 @@ MonoBehaviour:
     DialogueText: ' Yes, as quick as possible.'
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.4
     nodeType: 3
     Position: {x: 3136, y: 3617}
   - Guid: 8d86ce10-1a1d-46f6-9b88-b8d4d915f741
@@ -3114,7 +3074,7 @@ MonoBehaviour:
       not make it.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D12A.3
     nodeType: 3
     Position: {x: 1755, y: 4515}
   - Guid: 56c4220d-f251-42f2-9b92-5f7b84f32392
@@ -3123,7 +3083,7 @@ MonoBehaviour:
       suture."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D2.2
     nodeType: 3
     Position: {x: 6044, y: 387}
   - Guid: 055858b6-1da1-416a-95e4-2aaa72923437
@@ -3131,7 +3091,7 @@ MonoBehaviour:
     DialogueText: I'm working on this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D15.2
     nodeType: 3
     Position: {x: 735, y: 5170}
   - Guid: 2d93c662-6647-4f68-a927-3dce0ddc8a81
@@ -3139,7 +3099,7 @@ MonoBehaviour:
     DialogueText: We should have asked fot the stapler...
     Speaker: Instrumentalist nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D15.3
     nodeType: 3
     Position: {x: 931, y: 5171}
   - Guid: 0526b190-3520-4491-8365-6552a06b049d
@@ -3147,7 +3107,7 @@ MonoBehaviour:
     DialogueText: This is looking bad; we are losing the patient.
     Speaker: Anaesthesiologist
     Mood: Calm
-    audioId: Audio id
+    audioId: D15.1
     nodeType: 3
     Position: {x: 415, y: 5170}
   - Guid: a0154e47-da62-4960-aa75-9ec503216aca
@@ -3155,7 +3115,7 @@ MonoBehaviour:
     DialogueText: Is this a school playground?
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D15.3.1
     nodeType: 3
     Position: {x: 1605, y: 5678}
   - Guid: 25794bb7-11bf-4de1-9cc8-b2448a3776f3
@@ -3163,7 +3123,7 @@ MonoBehaviour:
     DialogueText: Oh, no! the suture is leaking as the instestine has torn!
     Speaker: Instrumentalist nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D15.3.2
     nodeType: 3
     Position: {x: 1825, y: 5679}
   - Guid: bd414572-6d6d-44a4-b94b-4fbd2ec18d9d
@@ -3171,7 +3131,7 @@ MonoBehaviour:
     DialogueText: Oh, no! the suture is leaking as the instestine has torn!
     Speaker: Instrumentalist nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D15.4.2
     nodeType: 3
     Position: {x: 1804, y: 5937}
   - Guid: baec2e82-43e8-4f61-aa4b-1565271311c9
@@ -3179,7 +3139,7 @@ MonoBehaviour:
     DialogueText: If only I had a better team!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D15.2.1
     nodeType: 3
     Position: {x: 1604, y: 5421}
   - Guid: cff0a532-8ad6-496c-9ce8-0f5ea674d4f3
@@ -3187,7 +3147,7 @@ MonoBehaviour:
     DialogueText: Shut up and work!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D15.1.1
     nodeType: 3
     Position: {x: 1601, y: 5158}
   - Guid: 7ccc10bd-2a36-43a2-9c49-f465720152c0
@@ -3195,7 +3155,7 @@ MonoBehaviour:
     DialogueText: Oh, no! the suture is leaking as the instestine has torn!
     Speaker: Instrumentalist nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D15.1.2
     nodeType: 3
     Position: {x: 1808, y: 5155}
   - Guid: 0485736f-215e-4131-b171-0af092cc6ec4
@@ -3203,15 +3163,15 @@ MonoBehaviour:
     DialogueText: Everybody, please, focus on your job.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D15.4.1
     nodeType: 3
     Position: {x: 1539, y: 5935}
   - Guid: 28615468-204c-47ec-9831-baae28519281
-    DialogueName: DialogueID
+    DialogueName: D9.1.1
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1.1
     nodeType: 3
     Position: {x: 2169, y: 5937}
   - Guid: 670dee49-601c-4867-9c8c-12cdf8b94ddf
@@ -3219,31 +3179,71 @@ MonoBehaviour:
     DialogueText: Oh, no! the suture is leaking as the instestine has torn!
     Speaker: Instrumentalist nurse
     Mood: Calm
-    audioId: Audio id
+    audioId: D15.2.2
     nodeType: 3
     Position: {x: 1804, y: 5421}
   - Guid: a02a8acf-0598-4bdc-859b-110b4a4277f4
-    DialogueName: DialogueID
+    DialogueName: D9.1.1
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1.1
     nodeType: 3
     Position: {x: 2157, y: 5417}
   - Guid: 63aa3768-838f-4412-b332-74c98f50fa4d
-    DialogueName: DialogueID
+    DialogueName: D9.1.1
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1.1
     nodeType: 3
     Position: {x: 2174, y: 5154}
   - Guid: 564f8fe5-85b2-4978-aaec-585a030839f2
-    DialogueName: DialogueID
+    DialogueName: D9.1.1
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D9.1.1
     nodeType: 3
     Position: {x: 2189, y: 5678}
+  - Guid: 9dc44579-6f45-482b-a4d3-df4c5be21e73
+    DialogueName: D1B.2.1
+    DialogueText: We will double check it from now on.
+    Speaker: Instrumentalist
+    Mood: Calm
+    audioId: D1B.2.1
+    nodeType: 3
+    Position: {x: 4129, y: 366}
+  - Guid: f6a0ec47-dd5d-4d14-a853-76b36172a833
+    DialogueName: D5.1
+    DialogueText: "Why don\u2019t you turn up the monitors volume?"
+    Speaker: Surgeon
+    Mood: Calm
+    audioId: D5.1
+    nodeType: 3
+    Position: {x: 5103, y: 1317}
+  - Guid: 7a9e5541-b642-49e1-bebe-9cb2cdfef34e
+    DialogueName: D11B.2
+    DialogueText: This is a complicated patient and complications might arise.
+    Speaker: Main surgeon
+    Mood: Calm
+    audioId: D11B.2
+    nodeType: 3
+    Position: {x: 447, y: 4224}
+  - Guid: 04caf85f-5d48-4042-8008-6c5e1c4b890f
+    DialogueName: D13B.2.1
+    DialogueText: "It\u2019s not about doubting, but I would do another suture\u2026"
+    Speaker: Camera assistant
+    Mood: Calm
+    audioId: D13B.2.1
+    nodeType: 3
+    Position: {x: 7158, y: 4169}
+  - Guid: b5b4adcd-a934-456a-9c9a-32e8785c57c4
+    DialogueName: D13B.2.2
+    DialogueText: "Great! There\u2019s no leak in the suture! Well done, we are finished."
+    Speaker: Instrumentalist
+    Mood: Calm
+    audioId: D13B.2.2
+    nodeType: 3
+    Position: {x: 7551, y: 4176}
   ExposedProperties: []

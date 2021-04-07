@@ -7,7 +7,7 @@ using System.IO;
 
 public enum Status {Situation, Answer };
 
-public enum Cases { DefaultCase, Case3, Case9, Case5 };
+public enum Cases { DefaultCase, Case3, Case9, Case5, Case7 };
 
 public class UI_Manager : MonoBehaviour
 {
@@ -393,11 +393,14 @@ public class UI_Manager : MonoBehaviour
                 case "CASE3":
                     currentCase = Cases.Case3;
                     break;
-                case "CASE9":
-                    currentCase = Cases.Case9;
-                    break;
                 case "CASE5":
                     currentCase = Cases.Case5;
+                    break;
+                case "CASE7":
+                    currentCase = Cases.Case7;
+                    break;
+                case "CASE9":
+                    currentCase = Cases.Case9;
                     break;
                 default:
                     currentCase = Cases.DefaultCase; //sin nada de animaciones especificas
@@ -502,19 +505,6 @@ public class UI_Manager : MonoBehaviour
             dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
             dictionaryCharacteres["EndoscopyNurseExtra"].gameObject.SetActive(true);
         }
-        else if (currentCase == Cases.Case9)
-        {
-            dictionaryCharacteres["Endoscopist1"].gameObject.SetActive(true);
-            dictionaryCharacteres["Endoscopist2"].gameObject.SetActive(true); // Hara de equivalente a surgeon1
-            dictionaryCharacteres["EndoscopyNurse"].gameObject.SetActive(true);
-            Case3Resources.Instance.mask.SetActive(true);
-            dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
-            dictionaryCharacteres["Student"].gameObject.SetActive(true); // De estos igual hay que poner varios
-            //dictionaryCharacteres["Student2"].gameObject.SetActive(true); // De estos igual hay que poner varios
-            //dictionaryCharacteres["Student3"].gameObject.SetActive(true); // De estos igual hay que poner varios
-            //dictionaryCharacteres["Student4"].gameObject.SetActive(true); // De estos igual hay que poner varios
-            //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
-        }
         else if (currentCase == Cases.Case5)
         {
             dictionaryCharacteres["HeadSurgeon"].gameObject.SetActive(true);
@@ -526,6 +516,30 @@ public class UI_Manager : MonoBehaviour
             dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
             dictionaryCharacteres["InstrumentalistNurse"].gameObject.SetActive(true); // De estos igual hay que poner varios
             Case3Resources.Instance.mask.SetActive(true);
+            //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
+        }
+        else if (currentCase == Cases.Case7)
+        {
+            //TODO
+            Case3Resources.Instance.mask.SetActive(true);
+            dictionaryCharacteres["MainSurgeon"].gameObject.SetActive(true); //todo traductor
+            dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
+            dictionaryCharacteres["ResponsibleNurse"].gameObject.SetActive(true); //todo traductor
+            dictionaryCharacteres["InstrumentistSurgeon"].gameObject.SetActive(true); //todo traductor
+            dictionaryCharacteres["CameraAssistant"].gameObject.SetActive(true); //todo traductor
+            //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
+        }
+        else if (currentCase == Cases.Case9)
+        {
+            dictionaryCharacteres["Endoscopist1"].gameObject.SetActive(true);
+            dictionaryCharacteres["Endoscopist2"].gameObject.SetActive(true); // Hara de equivalente a surgeon1
+            dictionaryCharacteres["EndoscopyNurse"].gameObject.SetActive(true);
+            Case3Resources.Instance.mask.SetActive(true);
+            dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
+            dictionaryCharacteres["Student"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            //dictionaryCharacteres["Student2"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            //dictionaryCharacteres["Student3"].gameObject.SetActive(true); // De estos igual hay que poner varios
+            //dictionaryCharacteres["Student4"].gameObject.SetActive(true); // De estos igual hay que poner varios
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
     }
@@ -934,6 +948,18 @@ public class UI_Manager : MonoBehaviour
             case "Instrumentalist Nurse":
             case "Instrumentalist nurse":
                 aux = "InstrumentalistNurse";
+                break;
+            case "Camera Assistant":
+                aux = "CameraAssistant";
+                break;
+            case "Instrumentist Surgeon":
+                aux = "InstrumentistSurgeon";
+                break;
+            case "Responsible Nurse":
+                aux = "ResponsibleNurse";
+                break;
+            case "Main Surgeon":
+                aux = "MainSurgeon";
                 break;
         }
 
