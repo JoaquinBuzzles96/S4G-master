@@ -482,9 +482,6 @@ public class UI_Manager : MonoBehaviour
             item.gameObject.SetActive(false);
             //Debug.Log($"Se ha añadido el {item.gameObject.name} al diccionario");
         }
-
-        
-
     }
 
     public void SetUpCharacrteres()
@@ -776,7 +773,7 @@ public class UI_Manager : MonoBehaviour
                         tagToCheck = "NOT_CHECK";
                     }
 
-                    if (tagToCheck != "NOT_CHECK" && tagToCheck != "Endoscopist1")
+                    if (tagToCheck != "NOT_CHECK" && tagToCheck != "Endoscopist1" && tagToCheck != "MainSurgeon")
                     {
                         //Enable arrow
                         generalArrow.SetActive(true);
@@ -947,6 +944,7 @@ public class UI_Manager : MonoBehaviour
                 break;
             case "Instrumentalist Nurse":
             case "Instrumentalist nurse":
+            case "Instrumentalist":
                 aux = "InstrumentalistNurse";
                 break;
             case "Camera Assistant":
@@ -956,9 +954,13 @@ public class UI_Manager : MonoBehaviour
                 aux = "InstrumentistSurgeon";
                 break;
             case "Responsible Nurse":
+            case "Responsible nurse":
+            case "responsible nurse":
                 aux = "ResponsibleNurse";
                 break;
             case "Main Surgeon":
+            case "Main surgeon":
+            case "Surgeon":
                 aux = "MainSurgeon";
                 break;
         }
