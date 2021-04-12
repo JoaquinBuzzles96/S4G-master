@@ -7,7 +7,7 @@ using System.IO;
 
 public enum Status {Situation, Answer };
 
-public enum Cases { DefaultCase, Case3, Case9, Case5, Case7 };
+public enum Cases { DefaultCase, Case3, Case9, Case5, Case6, Case7 };
 
 public class UI_Manager : MonoBehaviour
 {
@@ -150,6 +150,10 @@ public class UI_Manager : MonoBehaviour
         else
         {
             Debug.LogError($"No se han encontrado dialogos para la situacion {situation.SituationName}");
+
+            //En este caso vamos directos a la pregunta //TODO
+
+
             //situationDialogueTexts.text = situation.Context;
         }
         
@@ -396,6 +400,9 @@ public class UI_Manager : MonoBehaviour
                 case "CASE5":
                     currentCase = Cases.Case5;
                     break;
+                case "CASE6":
+                    currentCase = Cases.Case6;
+                    break;
                 case "CASE7":
                     currentCase = Cases.Case7;
                     break;
@@ -513,6 +520,17 @@ public class UI_Manager : MonoBehaviour
             dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
             dictionaryCharacteres["InstrumentalistNurse"].gameObject.SetActive(true); // De estos igual hay que poner varios
             Case3Resources.Instance.mask.SetActive(true);
+            //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
+        }
+        else if (currentCase == Cases.Case6)
+        {
+            Case3Resources.Instance.mask.SetActive(true);
+            dictionaryCharacteres["Urologist"].gameObject.SetActive(true);
+            dictionaryCharacteres["AssistantSurgeon"].gameObject.SetActive(true);
+            dictionaryCharacteres["InstrumentalistNurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
+            dictionaryCharacteres["HeadSurgeon"].gameObject.SetActive(true);
+            dictionaryCharacteres["CirculatingNurse"].gameObject.SetActive(true);
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
         else if (currentCase == Cases.Case7)
@@ -963,8 +981,11 @@ public class UI_Manager : MonoBehaviour
             case "Surgeon":
                 aux = "MainSurgeon";
                 break;
+            case "Urologist":
+            case "urologist":
+                aux = "Urologist";
+                break;
         }
-
 
         return aux;
     }

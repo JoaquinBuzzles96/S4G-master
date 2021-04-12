@@ -16,33 +16,9 @@ MonoBehaviour:
   - BaseNodeGuid: 3f65b760-7057-4a4f-b092-abc379e348e2
     PortName: S1
     TargetNodeGuid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
-  - BaseNodeGuid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
-    PortName: Question 1
-    TargetNodeGuid: 05395848-3063-4ce6-8797-e6de240a87d5
-  - BaseNodeGuid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
-    PortName: Question 2
-    TargetNodeGuid: 912c2b25-f689-45c6-8bb1-08bae1e6990f
-  - BaseNodeGuid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
-    PortName: Question 3
-    TargetNodeGuid: fdff066b-44c9-443c-8365-ad69976372d8
-  - BaseNodeGuid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
-    PortName: Question 4
-    TargetNodeGuid: d183d649-f471-424b-a43f-6be1199395e9
   - BaseNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
     PortName: Dialogue
     TargetNodeGuid: 5725b557-9dba-4fd5-88da-592d9876e7c6
-  - BaseNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
-    PortName: Question 1
-    TargetNodeGuid: f26ec69f-2cfa-4048-8c1d-c5ce2c7d1e57
-  - BaseNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
-    PortName: Question 2
-    TargetNodeGuid: e8681b29-a236-46a2-ae27-be7cc5592ad5
-  - BaseNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
-    PortName: Question 3
-    TargetNodeGuid: e2b82145-cf73-463f-9f7b-842394ae3a0f
-  - BaseNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
-    PortName: Question 4
-    TargetNodeGuid: 53437ce8-aff3-4eb3-9265-f101efa6a98a
   - BaseNodeGuid: 615a64be-a673-405f-a7f1-fdb22992a5e7
     PortName: Question 1
     TargetNodeGuid: e4c4b84e-8db4-4014-8933-32454d2a4bc8
@@ -280,15 +256,6 @@ MonoBehaviour:
   - BaseNodeGuid: a0af1472-b8d3-4183-9f1d-ea127b13059e
     PortName: Answer 3
     TargetNodeGuid: 00bb2c0c-36b8-4993-9cad-a6cc504c19a5
-  - BaseNodeGuid: 76f795e9-eb5a-4247-90a7-c08bb50dad13
-    PortName: Answer 1
-    TargetNodeGuid: bd872938-9f83-4c1c-b717-0bf8cda3784a
-  - BaseNodeGuid: 76f795e9-eb5a-4247-90a7-c08bb50dad13
-    PortName: Answer 2
-    TargetNodeGuid: d743bafc-e7f1-480d-96c3-ada2c7267f6a
-  - BaseNodeGuid: 76f795e9-eb5a-4247-90a7-c08bb50dad13
-    PortName: Answer 3
-    TargetNodeGuid: 6eefc9d3-c5dd-42a8-b689-dd6dff3d02a1
   - BaseNodeGuid: ebb592f9-a6f3-41d5-b90e-0984bec448e0
     PortName: Answer 1
     TargetNodeGuid: 190e780d-0f0a-427a-894c-81284ac03b95
@@ -337,18 +304,27 @@ MonoBehaviour:
   - BaseNodeGuid: f8eb0df8-90c7-4674-ac7c-4028c83ea5ea
     PortName: Answer 3
     TargetNodeGuid: edf68ebb-f5b6-4ea1-b1a2-8f3616e10343
-  - BaseNodeGuid: d338e175-847e-4976-9e3f-1ef71cda1d9c
-    PortName: Answer 1
-    TargetNodeGuid: da04a64e-2a4e-470f-a144-5cbfc0fa23a3
-  - BaseNodeGuid: d338e175-847e-4976-9e3f-1ef71cda1d9c
-    PortName: Answer 2
-    TargetNodeGuid: 0fcbab0f-7c8c-46f9-b395-69a15a51e68d
   - BaseNodeGuid: 24eb4c59-7f68-4ac9-91d4-e66f2414e42b
     PortName: Answer 1
     TargetNodeGuid: 5202da51-8fa8-4f44-af9c-6bb5e765863a
   - BaseNodeGuid: 24eb4c59-7f68-4ac9-91d4-e66f2414e42b
     PortName: Answer 2
     TargetNodeGuid: b4ea7459-abf1-4d8a-930a-86c6b8ebb394
+  - BaseNodeGuid: 76f795e9-eb5a-4247-90a7-c08bb50dad13
+    PortName: Answer 1
+    TargetNodeGuid: bd872938-9f83-4c1c-b717-0bf8cda3784a
+  - BaseNodeGuid: 76f795e9-eb5a-4247-90a7-c08bb50dad13
+    PortName: Answer 2
+    TargetNodeGuid: d743bafc-e7f1-480d-96c3-ada2c7267f6a
+  - BaseNodeGuid: 76f795e9-eb5a-4247-90a7-c08bb50dad13
+    PortName: Answer 3
+    TargetNodeGuid: 6eefc9d3-c5dd-42a8-b689-dd6dff3d02a1
+  - BaseNodeGuid: d338e175-847e-4976-9e3f-1ef71cda1d9c
+    PortName: Answer 1
+    TargetNodeGuid: da04a64e-2a4e-470f-a144-5cbfc0fa23a3
+  - BaseNodeGuid: d338e175-847e-4976-9e3f-1ef71cda1d9c
+    PortName: Answer 2
+    TargetNodeGuid: 0fcbab0f-7c8c-46f9-b395-69a15a51e68d
   - BaseNodeGuid: cbc58ba5-3a83-4980-8f8c-fa1592b60497
     PortName: Dialogue
     TargetNodeGuid: bde793cb-970f-44bc-89ce-73f90c6f98ce
@@ -829,33 +805,33 @@ MonoBehaviour:
   - BaseNodeGuid: b4ea7459-abf1-4d8a-930a-86c6b8ebb394
     PortName: Situation
     TargetNodeGuid: 02ab95f7-0ffa-4741-ad1c-2bf5d6e66433
-  - BaseNodeGuid: 05395848-3063-4ce6-8797-e6de240a87d5
-    PortName: Dialogue
-    TargetNodeGuid: 6d6b61ce-3d81-426c-a964-1991d9419408
-  - BaseNodeGuid: d183d649-f471-424b-a43f-6be1199395e9
-    PortName: Dialogue
-    TargetNodeGuid: e205fb2d-f4fb-4860-94b9-95f7fc1b882c
-  - BaseNodeGuid: 912c2b25-f689-45c6-8bb1-08bae1e6990f
-    PortName: Dialogue
-    TargetNodeGuid: 94c8606c-55b9-493d-aa4c-e0d0663bd0f0
-  - BaseNodeGuid: fdff066b-44c9-443c-8365-ad69976372d8
-    PortName: Dialogue
-    TargetNodeGuid: d99b96c0-3f0a-4247-ad8f-cee416ce3c22
-  - BaseNodeGuid: f26ec69f-2cfa-4048-8c1d-c5ce2c7d1e57
-    PortName: Dialogue
-    TargetNodeGuid: f2ef90f6-e39d-443f-8fd0-e3d34bda06de
-  - BaseNodeGuid: e8681b29-a236-46a2-ae27-be7cc5592ad5
-    PortName: Dialogue
-    TargetNodeGuid: 56fb7950-29e0-4772-9b64-49960ed9eff6
-  - BaseNodeGuid: e2b82145-cf73-463f-9f7b-842394ae3a0f
-    PortName: Dialogue
-    TargetNodeGuid: 80f4bd15-8ee5-4c27-a62b-5020e6f4de1e
-  - BaseNodeGuid: 53437ce8-aff3-4eb3-9265-f101efa6a98a
-    PortName: Dialogue
-    TargetNodeGuid: 307fc98f-f499-4349-b170-66aaf83ed7d0
   - BaseNodeGuid: 1bfef044-1cf2-4cdb-966e-11d1a27e4561
     PortName: Dialogue
     TargetNodeGuid: 04dc3512-3f83-4b75-8577-6809a4e3510d
+  - BaseNodeGuid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
+    PortName: Question 2
+    TargetNodeGuid: 94c8606c-55b9-493d-aa4c-e0d0663bd0f0
+  - BaseNodeGuid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
+    PortName: Question 1
+    TargetNodeGuid: 6d6b61ce-3d81-426c-a964-1991d9419408
+  - BaseNodeGuid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
+    PortName: Question 3
+    TargetNodeGuid: d99b96c0-3f0a-4247-ad8f-cee416ce3c22
+  - BaseNodeGuid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
+    PortName: Question 4
+    TargetNodeGuid: e205fb2d-f4fb-4860-94b9-95f7fc1b882c
+  - BaseNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
+    PortName: Question 4
+    TargetNodeGuid: 307fc98f-f499-4349-b170-66aaf83ed7d0
+  - BaseNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
+    PortName: Question 3
+    TargetNodeGuid: 80f4bd15-8ee5-4c27-a62b-5020e6f4de1e
+  - BaseNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
+    PortName: Question 2
+    TargetNodeGuid: 56fb7950-29e0-4772-9b64-49960ed9eff6
+  - BaseNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
+    PortName: Question 1
+    TargetNodeGuid: f2ef90f6-e39d-443f-8fd0-e3d34bda06de
   SituationNodeData:
   - Guid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
     SituationName: S1
@@ -874,13 +850,6 @@ MonoBehaviour:
     audioId: D1
     nodeType: 0
     Position: {x: -6083, y: 1955}
-  - Guid: 7025cac0-4523-446e-9535-5253708cd667
-    SituationName: S2
-    Context: 
-    Id: 0
-    audioId: Audio id
-    nodeType: 0
-    Position: {x: 1771, y: 2073}
   - Guid: 615a64be-a673-405f-a7f1-fdb22992a5e7
     SituationName: S3
     Context: 
@@ -916,63 +885,14 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 0
     Position: {x: 3126, y: 6688}
+  - Guid: 7025cac0-4523-446e-9535-5253708cd667
+    SituationName: S2
+    Context: 
+    Id: 0
+    audioId: Audio id
+    nodeType: 0
+    Position: {x: 1771, y: 2073}
   QuestionNodeData:
-  - Guid: 94c8606c-55b9-493d-aa4c-e0d0663bd0f0
-    QuestionName: Q1.2
-    Description: Question Description
-    audioId: Audio id
-    speaker: 
-    nodeType: 1
-    Position: {x: 170, y: 1455}
-  - Guid: d99b96c0-3f0a-4247-ad8f-cee416ce3c22
-    QuestionName: Q1.3
-    Description: Question Description
-    audioId: Audio id
-    speaker: 
-    nodeType: 1
-    Position: {x: 317, y: 2582}
-  - Guid: e205fb2d-f4fb-4860-94b9-95f7fc1b882c
-    QuestionName: Q1.4
-    Description: Question Description
-    audioId: Audio id
-    speaker: 
-    nodeType: 1
-    Position: {x: 132, y: 3907}
-  - Guid: f2ef90f6-e39d-443f-8fd0-e3d34bda06de
-    QuestionName: Q2.1
-    Description: Question Description
-    audioId: Audio id
-    speaker: 
-    nodeType: 1
-    Position: {x: 2974, y: 402}
-  - Guid: 56fb7950-29e0-4772-9b64-49960ed9eff6
-    QuestionName: Q2.2
-    Description: Question Description
-    audioId: Audio id
-    speaker: 
-    nodeType: 1
-    Position: {x: 2968, y: 1399}
-  - Guid: 80f4bd15-8ee5-4c27-a62b-5020e6f4de1e
-    QuestionName: Q2.3
-    Description: Question Description
-    audioId: Audio id
-    speaker: 
-    nodeType: 1
-    Position: {x: 3014, y: 2650}
-  - Guid: 307fc98f-f499-4349-b170-66aaf83ed7d0
-    QuestionName: Q2.4
-    Description: Question Description
-    audioId: Audio id
-    speaker: 
-    nodeType: 1
-    Position: {x: 3085, y: 3961}
-  - Guid: 6d6b61ce-3d81-426c-a964-1991d9419408
-    QuestionName: Q1.1
-    Description: 
-    audioId: Audio id
-    speaker: 
-    nodeType: 1
-    Position: {x: 296, y: 287}
   - Guid: efbec3cc-87a4-4d91-82c9-c5eec8ef4ced
     QuestionName: Q3.4
     Description: "What happens, if we won\u2019t find it?"
@@ -1093,6 +1013,64 @@ MonoBehaviour:
     speaker: Urologist
     nodeType: 1
     Position: {x: 1807, y: 5983}
+  - Guid: 6d6b61ce-3d81-426c-a964-1991d9419408
+    QuestionName: Q1.1
+    Description: Only one? It will be somewhere!
+    audioId: D1.1
+    speaker: Assistant surgeon
+    nodeType: 1
+    Position: {x: -150, y: 412}
+  - Guid: 94c8606c-55b9-493d-aa4c-e0d0663bd0f0
+    QuestionName: Q1.2
+    Description: It happens many times, most of the time something goes wrong with
+      the calculation.
+    audioId: D1.2
+    speaker: Urologist
+    nodeType: 1
+    Position: {x: -299, y: 1374}
+  - Guid: d99b96c0-3f0a-4247-ad8f-cee416ce3c22
+    QuestionName: Q1.3
+    Description: Are you sure? Was the calculation correct?
+    audioId: D1.3
+    speaker: Urologist
+    nodeType: 1
+    Position: {x: -257, y: 2205}
+  - Guid: e205fb2d-f4fb-4860-94b9-95f7fc1b882c
+    QuestionName: Q1.4
+    Description: That can't be true, even that!
+    audioId: D1.4
+    speaker: Circulating nurse
+    nodeType: 1
+    Position: {x: -141, y: 3791}
+  - Guid: 307fc98f-f499-4349-b170-66aaf83ed7d0
+    QuestionName: Q2.4
+    Description: I do it immediately
+    audioId: D2.4
+    speaker: Instrumentalist nurse
+    nodeType: 1
+    Position: {x: 2815, y: 3961}
+  - Guid: 80f4bd15-8ee5-4c27-a62b-5020e6f4de1e
+    QuestionName: Q2.3
+    Description: The surgery lasts 5 hours, it would be good to finish slowly.
+    audioId: D2.3
+    speaker: Anaesthesiologist
+    nodeType: 1
+    Position: {x: 2911, y: 2653}
+  - Guid: 56fb7950-29e0-4772-9b64-49960ed9eff6
+    QuestionName: Q2.2
+    Description: "Is it really necessary? It is here somewhere, don\u2019t waste
+      time!"
+    audioId: D2.2
+    speaker: Assistant surgeon
+    nodeType: 1
+    Position: {x: 2903, y: 1410}
+  - Guid: f2ef90f6-e39d-443f-8fd0-e3d34bda06de
+    QuestionName: Q2.1
+    Description: The next patient is already waiting outside.
+    audioId: D2.1
+    speaker: Circulating nurse
+    nodeType: 1
+    Position: {x: 2875, y: 407}
   AnswerNodeData:
   - Guid: cbc58ba5-3a83-4980-8f8c-fa1592b60497
     AnswerName: A1.2.1
@@ -2065,14 +2043,6 @@ MonoBehaviour:
     audioId: D1.1.1
     nodeType: 3
     Position: {x: 785, y: -183}
-  - Guid: 05395848-3063-4ce6-8797-e6de240a87d5
-    DialogueName: D1.1
-    DialogueText: Only one? It will be somewhere!
-    Speaker: Assistant surgeon
-    Mood: Unconcerned
-    audioId: D1.1
-    nodeType: 3
-    Position: {x: 53, y: 307}
   - Guid: c9729d6c-2f0c-4063-9492-600ba677fd14
     DialogueName: D1.1.2
     DialogueText: Sure, we have to solve this problem together.
@@ -2113,14 +2083,6 @@ MonoBehaviour:
     audioId: D1.3.2
     nodeType: 3
     Position: {x: 894, y: 2559}
-  - Guid: d183d649-f471-424b-a43f-6be1199395e9
-    DialogueName: D1.4
-    DialogueText: That can't be true, even that!
-    Speaker: Circulating nurse
-    Mood: Angry
-    audioId: D1.4
-    nodeType: 3
-    Position: {x: -164, y: 3924}
   - Guid: 49154685-fb19-4326-bb3d-7c992350f73e
     DialogueName: D1.4.2
     DialogueText: "Let\u2019s take the problem together, and calmly try to find the
@@ -2164,15 +2126,6 @@ MonoBehaviour:
     audioId: D1.2.2
     nodeType: 3
     Position: {x: 887, y: 1275}
-  - Guid: 912c2b25-f689-45c6-8bb1-08bae1e6990f
-    DialogueName: D1.2
-    DialogueText: It happens many times, most of the time something goes wrong with
-      the calculation.
-    Speaker: Urologist
-    Mood: Calm
-    audioId: D1.2
-    nodeType: 3
-    Position: {x: -413, y: 1454}
   - Guid: c3bc29b1-49ad-421b-9c6d-f78e4bc64eb7
     DialogueName: D1.3.3
     DialogueText: No, I am just kidding
@@ -2181,14 +2134,6 @@ MonoBehaviour:
     audioId: D1.3.3
     nodeType: 3
     Position: {x: 915, y: 2868}
-  - Guid: fdff066b-44c9-443c-8365-ad69976372d8
-    DialogueName: D1.3
-    DialogueText: Are you sure? Was the calculation correct?
-    Speaker: Urologist
-    Mood: Calm
-    audioId: D1.3
-    nodeType: 3
-    Position: {x: -18, y: 2603}
   - Guid: a1647134-6fe5-47c1-973c-a3e052264f37
     DialogueName: D1.4.1
     DialogueText: Don't be impatient, your work is still long!
@@ -2246,14 +2191,6 @@ MonoBehaviour:
     audioId: D2.4.4
     nodeType: 3
     Position: {x: 3803, y: 4492}
-  - Guid: f26ec69f-2cfa-4048-8c1d-c5ce2c7d1e57
-    DialogueName: D2.1
-    DialogueText: The next patient is already waiting outside.
-    Speaker: Circulating nurse
-    Mood: Calm
-    audioId: D2.1
-    nodeType: 3
-    Position: {x: 2664, y: 408}
   - Guid: ea654b22-1bb3-4eda-8604-d9bb65d82e40
     DialogueName: D2.1.1
     DialogueText: "I\u2019m afraid they have to wait, we have to solve it now."
@@ -2278,15 +2215,6 @@ MonoBehaviour:
     audioId: D2.1.4
     nodeType: 3
     Position: {x: 3782, y: 747}
-  - Guid: e8681b29-a236-46a2-ae27-be7cc5592ad5
-    DialogueName: D2.2
-    DialogueText: "Is it really necessary? It is here somewhere, don\u2019t waste
-      time!"
-    Speaker: Assistant surgeon
-    Mood: Angry
-    audioId: D2.2
-    nodeType: 3
-    Position: {x: 2516, y: 1402}
   - Guid: 489eb428-d9a0-40aa-b540-aaf3c1b19e51
     DialogueName: D2.2.1
     DialogueText: With this attitude we will not solve anything.
@@ -2319,14 +2247,6 @@ MonoBehaviour:
     audioId: D2.2.4
     nodeType: 3
     Position: {x: 3776, y: 1961}
-  - Guid: e2b82145-cf73-463f-9f7b-842394ae3a0f
-    DialogueName: D2.3
-    DialogueText: The surgery lasts 5 hours, it would be good to finish slowly.
-    Speaker: Anaesthesiologist
-    Mood: Calm
-    audioId: D2.3
-    nodeType: 3
-    Position: {x: 2529, y: 2652}
   - Guid: 02e467d5-6fc2-4aa6-8c3f-02abaa07d2db
     DialogueName: D2.3.3
     DialogueText: "This is the patient\u2019s interest! We can\u2019t take it lightly"
@@ -2344,14 +2264,6 @@ MonoBehaviour:
     audioId: D2.3.2
     nodeType: 3
     Position: {x: 3780, y: 2611}
-  - Guid: 53437ce8-aff3-4eb3-9265-f101efa6a98a
-    DialogueName: D2.4
-    DialogueText: I do it immediately
-    Speaker: Instrumentalist nurse
-    Mood: Calm
-    audioId: D2.4
-    nodeType: 3
-    Position: {x: 2721, y: 3962}
   - Guid: 18d4ea7d-cacd-444f-a192-90efce9f3516
     DialogueName: D3.3.1
     DialogueText: "Let's keep calm. If you\u2019re unpatient, nothing can be solved."

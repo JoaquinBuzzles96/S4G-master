@@ -116,6 +116,10 @@ public class OptionsManager : MonoBehaviour
                     LanguageManager.Instance.caseSelected = parts[0];
                     SceneManager.LoadScene("Scene5");
                     break;
+                case "CASE6":
+                    LanguageManager.Instance.caseSelected = parts[0];
+                    SceneManager.LoadScene("Scene6");
+                    break;
                 case "CASE7":
                     LanguageManager.Instance.caseSelected = parts[0];
                     SceneManager.LoadScene("SceneCase7");
