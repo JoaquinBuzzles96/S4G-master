@@ -146,23 +146,25 @@ public class UI_Manager : MonoBehaviour
         {
             //situationDialogueTexts.text = dialogues[0].DialogueText;
             //Debug.Log($"Se ha asignado el primer dialogo de la situacion {situation.SituationName}, dialogo = {situationDialogueTexts.text}");
+            questions = dialogueContainer.GetSituationQuestions(situation.Guid);
+
+            AddTextToRoute(situation.SituationName);
+
+            //Debug.Log($"Se ha configurado la situacion {situation.SituationName}, tiene {questions.Count} preguntas posibles");
+            //foreach (var item in questions){Debug.Log($"{item.QuestionName}");}
         }
         else
         {
             Debug.LogError($"No se han encontrado dialogos para la situacion {situation.SituationName}");
+            //situationDialogueTexts.text = situation.Context;
 
             //En este caso vamos directos a la pregunta //TODO
 
 
-            //situationDialogueTexts.text = situation.Context;
+
         }
-        
-        questions = dialogueContainer.GetSituationQuestions(situation.Guid);
 
-        AddTextToRoute(situation.SituationName);
 
-        //Debug.Log($"Se ha configurado la situacion {situation.SituationName}, tiene {questions.Count} preguntas posibles");
-        //foreach (var item in questions){Debug.Log($"{item.QuestionName}");}
     }
 
     public bool LoadDialogues(string guid, List<DialogueNodeData> dialogues)
@@ -424,7 +426,7 @@ public class UI_Manager : MonoBehaviour
             //dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
         }
 
-        if (LanguageManager.Instance.isThirdPerson || currentCase == Cases.Case5)
+        if (LanguageManager.Instance.isThirdPerson || currentCase == Cases.Case5 || currentCase == Cases.Case6)
         {
             //ponemos la camara en tercera persona
             cameraCurrentPos.transform.position = cameraPositionThirdPerson.transform.position;
