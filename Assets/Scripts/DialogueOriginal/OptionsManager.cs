@@ -48,7 +48,7 @@ public class OptionsManager : MonoBehaviour
     public GameObject mailButton;
 
     public bool isThirdPerson;
-
+    public bool tutorialRay = false;
     void Start()
     {
         originPos = this.gameObject.transform.position;
@@ -62,7 +62,7 @@ public class OptionsManager : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public void LoadLevel(string scene)
@@ -143,6 +143,7 @@ public class OptionsManager : MonoBehaviour
     {
         triggerAreaTutorial.SetActive(isActive); //esto no esta tirando
         teleportAreasTutorial.SetActive(isActive);
+        tutorialRay = true;
     }
 
     public void SetSettingsActive(bool isActive)
@@ -165,6 +166,6 @@ public class OptionsManager : MonoBehaviour
         Debug.Log("Vamos a destruir el special cases ");
         SpecialCases.Instance.Destroy();
         Destroy(this.gameObject);
-        
+
     }
 }
