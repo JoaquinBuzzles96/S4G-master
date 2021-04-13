@@ -7175,7 +7175,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-15454
+  m_Name: pb_Mesh-8396
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7688,7 +7688,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-12120
+  m_Name: pb_Mesh-5062
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10481,6 +10481,46 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8816811152053694663, guid: 33c9d2730fc1d3240b852a472d1d1eb3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00000014522129
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816811152053694663, guid: 33c9d2730fc1d3240b852a472d1d1eb3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0013132844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816811152053694663, guid: 33c9d2730fc1d3240b852a472d1d1eb3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00006492539
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816811152053694663, guid: 33c9d2730fc1d3240b852a472d1d1eb3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99921525
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816811152053694663, guid: 33c9d2730fc1d3240b852a472d1d1eb3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.03960983
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816811152053694663, guid: 33c9d2730fc1d3240b852a472d1d1eb3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000002980233
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816811152053694663, guid: 33c9d2730fc1d3240b852a472d1d1eb3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000001629815
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816811152053694663, guid: 33c9d2730fc1d3240b852a472d1d1eb3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 4.5400004
+      objectReference: {fileID: 0}
     - target: {fileID: 8816811152785139629, guid: 33c9d2730fc1d3240b852a472d1d1eb3,
         type: 3}
       propertyPath: m_Name
@@ -12990,7 +13030,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-15430
+  m_Name: pb_Mesh-8372
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14111,7 +14151,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-12468
+  m_Name: pb_Mesh-5410
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15258,7 +15298,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-15388
+  m_Name: pb_Mesh-8330
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20016,7 +20056,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-15606
+  m_Name: pb_Mesh-8548
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25819,6 +25859,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2045524901}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2053285466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8816811152053694662, guid: 33c9d2730fc1d3240b852a472d1d1eb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 908768721}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2053285467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053285466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7e50083f986034b830b4f519d9c638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2067251849
 GameObject:
   m_ObjectHideFlags: 0
