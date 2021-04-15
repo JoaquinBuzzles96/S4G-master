@@ -7,7 +7,7 @@ using System.IO;
 
 public enum Status {Situation, Answer };
 
-public enum Cases { DefaultCase, Case3, Case9, Case5, Case7 };
+public enum Cases { DefaultCase, Case3, Case9, Case5, Case6, Case7 };
 
 public class UI_Manager : MonoBehaviour
 {
@@ -146,19 +146,25 @@ public class UI_Manager : MonoBehaviour
         {
             //situationDialogueTexts.text = dialogues[0].DialogueText;
             //Debug.Log($"Se ha asignado el primer dialogo de la situacion {situation.SituationName}, dialogo = {situationDialogueTexts.text}");
+            questions = dialogueContainer.GetSituationQuestions(situation.Guid);
+
+            AddTextToRoute(situation.SituationName);
+
+            //Debug.Log($"Se ha configurado la situacion {situation.SituationName}, tiene {questions.Count} preguntas posibles");
+            //foreach (var item in questions){Debug.Log($"{item.QuestionName}");}
         }
         else
         {
             Debug.LogError($"No se han encontrado dialogos para la situacion {situation.SituationName}");
             //situationDialogueTexts.text = situation.Context;
+
+            //En este caso vamos directos a la pregunta //TODO
+
+
+
         }
-        
-        questions = dialogueContainer.GetSituationQuestions(situation.Guid);
 
-        AddTextToRoute(situation.SituationName);
 
-        //Debug.Log($"Se ha configurado la situacion {situation.SituationName}, tiene {questions.Count} preguntas posibles");
-        //foreach (var item in questions){Debug.Log($"{item.QuestionName}");}
     }
 
     public bool LoadDialogues(string guid, List<DialogueNodeData> dialogues)
@@ -396,6 +402,9 @@ public class UI_Manager : MonoBehaviour
                 case "CASE5":
                     currentCase = Cases.Case5;
                     break;
+                case "CASE6":
+                    currentCase = Cases.Case6;
+                    break;
                 case "CASE7":
                     currentCase = Cases.Case7;
                     break;
@@ -417,7 +426,7 @@ public class UI_Manager : MonoBehaviour
             //dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
         }
 
-        if (LanguageManager.Instance.isThirdPerson || currentCase == Cases.Case5)
+        if (LanguageManager.Instance.isThirdPerson || currentCase == Cases.Case5 || currentCase == Cases.Case6)
         {
             //ponemos la camara en tercera persona
             cameraCurrentPos.transform.position = cameraPositionThirdPerson.transform.position;
@@ -482,9 +491,6 @@ public class UI_Manager : MonoBehaviour
             item.gameObject.SetActive(false);
             //Debug.Log($"Se ha añadido el {item.gameObject.name} al diccionario");
         }
-
-        
-
     }
 
     public void SetUpCharacrteres()
@@ -516,6 +522,17 @@ public class UI_Manager : MonoBehaviour
             dictionaryCharacteres["Secretary"].gameObject.SetActive(true);
             dictionaryCharacteres["InstrumentalistNurse"].gameObject.SetActive(true); // De estos igual hay que poner varios
             Case3Resources.Instance.mask.SetActive(true);
+            //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
+        }
+        else if (currentCase == Cases.Case6)
+        {
+            Case3Resources.Instance.mask.SetActive(true);
+            dictionaryCharacteres["Urologist"].gameObject.SetActive(true);
+            dictionaryCharacteres["AssistantSurgeon"].gameObject.SetActive(true);
+            dictionaryCharacteres["InstrumentalistNurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
+            dictionaryCharacteres["HeadSurgeon"].gameObject.SetActive(true);
+            dictionaryCharacteres["CirculatingNurse"].gameObject.SetActive(true);
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
         else if (currentCase == Cases.Case7)
@@ -776,7 +793,7 @@ public class UI_Manager : MonoBehaviour
                         tagToCheck = "NOT_CHECK";
                     }
 
-                    if (tagToCheck != "NOT_CHECK" && tagToCheck != "Endoscopist1")
+                    if (tagToCheck != "NOT_CHECK" && tagToCheck != "Endoscopist1" && tagToCheck != "MainSurgeon")
                     {
                         //Enable arrow
                         generalArrow.SetActive(true);
@@ -947,6 +964,7 @@ public class UI_Manager : MonoBehaviour
                 break;
             case "Instrumentalist Nurse":
             case "Instrumentalist nurse":
+            case "Instrumentalist":
                 aux = "InstrumentalistNurse";
                 break;
             case "Camera Assistant":
@@ -956,13 +974,20 @@ public class UI_Manager : MonoBehaviour
                 aux = "InstrumentistSurgeon";
                 break;
             case "Responsible Nurse":
+            case "Responsible nurse":
+            case "responsible nurse":
                 aux = "ResponsibleNurse";
                 break;
             case "Main Surgeon":
+            case "Main surgeon":
+            case "Surgeon":
                 aux = "MainSurgeon";
                 break;
+            case "Urologist":
+            case "urologist":
+                aux = "Urologist";
+                break;
         }
-
 
         return aux;
     }
