@@ -27,7 +27,7 @@ public class SendMail : MonoBehaviour
     [System.NonSerialized]
     public string m_UserName = "Usuario Default"; //default value
     [System.NonSerialized]
-    public string m_UserMail = "joakilm2@gmail.com"; //default value
+    public string m_UserMail = "s4game@viralstudios.es"; //default value
 
    public TextMeshProUGUI m_NameMail;
    public TextMeshProUGUI m_Mail;
@@ -58,7 +58,7 @@ public class SendMail : MonoBehaviour
             UI_Manager.Instance.playereRoute = "\n Testing";
         }
 
-        mail.Body = "Name: " + m_UserName + " Correo: " + m_UserMail + UI_Manager.Instance.playereRoute;//"probando TT";
+        mail.Body = "Name: " + m_UserName + " Correo: " + m_UserMail + UI_Manager.Instance.playereRoute;
 
         SmtpClient smtpServer = new SmtpClient("mail.viralstudios.es");//mail.viralstudios.es//"smtp.gmail.com"
         smtpServer.Port = 587;

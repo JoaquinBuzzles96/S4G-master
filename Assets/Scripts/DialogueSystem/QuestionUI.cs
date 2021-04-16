@@ -48,7 +48,7 @@ public class QuestionUI : MonoBehaviour
     AnswerNodeData correctAnswer;
     int maxScore;
 
-    int timerLimit = 25;
+    int timerLimit = 25; //TODO: Poner a 25 segundos de nuevo
     int scorePenalty = 5;
     int scorePenalty2 = 5;
 
@@ -201,7 +201,10 @@ public class QuestionUI : MonoBehaviour
         {
             //Pierdes puntos si llegas a este punto
             UI_Manager.Instance.totalScore -= scorePenalty2;
-            AutomaticAnswer();
+            //AutomaticAnswer();
+            //TODO: AQUI ACABA EL CASO --> DEFAULT FEEDBACK
+            UI_Manager.Instance.ToScreen5(null, UI_Manager.Instance.screen3); //si la choosen answer es null es el default feedback
+
         }
     }
 

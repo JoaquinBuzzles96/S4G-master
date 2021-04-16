@@ -700,19 +700,36 @@ public class UI_Manager : MonoBehaviour
 
     public void SetUpScreen5(AnswerNodeData answer)
     {
-
-        if (isValid(answer.Feedback))
+        if (totalScore < 0)
         {
-            StartCoroutine(PlaySimpleDialogue(answer.audioId, nextButtonFeedback));
+            totalScore = 0;
+        }
+        if (answer == null) //default feedback
+        {
+            string feedback = "Default feedback. You have to be faster!";
+            feedbackText.text = $"{feedback} \n Score: {totalScore}";
+            //Add feedback to email
+            AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
+            AddTextToRoute($"Feedback: {feedback}");
+            AddTextToRoute($"Final score: {totalScore}");
+        }
+        else
+        {
+            if (isValid(answer.Feedback))
+            {
+                StartCoroutine(PlaySimpleDialogue(answer.audioId, nextButtonFeedback));
+            }
+            feedbackText.text = $"{answer.Feedback} \n Score: {totalScore}";
+            //Add feedback to email
+            AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
+            AddTextToRoute($"Feedback: {answer.Feedback}");
+            AddTextToRoute($"Final score: {totalScore}");
+
         }
 
         StartCoroutine(SpecialCases.Instance.ExitRoom());
         
-        feedbackText.text = $"{answer.Feedback} \n Score: {totalScore}";
-        //Add feedback to email
-        AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
-        AddTextToRoute($"Feedback: {answer.Feedback}");
-        AddTextToRoute($"Final score: {totalScore}");
+
         //Send email
         Debug.Log("Enviamos un mail con la infomacion");
         SendMail.Instance.SendEmail();
