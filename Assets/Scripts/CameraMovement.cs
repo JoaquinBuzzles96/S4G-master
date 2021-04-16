@@ -19,6 +19,7 @@ public class CameraMovement : MonoBehaviour
     {
         //this.transform.position = initialPos;
     }
+
     void Update()
     {
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0)

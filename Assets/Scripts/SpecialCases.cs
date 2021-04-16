@@ -170,11 +170,115 @@ public class SpecialCases : MonoBehaviour
         {
             CheckSpecialEventCase3(dialogue_id);
         }
+        else if (UI_Manager.Instance.currentCase == Cases.Case5)
+        {
+            CheckSpecialEventCase5(dialogue_id);
+        }
         else if (UI_Manager.Instance.currentCase == Cases.Case9)
         {
+            CheckSpecialEventCase9(dialogue_id);
+        }
+        else if (UI_Manager.Instance.currentCase == Cases.Case6)
+        {
+            CheckSpecialEventCase6(dialogue_id);
+        }
+        else if (UI_Manager.Instance.currentCase == Cases.Case7)
+        {
+            CheckSpecialEventCase7(dialogue_id);
+        }
+    }
+
+
+    public void CheckSpecialEventCase5(string dialogue_id)
+    {
+        switch (dialogue_id)
+        {
+            case "D1":
+                break;
+            case "D16.1.3":
+                break;
+            case "D16.2.3":
+                break;
+            case "D16.3.3":
+                break;
+            case "D16.4.1":
+                break;
+            case "D18.1.2":
+                break;
+            case "D18.2.2":
+                break;
+            case "D18.3.2":
+                break;
 
         }
     }
+
+    public void CheckSpecialEventCase6(string dialogue_id)
+    {
+        switch (dialogue_id)
+        {
+            case "D1.1":
+                break;
+        }
+    }
+
+    public void CheckSpecialEventCase7(string dialogue_id)
+    {
+        switch (dialogue_id)
+        {
+            case "D1.1":
+                break;
+        }
+    }
+
+    public void CheckSpecialEventCase9(string dialogue_id)
+    {
+        switch (dialogue_id)
+        {
+            case "D1.2":
+                break;
+            case "D4.1":
+                break;
+            case "D4.2":
+                break;
+            case "D4.3":
+                break;
+            case "D4.1.1":
+                break;
+            case "D4.1.3.3":
+                break;
+            case "D4.1.4.1":
+                break;
+            case "D6.4":
+                break;
+            case "D6.4.1":
+                break;
+            case "D6.4.3":
+                break;
+            case "D6.4.4":
+                break;
+            case "D6.1.3.1":
+                break;
+            case "D6.1.4.2":
+                break;
+            case "D8.1":
+                break;
+            case "D8.1.1":
+                break;
+            case "D8.1.2":
+                break;
+            case "D8.1.3":
+                break;
+            case "D8.1.4":
+                break;
+            case "D9.1":
+                break;
+
+        }
+    }
+
+
+
 
     IEnumerator CaseD11()
     {
