@@ -290,6 +290,8 @@ public class UI_Manager : MonoBehaviour
 
         //Audio
         audioSource.clip = Resources.Load(GetAudioPath(_audio), typeof(AudioClip)) as AudioClip;
+
+
         if (audioSource.clip != null)
         {
             audioSource.Play();
@@ -340,13 +342,19 @@ public class UI_Manager : MonoBehaviour
             else
             {
                 Debug.Log("No se ha encontrado el audio por lo que asignamos uno por defecto");
-                path = $"Audio/Case3_ES/Audio1";
+                path = $"Audio/Case5_EN/Audio1";
             }
+            //#if PLATFORM_ANDROID
+            //#endif
+
+            //#if UNITY_EDITOR_WIN
+
+            //#endif
         }
         else
         {
             Debug.Log("No se ha encontrado el audio por lo que asignamos uno por defecto");
-            path = $"Audio/Case3_ES/Audio1";
+            path = $"Audio/Case5_EN/Audio1";
         }
 
         //Debug.Log($"Vamos a devolver el path {path}");
