@@ -542,7 +542,7 @@ public class UI_Manager : MonoBehaviour
             dictionaryCharacteres["MainSurgeon"].gameObject.SetActive(true); //todo traductor
             dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
             dictionaryCharacteres["ResponsibleNurse"].gameObject.SetActive(true); //todo traductor
-            dictionaryCharacteres["InstrumentistSurgeon"].gameObject.SetActive(true); //todo traductor
+            dictionaryCharacteres["InstrumentalistNurse"].gameObject.SetActive(true); //todo traductor
             dictionaryCharacteres["CameraAssistant"].gameObject.SetActive(true); //todo traductor
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
@@ -982,6 +982,7 @@ public class UI_Manager : MonoBehaviour
             case "Instrumentalist Nurse":
             case "Instrumentalist nurse":
             case "Instrumentalist":
+            case "Instrumentist":
                 aux = "InstrumentalistNurse";
                 break;
             case "Camera Assistant":
