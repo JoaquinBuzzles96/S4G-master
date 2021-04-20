@@ -58,6 +58,12 @@ MonoBehaviour:
   - BaseNodeGuid: 02ab95f7-0ffa-4741-ad1c-2bf5d6e66433
     PortName: Dialogue
     TargetNodeGuid: c4836d43-83d9-4a57-b159-fab533a6ca92
+  - BaseNodeGuid: 03d67d61-6e08-4efb-aea6-783c49782a73
+    PortName: Dialogue
+    TargetNodeGuid: aa929f41-2adc-4045-a3f8-2f913bac01fc
+  - BaseNodeGuid: 03d67d61-6e08-4efb-aea6-783c49782a73
+    PortName: Question 1
+    TargetNodeGuid: 24504588-f71f-4696-9998-37851bd67159
   - BaseNodeGuid: 04dc3512-3f83-4b75-8577-6809a4e3510d
     PortName: Dialogue
     TargetNodeGuid: 3c51b201-f3ca-4086-b6cf-13a2f279a9ab
@@ -211,18 +217,6 @@ MonoBehaviour:
   - BaseNodeGuid: 0fb4261b-1c2a-44ab-957a-4cb328980166
     PortName: Answer 3
     TargetNodeGuid: b29423c6-1884-466e-9b65-c6ad65f3c0c5
-  - BaseNodeGuid: 24504588-f71f-4696-9998-37851bd67159
-    PortName: Answer 1
-    TargetNodeGuid: cabc7f3d-bb98-4284-80f3-4faf13ead900
-  - BaseNodeGuid: 24504588-f71f-4696-9998-37851bd67159
-    PortName: Answer 2
-    TargetNodeGuid: 51b3ed98-51fa-4dc4-b700-e8abd1d38ca4
-  - BaseNodeGuid: 24504588-f71f-4696-9998-37851bd67159
-    PortName: Answer 3
-    TargetNodeGuid: 5c04e905-e15a-4e6e-9774-b5f0ae455e73
-  - BaseNodeGuid: 24504588-f71f-4696-9998-37851bd67159
-    PortName: Answer 4
-    TargetNodeGuid: 76fe80d5-451e-45b5-bf46-d65a89707ce1
   - BaseNodeGuid: f8eb0df8-90c7-4674-ac7c-4028c83ea5ea
     PortName: Answer 1
     TargetNodeGuid: b917141f-9cd4-41e2-9b68-7289e3e73a48
@@ -349,6 +343,18 @@ MonoBehaviour:
   - BaseNodeGuid: f2ef90f6-e39d-443f-8fd0-e3d34bda06de
     PortName: Answer 4
     TargetNodeGuid: 0a603e7d-9510-4534-bd5d-d6aa2567411d
+  - BaseNodeGuid: 24504588-f71f-4696-9998-37851bd67159
+    PortName: Answer 1
+    TargetNodeGuid: cabc7f3d-bb98-4284-80f3-4faf13ead900
+  - BaseNodeGuid: 24504588-f71f-4696-9998-37851bd67159
+    PortName: Answer 2
+    TargetNodeGuid: 51b3ed98-51fa-4dc4-b700-e8abd1d38ca4
+  - BaseNodeGuid: 24504588-f71f-4696-9998-37851bd67159
+    PortName: Answer 3
+    TargetNodeGuid: 5c04e905-e15a-4e6e-9774-b5f0ae455e73
+  - BaseNodeGuid: 24504588-f71f-4696-9998-37851bd67159
+    PortName: Answer 4
+    TargetNodeGuid: 76fe80d5-451e-45b5-bf46-d65a89707ce1
   - BaseNodeGuid: cbc58ba5-3a83-4980-8f8c-fa1592b60497
     PortName: Dialogue
     TargetNodeGuid: bde793cb-970f-44bc-89ce-73f90c6f98ce
@@ -832,12 +838,6 @@ MonoBehaviour:
   - BaseNodeGuid: 1bfef044-1cf2-4cdb-966e-11d1a27e4561
     PortName: Dialogue
     TargetNodeGuid: 04dc3512-3f83-4b75-8577-6809a4e3510d
-  - BaseNodeGuid: 03d67d61-6e08-4efb-aea6-783c49782a73
-    PortName: Dialogue
-    TargetNodeGuid: aa929f41-2adc-4045-a3f8-2f913bac01fc
-  - BaseNodeGuid: 03d67d61-6e08-4efb-aea6-783c49782a73
-    PortName: Question 1
-    TargetNodeGuid: 24504588-f71f-4696-9998-37851bd67159
   SituationNodeData:
   - Guid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
     SituationName: S1
@@ -1087,17 +1087,6 @@ MonoBehaviour:
     audioId: Audio id
     score: 0
     Position: {x: 549, y: 991}
-  - Guid: 287824ba-905b-40f2-a933-d80ecbed6253
-    AnswerName: A1.2.2
-    Feedback: 
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 0
-    nodeType: 2
-    speaker: Speaker
-    audioId: Audio id
-    score: 0
-    Position: {x: 545, y: 1273}
   - Guid: 2b659f71-ad70-4050-973a-c805e3cf103b
     AnswerName: A1.2.4
     Feedback: 
@@ -2014,6 +2003,17 @@ MonoBehaviour:
     audioId: Audio id
     score: 0
     Position: {x: 2557, y: 7723}
+  - Guid: 287824ba-905b-40f2-a933-d80ecbed6253
+    AnswerName: A1.2.2
+    Feedback: 
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 0
+    nodeType: 2
+    speaker: Speaker
+    audioId: Audio id
+    score: 0
+    Position: {x: 545, y: 1273}
   DialogueNodeData:
   - Guid: bde793cb-970f-44bc-89ce-73f90c6f98ce
     DialogueName: D1.2.1
@@ -2033,7 +2033,7 @@ MonoBehaviour:
     Position: {x: 888, y: 1545}
   - Guid: fb213491-ad2c-4a18-a66e-a29478c83ef7
     DialogueName: D1.2.4
-    DialogueText: Text
+    DialogueText: Impossible, I do my job properly!
     Speaker: Instrumentalist nurse
     Mood: Angry
     audioId: D1.2.4

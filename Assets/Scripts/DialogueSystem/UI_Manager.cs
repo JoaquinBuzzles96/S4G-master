@@ -290,6 +290,8 @@ public class UI_Manager : MonoBehaviour
 
         //Audio
         audioSource.clip = Resources.Load(GetAudioPath(_audio), typeof(AudioClip)) as AudioClip;
+
+
         if (audioSource.clip != null)
         {
             audioSource.Play();
@@ -340,13 +342,19 @@ public class UI_Manager : MonoBehaviour
             else
             {
                 Debug.Log("No se ha encontrado el audio por lo que asignamos uno por defecto");
-                path = $"Audio/Case3_ES/Audio1";
+                path = $"Audio/Case5_EN/Audio1";
             }
+            //#if PLATFORM_ANDROID
+            //#endif
+
+            //#if UNITY_EDITOR_WIN
+
+            //#endif
         }
         else
         {
             Debug.Log("No se ha encontrado el audio por lo que asignamos uno por defecto");
-            path = $"Audio/Case3_ES/Audio1";
+            path = $"Audio/Case5_EN/Audio1";
         }
 
         //Debug.Log($"Vamos a devolver el path {path}");
@@ -542,7 +550,7 @@ public class UI_Manager : MonoBehaviour
             dictionaryCharacteres["MainSurgeon"].gameObject.SetActive(true); //todo traductor
             dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
             dictionaryCharacteres["ResponsibleNurse"].gameObject.SetActive(true); //todo traductor
-            dictionaryCharacteres["InstrumentistSurgeon"].gameObject.SetActive(true); //todo traductor
+            dictionaryCharacteres["InstrumentalistNurse"].gameObject.SetActive(true); //todo traductor
             dictionaryCharacteres["CameraAssistant"].gameObject.SetActive(true); //todo traductor
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
@@ -700,19 +708,36 @@ public class UI_Manager : MonoBehaviour
 
     public void SetUpScreen5(AnswerNodeData answer)
     {
-
-        if (isValid(answer.Feedback))
+        if (totalScore < 0)
         {
-            StartCoroutine(PlaySimpleDialogue(answer.audioId, nextButtonFeedback));
+            totalScore = 0;
+        }
+        if (answer == null) //default feedback
+        {
+            string feedback = "Default feedback. You have to be faster!";
+            feedbackText.text = $"{feedback} \n Score: {totalScore}";
+            //Add feedback to email
+            AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
+            AddTextToRoute($"Feedback: {feedback}");
+            AddTextToRoute($"Final score: {totalScore}");
+        }
+        else
+        {
+            if (isValid(answer.Feedback))
+            {
+                StartCoroutine(PlaySimpleDialogue(answer.audioId, nextButtonFeedback));
+            }
+            feedbackText.text = $"{answer.Feedback} \n Score: {totalScore}";
+            //Add feedback to email
+            AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
+            AddTextToRoute($"Feedback: {answer.Feedback}");
+            AddTextToRoute($"Final score: {totalScore}");
+
         }
 
         StartCoroutine(SpecialCases.Instance.ExitRoom());
         
-        feedbackText.text = $"{answer.Feedback} \n Score: {totalScore}";
-        //Add feedback to email
-        AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
-        AddTextToRoute($"Feedback: {answer.Feedback}");
-        AddTextToRoute($"Final score: {totalScore}");
+
         //Send email
         Debug.Log("Enviamos un mail con la infomacion");
         SendMail.Instance.SendEmail();
@@ -965,6 +990,7 @@ public class UI_Manager : MonoBehaviour
             case "Instrumentalist Nurse":
             case "Instrumentalist nurse":
             case "Instrumentalist":
+            case "Instrumentist":
                 aux = "InstrumentalistNurse";
                 break;
             case "Camera Assistant":

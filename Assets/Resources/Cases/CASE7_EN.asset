@@ -103,9 +103,6 @@ MonoBehaviour:
   - BaseNodeGuid: 752a0222-b409-4923-9a2a-de7fb6256280
     PortName: Question 1
     TargetNodeGuid: 0ff13a64-207b-4a0a-bdd0-222b4e07fa6e
-  - BaseNodeGuid: 6518560a-7914-4aec-bc6c-7bbca7e0ca2b
-    PortName: Question 1
-    TargetNodeGuid: 107cec02-1113-4774-95c0-6fa38f776a35
   - BaseNodeGuid: 68d94713-8c33-41dc-b669-b0a13f522709
     PortName: Dialogue
     TargetNodeGuid: 60defc1c-7f92-4b9a-b4c7-25d035a33b36
@@ -118,6 +115,12 @@ MonoBehaviour:
   - BaseNodeGuid: aa0fcd70-9e79-4d6c-96de-c38423971f24
     PortName: Dialogue
     TargetNodeGuid: 0526b190-3520-4491-8365-6552a06b049d
+  - BaseNodeGuid: 6518560a-7914-4aec-bc6c-7bbca7e0ca2b
+    PortName: Question 1
+    TargetNodeGuid: 107cec02-1113-4774-95c0-6fa38f776a35
+  - BaseNodeGuid: 6518560a-7914-4aec-bc6c-7bbca7e0ca2b
+    PortName: Dialogue
+    TargetNodeGuid: 7acb1620-52de-41e8-be8b-378c76ff14cc
   - BaseNodeGuid: 0ff13a64-207b-4a0a-bdd0-222b4e07fa6e
     PortName: Answer 1
     TargetNodeGuid: 240db88b-01df-48ab-913c-e61caa447ece
@@ -529,12 +532,6 @@ MonoBehaviour:
   - BaseNodeGuid: b2aa33b1-7abe-45e4-b6d7-2e93ef738c6e
     PortName: Situation
     TargetNodeGuid: 6334b7fc-db46-4bc1-85d2-d35c57c0141b
-  - BaseNodeGuid: c4bb3047-6278-417e-a2a4-cd1281b77c97
-    PortName: Dialogue
-    TargetNodeGuid: 4bb02653-3965-4b7a-92ca-6077216b1c65
-  - BaseNodeGuid: c4bb3047-6278-417e-a2a4-cd1281b77c97
-    PortName: Situation
-    TargetNodeGuid: 195063cc-7338-4655-aebd-7894e49da16d
   - BaseNodeGuid: e7f33c2d-17b4-4c9f-857d-e8ad9620daa8
     PortName: Dialogue
     TargetNodeGuid: 61ae29e3-b720-491b-bcda-10d64c84ab53
@@ -745,6 +742,12 @@ MonoBehaviour:
   - BaseNodeGuid: bc02d34e-0f1f-4e41-bd30-f85e442befd6
     PortName: Dialogue
     TargetNodeGuid: 0485736f-215e-4131-b171-0af092cc6ec4
+  - BaseNodeGuid: c4bb3047-6278-417e-a2a4-cd1281b77c97
+    PortName: Dialogue
+    TargetNodeGuid: 4bb02653-3965-4b7a-92ca-6077216b1c65
+  - BaseNodeGuid: c4bb3047-6278-417e-a2a4-cd1281b77c97
+    PortName: Situation
+    TargetNodeGuid: 195063cc-7338-4655-aebd-7894e49da16d
   - BaseNodeGuid: 38ca1a5d-cebc-49b7-a178-7fe126fbde7e
     PortName: Dialogue
     TargetNodeGuid: a7d52d54-8039-4006-8f75-429b0bbee04e
@@ -787,9 +790,6 @@ MonoBehaviour:
   - BaseNodeGuid: 8cfc2a34-0ab5-478b-bd93-1cb847bee75c
     PortName: Dialogue
     TargetNodeGuid: 19c4b421-4dde-4060-995a-a3905395733e
-  - BaseNodeGuid: 9dc44579-6f45-482b-a4d3-df4c5be21e73
-    PortName: Dialogue
-    TargetNodeGuid: 8ab11780-239a-4290-bc22-c4fab8372c54
   - BaseNodeGuid: 3946060f-b17a-440d-8b33-96ce478454cc
     PortName: Dialogue
     TargetNodeGuid: b120fe29-1b39-4588-b3af-f248cc0e1983
@@ -859,15 +859,9 @@ MonoBehaviour:
   - BaseNodeGuid: d78fa642-a8ab-4a7f-9876-cfdae6213c74
     PortName: Dialogue
     TargetNodeGuid: 24a6aa64-5df3-46ba-89da-484ffa752ece
-  - BaseNodeGuid: 04caf85f-5d48-4042-8008-6c5e1c4b890f
-    PortName: Dialogue
-    TargetNodeGuid: b5b4adcd-a934-456a-9c9a-32e8785c57c4
   - BaseNodeGuid: ec55a562-73b2-4412-8c59-aa53f93d56ce
     PortName: Dialogue
     TargetNodeGuid: f5bc7eaf-ab35-451f-9072-4284c3030bcd
-  - BaseNodeGuid: b5b4adcd-a934-456a-9c9a-32e8785c57c4
-    PortName: Dialogue
-    TargetNodeGuid: 188f326b-d622-4662-a9f8-caf37d895338
   - BaseNodeGuid: 0c50cafa-6cfe-4d2a-a9da-d886035d17d8
     PortName: Dialogue
     TargetNodeGuid: 02cd66cc-67ed-45f8-b8db-8390e35507f5
@@ -916,6 +910,24 @@ MonoBehaviour:
   - BaseNodeGuid: 670dee49-601c-4867-9c8c-12cdf8b94ddf
     PortName: Dialogue
     TargetNodeGuid: a02a8acf-0598-4bdc-859b-110b4a4277f4
+  - BaseNodeGuid: 9dc44579-6f45-482b-a4d3-df4c5be21e73
+    PortName: Dialogue
+    TargetNodeGuid: 8ab11780-239a-4290-bc22-c4fab8372c54
+  - BaseNodeGuid: 04caf85f-5d48-4042-8008-6c5e1c4b890f
+    PortName: Dialogue
+    TargetNodeGuid: b5b4adcd-a934-456a-9c9a-32e8785c57c4
+  - BaseNodeGuid: b5b4adcd-a934-456a-9c9a-32e8785c57c4
+    PortName: Dialogue
+    TargetNodeGuid: 188f326b-d622-4662-a9f8-caf37d895338
+  - BaseNodeGuid: 6334b7fc-db46-4bc1-85d2-d35c57c0141b
+    PortName: Dialogue
+    TargetNodeGuid: ee4d7b6b-ba98-423d-83e4-013ae2475b61
+  - BaseNodeGuid: 2efc18c6-9b54-469f-80c6-ca83425b8b44
+    PortName: Dialogue
+    TargetNodeGuid: cd48a87c-08ba-41e0-abdb-744e5c0cfbc8
+  - BaseNodeGuid: 727b6aae-dbdb-40ca-afee-c27e960da47e
+    PortName: Dialogue
+    TargetNodeGuid: 7266fa11-89b5-4352-a629-5d96d09dbe82
   SituationNodeData:
   - Guid: 36ff957a-4d51-4c5f-aad8-6d3fcf183744
     SituationName: S1B
@@ -1033,13 +1045,6 @@ MonoBehaviour:
     audioId: S1
     nodeType: 0
     Position: {x: -1791, y: 482}
-  - Guid: 6518560a-7914-4aec-bc6c-7bbca7e0ca2b
-    SituationName: S10
-    Context: 
-    Id: 0
-    audioId: Audio id
-    nodeType: 0
-    Position: {x: 3629, y: 3265}
   - Guid: 68d94713-8c33-41dc-b669-b0a13f522709
     SituationName: S12A
     Context: 
@@ -1054,6 +1059,13 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 0
     Position: {x: 362, y: 5536}
+  - Guid: 6518560a-7914-4aec-bc6c-7bbca7e0ca2b
+    SituationName: S10
+    Context: 
+    Id: 0
+    audioId: Audio id
+    nodeType: 0
+    Position: {x: 3587, y: 3286}
   QuestionNodeData:
   - Guid: 0ff13a64-207b-4a0a-bdd0-222b4e07fa6e
     QuestionName: Q1A
@@ -3246,4 +3258,37 @@ MonoBehaviour:
     audioId: D13B.2.2
     nodeType: 3
     Position: {x: 7551, y: 4176}
+  - Guid: 7acb1620-52de-41e8-be8b-378c76ff14cc
+    DialogueName: D10
+    DialogueText: "Are you sure? I\u2019ve never seen you perform an intracorporeal
+      knot."
+    Speaker: Camera assistant
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 3823, y: 3067}
+  - Guid: ee4d7b6b-ba98-423d-83e4-013ae2475b61
+    DialogueName: D6
+    DialogueText: Great!, Shall I open the stapler?
+    Speaker: Instrumentalist
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 5935, y: 1446}
+  - Guid: cd48a87c-08ba-41e0-abdb-744e5c0cfbc8
+    DialogueName: D9
+    DialogueText: Great! How are we solving the complication? Shall I open the stapler?
+    Speaker: Instrumentalist
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 2417, y: 2928}
+  - Guid: 7266fa11-89b5-4352-a629-5d96d09dbe82
+    DialogueName: D8
+    DialogueText: The patient is unstable; we need to finish within 10 minutes.
+    Speaker: Anaesthesiologist
+    Mood: Calm
+    audioId: Audio id
+    nodeType: 3
+    Position: {x: 1052, y: 2555}
   ExposedProperties: []

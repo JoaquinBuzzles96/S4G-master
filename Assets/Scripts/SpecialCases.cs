@@ -170,11 +170,356 @@ public class SpecialCases : MonoBehaviour
         {
             CheckSpecialEventCase3(dialogue_id);
         }
+        else if (UI_Manager.Instance.currentCase == Cases.Case5)
+        {
+            CheckSpecialEventCase5(dialogue_id);
+        }
         else if (UI_Manager.Instance.currentCase == Cases.Case9)
         {
+            CheckSpecialEventCase9(dialogue_id);
+        }
+        else if (UI_Manager.Instance.currentCase == Cases.Case6)
+        {
+            CheckSpecialEventCase6(dialogue_id);
+        }
+        else if (UI_Manager.Instance.currentCase == Cases.Case7)
+        {
+            CheckSpecialEventCase7(dialogue_id);
+        }
+    }
+
+
+    public void CheckSpecialEventCase5(string dialogue_id)
+    {
+        switch (dialogue_id)
+        {
+            case "D1":
+                StartCoroutine(Case5D1());
+                break;
+            case "D16.1.3":
+                StartCoroutine(Case5D1613());
+                break;
+            case "D16.2.3":
+                StartCoroutine(Case5D1623());
+                break;
+            case "D16.3.3":
+                StartCoroutine(Case5D1633());
+                break;
+            case "D16.4.1":
+                StartCoroutine(Case5D1641());
+                break;
+            case "D18.1.2":
+                StartCoroutine(Case5D1812());
+                break;
+            case "D18.2.2":
+                StartCoroutine(Case5D1822());
+                break;
+            case "D18.3.2":
+                StartCoroutine(Case5D1832());
+                break;
 
         }
     }
+
+    public void CheckSpecialEventCase6(string dialogue_id)
+    {
+        switch (dialogue_id)
+        {
+            case "D1.1":
+                break;
+        }
+    }
+
+    public void CheckSpecialEventCase7(string dialogue_id)
+    {
+        switch (dialogue_id)
+        {
+            case "D1.1":
+                break;
+        }
+    }
+
+    public void CheckSpecialEventCase9(string dialogue_id)
+    {
+        switch (dialogue_id)
+        {
+            case "D1.2":
+                StartCoroutine(Case9D12());
+                break;
+            case "D4.1":
+                StartCoroutine(Case9D41());
+                break;
+            case "D4.2":
+                StartCoroutine(Case9D42());
+                break;
+            case "D4.3":
+                StartCoroutine(Case9D43());
+                break;
+            case "D4.1.1":
+                StartCoroutine(Case9D411());
+                break;
+            case "D4.1.3.3":
+                StartCoroutine(Case9D4133());
+                break;
+            case "D4.1.4.1":
+                StartCoroutine(Case9D4141());
+                break;
+            case "D6.4":
+                StartCoroutine(Case9D64());
+                break;
+            case "D6.4.1":
+                StartCoroutine(Case9D641());
+                break;
+            case "D6.4.3":
+                StartCoroutine(Case9D643());
+                break;
+            case "D6.4.4":
+                StartCoroutine(Case9D644());
+                break;
+            case "D6.1.3.1":
+                StartCoroutine(Case9D6131());
+                break;
+            case "D6.1.4.2":
+                StartCoroutine(Case9D6142());
+                break;
+            case "D8.1":
+                StartCoroutine(Case9D81());
+                break;
+            case "D8.1.1":
+                StartCoroutine(Case9D811());
+                break;
+            case "D8.1.2":
+                StartCoroutine(Case9D812());
+                break;
+            case "D8.1.3":
+                StartCoroutine(Case9D813());
+                break;
+            case "D8.1.4":
+                StartCoroutine(Case9D814());
+                break;
+            case "D9.1":
+                StartCoroutine(Case9D91());
+                break;
+
+        }
+    }
+
+    IEnumerator Case5D1()
+    {
+        Debug.Log($"Suena el telefono y la circulating nurse lo coge, cuando acaba la llamada se gira para hablar con el equipo");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case5D1613()
+    {
+        Debug.Log($"Final 1: todos se ponen a trabajar y después se enseñan al paciente, a la embarazada y el niño en sus habitaciones.");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case5D1623()
+    {
+        Debug.Log($"Final 1: todos se ponen a trabajar y después se enseñan al paciente, a la embarazada y el niño en sus habitaciones.");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case5D1633()
+    {
+        Debug.Log($"Final 1: todos se ponen a trabajar y después se enseñan al paciente, a la embarazada y el niño en sus habitaciones.");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case5D1641()
+    {
+        Debug.Log($"Final 1: todos se ponen a trabajar y después se enseñan al paciente, a la embarazada y el niño en sus habitaciones.");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case5D1812()
+    {
+        Debug.Log($"Final 2: Se enseña a la mujer que ha perdido al niño de forma dramática");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case5D1822()
+    {
+        Debug.Log($"Final 2: Se enseña a la mujer que ha perdido al niño de forma dramática");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case5D1832()
+    {
+        Debug.Log($"Final 2: Se enseña a la mujer que ha perdido al niño de forma dramática");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+
+    IEnumerator Case9D12()
+    {
+        Debug.Log($"Señala la pantalla donde hay un video en concreto que nos tenrían que pasar,");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D41()
+    {
+        Debug.Log($"Endoscopy nurse da inyector");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D42()
+    {
+        Debug.Log($"Endoscopy nurse da inyección submucosa");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D43()
+    {
+        Debug.Log($"Endoscopy nurse da lazo polipectomico/asa de polipectomia??");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D411()
+    {
+        Debug.Log($"Señala a la mesa y la enfermera da los forceps");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D4133()
+    {
+        Debug.Log($"Señala a la mesa y la enfermera da los forceps");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D4141()
+    {
+        Debug.Log($"Señala a la mesa y la enfermera da los forceps");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+    IEnumerator Case9D64()
+    {
+        Debug.Log($"La enfermera va a la mesa y coge una herramienta que no es un coag grasper");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D641()
+    {
+        Debug.Log($"Le tiras la herramienta a la cabeza");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D643()
+    {
+        Debug.Log($"Le devuelve la herramienta");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D644()
+    {
+        Debug.Log($"Le devuelve la herramienta");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D6131()
+    {
+        Debug.Log($"La endoscopist 2 se mueve a la mesa de herramientas junto a la endoscopy nurse y te dan la herramienta ");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D6142()
+    {
+        Debug.Log($"La endoscopist 2 se mueve a la mesa de herramientas junto a la endoscopy nurse y te dan la herramienta ");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D81()
+    {
+        Debug.Log($"Entra el secretario");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D811()
+    {
+        Debug.Log($"Entran estudiantes y los que están dentro se mueven un poco, el secretario se va despues");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D812()
+    {
+        Debug.Log($"El secretario se va");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D813()
+    {
+        Debug.Log($"El secretario se va");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D814()
+    {
+        Debug.Log($"El secretario se va");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case9D91()
+    {
+        Debug.Log($"Devuelve las herramientas a la enfermera");
+        playingAnimation = true;
+        yield return null;
+        playingAnimation = false;
+    }
+
 
     IEnumerator CaseD11()
     {
