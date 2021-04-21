@@ -361,12 +361,6 @@ MonoBehaviour:
   - BaseNodeGuid: cbc58ba5-3a83-4980-8f8c-fa1592b60497
     PortName: Situation
     TargetNodeGuid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
-  - BaseNodeGuid: 287824ba-905b-40f2-a933-d80ecbed6253
-    PortName: Dialogue
-    TargetNodeGuid: 470da3ca-b789-4c97-ab78-c6d77c9b7da6
-  - BaseNodeGuid: 287824ba-905b-40f2-a933-d80ecbed6253
-    PortName: Situation
-    TargetNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
   - BaseNodeGuid: 2b659f71-ad70-4050-973a-c805e3cf103b
     PortName: Dialogue
     TargetNodeGuid: fb213491-ad2c-4a18-a66e-a29478c83ef7
@@ -835,6 +829,12 @@ MonoBehaviour:
   - BaseNodeGuid: b4ea7459-abf1-4d8a-930a-86c6b8ebb394
     PortName: Situation
     TargetNodeGuid: 02ab95f7-0ffa-4741-ad1c-2bf5d6e66433
+  - BaseNodeGuid: 287824ba-905b-40f2-a933-d80ecbed6253
+    PortName: Dialogue
+    TargetNodeGuid: 470da3ca-b789-4c97-ab78-c6d77c9b7da6
+  - BaseNodeGuid: 287824ba-905b-40f2-a933-d80ecbed6253
+    PortName: Situation
+    TargetNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
   - BaseNodeGuid: 1bfef044-1cf2-4cdb-966e-11d1a27e4561
     PortName: Dialogue
     TargetNodeGuid: 04dc3512-3f83-4b75-8577-6809a4e3510d
@@ -2727,7 +2727,7 @@ MonoBehaviour:
     Position: {x: 11334, y: 6925}
   - Guid: 3881e1f4-d261-441c-bd1d-d2b02ab41ae5
     DialogueName: D1.0
-    DialogueText: Someone knows here is the swab?
+    DialogueText: Someone knows where is the swab?
     Speaker: Urologist
     Mood: Calm
     audioId: D1.0
