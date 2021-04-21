@@ -1013,6 +1013,9 @@ public class UI_Manager : MonoBehaviour
             case "urologist":
                 aux = "Urologist";
                 break;
+            case "Narrador":
+                aux = "Narrator";
+                break;
         }
 
         return aux;

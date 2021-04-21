@@ -193,8 +193,11 @@ public class SpecialCases : MonoBehaviour
     {
         switch (dialogue_id)
         {
-            case "D1":
-                StartCoroutine(Case5D1());
+            case "D0.1": //es el anterior al D.1
+                StartCoroutine(Case5D01());
+                break;
+            case "D1": //se vuelve a su sitio
+                //StartCoroutine(Case5D1()); //Mejor lo hace todo en el anterior
                 break;
             case "D16.1.3":
                 StartCoroutine(Case5D1613());
@@ -304,10 +307,53 @@ public class SpecialCases : MonoBehaviour
         }
     }
 
-    IEnumerator Case5D1()
+    IEnumerator Case5D01()
     {
         Debug.Log($"Suena el telefono y la circulating nurse lo coge, cuando acaba la llamada se gira para hablar con el equipo");
         playingAnimation = true;
+
+        //Va al punto donde se encuentra el telefono
+        //Ir a la mesa
+        movementNurse = UI_Manager.Instance.dictionaryCharacteres["CirculatingNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
+        while (movementNurse.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+
+        //Animacion de hablar
+
+        //Esperar unos segundos
+        yield return new WaitForSeconds(2f);
+
+        //Volverse al sitio
+        Debug.Log($"Volvemos a nuestro sitio original");
+        movementNurse = UI_Manager.Instance.dictionaryCharacteres["CirculatingNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
+        movementNurse.ResetPosition();
+        while (movementNurse.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+
+
+        yield return null;
+        playingAnimation = false;
+    }
+
+    IEnumerator Case5D1()
+    {
+        Debug.Log($"Se vuelve a su sitio la circulating nurse");
+        playingAnimation = true;
+
+        Debug.Log("La enfermera se vuelve a su sitio");
+        //volver a su sitio
+        movementNurse = UI_Manager.Instance.dictionaryCharacteres["CirculatingNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
+        movementNurse.ResetPosition();
+        while (movementNurse.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+
         yield return null;
         playingAnimation = false;
     }
@@ -316,7 +362,9 @@ public class SpecialCases : MonoBehaviour
     {
         Debug.Log($"Final 1: todos se ponen a trabajar y después se enseñan al paciente, a la embarazada y el niño en sus habitaciones.");
         playingAnimation = true;
-        yield return null;
+
+        yield return ShowPregnantWomanGood(true);
+
         playingAnimation = false;
     }
 
@@ -324,7 +372,7 @@ public class SpecialCases : MonoBehaviour
     {
         Debug.Log($"Final 1: todos se ponen a trabajar y después se enseñan al paciente, a la embarazada y el niño en sus habitaciones.");
         playingAnimation = true;
-        yield return null;
+        yield return ShowPregnantWomanGood(true);
         playingAnimation = false;
     }
 
@@ -332,7 +380,7 @@ public class SpecialCases : MonoBehaviour
     {
         Debug.Log($"Final 1: todos se ponen a trabajar y después se enseñan al paciente, a la embarazada y el niño en sus habitaciones.");
         playingAnimation = true;
-        yield return null;
+        yield return ShowPregnantWomanGood(true);
         playingAnimation = false;
     }
 
@@ -340,7 +388,7 @@ public class SpecialCases : MonoBehaviour
     {
         Debug.Log($"Final 1: todos se ponen a trabajar y después se enseñan al paciente, a la embarazada y el niño en sus habitaciones.");
         playingAnimation = true;
-        yield return null;
+        yield return ShowPregnantWomanGood(true);
         playingAnimation = false;
     }
 
@@ -348,7 +396,7 @@ public class SpecialCases : MonoBehaviour
     {
         Debug.Log($"Final 2: Se enseña a la mujer que ha perdido al niño de forma dramática");
         playingAnimation = true;
-        yield return null;
+        yield return ShowPregnantWomanGood(false);
         playingAnimation = false;
     }
 
@@ -356,7 +404,7 @@ public class SpecialCases : MonoBehaviour
     {
         Debug.Log($"Final 2: Se enseña a la mujer que ha perdido al niño de forma dramática");
         playingAnimation = true;
-        yield return null;
+        yield return ShowPregnantWomanGood(false);
         playingAnimation = false;
     }
 
@@ -364,9 +412,36 @@ public class SpecialCases : MonoBehaviour
     {
         Debug.Log($"Final 2: Se enseña a la mujer que ha perdido al niño de forma dramática");
         playingAnimation = true;
-        yield return null;
+        yield return ShowPregnantWomanGood(false);
         playingAnimation = false;
     }
+
+
+    IEnumerator ShowPregnantWomanGood(bool isGoodFinal)
+    {
+        if (isGoodFinal)
+        {
+            //TODO: ACTIVAR RENDER CORRESPONDIENTE
+        }
+        else
+        {
+            //TODO: ACTIVAR RENDER CORRESPONDIENTE
+        }
+
+        yield return new WaitForSeconds(5);
+
+        //desactivamos el render
+
+        if (isGoodFinal)
+        {
+            //TODO: DESACTIVAMOS EL RENDER CORRESPONDIENTE
+        }
+        else
+        {
+            //TODO: DESACTIVAMOS EL RENDER CORRESPONDIENTE
+        }
+    }
+
 
 
     IEnumerator Case9D12()
