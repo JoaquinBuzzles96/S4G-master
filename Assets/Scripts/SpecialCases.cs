@@ -618,7 +618,7 @@ public class SpecialCases : MonoBehaviour
         movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
 
         movementNurse = UI_Manager.Instance.dictionaryCharacteres["Endoscopist2"].gameObject.GetComponent<SimpleWaypointMovement>();
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable2, Case3Resources.Instance.tableLookPoint);
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -669,7 +669,7 @@ public class SpecialCases : MonoBehaviour
         UI_Manager.Instance.generalArrow.SetActive(true);
         UI_Manager.Instance.generalArrow.GetComponent<LookTarget>().target = UI_Manager.Instance.dictionaryCharacteres["Secretary"].gameObject.transform;
         SimpleWaypointMovement movement = Case3Resources.Instance.secretary.GetComponent<SimpleWaypointMovement>();
-        Case3Resources.Instance.doorAnim.Play();
+        //Case3Resources.Instance.doorAnim.Play();
         movement.canMove = true;
         while (movement.canMove)
         {
@@ -692,7 +692,7 @@ public class SpecialCases : MonoBehaviour
         UI_Manager.Instance.generalArrow.SetActive(true);
         UI_Manager.Instance.generalArrow.GetComponent<LookTarget>().target = UI_Manager.Instance.dictionaryCharacteres["Secretary"].gameObject.transform;
         SimpleWaypointMovement movement = Case3Resources.Instance.secretary.GetComponent<SimpleWaypointMovement>();
-        Case3Resources.Instance.doorAnim.Play();
+        //Case3Resources.Instance.doorAnim.Play();
         movement.ResetPosition();
         while (movement.canMove)
         {
@@ -710,7 +710,7 @@ public class SpecialCases : MonoBehaviour
         UI_Manager.Instance.generalArrow.SetActive(true);
         UI_Manager.Instance.generalArrow.GetComponent<LookTarget>().target = UI_Manager.Instance.dictionaryCharacteres["Secretary"].gameObject.transform;
         SimpleWaypointMovement movement = Case3Resources.Instance.secretary.GetComponent<SimpleWaypointMovement>();
-        Case3Resources.Instance.doorAnim.Play();
+        //Case3Resources.Instance.doorAnim.Play();
         movement.ResetPosition();
         while (movement.canMove)
         {
@@ -769,7 +769,7 @@ public class SpecialCases : MonoBehaviour
         Debug.Log($"Vamos a hacer el caso D3.1: La enfermera sale llorando");
         playingAnimation = true;
         movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
-        Case3Resources.Instance.doorAnim.Play();
+        //Case3Resources.Instance.doorAnim.Play();
         movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
         while (movementNurse.canMove)
         {
@@ -784,7 +784,7 @@ public class SpecialCases : MonoBehaviour
         playingAnimation = true;
         UpdateNurseName();
         movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
-        Case3Resources.Instance.doorAnim.Play();
+        //Case3Resources.Instance.doorAnim.Play();
         movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsEnter, Case3Resources.Instance.endoscopist1LookPoint);
         while (movementNurse.canMove)
         {
@@ -813,7 +813,7 @@ public class SpecialCases : MonoBehaviour
         Debug.Log($"Vamos a hacer el caso D5.1: La enfermera sale llorando");
         playingAnimation = true;
         movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
-        Case3Resources.Instance.doorAnim.Play();
+        //Case3Resources.Instance.doorAnim.Play();
         movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
         while (movementNurse.canMove)
         {
@@ -828,7 +828,7 @@ public class SpecialCases : MonoBehaviour
         playingAnimation = true;
         UpdateNurseName();
         movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
-        Case3Resources.Instance.doorAnim.Play();
+        //Case3Resources.Instance.doorAnim.Play();
         movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsEnter, Case3Resources.Instance.endoscopist1LookPoint);
         while (movementNurse.canMove)
         {
@@ -1089,7 +1089,7 @@ public class SpecialCases : MonoBehaviour
         UI_Manager.Instance.generalArrow.GetComponent<LookTarget>().target = UI_Manager.Instance.dictionaryCharacteres["Secretary"].gameObject.transform;
         playingAnimation = true;
         SimpleWaypointMovement movement = Case3Resources.Instance.secretary.GetComponent<SimpleWaypointMovement>();
-        Case3Resources.Instance.doorAnim.Play();
+        //Case3Resources.Instance.doorAnim.Play();
         movement.canMove = true;
         while (movement.canMove)
         {
@@ -1104,7 +1104,7 @@ public class SpecialCases : MonoBehaviour
         isExtraNurse = true;
         UpdateNurseName();
         SimpleWaypointMovement movement = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurseExtra"].gameObject.GetComponent<SimpleWaypointMovement>();
-        Case3Resources.Instance.doorAnim.Play();
+        //Case3Resources.Instance.doorAnim.Play();
         movement.SetPathAndPlay(Case3Resources.Instance.waypointsEnterExtra, Case3Resources.Instance.endoscopist1LookPoint);
         while (movement.canMove)
         {
@@ -1380,7 +1380,7 @@ public class SpecialCases : MonoBehaviour
     public IEnumerator ExitRoom()
     {
         //Todos abandonan la habitación
-        Case3Resources.Instance.doorAnim.Play(); //revisar esto
+        //Case3Resources.Instance.doorAnim.Play(); //revisar esto
 
         //anestesiologo
         SimpleWaypointMovement aux = Case3Resources.Instance.anaesthesiologist.GetComponent<SimpleWaypointMovement>();
