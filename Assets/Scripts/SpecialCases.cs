@@ -684,17 +684,23 @@ public class SpecialCases : MonoBehaviour
         Debug.Log($"Entran estudiantes y los que están dentro se mueven un poco, el secretario se va despues");
         playingAnimation = true;
 
-        //TODO: ENTRAN LOS NUEVOS ESTUDIANTES ¿? ES BUENA IDEA HACERLO?
-
+        //ENTRAN LOS NUEVOS ESTUDIANTES 
+        SimpleWaypointMovement movement = UI_Manager.Instance.dictionaryCharacteres["Student_3"].GetComponent<SimpleWaypointMovement>();
+        movement.canMove = true;
+        SimpleWaypointMovement movement2 = UI_Manager.Instance.dictionaryCharacteres["Student_4"].GetComponent<SimpleWaypointMovement>();
+        movement2.canMove = true;
+        while (movement2.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
 
         //SE VA EL SECRETARIO
-
         UI_Manager.Instance.generalArrow.SetActive(true);
         UI_Manager.Instance.generalArrow.GetComponent<LookTarget>().target = UI_Manager.Instance.dictionaryCharacteres["Secretary"].gameObject.transform;
-        SimpleWaypointMovement movement = Case3Resources.Instance.secretary.GetComponent<SimpleWaypointMovement>();
+        SimpleWaypointMovement movement_secretary = Case3Resources.Instance.secretary.GetComponent<SimpleWaypointMovement>();
         //Case3Resources.Instance.doorAnim.Play();
-        movement.ResetPosition();
-        while (movement.canMove)
+        movement_secretary.ResetPosition();
+        while (movement_secretary.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
         }
@@ -1382,6 +1388,17 @@ public class SpecialCases : MonoBehaviour
         //Todos abandonan la habitación
         //Case3Resources.Instance.doorAnim.Play(); //revisar esto
 
+        foreach (var item in UI_Manager.Instance.dictionaryCharacteres)
+        {
+            if (item.Key != "Endoscopist1" && item.Key != "Secretary")
+            {
+                SimpleWaypointMovement aux = item.Value.GetComponent<SimpleWaypointMovement>();
+                aux.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
+                yield return new WaitForSeconds(1);
+            }
+        }
+
+        /*
         //anestesiologo
         SimpleWaypointMovement aux = Case3Resources.Instance.anaesthesiologist.GetComponent<SimpleWaypointMovement>();
         aux.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
@@ -1412,7 +1429,7 @@ public class SpecialCases : MonoBehaviour
         //Endoescopista2
         aux = Case3Resources.Instance.endoscopist2.GetComponent<SimpleWaypointMovement>();
         aux.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
-
+        */
     }
 
     #endregion
