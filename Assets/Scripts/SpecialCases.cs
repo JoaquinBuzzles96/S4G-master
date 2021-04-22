@@ -1308,10 +1308,14 @@ public class SpecialCases : MonoBehaviour
         if (isGoodFinal)
         {
             //TODO: ACTIVAR RENDER CORRESPONDIENTE
+            Case3Resources.Instance.goodEnd.SetActive(true);
+
         }
         else
         {
             //TODO: ACTIVAR RENDER CORRESPONDIENTE
+            Case3Resources.Instance.badEnd.SetActive(true);
+
         }
 
         yield return new WaitForSeconds(5);
@@ -1321,10 +1325,12 @@ public class SpecialCases : MonoBehaviour
         if (isGoodFinal)
         {
             //TODO: DESACTIVAMOS EL RENDER CORRESPONDIENTE
+            Case3Resources.Instance.goodEnd.SetActive(false);
         }
         else
         {
             //TODO: DESACTIVAMOS EL RENDER CORRESPONDIENTE
+            Case3Resources.Instance.badEnd.SetActive(false);
         }
     }
     IEnumerator GoToTableAndTakeObject(string tableObject)

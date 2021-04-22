@@ -52,7 +52,9 @@ public class Case3Resources : MonoBehaviour
     public Transform endoscopist1LookPoint;
     public Transform phoneLookPoint;
     public Dictionary<string, Vector3> positionsDictionary; //en este diccionario guardaremos las posiciones originales de cada objeto en la mesa
-    
+
+    public GameObject goodEnd;
+    public GameObject badEnd;
 
     public GameObject[] tools; //para que se vea en el inspector :)
     public Dictionary<string, GameObject> toolsDictionary;

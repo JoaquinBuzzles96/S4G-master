@@ -657,6 +657,7 @@ public class UI_Manager : MonoBehaviour
         else
         {
             Debug.LogError($"No se han encontrado dialogos para la situacion {situation.SituationName}");
+            ToScreen3(screen2);
         }
     }
 

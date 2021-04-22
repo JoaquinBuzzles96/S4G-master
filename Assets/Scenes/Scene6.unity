@@ -19143,7 +19143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517644277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.456, y: 1.742, z: -4.093}
+  m_LocalPosition: {x: 4.456, y: 0, z: -4.093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 638445681}
@@ -23753,6 +23753,8 @@ MonoBehaviour:
   tableLookPoint: {fileID: 938713077}
   endoscopist1LookPoint: {fileID: 1641184543831267640}
   phoneLookPoint: {fileID: 1517644278}
+  goodEnd: {fileID: 0}
+  badEnd: {fileID: 0}
   tools:
   - {fileID: 1673842596}
   - {fileID: 919132149481859303}
