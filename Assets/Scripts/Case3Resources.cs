@@ -46,8 +46,11 @@ public class Case3Resources : MonoBehaviour
     public Transform[] waypointsSecretary;
     public Transform[] waypointsToTable1;
     public Transform[] waypointsToTable2;
+    public Transform[] waypointsToPhone;
+    public Transform[] waypointsToPhoneBack;
     public Transform tableLookPoint;
     public Transform endoscopist1LookPoint;
+    public Transform phoneLookPoint;
     public Dictionary<string, Vector3> positionsDictionary; //en este diccionario guardaremos las posiciones originales de cada objeto en la mesa
     
 

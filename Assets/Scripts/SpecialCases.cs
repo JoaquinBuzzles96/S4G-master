@@ -45,7 +45,7 @@ public class SpecialCases : MonoBehaviour
 
     #endregion
 
-    public string ChechkAudio(string audio_id, string _speaker) 
+    public string ChechkAudio(string audio_id, string _speaker)
     {
         string real_audio_id = audio_id;
         if (UI_Manager.Instance.currentCase == Cases.Case3)
@@ -136,7 +136,7 @@ public class SpecialCases : MonoBehaviour
                 break;
             case "D6.1.2": //le devuelves la herramienta
             case "D6.1.3": //le devuelves la herramienta
-               // De momento lo quitamos, podemos poner que no te la llegue a dar --> StartCoroutine(CaseD613());
+                           // De momento lo quitamos, podemos poner que no te la llegue a dar --> StartCoroutine(CaseD613());
                 break;
             case "D6.4.3": // el endoescopista 2 ayuda a la enfermera a buscar el forceps en la mesa
                 StartCoroutine(CaseD643());
@@ -232,7 +232,7 @@ public class SpecialCases : MonoBehaviour
             case "D2.2.2":
             case "D2.1.1":
             case "D2.3.2":
-                StartCoroutine(Case6D2_Count_towels()); 
+                StartCoroutine(Case6D2_Count_towels());
                 break;
             case "D4.2.2":
             case "D4.3.2":
@@ -260,8 +260,43 @@ public class SpecialCases : MonoBehaviour
     {
         switch (dialogue_id)
         {
-            case "D1.1":
+            case "D1A.3": //VA A LA SALA DE MATERIAL A VER SI QUEDAN GRAPAS
+                StartCoroutine(Case7D1A3());
                 break;
+            case "D1B.4.2"://LLAMA POR TELEFONO
+            case "D2.4":
+            case "D3.4.2":
+            case "D3.2": //(main surgeon)
+                StartCoroutine(Case7_phone_call());
+                break;
+            case "D2.1": //coger grapadora extra gruesa de la mesa
+                StartCoroutine(Case7D1());
+                break;
+            case "D2.2":
+            case "D2.3"://SUTURA MANUAL
+            case "D3.1":
+            case "D13A.1.2"://SUTURA LA PIEL (REUTILIZAMOS LA DE SUTURA MANUAL)
+                StartCoroutine(Case7Sutura());
+                break;
+            case "D5.1": //SUBIR EL VOLUMEN DEL MONITOR
+            case "D5.3": //SUBIR EL VOLUMEN DEL MONITOR
+                StartCoroutine(Case7_Modify_volume(true));
+                break;
+            case "D5.2": //BAJAR EL VOLUMEN DEL MONITOR (PODEMOS USAR LA MISMA ANIMACION)
+            case "D5.2.1": //BAJAR EL VOLUMEN DEL MONITOR 
+                StartCoroutine(Case7_Modify_volume(false));
+                break;
+            case "D5.4.1": //APAGAR RADIO
+                StartCoroutine(Case7D541());
+                break;
+            case "D6.1": //abrir y colocar grapadora 
+            case "D6.2":
+            case "D6.3":
+            case "D6.4":
+                StartCoroutine(Case7_Open_Stapler());
+                break;
+
+
         }
     }
 
@@ -327,7 +362,7 @@ public class SpecialCases : MonoBehaviour
         //Va al punto donde se encuentra el telefono
         //Ir a la mesa
         movementNurse = UI_Manager.Instance.dictionaryCharacteres["CirculatingNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToPhone, Case3Resources.Instance.phoneLookPoint);
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -343,7 +378,7 @@ public class SpecialCases : MonoBehaviour
         //Volverse al sitio
         Debug.Log($"Volvemos a nuestro sitio original");
         movementNurse = UI_Manager.Instance.dictionaryCharacteres["CirculatingNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
-        movementNurse.ResetPosition();
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToPhoneBack, Case3Resources.Instance.endoscopist1LookPoint);
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -464,7 +499,7 @@ public class SpecialCases : MonoBehaviour
         //Va al punto donde se encuentra el telefono
         //Ir a la mesa
         movementNurse = UI_Manager.Instance.dictionaryCharacteres["AssistantSurgeon"].gameObject.GetComponent<SimpleWaypointMovement>();
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToPhone, Case3Resources.Instance.phoneLookPoint);
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -482,7 +517,7 @@ public class SpecialCases : MonoBehaviour
         //Volverse al sitio
         Debug.Log($"Volvemos a nuestro sitio original");
         movementNurse = UI_Manager.Instance.dictionaryCharacteres["AssistantSurgeon"].gameObject.GetComponent<SimpleWaypointMovement>();
-        movementNurse.ResetPosition();
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToPhoneBack, Case3Resources.Instance.endoscopist1LookPoint);
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
@@ -491,6 +526,153 @@ public class SpecialCases : MonoBehaviour
 
         playingAnimation = false;
     }
+
+    #endregion
+
+    #region CASE7_EVENTS
+
+    IEnumerator Case7D1A3() //salir y entrar de ResponsibleNurse
+    {
+        playingAnimation = true;
+        //sale la enfermera
+        SimpleWaypointMovement aux = UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].GetComponent<SimpleWaypointMovement>();
+        //Case3Resources.Instance.doorAnim.Play();
+        aux.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
+        while (aux.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+
+        //pausa
+        yield return new WaitForSeconds(2f);
+
+        //entra la enfermera
+        //Case3Resources.Instance.doorAnim.Play();
+        aux.SetPathAndPlay(Case3Resources.Instance.waypointsEnter, Case3Resources.Instance.endoscopist1LookPoint);
+        while (aux.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+
+
+        playingAnimation = false;
+    }
+    IEnumerator Case7_phone_call()
+    {
+        playingAnimation = true;
+        SimpleWaypointMovement aux = UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
+        aux.SetPathAndPlay(Case3Resources.Instance.waypointsToPhone, Case3Resources.Instance.phoneLookPoint);
+        while (aux.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+        
+        anim = "Phone";
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject, anim);
+        
+        //VOLVER DE DONDE ESTE EL TELEFONO
+        aux = UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToPhoneBack, Case3Resources.Instance.endoscopist1LookPoint);
+        while (aux.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+
+        playingAnimation = false;
+    }
+    IEnumerator Case7D1()
+    {
+        //todo: cambiar por GRAPADORA EXTRAGRUESA (ResponsibleNurse)
+        playingAnimation = true;
+
+        yield return GoToTableAndGiveTool("Inyector", "ResponsibleNurse");
+
+        playingAnimation = false;
+    }
+
+    IEnumerator Case7Sutura()
+    {
+        playingAnimation = true;
+        anim = "LookFor";// TODO: "Suture";
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["MainSurgeon"].gameObject, anim);
+        playingAnimation = false;
+    }
+
+    IEnumerator Case7_Modify_volume(bool high)
+    {
+        // IR A DONDE ESTE EL MONITOR DEL VOLUMEN
+        /*
+        SimpleWaypointMovement aux = UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
+        aux.SetPathAndPlay(Case3Resources.Instance.waypointsToMonitor, Case3Resources.Instance.MonitorLookPoint);
+        while (aux.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+        */
+
+        playingAnimation = true;
+        anim = "LookFor";// TODO: "mODIFICAR VOLUMEN";
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject, anim);
+        playingAnimation = false;
+
+        if (high)
+        {
+            //volume++
+        }
+        else
+        {
+            //volume--
+        }
+
+        //VOLVER DE DONDE ESTE EL MONITOR DEL VOLUMEN
+        /*
+        aux = UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
+        aux..ResetPosition();
+        while (aux.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+         */
+    }
+
+    IEnumerator Case7D541() //apagar radio ResponsibleNurse
+    {
+
+        // IR A DONDE ESTE LA RADIO
+        /*
+        SimpleWaypointMovement aux = UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
+        aux.SetPathAndPlay(Case3Resources.Instance.waypointsToRadio, Case3Resources.Instance.radioLookPoint);
+        while (aux.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+        */
+
+        playingAnimation = true;
+        anim = "LookFor";// TODO: "Apagar radio";
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject, anim);
+        playingAnimation = false;
+
+        //VOLVER DE DONDE ESTE LA RADIO
+        /*
+        aux = UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
+        aux..ResetPosition();
+        while (aux.canMove)
+        {
+            yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
+        }
+         */
+
+    }
+
+    IEnumerator Case7_Open_Stapler()
+    {
+        playingAnimation = true;
+        anim = "LookFor";// TODO: "Open_Strapler";
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["MainSurgeon"].gameObject, anim);
+        playingAnimation = false;
+    }
+
 
     #endregion
 
@@ -525,8 +707,6 @@ public class SpecialCases : MonoBehaviour
 
     IEnumerator GoToTableAndGiveTool(string tool, string character = "EndoscopyNurse")
     {
-        //Ir a la mesa
-        //Va al punto donde se encuentra el telefono
         //Ir a la mesa
         movementNurse = UI_Manager.Instance.dictionaryCharacteres[character].gameObject.GetComponent<SimpleWaypointMovement>();
         movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
