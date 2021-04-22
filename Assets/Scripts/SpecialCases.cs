@@ -335,7 +335,7 @@ public class SpecialCases : MonoBehaviour
 
         //Animacion de hablar
         //HABLA POR TELEFONO
-        anim = "LookFor"; //TODO: Cambiar por la de count cuando este metida en el animator
+        anim = "Phone"; //TODO: Cambiar por la de count cuando este metida en el animator
         yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["CirculatingNurse"].gameObject, anim);
         //Esperar unos segundos
         yield return new WaitForSeconds(2f);
@@ -450,7 +450,7 @@ public class SpecialCases : MonoBehaviour
         Debug.Log($"Mirar por el suelo y debajo de los equipos. (todos)");
         playingAnimation = true;
 
-        yield return PlayBroadcastAnim("LookFor"); //TODO: Cambiar por la animacion correcta
+        yield return PlayBroadcastAnim("Search_floor"); //TODO: Cambiar por la animacion correcta
 
         playingAnimation = false;
     }
