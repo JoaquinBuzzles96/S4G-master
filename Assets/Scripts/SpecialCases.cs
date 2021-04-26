@@ -514,6 +514,15 @@ public class SpecialCases : MonoBehaviour
         //Esperar unos segundos 
         yield return new WaitForSeconds(2f);
 
+        Case3Resources.Instance.fadeCanvas.SetActive(true);
+        //Fade out y fade in para que parezca que ha pasado tiempo
+        int animTime = 1;
+        Case3Resources.Instance.fadeAnimator.Play("FADE_OUT_Anim");
+        yield return new WaitForSeconds(animTime + 2f);
+        Case3Resources.Instance.fadeAnimator.Play("FADE_IN_Animation");
+        yield return new WaitForSeconds(animTime);
+        Case3Resources.Instance.fadeCanvas.SetActive(false);
+
         //Volverse al sitio
         Debug.Log($"Volvemos a nuestro sitio original");
         movementNurse = UI_Manager.Instance.dictionaryCharacteres["AssistantSurgeon"].gameObject.GetComponent<SimpleWaypointMovement>();

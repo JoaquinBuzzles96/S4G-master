@@ -65,6 +65,8 @@ public class UI_Manager : MonoBehaviour
 
     public List<Animator> characteres;
 
+    public GameObject PANEL_IMAGE;
+
     public Dictionary<string, Animator> dictionaryCharacteres = new Dictionary<string, Animator>();
 
     public string caso;
@@ -216,31 +218,34 @@ public class UI_Manager : MonoBehaviour
         SetUpContext(newSituation);
         originScreen.SetActive(false);
         screen1.SetActive(true);
-
+        PANEL_IMAGE.SetActive(true);
     }
 
     public void ToScreen2(GameObject originScreen) //Dialogue situation
     {
         SetUpScreen2(); //Actualizamos los dialogos de la pantalla
         originScreen.SetActive(false);
-        screen2.SetActive(true);
+        //screen2.SetActive(true); //TEMPORAL, TESTING
+        PANEL_IMAGE.SetActive(false);
     }
 
     public void ToScreen3(GameObject originScreen) // Answer choose
     {
         //if (!CheckMoreDialogues(situationDialogues, situationDialogueTexts, nextButtonSituation)) //si no hay mas dialogos entra aqui
         //{
-            originScreen.SetActive(false);
-            screen3.SetActive(true);
-            SetUpScreen3();
+        originScreen.SetActive(false);
+        screen3.SetActive(true);
+        SetUpScreen3();
+        PANEL_IMAGE.SetActive(true);
         //}
     }
 
     public void ToScreen4(AnswerNodeData answer,GameObject originScreen) // Answer Dialogue
     {
         originScreen.SetActive(false);
-        screen4.SetActive(true);
-        SetUpScreen4(answer);
+        //screen4.SetActive(true);//TEMPORAL, TESTING
+        SetUpScreen4(answer); 
+        PANEL_IMAGE.SetActive(false);
     }
 
     public void ToScreen5(AnswerNodeData answer, GameObject originScreen) //Feedback
@@ -248,6 +253,7 @@ public class UI_Manager : MonoBehaviour
         originScreen.SetActive(false);
         screen5.SetActive(true);
         SetUpScreen5(answer);
+        PANEL_IMAGE.SetActive(true);
     }
 
     public void OnStartButton()
