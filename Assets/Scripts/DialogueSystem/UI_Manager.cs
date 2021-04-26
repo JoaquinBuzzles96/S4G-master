@@ -718,7 +718,7 @@ public class UI_Manager : MonoBehaviour
         }
         if (answer == null) //default feedback
         {
-            string feedback = "Default feedback. You have to be faster!";
+            string feedback = "Your reaction time was too long. During medical procedures, the soft skills should be at appropriate level not to interfere significantly with the flow of the main medical procedure (hard skills). The game is over. Please try it again.";
             feedbackText.text = $"{feedback} \n Score: {totalScore}";
             //Add feedback to email
             AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");

@@ -60,6 +60,9 @@ public class Case3Resources : MonoBehaviour
     public Dictionary<string, GameObject> toolsDictionary;
 
     public List<GameObject> ExtraTablePositions;
+
+    public Animator fadeAnimator;
+    public GameObject fadeCanvas;
     
 
     private void Start()
