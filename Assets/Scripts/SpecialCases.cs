@@ -370,7 +370,7 @@ public class SpecialCases : MonoBehaviour
 
         //Animacion de hablar
         //HABLA POR TELEFONO
-        anim = "Phone"; //TODO: Cambiar por la de count cuando este metida en el animator
+        anim = "Take 001"; //"Phone"; //TODO: Cambiar por la de count cuando este metida en el animator
         yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["CirculatingNurse"].gameObject, anim);
         //Esperar unos segundos
         yield return new WaitForSeconds(2f);
@@ -508,7 +508,7 @@ public class SpecialCases : MonoBehaviour
         //Animacion de hablar
 
         //HABLA POR TELEFONO
-        anim = "LookFor"; //TODO: Cambiar por la de count cuando este metida en el animator
+        anim = "Take 001"; //TODO: Cambiar por la de count cuando este metida en el animator
         yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["AssistantSurgeon"].gameObject, anim);
 
         //Esperar unos segundos 
@@ -575,10 +575,12 @@ public class SpecialCases : MonoBehaviour
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
         }
-        
-        anim = "Phone";
+
+        anim = "Take 001"; //"Phone";
         yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject, anim);
         
+
+
         //VOLVER DE DONDE ESTE EL TELEFONO
         aux = UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
         movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToPhoneBack, Case3Resources.Instance.endoscopist1LookPoint);
@@ -1505,8 +1507,14 @@ public class SpecialCases : MonoBehaviour
         //IMPORTANTE: La animacion y la transicion deben de tener el mismo nombre para que funcione bien
         //Si se queda en bucle la animacion revisar si se ha añadido el animManager y el false a la animacion dentro del mismo 
         Animator animator = character.GetComponent<Animator>();
-        animator.SetBool(animName, true);
         float animDuration = GetDuration(animName, animator);
+        if (animName == "Take 001")
+        {
+            animName = "Phone";
+            Case3Resources.Instance.phone.GetComponent<FollowPoint>().target = character.gameObject.GetComponent<HandPosition>().handPos;
+        }
+        animator.SetBool(animName, true);
+        
 
         if (animName == "Give")
         {
@@ -1544,6 +1552,12 @@ public class SpecialCases : MonoBehaviour
         else
         {
             yield return new WaitForSeconds(animDuration + 0.4f); //esperamos un poco de tiempo adicional 
+
+            if (animName == "Phone")
+            {
+                Case3Resources.Instance.phone.SetActive(true);
+                Case3Resources.Instance.phone.GetComponent<FollowPoint>().target = Case3Resources.Instance.phonePosition.transform;
+            }
         }
     }
 

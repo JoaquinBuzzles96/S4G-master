@@ -5,6 +5,7 @@ using UnityEngine;
 public class FollowPoint : MonoBehaviour
 {
     public Transform target;
+
     void Start()
     {
         

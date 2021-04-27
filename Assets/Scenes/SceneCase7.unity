@@ -7125,6 +7125,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ef7f3fc17f8a446b907fd972f0f67f, type: 3}
+--- !u!1 &557087711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 428767520146884881, guid: 66ef7f3fc17f8a446b907fd972f0f67f,
+    type: 3}
+  m_PrefabInstance: {fileID: 557087710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &557087712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557087711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fdbc4fecb198684dbdde3d2cd96580d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1001 &565630319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7907,6 +7926,7 @@ Transform:
   - {fileID: 938713077}
   - {fileID: 1517092454}
   - {fileID: 1869115709}
+  - {fileID: 1406911970}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15808,6 +15828,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1383832409}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1406911969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1406911970}
+  m_Layer: 0
+  m_Name: PhonePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1406911970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406911969}
+  m_LocalRotation: {x: -0, y: 0.9213033, z: -0, w: 0.38884488}
+  m_LocalPosition: {x: 4.604, y: 1.734, z: -3.834}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 638445681}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 134.235, z: 0}
 --- !u!1001 &1410445164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22001,6 +22051,8 @@ MonoBehaviour:
   - {fileID: 2067251849}
   fadeAnimator: {fileID: 0}
   fadeCanvas: {fileID: 0}
+  phone: {fileID: 557087711}
+  phonePosition: {fileID: 1406911969}
 --- !u!4 &1879854785
 Transform:
   m_ObjectHideFlags: 0

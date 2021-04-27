@@ -63,6 +63,8 @@ public class Case3Resources : MonoBehaviour
 
     public Animator fadeAnimator;
     public GameObject fadeCanvas;
+    public GameObject phone;
+    public GameObject phonePosition;
     
 
     private void Start()
