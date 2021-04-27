@@ -9430,6 +9430,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 478228725}
   - {fileID: 172384950}
+  PANEL_IMAGE: {fileID: 0}
   caso: testing2
   endoescopista1: {fileID: 0}
   endoescopista2: {fileID: 0}
@@ -19413,6 +19414,87 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3501429358517195361}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1514063746
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6069386273280915256, guid: 18668d607ad143940be3e4ee30cd067a,
+        type: 3}
+      propertyPath: m_Name
+      value: FADE_OUT
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069386273280915257, guid: 18668d607ad143940be3e4ee30cd067a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069386273280915257, guid: 18668d607ad143940be3e4ee30cd067a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.26647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069386273280915257, guid: 18668d607ad143940be3e4ee30cd067a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.1181204
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069386273280915257, guid: 18668d607ad143940be3e4ee30cd067a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.9953517
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069386273280915257, guid: 18668d607ad143940be3e4ee30cd067a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069386273280915257, guid: 18668d607ad143940be3e4ee30cd067a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069386273280915257, guid: 18668d607ad143940be3e4ee30cd067a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069386273280915257, guid: 18668d607ad143940be3e4ee30cd067a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069386273280915257, guid: 18668d607ad143940be3e4ee30cd067a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069386273280915257, guid: 18668d607ad143940be3e4ee30cd067a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069386273280915257, guid: 18668d607ad143940be3e4ee30cd067a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18668d607ad143940be3e4ee30cd067a, type: 3}
+--- !u!1 &1514063747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6069386273280915256, guid: 18668d607ad143940be3e4ee30cd067a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1514063746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1514063748 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6069386274396926289, guid: 18668d607ad143940be3e4ee30cd067a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1514063746}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1517092453
 GameObject:
   m_ObjectHideFlags: 0
@@ -19469,7 +19551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517644277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.456, y: 0, z: -4.093}
+  m_LocalPosition: {x: 4.456, y: 0.431, z: -4.093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 638445681}
@@ -23768,6 +23850,8 @@ MonoBehaviour:
   - {fileID: 1958934181}
   - {fileID: 1785611666}
   - {fileID: 2067251849}
+  fadeAnimator: {fileID: 1514063748}
+  fadeCanvas: {fileID: 1514063747}
 --- !u!4 &1879854785
 Transform:
   m_ObjectHideFlags: 0
@@ -29969,6 +30053,7 @@ MonoBehaviour:
   - {fileID: 478228725}
   - {fileID: 172384950}
   - {fileID: 1002434503}
+  PANEL_IMAGE: {fileID: 1000536167173744258}
   caso: Case3
   endoescopista1: {fileID: 991541516}
   endoescopista2: {fileID: 306734545}

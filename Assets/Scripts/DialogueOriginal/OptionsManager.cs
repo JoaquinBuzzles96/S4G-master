@@ -74,64 +74,83 @@ public class OptionsManager : MonoBehaviour
     {
         Debug.Log($"Vamos a intentar cargar el caso {selectedCase.text} con el idioma {LanguageManager.Instance.languageSelected}");
 
-        if (selectedCase.text != null && selectedCase.text != "")
+        if (IsInfoValid())
         {
-            string[] parts;
-            parts = selectedCase.text.Split("_"[0]);
-
-            for (int i = 0; i < parts.Length; i++)
+            if (selectedCase.text != null && selectedCase.text != "")
             {
-                Debug.Log($"Hemos dividido el caso en {parts[i]}");
-            }
+                string[] parts;
+                parts = selectedCase.text.Split("_"[0]);
 
-            if (parts.Length > 1 && parts[1] == "ThirdPerson")
-            {
-                Debug.Log($"Es tercera persona {parts[0]}");
-                LanguageManager.Instance.isThirdPerson = true;
-            }
-            else
-            {
-                LanguageManager.Instance.isThirdPerson = false;
-            }
+                for (int i = 0; i < parts.Length; i++)
+                {
+                    Debug.Log($"Hemos dividido el caso en {parts[i]}");
+                }
 
-
-            switch (selectedCase.text)
-            {
-                case "Tutorial":
-                    //change panel position to 
-                    this.gameObject.transform.position = secondPos;
-                    this.gameObject.transform.rotation = secondRotation;
-                    SetSettingsActive(false);
-                    TutorialPanel.SetActive(true);
-                    //SceneManager.LoadScene("Tutorial");
-                    break;
-                /*
-            case "CASE3_ThirdPerson":
-                selectedCase.text = "CASE3";
-                LanguageManager.Instance.caseSelected = selectedCase.text;
-                SceneManager.LoadScene("Scene7_thirdPerson");
-                break;
-                */
-                case "CASE5":
-                    LanguageManager.Instance.caseSelected = parts[0];
-                    SceneManager.LoadScene("Scene5");
-                    break;
-                case "CASE6":
-                    LanguageManager.Instance.caseSelected = parts[0];
-                    SceneManager.LoadScene("Scene6");
-                    break;
-                case "CASE7":
-                    LanguageManager.Instance.caseSelected = parts[0];
-                    SceneManager.LoadScene("SceneCase7");
-                    break;
-                default:
-                    LanguageManager.Instance.caseSelected = parts[0];
-                    SceneManager.LoadScene("Scene7");
+                if (parts.Length > 1 && parts[1] == "ThirdPerson")
+                {
+                    Debug.Log($"Es tercera persona {parts[0]}");
+                    LanguageManager.Instance.isThirdPerson = true;
+                }
+                else
+                {
+                    LanguageManager.Instance.isThirdPerson = false;
+                }
 
 
+                switch (selectedCase.text)
+                {
+                    case "Tutorial":
+                        //change panel position to 
+                        this.gameObject.transform.position = secondPos;
+                        this.gameObject.transform.rotation = secondRotation;
+                        SetSettingsActive(false);
+                        TutorialPanel.SetActive(true);
+                        //SceneManager.LoadScene("Tutorial");
+                        break;
+                    /*
+                case "CASE3_ThirdPerson":
+                    selectedCase.text = "CASE3";
+                    LanguageManager.Instance.caseSelected = selectedCase.text;
+                    SceneManager.LoadScene("Scene7_thirdPerson");
                     break;
+                    */
+                    case "CASE5":
+                        LanguageManager.Instance.caseSelected = parts[0];
+                        SceneManager.LoadScene("Scene5");
+                        break;
+                    case "CASE6":
+                        LanguageManager.Instance.caseSelected = parts[0];
+                        SceneManager.LoadScene("Scene6");
+                        break;
+                    case "CASE7":
+                        LanguageManager.Instance.caseSelected = parts[0];
+                        SceneManager.LoadScene("SceneCase7");
+                        break;
+                    default:
+                        LanguageManager.Instance.caseSelected = parts[0];
+                        SceneManager.LoadScene("Scene7");
+
+
+                        break;
+                }
             }
         }
+        else
+        {
+            Debug.Log("Se deben completar el campo del nombre y el correo para continuar");
+        }
+    }
+
+    public bool IsInfoValid()
+    {
+        return true; //temporal hasta que arreglemos el teclado
+        //nos devolvera true si se han completado los camopos de name y correo
+        if (SendMail.Instance.m_UserName == "Usuario Default" || SendMail.Instance.m_UserName == "" || SendMail.Instance.m_UserMail == "s4game@viralstudios.es" || SendMail.Instance.m_UserMail == "") 
+        {
+            return false;
+        }
+
+        return true;
     }
 
     public void FinishTutorial()

@@ -196,8 +196,8 @@ public class SpecialCases : MonoBehaviour
             case "D0.1": //es el anterior al D.1
                 StartCoroutine(Case5D01());
                 break;
-            case "D1": //se vuelve a su sitio
-                //StartCoroutine(Case5D1()); //Mejor lo hace todo en el anterior
+            case "D2"://TESTING
+                //StartCoroutine(ShowPregnantWomanGood(true));
                 break;
             case "D16.1.3":
                 StartCoroutine(Case5D1613());
@@ -513,6 +513,15 @@ public class SpecialCases : MonoBehaviour
 
         //Esperar unos segundos 
         yield return new WaitForSeconds(2f);
+
+        Case3Resources.Instance.fadeCanvas.SetActive(true);
+        //Fade out y fade in para que parezca que ha pasado tiempo
+        int animTime = 1;
+        Case3Resources.Instance.fadeAnimator.Play("FADE_OUT_Anim");
+        yield return new WaitForSeconds(animTime + 2f);
+        Case3Resources.Instance.fadeAnimator.Play("FADE_IN_Animation");
+        yield return new WaitForSeconds(animTime);
+        Case3Resources.Instance.fadeCanvas.SetActive(false);
 
         //Volverse al sitio
         Debug.Log($"Volvemos a nuestro sitio original");
@@ -1305,16 +1314,28 @@ public class SpecialCases : MonoBehaviour
 
     IEnumerator ShowPregnantWomanGood(bool isGoodFinal)
     {
+        int pauseTime = 2;
+        int animTime = 1;
+        Case3Resources.Instance.fadeCanvas.SetActive(true);
+
         if (isGoodFinal)
         {
             //TODO: ACTIVAR RENDER CORRESPONDIENTE
+            Case3Resources.Instance.fadeAnimator.Play("FADE_OUT_Anim");
+            yield return new WaitForSeconds(animTime);
             Case3Resources.Instance.goodEnd.SetActive(true);
+            yield return new WaitForSeconds(pauseTime);
+            Case3Resources.Instance.fadeAnimator.Play("FADE_IN_Animation");
 
         }
         else
         {
             //TODO: ACTIVAR RENDER CORRESPONDIENTE
+            Case3Resources.Instance.fadeAnimator.Play("FADE_OUT_Anim");
+            yield return new WaitForSeconds(animTime);
             Case3Resources.Instance.badEnd.SetActive(true);
+            yield return new WaitForSeconds(pauseTime);
+            Case3Resources.Instance.fadeAnimator.Play("FADE_IN_Animation");
 
         }
 
@@ -1325,13 +1346,23 @@ public class SpecialCases : MonoBehaviour
         if (isGoodFinal)
         {
             //TODO: DESACTIVAMOS EL RENDER CORRESPONDIENTE
+            Case3Resources.Instance.fadeAnimator.Play("FADE_OUT_Anim");
+            yield return new WaitForSeconds(animTime);
             Case3Resources.Instance.goodEnd.SetActive(false);
+            yield return new WaitForSeconds(pauseTime);
+            Case3Resources.Instance.fadeAnimator.Play("FADE_IN_Animation");
         }
         else
         {
             //TODO: DESACTIVAMOS EL RENDER CORRESPONDIENTE
+            Case3Resources.Instance.fadeAnimator.Play("FADE_OUT_Anim");
+            yield return new WaitForSeconds(animTime);
             Case3Resources.Instance.badEnd.SetActive(false);
+            yield return new WaitForSeconds(pauseTime);
+            Case3Resources.Instance.fadeAnimator.Play("FADE_IN_Animation");
         }
+
+        Case3Resources.Instance.fadeCanvas.SetActive(false);
     }
     IEnumerator GoToTableAndTakeObject(string tableObject)
     {

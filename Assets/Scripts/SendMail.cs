@@ -29,8 +29,17 @@ public class SendMail : MonoBehaviour
     [System.NonSerialized]
     public string m_UserMail = "s4game@viralstudios.es"; //default value
 
-   public TextMeshProUGUI m_NameMail;
-   public TextMeshProUGUI m_Mail;
+    public TextMeshProUGUI m_NameMail;
+    public TextMeshProUGUI m_Mail;
+
+    public GameObject inputFieldName;
+    public GameObject inputFieldMail;
+    public GameObject imageMail;
+    public GameObject nameMail;
+    public GameObject textMail;
+    public GameObject imageName;
+    public GameObject nameName;
+    public GameObject textName;
 
     private void Awake()
     {
@@ -41,6 +50,23 @@ public class SendMail : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    private void Start()
+    {
+#if UNITY_EDITOR_WIN || UNITY_EDITOR
+        if (inputFieldMail != null)
+        {
+            inputFieldMail.SetActive(true);
+            inputFieldName.SetActive(true);
+            imageMail.SetActive(false);
+            textMail.SetActive(false);
+            nameMail.SetActive(false);
+            imageName.SetActive(false);
+            nameName.SetActive(false);
+            textName.SetActive(false);
+        }
+#endif
     }
 
     public void SendEmail()
@@ -82,16 +108,29 @@ public class SendMail : MonoBehaviour
 
     public void SaveName(Keyboard l_Field)
     {
-        m_UserName=l_Field.text;
+        m_UserName = l_Field.text;
         m_NameMail.text = m_UserName;
-    } 
-    
+    }
+
     public void SaveMail(Keyboard l_Field)
     {
         m_UserMail = l_Field.text;
         Debug.Log($"Acabamos de guardar el mail {l_Field.text}, el valor de m_Usermail es: {m_UserMail}");
         m_Mail.text = m_UserMail;
     }
-    
-   
+
+    public void SaveNamePC(TextMeshProUGUI l_Field)
+    {
+        m_UserName = l_Field.text;
+        //m_NameMail.text = m_UserName;
+    }
+
+    public void SaveMailPC(TextMeshProUGUI l_Field)
+    {
+        m_UserMail = l_Field.text;
+        Debug.Log($"Acabamos de guardar el mail {l_Field.text}, el valor de m_Usermail es: {m_UserMail}");
+        // m_Mail.text = m_UserMail;
+    }
+
+
 }
