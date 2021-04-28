@@ -128,7 +128,7 @@ public class OptionsManager : MonoBehaviour
                         break;
                     default:
                         LanguageManager.Instance.caseSelected = parts[0];
-                        SceneManager.LoadScene("Scene7");
+                        SceneManager.LoadScene("Case3_9");
 
 
                         break;

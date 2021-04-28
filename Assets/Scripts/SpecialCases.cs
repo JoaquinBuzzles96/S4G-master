@@ -470,7 +470,7 @@ public class SpecialCases : MonoBehaviour
         //Volverse al sitio
         Debug.Log($"Volvemos a nuestro sitio original");
         movementNurse = UI_Manager.Instance.dictionaryCharacteres["InstrumentalistNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
-        movementNurse.ResetPosition();
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable2, Case3Resources.Instance.tableLookPoint); //dejamos el table look point, en principio sirve
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
