@@ -123,6 +123,12 @@ public class UI_Manager : MonoBehaviour
     void Update()
     {
         CheckRandomAnims();
+
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitButton.SetActive(true);
+        }
     }
 
     public void CheckRandomAnims()
