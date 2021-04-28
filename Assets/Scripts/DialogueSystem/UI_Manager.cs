@@ -100,6 +100,9 @@ public class UI_Manager : MonoBehaviour
     public GameObject cameraPositionThirdPerson;
     public GameObject cameraCurrentPos;
 
+
+    SituationNodeData lastSituation;
+
     private void Awake()
     {
         // if the singleton hasn't been initialized yet
@@ -117,6 +120,7 @@ public class UI_Manager : MonoBehaviour
         SetUpCharacrteres();
         lastQuestion = -1;
         totalScore = 0;
+        lastSituation = null;
         SetUpContext(dialogueContainer.GetFirstSituation());
     }
 
@@ -167,8 +171,6 @@ public class UI_Manager : MonoBehaviour
             //situationDialogueTexts.text = situation.Context;
 
             //En este caso vamos directos a la pregunta //TODO
-
-
 
         }
 
@@ -275,7 +277,7 @@ public class UI_Manager : MonoBehaviour
         //Debug.Log("Vamos a configurar el question data");
 
         screen2.GetComponent<QuestionUI>().questionData = questions[currentQuestion];
-        screen2.GetComponent<QuestionUI>().SetupQuestion();
+        screen2.GetComponent<QuestionUI>().SetupQuestion(false);
         lastQuestion = currentQuestion;
     }
 
@@ -679,12 +681,28 @@ public class UI_Manager : MonoBehaviour
         generalArrow.SetActive(true);
         generalArrow.GetComponent<LookTarget>().target = this.transform;//PANEL
 
-        //En este caso si podemos suponer que la situacion que tenemos es la correcta, de modo que no es necesario pasarla por parametro
-        questions = dialogueContainer.GetSituationQuestions(situation.Guid);
+        bool lastOption = false;
 
-        currentQuestion = Random.Range(0, questions.Count);
+        if (lastSituation != null && lastSituation == situation) //en caso de repetido
+        {
+            //en este caso questions ya estaba con informacion de la iteracion anterior
+            questions.RemoveAt(lastQuestion);//ELIMINAMOS LA ULTIMA QUE HAYA SALIDO
 
-        if (currentQuestion == lastQuestion)
+            if (questions.Count == 1) //en caso de quedar solo una tenemos que indicarselo a la pregunta, si fallan se avazara igualmente
+            {
+                lastOption = true;
+            }
+        }
+        else
+        {
+            //En este caso si podemos suponer que la situacion que tenemos es la correcta, de modo que no es necesario pasarla por parametro
+            questions = dialogueContainer.GetSituationQuestions(situation.Guid); //OBTENEMOS LAS PREGUNTAS DE ESTE NODO
+        }
+
+
+        currentQuestion = Random.Range(0, questions.Count); //COGEMOS UNA ALEATORIA
+
+        if (currentQuestion == lastQuestion) //SI ES LA MISMA QUE LA ANTERIOR CAMBIAMOS --> ESTO HABRA QUE MODIFICARLO PARA QUE SEA UN CJECH SI HSE HA HECHO EN ALGUN MOMENTO
         {
             currentQuestion++;
             currentQuestion = currentQuestion % questions.Count;
@@ -693,7 +711,7 @@ public class UI_Manager : MonoBehaviour
         //Debug.Log("Vamos a configurar el question data");
 
         screen3.GetComponent<QuestionUI>().questionData = questions[currentQuestion];
-        screen3.GetComponent<QuestionUI>().SetupQuestion();
+        screen3.GetComponent<QuestionUI>().SetupQuestion(lastOption);
 
         lastQuestion = currentQuestion;
 

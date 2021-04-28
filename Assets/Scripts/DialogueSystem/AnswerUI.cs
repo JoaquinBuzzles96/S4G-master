@@ -22,7 +22,7 @@ public class AnswerUI : MonoBehaviour
         
     }
 
-    public void SetupAnswer(AnswerNodeData _answerData)
+    public void SetupAnswer(AnswerNodeData _answerData, string CORRECT_GUID = null)
     {
         this.gameObject.SetActive(true);
         answerData = _answerData;
@@ -38,7 +38,15 @@ public class AnswerUI : MonoBehaviour
             description.text = answerData.Feedback;
         }
 
-        nextSituation = UI_Manager.Instance.dialogueContainer.GetNextSituation(answerData.Guid);
+        if (CORRECT_GUID != null)
+        {
+            nextSituation = UI_Manager.Instance.dialogueContainer.GetNextSituation(CORRECT_GUID);
+        }
+        else
+        {
+            nextSituation = UI_Manager.Instance.dialogueContainer.GetNextSituation(answerData.Guid);
+        }
+        
         //Debug.Log($"Añadimos la respuesta {answerData.Description}");
     }
 

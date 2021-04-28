@@ -66,7 +66,7 @@ public class QuestionUI : MonoBehaviour
 
     }
 
-    public void SetupQuestion()
+    public void SetupQuestion(bool isLastOption)
     {
 
         string speaker = questionData.speaker;
@@ -91,11 +91,38 @@ public class QuestionUI : MonoBehaviour
         int i = 0;
         correctAnswer = null;
         maxScore = 0;
+
+
+        int betterAnswerScore = -100;
+        int betterPosition = 0;
+
+        if (isLastOption)//en este caso buscamos la respuesta correcta y le indicamos a todas las answer que independientemente de lo que elija se va a la situacion siguiente de la respuesta correcta
+        {
+            for (int j = 0; j < answersData.Count; j++)
+            {
+                //buscamos la que tenga isCorerect=true; sino nos quedamos con la que sume mas puntos
+                if (answersData[i].score > betterAnswerScore)
+                {
+                    betterAnswerScore = answersData[i].score;
+                    betterPosition = i;
+                }
+            }
+        }
+
+
         //Cargamos todas las respuestas
         for (i = 0; i < answersData.Count; i++)
         {
             //Debug.Log($"Vamos a configurar el slot {i} con {answersData[i].AnswerName}, longitud de answers = {answers.Count}, longitud de answersData = {answersData.Count}");
-            answers[i].GetComponent<AnswerUI>().SetupAnswer(answersData[i]);
+            if (isLastOption)
+            {
+                answers[i].GetComponent<AnswerUI>().SetupAnswer(answersData[i], answersData[betterPosition].Guid);
+            }
+            else
+            {
+                answers[i].GetComponent<AnswerUI>().SetupAnswer(answersData[i]);
+            }
+            
 
             if (answersData[i].score > maxScore) //si es la correcta la guardamos por si no contesta pasar automaticamente cuando se acabe el tiempo (nos quedamos con la mas correcta)
             {
