@@ -231,10 +231,11 @@ public class UI_Manager : MonoBehaviour
 
     public void ToScreen2(GameObject originScreen) //Dialogue situation
     {
+        PANEL_IMAGE.SetActive(false);
         SetUpScreen2(); //Actualizamos los dialogos de la pantalla
         originScreen.SetActive(false);
         //screen2.SetActive(true); //TEMPORAL, TESTING
-        PANEL_IMAGE.SetActive(false);
+        
     }
 
     public void ToScreen3(GameObject originScreen) // Answer choose
@@ -243,8 +244,9 @@ public class UI_Manager : MonoBehaviour
         //{
         originScreen.SetActive(false);
         screen3.SetActive(true);
-        SetUpScreen3();
         PANEL_IMAGE.SetActive(true);
+        SetUpScreen3();
+        
         //}
     }
 
