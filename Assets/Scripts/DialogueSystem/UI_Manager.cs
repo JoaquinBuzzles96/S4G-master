@@ -217,8 +217,8 @@ public class UI_Manager : MonoBehaviour
     {
         SetUpContext(newSituation);
         originScreen.SetActive(false);
-        screen1.SetActive(true);
-        PANEL_IMAGE.SetActive(true);
+        //screen1.SetActive(true);
+        PANEL_IMAGE.SetActive(false);
     }
 
     public void ToScreen2(GameObject originScreen) //Dialogue situation
@@ -626,6 +626,7 @@ public class UI_Manager : MonoBehaviour
 
     public void SetUpContext(SituationNodeData _situation)
     {
+        PANEL_IMAGE.SetActive(false);
         Debug.Log($"Vamos a cargar la situacion {_situation}");
 
         situation = _situation;
