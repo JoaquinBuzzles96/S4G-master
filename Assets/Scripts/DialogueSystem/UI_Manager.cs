@@ -284,7 +284,7 @@ public class UI_Manager : MonoBehaviour
         if (dictionaryCharacteres.ContainsKey(speaker) && speaker != "Narrator")
         {
             SetMoodAnim(speaker, _mood);
-            SetColorName(0.75f, speaker);
+            SetColorName(0.75f, speaker, dictionaryCharacteres[speaker]);
         }
         else
         {
@@ -861,7 +861,7 @@ public class UI_Manager : MonoBehaviour
                         if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + j].Speaker)))
                         {
                             dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)].SetBool("animFinished", true);
-                            SetColorName(0f, Translate(dialoguesData[currentDialogue + j].Speaker));
+                            SetColorName(0f, Translate(dialoguesData[currentDialogue + j].Speaker), dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)]);
                         }
                         else
                         {
@@ -1031,10 +1031,13 @@ public class UI_Manager : MonoBehaviour
         return aux;
     }
 
-    public void SetColorName(float color, string speaker)
+    public void SetColorName(float color, string speaker, Animator animator)
     {
         //Debug.Log($"Vamos a intentar iluminar el nombre de {speaker}");
         speaker = speaker.ToLower();
+
+        animator.gameObject.GetComponent<TalkAnim>().speed = color;
+        /*
         switch (speaker)
         {
             case "Endoscopista 1":
@@ -1085,7 +1088,22 @@ public class UI_Manager : MonoBehaviour
                 //Debug.Log($"VIluminamos el {speaker}");
                 enfermeraDeAnestesia.speed = color;
                 break;
-        }
+            case "CirculatingNurse":
+                break;
+            case "EndoscopyNurseExtra":
+                break;
+            case "InstrumentalistNurse":
+                break;
+            case "AssistantSurgeon":
+                break;
+            case "HeadSurgeon":
+                break;
+            case "ResponsibleNurse":
+                break;
+            case "CameraAssistant":
+                break;
+
+        }*/
     }
 
     public void SetupTutorial()
