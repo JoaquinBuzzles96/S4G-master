@@ -11,7 +11,7 @@ public class SimpleWaypointMovement : MonoBehaviour
     public Transform[] waypointsEnter;
     int nextWaypoint = 0;
     public float speed;
-    [HideInInspector] public bool canMove;
+    public bool canMove;
     public Transform lastPointToLook;
     public bool exitRoom = true;
     public bool isNurse = false;

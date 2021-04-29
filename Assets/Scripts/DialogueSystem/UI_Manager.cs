@@ -101,6 +101,7 @@ public class UI_Manager : MonoBehaviour
     public GameObject cameraCurrentPos;
 
     bool isStopped = false;
+    bool isExitActive = false;
 
     SituationNodeData lastSituation;
 
@@ -132,7 +133,16 @@ public class UI_Manager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            ExitButton.SetActive(true);
+            if (isExitActive)
+            {
+                ExitButton.SetActive(false);
+            }
+            else
+            {
+                ExitButton.SetActive(true);
+            }
+            
+            isExitActive = !isExitActive;
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -469,7 +479,7 @@ public class UI_Manager : MonoBehaviour
             //dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
         }
 
-        if (LanguageManager.Instance.isThirdPerson || currentCase == Cases.Case5 || currentCase == Cases.Case6)
+        if (LanguageManager.Instance.isThirdPerson || currentCase == Cases.Case5 || currentCase == Cases.Case6 || currentCase == Cases.Case7)
         {
             //ponemos la camara en tercera persona
             cameraCurrentPos.transform.position = cameraPositionThirdPerson.transform.position;
@@ -1082,7 +1092,15 @@ public class UI_Manager : MonoBehaviour
         //Debug.Log($"Vamos a intentar iluminar el nombre de {speaker}");
         speaker = speaker.ToLower();
 
-        animator.gameObject.GetComponent<TalkAnim>().speed = color;
+        if (speaker == "Secretary" || speaker == "secretary")
+        {
+            //nada
+        }
+        else
+        {
+            animator.gameObject.GetComponent<TalkAnim>().speed = color;
+        }
+       
         /*
         switch (speaker)
         {
