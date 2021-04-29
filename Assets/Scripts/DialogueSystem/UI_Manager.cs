@@ -100,6 +100,7 @@ public class UI_Manager : MonoBehaviour
     public GameObject cameraPositionThirdPerson;
     public GameObject cameraCurrentPos;
 
+    bool isStopped = false;
 
     SituationNodeData lastSituation;
 
@@ -133,6 +134,24 @@ public class UI_Manager : MonoBehaviour
         {
             ExitButton.SetActive(true);
         }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StopGame();
+        }
+    }
+
+    public void StopGame()
+    {
+        if (isStopped)
+        {
+            Time.timeScale = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
+        }
+
+        isStopped = !isStopped;
     }
 
     public void CheckRandomAnims()
