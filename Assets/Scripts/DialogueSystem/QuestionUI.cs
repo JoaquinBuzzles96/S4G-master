@@ -167,7 +167,7 @@ public class QuestionUI : MonoBehaviour
             originalPosition = imageAmbulance.transform.position;
         }
 
-        StartCoroutine(UI_Manager.Instance.PlaySimpleDialogue(questionData.audioId, AnswerContainer));
+        StartCoroutine(UI_Manager.Instance.PlaySimpleDialogue(questionData.audioId, AnswerContainer, questionData.speaker));
 
         //Iniciamos el timer:
         StartCoroutine(QuestionTimer());

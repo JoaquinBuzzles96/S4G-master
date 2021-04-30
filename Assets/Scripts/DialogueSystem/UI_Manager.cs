@@ -922,7 +922,7 @@ public class UI_Manager : MonoBehaviour
                         //Audio
                         yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + j].audioId, dialoguesData[currentDialogue + j].Speaker, dialoguesData[currentDialogue + j].Mood));
 
-                        //Animacion al hablar
+                        //Quitamos la Animacion al hablar
                         if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + j].Speaker)))
                         {
                             dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)].SetBool("animFinished", true);
@@ -999,17 +999,45 @@ public class UI_Manager : MonoBehaviour
         return isTragetInFieldOfView;
     }
 
-    public IEnumerator PlaySimpleDialogue(string audio, GameObject nextButton = null)
+    public IEnumerator PlaySimpleDialogue(string audio, GameObject nextButton = null, string speaker = null)
     {
+        if (speaker == null)
+        {
+            speaker = "Narrator";
+        }
+        else
+        {
+            speaker = Translate(speaker);
+        }
+
         if (nextButton != null)
         {
-            yield return new WaitForSeconds(PlayAudioOnSpeaker(audio, "Narrator", "Calm"));
+            yield return new WaitForSeconds(PlayAudioOnSpeaker(audio, speaker, "Calm"));
+
+            if (speaker != "Narrator")
+            {
+                if (dictionaryCharacteres.ContainsKey(Translate(speaker)))
+                {
+                    dictionaryCharacteres[Translate(speaker)].SetBool("animFinished", true);
+                    SetColorName(0f, Translate(speaker), dictionaryCharacteres[speaker]);
+                }
+            }
+
             nextButton.SetActive(true);
         }
         else //TESTING: En caso de no querer eliminar el boton de start eliminamos esto
         {
-            yield return new WaitForSeconds(PlayAudioOnSpeaker(audio, "Narrator", "Calm"));
+            yield return new WaitForSeconds(PlayAudioOnSpeaker(audio, speaker, "Calm"));
             //Si estamos en el context, que es cuando no hay next button, entonces vamos automaticamente a la situacion
+            if (speaker != "Narrator")
+            {
+                if (dictionaryCharacteres.ContainsKey(Translate(speaker)))
+                {
+                    dictionaryCharacteres[Translate(speaker)].SetBool("animFinished", true);
+                    SetColorName(0f, Translate(speaker), dictionaryCharacteres[speaker]);
+                }
+            }
+
             ToScreen2(screen1);
         }
     }
