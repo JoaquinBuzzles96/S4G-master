@@ -638,28 +638,34 @@ public class UI_Manager : MonoBehaviour
         //if (!CheckMoreDialogues(answerDialogues, answerDialogueTexts, nextButtonAnswer)) //si no hay mas dialogos entra aqui
         //{
             //Vamos a la screen 2 o 5 en funcion del valor isEnd de la respuesta
-            if (choosenAnswer.IsEnd)
-            {
-                ToScreen5(choosenAnswer, originScreen);
-            }
-            else
-            {
-                //Check if situation context no es nulo
-                situation = dialogueContainer.GetNextSituation(choosenAnswer.Guid);
+        if (choosenAnswer.IsEnd)
+        {
+            ToScreen5(choosenAnswer, originScreen);
+        }
+        else
+        {
+            //Check if situation context no es nulo
+            situation = dialogueContainer.GetNextSituation(choosenAnswer.Guid);
 
-                //Comprobamos si alguna enfermera ha salido corriendo :')
-                SpecialCases.Instance.CheckSituation(situation.SituationName);
+            //Comprobamos si alguna enfermera ha salido corriendo :')
+            SpecialCases.Instance.CheckSituation(situation.SituationName);
 
-                //Aqui comprobar si la situation ya se ha puesto antes y si el contexto es valido
-                if (isValid(situation.Context) && !IsSituationAlreadyPlayed(situation.SituationName))
-                {
-                    ToScreen1(situation, originScreen);
-                }
-                else
-                {
-                    ToScreen2(originScreen);
-                }
+            //Aqui comprobar si la situation ya se ha puesto antes y si el contexto es valido
+            if (isValid(situation.Context) && !IsSituationAlreadyPlayed(situation.Guid))
+            {
+                ToScreen1(situation, originScreen);
             }
+            else if(IsSituationAlreadyPlayed(situation.Guid)) //situacion repetida
+            {
+                Debug.Log("La situacion no es valida o ya se ha hecho, por lo tanto vamos directamente a la pantalla");
+                ToScreen3(originScreen);
+
+            }
+            else//nueva situacion sin contexto
+            {
+                ToScreen2(originScreen);
+            }
+        }
        //}
     }
 
@@ -673,7 +679,7 @@ public class UI_Manager : MonoBehaviour
         if (situation.Context != null)
         {
             contextDescription.text = situation.Context;
-            playedSituationsList.Add(situation.SituationName);
+            playedSituationsList.Add(situation.Guid);
         }
         else
         {
