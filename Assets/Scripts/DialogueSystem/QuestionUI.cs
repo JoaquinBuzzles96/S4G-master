@@ -66,7 +66,7 @@ public class QuestionUI : MonoBehaviour
 
     }
 
-    public void SetupQuestion(bool isLastOption)
+    public void SetupQuestion(bool isLastOption, SituationNodeData currentSituation = null)
     {
 
         string speaker = questionData.speaker;
@@ -93,19 +93,32 @@ public class QuestionUI : MonoBehaviour
         maxScore = 0;
 
 
-        int betterAnswerScore = -100;
+        //int betterAnswerScore = -100;
         int betterPosition = 0;
+        bool found = false;
 
         if (isLastOption)//en este caso buscamos la respuesta correcta y le indicamos a todas las answer que independientemente de lo que elija se va a la situacion siguiente de la respuesta correcta
         {
-            for (int j = 0; j < answersData.Count; j++)
+            for (int j = 0; j < answersData.Count && !found; j++)
             {
+                /*
+                Debug.Log($"Respuesta {j} - Score {answersData[j].score}");
                 //buscamos la que tenga isCorerect=true; sino nos quedamos con la que sume mas puntos
-                if (answersData[i].score > betterAnswerScore)
+                if (answersData[j].score > betterAnswerScore)
                 {
-                    betterAnswerScore = answersData[i].score;
-                    betterPosition = i;
+                    betterAnswerScore = answersData[j].score;
+                    betterPosition = j;
                 }
+                */
+                //Debug.Log($"Comprobamos si la respuesta ({j}) va a otra situacion");
+                //como muchas respuestas correctas tampoco te dan una score positiva simplemente v¡buscamos una respuesta que no te embucle
+                if (currentSituation.Guid != UI_Manager.Instance.dialogueContainer.GetNextSituation(answersData[j].Guid).Guid)
+                {
+                    Debug.Log($"Hemos encontrado una respuesta ({j}) que va a otra situacion");
+                    betterPosition = j;
+                    found = true;
+                }
+
             }
         }
 
@@ -116,6 +129,7 @@ public class QuestionUI : MonoBehaviour
             //Debug.Log($"Vamos a configurar el slot {i} con {answersData[i].AnswerName}, longitud de answers = {answers.Count}, longitud de answersData = {answersData.Count}");
             if (isLastOption)
             {
+                Debug.Log($"ESTAMOS EN LA ULTIMA PREGUNTA POSIBLE LA SOLUCION ESTA EN LA POSICION {betterPosition}");
                 answers[i].GetComponent<AnswerUI>().SetupAnswer(answersData[i], answersData[betterPosition].Guid);
             }
             else

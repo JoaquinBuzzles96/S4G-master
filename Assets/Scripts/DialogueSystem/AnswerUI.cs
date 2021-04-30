@@ -40,7 +40,8 @@ public class AnswerUI : MonoBehaviour
 
         if (CORRECT_GUID != null)
         {
-            nextSituation = UI_Manager.Instance.dialogueContainer.GetNextSituation(CORRECT_GUID);
+            answerData.Guid = CORRECT_GUID; //next situation no se utiliza 
+            //nextSituation = UI_Manager.Instance.dialogueContainer.GetNextSituation(CORRECT_GUID);
         }
         else
         {

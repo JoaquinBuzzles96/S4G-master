@@ -736,19 +736,22 @@ public class UI_Manager : MonoBehaviour
             questions = dialogueContainer.GetSituationQuestions(situation.Guid); //OBTENEMOS LAS PREGUNTAS DE ESTE NODO
         }
 
+        lastSituation = situation;
 
         currentQuestion = Random.Range(0, questions.Count); //COGEMOS UNA ALEATORIA
 
+        /*
         if (currentQuestion == lastQuestion) //SI ES LA MISMA QUE LA ANTERIOR CAMBIAMOS --> ESTO HABRA QUE MODIFICARLO PARA QUE SEA UN CJECH SI HSE HA HECHO EN ALGUN MOMENTO
         {
             currentQuestion++;
             currentQuestion = currentQuestion % questions.Count;
             //Debug.Log($"Como la pregunta era la misma que la anterior la cambiamos: current: {currentQuestion} last: {lastQuestion}");
         }
+        */
         //Debug.Log("Vamos a configurar el question data");
 
         screen3.GetComponent<QuestionUI>().questionData = questions[currentQuestion];
-        screen3.GetComponent<QuestionUI>().SetupQuestion(lastOption);
+        screen3.GetComponent<QuestionUI>().SetupQuestion(lastOption, situation);
 
         lastQuestion = currentQuestion;
 
