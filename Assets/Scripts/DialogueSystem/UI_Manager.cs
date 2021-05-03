@@ -479,6 +479,8 @@ public class UI_Manager : MonoBehaviour
             //dialogueContainer = Resources.Load($"Cases/testing2") as DialogueContainer;
         }
 
+        LanguageManager.Instance.UpdateLanguage(); //ACTUALIZAMOS POR SI ACASO
+
         if (LanguageManager.Instance.isThirdPerson || currentCase == Cases.Case5 || currentCase == Cases.Case6 || currentCase == Cases.Case7)
         {
             //ponemos la camara en tercera persona

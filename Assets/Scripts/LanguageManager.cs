@@ -74,24 +74,34 @@ public class LanguageManager : MonoBehaviour
         List<DialogueDataBean> case7LanguageData = new List<DialogueDataBean>();
         List<DialogueDataBean> case9LanguageData = new List<DialogueDataBean>();
 
-        switch (languageSelected)
+        /* if (languageSelected != "EN")
+         {
+             ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{UI_Manager.Instance.currentCase}_{languageSelected}.csv");
+         }
+        */
+        //Debug.Log($" antes del switch: C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv");
+        ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
+        /*
+        switch (caseSelected)
         {
-            case "EN":
-                //nada¿?
+            case "CASE3":
+                Debug.Log($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
+                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
                 break;
-            case "ES":
-                ReadCSVLanguages("C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Example.csv"); //TODO: Cambiar estas rutas
+            case "CASE5":
+                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case5_{languageSelected}.csv"); 
                 break;
-            case "PT":
-                ReadCSVLanguages("C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Example.csv");
+            case "CASE6":
+                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case6_{languageSelected}.csv");
                 break;
-            case "CZ":
-                ReadCSVLanguages("C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Example.csv");
+            case "CASE7":
+                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case7_{languageSelected}.csv");
                 break;
-            case "HU":
-                ReadCSVLanguages("C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Example.csv");
+            case "CASE9":
+                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case9_{languageSelected}.csv");
                 break;
         }
+        */
     }
 
 
