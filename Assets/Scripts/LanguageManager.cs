@@ -41,5 +41,20 @@ public class LanguageManager : MonoBehaviour
     }
 
 
+    public string GetContext(SituationNodeData situation)
+    {
+
+        //TODO: Aqui habra que ver en que idoma estamos y en funcion de eso que devolvemos
+
+        return situation.Context;
+    }
+
+    public string GetDialogueText(DialogueNodeData dialogueNodeData)
+    {
+        //TODO: Aqui habra que ver en que idoma estamos y en funcion de eso que devolvemos
+
+        return dialogueNodeData.DialogueText;
+    }
+
 }
 
