@@ -43,6 +43,7 @@ public class LanguageManager : MonoBehaviour
         if (PlayerPrefs.GetString("Language")!= null)
         {
             languageSelected = PlayerPrefs.GetString("Language");
+            UpdateLanguage();
         }
 
         isThirdPerson = false;
@@ -51,7 +52,7 @@ public class LanguageManager : MonoBehaviour
 
 
         //Testing
-        string[] data;
+        //string[] data;
         //Audio/Case5_EN/Audio1
         //Resources.Load
         //C:\Users\Joaquin\Documents\GitHub\S4G-master\Languages\Example.csv
@@ -60,12 +61,44 @@ public class LanguageManager : MonoBehaviour
 
         //Real data input:
         //Esta ruta dependera del idioma seleccionado, de momento usamos siempre la misma
-        ReadCSVLanguages("C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Example.csv");
+        //ReadCSVLanguages("C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Example.csv");
 
     }
+
+    public void UpdateLanguage()
+    {
+        //Reset lists:
+        List<DialogueDataBean> case3LanguageData = new List<DialogueDataBean>(); //metemos las situaciones, questions y dialogues en el mismo saco
+        List<DialogueDataBean> case5LanguageData = new List<DialogueDataBean>();
+        List<DialogueDataBean> case6LanguageData = new List<DialogueDataBean>();
+        List<DialogueDataBean> case7LanguageData = new List<DialogueDataBean>();
+        List<DialogueDataBean> case9LanguageData = new List<DialogueDataBean>();
+
+        switch (languageSelected)
+        {
+            case "EN":
+                //nada¿?
+                break;
+            case "ES":
+                ReadCSVLanguages("C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Example.csv"); //TODO: Cambiar estas rutas
+                break;
+            case "PT":
+                ReadCSVLanguages("C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Example.csv");
+                break;
+            case "CZ":
+                ReadCSVLanguages("C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Example.csv");
+                break;
+            case "HU":
+                ReadCSVLanguages("C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Example.csv");
+                break;
+        }
+    }
+
+
     public void SelectLanguage(string languageSiglas)
     {
         languageSelected = languageSiglas;
+        UpdateLanguage();
         PlayerPrefs.SetString("Language", languageSelected);
     }
 
@@ -126,7 +159,6 @@ public class LanguageManager : MonoBehaviour
 
         return dialogueNodeData.DialogueText;
     }
-
 
     public string GetQuestionDescription(QuestionNodeData questionNodeData)
     {
@@ -261,24 +293,6 @@ public class LanguageManager : MonoBehaviour
         }
     }
 
-    /*
-    public List<DialogueDataBean> SelectedLanguagueFilter()
-    {
-        switch (languageSelected)
-        {
-            case "EN":
-                break;
-            case "ES":
-                break;
-            case "PT":
-                break;
-            case "CZ":
-                break;
-            case "HU":
-                break;
-        }
-    }
-    */
 
 }
 
