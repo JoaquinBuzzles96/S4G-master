@@ -23,6 +23,7 @@ public class AnimManager : StateMachineBehaviour
         animator.SetBool("Phone", false);
         animator.SetBool("Search_floor", false);
         animator.SetBool("Pointing", false);
+        animator.SetBool("Turn_radio", false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
