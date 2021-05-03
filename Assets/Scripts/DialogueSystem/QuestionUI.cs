@@ -72,11 +72,11 @@ public class QuestionUI : MonoBehaviour
         string speaker = questionData.speaker;
         if (speaker == " " || speaker == "Narrador" || speaker == "" || speaker == "Narrator" || string.IsNullOrEmpty(speaker))
         {
-            description.text = $"(id: {questionData.QuestionName}) {questionData.Description}";
+            description.text = $"(id: {questionData.QuestionName}) {LanguageManager.Instance.GetQuestionDescription(questionData)}";
         }
         else
         {
-            description.text = $"(id: {questionData.QuestionName}) {questionData.speaker}: {questionData.Description}";
+            description.text = $"(id: {questionData.QuestionName}) {LanguageManager.Instance.GetQuestionSpeaker(questionData)}: {LanguageManager.Instance.GetQuestionDescription(questionData)}";
         }
 
         //Debug.Log($"Setup description: {questionData.Description}");

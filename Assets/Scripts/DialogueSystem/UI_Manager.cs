@@ -651,7 +651,7 @@ public class UI_Manager : MonoBehaviour
             SpecialCases.Instance.CheckSituation(situation.SituationName);
 
             //Aqui comprobar si la situation ya se ha puesto antes y si el contexto es valido
-            if (isValid(situation.Context) && !IsSituationAlreadyPlayed(situation.Guid))
+            if (isValid(LanguageManager.Instance.GetSituationContext(situation)) && !IsSituationAlreadyPlayed(situation.Guid))
             {
                 ToScreen1(situation, originScreen);
             }
@@ -676,9 +676,9 @@ public class UI_Manager : MonoBehaviour
 
         situation = _situation;
 
-        if (situation.Context != null)
+        if (LanguageManager.Instance.GetSituationContext(situation) != null)
         {
-            contextDescription.text = situation.Context;
+            contextDescription.text = LanguageManager.Instance.GetSituationContext(situation);
             playedSituationsList.Add(situation.Guid);
         }
         else
@@ -696,7 +696,7 @@ public class UI_Manager : MonoBehaviour
     public void SetUpScreen2() //situation dialogues setUp
     {
         //situation = _situation; //esto tiene que estar configurado ya
-        AddTextToRoute($"{situation.SituationName}: {situation.Context}"); //LO GUARDAMOS PARA EL CORREO
+        AddTextToRoute($"{situation.SituationName}: {LanguageManager.Instance.GetSituationContext(situation)}"); //LO GUARDAMOS PARA EL CORREO
 
         if (LoadDialogues(situation.Guid, situationDialogues)) 
         {
@@ -914,12 +914,13 @@ public class UI_Manager : MonoBehaviour
                     if (Translate(dialoguesData[currentDialogue + j].Speaker) != "Narrator")
                     {
                         //Actualizar Panel
-                        dialoguesUI[i].text = $"(id: {dialoguesData[currentDialogue + j].DialogueName}) {dialoguesData[currentDialogue + j].Speaker}: {dialoguesData[currentDialogue + j].DialogueText}";
+                        dialoguesUI[i].text = $"(id: {dialoguesData[currentDialogue + j].DialogueName}) {LanguageManager.Instance.GetDialogueSpeaker(dialoguesData[currentDialogue + j])}: {LanguageManager.Instance.GetDialogueText(dialoguesData[currentDialogue + j])}";
                         //dialoguesUI[i].text = $"(id: {dialoguesData[currentDialogue + j].DialogueName}) {dialoguesData[currentDialogue + j].Speaker} ({dialoguesData[currentDialogue + j].Mood}): {dialoguesData[currentDialogue + j].DialogueText}";
                         //Email
-                        AddTextToRoute($"{dialoguesData[currentDialogue + j].Speaker}: {dialoguesData[currentDialogue + j].DialogueText}");
+                        AddTextToRoute($"{LanguageManager.Instance.GetDialogueSpeaker(dialoguesData[currentDialogue + j])}: {LanguageManager.Instance.GetDialogueText(dialoguesData[currentDialogue + j])}");
                         //AddTextToRoute($"{dialoguesData[currentDialogue + j].Speaker} ({dialoguesData[currentDialogue + j].Mood}): {dialoguesData[currentDialogue + j].DialogueText}");
                         //Audio
+                        //Aqui o es necesario pasar por el language manager, ya que es a nivel interno
                         yield return new WaitForSeconds(PlayAudioOnSpeaker(dialoguesData[currentDialogue + j].audioId, dialoguesData[currentDialogue + j].Speaker, dialoguesData[currentDialogue + j].Mood));
 
                         //Quitamos la Animacion al hablar

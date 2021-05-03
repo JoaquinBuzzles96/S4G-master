@@ -29,7 +29,7 @@ public class AnswerUI : MonoBehaviour
 
         if (UI_Manager.Instance.LoadDialogues(answerData.Guid, dialogues))
         {
-            description.text = $"(id: {dialogues[0].DialogueName}) {dialogues[0].DialogueText}"; 
+            description.text = $"(id: {dialogues[0].DialogueName}) {LanguageManager.Instance.GetDialogueText(dialogues[0])}"; 
             //Debug.Log($"Se ha asignado el primer dialogo de la respuesta {answerData.AnswerName}, dialogo = {description.text}");
         }
         else

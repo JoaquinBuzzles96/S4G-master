@@ -100,7 +100,7 @@ namespace Michsky.UI.ModernUIPack
                     SetUpCases();
                 }
 
-                Debug.Log($"No ha habido errores");
+                //Debug.Log($"No ha habido errores");
                 currentListParent = transform.parent;
             }
 
