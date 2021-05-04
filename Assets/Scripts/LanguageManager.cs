@@ -67,20 +67,24 @@ public class LanguageManager : MonoBehaviour
 
     public void UpdateLanguage()
     {
-        //Reset lists:
-        List<DialogueDataBean> case3LanguageData = new List<DialogueDataBean>(); //metemos las situaciones, questions y dialogues en el mismo saco
-        List<DialogueDataBean> case5LanguageData = new List<DialogueDataBean>();
-        List<DialogueDataBean> case6LanguageData = new List<DialogueDataBean>();
-        List<DialogueDataBean> case7LanguageData = new List<DialogueDataBean>();
-        List<DialogueDataBean> case9LanguageData = new List<DialogueDataBean>();
+        if (languageSelected != "EN")
+        {
+            //Reset lists:
+            List<DialogueDataBean> case3LanguageData = new List<DialogueDataBean>(); //metemos las situaciones, questions y dialogues en el mismo saco
+            List<DialogueDataBean> case5LanguageData = new List<DialogueDataBean>();
+            List<DialogueDataBean> case6LanguageData = new List<DialogueDataBean>();
+            List<DialogueDataBean> case7LanguageData = new List<DialogueDataBean>();
+            List<DialogueDataBean> case9LanguageData = new List<DialogueDataBean>();
 
-        /* if (languageSelected != "EN")
-         {
-             ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{UI_Manager.Instance.currentCase}_{languageSelected}.csv");
-         }
-        */
-        //Debug.Log($" antes del switch: C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv");
-        ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
+            /* if (languageSelected != "EN")
+             {
+                 ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{UI_Manager.Instance.currentCase}_{languageSelected}.csv");
+             }
+            */
+            //Debug.Log($" antes del switch: C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv");
+            ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
+        }
+
         /*
         switch (caseSelected)
         {
