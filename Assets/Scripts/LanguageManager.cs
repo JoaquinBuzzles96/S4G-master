@@ -43,6 +43,7 @@ public class LanguageManager : MonoBehaviour
         if (PlayerPrefs.GetString("Language")!= null)
         {
             languageSelected = PlayerPrefs.GetString("Language");
+            UpdateLanguage();
         }
 
         isThirdPerson = false;
@@ -51,7 +52,7 @@ public class LanguageManager : MonoBehaviour
 
 
         //Testing
-        string[] data;
+        //string[] data;
         //Audio/Case5_EN/Audio1
         //Resources.Load
         //C:\Users\Joaquin\Documents\GitHub\S4G-master\Languages\Example.csv
@@ -60,12 +61,58 @@ public class LanguageManager : MonoBehaviour
 
         //Real data input:
         //Esta ruta dependera del idioma seleccionado, de momento usamos siempre la misma
-        ReadCSVLanguages("C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Example.csv");
+        //ReadCSVLanguages("C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Example.csv");
 
     }
+
+    public void UpdateLanguage()
+    {
+        if (languageSelected != "EN")
+        {
+            //Reset lists:
+            List<DialogueDataBean> case3LanguageData = new List<DialogueDataBean>(); //metemos las situaciones, questions y dialogues en el mismo saco
+            List<DialogueDataBean> case5LanguageData = new List<DialogueDataBean>();
+            List<DialogueDataBean> case6LanguageData = new List<DialogueDataBean>();
+            List<DialogueDataBean> case7LanguageData = new List<DialogueDataBean>();
+            List<DialogueDataBean> case9LanguageData = new List<DialogueDataBean>();
+
+            /* if (languageSelected != "EN")
+             {
+                 ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{UI_Manager.Instance.currentCase}_{languageSelected}.csv");
+             }
+            */
+            //Debug.Log($" antes del switch: C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv");
+            ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
+        }
+
+        /*
+        switch (caseSelected)
+        {
+            case "CASE3":
+                Debug.Log($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
+                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
+                break;
+            case "CASE5":
+                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case5_{languageSelected}.csv"); 
+                break;
+            case "CASE6":
+                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case6_{languageSelected}.csv");
+                break;
+            case "CASE7":
+                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case7_{languageSelected}.csv");
+                break;
+            case "CASE9":
+                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case9_{languageSelected}.csv");
+                break;
+        }
+        */
+    }
+
+
     public void SelectLanguage(string languageSiglas)
     {
         languageSelected = languageSiglas;
+        UpdateLanguage();
         PlayerPrefs.SetString("Language", languageSelected);
     }
 
@@ -126,7 +173,6 @@ public class LanguageManager : MonoBehaviour
 
         return dialogueNodeData.DialogueText;
     }
-
 
     public string GetQuestionDescription(QuestionNodeData questionNodeData)
     {
@@ -261,24 +307,6 @@ public class LanguageManager : MonoBehaviour
         }
     }
 
-    /*
-    public List<DialogueDataBean> SelectedLanguagueFilter()
-    {
-        switch (languageSelected)
-        {
-            case "EN":
-                break;
-            case "ES":
-                break;
-            case "PT":
-                break;
-            case "CZ":
-                break;
-            case "HU":
-                break;
-        }
-    }
-    */
 
 }
 
