@@ -133,6 +133,8 @@ public class UI_Manager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Application.Quit();
+            /*
             if (isExitActive)
             {
                 ExitButton.SetActive(false);
@@ -143,6 +145,7 @@ public class UI_Manager : MonoBehaviour
             }
             
             isExitActive = !isExitActive;
+            */
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -342,7 +345,7 @@ public class UI_Manager : MonoBehaviour
             audioSource.Play();
             
             //Debug.Log($"Hacemos una pausa de {audioSource.clip.length + 2.5f}");
-            return audioSource.clip.length + 2.5f;
+            return audioSource.clip.length + 1f;
         }
         else
         {
@@ -812,7 +815,7 @@ public class UI_Manager : MonoBehaviour
 
         }
 
-        StartCoroutine(SpecialCases.Instance.ExitRoom());
+        //StartCoroutine(SpecialCases.Instance.ExitRoom());
         
 
         //Send email

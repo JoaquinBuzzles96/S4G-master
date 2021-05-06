@@ -24,7 +24,7 @@ public class AnswerUI : MonoBehaviour
 
     public void SetupAnswer(AnswerNodeData _answerData, string CORRECT_GUID = null)
     {
-        this.gameObject.SetActive(true);
+        this.gameObject.transform.parent.gameObject.SetActive(true);
         answerData = _answerData;
 
         if (UI_Manager.Instance.LoadDialogues(answerData.Guid, dialogues))
@@ -54,7 +54,7 @@ public class AnswerUI : MonoBehaviour
     public void ClearAnswer()
     {
         description.text = "";
-        this.gameObject.SetActive(false);
+        this.gameObject.transform.parent.gameObject.SetActive(false);
     }
 
     public void OnSelectAnswer()

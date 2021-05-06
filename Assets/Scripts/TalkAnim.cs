@@ -6,6 +6,7 @@ using TMPro;
 public class TalkAnim : MonoBehaviour
 {
     public TextMeshProUGUI text;
+    public Color colorBlink = Color.green;
     public float speed;
     public void Start()
     {
@@ -19,7 +20,7 @@ public class TalkAnim : MonoBehaviour
             //Debug.Log($"Estamos iluminando al {this.gameObject.name}");
         }
 
-       text.color =  Color.Lerp(Color.white, Color.green, Mathf.PingPong(Time.time * speed, 1.0f));
+       text.color =  Color.Lerp(Color.white, colorBlink, Mathf.PingPong(Time.time * speed, 1.0f));
     }
 }
 

@@ -220,6 +220,12 @@ public class SpecialCases : MonoBehaviour
             case "D18.3.2":
                 StartCoroutine(Case5D1832());
                 break;
+            case "END1":
+                StartCoroutine(Case5END1()); // no existen estos identificadores
+                break;
+            case "END2":
+                StartCoroutine(Case5END2());
+                break;
 
         }
     }
@@ -420,6 +426,20 @@ public class SpecialCases : MonoBehaviour
         yield return ShowPregnantWomanGood(true);
         playingAnimation = false;
     }
+
+    IEnumerator Case5END1()
+    {
+        playingAnimation = true;
+        yield return ShowPregnantWomanGood(true);
+        playingAnimation = false;
+    }
+    IEnumerator Case5END2()
+    {
+        playingAnimation = true;
+        yield return ShowPregnantWomanGood(false);
+        playingAnimation = false;
+    }
+
 
     IEnumerator Case5D1812()
     {
