@@ -5168,6 +5168,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6905985972153553096, guid: bdc068b4309e9bf43833f22cd4d19fb1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 71292027b4c65ce40a790e7ca793fa94, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc068b4309e9bf43833f22cd4d19fb1, type: 3}
 --- !u!1001 &421058352
@@ -8668,6 +8673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1176209060}
+  colorBlink: {r: 0, g: 1, b: 0, a: 1}
   speed: 0
 --- !u!1 &722350215
 GameObject:
@@ -9095,6 +9101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 832275393}
+  colorBlink: {r: 0, g: 1, b: 0, a: 1}
   speed: 0
 --- !u!1 &749058087
 GameObject:
@@ -10304,6 +10311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 985403370}
+  colorBlink: {r: 0, g: 1, b: 0, a: 1}
   speed: 0
 --- !u!224 &847028703 stripped
 RectTransform:
@@ -11664,6 +11672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 985403370}
+  colorBlink: {r: 0, g: 1, b: 0, a: 1}
   speed: 0
 --- !u!114 &991541518
 MonoBehaviour:
@@ -12473,6 +12482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1176209060}
+  colorBlink: {r: 0, g: 1, b: 0, a: 1}
   speed: 0
 --- !u!114 &1049191151
 MonoBehaviour:
@@ -15096,6 +15106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1732116586}
+  colorBlink: {r: 0, g: 1, b: 0, a: 1}
   speed: 0
 --- !u!114 &1299746477
 MonoBehaviour:
@@ -15158,6 +15169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 832275393}
+  colorBlink: {r: 0, g: 1, b: 0, a: 1}
   speed: 0
 --- !u!114 &1311706542
 MonoBehaviour:
@@ -20634,6 +20646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1732116586}
+  colorBlink: {r: 0, g: 1, b: 0, a: 1}
   speed: 0
 --- !u!1001 &1753164406
 PrefabInstance:
