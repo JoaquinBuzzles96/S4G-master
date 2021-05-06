@@ -22,9 +22,6 @@ public class LanguageManager : MonoBehaviour
     public List<DialogueDataBean> case9LanguageData = new List<DialogueDataBean>();
 
 
-
-
-
     void Awake()
     {
         if (Instance != null)
@@ -82,7 +79,9 @@ public class LanguageManager : MonoBehaviour
              }
             */
             //Debug.Log($" antes del switch: C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv");
-            ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
+            //Application.streamingAssetsPath + $"/Resources/Cases/{caso}_{LanguageManager.Instance.languageSelected}";
+            ReadCSVLanguages(System.IO.Directory.GetCurrentDirectory() + $"/Assets/Resources/Languages/Case3_{languageSelected}.csv");
+            //ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
         }
 
         /*
@@ -238,7 +237,7 @@ public class LanguageManager : MonoBehaviour
     void ReadCSVLanguages(string path) //este sera el read de dialogue y question
     {
         string[] data = null;
-        StreamReader strReader = new StreamReader(path);
+        StreamReader strReader = new StreamReader(path, System.Text.Encoding.GetEncoding("iso-8859-1"));
 
         bool endOfFile = false;
         while (!endOfFile)
