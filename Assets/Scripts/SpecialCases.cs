@@ -958,7 +958,7 @@ public class SpecialCases : MonoBehaviour
         playingAnimation = true;
         prop = GetProp("Endoscope");
         currentTool = "Endoscope";
-        position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos;
+        position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().endoscopyHandPos;
         SetProp(position, prop);// lo ponemos en tu mano
         yield return null;
         playingAnimation = false;
@@ -1077,7 +1077,7 @@ public class SpecialCases : MonoBehaviour
         //Debug.Log($"Lo ponemos en tu mano");
         //Lo ponemos en tu mano
         prop = GetProp("Endoscope");
-        position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().handPos;
+        position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().endoscopyHandPos;
         SetProp(position, prop);
         //Si ya tiene algo lo quitamos y lo ponemos en la mesa
         if (currentTool != null && currentTool != "Herramienta" && currentTool != "")
