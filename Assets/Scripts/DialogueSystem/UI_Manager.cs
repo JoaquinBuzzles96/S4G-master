@@ -326,7 +326,7 @@ public class UI_Manager : MonoBehaviour
         if (dictionaryCharacteres.ContainsKey(speaker) && speaker != "Narrator")
         {
             SetMoodAnim(speaker, _mood);
-            SetColorName(0.75f, speaker, dictionaryCharacteres[speaker]);
+            SetColorName(0.75f, speaker, dictionaryCharacteres[speaker], Color.green);
         }
         else
         {
@@ -720,8 +720,10 @@ public class UI_Manager : MonoBehaviour
 
     public void SetUpScreen3() //Asignar la pregunta y las 4 posibles respuestas
     {
-        generalArrow.SetActive(true);
         generalArrow.GetComponent<LookTarget>().target = this.transform;//PANEL
+        generalArrow.SetActive(true); //esta es la flecha que mira al panel
+        Debug.Log("INICIAMOS LA CORROUTINA DEL MAIN PANEL");
+        StartCoroutine(CheckIfPanelFieldOfView()); //con esta corroutina detectara el collider del panel cuando lo mires y desactivara la flecha 
 
         bool lastOption = false;
 
@@ -905,7 +907,8 @@ public class UI_Manager : MonoBehaviour
                         generalArrow.GetComponent<LookTarget>().target = dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)].gameObject.transform;
 
                         //Debug.Log($"Vamos a buscar al personaje {tagToCheck}");
-
+                        //Activamos el parpadeo hasta que encuentres al personaje
+                        SetColorName(0.75f, tagToCheck, dictionaryCharacteres[tagToCheck], Color.red);
                         while (!CheckIfTargetFieldOfView(tagToCheck))
                         {
                             yield return null;
@@ -932,7 +935,7 @@ public class UI_Manager : MonoBehaviour
                         if (dictionaryCharacteres.ContainsKey(Translate(dialoguesData[currentDialogue + j].Speaker)))
                         {
                             dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)].SetBool("animFinished", true);
-                            SetColorName(0f, Translate(dialoguesData[currentDialogue + j].Speaker), dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)]);
+                            SetColorName(0f, Translate(dialoguesData[currentDialogue + j].Speaker), dictionaryCharacteres[Translate(dialoguesData[currentDialogue + j].Speaker)], Color.green);
                         }
                         else
                         {
@@ -999,10 +1002,42 @@ public class UI_Manager : MonoBehaviour
             {
                 //Debug.Log($"Estamos mirando {tagToCheck}");
                 isTragetInFieldOfView = true;
+                //Desactivamos el color del nombre en caso de estar resaltado
+                SetColorName(0f, tagToCheck, dictionaryCharacteres[tagToCheck], Color.red);
             }
         }
 
         return isTragetInFieldOfView;
+    }
+
+    IEnumerator CheckIfPanelFieldOfView()
+    {
+        string tagToCheck = "MainPanelNew"; //debemos gestionar que se actyive y desactive el collider //this.gameobject.name
+        bool isTragetInFieldOfView = false;
+        this.gameObject.GetComponent<BoxCollider>().enabled = true; //nosotros somos el panel, activamos el box collider en caso de estar desactivado
+        RaycastHit hitInfo;
+
+        while (!isTragetInFieldOfView)
+        {
+            //Debug.Log("Estamos buscando el main panel");
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hitInfo))
+            {
+                //Debug.Log($"El raycast ha chocado con {hitInfo.collider.gameObject.name}");
+                //Debug.Log($"Chocamos con algo de nombre {hitInfo.collider.gameObject.name} y etiqueta {hitInfo.collider.tag}");
+                if (hitInfo.collider.gameObject.name == tagToCheck) //comprobar si esta mirando al doctor que corresponda
+                {
+                    //Debug.Log($"Estamos mirando {tagToCheck}");
+                    isTragetInFieldOfView = true;
+                    //Debug.Log("Hemos colisionado con el main panel, desactivamos la flecha");
+                    generalArrow.SetActive(false);
+                    //desactivamos el collider para que el raycast de oculus funcione
+                    hitInfo.collider.gameObject.GetComponent<BoxCollider>().enabled = false; // esto seria lo mismo: this.gameObject.GetComponent<BoxCollider>().enabled = false;
+                }
+            }
+
+            yield return null;
+        }
+
     }
 
     public IEnumerator PlaySimpleDialogue(string audio, GameObject nextButton = null, string speaker = null)
@@ -1025,7 +1060,7 @@ public class UI_Manager : MonoBehaviour
                 if (dictionaryCharacteres.ContainsKey(Translate(speaker)))
                 {
                     dictionaryCharacteres[Translate(speaker)].SetBool("animFinished", true);
-                    SetColorName(0f, Translate(speaker), dictionaryCharacteres[speaker]);
+                    SetColorName(0f, Translate(speaker), dictionaryCharacteres[speaker], Color.green);
                 }
             }
 
@@ -1040,7 +1075,7 @@ public class UI_Manager : MonoBehaviour
                 if (dictionaryCharacteres.ContainsKey(Translate(speaker)))
                 {
                     dictionaryCharacteres[Translate(speaker)].SetBool("animFinished", true);
-                    SetColorName(0f, Translate(speaker), dictionaryCharacteres[speaker]);
+                    SetColorName(0f, Translate(speaker), dictionaryCharacteres[speaker], Color.green);
                 }
             }
 
@@ -1130,7 +1165,7 @@ public class UI_Manager : MonoBehaviour
         return aux;
     }
 
-    public void SetColorName(float color, string speaker, Animator animator)
+    public void SetColorName(float speed, string speaker, Animator animator, Color colorBlink)
     {
         //Debug.Log($"Vamos a intentar iluminar el nombre de {speaker}");
         speaker = speaker.ToLower();
@@ -1141,7 +1176,8 @@ public class UI_Manager : MonoBehaviour
         }
         else
         {
-            animator.gameObject.GetComponent<TalkAnim>().speed = color;
+            animator.gameObject.GetComponent<TalkAnim>().speed = speed;
+            animator.gameObject.GetComponent<TalkAnim>().colorBlink = colorBlink;
         }
        
         /*
