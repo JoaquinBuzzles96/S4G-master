@@ -79,12 +79,21 @@ MonoBehaviour:
   - BaseNodeGuid: 6334b7fc-db46-4bc1-85d2-d35c57c0141b
     PortName: Question 1
     TargetNodeGuid: ed566e74-c970-47f4-99c9-37125e0456f3
+  - BaseNodeGuid: 6334b7fc-db46-4bc1-85d2-d35c57c0141b
+    PortName: Dialogue
+    TargetNodeGuid: ee4d7b6b-ba98-423d-83e4-013ae2475b61
   - BaseNodeGuid: 727b6aae-dbdb-40ca-afee-c27e960da47e
     PortName: Question 1
     TargetNodeGuid: a4ffefb0-0ea8-4bc7-8fea-76c7dd78b1b9
+  - BaseNodeGuid: 727b6aae-dbdb-40ca-afee-c27e960da47e
+    PortName: Dialogue
+    TargetNodeGuid: 7266fa11-89b5-4352-a629-5d96d09dbe82
   - BaseNodeGuid: 2efc18c6-9b54-469f-80c6-ca83425b8b44
     PortName: Question 1
     TargetNodeGuid: 89312341-df1a-45e1-a51d-42216beedf7d
+  - BaseNodeGuid: 2efc18c6-9b54-469f-80c6-ca83425b8b44
+    PortName: Dialogue
+    TargetNodeGuid: cd48a87c-08ba-41e0-abdb-744e5c0cfbc8
   - BaseNodeGuid: 8aa91b74-d824-495d-a021-a96877da0d7b
     PortName: Dialogue
     TargetNodeGuid: a3ed8c9e-75a8-4007-9b2e-3fead6bb81c3
@@ -919,15 +928,6 @@ MonoBehaviour:
   - BaseNodeGuid: b5b4adcd-a934-456a-9c9a-32e8785c57c4
     PortName: Dialogue
     TargetNodeGuid: 188f326b-d622-4662-a9f8-caf37d895338
-  - BaseNodeGuid: 6334b7fc-db46-4bc1-85d2-d35c57c0141b
-    PortName: Dialogue
-    TargetNodeGuid: ee4d7b6b-ba98-423d-83e4-013ae2475b61
-  - BaseNodeGuid: 2efc18c6-9b54-469f-80c6-ca83425b8b44
-    PortName: Dialogue
-    TargetNodeGuid: cd48a87c-08ba-41e0-abdb-744e5c0cfbc8
-  - BaseNodeGuid: 727b6aae-dbdb-40ca-afee-c27e960da47e
-    PortName: Dialogue
-    TargetNodeGuid: 7266fa11-89b5-4352-a629-5d96d09dbe82
   SituationNodeData:
   - Guid: 36ff957a-4d51-4c5f-aad8-6d3fcf183744
     SituationName: S1B
@@ -1443,7 +1443,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: A8.1
-    score: 0
+    score: 10
     Position: {x: 1467, y: 2752}
   - Guid: 6d3564a2-ef95-4d10-83c0-6d42fab9483d
     AnswerName: A3.2
@@ -1883,7 +1883,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: A9.2
-    score: 0
+    score: 10
     Position: {x: 2925, y: 3069}
   - Guid: ec57f32f-4ec2-4256-95d9-6348ef4bbc9a
     AnswerName: A9.1
@@ -1982,7 +1982,7 @@ MonoBehaviour:
     nodeType: 2
     speaker: Speaker
     audioId: A9.4
-    score: 0
+    score: 10
     Position: {x: 2918, y: 3609}
   - Guid: 0dea0356-cf41-472a-8a4e-6621ce80cac6
     AnswerName: A15.1

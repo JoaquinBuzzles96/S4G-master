@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
-  m_Name: Case3_EN
+  m_Name: CASE3_EN
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 1a8a2fff-e26c-41f1-9dd8-2c6e80c21b5b
@@ -539,48 +539,56 @@ MonoBehaviour:
     QuestionName: Q2
     Description: How will you react?
     audioId: Question1
+    speaker: 
     nodeType: 1
     Position: {x: 1518, y: 1801}
   - Guid: 3d393f5b-30c8-412a-a646-f32453ff386e
     QuestionName: Q4
     Description: How will you react?
     audioId: Question1
+    speaker: 
     nodeType: 1
     Position: {x: 1425, y: 3298}
   - Guid: e26c01fb-d89a-47da-acb4-dae5ec802908
     QuestionName: Q6
     Description: How will you react?
     audioId: Question1
+    speaker: 
     nodeType: 1
     Position: {x: 1477, y: 4894}
   - Guid: fd793977-ead6-4356-ac6a-3e898676ea44
     QuestionName: D7
     Description: How will you react?
     audioId: Question1
+    speaker: 
     nodeType: 1
     Position: {x: 1330, y: 6431}
   - Guid: db0254ad-f5f0-4c8a-ba16-52608d45c22c
     QuestionName: Q9
     Description: How will you react?
     audioId: Question1
+    speaker: 
     nodeType: 1
     Position: {x: 1225, y: 9325}
   - Guid: ba951361-4273-43cc-95ea-6a376751bd0a
     QuestionName: Q11
     Description: How will you react?
     audioId: Question1
+    speaker: 
     nodeType: 1
     Position: {x: 1042, y: 11143}
   - Guid: 170cd95e-d05f-4efe-9105-8612bf2aa0ee
     QuestionName: Q1
     Description: How will you react?
     audioId: Question1
+    speaker: 
     nodeType: 1
     Position: {x: 1570, y: 389}
   - Guid: 6b47c6f9-b29d-487b-a485-e55e97bf488c
     QuestionName: Q8
     Description: How will you react?
     audioId: Question1
+    speaker: 
     nodeType: 1
     Position: {x: 1221, y: 7965}
   AnswerNodeData:
@@ -1173,7 +1181,7 @@ MonoBehaviour:
     Position: {x: 3143, y: 4874}
   - Guid: 4793443e-5829-4b20-aab5-72a6c36a3b75
     DialogueName: D6.1.1
-    DialogueText: 'You throw the instrumental back at the nurse and shout:'
+    DialogueText: You throw the instrumental back at the nurse and shout
     Speaker: Narrator
     Mood: Calm
     audioId: ND22
@@ -1181,7 +1189,7 @@ MonoBehaviour:
     Position: {x: 2695, y: 4875}
   - Guid: 3bea7de1-7762-4b9a-b41e-50ab99ef6910
     DialogueName: D6.1.4
-    DialogueText: 'These not Coagrasper forceps, have you prepared them? '
+    DialogueText: 'These are not Coagrasper forceps, have you prepared them? '
     Speaker: Endoscopist 1
     Mood: Calm
     audioId: E1D23
@@ -1354,7 +1362,7 @@ MonoBehaviour:
     Position: {x: 1431, y: 10293}
   - Guid: c4fe1ad4-468a-44a9-a2e0-77367ed9723d
     DialogueName: D1.1.1
-    DialogueText: You don't have to wear the mask? Do you follow any special rules
+    DialogueText: Don't you have to wear the mask? Do you follow any special rules
       which I am not aware of?
     Speaker: Endoscopist 1
     Mood: Ironic

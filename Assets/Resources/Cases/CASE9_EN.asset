@@ -52,9 +52,6 @@ MonoBehaviour:
   - BaseNodeGuid: e01ca662-a051-444a-b15a-0806c0043764
     PortName: Question 1
     TargetNodeGuid: fce65e63-c5bf-4b82-a779-faa388b5f722
-  - BaseNodeGuid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
-    PortName: Question 1
-    TargetNodeGuid: c42e9b8c-45af-48a2-8eb8-4e179472349d
   - BaseNodeGuid: fe2bc9bf-6ce5-473d-9ac2-a9f306e23e46
     PortName: Dialogue
     TargetNodeGuid: 4446ec08-e9b7-4b38-8114-008828341a15
@@ -67,6 +64,12 @@ MonoBehaviour:
   - BaseNodeGuid: da5e8e19-5126-4db1-ba6e-d292d219164a
     PortName: Question 1
     TargetNodeGuid: 02f094b5-feaf-4298-9269-f803c7cbc17f
+  - BaseNodeGuid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
+    PortName: Question 1
+    TargetNodeGuid: c42e9b8c-45af-48a2-8eb8-4e179472349d
+  - BaseNodeGuid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
+    PortName: Dialogue
+    TargetNodeGuid: 446d17ed-9032-4f8e-b996-554cb371b238
   - BaseNodeGuid: 82cc2164-cf96-4458-b497-5ccd7ccada65
     PortName: Answer 1
     TargetNodeGuid: f2a309a3-d899-46c6-85ae-791f9edc1345
@@ -325,9 +328,6 @@ MonoBehaviour:
   - BaseNodeGuid: 231c3f1b-0b6a-409f-8c85-172db5e71698
     PortName: Dialogue
     TargetNodeGuid: be2d041a-4f0b-4784-9506-823782f351fd
-  - BaseNodeGuid: cda23f46-81b6-4b44-a2c4-516d5eb5d76f
-    PortName: Dialogue
-    TargetNodeGuid: 91ae87f8-3f48-4b43-a4b0-46ef8eb7c0ea
   - BaseNodeGuid: bc378e38-87ad-4a68-849b-03dec343a44f
     PortName: Dialogue
     TargetNodeGuid: bb239408-937a-4bcb-82a6-564a8b5d6ec9
@@ -358,9 +358,6 @@ MonoBehaviour:
   - BaseNodeGuid: be2d041a-4f0b-4784-9506-823782f351fd
     PortName: Dialogue
     TargetNodeGuid: 3b75368d-110e-434a-90eb-834e42ecb50b
-  - BaseNodeGuid: 3b75368d-110e-434a-90eb-834e42ecb50b
-    PortName: Dialogue
-    TargetNodeGuid: 6b409dec-965d-44f8-961d-0df48506f439
   - BaseNodeGuid: 6b409dec-965d-44f8-961d-0df48506f439
     PortName: Dialogue
     TargetNodeGuid: f5833c3a-6595-4a22-91c1-c836e4751a58
@@ -388,12 +385,15 @@ MonoBehaviour:
   - BaseNodeGuid: d8595655-66fa-4609-83d0-f1e60abfc7d2
     PortName: Dialogue
     TargetNodeGuid: abddef60-edf7-491e-9541-8c34ba2ac291
-  - BaseNodeGuid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
+  - BaseNodeGuid: cda23f46-81b6-4b44-a2c4-516d5eb5d76f
     PortName: Dialogue
-    TargetNodeGuid: 446d17ed-9032-4f8e-b996-554cb371b238
+    TargetNodeGuid: 91ae87f8-3f48-4b43-a4b0-46ef8eb7c0ea
   - BaseNodeGuid: 446d17ed-9032-4f8e-b996-554cb371b238
     PortName: Dialogue
     TargetNodeGuid: cda23f46-81b6-4b44-a2c4-516d5eb5d76f
+  - BaseNodeGuid: 3b75368d-110e-434a-90eb-834e42ecb50b
+    PortName: Dialogue
+    TargetNodeGuid: 6b409dec-965d-44f8-961d-0df48506f439
   SituationNodeData:
   - Guid: 0402f13f-22f1-4208-ac64-068cd0d956fc
     SituationName: S2
@@ -465,36 +465,42 @@ MonoBehaviour:
     QuestionName: Q2
     Description: What do you say?
     audioId: Audio id
+    speaker: 
     nodeType: 1
     Position: {x: 829, y: 1825}
   - Guid: 02f094b5-feaf-4298-9269-f803c7cbc17f
     QuestionName: Q4
     Description: What do you say?
     audioId: Audio id
+    speaker: 
     nodeType: 1
     Position: {x: 538, y: 3611}
   - Guid: daac4b68-b27b-4352-a8f0-deae9a51189b
     QuestionName: Q6
     Description: How do you react?
     audioId: Audio id
+    speaker: 
     nodeType: 1
     Position: {x: 498, y: 5546}
   - Guid: c42e9b8c-45af-48a2-8eb8-4e179472349d
     QuestionName: Q1
     Description: What do you say?
     audioId: Audio id
+    speaker: 
     nodeType: 1
     Position: {x: 810, y: 495}
   - Guid: 281e910e-57d5-4941-94d0-d63d22290e61
     QuestionName: Q9
     Description: What do you say?
     audioId: Audio id
+    speaker: 
     nodeType: 1
     Position: {x: 359, y: 8761}
   - Guid: fce65e63-c5bf-4b82-a779-faa388b5f722
     QuestionName: Q8
     Description: What do you say?
     audioId: Audio id
+    speaker: 
     nodeType: 1
     Position: {x: 421, y: 7186}
   AnswerNodeData:
