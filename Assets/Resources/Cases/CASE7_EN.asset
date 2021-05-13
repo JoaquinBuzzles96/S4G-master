@@ -544,9 +544,6 @@ MonoBehaviour:
   - BaseNodeGuid: e7f33c2d-17b4-4c9f-857d-e8ad9620daa8
     PortName: Dialogue
     TargetNodeGuid: 61ae29e3-b720-491b-bcda-10d64c84ab53
-  - BaseNodeGuid: e7f33c2d-17b4-4c9f-857d-e8ad9620daa8
-    PortName: Situation
-    TargetNodeGuid: 195063cc-7338-4655-aebd-7894e49da16d
   - BaseNodeGuid: cafdf153-3b16-4c98-b443-0f7f28c77ff9
     PortName: Dialogue
     TargetNodeGuid: b50e185c-9c9a-4dc1-8a60-fa7480f10e1e
@@ -754,9 +751,6 @@ MonoBehaviour:
   - BaseNodeGuid: c4bb3047-6278-417e-a2a4-cd1281b77c97
     PortName: Dialogue
     TargetNodeGuid: 4bb02653-3965-4b7a-92ca-6077216b1c65
-  - BaseNodeGuid: c4bb3047-6278-417e-a2a4-cd1281b77c97
-    PortName: Situation
-    TargetNodeGuid: 195063cc-7338-4655-aebd-7894e49da16d
   - BaseNodeGuid: 38ca1a5d-cebc-49b7-a178-7fe126fbde7e
     PortName: Dialogue
     TargetNodeGuid: a7d52d54-8039-4006-8f75-429b0bbee04e
@@ -928,6 +922,12 @@ MonoBehaviour:
   - BaseNodeGuid: b5b4adcd-a934-456a-9c9a-32e8785c57c4
     PortName: Dialogue
     TargetNodeGuid: 188f326b-d622-4662-a9f8-caf37d895338
+  - BaseNodeGuid: e7f33c2d-17b4-4c9f-857d-e8ad9620daa8
+    PortName: Situation
+    TargetNodeGuid: 582ed4d3-afa1-493d-9857-059032d0d792
+  - BaseNodeGuid: c4bb3047-6278-417e-a2a4-cd1281b77c97
+    PortName: Situation
+    TargetNodeGuid: 582ed4d3-afa1-493d-9857-059032d0d792
   SituationNodeData:
   - Guid: 36ff957a-4d51-4c5f-aad8-6d3fcf183744
     SituationName: S1B
@@ -3016,14 +3016,6 @@ MonoBehaviour:
     audioId: D13B.4.2
     nodeType: 3
     Position: {x: 7851, y: 4742}
-  - Guid: 8e5097a0-d8af-4bc8-a0cf-74999225376f
-    DialogueName: D1A.3
-    DialogueText: " I\u2019ll go to stockage room, to check if we have one there."
-    Speaker: Responsible nurse
-    Mood: Calm
-    audioId: D1A.3
-    nodeType: 3
-    Position: {x: 298, y: 181}
   - Guid: 09af7611-3f6a-4213-805e-03a08337c981
     DialogueName: D1A.1
     DialogueText: Give me a 45 mm golden stapler, please.
@@ -3291,4 +3283,12 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 3
     Position: {x: 1052, y: 2555}
+  - Guid: 8e5097a0-d8af-4bc8-a0cf-74999225376f
+    DialogueName: D1A.3
+    DialogueText: " I\u2019ll go to stockage room, to check if we have one there."
+    Speaker: Responsible nurse
+    Mood: Calm
+    audioId: D1A.3
+    nodeType: 3
+    Position: {x: 298, y: 181}
   ExposedProperties: []

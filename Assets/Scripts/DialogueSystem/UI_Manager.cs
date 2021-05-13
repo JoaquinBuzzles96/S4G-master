@@ -1136,13 +1136,16 @@ public class UI_Manager : MonoBehaviour
             case "Instrumentalist nurse":
             case "Instrumentalist":
             case "Instrumentist":
+            case "InstrumentistSurgeon":
+            case "Instrumentist Surgeon":
+                //aux = "InstrumentistSurgeon";
                 aux = "InstrumentalistNurse";
                 break;
             case "Camera Assistant":
+            case "Camera assistant":
+            case "camera assistant":
+            case "camera Assistant":
                 aux = "CameraAssistant";
-                break;
-            case "Instrumentist Surgeon":
-                aux = "InstrumentistSurgeon";
                 break;
             case "Responsible Nurse":
             case "Responsible nurse":

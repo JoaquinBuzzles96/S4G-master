@@ -248,11 +248,11 @@ public class SpecialCases : MonoBehaviour
             case "D6.1.1":
             case "D6.1.2":
             case "D6.1.3":
-            //case "D6.2.1":
-            case "D6.2.2":
+            case "D6.2.1":
+            //case "D6.2.2":
             case "D6.2.3":
             case "D6.3.1":
-            case "D6.3.2":
+            //case "D6.3.2":
             case "D6.3.3":
             case "D6.4.1":
             case "D6.4.2":
@@ -616,7 +616,7 @@ public class SpecialCases : MonoBehaviour
         //todo: cambiar por GRAPADORA EXTRAGRUESA (ResponsibleNurse)
         playingAnimation = true;
 
-        yield return GoToTableAndGiveTool("Inyector", "ResponsibleNurse");
+        yield return GoToTableAndGiveTool("Inyector", "ResponsibleNurse", "MainSurgeon");
 
         playingAnimation = false;
     }
@@ -631,20 +631,21 @@ public class SpecialCases : MonoBehaviour
 
     IEnumerator Case7_Modify_volume(bool high)
     {
+        playingAnimation = true;
         // IR A DONDE ESTE EL MONITOR DEL VOLUMEN
-        /*
+        
         SimpleWaypointMovement aux = UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
-        aux.SetPathAndPlay(Case3Resources.Instance.waypointsToMonitor, Case3Resources.Instance.MonitorLookPoint);
+        aux.SetPathAndPlay(Case3Resources.Instance.waypointsToPhone, Case3Resources.Instance.phoneLookPoint);
         while (aux.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
         }
-        */
+        
 
-        playingAnimation = true;
-        anim = "LookFor";// TODO: "mODIFICAR VOLUMEN";
+
+        anim = "Turn_radio";// TODO: "mODIFICAR VOLUMEN";
         yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject, anim);
-        playingAnimation = false;
+        
 
         if (high)
         {
@@ -656,14 +657,16 @@ public class SpecialCases : MonoBehaviour
         }
 
         //VOLVER DE DONDE ESTE EL MONITOR DEL VOLUMEN
-        /*
+        
         aux = UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
-        aux..ResetPosition();
+        aux.SetPathAndPlay(Case3Resources.Instance.waypointsToPhoneBack, Case3Resources.Instance.endoscopist1LookPoint);
         while (aux.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
         }
-         */
+         
+        playingAnimation = false;
+
     }
 
     IEnumerator Case7D541() //apagar radio ResponsibleNurse
@@ -736,8 +739,9 @@ public class SpecialCases : MonoBehaviour
         playingAnimation = false;
     }
 
-    IEnumerator GoToTableAndGiveTool(string tool, string character = "EndoscopyNurse")
+    IEnumerator GoToTableAndGiveTool(string tool, string character = "EndoscopyNurse", string target = "Endoscopist1")
     {
+        playingAnimation = true;
         //Ir a la mesa
         movementNurse = UI_Manager.Instance.dictionaryCharacteres[character].gameObject.GetComponent<SimpleWaypointMovement>();
         movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToTable1, Case3Resources.Instance.tableLookPoint);
@@ -769,9 +773,9 @@ public class SpecialCases : MonoBehaviour
 
         //le das el inyector al endoescopista
         anim = "Give";
-        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres[character].gameObject, anim, tool);
+        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres[character].gameObject, anim, tool, target);
 
-
+        playingAnimation = false;
 
     }
 
@@ -988,10 +992,13 @@ public class SpecialCases : MonoBehaviour
         movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
         //Case3Resources.Instance.doorAnim.Play();
         movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsExit, Case3Resources.Instance.endoscopist1LookPoint);
+        movementNurse.gameObject.GetComponent<AudioSource>().Play();
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
         }
+        movementNurse.gameObject.GetComponent<AudioSource>().Stop();
+
         playingAnimation = false;
     }
 
@@ -1003,10 +1010,12 @@ public class SpecialCases : MonoBehaviour
         movementNurse = Case3Resources.Instance.nurse.GetComponent<SimpleWaypointMovement>();
         //Case3Resources.Instance.doorAnim.Play();
         movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsEnter, Case3Resources.Instance.endoscopist1LookPoint);
+        movementNurse.gameObject.GetComponent<AudioSource>().Play();
         while (movementNurse.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
         }
+        movementNurse.gameObject.GetComponent<AudioSource>().Stop();
         playingAnimation = false;
     }
 
