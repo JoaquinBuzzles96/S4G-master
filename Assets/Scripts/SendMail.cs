@@ -90,7 +90,6 @@ public class SendMail : MonoBehaviour
         smtpServer.Port = 587;
         smtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;//testing
         //("s4game@viralstudios.es", "[l,=6?U=V,Cd")
-        //("joakilm2@gmail.com", "Quinotec96@")
         smtpServer.Credentials = new System.Net.NetworkCredential("s4game@viralstudios.es", "[l,=6?U=V,Cd") as ICredentialsByHost;
         smtpServer.EnableSsl = true;
 

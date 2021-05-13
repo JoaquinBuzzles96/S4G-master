@@ -248,7 +248,7 @@ public class SpecialCases : MonoBehaviour
             case "D6.1.1":
             case "D6.1.2":
             case "D6.1.3":
-            case "D6.2.1":
+            //case "D6.2.1":
             case "D6.2.2":
             case "D6.2.3":
             case "D6.3.1":
@@ -1080,10 +1080,11 @@ public class SpecialCases : MonoBehaviour
         position = UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject.GetComponent<HandPosition>().endoscopyHandPos;
         SetProp(position, prop);
         //Si ya tiene algo lo quitamos y lo ponemos en la mesa
-        if (currentTool != null && currentTool != "Herramienta" && currentTool != "")
+        if (currentTool != null && currentTool != "Herramienta" && currentTool != "" && currentTool != "Endoscope")
         {
             Case3Resources.Instance.PutInExtraTable(GetProp(currentTool));
         }
+        /*
         currentTool = "Endoscope";
 
         //Debug.Log($"Animacion de darselo a la enfermera");
@@ -1093,7 +1094,7 @@ public class SpecialCases : MonoBehaviour
 
         //Debug.Log($"La enfermera va a la mesa");
         yield return GoToTableAndLeaveObject("Endoscope");
-
+        */
         playingAnimation = false;
     }
 
@@ -1545,7 +1546,7 @@ public class SpecialCases : MonoBehaviour
             position = UI_Manager.Instance.dictionaryCharacteres[target].gameObject.GetComponent<HandPosition>().handPos;
 
             // Si ya tiene algo en la mano ponerlo en la mesa
-            if (target == "Endoscopist1" && currentTool != null && currentTool != "Herramienta" && currentTool != "")
+            if (target == "Endoscopist1" && currentTool != null && currentTool != "Herramienta" && currentTool != "" && currentTool != "Endoscope")
             {
                 Case3Resources.Instance.PutInExtraTable(GetProp(currentTool));
             }

@@ -294,8 +294,9 @@ public class UI_Manager : MonoBehaviour
     {
         originScreen.SetActive(false);
         screen5.SetActive(true);
-        SetUpScreen5(answer);
         PANEL_IMAGE.SetActive(true);
+        SetUpScreen5(answer);
+        
     }
 
     public void OnStartButton()
