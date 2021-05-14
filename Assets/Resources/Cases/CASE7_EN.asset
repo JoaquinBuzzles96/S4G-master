@@ -544,6 +544,9 @@ MonoBehaviour:
   - BaseNodeGuid: e7f33c2d-17b4-4c9f-857d-e8ad9620daa8
     PortName: Dialogue
     TargetNodeGuid: 61ae29e3-b720-491b-bcda-10d64c84ab53
+  - BaseNodeGuid: e7f33c2d-17b4-4c9f-857d-e8ad9620daa8
+    PortName: Situation
+    TargetNodeGuid: 582ed4d3-afa1-493d-9857-059032d0d792
   - BaseNodeGuid: cafdf153-3b16-4c98-b443-0f7f28c77ff9
     PortName: Dialogue
     TargetNodeGuid: b50e185c-9c9a-4dc1-8a60-fa7480f10e1e
@@ -751,6 +754,9 @@ MonoBehaviour:
   - BaseNodeGuid: c4bb3047-6278-417e-a2a4-cd1281b77c97
     PortName: Dialogue
     TargetNodeGuid: 4bb02653-3965-4b7a-92ca-6077216b1c65
+  - BaseNodeGuid: c4bb3047-6278-417e-a2a4-cd1281b77c97
+    PortName: Situation
+    TargetNodeGuid: 582ed4d3-afa1-493d-9857-059032d0d792
   - BaseNodeGuid: 38ca1a5d-cebc-49b7-a178-7fe126fbde7e
     PortName: Dialogue
     TargetNodeGuid: a7d52d54-8039-4006-8f75-429b0bbee04e
@@ -922,12 +928,6 @@ MonoBehaviour:
   - BaseNodeGuid: b5b4adcd-a934-456a-9c9a-32e8785c57c4
     PortName: Dialogue
     TargetNodeGuid: 188f326b-d622-4662-a9f8-caf37d895338
-  - BaseNodeGuid: e7f33c2d-17b4-4c9f-857d-e8ad9620daa8
-    PortName: Situation
-    TargetNodeGuid: 582ed4d3-afa1-493d-9857-059032d0d792
-  - BaseNodeGuid: c4bb3047-6278-417e-a2a4-cd1281b77c97
-    PortName: Situation
-    TargetNodeGuid: 582ed4d3-afa1-493d-9857-059032d0d792
   SituationNodeData:
   - Guid: 36ff957a-4d51-4c5f-aad8-6d3fcf183744
     SituationName: S1B
@@ -2381,7 +2381,7 @@ MonoBehaviour:
       need to call the closest hospital."
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: D1B.2.2
+    audioId: D1B.1.2
     nodeType: 3
     Position: {x: 4468, y: 359}
   - Guid: 3f620098-4aeb-46b0-8c0f-01629bc534fc
@@ -2390,7 +2390,7 @@ MonoBehaviour:
       need to call the closest hospital."
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: D1B.3.1
+    audioId: D1B.1.2
     nodeType: 3
     Position: {x: 3470, y: 684}
   - Guid: 3946060f-b17a-440d-8b33-96ce478454cc
@@ -2399,7 +2399,7 @@ MonoBehaviour:
       need to call the closest hospital."
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: D1B.4.1
+    audioId: D1B.1.2
     nodeType: 3
     Position: {x: 3695, y: 967}
   - Guid: b120fe29-1b39-4588-b3af-f248cc0e1983
@@ -2543,7 +2543,7 @@ MonoBehaviour:
       much longer, because the patient might be at risk.'
     Speaker: Anaesthesiologist
     Mood: Calm
-    audioId: D4B
+    audioId: D4A
     nodeType: 3
     Position: {x: 2525, y: 1550}
   - Guid: 68423c37-5a7d-4267-ac50-8b88b2ce415f
@@ -2647,7 +2647,7 @@ MonoBehaviour:
     DialogueText: We have the stapler!
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: D5.4.2
+    audioId: D5.3.1
     nodeType: 3
     Position: {x: 5476, y: 2127}
   - Guid: 2a520996-6e50-42cd-afff-45024f56a027
@@ -2727,7 +2727,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D9.1.1
+    audioId: D9.3.1
     nodeType: 3
     Position: {x: 3389, y: 2804}
   - Guid: 546c8627-c112-4c58-b0fe-0e2cac83724f
@@ -2743,7 +2743,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D9.2.1
+    audioId: D9.3.1
     nodeType: 3
     Position: {x: 3527, y: 3072}
   - Guid: 73481f4e-b701-4a04-83f4-a6a18384dce0
@@ -2883,7 +2883,7 @@ MonoBehaviour:
     DialogueText: "Great! There\u2019s no leak in the suture! Well done, we are finished."
     Speaker: 'Instrumentalist '
     Mood: Calm
-    audioId: D13A.2.2
+    audioId: D13A.1.1
     nodeType: 3
     Position: {x: 5080, y: 4265}
   - Guid: 97c67f70-55d6-4aaf-9317-94346e21a48b
@@ -2899,15 +2899,15 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D13A.3.3
+    audioId: D9.3.1
     nodeType: 3
     Position: {x: 5234, y: 4550}
   - Guid: 6fb1a180-8c48-4367-8f38-30d7f06bf878
     DialogueName: D13A.2.3
-    DialogueText: ": I\u2019ll suture the skin and then you can recover the patient."
+    DialogueText: "I\u2019ll suture the skin and then you can recover the patient."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D13A.2.3
+    audioId: D13A.1.2
     nodeType: 3
     Position: {x: 5509, y: 4260}
   - Guid: d624d115-8b00-4465-a7dc-f4a113363a3e
@@ -2988,7 +2988,7 @@ MonoBehaviour:
     DialogueText: ' Oh, no! the suture is leaking as the instestine has torn!'
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: D13B.3.2
+    audioId: D13A.3.2
     nodeType: 3
     Position: {x: 7375, y: 4454}
   - Guid: 02cd66cc-67ed-45f8-b8db-8390e35507f5
@@ -2996,7 +2996,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D13B.3.3
+    audioId: D9.3.1
     nodeType: 3
     Position: {x: 7752, y: 4455}
   - Guid: f5bc7eaf-ab35-451f-9072-4284c3030bcd
@@ -3013,7 +3013,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D13B.4.2
+    audioId: D9.3.1
     nodeType: 3
     Position: {x: 7851, y: 4742}
   - Guid: 09af7611-3f6a-4213-805e-03a08337c981
@@ -3024,14 +3024,6 @@ MonoBehaviour:
     audioId: D1A.1
     nodeType: 3
     Position: {x: -210, y: 187}
-  - Guid: 1ccf5775-f21a-42e3-afb7-cd7442aed48a
-    DialogueName: D1A.2
-    DialogueText: " I\u2019m sorry, there is no stapler here."
-    Speaker: Instrumentist
-    Mood: Calm
-    audioId: D1A.2
-    nodeType: 3
-    Position: {x: 68, y: 182}
   - Guid: 4009e591-b71b-4ac1-a935-eb391ca42847
     DialogueName: D13A.2
     DialogueText: "Of course I\u2019m sure, are you doubting about me?"
@@ -3040,22 +3032,6 @@ MonoBehaviour:
     audioId: D13A.2
     nodeType: 3
     Position: {x: 4344, y: 4265}
-  - Guid: 507dadc1-f065-47ae-b1fd-749dea43efef
-    DialogueName: D13A.4.1
-    DialogueText: Oh, no! the suture is leaking as the instestine has torn!
-    Speaker: Instrumentalist
-    Mood: Calm
-    audioId: D13A.4.1
-    nodeType: 3
-    Position: {x: 4565, y: 4823}
-  - Guid: 4c570daf-d34b-4d51-b858-54f5e5c6a442
-    DialogueName: D13A.4.2
-    DialogueText: We have the stapler!
-    Speaker: Responsible nurse
-    Mood: Calm
-    audioId: D13A.4.2
-    nodeType: 3
-    Position: {x: 4924, y: 4829}
   - Guid: 7daf30df-4100-4a71-8e49-fcae7d6b3c4f
     DialogueName: D13A
     DialogueText: "I\u2019m done, let\u2019s check the suture with methylene blue."
@@ -3127,7 +3103,7 @@ MonoBehaviour:
     DialogueText: Oh, no! the suture is leaking as the instestine has torn!
     Speaker: Instrumentalist nurse
     Mood: Calm
-    audioId: D15.3.2
+    audioId: D13A.3.2
     nodeType: 3
     Position: {x: 1825, y: 5679}
   - Guid: bd414572-6d6d-44a4-b94b-4fbd2ec18d9d
@@ -3135,7 +3111,7 @@ MonoBehaviour:
     DialogueText: Oh, no! the suture is leaking as the instestine has torn!
     Speaker: Instrumentalist nurse
     Mood: Calm
-    audioId: D15.4.2
+    audioId: D13A.3.2
     nodeType: 3
     Position: {x: 1804, y: 5937}
   - Guid: baec2e82-43e8-4f61-aa4b-1565271311c9
@@ -3159,7 +3135,7 @@ MonoBehaviour:
     DialogueText: Oh, no! the suture is leaking as the instestine has torn!
     Speaker: Instrumentalist nurse
     Mood: Calm
-    audioId: D15.1.2
+    audioId: D13A.3.2
     nodeType: 3
     Position: {x: 1808, y: 5155}
   - Guid: 0485736f-215e-4131-b171-0af092cc6ec4
@@ -3175,7 +3151,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D9.1.1
+    audioId: D9.3.1
     nodeType: 3
     Position: {x: 2169, y: 5937}
   - Guid: 670dee49-601c-4867-9c8c-12cdf8b94ddf
@@ -3183,7 +3159,7 @@ MonoBehaviour:
     DialogueText: Oh, no! the suture is leaking as the instestine has torn!
     Speaker: Instrumentalist nurse
     Mood: Calm
-    audioId: D15.2.2
+    audioId: D13A.3.2
     nodeType: 3
     Position: {x: 1804, y: 5421}
   - Guid: a02a8acf-0598-4bdc-859b-110b4a4277f4
@@ -3191,7 +3167,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D9.1.1
+    audioId: D9.3.1
     nodeType: 3
     Position: {x: 2157, y: 5417}
   - Guid: 63aa3768-838f-4412-b332-74c98f50fa4d
@@ -3199,7 +3175,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D9.1.1
+    audioId: D9.3.1
     nodeType: 3
     Position: {x: 2174, y: 5154}
   - Guid: 564f8fe5-85b2-4978-aaec-585a030839f2
@@ -3207,7 +3183,7 @@ MonoBehaviour:
     DialogueText: Hurry! We need to solve this!
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D9.1.1
+    audioId: D9.3.1
     nodeType: 3
     Position: {x: 2189, y: 5678}
   - Guid: 9dc44579-6f45-482b-a4d3-df4c5be21e73
@@ -3283,12 +3259,36 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 3
     Position: {x: 1052, y: 2555}
+  - Guid: 507dadc1-f065-47ae-b1fd-749dea43efef
+    DialogueName: D13A.4.1
+    DialogueText: Oh, no! the suture is leaking as the instestine has torn!
+    Speaker: Instrumentalist
+    Mood: Calm
+    audioId: D13A.3.2
+    nodeType: 3
+    Position: {x: 4590, y: 4823}
+  - Guid: 4c570daf-d34b-4d51-b858-54f5e5c6a442
+    DialogueName: D13A.4.2
+    DialogueText: We have the stapler!
+    Speaker: Responsible nurse
+    Mood: Calm
+    audioId: D5.3.1
+    nodeType: 3
+    Position: {x: 5042, y: 4813}
   - Guid: 8e5097a0-d8af-4bc8-a0cf-74999225376f
     DialogueName: D1A.3
     DialogueText: " I\u2019ll go to stockage room, to check if we have one there."
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: D1A.3
+    audioId: D1A3
     nodeType: 3
-    Position: {x: 298, y: 181}
+    Position: {x: 375, y: 186}
+  - Guid: 1ccf5775-f21a-42e3-afb7-cd7442aed48a
+    DialogueName: D1A.2
+    DialogueText: " I\u2019m sorry, there is no stapler here."
+    Speaker: Instrumentist
+    Mood: Calm
+    audioId: D1A.2
+    nodeType: 3
+    Position: {x: 134, y: -77}
   ExposedProperties: []

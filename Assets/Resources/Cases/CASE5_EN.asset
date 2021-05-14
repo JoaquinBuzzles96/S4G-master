@@ -685,12 +685,6 @@ MonoBehaviour:
   - BaseNodeGuid: 596392b2-0e3a-43fb-a8cb-e166f337860b
     PortName: Situation
     TargetNodeGuid: 8873f7e3-dbc0-4927-9929-ad437c2770d8
-  - BaseNodeGuid: a98606e5-ba06-44f8-a611-06f41a42b2a1
-    PortName: Dialogue
-    TargetNodeGuid: 269cb5e9-638c-4484-b77f-b0002d305e73
-  - BaseNodeGuid: a98606e5-ba06-44f8-a611-06f41a42b2a1
-    PortName: Situation
-    TargetNodeGuid: 3dd7506f-94e1-493f-8354-62dc27564e92
   - BaseNodeGuid: c750a9c2-a46c-4a9b-8f86-8a0cb7315c9a
     PortName: Dialogue
     TargetNodeGuid: a678d475-f2fb-423e-8c77-c091fe2ef0c1
@@ -1081,6 +1075,12 @@ MonoBehaviour:
   - BaseNodeGuid: 8c5d5600-2e8b-403a-af9d-ff6e6df7f9b4
     PortName: Dialogue
     TargetNodeGuid: 6212d7e1-1f72-4330-a3d4-5c7da28d21bb
+  - BaseNodeGuid: a98606e5-ba06-44f8-a611-06f41a42b2a1
+    PortName: Dialogue
+    TargetNodeGuid: 269cb5e9-638c-4484-b77f-b0002d305e73
+  - BaseNodeGuid: a98606e5-ba06-44f8-a611-06f41a42b2a1
+    PortName: Situation
+    TargetNodeGuid: 3dd7506f-94e1-493f-8354-62dc27564e92
   - BaseNodeGuid: 2e68eebe-664c-4e89-bbcd-42049931a5d2
     PortName: Dialogue
     TargetNodeGuid: 2dc43f10-d861-4fae-9467-266ff8deda86
@@ -3070,7 +3070,7 @@ MonoBehaviour:
       best solution"
     Speaker: Circulating nurse
     Mood: Calm
-    audioId: D1.1.2
+    audioId: D1.3
     nodeType: 3
     Position: {x: 1050, y: -836}
   - Guid: 5a079ad6-7bf2-4204-bbad-644b8d794497
@@ -3079,7 +3079,7 @@ MonoBehaviour:
       best solution. "
     Speaker: Circulating nurse
     Mood: Calm
-    audioId: D1.2.2
+    audioId: D1.3
     nodeType: 3
     Position: {x: 1005, y: 2704}
   - Guid: c325ebeb-2388-4f35-bbc3-a2e4a8d67d0a
@@ -3088,7 +3088,7 @@ MonoBehaviour:
       best solution"
     Speaker: Circulating nurse
     Mood: Calm
-    audioId: D1.1.2
+    audioId: D1.3
     nodeType: 3
     Position: {x: 1057, y: 449}
   - Guid: e69fd361-17fe-43a0-bc14-e4fb489f4664
@@ -3105,7 +3105,7 @@ MonoBehaviour:
     DialogueText: Calmly let us think together and try to find an adequate solution.
     Speaker: Head Surgeon
     Mood: Calm
-    audioId: Audio id
+    audioId: D2
     nodeType: 3
     Position: {x: 1874, y: 1067}
   - Guid: f1548775-e39b-49ac-b1ca-2b7c42f24f8f
