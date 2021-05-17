@@ -998,7 +998,7 @@ MonoBehaviour:
     Description: "Using x-ray, we could easily rule out whether the swab may have
       remained in the patient. If we can\u2019t find anything we can still search
       on the floor."
-    audioId: D4.1
+    audioId: Q4.1
     speaker: Assistant surgeon
     nodeType: 1
     Position: {x: -322, y: 5505}
@@ -1071,7 +1071,7 @@ MonoBehaviour:
   - Guid: 24504588-f71f-4696-9998-37851bd67159
     QuestionName: Q7
     Description: What do you do?
-    audioId: Audio id
+    audioId: Q1
     speaker: Narrador
     nodeType: 1
     Position: {x: 5112, y: 7070}
@@ -2020,7 +2020,7 @@ MonoBehaviour:
     DialogueText: Of course, why it is always the first that nurses made mistake?
     Speaker: Instrumentalist nurse
     Mood: Angry
-    audioId: D1.2.1
+    audioId: D1.1.4
     nodeType: 3
     Position: {x: 866, y: 982}
   - Guid: 581136ca-a8e3-45da-a1ff-d4c63b41858c
@@ -2028,7 +2028,7 @@ MonoBehaviour:
     DialogueText: "This is the patient\u2019s interest! We can\u2019t take it lightly."
     Speaker: Instrumentalist nurse
     Mood: Angry
-    audioId: D1.2.3
+    audioId: D1.1.3
     nodeType: 3
     Position: {x: 888, y: 1545}
   - Guid: fb213491-ad2c-4a18-a66e-a29478c83ef7
@@ -2084,7 +2084,7 @@ MonoBehaviour:
     DialogueText: Sure, I do my job properly
     Speaker: Instrumentalist nurse
     Mood: Harsh
-    audioId: D1.3.2
+    audioId: D1.1.1
     nodeType: 3
     Position: {x: 894, y: 2559}
   - Guid: 49154685-fb19-4326-bb3d-7c992350f73e
@@ -2093,7 +2093,7 @@ MonoBehaviour:
       best solution. "
     Speaker: Instrumentalist nurse
     Mood: Calm
-    audioId: D1.4.2
+    audioId: D1.2.2
     nodeType: 3
     Position: {x: 884, y: 3908}
   - Guid: b9f81972-6bd6-4b30-83a8-00cb2a0a4ee3
@@ -2101,7 +2101,7 @@ MonoBehaviour:
     DialogueText: "This is the patient\u2019s interest! We can\u2019t take it lightly"
     Speaker: Instrumentalist nurse
     Mood: Angry
-    audioId: D1.4.3
+    audioId: D1.1.3
     nodeType: 3
     Position: {x: 902, y: 4250}
   - Guid: ed9b7e44-21a9-4644-bafe-d0539f960aff
@@ -2118,7 +2118,7 @@ MonoBehaviour:
     DialogueText: Of course, why it is always the first that nurses made mistake?
     Speaker: Instrumentalist nurse
     Mood: Angry
-    audioId: D1.3.4
+    audioId: D1.1.4
     nodeType: 3
     Position: {x: 900, y: 3164}
   - Guid: 470da3ca-b789-4c97-ab78-c6d77c9b7da6
@@ -2151,7 +2151,7 @@ MonoBehaviour:
     DialogueText: With this attitude we will not solve anything.
     Speaker: Urologist
     Mood: Calm
-    audioId: D2.3.1
+    audioId: D2.2.1
     nodeType: 3
     Position: {x: 3789, y: 2272}
   - Guid: 1d62997e-4177-48d1-8b9e-287ccb6971c8
@@ -2256,7 +2256,7 @@ MonoBehaviour:
     DialogueText: "This is the patient\u2019s interest! We can\u2019t take it lightly"
     Speaker: Instrumentalist nurse
     Mood: Angry
-    audioId: D2.3.3
+    audioId: D1.1.3
     nodeType: 3
     Position: {x: 3812, y: 2908}
   - Guid: 63273831-110d-4c95-89a9-690b576bf089
@@ -2265,7 +2265,7 @@ MonoBehaviour:
       best solution"
     Speaker: Instrumentalist nurse
     Mood: Calm
-    audioId: D2.3.2
+    audioId: D1.2.2
     nodeType: 3
     Position: {x: 3780, y: 2611}
   - Guid: 18d4ea7d-cacd-444f-a192-90efce9f3516
@@ -2290,7 +2290,7 @@ MonoBehaviour:
     DialogueText: This is not my responsibility.
     Speaker: Anesthesist
     Mood: Calm
-    audioId: D3.3.3
+    audioId: D3.1.3
     nodeType: 3
     Position: {x: 6064, y: 2964}
   - Guid: 2c6ca751-80b1-4ecd-b86e-168a888ed96b
@@ -2363,7 +2363,7 @@ MonoBehaviour:
     DialogueText: This is not my responsibility.
     Speaker: Anaesthesist
     Mood: Calm
-    audioId: D3.2.3
+    audioId: D3.1.3
     nodeType: 3
     Position: {x: 6120, y: 1700}
   - Guid: d77569e4-fa98-465d-a323-e8714c65b06f
@@ -2516,17 +2516,9 @@ MonoBehaviour:
     DialogueText: Finally!
     Speaker: Assistant surgeon
     Mood: Bored
-    audioId: D6.4.2
+    audioId: D6.1
     nodeType: 3
     Position: {x: 4315, y: 8036}
-  - Guid: 07fffd98-5443-4c99-96ed-bb191ea3b019
-    DialogueName: D6.4.3
-    DialogueText: They always give me a job!
-    Speaker: Circulating nurse
-    Mood: Calm
-    audioId: D6.4.3
-    nodeType: 3
-    Position: {x: 4334, y: 8330}
   - Guid: 70e7aa29-ed30-490a-bfc9-3192dc180cd1
     DialogueName: D4.1.1
     DialogueText: I am afraid, we have to make decisions soon, because the patient
@@ -2743,4 +2735,12 @@ MonoBehaviour:
     audioId: D7
     nodeType: 3
     Position: {x: 4896, y: 6779}
+  - Guid: 07fffd98-5443-4c99-96ed-bb191ea3b019
+    DialogueName: D6.4.3
+    DialogueText: They always give me a job!
+    Speaker: Circulating nurse
+    Mood: Calm
+    audioId: D6.1.3
+    nodeType: 3
+    Position: {x: 4334, y: 8330}
   ExposedProperties: []

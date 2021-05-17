@@ -880,15 +880,9 @@ MonoBehaviour:
   - BaseNodeGuid: 09af7611-3f6a-4213-805e-03a08337c981
     PortName: Dialogue
     TargetNodeGuid: 1ccf5775-f21a-42e3-afb7-cd7442aed48a
-  - BaseNodeGuid: 1ccf5775-f21a-42e3-afb7-cd7442aed48a
-    PortName: Dialogue
-    TargetNodeGuid: 8e5097a0-d8af-4bc8-a0cf-74999225376f
   - BaseNodeGuid: 4009e591-b71b-4ac1-a935-eb391ca42847
     PortName: Dialogue
     TargetNodeGuid: 3769729a-2ae6-4d26-beb8-443678ad8fc7
-  - BaseNodeGuid: 507dadc1-f065-47ae-b1fd-749dea43efef
-    PortName: Dialogue
-    TargetNodeGuid: 4c570daf-d34b-4d51-b858-54f5e5c6a442
   - BaseNodeGuid: 055858b6-1da1-416a-95e4-2aaa72923437
     PortName: Dialogue
     TargetNodeGuid: 2d93c662-6647-4f68-a927-3dce0ddc8a81
@@ -928,6 +922,12 @@ MonoBehaviour:
   - BaseNodeGuid: b5b4adcd-a934-456a-9c9a-32e8785c57c4
     PortName: Dialogue
     TargetNodeGuid: 188f326b-d622-4662-a9f8-caf37d895338
+  - BaseNodeGuid: 507dadc1-f065-47ae-b1fd-749dea43efef
+    PortName: Dialogue
+    TargetNodeGuid: 4c570daf-d34b-4d51-b858-54f5e5c6a442
+  - BaseNodeGuid: 1ccf5775-f21a-42e3-afb7-cd7442aed48a
+    PortName: Dialogue
+    TargetNodeGuid: 8e5097a0-d8af-4bc8-a0cf-74999225376f
   SituationNodeData:
   - Guid: 36ff957a-4d51-4c5f-aad8-6d3fcf183744
     SituationName: S1B
@@ -2286,7 +2286,7 @@ MonoBehaviour:
     DialogueText: "Well, this all about the surgeons\u2019 work\u2026"
     Speaker: Camera assistant
     Mood: Calm
-    audioId: D12B.0
+    audioId: D12A.0
     nodeType: 3
     Position: {x: 2552, y: 4120}
   - Guid: 36362a07-99ce-46cf-bfb7-ea45f4db25d8
@@ -2671,7 +2671,7 @@ MonoBehaviour:
     DialogueText: We have the stapler!
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: D8.2.1
+    audioId: D8.1.1
     nodeType: 3
     Position: {x: 2045, y: 3036}
   - Guid: 39c61742-811e-412f-99b7-0ea11dd71b4c
@@ -2687,7 +2687,7 @@ MonoBehaviour:
     DialogueText: We have the stapler!
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: D8.4.1
+    audioId: D8.1.1
     nodeType: 3
     Position: {x: 2069, y: 3605}
   - Guid: 3bfc6a8d-fe85-4b8c-b086-f03261f593df
@@ -2695,7 +2695,7 @@ MonoBehaviour:
     DialogueText: We have the stapler!
     Speaker: Responsible nurse
     Mood: Calm
-    audioId: D8.3.1
+    audioId: D8.1.1
     nodeType: 3
     Position: {x: 2081, y: 3331}
   - Guid: 89f0cc0f-dfe1-4db7-9354-2af2b67e4fd7
@@ -2817,7 +2817,7 @@ MonoBehaviour:
     DialogueText: "Everything is going ok, we\u2019re doing a great teamwork"
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: D12B
+    audioId: D12A
     nodeType: 3
     Position: {x: 2193, y: 4120}
   - Guid: 3dc1e2ba-2f31-4fbc-9e89-ba388d7b7492
@@ -2825,7 +2825,7 @@ MonoBehaviour:
     DialogueText: Teamwork is important, but technical skills are way more important.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D12B.1
+    audioId: D12A.1
     nodeType: 3
     Position: {x: 3102, y: 3942}
   - Guid: 33b07d5d-66e5-40c6-aa77-700054d677f2
@@ -2833,7 +2833,7 @@ MonoBehaviour:
     DialogueText: "This is teamwok, despite not everybody thinks the same\u2026"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D12B.2
+    audioId: D12A.2
     nodeType: 3
     Position: {x: 3078, y: 4237}
   - Guid: 9e78312f-300b-4706-b16d-5ad1479de108
@@ -2842,7 +2842,7 @@ MonoBehaviour:
       not make it.'
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D12B.3
+    audioId: D12A.3
     nodeType: 3
     Position: {x: 3065, y: 4516}
   - Guid: 14f39c1a-86f7-4f1f-a875-2e7fa82d9565
@@ -2850,7 +2850,7 @@ MonoBehaviour:
     DialogueText: "Of course! It\u2019s all on me, I\u2019m doing all the work."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D12B.4
+    audioId: D12A.4
     nodeType: 3
     Position: {x: 3082, y: 4810}
   - Guid: 1347faf7-b20c-45d0-9e31-0ec32e0ae4fb
@@ -2916,7 +2916,7 @@ MonoBehaviour:
       good job."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D13B.1
+    audioId: D13A.1
     nodeType: 3
     Position: {x: 6808, y: 3896}
   - Guid: 67872a85-d1ed-4c5c-9438-0c7caacbbf57
@@ -2924,7 +2924,7 @@ MonoBehaviour:
     DialogueText: "Well, I\u2019m just saying I would do another suture\u2026"
     Speaker: Camera assistant
     Mood: Calm
-    audioId: D13B.3.1
+    audioId: D13A.3.1
     nodeType: 3
     Position: {x: 7027, y: 4453}
   - Guid: 4fe903a0-b470-4b7c-b3b1-b82aff7ed699
@@ -2932,7 +2932,7 @@ MonoBehaviour:
     DialogueText: I know who to do my job.
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D13B.3
+    audioId: D13A.3
     nodeType: 3
     Position: {x: 6824, y: 4451}
   - Guid: 61400b25-182b-48e7-b4fa-434cf9692703
@@ -2940,7 +2940,7 @@ MonoBehaviour:
     DialogueText: " I\u2019m done, let\u2019s check the suture with methylene blue."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D13B
+    audioId: D13A
     nodeType: 3
     Position: {x: 6088, y: 4051}
   - Guid: e13a1a82-a2df-4a3c-8306-95256f18176f
@@ -2948,7 +2948,7 @@ MonoBehaviour:
     DialogueText: "Of course I\u2019m sure, are you doubting about me?"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D13B.2
+    audioId: D13A.2
     nodeType: 3
     Position: {x: 6816, y: 4170}
   - Guid: d78fa642-a8ab-4a7f-9876-cfdae6213c74
@@ -2956,7 +2956,7 @@ MonoBehaviour:
     DialogueText: "Great! There\u2019s no leak in the suture! Well done, we are finished."
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: D13B.1.1
+    audioId: D13A.1.1
     nodeType: 3
     Position: {x: 7257, y: 3896}
   - Guid: ec55a562-73b2-4412-8c59-aa53f93d56ce
@@ -2964,7 +2964,7 @@ MonoBehaviour:
     DialogueText: " I\u2019m not sure, apparently, it\u2019s ok"
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D13B.4
+    audioId: D13A.4
     nodeType: 3
     Position: {x: 6815, y: 4751}
   - Guid: 24a6aa64-5df3-46ba-89da-484ffa752ece
@@ -2972,7 +2972,7 @@ MonoBehaviour:
     DialogueText: "I\u2019ll suture the skin and then you can recover the patient."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D13B.1.2
+    audioId: D13A.1.2
     nodeType: 3
     Position: {x: 7681, y: 3899}
   - Guid: 188f326b-d622-4662-a9f8-caf37d895338
@@ -2980,7 +2980,7 @@ MonoBehaviour:
     DialogueText: "I\u2019ll suture the skin and then you can recover the patient."
     Speaker: Main surgeon
     Mood: Calm
-    audioId: D13B.2.3
+    audioId: D13A.2.3
     nodeType: 3
     Position: {x: 7987, y: 4179}
   - Guid: 0c50cafa-6cfe-4d2a-a9da-d886035d17d8
@@ -3215,7 +3215,7 @@ MonoBehaviour:
     DialogueText: "It\u2019s not about doubting, but I would do another suture\u2026"
     Speaker: Camera assistant
     Mood: Calm
-    audioId: D13B.2.1
+    audioId: D13A.2.1
     nodeType: 3
     Position: {x: 7158, y: 4169}
   - Guid: b5b4adcd-a934-456a-9c9a-32e8785c57c4
@@ -3223,7 +3223,7 @@ MonoBehaviour:
     DialogueText: "Great! There\u2019s no leak in the suture! Well done, we are finished."
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: D13B.2.2
+    audioId: D13A.2.2
     nodeType: 3
     Position: {x: 7551, y: 4176}
   - Guid: 7acb1620-52de-41e8-be8b-378c76ff14cc
@@ -3232,7 +3232,7 @@ MonoBehaviour:
       knot."
     Speaker: Camera assistant
     Mood: Calm
-    audioId: Audio id
+    audioId: D10
     nodeType: 3
     Position: {x: 3823, y: 3067}
   - Guid: ee4d7b6b-ba98-423d-83e4-013ae2475b61
@@ -3240,7 +3240,7 @@ MonoBehaviour:
     DialogueText: Great!, Shall I open the stapler?
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D6
     nodeType: 3
     Position: {x: 5935, y: 1446}
   - Guid: cd48a87c-08ba-41e0-abdb-744e5c0cfbc8
@@ -3248,7 +3248,7 @@ MonoBehaviour:
     DialogueText: Great! How are we solving the complication? Shall I open the stapler?
     Speaker: Instrumentalist
     Mood: Calm
-    audioId: Audio id
+    audioId: D9
     nodeType: 3
     Position: {x: 2417, y: 2928}
   - Guid: 7266fa11-89b5-4352-a629-5d96d09dbe82
@@ -3256,7 +3256,7 @@ MonoBehaviour:
     DialogueText: The patient is unstable; we need to finish within 10 minutes.
     Speaker: Anaesthesiologist
     Mood: Calm
-    audioId: Audio id
+    audioId: D8
     nodeType: 3
     Position: {x: 1052, y: 2555}
   - Guid: 507dadc1-f065-47ae-b1fd-749dea43efef
