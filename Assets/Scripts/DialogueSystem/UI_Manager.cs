@@ -117,6 +117,9 @@ public class UI_Manager : MonoBehaviour
     }
     void Start()
     {
+        //Testing
+        //SendMail.Instance.SaveCSV("example testing");
+        //End testing
         playedSituationsList = new List<string>();
         GetDialogueContainerLanguage();
         SetUpCharacrteres();
@@ -378,7 +381,7 @@ public class UI_Manager : MonoBehaviour
 
     }
 
-    public string GetAudioPath(string _audio)
+    public string GetAudioPath(string _audio) //TODO: Esta ruta no la esta pillando en las builds
     {
         //string path = $"Audio/Case5_EN/{_audio}";
         string path = $"Audio/Case5_EN/Audio1"; //default value

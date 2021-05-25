@@ -71,6 +71,10 @@ public class SendMail : MonoBehaviour
 
     public void SendEmail()
     {
+        string text = "Name: " + m_UserName + " Correo: " + m_UserMail + UI_Manager.Instance.playereRoute;
+        //A parte de enviar el email, vamos a almacenar la informacion en un fichero de salida
+        SaveCSV(text);
+
         MailMessage mail = new MailMessage();
         mail.From = new MailAddress("s4game@viralstudios.es");
         mail.To.Add(m_UserMail);
@@ -98,6 +102,40 @@ public class SendMail : MonoBehaviour
         { return true; };
         Debug.Log($"Enviamos el mail con el feedback al correo {m_UserMail}");
         smtpServer.Send(mail);
+    }
+
+    public void SaveCSV(string text)
+    {
+        
+
+        //string path = "Assets/Resources/ficheroPrueba.txt";
+        string path = Application.persistentDataPath + "/ficheroPrueba.txt";
+
+        Debug.Log($"VAMOS A GUARDAR EL CSV en ({path})");
+
+        TextWriter tw = new StreamWriter(path, true);
+        //DateTime.Now
+        // Write a line of text to the file
+        tw.WriteLine($"-------------------- {System.DateTime.Now} --------------------");//Ejemplo {System.DateTime.Now}
+        tw.WriteLine(text);
+
+        // Close the stream
+        tw.Close();
+
+        /*
+        //DEBUG
+        StreamReader reader = new StreamReader(path);
+        Debug.Log(reader.ReadToEnd());
+        reader.Close();
+
+        */
+        /*
+         * Add text at the end: File.AppendAllText("date.txt", DateTime.Now.ToString());
+         * Add a new line: File.AppendAllText("date.txt", DateTime.Now.ToString() + Environment.NewLine);
+         * Open it to edit(in theory): TextWriter tw = new StreamWriter("date.txt", true);
+         */
+
+
     }
 
     public void testEmail()
