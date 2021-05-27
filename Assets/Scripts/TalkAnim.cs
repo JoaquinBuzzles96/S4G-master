@@ -8,6 +8,8 @@ public class TalkAnim : MonoBehaviour
     public TextMeshProUGUI text;
     public Color colorBlink = Color.green;
     public float speed;
+
+
     public void Start()
     {
         //StartCoroutine(ToGreen());

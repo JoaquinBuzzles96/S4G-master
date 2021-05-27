@@ -389,7 +389,8 @@ public class UI_Manager : MonoBehaviour
         {
             if (isValid(LanguageManager.Instance.languageSelected))
             {
-                path = $"Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}";
+                //path = $"Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}";
+                path = $"Audio/{caso}_EN/{_audio}";
             }
             else
             {
@@ -451,7 +452,8 @@ public class UI_Manager : MonoBehaviour
         {
             Debug.Log($"El Languague manager no es nulo, contiene es caso: {LanguageManager.Instance.caseSelected} y languague {LanguageManager.Instance.languageSelected}");
             caso = LanguageManager.Instance.caseSelected;
-            path = Application.streamingAssetsPath + $"/Resources/Cases/{caso}_{LanguageManager.Instance.languageSelected}";
+            //path = Application.streamingAssetsPath + $"/Resources/Cases/{caso}_{LanguageManager.Instance.languageSelected}";
+            path = Application.streamingAssetsPath + $"/Resources/Cases/{caso}_EN";
 
             //Este valor se asigna para mas adelante utilizar unos eventos y animaciones especificas u otras
             switch (caso)
