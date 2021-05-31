@@ -71,7 +71,25 @@ public class SendMail : MonoBehaviour
 
     public void SendEmail()
     {
-        string text = "Name: " + m_UserName + " Correo: " + m_UserMail + UI_Manager.Instance.playereRoute;
+
+        string version = "Desktop";
+
+#if UNITY_ANDROID //PLATFORM_ANDROID
+            version = "VR";
+#endif
+
+        string text = 
+            " ----- VERSION " + version + " -----" +
+            " Name: " + m_UserName + 
+            "\n Correo: " + m_UserMail +
+            "\n Case: " + LanguageManager.Instance.caseSelected + 
+            "\n Languague: " + LanguageManager.Instance.languageSelected + 
+            "\n Total time: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds." + 
+            "\n Total score:" + UI_Manager.Instance.totalScore + 
+            "\n Total decisions:" + UI_Manager.Instance.totalDecisions + 
+            "\n Correct decisions:" + UI_Manager.Instance.totalCorrectAnswers +
+            UI_Manager.Instance.playereRoute;        
+
         //A parte de enviar el email, vamos a almacenar la informacion en un fichero de salida
         SaveCSV(text);
 
@@ -88,7 +106,7 @@ public class SendMail : MonoBehaviour
             UI_Manager.Instance.playereRoute = "\n Testing";
         }
 
-        mail.Body = "Name: " + m_UserName + " Correo: " + m_UserMail + UI_Manager.Instance.playereRoute;
+        mail.Body = text;
 
         SmtpClient smtpServer = new SmtpClient("mail.viralstudios.es");//mail.viralstudios.es//"smtp.gmail.com"
         smtpServer.Port = 587;
@@ -117,6 +135,9 @@ public class SendMail : MonoBehaviour
         //DateTime.Now
         // Write a line of text to the file
         tw.WriteLine($"-------------------- {System.DateTime.Now} --------------------");//Ejemplo {System.DateTime.Now}
+
+
+
         tw.WriteLine(text);
 
         // Close the stream

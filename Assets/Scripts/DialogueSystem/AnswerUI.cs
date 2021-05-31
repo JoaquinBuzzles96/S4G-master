@@ -60,8 +60,13 @@ public class AnswerUI : MonoBehaviour
 
     public void OnSelectAnswer()
     {
+        UI_Manager.Instance.totalDecisions++;
+        if (answerData.IsCorrect)
+        {
+            UI_Manager.Instance.totalCorrectAnswers++;
+        }
         QuestionUI.Instance.arrowBlink.ResetValues();
-        UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + "\n" + "Time to answer: " + Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) + " seconds.\n");
+        UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + "\n" + "Time to answer: " + Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) + " seconds.\n Score: " + answerData.score+ "\n");
         UI_Manager.Instance.totalScore += answerData.score;
         //UI_Manager.Instance.screen2.GetComponent<QuestionUI>().answered = true;
 
