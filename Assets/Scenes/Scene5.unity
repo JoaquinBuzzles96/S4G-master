@@ -7439,9 +7439,7 @@ PrefabInstance:
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_text
-      value: 'Nurse
-
-        Anaesthesist'
+      value: "Anaesthetic\n Nurse"
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
@@ -7518,7 +7516,7 @@ PrefabInstance:
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
@@ -8657,6 +8655,8 @@ MonoBehaviour:
   enfermeraDeAnestesia: {fileID: 0}
   playereRoute: 
   totalScore: 0
+  totalCorrectAnswers: 0
+  totalDecisions: 0
   lastTime: 0
   cameraPositionFirstPerson: {fileID: 0}
   cameraPositionThirdPerson: {fileID: 0}
@@ -12515,6 +12515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 186885448}
+  endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 0}
 --- !u!1 &995018582
 GameObject:
@@ -13784,6 +13785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 264368687}
+  endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 1176209060}
 --- !u!114 &1002434502
 MonoBehaviour:
@@ -14815,6 +14817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 2104863081}
+  endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 1176209060}
 --- !u!1 &1061776443
 GameObject:
@@ -17795,6 +17798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 1221315604}
+  endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 1176209060}
 --- !u!114 &1299746478
 MonoBehaviour:
@@ -17858,6 +17862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 1332472566}
+  endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 0}
 --- !u!114 &1311706543
 MonoBehaviour:
@@ -17897,7 +17902,7 @@ PrefabInstance:
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_text
-      value: Head Surgeon
+      value: Chief Surgeon
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
@@ -17995,7 +18000,7 @@ PrefabInstance:
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
@@ -19721,6 +19726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 1066604453}
+  endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 931784206}
 --- !u!114 &1514574619
 MonoBehaviour:
@@ -28592,6 +28598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 695072904973043008}
+  endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 0}
 --- !u!114 &695072905239795779
 MonoBehaviour:
@@ -29550,6 +29557,8 @@ MonoBehaviour:
   enfermeraDeAnestesia: {fileID: 1311706541}
   playereRoute: 
   totalScore: 0
+  totalCorrectAnswers: 0
+  totalDecisions: 0
   lastTime: 0
   cameraPositionFirstPerson: {fileID: 1939349098}
   cameraPositionThirdPerson: {fileID: 522978912}

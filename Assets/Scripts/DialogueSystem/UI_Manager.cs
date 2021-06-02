@@ -1298,4 +1298,25 @@ public class UI_Manager : MonoBehaviour
         return found;
     }
 
+    public string CorrectSpeaker(string speaker)
+    {
+
+        switch (speaker)
+        {
+            case "Head Surgeon":
+                return "Chief Surgeon";
+            case "Main Surgeon":
+                return "Chief Surgeon";
+            case "Camera Assistant":
+                return "Assistant Surgeon";
+            case "Nurse Anaesthetist":
+                return "Anaesthetic Nurse";
+            case "Student":
+                return "Medical Student";
+        }
+
+        //Si no encuentra ninguno de los anteriores se devuelve el mismo nombre
+        return speaker;
+    }
+
 }

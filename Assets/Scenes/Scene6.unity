@@ -7952,9 +7952,7 @@ PrefabInstance:
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_text
-      value: 'Head
-
-        Surgeon'
+      value: Chief Surgeon
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
@@ -8004,22 +8002,22 @@ PrefabInstance:
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
@@ -8040,7 +8038,7 @@ PrefabInstance:
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
@@ -14406,6 +14404,8 @@ MonoBehaviour:
   enfermeraDeAnestesia: {fileID: 0}
   playereRoute: 
   totalScore: 0
+  totalCorrectAnswers: 0
+  totalDecisions: 0
   lastTime: 0
   cameraPositionFirstPerson: {fileID: 0}
   cameraPositionThirdPerson: {fileID: 0}
@@ -45549,6 +45549,8 @@ MonoBehaviour:
   enfermeraDeAnestesia: {fileID: 1311706541}
   playereRoute: 
   totalScore: 0
+  totalCorrectAnswers: 0
+  totalDecisions: 0
   lastTime: 0
   cameraPositionFirstPerson: {fileID: 1939349098}
   cameraPositionThirdPerson: {fileID: 522978912}

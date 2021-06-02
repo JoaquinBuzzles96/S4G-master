@@ -78,8 +78,8 @@ public class SendMail : MonoBehaviour
             version = "VR";
 #endif
 
-        string text = 
-            " ----- VERSION " + version + " -----" +
+        string text =
+            " --------------- VERSION " + version + "(" + System.DateTime.Now + ") ---------------" +
             " Name: " + m_UserName + 
             "\n Correo: " + m_UserMail +
             "\n Case: " + LanguageManager.Instance.caseSelected + 
@@ -134,7 +134,7 @@ public class SendMail : MonoBehaviour
         TextWriter tw = new StreamWriter(path, true);
         //DateTime.Now
         // Write a line of text to the file
-        tw.WriteLine($"-------------------- {System.DateTime.Now} --------------------");//Ejemplo {System.DateTime.Now}
+        //tw.WriteLine($"-------------------- {System.DateTime.Now} --------------------");//Ejemplo {System.DateTime.Now}
 
 
 
