@@ -67,11 +67,11 @@ public class LanguageManager : MonoBehaviour
         if (languageSelected != "EN")
         {
             //Reset lists:
-            List<DialogueDataBean> case3LanguageData = new List<DialogueDataBean>(); //metemos las situaciones, questions y dialogues en el mismo saco
-            List<DialogueDataBean> case5LanguageData = new List<DialogueDataBean>();
-            List<DialogueDataBean> case6LanguageData = new List<DialogueDataBean>();
-            List<DialogueDataBean> case7LanguageData = new List<DialogueDataBean>();
-            List<DialogueDataBean> case9LanguageData = new List<DialogueDataBean>();
+            case3LanguageData = new List<DialogueDataBean>(); //metemos las situaciones, questions y dialogues en el mismo saco
+            case5LanguageData = new List<DialogueDataBean>();
+            case6LanguageData = new List<DialogueDataBean>();
+            case7LanguageData = new List<DialogueDataBean>();
+            case9LanguageData = new List<DialogueDataBean>();
 
             /* if (languageSelected != "EN")
              {
@@ -151,7 +151,7 @@ public class LanguageManager : MonoBehaviour
             }
         }
 
-        return dialogueNodeData.Speaker;
+        return UI_Manager.Instance.CorrectSpeaker(dialogueNodeData.Speaker);
     }
 
     public string GetDialogueText(DialogueNodeData dialogueNodeData)

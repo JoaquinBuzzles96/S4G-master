@@ -320,6 +320,7 @@ public class UI_Manager : MonoBehaviour
 
         screen2.GetComponent<QuestionUI>().questionData = questions[currentQuestion];
         screen2.GetComponent<QuestionUI>().SetupQuestion(false);
+        LanguageManager.Instance.UpdateLanguage();
         lastQuestion = currentQuestion;
     }
 
