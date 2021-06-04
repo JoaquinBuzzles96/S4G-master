@@ -1,117 +1,117 @@
-CASE7;S1A;NARRADOR;Todos los miembros del equipo están en sus puestos, el cirujano principal ha completado con éxito la sección del estómago, así que es el momento de comenzar la anastomosis yeyuno-yeyunal de lado a lado. En este momento, el cirujano principal pide una grapadora dorada de 45 mm y la Instrumentalista y la enfermera responsable se dan cuenta de que no queda ninguna.;
-CASE7;D1A.1;Surgeon;"Dame la grapadora dorada de 45 mm, por favor.			";
-CASE7;D1A.2;Instrumentalist;"Lo siento, no quedan grapas.			";
-CASE7;D1A.3;Circulating nurse;"Voy a ir a la sala de material, para comprobar si quedan ahí.		";
-CASE7;D1A.1.1;Main surgeon;"Bueno, tenemos que superar este imprevisto.		";
-CASE7;D1A.1.1.1;Circulating nurse;"Lo siento, pero no quedan. Para conseguir una, tendríamos que llamar al hospital más cercano.		 	";
-CASE7;D1A.1.2;Main surgeon;"¿Cómo puede ser? ¿No sabes hacer tu trabajo?			";
-CASE7;D1A.1.3;Main surgeon;"Genial, ahora tengo otro problema que resolver, como si no fuera suficiente con atender al paciente...			";
-CASE7;D1A.1.4;Main surgeon;"¡No es posible trabajar con este equipo!			";
-CASE7;D1B;Instrumentalist;"No vuelvas a hablarnos así, puede que seas el cirujano, pero eso no te permite tratarnos así				";
-CASE7;D1B.1;Main surgeon;"Sí, cierto, pero no es la primera vez que ocurre. Para las próximas intervenciones, asegúraos de que todo el material esté disponible antes de comenzar el procedimiento.			";
-CASE7;D1B.1.1;Instrumentalist;"Tiene razón, pero nos equivocamos en el número de referencia.				";
-CASE7;D1B.1.2;Circulating nurse;Lo siento, pero no hay ninguno. Para conseguir uno, tendríamos que llamar al hospital más cercano.;
-CASE7;D1B.2;Main surgeon;"Tienes razón, he perdido los nervios, pero no es la primera vez que ocurre. Hay que asegurarse de que todo el material está disponible antes de iniciar el procedimiento.			  	";
-CASE7;D1B.2.1;Instrumentalist;"Lo comprobaremos dos veces a partir de ahora.		";
-CASE7;D1B.3;Main surgeon;"Bueno, esa es tu opinión...		";
-CASE7;D1B.4;main surgeon;"Puede que tengas razón, pero este es mi quirófano y no podemos continuar.		";
-CASE7;D1B.4.2;main surgeon;"¡Llama inmediatamente y consigue las grapas cuanto antes!		";
-CASE7;D2;Instrumentalist;"¿Qué hacemos ahora? ¿Continuamos o pedimos las grapas en el otro hospital?		";
-CASE7;D2.1;main surgeon;"Continuemos, usaré una negra extra gruesa.				";
-CASE7;D2.2;main surgeon;"Continuemos por laparoscopia, procederé con una sutura manual.		";
-CASE7;D2.3;main surgeon;"Continuemos, pasaremos a cirugía abierta y procederemos con una sutura manual.			";
-CASE7;D2.4;main surgeon;"¡No podemos continuar! ¡Llama inmediatamente y consigue las grapas lo antes posible!				";
-CASE7;D3;Instrumentalist;"Bien. Pero, ¿llamamos para pedir grapas igualmente?				";
-CASE7;D3.1;main surgeon;"¿No te has enterado? ¡Continuamos!				";
-CASE7;D3.2;main surgeon;"Buen punto. Por favor, haz la llamada y trae las grapas mientras trabajamos, por si acaso.			";
-CASE7;D3.3;main surgeon;"¿Por qué cuestionas mis decisiones? ¡Yo soy el que decide!		";
-CASE7;D3.4;main surgeon;"¿Por qué?			";
-CASE7;D3.4.1;Instrumentalist;"Creo que no tenemos nada que perder si las pedimos, por si acaso las necesitamos más adelante.		 	";
-CASE7;D3.4.2;main surgeon;"Si, me parecede buena idea. Por favor, haz la llamada.		";
-CASE7;D4A;anaesthesiologist;"Sólo puedo decir que el reloj está corriendo, y no podemos esperar mucho más, porque el paciente podría estar en riesgo.		 	";
-CASE7;D4A.1;main surgeon;"Ya lo he decidido, y nos apegaremos a ello. Por favor, vigilad al paciente.	";
-CASE7;D4A.1.1;Circulating nurse;"Esto es un trabajo en equipo, y todos jugamos un papel aquí.		";
-CASE7;D4A.2;main surgeon;"Es cierto, pero he tomado una decisión.			";
-CASE7;D4A.3;main surgeon;"Claro, haré todo lo posible para terminar lo antes posible.		 	";
-CASE7;D4A.4;main surgeon;"No te preocupes, sé cómo hacer mi trabajo y terminaremos pronto.				";
-CASE7;D4A.4.1;anaesthesiologist;"Eso espero...				";
-CASE7;D4B.1;main surgeon;"Claro, haré todo lo que pueda para terminar lo antes posible.			 	";
-CASE7;D4B.2;main surgeon;"No te preocupes, sé cómo hacer mi trabajo y terminaremos pronto.				";
-CASE7;D4B.3;main surgeon;"Así es, mantengamos la concentración.			 	";
-CASE7;D4B.4;main surgeon;"Estoy seguro de que puedes hacer tu trabajo y mantener al paciente vivo.			";
-CASE7;D5;anaesthesiologist;No me parece apropiado;" no puedo oír las alarmas.				"
-CASE7;D5.1;main surgeon;"¿Por qué no subes el volumen de los monitores?			";
-CASE7;D5.2;main surgeon;"No te preocupes, bajaremos el volumen de la radio 			";
-CASE7;D5.2.1;main surgeon;"Por favor, bájalo.			";
-CASE7;D5.3;main surgeon;"Podría subir el volumen para oírlo mejor				";
-CASE7;D5.3.1;Circulating nurse;"¡Tenemos la grapadora!			";
-CASE7;D5.4;main surgeon;"Es cierto, no me he dado cuenta.			";
-CASE7;D5.4.1;main surgeon;"Por favor, apáguela.			 	";
-CASE7;D6;Instrumentalist;"¡Genial! ¿Abro la grapadora?				";
-CASE7;D6.1;main surgeon;"Por supuesto.			";
-CASE7;D6.2;main surgeon;"Sí, por favor.			";
-CASE7;D6.3;main surgeon;"Lo estoy esperando.			";
-CASE7;D6.4;main surgeon;"¿Tu qué crees?				";
-CASE7;D7;main surgeon;"Gracias, la grapadora ya está correctamente colocada.			";
-CASE7;D7.1;main surgeon;"Enhorabuena a todos, hemos terminado con éxito un paciente complicado.				";
-CASE7;D7.2;main surgeon;"Por fin, no quiero que esto se repita.			";
-CASE7;D7.3;main surgeon;"Bien hecho, pero para la próxima vez, tenemos que aprender de los errores.				";
-CASE7;D7.4;main surgeon;"Genial, pero esta es la última vez que trabajo con este equipo.	 	";
-CASE7;END1;NARRADOR;"El procedimiento termina con éxito				";
-CASE7;D8;anaesthesiologist;El paciente está inestable;" tenemos que acabar en 10 minutos.				"
-CASE7;D8.1;main surgeon;"Ok			";
-CASE7;D8.2;main surgeon;"Lo sé, pero no puedo trabajar más rápido, ¡esto es mucha presión!		";
-CASE7;D8.3;main surgeon;"Tus comentarios me ponen más presión de la que ya tengo.				";
-CASE7;D8.4;main surgeon;"Es cierto, hay que darse prisa, pero no tardaremos mucho.			";
-CASE7;D9;Instrumentalist;"¡Genial! ¿Cómo resolvemos la complicación? ¿Abro la grapadora?			";
-CASE7;D9.1;main surgeon;"No puedo usarla ahora, ¡es demasiado tarde para ello!	";
-CASE7;D9.1.1;anaesthesiologist;"¡Deprisa! ¡Necesitamos resolver esto!				";
-CASE7;D9.2;main surgeon;"Date prisa, tenemos que controlar esto antes de que el paciente muera.				";
-CASE7;D9.3;main surgeon;"No molestes, ya casi termino.			 	";
-CASE7;D9.4;main surgeon;"Sí, lo más rápido posible.			";
-CASE7;END2;NARRADOR;"El paciente muere				";
-CASE7;D10;assistant surgeon;"¿Estás seguro? Nunca te he visto realizar un nudo intracorpóreo.			";
-CASE7;D10.1;main surgeon;"Hace poco hice un curso sobre esto. Pero de todos modos, pide la grapadora, por si acaso.		";
-CASE7;D10.2;main surgeon;"He hecho un curso sobre esto hace poco.				";
-CASE7;D10.3;main surgeon;"¿Estás cuestionando mis habilidades?		";
-CASE7;D10.4;main surgeon;"¿Me estás tomando el pelo?				";
-CASE7;D11A;main surgeon;"Estamos teniendo complicaciones, necesitamos una sutura manual de refuerzo.			";
-CASE7;Q11A;assistant surgeon;"Pensé que tenías más experiencia en esto...				";
-CASE7;D11A.1;main surgeon;"Métete en tus asuntos y déjame trabajar en paz.			";
-CASE7;D11A.2;main surgeon;"Este es un paciente complicado y pueden surgir complicaciones.			 	";
-CASE7;D11A.3;main surgeon;"Esto es lo mejor que puedo hacer con este equipo.			";
-CASE7;D11A.4;main surgeon;"Tenemos que trabajar en equipo para superar la situación.			 	";
-CASE7;D12A;Instrumentalist;"todo va bien, estamos haciendo un gran trabajo en equipo				";
-CASE7;D12A.0;assistant surgeon;"bueno, todo esto se trata del trabajo de los cirujanos...			";
-CASE7;D12A.1;main surgeon;"El trabajo en equipo es importante, pero las habilidades técnicas son mucho más importantes.		 	";
-CASE7;D12A.2;main surgeon;"Esto es trabajo en equipo, a pesar de que no todos piensan igual...			";
-CASE7;D12A.3;main surgeon;"Esto es definitivamente un trabajo en equipo, de lo contrario un solo cirujano no podría lograrlo.			";
-CASE7;D12A.4;main surgeon;"¡Claro que sí! Todo depende de mí, estoy haciendo todo el trabajo.			";
-CASE7;D13A;main surgeon;"He terminado, vamos a comprobar la sutura con metileno azul.			";
-CASE7;Q13A;assistant surgeon;"¿Estás seguro de que la sutura de refuerzo es suficiente?			";
-CASE7;D13A.1;main surgeon;"Gracias por preocuparte, pero creo que es suficiente ya que hicimos un buen trabajo.				";
-CASE7;D13A.1.1;Instrumentalist;"¡Muy bien! ¡No hay ninguna fuga en la sutura! Bien hecho, hemos terminado.				";
-CASE7;D13A.1.2;main surgeon;" Voy a suturar la piel y luego puedes recuperar al paciente.		 	";
-CASE7;D13A.2;main surgeon;"Por supuesto que estoy seguro, ¿dudas de mí?			";
-CASE7;D13A.2.1;assistant surgeon;"No se trata de dudar, pero yo haría otra sutura...				";
-CASE7;D13A.3;main surgeon;"Se como hacer mi trabajo.			";
-CASE7;D13A.3.1;assistant surgeon;"Bueno, sólo digo que haría otra sutura...			";
-CASE7;D13A.3.2;Instrumentalist;"¡Oh, no! ¡La sutura está goteando porque el intestino se ha desgarrado!			";
-CASE7;D13A.4;main surgeon;"No estoy seguro, aparentemente, está bien.				";
-CASE7;D13B.4.1;Instrumentalist;"¡Oh, no! ¡La sutura está goteando ya que el instestino se ha desgarrado! Deberíamos haber pedido la grapadora cuando nos dimos cuenta de que faltaba.			";
-CASE7;D15.1;anaesthesiologist;Esto punta mal;" estamos perdiendo al paciente.				"
-CASE7;D15.2;main surgeon;"Estoy trabajando en ello!				";
-CASE7;D15.3;Instrumentalist;"Deberíamos  haber pedido la grapa...			";
-CASE7;D15.4;assistant surgeon;"Lo ves? Tenía razón... No sé porque has hecho esto sin suficiente experiencia.			";
-CASE7;D15.1.1;main surgeon;"¡Cállate y trabaja!			";
-CASE7;D15.1.3;main surgeon;"¡Rápido! ¡Tenemos que solucionar esto!				";
-CASE7;D15.2.1;main surgeon;"¡Sí al menos tuviera un mejor equipo!			";
-CASE7;D15.3.1;main surgeon;"¿Qué es esto? ¿El patio de un colegio?				";
-CASE7;D15.4.1;main surgeon;Todo el mundo, por favor, centraos en el trabajo.;
-CASE7;D8.1.1;Circulating nurse;¡Tenemos la grapadora!;
-CASE7;D9.3.1;main surgeon;¡Deprisa! ¡Necesitamos resolver esto!;
-CASE7;D11B;main surgeon;Tenemos complicaciones, necesitamos una sutura manual de refuerzo.;
-CASE7;D11B.1;main surgeon;Métete en tus asuntos y déjame trabajar en paz.;
-CASE7;D11B.2;main surgeon;Se trata de un paciente complicado y pueden surgir complicaciones.;
-CASE7;D11B.3;main surgeon;Esto es lo mejor que puedo hacer con este equipo.;
-CASE7;D11B.4;main surgeon;Tenemos que trabajar en equipo para superar la situación.;
+CASE7;S1A;NARRADOR;Todos los miembros del equipo están en sus puestos, el cirujano principal ha completado con éxito la sección del estómago, así que es el momento de comenzar la anastomosis yeyuno-yeyunal de lado a lado. En este momento, el cirujano principal pide una grapadora dorada de 45 mm y la Instrumentistaa y la enfermera responsable se dan cuenta de que no queda ninguna.
+CASE7;D1A.1;Surgeon;Dame la grapadora dorada de 45 mm, por favor.
+CASE7;D1A.2;Instrumentista;Lo siento, no quedan grapas.
+CASE7;D1A.3;Enfermera responsable;Voy a ir a la sala de material, para comprobar si quedan ahí.
+CASE7;D1A.1.1;Cirujano principal;Bueno, tenemos que superar este imprevisto.
+CASE7;D1A.1.1.1;Enfermera responsable;Lo siento, pero no quedan. Para conseguir una, tendríamos que llamar al hospital más cercano.
+CASE7;D1A.1.2;Cirujano principal;¿Cómo puede ser? ¿No sabes hacer tu trabajo?
+CASE7;D1A.1.3;Cirujano principal;Genial, ahora tengo otro problema que resolver, como si no fuera suficiente con atender al paciente...
+CASE7;D1A.1.4;Cirujano principal;¡No es posible trabajar con este equipo!
+CASE7;D1B;Instrumentista;No vuelvas a hablarnos así, puede que seas el cirujano, pero eso no te permite tratarnos así	
+CASE7;D1B.1;Cirujano principal;Sí, cierto, pero no es la primera vez que ocurre. Para las próximas intervenciones, asegúraos de que todo el material esté disponible antes de comenzar el procedimiento.
+CASE7;D1B.1.1;Instrumentista;Tiene razón, pero nos equivocamos en el número de referencia.	
+CASE7;D1B.1.2;Enfermera responsable;Lo siento, pero no hay ninguno. Para conseguir uno, tendríamos que llamar al hospital más cercano.;
+CASE7;D1B.2;Cirujano principal;Tienes razón, he perdido los nervios, pero no es la primera vez que ocurre. Hay que asegurarse de que todo el material está disponible antes de iniciar el procedimiento.
+CASE7;D1B.2.1;Instrumentista;Lo comprobaremos dos veces a partir de ahora.
+CASE7;D1B.3;Cirujano principal;Bueno, esa es tu opinión...
+CASE7;D1B.4;Cirujano principal;Puede que tengas razón, pero este es mi quirófano y no podemos continuar.
+CASE7;D1B.4.2;Cirujano principal;¡Llama inmediatamente y consigue las grapas cuanto antes!
+CASE7;D2;Instrumentista;¿Qué hacemos ahora? ¿Continuamos o pedimos las grapas en el otro hospital?
+CASE7;D2.1;Cirujano principal;Continuemos, usaré una negra extra gruesa.	
+CASE7;D2.2;Cirujano principal;Continuemos por laparoscopia, procederé con una sutura manual.
+CASE7;D2.3;Cirujano principal;Continuemos, pasaremos a cirugía abierta y procederemos con una sutura manual.
+CASE7;D2.4;Cirujano principal;¡No podemos continuar! ¡Llama inmediatamente y consigue las grapas lo antes posible!	
+CASE7;D3;Instrumentista;Bien. Pero, ¿llamamos para pedir grapas igualmente?	
+CASE7;D3.1;Cirujano principal;¿No te has enterado? ¡Continuamos!	
+CASE7;D3.2;Cirujano principal;Buen punto. Por favor, haz la llamada y trae las grapas mientras trabajamos, por si acaso.
+CASE7;D3.3;Cirujano principal;¿Por qué cuestionas mis decisiones? ¡Yo soy el que decide!
+CASE7;D3.4;Cirujano principal;¿Por qué?
+CASE7;D3.4.1;Instrumentista;Creo que no tenemos nada que perder si las pedimos, por si acaso las necesitamos más adelante.
+CASE7;D3.4.2;Cirujano principal;Si, me parecede buena idea. Por favor, haz la llamada.
+CASE7;D4A;Anestesiólogo;Sólo puedo decir que el reloj está corriendo, y no podemos esperar mucho más, porque el paciente podría estar en riesgo.
+CASE7;D4A.1;Cirujano principal;Ya lo he decidido, y nos apegaremos a ello. Por favor, vigilad al paciente.
+CASE7;D4A.1.1;Enfermera responsable;Esto es un trabajo en equipo, y todos jugamos un papel aquí.
+CASE7;D4A.2;Cirujano principal;Es cierto, pero he tomado una decisión.
+CASE7;D4A.3;Cirujano principal;Claro, haré todo lo posible para terminar lo antes posible.
+CASE7;D4A.4;Cirujano principal;No te preocupes, sé cómo hacer mi trabajo y terminaremos pronto.	
+CASE7;D4A.4.1;Anestesiólogo;Eso espero...	
+CASE7;D4B.1;Cirujano principal;Claro, haré todo lo que pueda para terminar lo antes posible.	
+CASE7;D4B.2;Cirujano principal;No te preocupes, sé cómo hacer mi trabajo y terminaremos pronto.	
+CASE7;D4B.3;Cirujano principal;Así es, mantengamos la concentración.	
+CASE7;D4B.4;Cirujano principal;Estoy seguro de que puedes hacer tu trabajo y mantener al paciente vivo.
+CASE7;D5;Anestesiólogo;No me parece apropiado; no puedo oír las alarmas.
+CASE7;D5.1;Cirujano principal;¿Por qué no subes el volumen de los monitores?
+CASE7;D5.2;Cirujano principal;No te preocupes, bajaremos el volumen de la radio 
+CASE7;D5.2.1;Cirujano principal;Por favor, bájalo.
+CASE7;D5.3;Cirujano principal;Podría subir el volumen para oírlo mejor	
+CASE7;D5.3.1;Enfermera responsable;¡Tenemos la grapadora!
+CASE7;D5.4;Cirujano principal;Es cierto, no me he dado cuenta.
+CASE7;D5.4.1;Cirujano principal;Por favor, apáguela.	
+CASE7;D6;Instrumentista;¡Genial! ¿Abro la grapadora?	
+CASE7;D6.1;Cirujano principal;Por supuesto.
+CASE7;D6.2;Cirujano principal;Sí, por favor.
+CASE7;D6.3;Cirujano principal;Lo estoy esperando.
+CASE7;D6.4;Cirujano principal;¿Tu qué crees?	
+CASE7;D7;Cirujano principal;Gracias, la grapadora ya está correctamente colocada.
+CASE7;D7.1;Cirujano principal;Enhorabuena a todos, hemos terminado con éxito un paciente complicado.	
+CASE7;D7.2;Cirujano principal;Por fin, no quiero que esto se repita.
+CASE7;D7.3;Cirujano principal;Bien hecho, pero para la próxima vez, tenemos que aprender de los errores.	
+CASE7;D7.4;Cirujano principal;Genial, pero esta es la última vez que trabajo con este equipo.
+CASE7;END1;NARRADOR;El procedimiento termina con éxito	
+CASE7;D8;Anestesiólogo;El paciente está inestable; tenemos que acabar en 10 minutos.
+CASE7;D8.1;Cirujano principal;Ok
+CASE7;D8.2;Cirujano principal;Lo sé, pero no puedo trabajar más rápido, ¡esto es mucha presión!
+CASE7;D8.3;Cirujano principal;Tus comentarios me ponen más presión de la que ya tengo.	
+CASE7;D8.4;Cirujano principal;Es cierto, hay que darse prisa, pero no tardaremos mucho.
+CASE7;D9;Instrumentista;¡Genial! ¿Cómo resolvemos la complicación? ¿Abro la grapadora?
+CASE7;D9.1;Cirujano principal;No puedo usarla ahora, ¡es demasiado tarde para ello!
+CASE7;D9.1.1;Anestesiólogo;¡Deprisa! ¡Necesitamos resolver esto!	
+CASE7;D9.2;Cirujano principal;Date prisa, tenemos que controlar esto antes de que el paciente muera.	
+CASE7;D9.3;Cirujano principal;No molestes, ya casi termino.	
+CASE7;D9.4;Cirujano principal;Sí, lo más rápido posible.
+CASE7;END2;NARRADOR;El paciente muere	
+CASE7;D10;Asistente de cámara;¿Estás seguro? Nunca te he visto realizar un nudo intracorpóreo.
+CASE7;D10.1;Cirujano principal;Hace poco hice un curso sobre esto. Pero de todos modos, pide la grapadora, por si acaso.
+CASE7;D10.2;Cirujano principal;He hecho un curso sobre esto hace poco.	
+CASE7;D10.3;Cirujano principal;¿Estás cuestionando mis habilidades?
+CASE7;D10.4;Cirujano principal;¿Me estás tomando el pelo?	
+CASE7;D11A;Cirujano principal;Estamos teniendo complicaciones, necesitamos una sutura manual de refuerzo.
+CASE7;Q11A;Asistente de cámara;Pensé que tenías más experiencia en esto...	
+CASE7;D11A.1;Cirujano principal;Métete en tus asuntos y déjame trabajar en paz.
+CASE7;D11A.2;Cirujano principal;Este es un paciente complicado y pueden surgir complicaciones.	
+CASE7;D11A.3;Cirujano principal;Esto es lo mejor que puedo hacer con este equipo.
+CASE7;D11A.4;Cirujano principal;Tenemos que trabajar en equipo para superar la situación.	
+CASE7;D12A;Instrumentista;todo va bien, estamos haciendo un gran trabajo en equipo	
+CASE7;D12A.0;Asistente de cámara;bueno, todo esto se trata del trabajo de los cirujanos...
+CASE7;D12A.1;Cirujano principal;El trabajo en equipo es importante, pero las habilidades técnicas son mucho más importantes.
+CASE7;D12A.2;Cirujano principal;Esto es trabajo en equipo, a pesar de que no todos piensan igual...
+CASE7;D12A.3;Cirujano principal;Esto es definitivamente un trabajo en equipo, de lo contrario un solo cirujano no podría lograrlo.
+CASE7;D12A.4;Cirujano principal;¡Claro que sí! Todo depende de mí, estoy haciendo todo el trabajo.
+CASE7;D13A;Cirujano principal;He terminado, vamos a comprobar la sutura con metileno azul.
+CASE7;Q13A;Asistente de cámara;¿Estás seguro de que la sutura de refuerzo es suficiente?
+CASE7;D13A.1;Cirujano principal;Gracias por preocuparte, pero creo que es suficiente ya que hicimos un buen trabajo.	
+CASE7;D13A.1.1;Instrumentista;¡Muy bien! ¡No hay ninguna fuga en la sutura! Bien hecho, hemos terminado.	
+CASE7;D13A.1.2;Cirujano principal; Voy a suturar la piel y luego puedes recuperar al paciente.
+CASE7;D13A.2;Cirujano principal;Por supuesto que estoy seguro, ¿dudas de mí?
+CASE7;D13A.2.1;Asistente de cámara;No se trata de dudar, pero yo haría otra sutura...	
+CASE7;D13A.3;Cirujano principal;Se como hacer mi trabajo.
+CASE7;D13A.3.1;Asistente de cámara;Bueno, sólo digo que haría otra sutura...
+CASE7;D13A.3.2;Instrumentista;¡Oh, no! ¡La sutura está goteando porque el intestino se ha desgarrado!
+CASE7;D13A.4;Cirujano principal;No estoy seguro, aparentemente, está bien.	
+CASE7;D13B.4.1;Instrumentista;¡Oh, no! ¡La sutura está goteando ya que el instestino se ha desgarrado! Deberíamos haber pedido la grapadora cuando nos dimos cuenta de que faltaba.
+CASE7;D15.1;Anestesiólogo;Esto punta mal; estamos perdiendo al paciente.
+CASE7;D15.2;Cirujano principal;Estoy trabajando en ello!	
+CASE7;D15.3;Instrumentista;Deberíamos  haber pedido la grapa...
+CASE7;D15.4;Asistente de cámara;Lo ves? Tenía razón... No sé porque has hecho esto sin suficiente experiencia.
+CASE7;D15.1.1;Cirujano principal;¡Cállate y trabaja!
+CASE7;D15.1.3;Cirujano principal;¡Rápido! ¡Tenemos que solucionar esto!	
+CASE7;D15.2.1;Cirujano principal;¡Sí al menos tuviera un mejor equipo!
+CASE7;D15.3.1;Cirujano principal;¿Qué es esto? ¿El patio de un colegio?	
+CASE7;D15.4.1;Cirujano principal;Todo el mundo, por favor, centraos en el trabajo.
+CASE7;D8.1.1;Enfermera responsable;¡Tenemos la grapadora!
+CASE7;D9.3.1;Cirujano principal;¡Deprisa! ¡Necesitamos resolver esto!
+CASE7;D11B;Cirujano principal;Tenemos complicaciones, necesitamos una sutura manual de refuerzo.
+CASE7;D11B.1;Cirujano principal;Métete en tus asuntos y déjame trabajar en paz.
+CASE7;D11B.2;Cirujano principal;Se trata de un paciente complicado y pueden surgir complicaciones.
+CASE7;D11B.3;Cirujano principal;Esto es lo mejor que puedo hacer con este equipo.
+CASE7;D11B.4;Cirujano principal;Tenemos que trabajar en equipo para superar la situación.
