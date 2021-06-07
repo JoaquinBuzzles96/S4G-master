@@ -603,7 +603,7 @@ public class SpecialCases : MonoBehaviour
 
         //VOLVER DE DONDE ESTE EL TELEFONO
         aux = UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject.GetComponent<SimpleWaypointMovement>();
-        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToPhoneBack, Case3Resources.Instance.endoscopist1LookPoint);
+        movementNurse.SetPathAndPlay(Case3Resources.Instance.waypointsToPhoneBack, Case3Resources.Instance.endoscopist1LookPoint); //TODO: AQUI PETA
         while (aux.canMove)
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false

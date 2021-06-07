@@ -68,6 +68,10 @@ public class AnswerUI : MonoBehaviour
         QuestionUI.Instance.arrowBlink.ResetValues();
         UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + "\n" + "Time to answer: " + Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) + " seconds.\n Score: " + answerData.score+ "\n");
         UI_Manager.Instance.totalScore += answerData.score;
+
+        //Desactivamos la animacion del que hace la pregunta
+        UI_Manager.Instance.DisableCurrentSpeaker();
+
         //UI_Manager.Instance.screen2.GetComponent<QuestionUI>().answered = true;
 
         UI_Manager.Instance.ToScreen4(answerData, UI_Manager.Instance.screen3);

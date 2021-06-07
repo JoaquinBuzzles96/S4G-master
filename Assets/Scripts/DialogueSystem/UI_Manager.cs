@@ -73,6 +73,7 @@ public class UI_Manager : MonoBehaviour
 
     int lastQuestion;
     int currentQuestion;
+    string currentSpeaker;
 
     List<string> playedSituationsList;
 
@@ -123,6 +124,7 @@ public class UI_Manager : MonoBehaviour
         //SendMail.Instance.SaveCSV("example testing");
         //End testing
         playedSituationsList = new List<string>();
+        currentSpeaker = "";
         GetDialogueContainerLanguage();
         SetUpCharacrteres();
         lastQuestion = -1;
@@ -1063,6 +1065,8 @@ public class UI_Manager : MonoBehaviour
             speaker = Translate(speaker);
         }
 
+        currentSpeaker = speaker;
+
         if (nextButton != null)
         {
             yield return new WaitForSeconds(PlayAudioOnSpeaker(audio, speaker, "Calm"));
@@ -1298,6 +1302,18 @@ public class UI_Manager : MonoBehaviour
         }
 
         return found;
+    }
+
+    public void DisableCurrentSpeaker()
+    {
+        if (currentSpeaker != null && currentSpeaker != "Narrator")
+        {
+            if (dictionaryCharacteres.ContainsKey(Translate(currentSpeaker)))
+            {
+                dictionaryCharacteres[Translate(currentSpeaker)].SetBool("animFinished", true);
+                SetColorName(0f, Translate(currentSpeaker), dictionaryCharacteres[currentSpeaker], Color.green);
+            }
+        }
     }
 
     public string CorrectSpeaker(string speaker)
