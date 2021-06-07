@@ -399,7 +399,7 @@ public class UI_Manager : MonoBehaviour
             }
             else
             {
-                Debug.Log("No se ha encontrado el audio por lo que asignamos uno por defecto");
+                Debug.Log(" 1 - No se ha encontrado el audio por lo que asignamos uno por defecto--> " + $"Audio/{caso}_EN/{_audio}");
                 path = $"Audio/Case5_EN/Audio1";
             }
             //#if PLATFORM_ANDROID
@@ -411,7 +411,7 @@ public class UI_Manager : MonoBehaviour
         }
         else
         {
-            Debug.Log("No se ha encontrado el audio por lo que asignamos uno por defecto");
+            Debug.Log("2- No se ha encontrado el audio por lo que asignamos uno por defecto No se ha encontrado --> " + $"Audio/{caso}_EN/{_audio}");
             path = $"Audio/Case5_EN/Audio1";
         }
 
@@ -525,7 +525,8 @@ public class UI_Manager : MonoBehaviour
         var casesArray = Resources.LoadAll("Cases", typeof(DialogueContainer));
         //Debug.Log("Se han obtenido los siguientes casos:");
         contextDescription.text = "Si estas viendo esto es que el caso no ha cargado bien, ve al UI_MANAGER";
-        string casePath = $"{caso}_{LanguageManager.Instance.languageSelected}";
+        string casePath = $"{caso}_EN";
+        //string casePath = $"{caso}_{LanguageManager.Instance.languageSelected}";
         foreach (var item in casesArray)
         {
             //Debug.Log($"{item.name}");
