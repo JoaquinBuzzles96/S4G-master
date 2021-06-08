@@ -2,7 +2,9 @@ CASE6;D1;NARRADOR;A un paciente de 46 años se le programa un trasplante de riñón
 CASE6;Q1.1;Cirujano asistente;¿Tan solo una? ¡Debe estar en algún lado!
 CASE6;D1.1.1;Instrumentista nurse;Imposible, ¡he hecho mi trabajo de forma adecuada!
 CASE6;D1.2.4;Instrumentista nurse;Imposible, ¡he hecho mi trabajo de forma adecuada!
+CASE6;D1.3.2;Instrumentista nurse;Seguro, ¡he hecho mi trabajo de forma adecuada!
 CASE6;D1.1.2;Instrumentista nurse;Seguro, tenemos que solventar el problema juntos.
+CASE6;D1.3.1;Instrumentista nurse;Seguro, tenemos que solventar el problema juntos.
 CASE6;D1.1.3;Instrumentista nurse;Es primordial para el paciente. No podemos tomarlo a la ligera.
 CASE6;D1.2.3;Instrumentista nurse;Es primordial para el paciente. No podemos tomarlo a la ligera.
 CASE6;D1.4.3;Instrumentista nurse;Es primordial para el paciente. No podemos tomarlo a la ligera.
@@ -43,6 +45,8 @@ CASE6;Q3.1;Urólogo;¡Respira profundamente! Hay que encontrarlo cuanto antes.
 CASE6;D3.1.1;Instrumentista nurse;Mantened la calma. Irritados no podemos solventar nada.
 CASE6;D3.1.2;Cirujano asistente;No te preocupes, todo saldrá bien. Pero para estar seguro vamos a observar el abdomen.
 CASE6;D3.1.3;Anestesiólogo;Eso no es mi responsabilidad.
+CASE6;D3.2.3;Anestesiólogo;Eso no es mi responsabilidad.
+CASE6;D3.3.3;Anestesiólogo;Eso no es mi responsabilidad.
 CASE6;D3.1.4;Cirujano asistente;¡No es mi responabilidad! Pero deberíamos hacer algo.
 CASE6;Q3.2;Enfermera circulante;Esto no es la primera vez que ocurre, al final siempre siempre lo hemos podido encontrar.
 CASE6;D3.2.1;Urólogo;Tal vez, se quedó dentro del abdomen...
@@ -71,7 +75,8 @@ CASE6;Q5.3;Anestesiólogo;Me temo que tenemos que tomar decisiones pronto, porque
 CASE6;D5.3.1;Urólogo;Daremos lo mejor.
 CASE6;D5.3.2;Cirujano asistente;Es tu trabajo resolverlo.
 CASE6;D6;Urólogo;Ambas incisiones están casi cerradas, reabrirlas sería una gran carga para el paciente. No podemos comprometer la seguridad de los pacientes, por favor tome la radiografía.
-CASE6;Q6.1;Urólogo;¿A que viene esta actitud? ¿Tienes alguna idea mejor?
+CASE6;D6.1;Urólogo;¿A que viene esta actitud? ¿Tienes alguna idea mejor?
+CASE6;Q6.1;Enfermera circulante;¡Finalmente!
 CASE6;D6.1.1;Anestesiólogo;Era el momento de hacerlo.
 CASE6;Q6.2;Urólogo;Encontremos la mejor solución.
 CASE6;D6.2.1;To review - This dialogue does not seem to make sense in the context of this Case.;Yo haré los rayos X.
@@ -82,7 +87,7 @@ CASE6;D7;Urólogo;La radiografía no encontró nada, según esto, el hisopo no está 
 CASE6;D7.1;Cirujano asistente;Esto ha sido lo mejor que podíamos hacer.
 CASE6;D7.2;Enfermera circulante;Inforamaré al siguiente equipo sobre la decisión.
 CASE6;D7.3;To review - This dialogue does not seem to make sense in the context of this Case.;La enfermera a cargo del equipo es la circulante. Ella organizará al equipo.
-CASE6;D7.4;"Anestesiólogo- Correction (Spanish) - ""pereparaé"" to ""prepararé""";Estoy de acuerdo, prepararé al paciente para que se despierte.
+CASE6;D7.4;"Anestesiólogo;Estoy de acuerdo, prepararé al paciente para que se despierte.
 CASE6;END;NARRADOR;El equipo terminó la cirugía, el paciente se despertó y se le informó de la falta de un hisopo. Esto también se anotó en el diario quirúrgico con todo detalle. Durante los 4 días siguientes, el estado del paciente era estable, estaba ingresado en una habitación estéril, sus heridas cicatrizaban bien y no había signos de rechazo del injerto, ni inflamación, ni posible fiebre. Todos los viernes se limpiaba y desinfectaba completamente el bloque quirúrgico, lo que se hacía por la tarde, al final del programa quirúrgico. Para una higiene adecuada, se movía el equipo, incluidas las mesas de operaciones. Cuando se hizo esto, el hisopo que faltaba salió de debajo de las patas de la mesa de operaciones. Probablemente, durante la cirugía, el hisopo se cayó y alguien lo pateó accidentalmente bajo la mesa de operaciones.
 CASE6;D3.4.1;Urólogo;Mantengamos la calma. Si estamos irritados, no se puede resolver nada.
 CASE6;Q6.3;Instrumentista Nurse;¡No puedo creer que se haya quedado dentro del paciente!
