@@ -25,7 +25,7 @@ public class SendMail : MonoBehaviour
     }
 
     [System.NonSerialized]
-    public string m_UserName = "Usuario Default"; //default value
+    public string m_UserName = "Default User"; //default value
     [System.NonSerialized]
     public string m_UserMail = "s4game@viralstudios.es"; //default value
 
