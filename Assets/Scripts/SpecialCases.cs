@@ -482,7 +482,7 @@ public class SpecialCases : MonoBehaviour
         }
 
         //ANIMACION DE CONTAR TOALLAS
-        anim = "Pointing"; //TODO: Cambiar por la de count cuando este metida en el animator
+        anim = "Pointing"; 
         yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["InstrumentalistNurse"].gameObject, anim);
 
 
