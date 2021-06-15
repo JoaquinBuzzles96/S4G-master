@@ -127,7 +127,7 @@ public class SendMail : MonoBehaviour
         
 
         //string path = "Assets/Resources/ficheroPrueba.txt";
-        string path = Application.persistentDataPath + "/ficheroPrueba.txt";
+        string path = Application.persistentDataPath + "/S4GDataFile.txt";
 
         Debug.Log($"VAMOS A GUARDAR EL CSV en ({path})");
 

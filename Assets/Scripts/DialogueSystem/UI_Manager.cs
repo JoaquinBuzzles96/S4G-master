@@ -810,7 +810,7 @@ public class UI_Manager : MonoBehaviour
         }
         if (answer == null) //default feedback
         {
-            string feedback = "Your reaction time was too long. During medical procedures, the soft skills should be at appropriate level not to interfere significantly with the flow of the main medical procedure (hard skills). The game is over. Please try it again.";
+            string feedback = GetDefaultFeedback();
             feedbackText.text = $"{feedback} \n Score: {totalScore}";
             //Add feedback to email
             //AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
@@ -819,14 +819,17 @@ public class UI_Manager : MonoBehaviour
         }
         else
         {
-            if (isValid(answer.Feedback))
+            //TODO: Obtener este feedback traducido
+            string feedbackTranslated = LanguageManager.Instance.GetFeedback(answer);
+            if (isValid(feedbackTranslated))
             {
                 StartCoroutine(PlaySimpleDialogue(answer.audioId, nextButtonFeedback));
             }
-            feedbackText.text = $"{answer.Feedback} \n Score: {totalScore}";
+            
+            feedbackText.text = $"{feedbackTranslated} \n Score: {totalScore}";
             //Add feedback to email
             AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
-            AddTextToRoute($"Feedback: {answer.Feedback}");
+            AddTextToRoute($"Feedback: {feedbackTranslated}");
             AddTextToRoute($"Final score: {totalScore}");
 
         }
@@ -839,6 +842,23 @@ public class UI_Manager : MonoBehaviour
         SendMail.Instance.SendEmail();
 
         ExitButton.SetActive(true);
+    }
+
+    public string GetDefaultFeedback()
+    {
+        switch (LanguageManager.Instance.languageSelected)
+        {
+            case "ES":
+                return "Su tiempo de reacción fue demasiado largo. Durante los procedimientos médicos, las habilidades transversales deben estar a un nivel adecuado para no interferir significativamente con el flujo del procedimiento médico principal. El juego ha terminado. Por favor, inténtalo de nuevo.";
+            case "CZ":
+                return "Vaše reakční doba byla příliš dlouhá. Během lékařských zákroků by měkké dovednosti měly být na odpovídající úrovni, aby výrazně nenarušovaly průběh hlavního lékařského zákroku . Hra je u konce. Zkuste to prosím znovu.";
+            case "PT":
+                return "O seu tempo de reacção foi demasiado longo. Durante os procedimentos médicos, as competências transversais devem estar ao nível adequado para não interferir significativamente com o fluxo do procedimento médico principal . O jogo acabou. Por favor, tente novamente.";
+            case "HU":
+                return "A reakcióideje túl hosszú volt. Az orvosi eljárások során a puha készségeknek megfelelő szinten kell lenniük, hogy ne zavarják jelentősen a fő orvosi eljárás menetét . A játéknak vége. Kérem, próbálja meg újra.";
+        }
+        //Si no es ninguno de los anteriores lo devolvemos en ingles
+        return "Your reaction time was too long. During medical procedures, the soft skills should be at appropriate level not to interfere significantly with the flow of the main medical procedure (hard skills). The game is over. Please try it again.";
     }
 
     private bool CheckMoreDialogues(List<DialogueNodeData> dialoguesData, List<TextMeshProUGUI> dialoguesUI, GameObject nextButton)

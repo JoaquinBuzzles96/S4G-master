@@ -78,19 +78,21 @@ CASE6;D6;Urólogo;Ambas incisiones están casi cerradas, reabrirlas sería una gran
 CASE6;D6.1;Urólogo;¿A que viene esta actitud? ¿Tienes alguna idea mejor?
 CASE6;Q6.1;Enfermera circulante;¡Finalmente!
 CASE6;D6.1.1;Anestesiólogo;Era el momento de hacerlo.
-CASE6;Q6.2;Urólogo;Encontremos la mejor solución.
-CASE6;D6.2.1;To review - This dialogue does not seem to make sense in the context of this Case.;Yo haré los rayos X.
-CASE6;D6.3.1;Cirujano asistente;¡Al fin!
+CASE6;Q6.2;Urólogo;Llamare a la enfermera circulante para que nos ayude. //Encontremos la mejor solución.//
+CASE6;Q6.3;Enfermera circulante;¡No puedo creer que este dentro del paciente!
+CASE6;D6.2.1;Enfermera circulante;Yo haré los rayos X.
+CASE6;D6.3.1;Cirujano asistente;Es fácilmente posible//¡Al fin!
 CASE6;Q6.4;Anestesiólogo;Estoy de acuerdo contigo.
 CASE6;D6.4.1;Instrumentista nurse;Era la mejor opción.
+CASE6;D6.4.2;Cirujano asistente;¡Por fin!
+CASE6;D6.4.3;Instrumentista nurse;¡Siempre me dan trabajo!
 CASE6;D7;Urólogo;La radiografía no encontró nada, según esto, el hisopo no está en el abdomen. Hicimos todo lo que pudimos. Tenemos que escribir lo sucedido en el diario quirúrgico y también informar al paciente.
 CASE6;D7.1;Cirujano asistente;Esto ha sido lo mejor que podíamos hacer.
 CASE6;D7.2;Enfermera circulante;Inforamaré al siguiente equipo sobre la decisión.
-CASE6;D7.3;To review - This dialogue does not seem to make sense in the context of this Case.;La enfermera a cargo del equipo es la circulante. Ella organizará al equipo.
-CASE6;D7.4;"Anestesiólogo;Estoy de acuerdo, prepararé al paciente para que se despierte.
+CASE6;D7.3;Cirujano asistente;La enfermera a cargo del equipo es la circulante. Ella organizará al equipo.
+CASE6;D7.4;Anestesiólogo;Estoy de acuerdo, prepararé al paciente para que se despierte.
 CASE6;END;NARRADOR;El equipo terminó la cirugía, el paciente se despertó y se le informó de la falta de un hisopo. Esto también se anotó en el diario quirúrgico con todo detalle. Durante los 4 días siguientes, el estado del paciente era estable, estaba ingresado en una habitación estéril, sus heridas cicatrizaban bien y no había signos de rechazo del injerto, ni inflamación, ni posible fiebre. Todos los viernes se limpiaba y desinfectaba completamente el bloque quirúrgico, lo que se hacía por la tarde, al final del programa quirúrgico. Para una higiene adecuada, se movía el equipo, incluidas las mesas de operaciones. Cuando se hizo esto, el hisopo que faltaba salió de debajo de las patas de la mesa de operaciones. Probablemente, durante la cirugía, el hisopo se cayó y alguien lo pateó accidentalmente bajo la mesa de operaciones.
 CASE6;D3.4.1;Urólogo;Mantengamos la calma. Si estamos irritados, no se puede resolver nada.
-CASE6;Q6.3;Instrumentista Nurse;¡No puedo creer que se haya quedado dentro del paciente!
 CASE6;D6.1.3;Enfermera circulante;¡Siempre me dan trabajo!
 CASE6;D6.1.2;Instrumentista Nurse;¡Tenemos que seguir el protocolo!
 CASE6;D4.1.2;Urólogo;No utilizamos recursos hospitalarios innecesariamente.

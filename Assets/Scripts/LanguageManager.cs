@@ -173,6 +173,25 @@ public class LanguageManager : MonoBehaviour
         return dialogueNodeData.DialogueText;
     }
 
+    public string GetFeedback(AnswerNodeData answerNodeData)
+    {
+        List<DialogueDataBean> aux = GetDatalist();
+
+        if (aux != null && languageSelected != "EN")
+        {
+            for (int i = 0; i < aux.Count; i++)
+            {
+                if (aux[i].name == answerNodeData.AnswerName)
+                {
+                    return aux[i].text;
+                }
+            }
+        }
+
+        //Ingles por defecto
+        return answerNodeData.Feedback;
+    }
+
     public string GetQuestionDescription(QuestionNodeData questionNodeData)
     {
         List<DialogueDataBean> aux = GetDatalist(); //obtenemos la lista del caso e idioma correspondiente
