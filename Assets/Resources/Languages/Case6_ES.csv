@@ -1,26 +1,26 @@
 CASE6;D1;NARRADOR;A un paciente de 46 años se le programa un trasplante de riñón debido a una poliquistosis renal grave. El equipo quirúrgico está formado por un urólogo y un cirujano con experiencia en transplantes como ayudante, un anestesiólogo, un ayudante de anestesia, una enfermera de quirófano y una circulante. La intervención quirúrgica dura 5 horas, sin que se produzcan hechos inusuales. En primer lugar, se extrajeron ambos riñones quísticos por laparotomía superior y mediana. En segundo lugar, se implantó el injerto de riñón de cadáver izquierdo a través de otra incisión en la fosa ilíaca derecha. El cirujano comenzó a cerrar las incisiones, paralelamente el personal de quirófano resumió el instrumental, los hisopos y las toallas utilizadas durante la cirugía. La enfermera instrumentista se dio cuenta de que faltaba un hisopo. En ese momento, la primera incisión ya estaba cerrada y la segunda también estaba casi cerrada.
 CASE6;Q1.1;Cirujano asistente;¿Tan solo una? ¡Debe estar en algún lado!
-CASE6;D1.1.1;Instrumentista nurse;Imposible, ¡he hecho mi trabajo de forma adecuada!
-CASE6;D1.2.4;Instrumentista nurse;Imposible, ¡he hecho mi trabajo de forma adecuada!
-CASE6;D1.3.2;Instrumentista nurse;Seguro, ¡he hecho mi trabajo de forma adecuada!
-CASE6;D1.1.2;Instrumentista nurse;Seguro, tenemos que solventar el problema juntos.
-CASE6;D1.3.1;Instrumentista nurse;Seguro, tenemos que solventar el problema juntos.
-CASE6;D1.1.3;Instrumentista nurse;Es primordial para el paciente. No podemos tomarlo a la ligera.
-CASE6;D1.2.3;Instrumentista nurse;Es primordial para el paciente. No podemos tomarlo a la ligera.
-CASE6;D1.4.3;Instrumentista nurse;Es primordial para el paciente. No podemos tomarlo a la ligera.
-CASE6;D2.3.3;Instrumentista nurse;Es primordial para el paciente. No podemos tomarlo a la ligera.
-CASE6;D1.1.4;Instrumentista nurse;Claro, ¿por qué siempre son las enfermeras las primeras que se llevan las culpas?
-CASE6;D1.2.1;Instrumentista nurse;Claro, ¿por qué siempre son las enfermeras las primeras que se llevan las culpas?
-CASE6;D1.3.4;Instrumentista nurse;Claro, ¿por qué siempre son las enfermeras las primeras que se llevan las culpas?
+CASE6;D1.1.1;Enfermera instrumentista;Imposible, ¡he hecho mi trabajo de forma adecuada!
+CASE6;D1.2.4;Enfermera instrumentista;Imposible, ¡he hecho mi trabajo de forma adecuada!
+CASE6;D1.3.2;Enfermera instrumentista;Seguro, ¡he hecho mi trabajo de forma adecuada!
+CASE6;D1.1.2;Enfermera instrumentista;Seguro, tenemos que solventar el problema juntos.
+CASE6;D1.3.1;Enfermera instrumentista;Seguro, tenemos que solventar el problema juntos.
+CASE6;D1.1.3;Enfermera instrumentista;Es primordial para el paciente. No podemos tomarlo a la ligera.
+CASE6;D1.2.3;Enfermera instrumentista;Es primordial para el paciente. No podemos tomarlo a la ligera.
+CASE6;D1.4.3;Enfermera instrumentista;Es primordial para el paciente. No podemos tomarlo a la ligera.
+CASE6;D2.3.3;Enfermera instrumentista;Es primordial para el paciente. No podemos tomarlo a la ligera.
+CASE6;D1.1.4;Enfermera instrumentista;Claro, ¿por qué siempre son las enfermeras las primeras que se llevan las culpas?
+CASE6;D1.2.1;Enfermera instrumentista;Claro, ¿por qué siempre son las enfermeras las primeras que se llevan las culpas?
+CASE6;D1.3.4;Enfermera instrumentista;Claro, ¿por qué siempre son las enfermeras las primeras que se llevan las culpas?
 CASE6;Q1.2;Urólogo;Ocurre muchas veces, la mayoría de las veces es un fallo de cálculo.
-CASE6;D1.2.2;Instrumentista nurse;Afrontemos el problema juntos, y tratemos de encontrar con calma la mejor solución
-CASE6;D1.4.2;Instrumentista nurse;Afrontemos el problema juntos, y tratemos de encontrar con calma la mejor solución
-CASE6;D2.3.2;Instrumentista nurse;Afrontemos el problema juntos, y tratemos de encontrar con calma la mejor solución
+CASE6;D1.2.2;Enfermera instrumentista;Afrontemos el problema juntos, y tratemos de encontrar con calma la mejor solución
+CASE6;D1.4.2;Enfermera instrumentista;Afrontemos el problema juntos, y tratemos de encontrar con calma la mejor solución
+CASE6;D2.3.2;Enfermera instrumentista;Afrontemos el problema juntos, y tratemos de encontrar con calma la mejor solución
 CASE6;Q1.3;Urólogo;¿Estás segura? ¿Los cálculos son correctos?
-CASE6;D1.3.3;Instrumentista nurse;No, solo estoy bromeando.
+CASE6;D1.3.3;Enfermera instrumentista;No, solo estoy bromeando.
 CASE6;Q1.4;Enfermera circulante;No puede ser cierto, incluso eso!
-CASE6;D1.4.1;Instrumentista nurse;No seas impaciente, tu trabajo sigue en proceso.
-CASE6;D1.4.4;Instrumentista nurse;Si, es cierto, y también tienes que colaborar en encontrar una solución!
+CASE6;D1.4.1;Enfermera instrumentista;No seas impaciente, tu trabajo sigue en proceso.
+CASE6;D1.4.4;Enfermera instrumentista;Si, es cierto, y también tienes que colaborar en encontrar una solución!
 CASE6;D2;Urólogo;Por favor, vuelve a contar los hisopos y las toallas usadas.
 CASE6;Q2.1;Enfermera circulante;El siguiente paciente ya está fuera esperando.
 CASE6;D2.1.1;Urólogo;Me temo qu tendrá que esperar, tenemos que solventar esto ahora.
@@ -30,19 +30,19 @@ CASE6;D2.1.4;Cirujano asistente;Por favor, solo cállate y concéntrate.
 CASE6;Q2.2;Cirujano asistente;¿Es realmente necesario? Está aquí en algún lado, no me hagas perder el tiempo!
 CASE6;D2.2.1;Urólogo;Con esta actitud no vamos a solventar nada.
 CASE6;D2.3.1;Urólogo;Con esta actitud no vamos a solventar nada.
-CASE6;D2.2.2;Instrumentista nurse;Estoy intentando hacerlo lo mejor posible, no me metáis prisa.
+CASE6;D2.2.2;Enfermera instrumentista;Estoy intentando hacerlo lo mejor posible, no me metáis prisa.
 CASE6;D2.2.3;Enfermera circulante;Tu no eres el cirujano, no puedes decidir.
 CASE6;D2.2.4;Anestesiólogo;Estoy de acuerdo contigo.
 CASE6;Q2.3;Anestesiólogo;La cirugía dura 5 horas, estaría bien acabar lentamente.
 CASE6;D2.3.4;Cirujano asistente;No distraigas a la enfermera instrumentista, tenemos que resolver esta situación lo antes posible.
-CASE6;Q2.4;Instrumentista nurse;Lo haré inmediatamente.
+CASE6;Q2.4;Enfermera instrumentista;Lo haré inmediatamente.
 CASE6;D2.4.1;Cirujano asistente;Estaría bien si pudieras darte prisa.
 CASE6;D2.4.2;Urólogo;Gracias, apreciamos el esfuerzo.
 CASE6;D2.4.3;Enfermera circulante;Rápido, estamos en un apuro.
 CASE6;D2.4.4;Anestesiólogo;Por favor, ¡simplemente hazlo!
-CASE6;D3;Instrumentista nurse;Desgraciadamente, los números siguen sin dar.
+CASE6;D3;Enfermera instrumentista;Desgraciadamente, los números siguen sin dar.
 CASE6;Q3.1;Urólogo;¡Respira profundamente! Hay que encontrarlo cuanto antes.
-CASE6;D3.1.1;Instrumentista nurse;Mantened la calma. Irritados no podemos solventar nada.
+CASE6;D3.1.1;Enfermera instrumentista;Mantened la calma. Irritados no podemos solventar nada.
 CASE6;D3.1.2;Cirujano asistente;No te preocupes, todo saldrá bien. Pero para estar seguro vamos a observar el abdomen.
 CASE6;D3.1.3;Anestesiólogo;Eso no es mi responsabilidad.
 CASE6;D3.2.3;Anestesiólogo;Eso no es mi responsabilidad.
@@ -54,7 +54,7 @@ CASE6;D3.2.2;Cirujano asistente;Vale, vamos a intentar resolverlo, pero no es mi
 CASE6;D3.2.4;Cirujano asistente;Como sea, sólo quiero terminar la cirugía.
 CASE6;Q3.3;Cirujano asistente;¡Estoy seguro de que está en alguna parte! Por favor, date prisa, mi próximo paciente me está esperando en otro quirófano.
 CASE6;D3.3.1;Urólogo;Mantengámos la calma. Si te impacientas nada se arreglará.
-CASE6;D3.3.2;"Anestesiólogo- Correction (Spanish) - ""siempre siempre"" to ""siempre""";Esto no es la primera vez que ocurre, al final siempre lo hemos podido encontrar.
+CASE6;D3.3.2;"Anestesiólogo;Esto no es la primera vez que ocurre, al final siempre lo hemos podido encontrar.
 CASE6;D3.3.4;Urólogo;Esto es también tu responsabilidad, por favor toma parte en la solución del problema.
 CASE6;Q3.4;Enfermero de anestesia;¿Que ocurre si no lo encontramos?
 CASE6;D3.4.4;Urólogo;Por favor, termínalo, realmente no tenemos tiempo para estar desesperados.
@@ -62,11 +62,11 @@ CASE6;D4;Enfermero de anestesia;Vamos a mirar en el suelo y debajo de los equipo
 CASE6;Q4.1;Cirujano asistente;Usando los rayos X, podríamos descartar fácilmente si el hisopo puede haber permanecido en el paciente. Si no encontramos nada, podemos seguir buscando en el suelo.
 CASE6;D4.1.1;Anestesiólogo;Me temo que tenemos que tomar decisiones pronto, porque el paciente no tolerará la cirugía mucho tiempo más.
 CASE6;Q4.2;Urólogo;Gracias por el apoyo.
-CASE6;Q4.3;Instrumentista nurse;No creo que haya ido muy lejos.
+CASE6;Q4.3;Enfermera instrumentista;No creo que haya ido muy lejos.
 CASE6;Q4.4;Enfermera circulante;Yo te ayudo, cuantos más ojos, más veremos.
 CASE6;D5;Enfermero de anestesia;Desafortunadamente, no encontramos nada.
 CASE6;Q5.1;Urólogo;No podemos comprometer la seguridad de los pacientes ni la calidad de la atención, tenemos que acabar con este problema.
-CASE6;D5.1.1;Instrumentista nurse;¿Quieres abrir al paciente?
+CASE6;D5.1.1;Enfermera instrumentista;¿Quieres abrir al paciente?
 CASE6;D5.1.2;Cirujano asistente;Finalmente, ha ocurrido algo.
 CASE6;Q5.2;Cirujano asistente;¡Menuda sorpresa!
 CASE6;D5.2.1;Enfermera circulante;La actitud no está ayudando.
@@ -78,25 +78,25 @@ CASE6;D6;Urólogo;Ambas incisiones están casi cerradas, reabrirlas sería una gran
 CASE6;D6.1;Urólogo;¿A que viene esta actitud? ¿Tienes alguna idea mejor?
 CASE6;Q6.1;Enfermera circulante;¡Finalmente!
 CASE6;D6.1.1;Anestesiólogo;Era el momento de hacerlo.
-CASE6;Q6.2;Urólogo;Llamare a la enfermera circulante para que nos ayude. //Encontremos la mejor solución.//
+CASE6;Q6.2;Urólogo;Llamare a la enfermera circulante para que nos ayude.
 CASE6;Q6.3;Enfermera circulante;¡No puedo creer que este dentro del paciente!
 CASE6;D6.2.1;Enfermera circulante;Yo haré los rayos X.
-CASE6;D6.3.1;Cirujano asistente;Es fácilmente posible//¡Al fin!
+CASE6;D6.3.1;Cirujano asistente;Es fácilmente posible
 CASE6;Q6.4;Anestesiólogo;Estoy de acuerdo contigo.
-CASE6;D6.4.1;Instrumentista nurse;Era la mejor opción.
+CASE6;D6.4.1;Enfermera instrumentista;Era la mejor opción.
 CASE6;D6.4.2;Cirujano asistente;¡Por fin!
-CASE6;D6.4.3;Instrumentista nurse;¡Siempre me dan trabajo!
+CASE6;D6.4.3;Enfermera instrumentista;¡Siempre me dan trabajo!
 CASE6;D7;Urólogo;La radiografía no encontró nada, según esto, el hisopo no está en el abdomen. Hicimos todo lo que pudimos. Tenemos que escribir lo sucedido en el diario quirúrgico y también informar al paciente.
-CASE6;D7.1;Cirujano asistente;Esto ha sido lo mejor que podíamos hacer.
-CASE6;D7.2;Enfermera circulante;Inforamaré al siguiente equipo sobre la decisión.
-CASE6;D7.3;Cirujano asistente;La enfermera a cargo del equipo es la circulante. Ella organizará al equipo.
-CASE6;D7.4;Anestesiólogo;Estoy de acuerdo, prepararé al paciente para que se despierte.
+CASE6;Q7.1;Cirujano asistente;Esto ha sido lo mejor que podíamos hacer.
+CASE6;Q7.2;Enfermera circulante;Inforamaré al siguiente equipo sobre la decisión.
+CASE6;Q7.3;Cirujano asistente;La enfermera a cargo del equipo es la circulante. Ella organizará al equipo.
+CASE6;Q7.4;Anestesiólogo;Estoy de acuerdo, prepararé al paciente para que se despierte.
 CASE6;END;NARRADOR;El equipo terminó la cirugía, el paciente se despertó y se le informó de la falta de un hisopo. Esto también se anotó en el diario quirúrgico con todo detalle. Durante los 4 días siguientes, el estado del paciente era estable, estaba ingresado en una habitación estéril, sus heridas cicatrizaban bien y no había signos de rechazo del injerto, ni inflamación, ni posible fiebre. Todos los viernes se limpiaba y desinfectaba completamente el bloque quirúrgico, lo que se hacía por la tarde, al final del programa quirúrgico. Para una higiene adecuada, se movía el equipo, incluidas las mesas de operaciones. Cuando se hizo esto, el hisopo que faltaba salió de debajo de las patas de la mesa de operaciones. Probablemente, durante la cirugía, el hisopo se cayó y alguien lo pateó accidentalmente bajo la mesa de operaciones.
 CASE6;D3.4.1;Urólogo;Mantengamos la calma. Si estamos irritados, no se puede resolver nada.
 CASE6;D6.1.3;Enfermera circulante;¡Siempre me dan trabajo!
-CASE6;D6.1.2;Instrumentista Nurse;¡Tenemos que seguir el protocolo!
+CASE6;D6.1.2;Enfermera instrumentista;¡Tenemos que seguir el protocolo!
 CASE6;D4.1.2;Urólogo;No utilizamos recursos hospitalarios innecesariamente.
-CASE6;D4.1.3;Instrumentista nurse;La mayoría de las veces, los bastoncillos se caen o se pierden, pero no se quedan en el paciente. No hay que exagerar.
+CASE6;D4.1.3;Enfermera instrumentista;La mayoría de las veces, los bastoncillos se caen o se pierden, pero no se quedan en el paciente. No hay que exagerar.
 CASE6;D4.2.1;Cirujano asistente;¡Perder el tiempo!
 CASE6;D4.2.2;Cirujano asistente;Muy bien, ¡intentémoslo!
 CASE6;D4.2.3;Anestesiólogo;¡Sólo hazlo rápido si quieres que la cirugía termine con final feliz!

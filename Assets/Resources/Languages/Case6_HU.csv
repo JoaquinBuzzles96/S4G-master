@@ -1,82 +1,98 @@
 ﻿CASE6;D1;Narrator;Egy 46 éves férfi beteget súlyos policisztás vesebetegség miatt veseátültetésre készítenek elő. A műtéti team egy urológusból és egy transzplantációban jártas sebészből, mint első asszisztensből áll. Munkájukat segíti egy aneszteziológus és egy aneszteziológus asszisztens, egy műtősnő és egy műtőssegéd. A komplikáció mentes műtét 5 órán keresztül tartott. Első ülésben mindkét policisztás vesét felső és medián laparotómiából eltávolították, majd a bal oldali cadaver donorvesét egy másik metszésen keresztül ültették be a jobb fossa iliacaba. A műtét végén az urológus megkezdte a metszések zárását, ezzel párhuzamosan a team többi tagja hozzálátott a műtét során felhasznált műszerek, kis- és nagy törlők és bucik összeszámolásához. A számolás során kiderült, hogy egy buci hiányzik. Ekkor az első bemetszést már teljesen bezárták, a másodikat pedig majdnem teljesen.
 CASE6;D1.1;Első asszisztens;Csak egy hiányzik? Biztosan itt lesz valahol.
 CASE6;D1.1.1;Műszerelő műtősnő;Lehetetlen! Megfelelő odafigyeléssel végzem a munkámat!
+CASE6;D1.2.4;Műszerelő műtősnő;Lehetetlen! Megfelelő odafigyeléssel végzem a munkámat!
+CASE6;D1.3.2;Műszerelő műtősnő;Lehetetlen! Megfelelő odafigyeléssel végzem a munkámat!
 CASE6;D1.1.2;Műszerelő műtősnő;Természetesen, ezt a problémát együtt kell megoldanunk!
+CASE6;D1.3.1;Műszerelő műtősnő;Természetesen, ezt a problémát együtt kell megoldanunk!
 CASE6;D1.1.3;Műszerelő műtősnő;Mindez a beteg érdeke, nem vehetjük félvállról!
+CASE6;D1.2.3;Műszerelő műtősnő;Mindez a beteg érdeke, nem vehetjük félvállról!
+CASE6;D1.4.3;Műszerelő műtősnő;Mindez a beteg érdeke, nem vehetjük félvállról!
+CASE6;D2.3.3;Műszerelő műtősnő;Mindez a beteg érdeke, nem vehetjük félvállról!
 CASE6;D1.1.4;Műszerelő műtősnő;Hát persze, miért is ne a műtősnőt hibáztassuk legelőször?
-CASE6;D1.2;Urológus;Ilyen sokszor előfordul, legtöbbször számolási hiba történik.
+CASE6;D1.2.1;Műszerelő műtősnő;Hát persze, miért is ne a műtősnőt hibáztassuk legelőször?
+CASE6;D1.3.4;Műszerelő műtősnő;Hát persze, miért is ne a műtősnőt hibáztassuk legelőször?
+CASE6;Q1.2;Urológus;Ilyen sokszor előfordul, legtöbbször számolási hiba történik.
 CASE6;D1.2.2;Műszerelő műtősnő;Gondoljuk át együtt a problémát és nyugodtan megtaláljuk a legjobb megoldást.
-CASE6;D1.3;Urológus;Biztos benne? Helyesen számolt?
+CASE6;D1.4.2;Műszerelő műtősnő;Gondoljuk át együtt a problémát és nyugodtan megtaláljuk a legjobb megoldást.
+CASE6;D2.3.2;Műszerelő műtősnő;Gondoljuk át együtt a problémát és nyugodtan megtaláljuk a legjobb megoldást.
+CASE6;Q1.3;Urológus;Biztos benne? Helyesen számolt?
 CASE6;D1.3.3;Műszerelő műtősnő;Nem, csak viccelek!
-CASE6;D1.4;Műtőssegéd;Ez nem lehet igaz, még ez is!
+CASE6;Q1.4;Műtőssegéd;Ez nem lehet igaz, még ez is!
 CASE6;D1.4.1;Műszerelő műtősnő;Ne légy türelmetlen, még tart a munkaidőd!
 CASE6;D1.4.4;Műszerelő műtősnő;Ez így van, ki kell venned a részed a megoldásból!
 CASE6;D2;Urológus;Kérem, számolja újra a használt törlőket és bucikat!
-CASE6;D2.1;Műtőssegéd;A következő beteg már az előkészítőben van.
+CASE6;Q2.1;Műtőssegéd;A következő beteg már az előkészítőben van.
 CASE6;D2.1.1;Urológus;Attól félek várniuk kell, ezt itt most meg kell oldanunk.
 CASE6;D2.1.2;Aneszteziológus;Nem érdekel, belefér a munkaidőmbe.
 CASE6;D2.1.3;Urológus;Mindez nem számít, ezt azonnal meg kell oldanunk!
 CASE6;D2.1.4;Első asszisztens;Kérem, hallgasson el, és koncentráljon ide.
-CASE6;D2.2;Első asszisztens;Ez tényleg szükséges? Ne pazaroljuk az időt, biztos itt lesz valahol!
+CASE6;Q2.2;Első asszisztens;Ez tényleg szükséges? Ne pazaroljuk az időt, biztos itt lesz valahol!
 CASE6;D2.2.1;Urológus;Ezzel a hozzáállással nem oldunk meg semmit.
+CASE6;D2.3.1;Urológus;Ezzel a hozzáállással nem oldunk meg semmit.
 CASE6;D2.2.2;Műszerelő műtősnő;Megteszek minden tőlem telhetőt, kérem ne siettessen.
 CASE6;D2.2.3;Műtőssegéd;Nem ön az operatőr, nem az öné a döntés joga.
 CASE6;D2.2.4;Aneszteziológus;Egyetértek.
-CASE6;D2.3;Aneszteziológus;A műtét már 5 órája tart, ideje lesz befejezni.
+CASE6;Q2.3;Aneszteziológus;A műtét már 5 órája tart, ideje lesz befejezni.
 CASE6;D2.3.4;Első asszisztens;Ne vonja el a műtősnő figyelmét, ezt most minél hamarabb meg kell oldanunk.
-CASE6;D2.4;Műszerelő műtősnő;Azonnal csinálom.
+CASE6;Q2.4;Műszerelő műtősnő;Azonnal csinálom.
 CASE6;D2.4.1;Első asszisztens;Jó lenne, ha tudna sietni.
 CASE6;D2.4.2;Urológus;Köszönjük, nagyra értékeljük az erőfeszítéseit.
 CASE6;D2.4.3;Műtőssegéd;Csak gyorsan, sietünk.
 CASE6;D2.4.4;Aneszteziológus;Kérem, csak csinálja!
 CASE6;D3;Műszerelő műtősnő;Sajnos a számok még mindig nem jók.
-CASE6;D3.1;Urológus;Vegyünk mély levegőt. Amint lehetséges, ezt meg kell oldanunk.
+CASE6;Q3.1;Urológus;Vegyünk mély levegőt. Amint lehetséges, ezt meg kell oldanunk.
 CASE6;D3.1.1;Műszerelő műtősnő;Nyugodjunk meg, idegesen semmit sem lehet megoldani.
 CASE6;D3.1.2;Első asszisztens;Ne aggódjon, minden rendben lesz. De hogy biztosak legyünk benne, nézzük meg a hasüreget.
 CASE6;D3.1.3;Aneszteziológus;Ez nem az én felelősségem!
+CASE6;D3.2.3;Aneszteziológus;Ez nem az én felelősségem!
+CASE6;D3.3.3;Aneszteziológus;Ez nem az én felelősségem!
 CASE6;D3.1.4;Első asszisztens;Ez nem az én felelősségem! De valamit tennünk kell.
-CASE6;D3.2;Műtőssegéd;Nem először történik ilyen, eddig is mindig megtaláltuk.
+CASE6;Q3.2;Műtőssegéd;Nem először történik ilyen, eddig is mindig megtaláltuk.
 CASE6;D3.2.1;Urológus;Talán mégis a hasüregben hagytuk...
 CASE6;D3.2.2;Első asszisztens;Rendben, próbáljuk meg megoldani, de akkor sem az én felelősségem.
 CASE6;D3.2.4;Első asszisztens;Bármit, csak végre fejezzük már be!
-CASE6;D3.3;Első asszisztens;Biztos vagyok benne, hogy itt van valahol. Csak kérem siessünk, mert egy másik beteg vár rám egy másik műtőben.
+CASE6;Q3.3;Első asszisztens;Biztos vagyok benne, hogy itt van valahol. Csak kérem siessünk, mert egy másik beteg vár rám egy másik műtőben.
 CASE6;D3.3.1;Urológus;Nyugodjunk meg. Türelmetlenséggel nem oldunk meg semmit.
 CASE6;D3.3.2;"Aneszteziológus;Nem először fordul elő, de végül mindig megtaláltuk.
 CASE6;D3.3.4;Urológus;Ez az ön felelőssége is, kérem vegyen részt a probléma megoldásában.
-CASE6;D3.4;Aneszteziológus asszisztens;Mi történik, ha mégsem találnánk meg?
+CASE6;Q3.4;Aneszteziológus asszisztens;Mi történik, ha mégsem találnánk meg?
 CASE6;D3.4.4;Urológus;Kérem fejezze be, nincs időnk kétségbeesni.
 CASE6;D4;Aneszteziológus asszisztens;Nézzünk körül a földön és a berendezések alatt.
-CASE6;D4.1;Első asszisztens;Röntgennel könnyen kizárhatnánk, hogy a buci a betegben maradt-e? Amennyiben nem, még mindig kereshetjük a földön.
+CASE6;Q4.1;Első asszisztens;Röntgennel könnyen kizárhatnánk, hogy a buci a betegben maradt-e? Amennyiben nem, még mindig kereshetjük a földön.
 CASE6;D4.1.1;Aneszteziológus;Félek, hogy minél hamarabb döntést kell hoznunk, mivel a beteg már nem sokáig tolerálja a műtétet.
-CASE6;D4.2;Urológus;Köszönöm a segítségét.
-CASE6;D4.3;Műszerelő műtősnő;Nem mehetett messzire.
-CASE6;D4.4;Műtőssegéd;Segítek, több szem többet lát.
+CASE6;Q4.2;Urológus;Köszönöm a segítségét.
+CASE6;Q4.3;Műszerelő műtősnő;Nem mehetett messzire.
+CASE6;Q4.4;Műtőssegéd;Segítek, több szem többet lát.
 CASE6;D5;Aneszteziológus asszisztens;Sajnos nem találtunk semmit.
-CASE6;D5.1;Urológus;Nem veszélyeztethetjük a beteg biztonságát és az ellátás minőségét, zárjuk le a problémát.
+CASE6;Q5.1;Urológus;Nem veszélyeztethetjük a beteg biztonságát és az ellátás minőségét, zárjuk le a problémát.
 CASE6;D5.1.1;Műszerelő műtősnő;Ki akarja nyitni a beteget?
 CASE6;D5.1.2;Első asszisztens;Végre történik valami.
-CASE6;D5.2;Első asszisztens;Micsoda meglepetés!?
+CASE6;Q5.2;Első asszisztens;Micsoda meglepetés!?
 CASE6;D5.2.1;Műtőssegéd;Ez a hozzáállás nem segít.
 CASE6;D5.2.2;Urológus;Kérem, használható ötletekkel járuljon hozzá a megoldáshoz.
-CASE6;D5.3;Aneszteziológus;Félek, hogy minél hamarabb döntést kell hoznunk, mivel a beteg már nem sokáig tolerálja a műtétet.
+CASE6;Q5.3;Aneszteziológus;Félek, hogy minél hamarabb döntést kell hoznunk, mivel a beteg már nem sokáig tolerálja a műtétet.
 CASE6;D5.3.1;Urológus;Megtesszük ami tőlünk telik.
 CASE6;D5.3.2;Első asszisztens;Ez az ön feladata.
 CASE6;D6;Urológus;Mindkét metszés majdnem zárva van, az újranyitás hatalmas terhet jelentene a beteg számára. Nem veszélyeztethetjük a beteg biztonságát, kérem hozza a röntgen készüléket.
 CASE6;D6.1;Urológus;Mi ez a hozáállás? Tudsz jobbat?
+CASE6;Q6.1;Műtőssegéd;Végre!
 CASE6;D6.1.1;Aneszteziológus;Ideje volt megtenni.
-CASE6;D6.2;Urológus;Törekedjünk a legjobb megoldásra.
+CASE6;Q6.2;Urológus;Hívom a körzeti nővért, hogy segítsen nekünk.
+CASE6;Q6.3;Műszerelő műtősnő;Nem hiszem el, hogy a betegben maradt!
 CASE6;D6.2.1;Urológus;Hozom a röntgen készüléket.
-CASE6;D6.3.1;Első asszisztens;Végre!
-CASE6;D6.4;Aneszteziológus;Egyetértek!
+CASE6;D6.3.1;Első asszisztens;Könnyen lehetséges
+CASE6;Q6.4;Aneszteziológus;Egyetértek!
 CASE6;D6.4.1;Műszerelő műtősnő;Ez volt a legjobb megoldás.
+CASE6;D6.4.2;Első asszisztens;Végre!
+CASE6;D6.4.3;Műszerelő műtősnő;Mindig adnak nekem munkát!
 CASE6;D7;Urológus;A röntgen nem talált semmit, eszerint a buci nincs a hasüregben. Megtettük amit tudtunk. Dokumentáljuk a történteket a műtéti naplóba és tájékoztatjuk a beteget.
-CASE6;D7.1;Első asszisztens;Ez a legjobb amit tehetünk.
-CASE6;D7.2;Műtőssegéd;Tájékoztatom a következő műtéti teamet a döntésről.
-CASE6;D7.3;Aneszteziológus;A főműtősnő átveszi a műtőssegéd szerepét és megszervezi az asszisztensi teameket.
-CASE6;D7.4;"Aneszteziológus;Egyetértek. Előkészítem a beteget az ébresztésre.
+CASE6;Q7.1;Első asszisztens;Ez a legjobb amit tehetünk.
+CASE6;Q7.2;Műtőssegéd;Tájékoztatom a következő műtéti teamet a döntésről.
+CASE6;Q7.3;Aneszteziológus;A főműtősnő átveszi a műtőssegéd szerepét és megszervezi az asszisztensi teameket.
+CASE6;Q7.4;Aneszteziológus;Egyetértek. Előkészítem a beteget az ébresztésre.
 CASE6;END;Narrator;A műtéti team befejezte a műtétet, a beteget felébresztették és tájékoztaták a hiányzó buciról. Ezt a műtéti naplóban is részletesen rögzítették. A következő 4 napban a beteg állapota stabil volt, steril szobába került, a sebei szépen gyógyultak, graft kilökődésre, gyulladásra utaló jel nem volt.A kórházban minden pénteken teljesen kitakarítják és fertőtlenítik a műtőblokkot, amelyet délután, a műtéti program végén hajtanak végre. A megfelelő higiénia érdekében a berendezéseket - beleértve a műtőasztalokat is - elmozdítják. Ekkor a hiányzó buci előkerült a műtőasztal lába alól. Valószínűleg a műtét alatt a buci leeshetett, és valaki véletlenül berúgta a műtőasztal alá. 
 CASE6;D3.4.1;Urológus;Nyugodjunk meg, ingerülten semmit nem tudunk megoldani.
-CASE6;D6.3;Műszerelő műtősnő;Nem hiszem el, hogy a betegben maradt!
 CASE6;D6.1.3;Műtőssegéd;Mindig nekem adnak munkát!
 CASE6;D6.1.2;Műszerelő műtősnő;Követnünk kell az előírásokat!
 CASE6;D4.1.2;Urológus;Nem használjuk feleslegesen a kórházi forrásokat.
