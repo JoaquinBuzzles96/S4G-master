@@ -565,10 +565,352 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
+    public void ToSpanish()
+    {
+        foreach (var character in characteres)
+        {
+            switch (character.gameObject.name)//este name siempre esta en ingles
+            {
+                case "AssistantSurgeon":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Cirujano asistente";
+                    break;
+                case "Urologist":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Urólogo";
+                    break;
+                case "Anaesthesiologist":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Anestesiólogo";
+                    break;
+                case "AnaestheticNurse":
+                case "AnaesthesiaNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Asistente de anestesista";
+                    break;
+                case "ScrubNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermera instrumentista";
+                    break;
+                case "CirculatingNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermera circulante";
+                    break;
+                case "Endoscopist1":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoscopista 1";
+                    break;
+                case "Endoscopist2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoscopista 2";
+                    break;
+                case "EndoscopyNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermera de endoscopia";
+                    break;
+                case "EndoscopyNurseExtra":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermera de endoscopia";
+                    break;
+                case "EndoscopyNurseExtra2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermera de endoscopia 3";
+                    break;
+                case "EndoscopyNurse1":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermera de endoscopia 1";
+                    break;
+                case "EndoscopyNurse2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermera de endoscopia 2";
+                    break;
+                case "ChiefSurgeon":
+                case "MainSurgeon":
+                case "HeadSurgeon":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Cirujano principal";
+                    break;
+                case "Secretary":
+                    //character.gameObject.GetComponent<TalkAnim>().text.text = "";
+                    break;
+                case "Student":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Estudiante de medicina";
+                    break;
+                case "Student_2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Estudiante de medicina 2";
+                    break;
+                case "Student_3":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Estudiante de medicina 3";
+                    break;
+                case "Student_4":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Estudiante de medicina 4";
+                    break;
+                case "InstrumentalistNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermero instrumentista";
+                    break;
+                case "ResponsibleNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermera circulante";
+                    break;
+                case "CameraAssistant":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Asistente de cámara";
+                    break;
+                    //InstrumentalistNurse, ResponsibleNurse, CameraAssistant (Caso 7) TODO: Comprobar si alguno fue de los que dijo luisa que renombraramos, si no lo son hay que añadirlos
+            }
+        }
+    }
+
+    public void ToPortuguese()
+    {
+        foreach (var character in characteres)
+        {
+            switch (character.gameObject.name)//este name siempre esta en ingles
+            {
+                case "AssistantSurgeon":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Cirurgiã assistente";
+                    break;
+                case "Urologist":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Urologista";
+                    break;
+                case "Anaesthesiologist":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Anestesiologista";
+                    break;
+                case "AnaestheticNurse":
+                case "AnaesthesiaNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermeira de anestesia";
+                    break;
+                case "ScrubNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermeira instrumentista";
+                    break;
+                case "CirculatingNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermeira circulante";
+                    break;
+                case "Endoscopist1":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoscopista 1";
+                    break;
+                case "Endoscopist2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoscopista 2";
+                    break;
+                case "EndoscopyNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermeira de endoscopia";
+                    break;
+                case "EndoscopyNurseExtra":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermeira de endoscopia";
+                    break;
+                case "EndoscopyNurseExtra2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermeira de endoscopia 3";
+                    break;
+                case "EndoscopyNurse1":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermeira de endoscopia 1";
+                    break;
+                case "EndoscopyNurse2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermeira de endoscopia 2";
+                    break;
+                case "ChiefSurgeon":
+                case "MainSurgeon":
+                case "HeadSurgeon":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Cirurgião principal";
+                    break;
+                case "Secretary":
+                    //character.gameObject.GetComponent<TalkAnim>().text.text = "";
+                    break;
+                case "Student":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Estudante de medicina 1";
+                    break;
+                case "Student_2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Estudante de medicina 2";
+                    break;
+                case "Student_3":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Estudante de medicina 3";
+                    break;
+                case "Student_4":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Estudante de medicina 4";
+                    break;
+                case "InstrumentalistNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermeira instrumentista";
+                    break;
+                case "ResponsibleNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Enfermeira circulante ";
+                    break;
+                case "CameraAssistant":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Cirurgião assistente";
+                    break;
+                    //InstrumentalistNurse, ResponsibleNurse, CameraAssistant (Caso 7) TODO: Comprobar si alguno fue de los que dijo luisa que renombraramos, si no lo son hay que añadirlos
+            }
+        }
+    }
+
+    public void ToCzech()
+    {
+        foreach (var character in characteres)
+        {
+            switch (character.gameObject.name)//este name siempre esta en ingles
+            {
+                case "AssistantSurgeon":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Asistující chirurg";
+                    break;
+                case "Urologist":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Urolog";
+                    break;
+                case "Anaesthesiologist":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Anesteziolog";
+                    break;
+                case "AnaestheticNurse":
+                case "AnaesthesiaNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Anesteziologická sestra";
+                    break;
+                case "ScrubNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Instrumentářka";
+                    break;
+                case "CirculatingNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Sálová sestra";
+                    break;
+                case "Endoscopist1":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoskopista 1";
+                    break;
+                case "Endoscopist2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoskopista 2";
+                    break;
+                case "EndoscopyNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoskopická sestra";
+                    break;
+                case "EndoscopyNurseExtra":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoskopická sestra";
+                    break;
+                case "EndoscopyNurseExtra2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoskopická sestra 3";
+                    break;
+                case "EndoscopyNurse1":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoskopická sestra 1";
+                    break;
+                case "EndoscopyNurse2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoskopická sestra 2";
+                    break;
+                case "ChiefSurgeon":
+                case "MainSurgeon":
+                case "HeadSurgeon":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Hlavní chirurg";
+                    break;
+                case "Secretary":
+                    //character.gameObject.GetComponent<TalkAnim>().text.text = "";
+                    break;
+                case "Student":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Medik 1";
+                    break;
+                case "Student_2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Medik 2";
+                    break;
+                case "Student_3":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Medik 3";
+                    break;
+                case "Student_4":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Medik 4";
+                    break;
+                case "InstrumentalistNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Instrumentářka";
+                    break;
+                case "ResponsibleNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Sálová sestra";
+                    break;
+                case "CameraAssistant":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Asistující chirurg";
+                    break;
+                    //InstrumentalistNurse, ResponsibleNurse, CameraAssistant (Caso 7) TODO: Comprobar si alguno fue de los que dijo luisa que renombraramos, si no lo son hay que añadirlos
+            }
+        }
+    }
+
+    public void ToHungarian()
+    {
+        foreach (var character in characteres)
+        {
+            switch (character.gameObject.name)//este name siempre esta en ingles
+            {
+                case "AssistantSurgeon":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Első asszisztens";
+                    break;
+                case "Urologist":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Urológus";
+                    break;
+                case "Anaesthesiologist":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Aneszteziológus";
+                    break;
+                case "AnaestheticNurse":
+                case "AnaesthesiaNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Aneszteziológus asszisztens";
+                    break;
+                case "ScrubNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Műszerelő műtősnő";
+                    break;
+                case "CirculatingNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Műtőssegéd";
+                    break;
+                case "Endoscopist1":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoszkópos orvos 1";
+                    break;
+                case "Endoscopist2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoszkópos orvos 2";
+                    break;
+                case "EndoscopyNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoszkópos nővér";
+                    break;
+                case "EndoscopyNurseExtra":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoszkópos nővér";
+                    break;
+                case "EndoscopyNurseExtra2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoszkópos nővér 3";
+                    break;
+                case "EndoscopyNurse1":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoszkópos nővér 1";
+                    break;
+                case "EndoscopyNurse2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Endoszkópos nővér 2";
+                    break;
+                case "ChiefSurgeon":
+                case "MainSurgeon":
+                case "HeadSurgeon":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Operatőr";
+                    break;
+                case "Secretary":
+                    //character.gameObject.GetComponent<TalkAnim>().text.text = "";
+                    break;
+                case "Student":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Tanuló";
+                    break;
+                case "Student_2":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Orvostanhallgató";
+                    break;
+                case "Student_3":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Orvostanhallgató 2";
+                    break;
+                case "Student_4":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Tanuló 1";
+                    break;
+                case "InstrumentalistNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Műszerelő műtősnő";
+                    break;
+                case "ResponsibleNurse":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Műtőssegéd";
+                    break;
+                case "CameraAssistant":
+                    character.gameObject.GetComponent<TalkAnim>().text.text = "Asszisztens";
+                    break;
+                    //InstrumentalistNurse, ResponsibleNurse, CameraAssistant (Caso 7) TODO: Comprobar si alguno fue de los que dijo luisa que renombraramos, si no lo son hay que añadirlos
+            }
+        }
+    }
+
+    public void TranslateTagsNames() 
+    {
+        switch (LanguageManager.Instance.languageSelected)
+        {
+            case "ES":
+                ToSpanish();
+                break;
+            case "HU":
+                ToHungarian();
+                break;
+            case "CZ":
+                ToCzech();
+                break;
+            case "PT":
+                ToPortuguese();
+                break;
+        }
+    }
+
     public void SetUpCharacrteres()
     {
         //Metemos en el diccionario los personajes de todas las situaciones
         SetNameToCharacters();
+
+        //Traducimos las etiquetas de los personajes al idioma seleccionado
+        TranslateTagsNames();
 
         //Llegados a este punto damos por supuesto que en el diccionario estan todos los personajes
 
