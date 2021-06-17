@@ -54,7 +54,7 @@ public class SendMail : MonoBehaviour
 
     private void Start()
     {
-#if UNITY_EDITOR_WIN || UNITY_EDITOR
+#if UNITY_EDITOR_WIN || UNITY_EDITOR || UNITY_STANDALONE_WIN || UNITY_STANDALONE
         if (inputFieldMail != null)
         {
             inputFieldMail.SetActive(true);
