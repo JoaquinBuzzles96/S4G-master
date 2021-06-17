@@ -391,10 +391,14 @@ public class UI_Manager : MonoBehaviour
     public string GetAudioPath(string _audio) //TODO: Esta ruta no la esta pillando en las builds
     {
         //string path = $"Audio/Case5_EN/{_audio}";
+        //TEMPORALMENTE LO VAMOS A FORZAR AL INGLES:
+        return $"Audio/{caso}_EN/{_audio}";
+
+
         string path = $"Audio/Case5_EN/Audio1"; //default value
-        if (isValid(caso) && LanguageManager.Instance != null && isValid(_audio))
+        if (isValid(caso) && LanguageManager.Instance != null && isValid(_audio)) //esto siempre sera valido
         {
-            if (isValid(LanguageManager.Instance.languageSelected))
+            if (isValid(LanguageManager.Instance.languageSelected)) //esto siempre sera valido
             {
                 //path = $"Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}";
                 path = $"Audio/{caso}_EN/{_audio}";
