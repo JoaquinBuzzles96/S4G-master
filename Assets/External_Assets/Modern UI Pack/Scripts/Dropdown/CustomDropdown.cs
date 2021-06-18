@@ -148,8 +148,8 @@ namespace Michsky.UI.ModernUIPack
                     Item aux2 = new Item();
                     if (aux.itemName == "Case3" || aux.itemName == "CASE3")
                     {
-                        aux2.itemName = aux.itemName + "_TP";//_ThirdPerson
-                        dropdownItems.Add(aux2);
+                        //aux2.itemName = aux.itemName + "_TP";//_ThirdPerson
+                        //dropdownItems.Add(aux2);
                     }
                 }
             }

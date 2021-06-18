@@ -15155,7 +15155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 1221315604}
-  toolPos: {fileID: 0}
+  toolPos: {fileID: 1221315604}
   endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 1176209060}
 --- !u!114 &1299746478
@@ -15220,7 +15220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 1332472566}
-  toolPos: {fileID: 0}
+  toolPos: {fileID: 1332472566}
   endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 0}
 --- !u!114 &1311706543
@@ -15266,7 +15266,7 @@ PrefabInstance:
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_fontSize
-      value: 0.1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
@@ -15311,12 +15311,12 @@ PrefabInstance:
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3459336346503418072, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
@@ -15347,7 +15347,17 @@ PrefabInstance:
     - target: {fileID: 3559442571718809780, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1.22
+      value: 1.5563788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559442571718809780, guid: 6e5afe6cbaa35c84db912332bea71017,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.8014207
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559442571718809780, guid: 6e5afe6cbaa35c84db912332bea71017,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3559442571718809780, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
@@ -15362,12 +15372,22 @@ PrefabInstance:
     - target: {fileID: 3559442571718809780, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.076
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559442571718809780, guid: 6e5afe6cbaa35c84db912332bea71017,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.1827
       objectReference: {fileID: 0}
     - target: {fileID: 3559442571718809780, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228353385055385533, guid: 6e5afe6cbaa35c84db912332bea71017,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6196333387421617294, guid: 6e5afe6cbaa35c84db912332bea71017,
         type: 3}
@@ -48988,6 +49008,11 @@ PrefabInstance:
     - target: {fileID: 6295793215227479730, guid: 967d2afe6a3c86a4686ea72687dfc9aa,
         type: 3}
       propertyPath: handPos
+      value: 
+      objectReference: {fileID: 2104863081}
+    - target: {fileID: 6295793215227479730, guid: 967d2afe6a3c86a4686ea72687dfc9aa,
+        type: 3}
+      propertyPath: toolPos
       value: 
       objectReference: {fileID: 2104863081}
     - target: {fileID: 6295793215227479733, guid: 967d2afe6a3c86a4686ea72687dfc9aa,

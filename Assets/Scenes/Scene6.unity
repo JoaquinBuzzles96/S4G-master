@@ -21626,7 +21626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 264368687}
-  toolPos: {fileID: 0}
+  toolPos: {fileID: 264368687}
   endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 1176209060}
 --- !u!114 &1002434502
@@ -27093,7 +27093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 1221315604}
-  toolPos: {fileID: 0}
+  toolPos: {fileID: 1221315604}
   endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 1176209060}
 --- !u!114 &1299746478
@@ -27220,7 +27220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 1332472566}
-  toolPos: {fileID: 0}
+  toolPos: {fileID: 1332472566}
   endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 0}
 --- !u!114 &1311706543
@@ -44581,7 +44581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a360b2b5b7dbac4490061b90f89d6d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1840042788117086148}
+  text: {fileID: 938567030}
   colorBlink: {r: 0, g: 1, b: 0, a: 1}
   speed: 0
 --- !u!114 &695072905239795778
@@ -44597,7 +44597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPos: {fileID: 695072904973043008}
-  toolPos: {fileID: 0}
+  toolPos: {fileID: 695072904973043008}
   endoscopyHandPos: {fileID: 0}
   canvasName: {fileID: 938567030}
 --- !u!114 &695072905239795779
@@ -65002,6 +65002,11 @@ PrefabInstance:
     - target: {fileID: 6295793215227479730, guid: 967d2afe6a3c86a4686ea72687dfc9aa,
         type: 3}
       propertyPath: handPos
+      value: 
+      objectReference: {fileID: 2104863081}
+    - target: {fileID: 6295793215227479730, guid: 967d2afe6a3c86a4686ea72687dfc9aa,
+        type: 3}
+      propertyPath: toolPos
       value: 
       objectReference: {fileID: 2104863081}
     - target: {fileID: 6295793215227479733, guid: 967d2afe6a3c86a4686ea72687dfc9aa,
