@@ -640,11 +640,12 @@ public class SpecialCases : MonoBehaviour
         {
             yield return null; //esperamos hasta que llegue a su destino, que sera cuando el canMove sea false
         }
-        
 
 
-        anim = "Turn_radio";// TODO: "mODIFICAR VOLUMEN";
-        yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject, anim);
+
+        //anim = "Turn_radio";// TODO: "mODIFICAR VOLUMEN";
+        //anim = "Give";// TODO: "mODIFICAR VOLUMEN";`//ponemos tempoalmente esta animacion
+        yield return new WaitForSeconds(0.4f);// PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["ResponsibleNurse"].gameObject, anim);
         
 
         if (high)

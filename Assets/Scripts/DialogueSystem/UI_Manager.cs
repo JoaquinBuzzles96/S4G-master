@@ -1564,74 +1564,7 @@ public class UI_Manager : MonoBehaviour
             animator.gameObject.GetComponent<TalkAnim>().speed = speed;
             animator.gameObject.GetComponent<TalkAnim>().colorBlink = colorBlink;
         }
-       
-        /*
-        switch (speaker)
-        {
-            case "Endoscopista 1":
-            case "Endoscopist 1":
-            case "Endoscopist1":
-            case "endoscopist1":
-            case "endoscopist 1":
-                //Debug.Log($"VIluminamos el {speaker}");
-                endoescopista1.speed = color;
-                break;
-            case "Anastesiólogo":
-            case "Anaesthesiologist":
-            case "Anesthesiologist":
-            case "anesthesiologist":
-            case "anaesthesiologist":
-                //Debug.Log($"VIluminamos el {speaker}");
-                anestesiologo.speed = color;
-                break;
-            case "Enfermera de endoscopia":
-            case "Endoscopy nurse":
-            case "EndoscopyNurse":
-            case "Endoscopy Nurse":
-            case "endoscopy nurse":
-            case "endoscopynurse":
-                //Debug.Log($"VIluminamos el {speaker}");
-                enfermeraDeEndoscopia.speed = color;
-                break;
-            case "Endoscopista 2":
-            case "endoscopista 2":
-            case "Endoscopist 2":
-            case "endoscopist 2":
-            case "Endoscopist2":
-            case "endoscopist2":
-                //Debug.Log($"VIluminamos el {speaker}");
-                endoescopista2.speed = color;
-                break;
-            case "Secretaria":
-            case "Secretario":
-            case "Secretary":
-            case "secretary":
-
-                break;
-            case "Enfermera de anestesia":
-            case "AnaesthesiaNurse":
-            case "anaesthesiaNurse":
-            case "anaesthesianurse":
-            case "anaesthesia nurse":
-                //Debug.Log($"VIluminamos el {speaker}");
-                enfermeraDeAnestesia.speed = color;
-                break;
-            case "CirculatingNurse":
-                break;
-            case "EndoscopyNurseExtra":
-                break;
-            case "InstrumentalistNurse":
-                break;
-            case "AssistantSurgeon":
-                break;
-            case "HeadSurgeon":
-                break;
-            case "ResponsibleNurse":
-                break;
-            case "CameraAssistant":
-                break;
-
-        }*/
+     
     }
 
     public void SetupTutorial()
