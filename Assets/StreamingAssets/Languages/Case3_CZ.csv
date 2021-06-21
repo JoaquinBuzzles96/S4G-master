@@ -1,0 +1,82 @@
+﻿CASE3;S1;Vypravěč;Všichni členové týmu jsou na svých místech,  jste hlavní endoskopista a chystáte se na zavedení koloskopu.  
+CASE3;Q1;Vypravěč;Co řeknete ?
+CASE3;D1.1;Vypravěč;Jsme připraveni? Můžeme začít?
+CASE3;D1.2;Endoskopista 1;Ano, vše je v pořádku.
+CASE3;D1.3;Anaesthesiologist;Vy nemusíte mít ústenku ? Řídíte se nějakými zvláštními pravidly, o kterých nevím?
+CASE3;D1.1.1;Endoskopista 1;Nemáte ústenku, prosím nasaďte si ji. 
+CASE3;D1.1.2;Endoskopista 1;Okamžitě si nasaďte ústenku, měla by jste ji mít v průběhu celé endoskopie, je to součást standardního oblečení k výkonu. 
+CASE3;D1.1.3;Endoskopista 1;To je neuvěřitelné! Okamžitě vypadněte a vraťte se, jakmile budete vědět, jak být správně oblečena k endoskopii. 
+CASE3;D1.1.4;Endoskopista 1;Promiňte, neuvědomila jsem si to.
+CASE3;D1.5;Endoskopista 1;Endoskopická sestra si nasadí ústenku, vyšetření je zahájeno. Zavedete endoskop a otočíte se k sestře.
+CASE3;D2.1;Vypravěč;Zahajujeme endoskopickou slizniční resekci časného karcinomu konečníku. Jedná se o poměrně specifický výkon, viděla jste endoskopické nálezy před vyšetřením ? 
+CASE3;D2.2;Endoskopista 1;Ano, prošla jsem si je.
+CASE3;D2.3;Endoskopická sestra;Ve vašem případě je to téměř důvod koslavě…
+CASE3;D2.1.1;Endoskopista 1;Velmi dobře! To rád slyším! Je dobré, když si sestra předem projde plánovaný postup.
+CASE3;D2.1.2;Endoskopista 1;Výborně, takže doufám, že vaše práce bude výrazně lepší než kompletnost vašeho oblečení.  
+CASE3;D2.1.3;Endoskopista 1;OK.
+CASE3;D2.1.4;Endoskopista 1;Endoskopická sestra začne plakat a vyběhne z vyšetřovny. Po chvíli přichází nová zdravotní sestra.
+CASE3;D3.1;Vypravěč;Injektor.
+CASE3;D4.1;Endoskopista 1;Promiňte, nerozuměla jsem. 
+CASE3;D4.2;Endoskopická sestra;Tento ?
+CASE3;D4.4;Endoskopická sestra;Ano, samozřejmě, jaký jiný? Asistovala jste vůbec někdy u endoskopické slizniční resekce. 
+CASE3;D4.5;Endoskopista 1;Tento typ výkonu jsem viděla několikrát, ale sama jsem při něm ještě neasistovala. Doufám, že to zvládnu.
+CASE3;D4.6;Endoskopická sestra;Vy okamžitě odejděte a pošlete sem sestru se zkušenostmi s tímto výkonem. 
+CASE3;D4.1.1;Endoskopista 1;To je váš problém, je mi to jedno, měla jste se ozvat dříve. Jen vás varuji !
+CASE3;D4.1.2;Endoskopista 1;Jste si jistá, že to zvládnete?
+CASE3;D4.1.3;Endoskopista 1;Perfektní, také věřím, že to společně zvládneme. V každém případě se prosím ujistěte, že máte k dispozici zkušenou sestru, která vám v případě potřeby přijde pomoci.
+CASE3;D4.1.4;Endoskopista 1;Polypektomická klička.
+CASE3;D6.1;Endoskopista 1;Endoskopická sestra podá kličku endoskopistovi. Endoskopista 1 s ní pracuje, vytáhne ji z endoskopu a podá zpět sestře, která ji odloží na stolek s akcesorii. 
+CASE3;D6.2;Vypravěč;Céva praskla a intenzivně krvácí. Podejte mi coaggraspery, rychle !
+CASE3;D6.3;Endoskopista 1;Endoskopická sestra opakovaně hledá mezi nástroji na stolku s akcesorii. Nakonec jeden z nich podává endoskopistovi. 
+CASE3;D6.4;Vypravěč;Toto není správný nástroj.
+CASE3;D6.5;Endoskopista 2;Negativní emoce spojené s fyzickými projevy agrese - házení nástrojů - jsou naprosto nepřijatelné. 
+CASE3;A6.1;Vypravěč;Negativní emoce spojené s psychickým  nátlakem „pacient kvůli vám vykrvácí“ jsou naprosto nepřijatelné. 
+CASE3;A6.2;Vypravěč;Hodíte nástroj zpět sestře a křičíte:
+CASE3;D6.1.1;Vypravěč;To jsem nechtěl! Co mi to podáváte ? 
+CASE3;D6.2.1;Endoskopista 1;Vrátíte nástroj zpět endoskopické sestře  a řeknete:
+CASE3;D6.1.2;Vypravěč;Toto nejsou Coaggraspery ! Podejte mi je rychle, jinak kvůli vám pacient vykrvácí.
+CASE3;D6.2.2;Endoskopista 1;Chtěl jsem Coaggraspery, prosím, podejte mi je.
+CASE3;D6.3.1;Endoskopista 1;To nejsou Coaggraspery, připravila jste si je?
+CASE3;D6.1.4;Endoskopista 1;Prosím pomozte sestře.
+CASE3;D6.4.1;Endoskopista 1;Asistující endoskopista a endoskopická sestra společně hledají správný nástroj na stolku s akcesorii. 
+CASE3;D6.4.2;Vypravěč;Endoskopická sestra podává správný nástroj. Endoskopista zastaví krvácení a vrátí nástroj sestře. 
+CASE3;D7.1;Vypravěč;Krvácení se zastavilo. Jaká je situace?
+CASE3;D7.2;Endoskopista 1;Pacient je stabilní, můžeme pokračovat.
+CASE3;D7.3;Anaesthesiologist;Dejte mi hemoklip prosím.
+CASE3;D7.4;Endoskopista 1;Nerozumím ani slovo. Umíte mluvit srozumitelně a nahlas?
+CASE3;D7.1.1;Endoskopista 1;Omlouvám se, nerozuměl jsem. Mluvte prosím nahlas, pomalu a jasně.
+CASE3;D7.1.2;Endoskopista 1;Co? Co!
+CASE3;D7.1.3;Endoskopista 1;Neasistujete, neumíte komunikovat, to je vrchol. To jsem si rovnou mohl asistovat sám.
+CASE3;D7.1.4;Endoskopista 1;Endoskopická sestra nervózně hledá mezi nástroji, pak nástroj uchopí a ten spadne.
+CASE3;D8.1;Vypravěč;Pravděpodobně jste se špatně vyspala, že ? 
+CASE3;D8.2;Anaesthesiologist;Jak je na tom pacient? A co krevní tlak?
+CASE3;D8.1.1;Endoskopista 1;Toto se může stát každému.
+CASE3;D8.2.1;Endoskopista 1;Raději se starejte o své. Pacient je neklidný, nemůžeme pracovat.
+CASE3;D8.1.2;Endoskopista 1;Pokračujte v práci.
+CASE3;D8.1.3;Endoskopista 1;Dnes jste pravděpodobně úplně mimo.
+CASE3;D8.1.4;Endoskopista 1;Mluví s endoskopickou sestrou. 
+CASE3;D9.1;Vypravěč;Osobní urážky nejsou přijatelné.
+CASE3;A9.2;Vypravěč;Okamžitě odejděte a zavolejte vrchní sestru.
+CASE3;D9.1.1;Endoskopista 1;Jste naprosto k ničemu!
+CASE3;D9.1.2;Endoskopista 1;Je zde další endoskopická sestra , která by vám mohla pomoci ? Pacient je komplikovaný. Nebojte se a zavolejte jí, prosím.
+CASE3;D9.1.3;Endoskopista 1;Mám si asistovat sám ?!
+CASE3;D9.1.4;Endoskopista 1;Přichází druhá sestra a začíná pomáhat první.
+CASE3;D10.1;Vypravěč;Recepční nečekaně vstoupí do místnosti a hovoří k vám: 
+CASE3;D11.1;Vypravěč;Už budete končit ? ? V čekárně jsou další čtyři nervózní, plánovaní pacienti. 
+CASE3;D11.2;Tajemník;Osoby, které nejsou přímo zapojeny do péče o pacienty by neměly vystupovat na vyšetřovnu.
+CASE3;D11.3;Vypravěč;Vysvětlete prosím objednaným pacientům situaci a zajistěte, aby nás nikdo dále nevyrušoval.
+CASE3;D11.1.1;Endoskopista 1;Přeobjednejte prosím nemocné na jiný termín. 
+CASE3;D11.1.2;Endoskopista 1;Okamžitě odejděte a nerušte nás!
+CASE3;D11.1.3;Endoskopista 1;Můžete přijít později.
+CASE3;D11.1.4;Endoskopista 1;Vraťte se později
+CASE3;Q1;Vypravěč;Co řeknete?
+CASE3;Q2;Vypravěč;Co řeknete?
+CASE3;Q3;Vypravěč;Co řeknete?
+CASE3;Q4;Vypravěč;Co řeknete?
+CASE3;Q5;Vypravěč;Co řeknete?
+CASE3;Q6;Vypravěč;Co řeknete?
+CASE3;Q7;Vypravěč;Co řeknete?
+CASE3;Q8;Vypravěč;Co řeknete?
+CASE3;Q9;Vypravěč;Co řeknete?
+CASE3;Q10;Vypravěč;Co řeknete?
+CASE3;Q11;Vypravěč;Co řeknete?

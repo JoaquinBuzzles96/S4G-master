@@ -78,9 +78,34 @@ public class LanguageManager : MonoBehaviour
                  ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{UI_Manager.Instance.currentCase}_{languageSelected}.csv");
              }
             */
+            //C:\Users\Joaquin\Documents\GitHub\S4G-master\Assets\StreamingAssets\Resources\Languages\Case3_PT.csv".
             //Debug.Log($" antes del switch: C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv");
             //Application.streamingAssetsPath + $"/Resources/Cases/{caso}_{LanguageManager.Instance.languageSelected}";
-            ReadCSVLanguages(System.IO.Directory.GetCurrentDirectory() + $"/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv");
+
+            /* OPCION 1 QUE NO FUNCIONA
+            //VR (ANDROID)
+            string path = Application.streamingAssetsPath + $"/Languages/{caseSelected}_{languageSelected}.csv";
+            //string path = Application.persistentDataPath + $"/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv";
+            Debug.Log("ANDROID PATH: " + path);
+            //WINDOWS
+
+#if UNITY_EDITOR_WIN || UNITY_EDITOR || UNITY_STANDALONE_WIN || UNITY_STANDALONE
+            path = System.IO.Directory.GetCurrentDirectory() + $"/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv";
+            Debug.Log("DESKTOP PATH: " + path);
+#endif
+            ReadCSVLanguages(path);
+            */
+
+            //OPCION ALTERNATIVA: 
+            TextAsset list = Resources.Load($"Languages/{caseSelected}_{languageSelected}", typeof(TextAsset)) as TextAsset;
+            Debug.Log("Antes de la conversion a string: " + list.text);
+            string text = System.Text.Encoding.UTF8.GetString(list.bytes);
+            //string text = list.text;
+            Debug.Log("Texto obtenido del fichero: " + text);
+            ReadCSVLanguages_2(text);
+            //"iso-8859-1" //
+
+            //ReadCSVLanguages(System.IO.Directory.GetCurrentDirectory() + $"/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv");
             //ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
         }
 
@@ -253,6 +278,65 @@ public class LanguageManager : MonoBehaviour
         }
     }
 
+
+    void ReadCSVLanguages_2(string allText) //este sera el read de dialogue y question
+    {
+        string[] data = null;
+        //StreamReader strReader = new StreamReader(path, System.Text.Encoding.GetEncoding("iso-8859-1"));
+
+
+        string[] allDataLines = allText.Split('\n');
+
+        bool endOfFile = false;
+        int i = 0;
+
+        while (!endOfFile)
+        {
+            string data_String = allDataLines[i];
+            //Debug.Log("Linea " + i + ": "+ data_String);
+            i++;
+            if (i >= allDataLines.Length)
+            {
+                endOfFile = true;
+            }
+
+            data = data_String.Split(';');
+
+            //Llegados a este punto, data es una linea del csv, que esta compuesta por:
+            //CASO;ID(O NOMBRE)¨;SPEAKER;TEXTO
+            switch (data[0])//em este campo viene indicado el caso de uso al que hace referencia
+            {
+                case "Case3":
+                case "CASE3":
+                case "case3":
+                    case3LanguageData.Add(new DialogueDataBean(data[1], data[2], data[3])); //id, speaker, text
+                    break;
+                case "Case5":
+                case "CASE5":
+                case "case5":
+                    case5LanguageData.Add(new DialogueDataBean(data[1], data[2], data[3])); //id, speaker, text
+                    break;
+                case "Case6":
+                case "CASE6":
+                case "case6":
+                    case6LanguageData.Add(new DialogueDataBean(data[1], data[2], data[3])); //id, speaker, text
+                    break;
+                case "Case7":
+                case "CASE7":
+                case "case7":
+                    case7LanguageData.Add(new DialogueDataBean(data[1], data[2], data[3])); //id, speaker, text
+                    break;
+                case "Case9":
+                case "CASE9":
+                case "case9":
+                    case9LanguageData.Add(new DialogueDataBean(data[1], data[2], data[3])); //id, speaker, text
+                    break;
+                default:
+                    Debug.LogError($"El contenido de data[0] no se reconoce: {data[0]}");
+                    break;
+            }
+        }
+    }
     void ReadCSVLanguages(string path) //este sera el read de dialogue y question
     {
         string[] data = null;

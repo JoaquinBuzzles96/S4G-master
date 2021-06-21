@@ -1,0 +1,177 @@
+﻿CASE5;D1;NARRADOR;Probíhá operační zákrok s týmem složeným ze dvou všeobecných chirurgů, anesteziologa a tří zdravotních sester (sálová sestra/anesteziologická sestra a instrumentář). Zazvoní telefon, který zvedá sálová setra a tlumočí hovor všem členům týmu.
+CASE5;D1.0;Sálová sestra;Na porodnici je těhotná žena , která potřebuje provedení urgentního císařského řezu. Přivezou ji na operační sál, bohužel je k dispozici pouze jeden kompletní tým sester. Musíme najít řešení.
+CASE5;Q1.1;Asistující chirurg;Je mi to jedno! Počkají. Nejprve musíme dokončit tuto operaci.
+CASE5;D1.1.1;Sálová sestra;Toto je akutní stav, který nepočká. Musíme to rychle vyřešit.
+CASE5;D1.2.3;Sálová sestra;Toto je akutní stav, který nepočká. Musíme to rychle vyřešit.
+CASE5;D1.4.3;Sálová sestra;Toto je akutní stav, který nepočká. Musíme to rychle vyřešit.
+CASE5;D1.1.2;Hlavní chirurg;Pojďme se v klidu poradit a najít nejlepší řešení. 
+CASE5;Q1.3;Hlavní chirurg;Pojďme se v klidu poradit a najít nejlepší řešení. 
+CASE5;D1.2.2;Hlavní chirurg;Pojďme se v klidu poradit a najít nejlepší řešení. 
+CASE5;D1.4.2;Hlavní chirurg;Pojďme se v klidu poradit a najít nejlepší řešení. 
+CASE5;D1.1.3;Sálová sestra;Porodník je na cestě s pacientkou, musíme najít jiné řešení.
+CASE5;D1.2.1;Sálová sestra;Porodník je na cestě s pacientkou, musíme najít jiné řešení.
+CASE5;D1.3.3;Sálová sestra;Porodník je na cestě s pacientkou, musíme najít jiné řešení.
+CASE5;D1.4.4;Sálová sestra;Porodník je na cestě s pacientkou, musíme najít jiné řešení.
+CASE5;D1.1.4;Sálová sestra;Rozhodnutí není na vás, tady nevelíte. 
+CASE5;Q1.2;Hlavní chirurg;Já tu rozhoduji a nedovolím teď přivážet další pacienty na sál. 
+CASE5;D1.2.4;Sálová sestra;Nemáme k dispozici personál. Musíme najít jinou možnost.
+CASE5;D1.3.4;Sálová sestra;Nemáme k dispozici personál. Musíme najít jinou možnost.
+CASE5;D1.4.1;Sálová sestra;Nemáme k dispozici personál. Musíme najít jinou možnost.
+CASE5;D1.3.1;Sálová sestra;Přesně tak, musíme to vyřešit. 
+CASE5;D1.3.2;Sálová sestra;Ale toto je akutní situace, která nepočká. 
+CASE5;Q1.4;Instrumentář;Nikdo nikam neodcházejte, sežeňte další sestry. 
+CASE5;D2;Hlavní chirurg;Dejme hlavy dohromady a pojďme situaci vyřešit v klidu. 
+CASE5;Q2.1;Sálová sestra;Je zde další anesteziolog?
+CASE5;D2.1.1;Anesteziolog;Bohužel jsem teď jediný anesteziolog ve službě. 
+CASE5;D2.1.2;Anesteziolog;Netuším, nemůžu znát služby všech ostatních. 
+CASE5;D2.1.3;Asistující chirurg;To nevadí, měli bychom pokračovat v zákroku. 
+CASE5;D2.1.4;Asistující chirurg;Okamžitě zmklněte ať můžeme pokračovat. 
+CASE5;Q2.2;Asistující chirurg;Je mi to jedno, nikam rozhodně nejdu. 
+CASE5;D2.2.1;Hlavní chirurg;S tímto přístupem problém nevyřešíme. 
+CASE5;D2.3.1;Hlavní chirurg;S tímto přístupem problém nevyřešíme. 
+CASE5;D2.4.1;Hlavní chirurg;S tímto přístupem problém nevyřešíme. 
+CASE5;D2.2.2;Anesteziolog;Pojďme to zkontrolovat. Je tu další anesteziolog na zavolání. V tom nebude problém.
+CASE5;D2.3.2;Anesteziolog;Pojďme to zkontrolovat. Je tu další anesteziolog na zavolání. V tom nebude problém.
+CASE5;D2.4.2;Anesteziolog;Pojďme to zkontrolovat. Je tu další anesteziolog na zavolání. V tom nebude problém.
+CASE5;D2.2.3;Sálová sestra;Vy jste chirurg, Vy byste si měl dělat starosti. 
+CASE5;D2.2.4;Anesteziolog;Dejte mi vědět, jestli mohu pomoci.
+CASE5;Q2.3;Anesteziologická sestra;Nemůžu se rozdělit na dvě části ! Toto se prostě občas stává. 
+CASE5;D2.3.3;Anesteziolog;Nevím, není mým úkolem znát detailně rozpis služeb.
+CASE5;D2.3.4;Asistující chirurg;Nerušte chirurga, musíme to dokončit.
+CASE5;Q2.4;Instrumentář;Nevím, co od nás chtějí, a je mi to jedno!
+CASE5;D2.4.3;Sálová sestra;Ani já to nevím, jen jsem zvedla telefon a dala vám vědět.
+CASE5;D2.4.4;Asistující chirurg;Prosím, okamžitě zmklněte , ať můžeme pokračovat. 
+CASE5;D3;Hlavní chirurg;V klidu, anesteziologa máme, ale stále zbývá problém k řešení.
+CASE5;Q3.1;Instrumentář;Je to pořád stejné. Toto by měl řešit šéf. 
+CASE5;D3.1.1;Hlavní chirurg;Zachovejme klid. Nervozita nám nepomůže. 
+CASE5;D3.1.2;Sálová sestra;Tohle přeci není poprvé, vždycky jsme to společně zvládli. 
+CASE5;D3.1.3;Anesteziolog;Já už jsem svůj názor řekl, nemůžu vše řešit sám. 
+CASE5;D3.1.4;Asistující chirurg;Ani to není moje práce! Ale měli bychom něco udělat.
+CASE5;Q3.2;Sálová sestra;Toto není poprvé, ale vždycky jsme to zvládli. 
+CASE5;D3.2.1;Hlavní chirurg;Probereme naše možnosti v klidu. 
+CASE5;D3.2.2;Asistující chirurg;Dobře, zkusme to vyřešit, ale není to moje starost. 
+CASE5;D3.2.4;Asistující chirurg;Cokoli, chci jen dokončit operaci.
+CASE5;Q3.3;Asistující chirurg;Neodcházím!
+CASE5;D3.3.1;Hlavní chirurg;Zachovejme klid. Pokud křičíte, nic se nevyřeší.
+CASE5;D3.3.2.;Sálová sestra;Navrhuji, že zde zůstanu a obě další sestry půjdou pomoci na druhý sál. 
+CASE5;D3.3.4;Hlavní chirurg;Už na mě nekřičte.
+CASE5;Q3.4;Sálová sestra;Myslíte si, že bych to měla řešit já ? V žádném případě!
+CASE5;Q4;Hlavní chirurg;Anestezie je vyřešena. Já a druhý chirurg nemůžeme odejít, jak ale seženeme chybějící sestry ? 
+CASE5;D4.1;Anesteziologická sestra;Sesterský tým? Tak určitě! Nemusíme nic řešit!
+CASE5;D4.2;Asistující chirurg;Nemám s tím nic společného, nejsem tady, abych dělala práci za někoho jiného!
+CASE5;D4.3;Instrumentář;Jsme uprostřed operace. Nebudu nikam odcházet. 
+CASE5;D4.4;Sálová sestra;Musíme vyřešit jak zajistit provoz na obou sálech současně. 
+CASE5;D4.4.1;Hlavní chirurg;Dobře, tak jaké jsou další možnosti?
+CASE5;Q5;Sálová sestra;Rozhodně nemůžeme ohrozit bezpečí a kvalitu péče , ale znovu opakuji, musíme zajistit provoz na obou sálech. 
+CASE5;D5.1;Anesteziologická sestra;Jsem tady abych pracoval a udělám vše co je třeba. 
+CASE5;D5.1.1;Sálová sestra;Můžeme to tedy vyřešit ?
+CASE5;D5.2;Instrumentář;Jsem tady abych pracoval, a bohužel musím udělat co mi řeknete. 
+CASE5;D5.2.1;Sálová sestra;Tento přístup  nám mnoho nepomůže. 
+CASE5;D5.3;Asistující chirurg;Sežeňte další tým. Mám já něco udělat ? 
+CASE5;D5.3.1;Sálová sestra;Žádný tým není k dispozici …
+CASE5;D5.4;Anesteziolog;Můj problém je vyřešen, proč jsem i nadále součástí této konverzace?
+CASE5;D5.4.1;Sálová sestra;Musí to být společné rozhodnutí.
+CASE5;Q6;Hlavní chirurg;Tohle nám moc nepomůže. Jak můžeme v této situaci zajistit provoz obou sálů ? 
+CASE5;D6.1;Anesteziolog;To je řečí, co takhle to vyřešit?
+CASE5;D6.1.1;Hlavní chirurg;Proč se chováte takto? Chceme najít řešení. 
+CASE5;D6.2;Sálová sestra;Podle stávajících směrnic můžeme rozdělit ošetřovatelský tým na dva sály. 
+CASE5;D6.2.1;Hlavní chirurg;Pojďme najít nejlepší řešení.
+CASE5;D6.3;Asistující chirurg;Nebudeme zahajovat žádnou další operaci. To je vše! Nějaké připomínky ?
+CASE5;D6.3.1;Hlavní chirurg;Proč se tak chováte? Všichni chceme najít řešení. 
+CASE5;D6.4;Instrumentář;Vždycky je to stejné - problémy musí řešit ti samí lidé. 
+CASE5;D6.4.1;Hlavní chirurg;Proč se chováte takto? Chceme najít řešení. 
+CASE5;Q7;Anesteziologická sestra;Vždy je to stejné! Pošlete mně do jiného sálu a čekáte co se stane. To je nesmysl ! 
+CASE5;D7.1;Asistující chirurg;Nechcete , abych šla já do druhého sálu ?
+CASE5;D7.1.1;Sálová sestra;No tak, musíme zůstat v klidu a být konstruktivní. 
+CASE5;D7.2;Instrumentář;Jakto?  Se mnou nepočítejte. 
+CASE5;D7.3;Hlavní chirurg;Toto je úkol sálové sestry, ona je zodpovědná za organizaci týmu. 
+CASE5;D7.3.1;Sálová sestra;Velmi dobře. Naprosto souhlasím.
+CASE5;D7.4;Anesteziolog;Souhlasím. Budete chybět.
+CASE5;Q8;Sálová sestra;V ideálním případě bychom měli dva sesterské týmy. Vzhledem k tomu, že to není možné, musíme pracovat s tím, co máme. 
+CASE5;D8.1;Anesteziologická sestra;Mám toho dost. Tyto problémy musí stále řešit stejní lidé. 
+CASE5;D8.1.1;Sálová sestra;Není to ideální, ale musíme se rozhodnout.
+CASE5;D8.2;Instrumentář;Měníte všechno uprostřed operace?
+CASE5;D8.3;Asistující chirurg;To je směšné! O všem rozhodujete vy! Uvidíme, jestli to bylo v pořádku ...!
+CASE5;D8.4;Hlavní chirurg;Souhlasím, jaké je vaše rozhodnutí ohledně rozdělení sesterského týmu?
+CASE5;D8.4.1;Sálová sestra;Navrhuji, že zde zůstanu a obě další sestry půjdou pomoci na druhý sál. 
+CASE5;Q9;Hlavní chirurg;Dobře, musíme zajistit dodržování směrnic. 
+CASE5;D9.1;Asistující chirurg;Dělají vše proto, aby ušetřili. 
+CASE5;D9.1.1;Hlavní chirurg;Tohle není právě teď téma k diskuzi. 
+CASE5;D9.2;Instrumentář;Měli by zaplatit další sesterský tým.
+CASE5;D9.3;Asistující chirurg;Pravidla jsou daná. 
+CASE5;D9.3.1;Hlavní chirurg;Jsem rád, že souhlasíte. Pokračujeme. 
+CASE5;D9.4;Anesteziolog;O čem to mluvíte? Tomu prostě nerozumím ...
+CASE5;D9.4.1;Hlavní chirurg;O způsobu řešení problému.
+CASE5;Q10;Sálová sestra;Návrh je, abych zde zůstala pouze já a instrumentář s anesteziologickou sestrou půjdou do druhého sálu. 
+CASE5;D10.1;Anesteziolog;Co? Kdo připravuje léky?
+CASE5;D10.2;Asistující chirurg;Je to řešení ? Kdo bude podávat nástroje? Mám to dělat já ?
+CASE5;D10.3;Instrumentář;Takže musím odejít, budu vám chybět. 
+CASE5;D10.4;Hlavní chirurg;Velmi dobře. Konečně řešení!
+CASE5;D10.4.1;Sálová sestra;Budeme se muset přizpůsobit a dodržovat pravidla.
+CASE5;Q11;Hlavní chirurg;Pojďme si ujasnit, jak budeme situaci řešit.
+CASE5;D11.1;Sálová sestra;Navrhuji, že zde zůstanu a obě další sestry půjdou pomoci na druhý sál. 
+CASE5;D11.2;Asistující chirurg;Vyjasnit co? S ničím z toho nesouhlasím!
+CASE5;D11.2.1;Hlavní chirurg;Nejde o souhlas nebo nesouhlas, ale musíme problém vyřešit.
+CASE5;D11.2.2;Sálová sestra;Navrhuji, že zde zůstanu a obě další sestry půjdou pomoci na druhý sál. 
+CASE5;D11.3;Instrumentář;Stále se měníme. Už pomalu nevím co mám dělat. 
+CASE5;D11.4.1;Hlavní chirurg;O to se snažíme. Musíte věnovat pozornost situaci.
+CASE5;D11.4;Anesteziolog;Nerozumím tomu, jak to uděláme. 
+CASE5;Q12;Sálová sestra;Zůstanu zde sama a budu k ruce všem lékařům.  Anesteziologická sestra a instrumentář se přesunou na druhý sál a instrumentář bude zajišťovat také pozici sálové sestry. 
+CASE5;D12.1;Instrumentář;Chtěl bych odsuď zmizet, ať si to řeší kdo chce. 
+CASE5;D12.1.1;Sálová sestra;To není vůbec profesionální přístup.
+CASE5;D12.2;Asistující chirurg;Je to pořád horší, budeme pracovat bez instrumentáře ? 
+CASE5;D12.2.1;Sálová sestra;Možná to není ideální řešení, ale musíme zajistit druhou místnost.
+CASE5;D12.3;Hlavní chirurg;To zní dobře, souhlasím. 
+CASE5;D12.3.1;Sálová sestra;Díky za podporu, teď si určíme priority. 
+CASE5;D12.4;Anesteziologická sestra;Teď, když mám tady všechno hotové, mám jít jinam a začínat vše znovu ?
+CASE5;D12.4.1;Sálová sestra;Možná to není ideální řešení, ale musíme zajistit druhou místnost.
+CASE5;Q13;Hlavní chirurg;Dobře, pojďme to zkusit. 
+CASE5;D13.0;Sálová sestra;Nejprve musíme připravit druhou místnost. Až dorazí pacient budeme situaci řešit dál. 
+CASE5;D13.1;Instrumentář;Opravdu to takhle musí být ? Vždycky to odneseme. 
+CASE5;D13.1.1;Sálová sestra;Jde o organizaci zdrojů. 
+CASE5;D13.2;Hlavní chirurg;Jsme na dobré cestě, toto zní jako optimální řešení. 
+CASE5;D13.2.1;Sálová sestra;Také souhlasím, pojďme připravit sály.   
+CASE5;D13.3;Anesteziolog;To je zmatek !
+CASE5;D13.3.1;Sálová sestra;Žádný zmatek, jde o využití zdrojů. 
+CASE5;D13.4;Asistující chirurg;Není už druhý sál připraven ? Musí už teď někdo odejít ? 
+CASE5;D13.4.1;Sálová sestra;Ano  je, musíme jenom dokončit přípravu na císařský řez. 
+CASE5;Q14;Hlavní chirurg;Musíme si přerozdělit práci. Navrhuji, aby mi asistující chirurg pomohl s nástroji a anesteziologovi pomůže sálová sestra. 
+CASE5;D14.1;Instrumentář;Už je to tady zase ! To je tak demotivující. 
+CASE5;D14.1.1;Hlavní chirurg;Nejdůležitější je zajistit kvalitu a bezpečnost péče.
+CASE5;D14.2;Asistující chirurg;Já? Nechce se mi věřit, že mám dělat dvě věci najednou. 
+CASE5;D14.3;Sálová sestra;Je to podle směrnic. 
+CASE5;D14.3.1;Hlavní chirurg;Pokračujme. 
+CASE5;D14.4;Anesteziolog;To není normální, musím zajišťovat dvě pozice najednou. 
+CASE5;Q15;Sálová sestra;Dobře, uděláme to takto: Instrumentář připraví druhý sál, asistující chirurg bude zajišťovat i jeho práci. Jakmile dorazí pacientka přesune se za nimi anesteziologická sestra a já zde zůstávám a budu asistovat sama. 
+CASE5;D15.1;Anesteziologická sestra;Pokud už musím odejít ... tak hned. 
+CASE5;D15.1.1;Sálová sestra;Je mi líto, ale musíme dodržovat pravidla.
+CASE5;D15.2;Hlavní chirurg;Souhlasím, pokračujme. 
+CASE5;D15.2.1;Sálová sestra;Děkuju. Budeme pokračovat. 
+CASE5;D15.3;Asistující chirurg;Já znovu nesouhlasím.
+CASE5;D15.4;Instrumentář;Opravdu musím jít vše připravovat sám ? 
+CASE5;Q16;Sálová sestra;Máme rozdělené role, snad vše klapne. 
+CASE5;D16.1;Asistující chirurg;Zapište si, že za tohle nenesu žádnou zodpovědnost. 
+CASE5;D16.1.1;Hlavní chirurg;Musíme pracovat jako tým. Každý by měl převzít svou odpovědnost
+CASE5;D16.1.2;Hlavní chirurg;Je rozhodnuto, za vše přebírám plnou odpovědnost, toto řešení považuji za nejlepší možné. 
+CASE5;D16.1.3;Sálová sestra;Vzhledem ke své funkci samozřejmě souhlasím se svojí odpovědností za rozmístění nelékařského personálu. 
+CASE5;D16.2;Anesteziologická sestra;Měl bych zde zůstat a sálová sestra by měla jít na druhý sál. 
+CASE5;D16.2.1;Hlavní chirurg;Musíme pracovat jako tým. Rozhodnutí už nebudu měnit. 
+CASE5;D16.3;Anesteziolog;Budu spolupracovat, ale nezdá se mi to jako nejlepší řešení. 
+CASE5;D16.3.1;Hlavní chirurg;Musíme pracovat jako tým. Toto je nejlepší rozmístění dostupného personálu. 
+CASE5;D16.4;Hlavní chirurg;Je rozhodnuto, za vše přebírám plnou odpovědnost, toto řešení považuji za nejlepší možné. 
+CASE5;D16.4.1;Sálová sestra;Vzhledem ke své funkci samozřejmě souhlasím se svojí odpovědností za rozmístění nelékařského personálu. 
+CASE5;END1;Hlavní chirurg;Vraťme se k práci a udělejme pro naše nemocné to nejlepší. 
+CASE5;Q17;Anesteziolog; Pokud mi anesteziologická sestra pomůže, můžu zajišťovat oba sály. 
+CASE5;D17.1;Asistující chirurg;Proč o tom pořád mluvíme? Pojďme už to konečně dokončit!
+CASE5;D17.2;Anesteziologická sestra;Měla bych zůstat a sálová setra by měla odejít do druhé místnosti. 
+CASE5;D17.3;Anesteziologická sestra;Nezdá se mi to jako nejlepší řešení. 
+CASE5;D17.4;Hlavní chirurg;Je to týmová práce, všichni bychom měli spolupracovat, abychom našli nejlepší řešení.
+CASE5;Q18;Sálová sestra;Podle stávajících směrnic můžeme rozdělit sesterský tým na dva sály. 
+CASE5;D18.1;Asistující chirurg;Možná chcete, abych šla na druhý sál. 
+CASE5;D18.1.1;Sálová sestra;No tak, musíme zůstat klidní a konstruktivní
+CASE5;D18.1.2;Anesteziologická sestra;Já také ne. Nechci mít takovou zodpovědnost
+CASE5;D18.2;Instrumentář;Cože ? Se mnou nepočítejte. 
+CASE5;D18.3;Hlavní chirurg;Za rozmístění personálu je zodpovědná sálová sestra, ať zorganizuje týmy. 
+CASE5;D18.3.1;Sálová sestra;Velmi dobře. Naprosto souhlasím
+CASE5;D18.3.2;Anesteziologická sestra;Se mnou nepočítejte, nechci mít tu zodpovědnost. 
+CASE5;END2;Hlavní chirurg;Vzhledem k tomu, že jsme se nedohodli, pojďme rychle dokončit operaci a doufejme, že těhotná pacientka tu chvíli počká. 

@@ -105,7 +105,6 @@ public class UI_Manager : MonoBehaviour
 
     bool isStopped = false;
     bool isExitActive = false;
-
     SituationNodeData lastSituation;
 
     private void Awake()
@@ -360,7 +359,7 @@ public class UI_Manager : MonoBehaviour
         }
         else
         {
-            Debug.Log($"No se ha encontrado el audio Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}");
+            //Debug.Log($"No se ha encontrado el audio Audio/{caso}_{LanguageManager.Instance.languageSelected}/{_audio}");
             return 0f;
         }
     }
@@ -394,7 +393,7 @@ public class UI_Manager : MonoBehaviour
         //TEMPORALMENTE LO VAMOS A FORZAR AL INGLES:
         return $"Audio/{caso}_EN/{_audio}";
 
-
+        /*
         string path = $"Audio/Case5_EN/Audio1"; //default value
         if (isValid(caso) && LanguageManager.Instance != null && isValid(_audio)) //esto siempre sera valido
         {
@@ -420,10 +419,12 @@ public class UI_Manager : MonoBehaviour
             Debug.Log("2- No se ha encontrado el audio por lo que asignamos uno por defecto No se ha encontrado --> " + $"Audio/{caso}_EN/{_audio}");
             path = $"Audio/Case5_EN/Audio1";
         }
+        
 
         //Debug.Log($"Vamos a devolver el path {path}");
         
         return path;
+        */
     }
 
     public void GetDialogueContainerLanguage()
@@ -461,7 +462,7 @@ public class UI_Manager : MonoBehaviour
         //#if !UNITY_EDITOR
         if (LanguageManager.Instance != null)
         {
-            Debug.Log($"El Languague manager no es nulo, contiene es caso: {LanguageManager.Instance.caseSelected} y languague {LanguageManager.Instance.languageSelected}");
+            //Debug.Log($"El Languague manager no es nulo, contiene es caso: {LanguageManager.Instance.caseSelected} y languague {LanguageManager.Instance.languageSelected}");
             caso = LanguageManager.Instance.caseSelected;
             //path = Application.streamingAssetsPath + $"/Resources/Cases/{caso}_{LanguageManager.Instance.languageSelected}";
             path = Application.streamingAssetsPath + $"/Resources/Cases/{caso}_EN";
