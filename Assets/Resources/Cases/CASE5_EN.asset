@@ -1385,9 +1385,9 @@ MonoBehaviour:
     SituationName: S1
     Context: A surgery is going on, which (laparoscopic cholecystectomy), with a
       surgical team consisting of two general surgeons, an anaesthesiologist and
-      three nurses (circulating / anaesthesia / instrumentalist). The phone rings,
-      and is answered by the circulating nurse, who shares the information with the
-      rest of the surgical team.
+      three nurses (Scrub, Circulating and Anaesthetic). The phone rings, and is
+      answered by the circulating nurse, who shares the information with the rest
+      of the surgical team.
     Id: 0
     audioId: D1
     nodeType: 0
@@ -1422,14 +1422,6 @@ MonoBehaviour:
     speaker: Assistant surgeon
     nodeType: 1
     Position: {x: 4464, y: 1620}
-  - Guid: 3a2fbd9a-b5c3-4f1b-b472-07d3d3b22906
-    QuestionName: Q1.2
-    Description: I am the one in charge and do not allow them to bring more patients
-      to the operating theatre.
-    audioId: D1.2
-    speaker: Head surgeon
-    nodeType: 1
-    Position: {x: 45, y: 704}
   - Guid: 603d47b1-5583-43cd-995c-69a2ff81fb38
     QuestionName: Q1.3
     Description: "Let\u2019s take the problem together, and calmly try to find the
@@ -1469,8 +1461,8 @@ MonoBehaviour:
     Position: {x: 1184, y: 4523}
   - Guid: f40a0d1e-401b-4345-a545-6f1a22ce5428
     QuestionName: Q8
-    Description: The ideal situation would be to have two nursing teams. That not
-      being possible we have to adapt making the most of the resources.
+    Description: The ideal situation would be to have two nursing teams. That is
+      not possible we have to adapt to the current capacities.
     audioId: D8
     speaker: Circulating nurse
     nodeType: 1
@@ -1484,18 +1476,16 @@ MonoBehaviour:
     Position: {x: 1949, y: 7631}
   - Guid: 77df0f74-4370-4c48-b560-63e53e93bfe8
     QuestionName: Q12
-    Description: I will support all the doctors in this room. The nurse anaesthetist
-      will keep the same functions in the other room and the instrumentalist nurse
-      will assume the functions of circulating in the other room.
+    Description: I will support all the doctors in this room. The anaesthetic nurse
+      will ensure the same functions in the other room and the Scrub nurse will ensure
+      the functions of circulating nurse there.
     audioId: D12
     speaker: Circulating nurse
     nodeType: 1
     Position: {x: 4852, y: 7640}
   - Guid: 8b40d59f-01d9-4faa-b4e3-16547764e24d
     QuestionName: Q13
-    Description: "Good, let\u2019s make this change work. First we have to prepare
-      the other room. When the pregnant woman will arrive, we will have to mobilise
-      other resources."
+    Description: "Good, let\u2019s try these changes."
     audioId: D13.0
     speaker: Circulating nurse
     nodeType: 1
@@ -1503,9 +1493,8 @@ MonoBehaviour:
   - Guid: e92ea62e-e786-4e8d-ad8b-f96a3501c2bf
     QuestionName: Q14
     Description: The time has come to redistribute all the functions in this room.
-      I propose that the assistant surgeon also embraces the instrumentation. The
-      anaesthesiologist must ensure the anaesthetic process, with the help of the
-      circulating nurse.
+      I propose that the assistant surgeon also cover the instrumentation. The anaesthesiologist
+      must ensure the anaesthetic process, with the help of the circulating nurse.
     audioId: D14
     speaker: Head surgeon
     nodeType: 1
@@ -1525,24 +1514,16 @@ MonoBehaviour:
     speaker: Assistant surgeon
     nodeType: 1
     Position: {x: 5898, y: 10145}
-  - Guid: 2382846c-32c1-4863-9cf8-15f703821c94
-    QuestionName: Q3.2
-    Description: This is not the first time it happens, but we always could work
-      it through.
-    audioId: D3.2
-    speaker: Circulating nurse
-    nodeType: 1
-    Position: {x: 4385, y: 551}
   - Guid: 6b0626fd-0f51-4dc7-9013-9df5c280928e
     QuestionName: Q2.1
-    Description: In what regards to anaesthesiologists, do we have available resources?
+    Description: Regarding anaesthesiologists, is anyone available?
     audioId: D2.1
     speaker: Circulating nurse
     nodeType: 1
     Position: {x: 1982, y: -451}
   - Guid: d215d87d-efe1-44fd-9094-de36ecad32f1
     QuestionName: Q9
-    Description: Good, we must ensure that guidelines are followed.
+    Description: Good, we must ensure that rules are followed.
     audioId: D9
     speaker: Head surgeon
     nodeType: 1
@@ -1556,52 +1537,22 @@ MonoBehaviour:
     Position: {x: 2271, y: 704}
   - Guid: 26624ade-865b-4572-b61d-9b1fb750da37
     QuestionName: Q15
-    Description: 'Thus being, the timings to mobilise resources will be: the instrumentalist
-      nurse will leave and prepare the room, and the assistant surgeon will embrace
-      the two functions. In 5 minutes the pregnant woman will arrive and by then
-      the nurse anaesthetist will also leave and I will be alone in this room.'
+    Description: "OK, let\u2019s do that in this order: the Scrub nurse will prepare
+      the room, and the assistant surgeon will ensure the two functions. In 5 minutes
+      the pregnant woman will arrive and by then the nurse anaesthetist will be also
+      left and I stay in this room and assist on my own."
     audioId: D15
     speaker: Circulating nurse
     nodeType: 1
     Position: {x: 4920, y: 9049}
-  - Guid: 8681cec5-cb65-4f30-b5c4-b4d3577e3bf6
-    QuestionName: Q16
-    Description: Functions for both rooms are defined thus ensuring their functioning.
-    audioId: D16
-    speaker: Circulating nurse
-    nodeType: 1
-    Position: {x: -64, y: 10785}
   - Guid: b631a8e4-5dca-4c61-8881-35d0ffac77f9
     QuestionName: Q6
     Description: "That isn\u2019t helping towards a solution! In this situation how
-      can we ensure patients\u2019 safety and answer to the opening of another room?"
+      can we ensure both patients\u2019 safety and one more functioning room?"
     audioId: D6
     speaker: Head surgeon
     nodeType: 1
     Position: {x: 3456, y: 4575}
-  - Guid: d9d2b60b-8a41-46dd-a1ab-4fdb3e0cfe6e
-    QuestionName: Q18.2
-    Description: "How\u2019s that? Don\u2019t count me in!"
-    audioId: D18.2
-    speaker: Instrumentalist nurse
-    nodeType: 1
-    Position: {x: 5937, y: 10634}
-  - Guid: 5de6836b-3042-4a74-9236-cf632ab926ea
-    QuestionName: Q18.3
-    Description: The nurse in charge of the team is the circulating. He will organise
-      the team.
-    audioId: D18.3
-    speaker: Head surgeon
-    nodeType: 1
-    Position: {x: 5677, y: 11176}
-  - Guid: 931f69ec-4945-499a-b118-184192860364
-    QuestionName: Q4
-    Description: Anaesthesia is settled. The assistant surgeon and I cannot leave
-      the room. The nursing team, how can we solve that?
-    audioId: D4
-    speaker: Head Surgeon
-    nodeType: 1
-    Position: {x: -569, y: 4542}
   - Guid: c798ca12-73e5-459e-b5d5-d1c17a59e358
     QuestionName: Q7
     Description: "It\u2019s always the same! You make me go to the other room, and
@@ -1612,13 +1563,59 @@ MonoBehaviour:
     Position: {x: -335, y: 6179}
   - Guid: a3ead894-6c74-4313-a2f8-ad46d5103905
     QuestionName: Q10
-    Description: The proposal would be that in this room only the circulating nurse
-      would stay, the instrumentalist and nurse anaesthetist would go in the other
-      room.
+    Description: The proposal is only I will stay in this room only and the instrumentalist
+      and nurse anaesthetist would go in the other room.
     audioId: D10
     speaker: Circulating nurse
     nodeType: 1
     Position: {x: -492, y: 7568}
+  - Guid: 3a2fbd9a-b5c3-4f1b-b472-07d3d3b22906
+    QuestionName: Q1.2
+    Description: I am the one in charge and do not allow them to transport more patients
+      to the operating theatre.
+    audioId: D1.2
+    speaker: Head surgeon
+    nodeType: 1
+    Position: {x: 16, y: 550}
+  - Guid: 2382846c-32c1-4863-9cf8-15f703821c94
+    QuestionName: Q3.2
+    Description: This is not the first time it happens, but we always managed it
+      when we analysed the options.
+    audioId: D3.2
+    speaker: Circulating nurse
+    nodeType: 1
+    Position: {x: 4153, y: 549}
+  - Guid: 931f69ec-4945-499a-b118-184192860364
+    QuestionName: Q4
+    Description: Anaesthesia is ensured. The assistant surgeon and I cannot leave
+      the room. How can we solve the problems with the missing nursing team?
+    audioId: D4
+    speaker: Head Surgeon
+    nodeType: 1
+    Position: {x: -845, y: 4722}
+  - Guid: 8681cec5-cb65-4f30-b5c4-b4d3577e3bf6
+    QuestionName: Q16
+    Description: The functions of both rooms are defined and their functioning is
+      ensured.
+    audioId: D16
+    speaker: Circulating nurse
+    nodeType: 1
+    Position: {x: -317, y: 10798}
+  - Guid: d9d2b60b-8a41-46dd-a1ab-4fdb3e0cfe6e
+    QuestionName: Q18.2
+    Description: Leave me out, then!
+    audioId: D18.2
+    speaker: Instrumentalist nurse
+    nodeType: 1
+    Position: {x: 5866, y: 10634}
+  - Guid: 5de6836b-3042-4a74-9236-cf632ab926ea
+    QuestionName: Q18.3
+    Description: The nurse in charge of the team is the circulating one. She will
+      organise the team.
+    audioId: D18.3
+    speaker: Head surgeon
+    nodeType: 1
+    Position: {x: 5528, y: 11181}
   AnswerNodeData:
   - Guid: df970370-c4b1-4bab-94e2-cec698d12a83
     AnswerName: A1.1.2
@@ -2359,8 +2356,8 @@ MonoBehaviour:
     Position: {x: 2455, y: 8004}
   - Guid: 2e594f29-56da-4f15-8df6-940f72009aac
     AnswerName: A16.1
-    Feedback: "Then, everybody goes back to work and let\u2019s do our best for these
-      patients"
+    Feedback: "So, let\u2019s go back to work and let\u2019s do our best for the
+      patients."
     Situation: 
     IsCorrect: 0
     IsEnd: 1
@@ -2371,8 +2368,8 @@ MonoBehaviour:
     Position: {x: 478, y: 10252}
   - Guid: 0a3cffb5-ab31-4b06-942b-a64b1fe73807
     AnswerName: A16.2
-    Feedback: "Then, everybody goes back to work and let\u2019s do our best for these
-      patients"
+    Feedback: "So, let\u2019s go back to work and let\u2019s do our best for the
+      patients."
     Situation: 
     IsCorrect: 0
     IsEnd: 1
@@ -2383,8 +2380,8 @@ MonoBehaviour:
     Position: {x: 483, y: 10546}
   - Guid: 868a80bc-cb1b-4895-abec-385d5f6c6b04
     AnswerName: A16.4
-    Feedback: "Then, everybody goes back to work and let\u2019s do our best for these
-      patients"
+    Feedback: "So, let\u2019s go back to work and let\u2019s do our best for the
+      patients."
     Situation: 
     IsCorrect: 0
     IsEnd: 1
@@ -2816,8 +2813,8 @@ MonoBehaviour:
     Position: {x: 4525, y: 6633}
   - Guid: 8c5d5600-2e8b-403a-af9d-ff6e6df7f9b4
     AnswerName: A16.3
-    Feedback: "Then, everybody goes back to work and let\u2019s do our best for these
-      patients"
+    Feedback: "So, let\u2019s go back to work and let\u2019s do our best for the
+      patients."
     Situation: 
     IsCorrect: 0
     IsEnd: 1
@@ -2840,8 +2837,8 @@ MonoBehaviour:
   DialogueNodeData:
   - Guid: 7f96e052-6347-43b3-866a-7247b0a6a90d
     DialogueName: D1.1.3
-    DialogueText: The obstetric surgeon has decided and they will bring the pregnant.
-      We have to look for other options
+    DialogueText: The obstetric surgeon has decided and they will transport the pregnant.
+      We have to check other options.
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D1.1.3
@@ -2866,7 +2863,7 @@ MonoBehaviour:
     Position: {x: 1013, y: 981}
   - Guid: 464638c9-ad5d-4108-9b7c-d616ac16f3a1
     DialogueName: D1.3.2
-    DialogueText: But this is an emergency situation and cannot wait!
+    DialogueText: But this is an emergency situation and it cannot wait!
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D1.3.2
@@ -2924,8 +2921,8 @@ MonoBehaviour:
     Position: {x: 2858, y: 96}
   - Guid: 6fd76c3e-e677-485b-9c3f-004c90549205
     DialogueName: D2.2.2
-    DialogueText: "Let\u2019s check resources. There is other anaesthesiologist on
-      call, so there is no problem in that regard."
+    DialogueText: "Let\u2019s check it. There is other anaesthesiologist on call,
+      so there is no problem in that regard."
     Speaker: 'Anaesthesiologist '
     Mood: Calm
     audioId: D2.2.2
@@ -2941,7 +2938,7 @@ MonoBehaviour:
     Position: {x: 2870, y: 695}
   - Guid: e0143a6c-32fb-45e1-b7f4-8aacb8fbb0ed
     DialogueName: D2.2.4
-    DialogueText: Let me know if I can be of any help.
+    DialogueText: Let me know if I can help.
     Speaker: 'Anaesthesiologist '
     Mood: Calm
     audioId: D2.2.4
@@ -3006,14 +3003,6 @@ MonoBehaviour:
     audioId: D10.4
     nodeType: 3
     Position: {x: 1139, y: 7072}
-  - Guid: 85759925-56d3-4da8-8cda-8c82b8074cbd
-    DialogueName: D10.3.1
-    DialogueText: Very well. Finally a solution!
-    Speaker: Head surgeon
-    Mood: Calm
-    audioId: D10.4
-    nodeType: 3
-    Position: {x: 1165, y: 7744}
   - Guid: 34bea8dd-b786-4768-822e-13e0ed37ec50
     DialogueName: D10.4.1
     DialogueText: We will have to adapt and follow the rules.
@@ -3024,7 +3013,8 @@ MonoBehaviour:
     Position: {x: 1146, y: 8043}
   - Guid: 2e68eebe-664c-4e89-bbcd-42049931a5d2
     DialogueName: D13.2
-    DialogueText: We are in the right track. This sounds a balanced resource management.
+    DialogueText: We are on the right track. This sounds like a balanced resource
+      management.
     Speaker: Head surgeon
     Mood: Calm
     audioId: D13.2
@@ -3048,7 +3038,7 @@ MonoBehaviour:
     Position: {x: 1019, y: 9120}
   - Guid: 784e80d7-1725-45be-b5b5-41163bd38c0b
     DialogueName: D1.1.1
-    DialogueText: This is an emergency situation and cannot wait. We have to find
+    DialogueText: This is an emergency situation and we cannot wait. We have to find
       a solution.
     Speaker: Circulating nurse
     Mood: Calm
@@ -3066,8 +3056,8 @@ MonoBehaviour:
     Position: {x: 2934, y: 2751}
   - Guid: 41bd4f28-b318-4b57-bb17-c538ae30cb9c
     DialogueName: D1.1.2
-    DialogueText: "Let\u2019s take the problem together, and calmly try to find the
-      best solution"
+    DialogueText: "Let\u2019s solve the problem together, and calmly try to find
+      the best solution"
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D1.3
@@ -3102,7 +3092,7 @@ MonoBehaviour:
     Position: {x: 1004, y: 1862}
   - Guid: c30e7872-4f43-4d57-b753-f6319476e84b
     DialogueName: D2
-    DialogueText: Calmly let us think together and try to find an adequate solution.
+    DialogueText: "Calmly let\u2019s think together and try to find an adequate solution"
     Speaker: Head Surgeon
     Mood: Calm
     audioId: D2
@@ -3170,7 +3160,7 @@ MonoBehaviour:
     Position: {x: 5279, y: -299}
   - Guid: d951f8c8-d524-42e8-b62d-61df753c026b
     DialogueName: D3.2.1
-    DialogueText: "Without exaltation we will analyse the options\u2026"
+    DialogueText: "Let\u2019s analyse the options calmly\u2026"
     Speaker: Head surgeon
     Mood: Calm
     audioId: D3.2.1
@@ -3213,9 +3203,8 @@ MonoBehaviour:
     Position: {x: 5873, y: 2656}
   - Guid: ca1a3313-e0c5-4ff1-81bb-8fc0df7eca2f
     DialogueName: D3.3.2.1
-    DialogueText: My suggestion is that the circulating nurse supports this room.
-      The other two will assume in the other room the functions of circulating and
-      anaesthesia.
+    DialogueText: I suggest that the I will stay in this room. And you two will go
+      to the other room to ensure the anaesthesia and circulating nurse duties.
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D3.3.2.1
@@ -3288,7 +3277,7 @@ MonoBehaviour:
     Position: {x: 2779, y: 4652}
   - Guid: ed6e76f4-08de-48ed-bac8-2841dc2242e0
     DialogueName: D5.1.1
-    DialogueText: So we can come up with a solution.
+    DialogueText: So we need to come up with a solution.
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D5.1.1
@@ -3304,7 +3293,7 @@ MonoBehaviour:
     Position: {x: 2899, y: 4309}
   - Guid: 174c4d5d-dcb1-4639-9b56-704ab06f39ae
     DialogueName: D5.3
-    DialogueText: Get another team. Am I supposed to do something?
+    DialogueText: Get another team. Am I supposed to do anything?
     Speaker: Assistant surgeon
     Mood: Calm
     audioId: D5.3
@@ -3326,18 +3315,10 @@ MonoBehaviour:
     audioId: D5.4.1
     nodeType: 3
     Position: {x: 2882, y: 4974}
-  - Guid: 058c4154-e965-48f3-813b-6e4d161fc8b0
-    DialogueName: D7.3.1
-    DialogueText: Very well. I completely agree.
-    Speaker: Circulating nurse
-    Mood: Calm
-    audioId: D7.3.1
-    nodeType: 3
-    Position: {x: 1231, y: 6392}
   - Guid: 17a17ff8-7515-42db-a7c9-229998ad3b57
     DialogueName: D7.3
-    DialogueText: The nurse in charge of the team is the circulating. He will organise
-      the team.
+    DialogueText: The nurse in charge of the team is the circulating one. She will
+      organise the team.
     Speaker: Head surgeon
     Mood: Calm
     audioId: D7.3
@@ -3361,7 +3342,7 @@ MonoBehaviour:
     Position: {x: 1038, y: 6676}
   - Guid: a960d2f2-8f88-408a-adf5-58a6236e832c
     DialogueName: D7.2
-    DialogueText: "How\u2019s that? Don\u2019t count me in!"
+    DialogueText: Leave me out, then!
     Speaker: Instrumentalist nurse
     Mood: Calm
     audioId: D7.2
@@ -3415,14 +3396,6 @@ MonoBehaviour:
     audioId: D10.4
     nodeType: 3
     Position: {x: 1229, y: 7375}
-  - Guid: f747d890-24fc-4273-bb90-57d0dbfdf32e
-    DialogueName: D10.3
-    DialogueText: So I am to leave, I will be missed!
-    Speaker: Instrumentalist nurse
-    Mood: Calm
-    audioId: D10.3
-    nodeType: 3
-    Position: {x: 880, y: 7737}
   - Guid: 46d4fb43-334c-47d8-8c57-a3974761ef5e
     DialogueName: D10.4
     DialogueText: Very well. Finally a solution!
@@ -3433,24 +3406,16 @@ MonoBehaviour:
     Position: {x: 897, y: 8039}
   - Guid: 542cc553-3d6e-4e43-a733-abe73ce6706f
     DialogueName: D11.3
-    DialogueText: "We are always changing. I don\u2019t know my role in any of this!"
+    DialogueText: "There are still some changes! I don\u2019t even know my role!"
     Speaker: Instrumentalist nurse
     Mood: Calm
     audioId: D11.3
     nodeType: 3
     Position: {x: 2707, y: 7703}
-  - Guid: a877f148-6d4a-4aa3-a1ba-6443f87634b3
-    DialogueName: D11.4
-    DialogueText: "I still don\u2019t understand. How do we articulate?"
-    Speaker: Anaesthesiologist
-    Mood: Calm
-    audioId: D11.4
-    nodeType: 3
-    Position: {x: 2715, y: 8010}
   - Guid: 87cc3db4-922b-489c-ad0a-70dc8334c15f
     DialogueName: D11.1
-    DialogueText: My suggestion is that I support this room. The other two nurses
-      will assume in the other room the functions of circulating and anaesthesia.
+    DialogueText: I suggest that the I will stay in this room. And you two will go
+      to the other room to ensure the anaesthesia and circulating nurse duties.
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D11.1
@@ -3493,8 +3458,8 @@ MonoBehaviour:
     Position: {x: 3658, y: 7699}
   - Guid: 99e7cb60-a481-4caa-b0b7-c53a87d91d43
     DialogueName: D11.2.2
-    DialogueText: My suggestion is that I support this room. The other two nurses
-      will assume in the other room the functions of circulating and anaesthesia.
+    DialogueText: I suggest that the I will stay in this room. And you two will go
+      to the other room to ensure the anaesthesia and circulating nurse duties.
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D11.2.2
@@ -3536,7 +3501,8 @@ MonoBehaviour:
     Position: {x: 1164, y: 8439}
   - Guid: 7f8aa094-c2b8-4eb0-a6d5-5e3665f7646b
     DialogueName: D13.4
-    DialogueText: "Aren\u2019t the other rooms prepared? Will someone have to leave?"
+    DialogueText: "Aren\u2019t the other rooms prepared? Will anyone have to leave
+      now?"
     Speaker: Assistant surgeon
     Mood: Calm
     audioId: D13.4
@@ -3552,8 +3518,7 @@ MonoBehaviour:
     Position: {x: 1378, y: 8768}
   - Guid: 5998db17-222e-4768-ac08-944e48b2f956
     DialogueName: D13.4.1
-    DialogueText: They are but there are specific aspects that must be prepared in
-      the moment.
+    DialogueText: 'The room is ready and there are other issues that need to be solved. '
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D13.4.1
@@ -3561,7 +3526,8 @@ MonoBehaviour:
     Position: {x: 1201, y: 9415}
   - Guid: 3568d270-a714-40e8-8862-b16bc58dd0d3
     DialogueName: D16.2
-    DialogueText: I should stay and the circulating should go into the other room.
+    DialogueText: I should stay and the circulating nurse should go into the other
+      room.
     Speaker: Nurse anaesthesist
     Mood: Angry
     audioId: D16.2
@@ -3594,8 +3560,8 @@ MonoBehaviour:
     Position: {x: 1583, y: 10249}
   - Guid: 26a7f28c-e0d0-4cf2-848d-f7af358e755d
     DialogueName: D16.1.2
-    DialogueText: It is decided. I will assume the responsibility because I consider
-      this the best option in this given context.
+    DialogueText: Decided. I will take the responsibility because I consider this
+      the best option in the given context.
     Speaker: 'Head surgeon '
     Mood: Calm
     audioId: D16.1.2
@@ -3629,7 +3595,7 @@ MonoBehaviour:
     Position: {x: 1969, y: 10833}
   - Guid: 4e5b7ddb-96de-417d-8c22-8f920808d27d
     DialogueName: D16.1.3
-    DialogueText: Because I am the charge nurse I agree and subscribe the responsibility
+    DialogueText: Because I am the nurse in charge, I agree and take the responsibility
       for the nursing team.
     Speaker: Circulating nurse
     Mood: Calm
@@ -3656,8 +3622,8 @@ MonoBehaviour:
     Position: {x: 2668, y: 10835}
   - Guid: ed107580-caa7-4b36-ae3a-603c34013f4a
     DialogueName: D16.4
-    DialogueText: It is decided. I will assume the responsibility because I consider
-      this the best option in this given context.
+    DialogueText: Decided. I will take the responsibility because I consider this
+      the best option in the given context.
     Speaker: 'Head surgeon '
     Mood: Calm
     audioId: D16.4
@@ -3665,7 +3631,7 @@ MonoBehaviour:
     Position: {x: 970, y: 11105}
   - Guid: dcba35a1-ea2d-4677-a388-0d016742128e
     DialogueName: D16.4.1
-    DialogueText: Because I am the charge nurse I agree and subscribe the responsibility
+    DialogueText: Because I am the nurse in charge, I agree and take the responsibility
       for the nursing team.
     Speaker: Circulating nurse
     Mood: Calm
@@ -3674,8 +3640,8 @@ MonoBehaviour:
     Position: {x: 1680, y: 11107}
   - Guid: d28a84cf-d268-4028-bd75-e01abd4223bc
     DialogueName: D3
-    DialogueText: Let us keep the focus. Regarding anaesthesia, it is settled but
-      we cannot disperse, there is still a situation to be solved.
+    DialogueText: Stay focused. There's no problem with the anaesthesia, but we still
+      need to solve the situation.
     Speaker: Head Surgeon
     Mood: Calm
     audioId: D3
@@ -3683,7 +3649,7 @@ MonoBehaviour:
     Position: {x: 3992, y: 1282}
   - Guid: 7d2ad5a5-1fcb-4dd0-819d-117d62059f8a
     DialogueName: D4.1
-    DialogueText: The nursing team? Sure! We do not have to solve anything!
+    DialogueText: That is not the problem of nursing team!
     Speaker: Nurse anaesthesist
     Mood: Angry
     audioId: D4.1
@@ -3700,8 +3666,7 @@ MonoBehaviour:
     Position: {x: 521, y: 4288}
   - Guid: 2a1fbd36-41c4-4847-8b80-b1585eb9b182
     DialogueName: D4.4
-    DialogueText: We have to come up with a solution where the two rooms will be
-      working.
+    DialogueText: We have to come up with a solution with two functioning rooms.
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D4.4
@@ -3709,7 +3674,7 @@ MonoBehaviour:
     Position: {x: 476, y: 4991}
   - Guid: 416cd1b3-897d-496d-a635-a912069e4648
     DialogueName: D4.4.1
-    DialogueText: Fine, so what other options?
+    DialogueText: Fine, so what are the other options?
     Speaker: Head Surgeon
     Mood: Calm
     audioId: D4.4.1
@@ -3801,7 +3766,7 @@ MonoBehaviour:
     Position: {x: 2988, y: 6019}
   - Guid: f558087d-717e-4518-8608-2d21f5c1a7aa
     DialogueName: D8.1
-    DialogueText: The ones who solve it are always the same. I have enough!
+    DialogueText: The ones who solve it are always the same. I am fed up!
     Speaker: Nurse anaesthesist
     Mood: Angry
     audioId: D8.1
@@ -3839,14 +3804,6 @@ MonoBehaviour:
     audioId: D9.1
     nodeType: 3
     Position: {x: 4752, y: 5682}
-  - Guid: 88e60715-5151-40c1-a4a2-8438f07809f9
-    DialogueName: D9.1.1
-    DialogueText: Right now that is not the discussion
-    Speaker: Head surgeon
-    Mood: Calm
-    audioId: D9.1.1
-    nodeType: 3
-    Position: {x: 4988, y: 5691}
   - Guid: a86b681d-a8b2-4344-8ebc-58a43c5640d4
     DialogueName: D9.2
     DialogueText: They should pay for another nursing team.
@@ -3889,9 +3846,8 @@ MonoBehaviour:
     Position: {x: 4987, y: 6330}
   - Guid: fddae7d5-3c37-4d54-b707-ed9a56bb8a17
     DialogueName: D8.4.1
-    DialogueText: My suggestion is that the circulating nurse supports this room.
-      The other two will assume in the other room the functions of circulating and
-      anaesthesia.
+    DialogueText: I suggest that the I will stay in this room. And you two will go
+      to the other room to ensure the anaesthesia and circulating nurse duties.
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D8.4.1
@@ -3899,38 +3855,12 @@ MonoBehaviour:
     Position: {x: 3440, y: 6641}
   - Guid: 2c1bf894-2741-46b0-8a4e-aeafb90b0530
     DialogueName: D12.1
-    DialogueText: I wish I could go away. Whoever wants could solve the problem.
+    DialogueText: I wish I could leave. Whoever solves the problem
     Speaker: Instrumentalist nurse
     Mood: Angry
     audioId: D12.1
     nodeType: 3
     Position: {x: 6419, y: 7150}
-  - Guid: 87fce98c-388a-4355-8ce3-6b997f9b5bfd
-    DialogueName: D12.3
-    DialogueText: Sounds a good option. Approved
-    Speaker: Head surgeon
-    Mood: Calm
-    audioId: D12.3
-    nodeType: 3
-    Position: {x: 6420, y: 7771}
-  - Guid: cd60249a-f949-4619-acbf-7742b88943f3
-    DialogueName: D12.4
-    DialogueText: Now that everything was done I have to go somewhere else and start
-      again.
-    Speaker: Nurse anaesthesist
-    Mood: Calm
-    audioId: D12.4
-    nodeType: 3
-    Position: {x: 6371, y: 8063}
-  - Guid: 61205e36-3b77-45e4-9bb0-d0bc327b610e
-    DialogueName: D12.4.1
-    DialogueText: It might not be the ideal solution, but we have to safeguard the
-      other room.
-    Speaker: Circulating nurse
-    Mood: Calm
-    audioId: D12.4.1
-    nodeType: 3
-    Position: {x: 6857, y: 8055}
   - Guid: de9254b8-1f6d-4e0e-a21e-a12cb280ac1b
     DialogueName: D12.3.1
     DialogueText: Thanks for the support. Now let us prioritise tasks
@@ -3941,8 +3871,8 @@ MonoBehaviour:
     Position: {x: 6656, y: 7775}
   - Guid: f900e3b0-fc54-47cc-a2c5-853f65fa4045
     DialogueName: D12.2.1
-    DialogueText: It might not be the ideal solution, but we have to safeguard the
-      other room.
+    DialogueText: It might not be the ideal solution, but we have to ensure the other
+      room service.
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D12.2.1
@@ -3974,7 +3904,7 @@ MonoBehaviour:
     Position: {x: 3749, y: 8634}
   - Guid: 30ad3187-37a7-4540-8c69-25842544273d
     DialogueName: D14.2
-    DialogueText: "Me? Should I embrace two functions? I can\u2019t believe it\u2026!"
+    DialogueText: "Me? Should I cover two functions? I can\u2019t believe it\u2026!"
     Speaker: Assistant surgeon
     Mood: Angry
     audioId: D14.2
@@ -3998,7 +3928,7 @@ MonoBehaviour:
     Position: {x: 3934, y: 9231}
   - Guid: 2bbf8669-7f1b-4a06-aa3c-71fdec8636e4
     DialogueName: D14.4
-    DialogueText: "Now, I will have to embrace two functions. That\u2019s not normal
+    DialogueText: "Now, I will have to ensure two functions. That\u2019s not normal
       \u2026."
     Speaker: 'Anaesthesiologist '
     Mood: angry
@@ -4039,20 +3969,12 @@ MonoBehaviour:
     Position: {x: 7260, y: 8900}
   - Guid: fc5ebfec-e6f2-4842-a326-822e9700dffe
     DialogueName: D15.4
-    DialogueText: Do I have to be first and prepare everything alone?
+    DialogueText: Should I really leave and prepare everything myself?
     Speaker: Instrumentalist nurse
     Mood: Calm
     audioId: D15.4
     nodeType: 3
     Position: {x: 7048, y: 9478}
-  - Guid: 1f91a2f4-32ad-42c5-a916-b69787229732
-    DialogueName: D15.1
-    DialogueText: "If I have to leave \u2026 it is now!"
-    Speaker: Nurse anaesthesist
-    Mood: Angry
-    audioId: D15.1
-    nodeType: 3
-    Position: {x: 7054, y: 8626}
   - Guid: 0115223e-1490-4128-9092-b45f15760d74
     DialogueName: D15.3.1
     DialogueText: I am sorry but we must follow the rules.
@@ -4079,7 +4001,8 @@ MonoBehaviour:
     Position: {x: 4620, y: 10706}
   - Guid: 1b6a9ac4-1219-4b4c-ab5b-0020da792ef6
     DialogueName: D17.2
-    DialogueText: I should stay and the circulating should go into the other room.
+    DialogueText: I should stay and the circulating nurse should go into the other
+      room.
     Speaker: Nurse anaesthesist
     Mood: Angry
     audioId: D17.2
@@ -4120,7 +4043,7 @@ MonoBehaviour:
     Position: {x: 6480, y: 11037}
   - Guid: 6420963c-849e-4284-9814-41d41938d8e3
     DialogueName: D18.1.1
-    DialogueText: Come on, we have to be calm and assume constructive attitudes.
+    DialogueText: Come on, we have to be calm and constructive.
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D18.1.1
@@ -4136,7 +4059,7 @@ MonoBehaviour:
     Position: {x: 7001, y: 10748}
   - Guid: 71cda9c8-a385-4afb-928f-daa9fe332a52
     DialogueName: D18.3.2
-    DialogueText: "Don\u2019t count me in. I don\u2019t want that responsibility"
+    DialogueText: "Don\u2019t consider me. I don\u2019t want that responsibility."
     Speaker: Nurse anaesthesist
     Mood: Calm
     audioId: D18.3.2
@@ -4152,8 +4075,8 @@ MonoBehaviour:
     Position: {x: 6977, y: 10200}
   - Guid: 0828125f-72ee-4547-ad42-643de5342ddb
     DialogueName: D18
-    DialogueText: According to the existing directions we can divide the nursing
-      team into the two rooms
+    DialogueText: According to the existing guidelines we can divide the nursing
+      team into the two rooms.
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D18
@@ -4278,11 +4201,10 @@ MonoBehaviour:
     Position: {x: 5262, y: 1561}
   - Guid: a9eb996a-0dcb-4821-af97-a1c7b26df026
     DialogueName: D1.0
-    DialogueText: The obstetric surgeon informs that there is a pregnant woman in
-      labour, who will have to undergo an urgent caesarean section, because the foetus
-      is in distress.  They will bring the pregnant woman to the operating room,
-      but we only have a nursing team. We have to find the best way to solve this
-      situation.
+    DialogueText: The obstetric surgeon informs that there is a pregnant woman who
+      will have to undergo an urgent caesarean section, because the foetus is in
+      distress. They will transport the pregnant woman to the operating room, but
+      we only have a nursing team. We have to find the best way to solve this situation.
     Speaker: Circulating nurse
     Mood: Calm
     audioId: D1.0
@@ -4296,4 +4218,78 @@ MonoBehaviour:
     audioId: Audio id
     nodeType: 3
     Position: {x: -1241, y: 1087}
+  - Guid: 058c4154-e965-48f3-813b-6e4d161fc8b0
+    DialogueName: D7.3.1
+    DialogueText: Very well. I completely agree.
+    Speaker: Circulating nurse
+    Mood: Calm
+    audioId: D7.3.1
+    nodeType: 3
+    Position: {x: 1306, y: 6385}
+  - Guid: 88e60715-5151-40c1-a4a2-8438f07809f9
+    DialogueName: D9.1.1
+    DialogueText: We are not discussing this right now.
+    Speaker: Head surgeon
+    Mood: Calm
+    audioId: D9.1.1
+    nodeType: 3
+    Position: {x: 5044, y: 5634}
+  - Guid: f747d890-24fc-4273-bb90-57d0dbfdf32e
+    DialogueName: D10.3
+    DialogueText: So, I have to leave, but remember, you will miss me!
+    Speaker: Instrumentalist nurse
+    Mood: Calm
+    audioId: D10.3
+    nodeType: 3
+    Position: {x: 821, y: 7736}
+  - Guid: 85759925-56d3-4da8-8cda-8c82b8074cbd
+    DialogueName: D10.3.1
+    DialogueText: Very well. Finally a solution!
+    Speaker: Head surgeon
+    Mood: Calm
+    audioId: D10.4
+    nodeType: 3
+    Position: {x: 1233, y: 7747}
+  - Guid: a877f148-6d4a-4aa3-a1ba-6443f87634b3
+    DialogueName: D11.4
+    DialogueText: "I still don\u2019t understand. How are we going to organise it?"
+    Speaker: Anaesthesiologist
+    Mood: Calm
+    audioId: D11.4
+    nodeType: 3
+    Position: {x: 2635, y: 8005}
+  - Guid: 87fce98c-388a-4355-8ce3-6b997f9b5bfd
+    DialogueName: D12.3
+    DialogueText: Sounds like a good option. Agreed.
+    Speaker: Head surgeon
+    Mood: Calm
+    audioId: D12.3
+    nodeType: 3
+    Position: {x: 6354, y: 7771}
+  - Guid: cd60249a-f949-4619-acbf-7742b88943f3
+    DialogueName: D12.4
+    DialogueText: Now after this problem is solved, I have to go somewhere else and
+      there will be another one...
+    Speaker: Nurse anaesthesist
+    Mood: Calm
+    audioId: D12.4
+    nodeType: 3
+    Position: {x: 6323, y: 8075}
+  - Guid: 61205e36-3b77-45e4-9bb0-d0bc327b610e
+    DialogueName: D12.4.1
+    DialogueText: It might not be the ideal solution, but we have to ensure the other
+      room service.
+    Speaker: Circulating nurse
+    Mood: Calm
+    audioId: D12.4.1
+    nodeType: 3
+    Position: {x: 6992, y: 8055}
+  - Guid: 1f91a2f4-32ad-42c5-a916-b69787229732
+    DialogueName: D15.1
+    DialogueText: "If I have to leave \u2026 I have to go now!"
+    Speaker: Nurse anaesthesist
+    Mood: Angry
+    audioId: D15.1
+    nodeType: 3
+    Position: {x: 6990, y: 8627}
   ExposedProperties: []
