@@ -99,7 +99,19 @@ public class LanguageManager : MonoBehaviour
             //OPCION ALTERNATIVA: 
             TextAsset list = Resources.Load($"Languages/{caseSelected}_{languageSelected}", typeof(TextAsset)) as TextAsset;
             //Debug.Log("Antes de la conversion a string: " + list.text);
-            string text = System.Text.Encoding.UTF8.GetString(list.bytes);
+
+            string text = "";
+
+            if (languageSelected == "CZ" || languageSelected == "HU")
+            {
+                text = System.Text.Encoding.UTF8.GetString(list.bytes);
+                
+            }
+            else
+            {
+                text = System.Text.Encoding.GetEncoding("iso-8859-1").GetString(list.bytes);
+            }
+
             //string text = list.text;
             //Debug.Log("Texto obtenido del fichero: " + text);
             ReadCSVLanguages_2(text);

@@ -453,9 +453,8 @@ MonoBehaviour:
     Position: {x: 301, y: 2913}
   - Guid: 1aa09b4f-e989-42db-87ef-1562fe7297ab
     SituationName: S1
-    Context: 'All endoscopy team members are dressed according to the endoscopy theatre
-      dress code, in a blue gown. Students are dressed in green gown with surgical
-      masks. '
+    Context: All endoscopy team members are dressed according to the endoscopy theatre
+      dress code, in a blue gowns. Students are dressed in green gowns
     Id: 0
     audioId: Context
     nodeType: 0
@@ -856,7 +855,7 @@ MonoBehaviour:
     Position: {x: 1215, y: 3515}
   - Guid: e000cb1f-7272-4abc-a8d1-43aab1ab731a
     DialogueName: D4.1.2
-    DialogueText: Stop talking to each other immediately! I can't hear my own words.
+    DialogueText: Stop talking immediately! I can't hear myself.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: D4.1.2
@@ -888,7 +887,7 @@ MonoBehaviour:
     Position: {x: 1193, y: 5666}
   - Guid: d2106456-6512-4165-9491-17e9893d8ec0
     DialogueName: D6.1.3
-    DialogueText: Please help the nurse to find the right graspers.
+    DialogueText: Please help the nurse to find the right instrument.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: D6.1.3
@@ -958,7 +957,7 @@ MonoBehaviour:
   - Guid: 90ea4d28-80dc-48e6-b1d3-d8e50011686e
     DialogueName: D8.1.4
     DialogueText: I'm sorry, but it's not suitable now, please make an appointment
-      with colleague XY.
+      with my colleague XY Dr. Smith.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: D8.1.4
@@ -1128,21 +1127,13 @@ MonoBehaviour:
     Position: {x: 2310, y: 3518}
   - Guid: a3951b9e-90b8-4061-a3d8-fa2ba164f861
     DialogueName: D4.1.1.1
-    DialogueText: Don't worry, we will solve everything, the blood vessels started
-      to bleed intensively and we wil stop it.
+    DialogueText: 'Don''t worry, we will solve everything, the polyp started to bleed
+      intensively, but we will stop it. '
     Speaker: Endoscopist1
     Mood: Calm
     audioId: D4.1.1.1
     nodeType: 3
     Position: {x: 1438, y: 3503}
-  - Guid: 03d3460a-3e39-426e-be88-25cc434bd435
-    DialogueName: D4.1.2.1
-    DialogueText: Give me the graspers immediately!!
-    Speaker: Endoscopist1
-    Mood: Calm
-    audioId: D4.1.2.1
-    nodeType: 3
-    Position: {x: 1709, y: 3796}
   - Guid: 27fa9393-7793-4511-9f10-fa89f3f6d09e
     DialogueName: D4.1.3.1
     DialogueText: Please take over the communication with students now and explain
@@ -1290,8 +1281,8 @@ MonoBehaviour:
     Position: {x: 3860, y: 8535}
   - Guid: 3139aeac-2b43-4f38-8c66-92c7bed9c86b
     DialogueName: D9.1.1.2
-    DialogueText: Thank you for your assistance, colleague, if you have any ambiguities
-      to perform, we will discuss them later.
+    DialogueText: Thank you for your assistance, colleague, if you have any ambiguities,
+      we will discuss them later.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: D9.1.1.2
@@ -1336,7 +1327,7 @@ MonoBehaviour:
     DialogueName: D1.2
     DialogueText: In the middle of the screen there is a typical tubulovillous adenoma.
       Can everybody see it? It is important now to choose the best treatment option.
-      The lesion is benign and therefore we can choose the endoscopic mucosal resection.
+      The lesion is benign and therefore we can perform the endoscopic mucosal resection.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: D1.2
@@ -1367,4 +1358,12 @@ MonoBehaviour:
     audioId: D6.2
     nodeType: 3
     Position: {x: 1360, y: 5031}
+  - Guid: 03d3460a-3e39-426e-be88-25cc434bd435
+    DialogueName: D4.1.2.1
+    DialogueText: Give me the Coaggraspers immediately!!
+    Speaker: Endoscopist1
+    Mood: Calm
+    audioId: D4.1.2.1
+    nodeType: 3
+    Position: {x: 1709, y: 3796}
   ExposedProperties: []

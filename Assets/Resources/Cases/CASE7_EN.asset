@@ -1036,11 +1036,11 @@ MonoBehaviour:
     Position: {x: 5954, y: 4235}
   - Guid: 752a0222-b409-4923-9a2a-de7fb6256280
     SituationName: S1
-    Context: All team members are on their places, the main surgeon has successfully
-      completed the stomach section, so it is the moment to start the side-to-side
-      jejunojejunal anastomosis. At this moment, the main surgeon asks for a 45mm
-      golden stapler and the instrumentalist and responsible nurse realize that are
-      not any left.
+    Context: All team members are in their places, the main surgeon has successfully
+      completed the stomach section for a gastric bypass in Y -Roux. Therefore, it
+      is needed to start the side-to-side jejunojejunal anastomosis. At this moment,
+      the chief surgeon asks for a 45mm golden stapler and Scrub and Circulating
+      nurse realize that there are not any left.
     Id: 0
     audioId: S1
     nodeType: 0
@@ -1175,7 +1175,7 @@ MonoBehaviour:
     Position: {x: 2538, y: 4352}
   - Guid: 195063cc-7338-4655-aebd-7894e49da16d
     QuestionName: Q13A
-    Description: Are you sure that the reinforce suture is enough?
+    Description: Are you sure that the reinforce suture is sufficient?
     audioId: Q13A
     speaker: Camera assistant
     nodeType: 1
@@ -2051,7 +2051,7 @@ MonoBehaviour:
     Position: {x: 1082, y: 653}
   - Guid: cc7e3bb0-2eda-4b58-bfcc-4a1501acb601
     DialogueName: D1A.1.2
-    DialogueText: "How can it be? Don\u2019t you know how to do your job?"
+    DialogueText: How could this happen? Do you know your responsibilities?
     Speaker: Main surgeon
     Mood: Calm
     audioId: D1A.1.2
@@ -2059,7 +2059,7 @@ MonoBehaviour:
     Position: {x: 1043, y: 373}
   - Guid: 38ca1a5d-cebc-49b7-a178-7fe126fbde7e
     DialogueName: D1A.1.1
-    DialogueText: Well, we need to overcome this unforeseen.
+    DialogueText: Well, we need to overcome this unforeseen situation.
     Speaker: Main surgeon
     Mood: Calm
     audioId: D1A.1.1
@@ -2074,15 +2074,6 @@ MonoBehaviour:
     audioId: D1A.1.4
     nodeType: 3
     Position: {x: 1060, y: 930}
-  - Guid: a7d52d54-8039-4006-8f75-429b0bbee04e
-    DialogueName: D1A.1.1.1
-    DialogueText: "I\u2019m sorry, but there isn\u2019t any. To get one, we would
-      need to call the closest hospital."
-    Speaker: Responsible nurse
-    Mood: Calm
-    audioId: D1A.1.1.1
-    nodeType: 3
-    Position: {x: 1394, y: 114}
   - Guid: 4b1c18ed-4684-45f7-aee4-4f6d4c20d531
     DialogueName: D1B.4
     DialogueText: "You might be right, but this is my OR and there\u2019s no way
@@ -2100,15 +2091,6 @@ MonoBehaviour:
     audioId: D1B.3
     nodeType: 3
     Position: {x: 3234, y: 686}
-  - Guid: c4c311c2-cd85-46a4-a15e-f06ec0783e38
-    DialogueName: D4A.1
-    DialogueText: "I\u2019ve already decided it, and we will attach to it. Please,
-      monitor the patient."
-    Speaker: Main surgeon
-    Mood: Angry
-    audioId: D4A.1
-    nodeType: 3
-    Position: {x: 2138, y: 1215}
   - Guid: ee115971-d09a-40bf-8a77-17c6674c61cd
     DialogueName: D4A.3
     DialogueText: "Sure, I\u2019ll do my best to finish as soon as possible."
@@ -2136,7 +2118,8 @@ MonoBehaviour:
     Position: {x: 3768, y: 1567}
   - Guid: b4c0c96f-afff-4554-ad66-e4b5da67c2b8
     DialogueName: D4B.4
-    DialogueText: "I\u2019m sure you can do your work and keep the patient alive."
+    DialogueText: "I\u2019m sure you know how to do your work and keep the patient
+      alive."
     Speaker: Main surgeon
     Mood: Calm
     audioId: D4B.4
@@ -2144,7 +2127,7 @@ MonoBehaviour:
     Position: {x: 3773, y: 2105}
   - Guid: d538bfc3-1e88-44e9-9e05-490416636cf3
     DialogueName: D7.3
-    DialogueText: ' Well done, but for the next time, we need to learn from the mistakes.'
+    DialogueText: Well done, but for the next time, we should learn from the mistakes.
     Speaker: Main surgeon
     Mood: Calm
     audioId: D7.3
@@ -2234,7 +2217,7 @@ MonoBehaviour:
     Position: {x: 5799, y: 3083}
   - Guid: 5cb702fa-408f-47c6-8a19-7774ced67a08
     DialogueName: D11A.1
-    DialogueText: ' Mind your business and leave me work in peace.'
+    DialogueText: Mind your business and let me work in peace.
     Speaker: Main surgeon
     Mood: Calm
     audioId: D11A.1
@@ -2248,18 +2231,9 @@ MonoBehaviour:
     audioId: D11A.4
     nodeType: 3
     Position: {x: 5805, y: 3676}
-  - Guid: 483343e5-9222-46c9-b217-811c1e52d2c7
-    DialogueName: D1B
-    DialogueText: "Don\u2019t ever talk to us that way, you might be the surgeon,
-      but it doesn\u2019t grant you to treat us like this."
-    Speaker: Instrumentalist
-    Mood: Calm
-    audioId: D1B
-    nodeType: 3
-    Position: {x: 2269, y: 399}
   - Guid: b50e185c-9c9a-4dc1-8a60-fa7480f10e1e
     DialogueName: D11B.1
-    DialogueText: Mind your business and leave me work in peace.
+    DialogueText: Mind your business and let me work in peace.
     Speaker: Main surgeon
     Mood: Calm
     audioId: D11B.1
@@ -2291,8 +2265,8 @@ MonoBehaviour:
     Position: {x: 2552, y: 4120}
   - Guid: 36362a07-99ce-46cf-bfb7-ea45f4db25d8
     DialogueName: D13A.1
-    DialogueText: "Thanks for worrying, but I think it\u2019s enough as we did a
-      good job."
+    DialogueText: "Thanks for worrying, but I think it\u2019s sufficient as we did
+      a good job."
     Speaker: Main surgeon
     Mood: Calm
     audioId: D13A.1
@@ -2300,7 +2274,7 @@ MonoBehaviour:
     Position: {x: 4324, y: 4010}
   - Guid: 7c1e4dcf-394a-49ab-bc31-813c7e0988e6
     DialogueName: D13A.3
-    DialogueText: I know who to do my job
+    DialogueText: I know how to do my job.
     Speaker: Main surgeon
     Mood: Calm
     audioId: D13A.3
@@ -2368,8 +2342,8 @@ MonoBehaviour:
     Position: {x: 4078, y: 49}
   - Guid: 19c4b421-4dde-4060-995a-a3905395733e
     DialogueName: D1B.1.2
-    DialogueText: " I\u2019m sorry, but there isn\u2019t any. To get one, we would
-      need to call the closest hospital."
+    DialogueText: " I\u2019m sorry, but there isn\u2019t any. To get one, we have
+      to call the closest hospital."
     Speaker: Responsible nurse
     Mood: Calm
     audioId: D1B.1.2
@@ -2430,7 +2404,7 @@ MonoBehaviour:
     Position: {x: 6050, y: 1050}
   - Guid: 6ed3bfed-e0ce-4d42-85c0-696a12d47a13
     DialogueName: D2.1
-    DialogueText: "Let\u2019s continue, I will use a black extra thick"
+    DialogueText: "Let\u2019s continue, I will use a black extra thick staple."
     Speaker: Main surgeon
     Mood: Calm
     audioId: D2.1
@@ -2438,7 +2412,7 @@ MonoBehaviour:
     Position: {x: 6012, y: 86}
   - Guid: fa911695-66d8-4b3f-aa8d-cd025baa979a
     DialogueName: D2
-    DialogueText: What do we do next? Shall we continue or shall we ask for the staples
+    DialogueText: What next? Should we continue or should we ask for the staples
       in the other hospital?
     Speaker: Instrumentalist
     Mood: Calm
@@ -2447,7 +2421,7 @@ MonoBehaviour:
     Position: {x: 5170, y: 471}
   - Guid: 60bf7faf-cfa1-4281-b72f-5f08a741585a
     DialogueName: D3
-    DialogueText: Ok. But, shall we call for the staples even though?
+    DialogueText: Ok. But, should we call for the staples even though?
     Speaker: Instrumentalist
     Mood: Calm
     audioId: D3
@@ -2455,7 +2429,7 @@ MonoBehaviour:
     Position: {x: -123, y: 1449}
   - Guid: d072ee59-5bd9-4397-b4f9-9a46b1321421
     DialogueName: D3.1
-    DialogueText: "Haven\u2019t you heard? We are continuing! "
+    DialogueText: "Haven\u2019t you heard me? We are continuing!"
     Speaker: Main Surgeon
     Mood: Angry
     audioId: D3.1
@@ -2464,7 +2438,7 @@ MonoBehaviour:
   - Guid: 4f3adef3-a76f-475f-a7b1-489c263ee5cc
     DialogueName: D3.2
     DialogueText: Good point. Please, make the call and bring the staples while we
-      work on it, just in case.
+      continue, just in case.
     Speaker: Main Surgeon
     Mood: Calm
     audioId: D3.2
@@ -2480,7 +2454,7 @@ MonoBehaviour:
     Position: {x: 630, y: 1925}
   - Guid: 3e13e11c-eeb4-4a07-abb5-b6c725098f7d
     DialogueName: A3.4.2
-    DialogueText: Well, that sounds right. Please, make the call.
+    DialogueText: Well, that sounds good. Please, make the call.
     Speaker: Main Surgeon
     Mood: Calm
     audioId: A3.4.2
@@ -2488,8 +2462,8 @@ MonoBehaviour:
     Position: {x: 1419, y: 2207}
   - Guid: ac3d1c7b-2633-4cdb-af50-658eebecd518
     DialogueName: A3.4.1
-    DialogueText: ' I think we have nothing to lose if we ask for them, just in case
-      we really need them later on.'
+    DialogueText: I think we have nothing to lose if we ask for them, just in case
+      we really need them later.
     Speaker: Instrumentalist
     Mood: Calm
     audioId: A3.4.1
@@ -2572,7 +2546,7 @@ MonoBehaviour:
     Position: {x: 6419, y: 1557}
   - Guid: 49ace5a3-c12b-4646-853a-e324c0a66bda
     DialogueName: D6.3
-    DialogueText: I'm already waiting for it.
+    DialogueText: "I\u2019m already waiting for it."
     Speaker: Main Surgeon
     Mood: Calm
     audioId: D6.3
@@ -2588,7 +2562,7 @@ MonoBehaviour:
     Position: {x: 6407, y: 1293}
   - Guid: 721c9dd7-65b6-477e-898a-bbec1d075117
     DialogueName: D6.4
-    DialogueText: What do you think?
+    DialogueText: What a smart idea!
     Speaker: Main Surgeon
     Mood: Calm
     audioId: D6.4
@@ -2620,8 +2594,8 @@ MonoBehaviour:
     Position: {x: 5090, y: 1856}
   - Guid: 42288395-7e1b-4321-86ce-5e5df37cbe4c
     DialogueName: D5.3.1
-    DialogueText: We have the stapler!
-    Speaker: Responsible nurse
+    DialogueText: We have the staple!
+    Speaker: Circulating nurse
     Mood: Calm
     audioId: D5.3.1
     nodeType: 3
@@ -2645,7 +2619,7 @@ MonoBehaviour:
   - Guid: 394d4316-baf6-4bb3-8e9f-666c055a537b
     DialogueName: D5.4.2
     DialogueText: We have the stapler!
-    Speaker: Responsible nurse
+    Speaker: Circulating nurse
     Mood: Calm
     audioId: D5.3.1
     nodeType: 3
@@ -2660,7 +2634,7 @@ MonoBehaviour:
     Position: {x: -108, y: 2832}
   - Guid: 3ad43652-9363-41c9-80fa-e0a2db644768
     DialogueName: D7.2
-    DialogueText: "Finally, I don\u2019t want this to happen again."
+    DialogueText: "Finally, I don\u2019t want to face this again."
     Speaker: Main surgeon
     Mood: Calm
     audioId: D7.2
@@ -2700,7 +2674,7 @@ MonoBehaviour:
     Position: {x: 2081, y: 3331}
   - Guid: 89f0cc0f-dfe1-4db7-9354-2af2b67e4fd7
     DialogueName: D8.3
-    DialogueText: Your comments put on me more pressure than I already have.
+    DialogueText: "Your stressful comments don\u2019t really help the situation."
     Speaker: Main surgeon
     Mood: Angry
     audioId: D8.3
@@ -2716,7 +2690,7 @@ MonoBehaviour:
     Position: {x: 3361, y: 3352}
   - Guid: 0db36ae8-8380-4380-880a-e9f8c54c4210
     DialogueName: D9.1
-    DialogueText: " I can\u2019t use it now, it\u2019s too late for it!"
+    DialogueText: " I can\u2019t use it now, it\u2019s too late!"
     Speaker: Main surgeon
     Mood: Angry
     audioId: D9.1
@@ -2748,7 +2722,7 @@ MonoBehaviour:
     Position: {x: 3527, y: 3072}
   - Guid: 73481f4e-b701-4a04-83f4-a6a18384dce0
     DialogueName: D9.3
-    DialogueText: " Don\u2019t disturb, I\u2019m almost done."
+    DialogueText: "Don\u2019t disturb me, I\u2019m almost done."
     Speaker: Main surgeon
     Mood: Angry
     audioId: D9.3
@@ -2782,7 +2756,7 @@ MonoBehaviour:
     Position: {x: 434, y: 4762}
   - Guid: 9fd3481c-7b35-4e41-a50c-264ae1765189
     DialogueName: D12A.0
-    DialogueText: "Well, this all about the surgeons\u2019 work\u2026"
+    DialogueText: "Well, this is all about the surgeon\u2019s work\u2026"
     Speaker: Camera assistant
     Mood: Calm
     audioId: D12A.0
@@ -2790,20 +2764,12 @@ MonoBehaviour:
     Position: {x: 1217, y: 4173}
   - Guid: 60defc1c-7f92-4b9a-b4c7-25d035a33b36
     DialogueName: D12A
-    DialogueText: "Everything is going ok, we\u2019re doing a great teamwork."
+    DialogueText: Everything is going ok, great teamwork.
     Speaker: Instrumentalist
     Mood: Calm
     audioId: D12A
     nodeType: 3
     Position: {x: 839, y: 4173}
-  - Guid: 01c3e2b3-16b7-4f28-8a81-539e0f68af8f
-    DialogueName: D12A.2
-    DialogueText: "This is teamwok, despite not everybody thinks the same\u2026"
-    Speaker: Main surgeon
-    Mood: Calm
-    audioId: D12A.2
-    nodeType: 3
-    Position: {x: 1785, y: 4192}
   - Guid: 64479ce9-b959-4a67-8727-a9aa7ce0e6c9
     DialogueName: D12A.4
     DialogueText: "Of course! It\u2019s all on me, I\u2019m doing all the work."
@@ -2853,15 +2819,6 @@ MonoBehaviour:
     audioId: D12A.4
     nodeType: 3
     Position: {x: 3082, y: 4810}
-  - Guid: 1347faf7-b20c-45d0-9e31-0ec32e0ae4fb
-    DialogueName: D13A.1.1
-    DialogueText: " Great! There\u2019s no leak in the suture! Well done, we are
-      finished."
-    Speaker: Instrumentalist
-    Mood: Calm
-    audioId: D13A.1.1
-    nodeType: 3
-    Position: {x: 4781, y: 4012}
   - Guid: 3769729a-2ae6-4d26-beb8-443678ad8fc7
     DialogueName: D13A.2.1
     DialogueText: " It\u2019s not about doubting, but I would do another suture\u2026"
@@ -2888,7 +2845,7 @@ MonoBehaviour:
     Position: {x: 5080, y: 4265}
   - Guid: 97c67f70-55d6-4aaf-9317-94346e21a48b
     DialogueName: D13A.3.2
-    DialogueText: Oh, no! the suture is leaking as the instestine has torn!
+    DialogueText: Oh, no! the suture is leaking as the intestine has torn!
     Speaker: Instrumentalist
     Mood: Calm
     audioId: D13A.3.2
@@ -3042,7 +2999,7 @@ MonoBehaviour:
     Position: {x: 3558, y: 4130}
   - Guid: 3638a011-6bfd-48c0-9b75-ce1b442c4374
     DialogueName: D9.4
-    DialogueText: ' Yes, as quick as possible.'
+    DialogueText: Yes, as quickly as possible.
     Speaker: Main surgeon
     Mood: Calm
     audioId: D9.4
@@ -3237,7 +3194,7 @@ MonoBehaviour:
     Position: {x: 3823, y: 3067}
   - Guid: ee4d7b6b-ba98-423d-83e4-013ae2475b61
     DialogueName: D6
-    DialogueText: Great!, Shall I open the stapler?
+    DialogueText: Great! Should I open the stapler?
     Speaker: Instrumentalist
     Mood: Calm
     audioId: D6
@@ -3245,7 +3202,8 @@ MonoBehaviour:
     Position: {x: 5935, y: 1446}
   - Guid: cd48a87c-08ba-41e0-abdb-744e5c0cfbc8
     DialogueName: D9
-    DialogueText: Great! How are we solving the complication? Shall I open the stapler?
+    DialogueText: ' Great! How are we solving the complication? Should I open the
+      stapler?'
     Speaker: Instrumentalist
     Mood: Calm
     audioId: D9
@@ -3261,23 +3219,16 @@ MonoBehaviour:
     Position: {x: 1052, y: 2555}
   - Guid: 507dadc1-f065-47ae-b1fd-749dea43efef
     DialogueName: D13A.4.1
-    DialogueText: Oh, no! the suture is leaking as the instestine has torn!
+    DialogueText: Oh, no! the suture is leaking as the intestine has torn! We should
+      have asked for the stapler when we realized it was missing.
     Speaker: Instrumentalist
     Mood: Calm
     audioId: D13A.3.2
     nodeType: 3
     Position: {x: 4590, y: 4823}
-  - Guid: 4c570daf-d34b-4d51-b858-54f5e5c6a442
-    DialogueName: D13A.4.2
-    DialogueText: We have the stapler!
-    Speaker: Responsible nurse
-    Mood: Calm
-    audioId: D5.3.1
-    nodeType: 3
-    Position: {x: 5042, y: 4813}
   - Guid: 8e5097a0-d8af-4bc8-a0cf-74999225376f
     DialogueName: D1A.3
-    DialogueText: " I\u2019ll go to stockage room, to check if we have one there."
+    DialogueText: "I\u2019ll go to storage room, to check if we have any there."
     Speaker: Responsible nurse
     Mood: Calm
     audioId: D1A3
@@ -3291,4 +3242,56 @@ MonoBehaviour:
     audioId: D1A.2
     nodeType: 3
     Position: {x: 134, y: -77}
+  - Guid: a7d52d54-8039-4006-8f75-429b0bbee04e
+    DialogueName: D1A.1.1.1
+    DialogueText: " I\u2019m sorry, but there isn\u2019t any. To get one, we have
+      to call the closest hospital."
+    Speaker: Responsible nurse
+    Mood: Calm
+    audioId: D1A.1.1.1
+    nodeType: 3
+    Position: {x: 1551, y: 109}
+  - Guid: 483343e5-9222-46c9-b217-811c1e52d2c7
+    DialogueName: D1B
+    DialogueText: "Don\u2019t ever talk to us that way, you might be the chief surgeon,
+      but it doesn\u2019t grant you to you shouldn't treat us like this"
+    Speaker: Instrumentalist
+    Mood: Calm
+    audioId: D1B
+    nodeType: 3
+    Position: {x: 2182, y: 296}
+  - Guid: c4c311c2-cd85-46a4-a15e-f06ec0783e38
+    DialogueName: D4A.1
+    DialogueText: "I\u2019ve already decided, and we will follow it. Please, respect
+      it and monitor the patient."
+    Speaker: Main surgeon
+    Mood: Angry
+    audioId: D4A.1
+    nodeType: 3
+    Position: {x: 2097, y: 1216}
+  - Guid: 01c3e2b3-16b7-4f28-8a81-539e0f68af8f
+    DialogueName: D12A.2
+    DialogueText: "This is teamwork, despite the fact that not everybody perceives
+      it like this\u2026"
+    Speaker: Main surgeon
+    Mood: Calm
+    audioId: D12A.2
+    nodeType: 3
+    Position: {x: 1745, y: 4186}
+  - Guid: 1347faf7-b20c-45d0-9e31-0ec32e0ae4fb
+    DialogueName: D13A.1.1
+    DialogueText: "Great! There\u2019s no leak in the suture! Well done, we finished."
+    Speaker: Instrumentalist
+    Mood: Calm
+    audioId: D13A.1.1
+    nodeType: 3
+    Position: {x: 4781, y: 4012}
+  - Guid: 4c570daf-d34b-4d51-b858-54f5e5c6a442
+    DialogueName: D13A.4.2
+    DialogueText: We have the stapler!
+    Speaker: Responsible nurse
+    Mood: Calm
+    audioId: D5.3.1
+    nodeType: 3
+    Position: {x: 5534, y: 4858}
   ExposedProperties: []

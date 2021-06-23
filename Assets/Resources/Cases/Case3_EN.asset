@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52626a7328545fb448e31b2531ce7ed6, type: 3}
-  m_Name: Case3_EN
+  m_Name: CASE3_EN
   m_EditorClassIdentifier: 
   NodeLinks:
   - BaseNodeGuid: 1a8a2fff-e26c-41f1-9dd8-2c6e80c21b5b
@@ -616,8 +616,8 @@ MonoBehaviour:
     Position: {x: 1915, y: 3974}
   - Guid: 92569e01-f69f-445f-8322-03538e92273f
     AnswerName: A6.2
-    Feedback: "Negative emotions coupled with the psychological coercion \u201Cthe
-      patient will bleed to death because of you\u201D are absolutely unacceptable"
+    Feedback: Negative emotions linked to physical manifestations of aggression -
+      throwing tools are absolutely inappropriate.
     Situation: 
     IsCorrect: 0
     IsEnd: 1
@@ -827,7 +827,7 @@ MonoBehaviour:
   - Guid: 39d2abe6-516f-4b80-808f-e9537d6cdcde
     AnswerName: A6.1
     Feedback: Negative emotions linked to physical manifestations of aggression -
-      throwing tools at assistants - are absolutely inappropriate
+      throwing tools are absolutely inappropriate.
     Situation: 
     IsCorrect: 0
     IsEnd: 1
@@ -973,7 +973,7 @@ MonoBehaviour:
     Position: {x: 2936, y: 411}
   - Guid: edbd9aee-3e9e-4483-8b30-bebf6c7722f4
     DialogueName: D1.1.3
-    DialogueText: Take the mask immediately! You should wear it during endoscop,
+    DialogueText: Take the mask immediately! You should wear it during endoscopy,
       it is a part of common dress code.
     Speaker: Endoscopist 1
     Mood: Aggressive
@@ -1017,8 +1017,8 @@ MonoBehaviour:
   - Guid: 4cff95b7-9c2b-4618-b0bb-c657e47cfb6d
     DialogueName: D2.2
     DialogueText: We are starting the endoscopic mucosal resection of the early rectal
-      cancer. It is a very special type of procedure. Have you checked the endoscopic
-      findings?
+      cancer. It is a very specific type of procedure. Have you checked the endoscopic
+      findings before?
     Speaker: Endoscopist 1
     Mood: Calm
     audioId: E1D6
@@ -1051,8 +1051,8 @@ MonoBehaviour:
     Position: {x: 2168, y: 2022}
   - Guid: c6196b0e-9291-4239-be5e-fcf282dba917
     DialogueName: D2.1.3
-    DialogueText: 'Excellent, so I hope that your work will better than your endoscopic
-      dress code. '
+    DialogueText: Excellent, so I hope that your work will be better than your endoscopic
+      dress code.
     Speaker: Endoscopist 1
     Mood: Ironic
     audioId: E1D9
@@ -1101,8 +1101,8 @@ MonoBehaviour:
     Position: {x: 2377, y: 2980}
   - Guid: 605fd93c-b56b-4ec5-92e5-bc76556904a1
     DialogueName: D4.1.1
-    DialogueText: 'Leave immediately and send here a nurse experienced with this
-      type of surgery.  '
+    DialogueText: Leave immediately and assure that experienced nurse will come as
+      soon as possible.
     Speaker: Endoscopist 1
     Mood: Aggresive
     audioId: E1D14
@@ -1110,8 +1110,8 @@ MonoBehaviour:
     Position: {x: 2355, y: 3326}
   - Guid: 8cc26d1d-d069-4335-ae8d-27c6a8b24e48
     DialogueName: D4.1.2
-    DialogueText: 'That is your problem, I do not care, you should have said anything
-      earlier. I am just warning you of any problems! '
+    DialogueText: "That\u2019s your problem, I don\u2019t care, you should have mentioned
+      it earlier. I am just warning you!"
     Speaker: Endoscopist 1
     Mood: Calm
     audioId: E1D15
@@ -1119,9 +1119,8 @@ MonoBehaviour:
     Position: {x: 2360, y: 3533}
   - Guid: 88697d65-8e31-4ec4-a2cd-73c829228490
     DialogueName: D4.1.4
-    DialogueText: 'Perfect, I also believe that we will manage it together. In any
-      case, please make sure that a spare nurse who will come if needed is available
-      to help you. '
+    DialogueText: Perfect, I also believe that we will manage it together. In any
+      case, please make sure that experienced nurse is available if needed.
     Speaker: Endoscopist 1
     Mood: Calm
     audioId: E1D17
@@ -1145,27 +1144,18 @@ MonoBehaviour:
     Position: {x: 2605, y: 4273}
   - Guid: c17b55e7-ead9-4413-8fea-0b630bce2619
     DialogueName: D6.2
-    DialogueText: 'Endoscopy nurse passes Endoscopist 1 the snare. Endoscopist 1
-      works, suddenly takes the snare out of the endoscope, gives it to Endoscopy
-      nurse. Endoscopy nurse puts it aside on the table with accessories. '
+    DialogueText: Endoscopy nurse passes Endoscopist 1 the snare. Endoscopist 1 works,
+      suddenly takes the snare and gives it to Endoscopy nurse. Endoscopy nurse puts
+      it aside on the instrument table.
     Speaker: Narrator
     Mood: Calm
     audioId: ND15
     nodeType: 3
     Position: {x: 2828, y: 4273}
-  - Guid: 26b4a5f8-c71d-4ac2-ad58-534ceabf6c08
-    DialogueName: D6.3
-    DialogueText: The vessel burst, I see the intense bleeding, pass the forceps.
-      Quickly!
-    Speaker: Endoscopist 1
-    Mood: Calm
-    audioId: E1D19
-    nodeType: 3
-    Position: {x: 1833, y: 4515}
   - Guid: 7e07876b-0312-43f0-87af-370a2af4563c
     DialogueName: D6.4
-    DialogueText: Endoscopy nurse repeatedly searches among the tools on the table
-      with accessories. Finally, she passes something to you.
+    DialogueText: Endoscopy nurse repeatedly searches among the instruments on the
+      instrument table. Finally, she passes something to Endoscopist 1.
     Speaker: Narrator
     Mood: Calm
     audioId: ND17
@@ -1181,7 +1171,7 @@ MonoBehaviour:
     Position: {x: 3143, y: 4874}
   - Guid: 4793443e-5829-4b20-aab5-72a6c36a3b75
     DialogueName: D6.1.1
-    DialogueText: You throw the instrumental back at the nurse and shout
+    DialogueText: 'You throw the instrument back at the nurse and shout:'
     Speaker: Narrator
     Mood: Calm
     audioId: ND22
@@ -1189,7 +1179,7 @@ MonoBehaviour:
     Position: {x: 2695, y: 4875}
   - Guid: 3bea7de1-7762-4b9a-b41e-50ab99ef6910
     DialogueName: D6.1.4
-    DialogueText: 'These are not Coagrasper forceps, have you prepared them? '
+    DialogueText: These are not Coaggraspers, have you prepared them?
     Speaker: Endoscopist 1
     Mood: Calm
     audioId: E1D23
@@ -1197,8 +1187,8 @@ MonoBehaviour:
     Position: {x: 2082, y: 5617}
   - Guid: c17ed2a9-732d-4ada-b3bf-2bf30fb41573
     DialogueName: D7.1
-    DialogueText: Endoscopy nurse passes the right tool, while you work. He stops
-      the bleeding, return the tool to the nurse
+    DialogueText: Endoscopy nurse passes the right tool, while you work. You stop
+      the bleeding, return the tool to the nurse and say
     Speaker: Narrator
     Mood: Calm
     audioId: ND24
@@ -1230,8 +1220,8 @@ MonoBehaviour:
     Position: {x: 2107, y: 6164}
   - Guid: 7bb8b44c-7bf4-4ee8-939a-33fd283c0119
     DialogueName: D7.1.4
-    DialogueText: "You can\u2019t assist, you can't speak, that's the highlight,
-      I could have assisted myself. "
+    DialogueText: "You can\u2019t assist, you can't speak, that's horrible, I could
+      have assisted myself."
     Speaker: Endoscopist 1
     Mood: Aggressive
     audioId: E1D30
@@ -1256,7 +1246,7 @@ MonoBehaviour:
     Position: {x: 2313, y: 7494}
   - Guid: 97c98238-5955-41a7-acfb-c3c33e7b8868
     DialogueName: D8.1.4
-    DialogueText: '(To endoscopy nurse) You are probably completely out today. '
+    DialogueText: You are probably completely out of your mind today.
     Speaker: Endoscopist 1
     Mood: Calm
     audioId: E1D34
@@ -1380,8 +1370,8 @@ MonoBehaviour:
     Position: {x: 3067, y: 2980}
   - Guid: e0c8c7c8-7b51-4318-8820-d342ccb1ab1a
     DialogueName: D1.1
-    DialogueText: 'All team members are on their places, you are the First Endoscopist,
-      you are holding the endoscope and prepared for the insertion. Then you ask:'
+    DialogueText: All team members are on their places, you are the Chief Endoscopist,
+      you are holding the endoscope prepared for the insertion.
     Speaker: Narrator
     Mood: Calm
     audioId: ND2
@@ -1456,7 +1446,7 @@ MonoBehaviour:
     Position: {x: 2312, y: 2739}
   - Guid: df6a1745-c7ea-44b6-b17d-64985f1d3c02
     DialogueName: D6.3.1
-    DialogueText: 'I wanted Coagrasper forceps, please pass them to me. '
+    DialogueText: I wanted Coaggrasper forceps, please pass them to me.
     Speaker: Endoscopist1
     Mood: Calm
     audioId: E1D22
@@ -1464,8 +1454,8 @@ MonoBehaviour:
     Position: {x: 2193, y: 5365}
   - Guid: 8054b6bc-a957-4715-8035-619404c530e6
     DialogueName: D6.2.2
-    DialogueText: These not Coagrasper forceps, give it to me quickly, or the patient
-      will bleed to death because of you.
+    DialogueText: These are not Coaggrasper forceps! Give it to me quickly, or the
+      patient will bleed to death because of you.
     Speaker: Endoscopist 1
     Mood: Aggressive
     audioId: E1D21
@@ -1546,8 +1536,8 @@ MonoBehaviour:
     Position: {x: 2690, y: 5611}
   - Guid: 03bf28d6-514e-45d5-bb9d-c90555cb77ea
     DialogueName: D6.4.3
-    DialogueText: 'Endoscopist 2 and Endoscopy nurse search the correct tool together
-      on the table with accessories. '
+    DialogueText: Endoscopist 2 and Endoscopy nurse search the correct instrument
+      together on the instrument table.
     Speaker: Narrator
     Mood: Calm
     audioId: ND21
@@ -1578,4 +1568,13 @@ MonoBehaviour:
     audioId: E1D28
     nodeType: 3
     Position: {x: 1974, y: 6655}
+  - Guid: 26b4a5f8-c71d-4ac2-ad58-534ceabf6c08
+    DialogueName: D6.3
+    DialogueText: The vessel bursts, I see the intense bleeding, pass the Coaggraspers.
+      Quickly!
+    Speaker: Endoscopist 1
+    Mood: Calm
+    audioId: E1D19
+    nodeType: 3
+    Position: {x: 1756, y: 4528}
   ExposedProperties: []
