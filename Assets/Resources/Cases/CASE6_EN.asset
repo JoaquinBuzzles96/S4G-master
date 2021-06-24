@@ -844,14 +844,14 @@ MonoBehaviour:
     Context: A 46-years-old male patient is scheduled for kidney transplantation
       due to a severe polycystic kidney disease. The surgical team consists of an
       urologist and a surgeon experienced in transplantation as an assistant, an
-      anaesthesiologist, an anaesthesiological assistant, a scrub nurse, and a circulator.
-      The surgery lasts 5 hours, avoided any unusual things. Firstly, both cystic
-      kidneys were removed from upper and median laparotomy. Secondly, the left cadaver
-      kidney graft was implanted through another incision into the right iliac fossa.
-      The surgeon started closing the incisions, parallelly the operating staff summarized
-      the instruments, swabs and towels used during surgery. The instrumentalist
-      nurse realized that a swab is missing. At this point, the first incision has
-      already been closed and the second one was also almost closed.
+      anaesthesiologist, an anaesthesiological assistant, a scrub nurse, and a circulating
+      nurse. The surgery lasts 5 hours, any unusual things avoided. Firstly, both
+      cystic kidneys were removed from upper and median laparotomy. Secondly, the
+      left cadaver kidney graft was implanted through another incision into the right
+      iliac fossa. The surgeon started closing the incisions, parallelly the operating
+      staff summarized the instruments, swabs and towels used during surgery. The
+      scrub nurse realized that a swab is missing. At this point, the first incision
+      has already been closed and the second one was also almost closed.
     Id: 0
     audioId: D1
     nodeType: 0
@@ -901,7 +901,7 @@ MonoBehaviour:
   QuestionNodeData:
   - Guid: efbec3cc-87a4-4d91-82c9-c5eec8ef4ced
     QuestionName: Q3.4
-    Description: "What happens, if we won\u2019t find it?"
+    Description: "What will happen, if we won\u2019t find it?"
     audioId: D3.4
     speaker: Anaesthesia assistant
     nodeType: 1
@@ -909,7 +909,7 @@ MonoBehaviour:
   - Guid: 1e4a4176-bcfa-4750-8fc7-437dc4bc48c2
     QuestionName: Q3.3
     Description: I am sure, it is somewhere out! Just please hurry, my next patient
-      is waiting me in another OR.
+      is awaiting me in another operating room.
     audioId: D3.3
     speaker: Assistant surgeon
     nodeType: 1
@@ -1020,14 +1020,14 @@ MonoBehaviour:
   - Guid: 94c8606c-55b9-493d-aa4c-e0d0663bd0f0
     QuestionName: Q1.2
     Description: It happens many times, most of the time something goes wrong with
-      the calculation.
+      counting?
     audioId: D1.2
     speaker: Urologist
     nodeType: 1
     Position: {x: -299, y: 1374}
   - Guid: d99b96c0-3f0a-4247-ad8f-cee416ce3c22
     QuestionName: Q1.3
-    Description: Are you sure? Was the calculation correct?
+    Description: Are you sure? Was the counting correct?
     audioId: D1.3
     speaker: Urologist
     nodeType: 1
@@ -1041,14 +1041,14 @@ MonoBehaviour:
     Position: {x: -141, y: 3791}
   - Guid: 307fc98f-f499-4349-b170-66aaf83ed7d0
     QuestionName: Q2.4
-    Description: I do it immediately
+    Description: I do it immediately.
     audioId: D2.4
     speaker: Instrumentalist nurse
     nodeType: 1
     Position: {x: 2815, y: 3961}
   - Guid: 80f4bd15-8ee5-4c27-a62b-5020e6f4de1e
     QuestionName: Q2.3
-    Description: The surgery lasts 5 hours, it would be good to finish quickly.
+    Description: The surgery lasts 5 hours, it should be finished as soon as possible.
     audioId: D2.3
     speaker: Anaesthesiologist
     nodeType: 1
@@ -1892,16 +1892,16 @@ MonoBehaviour:
     Position: {x: 832, y: 8586}
   - Guid: cabc7f3d-bb98-4284-80f3-4faf13ead900
     AnswerName: A7.1
-    Feedback: The team finished the surgery, the patient woke up and informed about
-      the missing swab. This is also written into the surgical diary in detail. For
-      the next 4 days, the patient's condition was stable, he was admitted to a sterile
-      room, his wounds healed nicely, and there was no sign of graft rejection, or
-      inflammation, or possibly fever. Every Friday, the operating block was fully
+    Feedback: The team finished the surgery, the patient woke up and was informed
+      about the missing swab. This is also written into the surgical diary in detail.
+      For the next 4 days, the patient's condition was stable, he was admitted to
+      a sterile room, his wounds healed nicely, and there was no sign of graft rejection,
+      or inflammation, or possibly fever. Every Friday, the operating block was fully
       cleaned and disinfected, which was performed in the afternoon, at the end of
       the surgical program. For proper hygiene, the equipment- including the operating
-      tables - are moved. When this was done, the missing swab came out from under
-      the legs of the operating table. Probably during surgery, the swab was fallen
-      down, and someone accidentally kicked it under the operating table.
+      tables - were moved. When this was done, the missing swab came out from under
+      the legs of the operating table. Probably during surgery, the swab fell down,
+      and someone accidentally kicked it under the operating table.
     Situation: 
     IsCorrect: 0
     IsEnd: 1
@@ -1912,16 +1912,16 @@ MonoBehaviour:
     Position: {x: 6435, y: 6629}
   - Guid: 76fe80d5-451e-45b5-bf46-d65a89707ce1
     AnswerName: A7.4
-    Feedback: The team finished the surgery, the patient woke up and informed about
-      the missing swab. This is also written into the surgical diary in detail. For
-      the next 4 days, the patient's condition was stable, he was admitted to a sterile
-      room, his wounds healed nicely, and there was no sign of graft rejection, or
-      inflammation, or possibly fever. Every Friday, the operating block was fully
+    Feedback: The team finished the surgery, the patient woke up and was informed
+      about the missing swab. This is also written into the surgical diary in detail.
+      For the next 4 days, the patient's condition was stable, he was admitted to
+      a sterile room, his wounds healed nicely, and there was no sign of graft rejection,
+      or inflammation, or possibly fever. Every Friday, the operating block was fully
       cleaned and disinfected, which was performed in the afternoon, at the end of
       the surgical program. For proper hygiene, the equipment- including the operating
-      tables - are moved. When this was done, the missing swab came out from under
-      the legs of the operating table. Probably during surgery, the swab was fallen
-      down, and someone accidentally kicked it under the operating table.
+      tables - were moved. When this was done, the missing swab came out from under
+      the legs of the operating table. Probably during surgery, the swab fell down,
+      and someone accidentally kicked it under the operating table.
     Situation: 
     IsCorrect: 0
     IsEnd: 1
@@ -1932,16 +1932,16 @@ MonoBehaviour:
     Position: {x: 6438, y: 7545}
   - Guid: 5c04e905-e15a-4e6e-9774-b5f0ae455e73
     AnswerName: A7.3
-    Feedback: The team finished the surgery, the patient woke up and informed about
-      the missing swab. This is also written into the surgical diary in detail. For
-      the next 4 days, the patient's condition was stable, he was admitted to a sterile
-      room, his wounds healed nicely, and there was no sign of graft rejection, or
-      inflammation, or possibly fever. Every Friday, the operating block was fully
+    Feedback: The team finished the surgery, the patient woke up and was informed
+      about the missing swab. This is also written into the surgical diary in detail.
+      For the next 4 days, the patient's condition was stable, he was admitted to
+      a sterile room, his wounds healed nicely, and there was no sign of graft rejection,
+      or inflammation, or possibly fever. Every Friday, the operating block was fully
       cleaned and disinfected, which was performed in the afternoon, at the end of
       the surgical program. For proper hygiene, the equipment- including the operating
-      tables - are moved. When this was done, the missing swab came out from under
-      the legs of the operating table. Probably during surgery, the swab was fallen
-      down, and someone accidentally kicked it under the operating table.
+      tables - were moved. When this was done, the missing swab came out from under
+      the legs of the operating table. Probably during surgery, the swab fell down,
+      and someone accidentally kicked it under the operating table.
     Situation: 
     IsCorrect: 0
     IsEnd: 1
@@ -1950,26 +1950,6 @@ MonoBehaviour:
     audioId: END
     score: 10
     Position: {x: 6435, y: 7224}
-  - Guid: 51b3ed98-51fa-4dc4-b700-e8abd1d38ca4
-    AnswerName: A7.2
-    Feedback: The team finished the surgery, the patient woke up and informed about
-      the missing swab. This is also written into the surgical diary in detail. For
-      the next 4 days, the patient's condition was stable, he was admitted to a sterile
-      room, his wounds healed nicely, and there was no sign of graft rejection, or
-      inflammation, or possibly fever. Every Friday, the operating block was fully
-      cleaned and disinfected, which was performed in the afternoon, at the end of
-      the surgical program. For proper hygiene, the equipment- including the operating
-      tables - are moved. When this was done, the missing swab came out from under
-      the legs of the operating table. Probably during surgery, the swab was fallen
-      down, and someone accidentally kicked it under the operating table.
-    Situation: 
-    IsCorrect: 0
-    IsEnd: 1
-    nodeType: 2
-    speaker: Speaker
-    audioId: END
-    score: 10
-    Position: {x: 6453, y: 6941}
   - Guid: 8f48aef5-30bb-4924-a8d4-2ac4d493153f
     AnswerName: A6.3.2
     Feedback: 
@@ -2014,15 +1994,27 @@ MonoBehaviour:
     audioId: Audio id
     score: 10
     Position: {x: 545, y: 1273}
+  - Guid: 51b3ed98-51fa-4dc4-b700-e8abd1d38ca4
+    AnswerName: A7.2
+    Feedback: The team finished the surgery, the patient woke up and was informed
+      about the missing swab. This is also written into the surgical diary in detail.
+      For the next 4 days, the patient's condition was stable, he was admitted to
+      a sterile room, his wounds healed nicely, and there was no sign of graft rejection,
+      or inflammation, or possibly fever. Every Friday, the operating block was fully
+      cleaned and disinfected, which was performed in the afternoon, at the end of
+      the surgical program. For proper hygiene, the equipment- including the operating
+      tables - were moved. When this was done, the missing swab came out from under
+      the legs of the operating table. Probably during surgery, the swab fell down,
+      and someone accidentally kicked it under the operating table.
+    Situation: 
+    IsCorrect: 0
+    IsEnd: 1
+    nodeType: 2
+    speaker: Speaker
+    audioId: END
+    score: 10
+    Position: {x: 6453, y: 6941}
   DialogueNodeData:
-  - Guid: bde793cb-970f-44bc-89ce-73f90c6f98ce
-    DialogueName: D1.2.1
-    DialogueText: Of course, why it is always the first that nurses made mistake?
-    Speaker: Instrumentalist nurse
-    Mood: Angry
-    audioId: D1.1.4
-    nodeType: 3
-    Position: {x: 866, y: 982}
   - Guid: 581136ca-a8e3-45da-a1ff-d4c63b41858c
     DialogueName: D1.2.3
     DialogueText: "This is the patient\u2019s interest! We can\u2019t take it lightly."
@@ -2106,7 +2098,7 @@ MonoBehaviour:
     Position: {x: 902, y: 4250}
   - Guid: ed9b7e44-21a9-4644-bafe-d0539f960aff
     DialogueName: D1.4.4
-    DialogueText: Yes, it is true, and you also have to be taken part in finding
+    DialogueText: Yes, it is true, and you also have to participate in finding a
       solution!
     Speaker: Instrumentalist nurse
     Mood: Calm
@@ -2115,7 +2107,8 @@ MonoBehaviour:
     Position: {x: 908, y: 4580}
   - Guid: fe5a5aa3-093a-4c4f-8972-db989dafc835
     DialogueName: D1.3.4
-    DialogueText: Of course, why it is always the first that nurses made mistake?
+    DialogueText: Of course, why it is always the first suspicion that nurses make
+      mistake?
     Speaker: Instrumentalist nurse
     Mood: Angry
     audioId: D1.1.4
@@ -2123,8 +2116,8 @@ MonoBehaviour:
     Position: {x: 900, y: 3164}
   - Guid: 470da3ca-b789-4c97-ab78-c6d77c9b7da6
     DialogueName: D1.2.2
-    DialogueText: "Let\u2019s take the problem together, and calmly try to find the
-      best solution"
+    DialogueText: "Let\u2019s solve the problem together, and calmly try to find
+      the best solution"
     Speaker: Instrumentalist nurse
     Mood: Calm
     audioId: D1.2.2
@@ -2132,7 +2125,7 @@ MonoBehaviour:
     Position: {x: 887, y: 1275}
   - Guid: c3bc29b1-49ad-421b-9c6d-f78e4bc64eb7
     DialogueName: D1.3.3
-    DialogueText: No, I am just kidding
+    DialogueText: No, I am just kidding.
     Speaker: Instrumentalist nurse
     Mood: Ironic
     audioId: D1.3.3
@@ -2156,8 +2149,8 @@ MonoBehaviour:
     Position: {x: 3789, y: 2272}
   - Guid: 1d62997e-4177-48d1-8b9e-287ccb6971c8
     DialogueName: D2.3.4
-    DialogueText: "Don\u2019t distract the instrumentalist nurse, we have to solve
-      this situation as soon as possible."
+    DialogueText: "Don\u2019t distract the scrub nurse, we have to solve this situation
+      as soon as possible."
     Speaker: Assistant surgeon
     Mood: Angry
     audioId: D2.3.4
@@ -2270,7 +2263,7 @@ MonoBehaviour:
     Position: {x: 3780, y: 2611}
   - Guid: 18d4ea7d-cacd-444f-a192-90efce9f3516
     DialogueName: D3.3.1
-    DialogueText: "Let's keep calm. If you\u2019re unpatient, nothing can be solved."
+    DialogueText: "Let's keep calm. If you\u2019re impatient, nothing can be solved."
     Speaker: Head surgeon
     Mood: Calm
     audioId: D3.3.1
@@ -2279,7 +2272,7 @@ MonoBehaviour:
   - Guid: 1bfef044-1cf2-4cdb-966e-11d1a27e4561
     DialogueName: D3.3.2
     DialogueText: This is not the first time it happens, but finally we always could
-      find it.
+      have found it.
     Speaker: Anesthesist
     Mood: Calm
     audioId: D3.3.2
@@ -2311,7 +2304,7 @@ MonoBehaviour:
     Position: {x: 6088, y: 4208}
   - Guid: 007cc948-5bb3-4693-ad6e-1eb4b620174d
     DialogueName: D3.4.4
-    DialogueText: ' Please finish it, we really do not have time to be desperate.'
+    DialogueText: Please finish it, we really do not have time to be desperate.
     Speaker: Urologist
     Mood: Calm
     audioId: D3.4.4
@@ -2376,7 +2369,7 @@ MonoBehaviour:
     Position: {x: 6141, y: 780}
   - Guid: 5aa99d83-46cc-434a-b358-9e83311741c8
     DialogueName: D3.1.3
-    DialogueText: This is not my responsibility.
+    DialogueText: This is not my responsibility!
     Speaker: Anaesthesist
     Mood: Calm
     audioId: D3.1.3
@@ -2401,7 +2394,7 @@ MonoBehaviour:
     Position: {x: 6110, y: 2005}
   - Guid: a649ed73-7285-4b30-8851-101e9a1d4e37
     DialogueName: D3
-    DialogueText: Unfortunately, the numbers are still not right.
+    DialogueText: Unfortunately, the the count is still not correct.
     Speaker: Instrumentalist nurse
     Mood: Calm
     audioId: D3
@@ -2675,16 +2668,6 @@ MonoBehaviour:
     audioId: D5.3.1
     nodeType: 3
     Position: {x: 2834, y: 7326}
-  - Guid: f75b4fe1-fdf8-4b60-9ab0-2fae8a65dfe8
-    DialogueName: D6
-    DialogueText: "Both incisions are almost closed, reopening would be huge burden
-      for the patient. We cannot compromise patients\u2019 safety, please take the
-      X-ray."
-    Speaker: Urologist
-    Mood: Calm
-    audioId: D6
-    nodeType: 3
-    Position: {x: 3064, y: 6105}
   - Guid: 5725b557-9dba-4fd5-88da-592d9876e7c6
     DialogueName: D2
     DialogueText: Please recalculate the used towels and swabs!
@@ -2703,7 +2686,7 @@ MonoBehaviour:
     Position: {x: 3771, y: 467}
   - Guid: 3c51b201-f3ca-4086-b6cf-13a2f279a9ab
     DialogueName: D4.1
-    DialogueText: "Let\u2019s look around on the floor and under the equipments."
+    DialogueText: "Let\u2019s look around on the floor and under the equipment."
     Speaker: Anaesthesia assistant
     Mood: Calm
     audioId: D4.1
@@ -2743,4 +2726,23 @@ MonoBehaviour:
     audioId: D6.1.3
     nodeType: 3
     Position: {x: 4334, y: 8330}
+  - Guid: bde793cb-970f-44bc-89ce-73f90c6f98ce
+    DialogueName: D1.2.1
+    DialogueText: Of course, why it is always the first suspicion that nurses make
+      mistake?
+    Speaker: Instrumentalist nurse
+    Mood: Angry
+    audioId: D1.1.4
+    nodeType: 3
+    Position: {x: 866, y: 982}
+  - Guid: f75b4fe1-fdf8-4b60-9ab0-2fae8a65dfe8
+    DialogueName: D6
+    DialogueText: "Both incisions are almost closed, reopening would be huge burden
+      for the patient. We cannot compromise patients\u2019 safety, please take the
+      X-ray."
+    Speaker: Urologist
+    Mood: Calm
+    audioId: D6
+    nodeType: 3
+    Position: {x: 3064, y: 6105}
   ExposedProperties: []
