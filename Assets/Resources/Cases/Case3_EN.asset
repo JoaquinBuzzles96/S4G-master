@@ -385,9 +385,6 @@ MonoBehaviour:
   - BaseNodeGuid: c17b55e7-ead9-4413-8fea-0b630bce2619
     PortName: Dialogue
     TargetNodeGuid: 26b4a5f8-c71d-4ac2-ad58-534ceabf6c08
-  - BaseNodeGuid: 26b4a5f8-c71d-4ac2-ad58-534ceabf6c08
-    PortName: Dialogue
-    TargetNodeGuid: 7e07876b-0312-43f0-87af-370a2af4563c
   - BaseNodeGuid: 7e07876b-0312-43f0-87af-370a2af4563c
     PortName: Dialogue
     TargetNodeGuid: d6ac19e5-a187-4305-a9eb-3934b84fdb27
@@ -454,6 +451,9 @@ MonoBehaviour:
   - BaseNodeGuid: 4d7e8458-3739-46c6-a6bf-301ccf8bf19c
     PortName: Dialogue
     TargetNodeGuid: 03bf28d6-514e-45d5-bb9d-c90555cb77ea
+  - BaseNodeGuid: 26b4a5f8-c71d-4ac2-ad58-534ceabf6c08
+    PortName: Dialogue
+    TargetNodeGuid: 7e07876b-0312-43f0-87af-370a2af4563c
   SituationNodeData:
   - Guid: 3883b33a-f144-48c8-b765-639ff03eba8f
     SituationName: S4
@@ -1412,8 +1412,8 @@ MonoBehaviour:
     Position: {x: 1982, y: 6418}
   - Guid: 6d29a25b-3b39-4207-96a2-1b982770f363
     DialogueName: D8.1.2
-    DialogueText: '(Anaesthesiologist) Please rather care about your business. The
-      patient is restless, we cannot work properly.  '
+    DialogueText: 'Please rather care about your business. The patient is restless,
+      we cannot work properly.  '
     Speaker: Endoscopist 1
     Mood: Calm
     audioId: E1D32
@@ -1479,8 +1479,7 @@ MonoBehaviour:
     Position: {x: 2835, y: 5933}
   - Guid: 14539d48-cef4-4864-b50d-344f1f06ddf0
     DialogueName: D8.1.1
-    DialogueText: '(To Anaesthesiologist) How is the patient doing? What about the
-      blood pressure? '
+    DialogueText: 'How is the patient doing? What about the blood pressure? '
     Speaker: Endoscopist 1
     Mood: Calm
     audioId: E1D31
