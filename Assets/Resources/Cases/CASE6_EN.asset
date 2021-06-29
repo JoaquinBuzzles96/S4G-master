@@ -808,9 +808,6 @@ MonoBehaviour:
   - BaseNodeGuid: 5c04e905-e15a-4e6e-9774-b5f0ae455e73
     PortName: Dialogue
     TargetNodeGuid: 199b8883-d41d-47c3-b62e-739e46f2784e
-  - BaseNodeGuid: 51b3ed98-51fa-4dc4-b700-e8abd1d38ca4
-    PortName: Dialogue
-    TargetNodeGuid: 2377009a-8fd0-414d-8795-2267b3edcf95
   - BaseNodeGuid: 8f48aef5-30bb-4924-a8d4-2ac4d493153f
     PortName: Dialogue
     TargetNodeGuid: bab6861e-0488-4626-92fd-3139f491abc4
@@ -835,6 +832,9 @@ MonoBehaviour:
   - BaseNodeGuid: 287824ba-905b-40f2-a933-d80ecbed6253
     PortName: Situation
     TargetNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
+  - BaseNodeGuid: 51b3ed98-51fa-4dc4-b700-e8abd1d38ca4
+    PortName: Dialogue
+    TargetNodeGuid: 2377009a-8fd0-414d-8795-2267b3edcf95
   - BaseNodeGuid: 1bfef044-1cf2-4cdb-966e-11d1a27e4561
     PortName: Dialogue
     TargetNodeGuid: 04dc3512-3f83-4b75-8577-6809a4e3510d
@@ -2264,7 +2264,7 @@ MonoBehaviour:
   - Guid: 18d4ea7d-cacd-444f-a192-90efce9f3516
     DialogueName: D3.3.1
     DialogueText: "Let's keep calm. If you\u2019re impatient, nothing can be solved."
-    Speaker: Head surgeon
+    Speaker: Urologist
     Mood: Calm
     audioId: D3.3.1
     nodeType: 3
@@ -2338,7 +2338,7 @@ MonoBehaviour:
   - Guid: 4e5a2280-a0b4-4da4-a29d-ab33c8eb6e8e
     DialogueName: D3.2.1
     DialogueText: "Maybe, it is left inside the abdomen\u2026"
-    Speaker: Head surgeon
+    Speaker: Urologist
     Mood: Calm
     audioId: D3.2.1
     nodeType: 3
@@ -2647,7 +2647,7 @@ MonoBehaviour:
     DialogueName: D7.3
     DialogueText: The nurse in charge of the team is the circulating. He will organise
       the team.
-    Speaker: Head surgeon
+    Speaker: Urologist
     Mood: Calm
     audioId: D7.3
     nodeType: 3

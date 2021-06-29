@@ -950,7 +950,7 @@ public class UI_Manager : MonoBehaviour
             dictionaryCharacteres["AssistantSurgeon"].gameObject.SetActive(true);
             dictionaryCharacteres["InstrumentalistNurse"].gameObject.SetActive(true);
             dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
-            dictionaryCharacteres["HeadSurgeon"].gameObject.SetActive(true);
+            //dictionaryCharacteres["HeadSurgeon"].gameObject.SetActive(true);
             dictionaryCharacteres["CirculatingNurse"].gameObject.SetActive(true);
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
@@ -1479,6 +1479,7 @@ public class UI_Manager : MonoBehaviour
                 break;
             case "Anastesiólogo":
             case "Anesthesiologist":
+            case "Anaesthesitologist":
                 aux = "Anaesthesiologist";
                 break;
             case "Enfermera de endoscopia":
@@ -1622,15 +1623,24 @@ public class UI_Manager : MonoBehaviour
         switch (speaker)
         {
             case "Head Surgeon":
+            case "Head surgeon":
                 return "Chief Surgeon";
             case "Main Surgeon":
+            case "Main surgeon":
                 return "Chief Surgeon";
             case "Camera Assistant":
+            case "Camera assistant":
                 return "Assistant Surgeon";
             case "Nurse Anaesthetist":
+            case "Nurse anaesthetist":
                 return "Anaesthetic Nurse";
             case "Student":
                 return "Medical Student";
+            case "InstrumentalistNurse":
+            case "Instrumentalist Nurse":
+            case "Instrumentalist nurse":
+                return "Scrub Nurse";
+
         }
 
         //Si no encuentra ninguno de los anteriores se devuelve el mismo nombre
