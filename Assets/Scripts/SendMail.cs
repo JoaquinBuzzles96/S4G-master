@@ -69,7 +69,7 @@ public class SendMail : MonoBehaviour
 #endif
     }
 
-    public void SendEmail()
+    public void SendEmail_old()
     {
 
         string version = "Desktop";
@@ -94,32 +94,94 @@ public class SendMail : MonoBehaviour
         SaveCSV(text);
 
         MailMessage mail = new MailMessage();
-        mail.From = new MailAddress("s4game@viralstudios.es");
+        mail.From = new MailAddress("S4GameViralStudios@gmail.com");
         mail.To.Add(m_UserMail);
         mail.Subject = "S4G TEST";
         /*
         Attachment attachment = new Attachment(@"D:\S4Game\somefile.txt");
         mail.Attachments.Add(attachment);
         */
+        /*
         if (UI_Manager.Instance.playereRoute == null || UI_Manager.Instance.playereRoute == "")
         {
             UI_Manager.Instance.playereRoute = "\n Testing";
         }
+        */
 
         mail.Body = text;
 
-        SmtpClient smtpServer = new SmtpClient("mail.viralstudios.es");//mail.viralstudios.es//"smtp.gmail.com"
+        SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");//mail.viralstudios.es//"smtp.gmail.com"
         smtpServer.Port = 587;
-        smtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;//testing
+        //smtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;//testing
         //("s4game@viralstudios.es", "[l,=6?U=V,Cd")
-        smtpServer.Credentials = new System.Net.NetworkCredential("s4game@viralstudios.es", "[l,=6?U=V,Cd") as ICredentialsByHost;
+        smtpServer.Credentials = new System.Net.NetworkCredential("S4GameViralStudios@gmail.com", " ViralStudios0@") as ICredentialsByHost;
         smtpServer.EnableSsl = true;
-
+        /*
         ServicePointManager.ServerCertificateValidationCallback =
         delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
         { return true; };
+        */
         Debug.Log($"Enviamos el mail con el feedback al correo {m_UserMail}");
         smtpServer.Send(mail);
+    }
+
+    public void SendEmail()
+    {
+        string version = "Desktop";
+
+#if UNITY_ANDROID //PLATFORM_ANDROID
+        version = "VR";
+#endif
+
+        string text =
+            " --------------- VERSION " + version + "(" + System.DateTime.Now + ") ---------------" +
+            " Name: " + m_UserName +
+            "\n Correo: " + m_UserMail +
+            "\n Case: " + LanguageManager.Instance.caseSelected +
+            "\n Languague: " + LanguageManager.Instance.languageSelected +
+            "\n Total time: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds." +
+            "\n Total score:" + UI_Manager.Instance.totalScore +
+            "\n Total decisions:" + UI_Manager.Instance.totalDecisions +
+            "\n Correct decisions:" + UI_Manager.Instance.totalCorrectAnswers +
+            UI_Manager.Instance.playereRoute;
+
+        SaveCSV(text);
+
+        MailMessage mail = new MailMessage();
+        SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+        m_UserMail = "joakilm2@gmail.com";
+        mail.From = new MailAddress("S4GameViralStudios@gmail.com");
+        mail.To.Add(m_UserMail);
+        mail.Subject = "S4G TEST";
+        mail.Body = text;
+
+        SmtpServer.Port = 587;
+        SmtpServer.Credentials = new System.Net.NetworkCredential("S4GameViralStudios@gmail.com", " ViralStudios0@");
+        SmtpServer.EnableSsl = true;
+
+        Debug.Log($"Enviamos el mail con el feedback al correo {m_UserMail}");
+
+        SmtpServer.Send(mail);
+    }
+
+    public void SendEmail_test_working()
+    {
+        MailMessage mail = new MailMessage();
+        SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+        m_UserMail = "joakilm2@gmail.com";
+        mail.From = new MailAddress("S4GameViralStudios@gmail.com");
+        mail.To.Add(m_UserMail);
+        mail.Subject = "Test Mail";
+        mail.Body = "S4G: This is for testing SMTP mail from GMAIL";
+        
+        SmtpServer.Port = 587;
+        SmtpServer.Credentials = new System.Net.NetworkCredential("S4GameViralStudios@gmail.com", " ViralStudios0@");
+        SmtpServer.EnableSsl = true;
+
+        Debug.Log($"Enviamos el mail con el feedback al correo {m_UserMail}");
+
+        SmtpServer.Send(mail);
+
     }
 
     public void SaveCSV(string text)
