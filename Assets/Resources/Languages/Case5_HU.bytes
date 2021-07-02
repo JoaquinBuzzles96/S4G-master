@@ -22,21 +22,21 @@ CASE5;D1.3.2;Műtőssegéd;Ez egy sürgősségi szituáció, nincs időnk várni
 CASE5;Q1.4;Műszerelő műtősnő;Senki sem hagyhatja el a műtőt. Hívjanak egy másik nővéri csapatot.
 CASE5;D2;Operatőr;Nyugodtan gondoljuk végig a helyzetet és próbáljuk megfelelő megoldást találni.
 CASE5;Q2.1;Műtőssegéd;Ami az aneszteziológusokat illeti, van szabad kapacitásuk?
-CASE5;D2.1.1;Aneszteziológus ;Attól félek, én vagyok az egyetlen ügyeletben lévő aneszteziológus.
-CASE5;D2.1.2;Aneszteziológus ;Nem tudom, nem az én feladatom ismerni mások időbeosztását.
+CASE5;D2.1.1;Aneszteziológus;Attól félek, én vagyok az egyetlen ügyeletben lévő aneszteziológus.
+CASE5;D2.1.2;Aneszteziológus;Nem tudom, nem az én feladatom ismerni mások időbeosztását.
 CASE5;D2.1.3;Első asszisztens;Ez most nem fontos, folytassuk a műtétet.
 CASE5;D2.1.4;Első asszisztens;Fogja be végre és folytassuk a műtétet.
 CASE5;Q2.2;Első asszisztens;Nem érdekel, nem megyek el!
 CASE5;D2.2.1;Operatőr;Ezzel a hozzáállással nem oldunk meg semmit. Kell lennie megoldásnak.
 CASE5;D2.3.1;Operatőr;Ezzel a hozzáállással nem oldunk meg semmit. Kell lennie megoldásnak.
 CASE5;D2.4.1;Operatőr;Ezzel a hozzáállással nem oldunk meg semmit. Kell lennie megoldásnak.
-CASE5;D2.2.2;Aneszteziológus ;Gondoljuk át az erőforrásokat. Más aneszteziológus is ügyeletben van, ez nem probléma.
-CASE5;D2.3.2;Aneszteziológus ;Gondoljuk át az erőforrásokat. Más aneszteziológus is ügyeletben van, ez nem probléma.
-CASE5;D2.4.2;Aneszteziológus ;Gondoljuk át az erőforrásokat. Más aneszteziológus is ügyeletben van, ez nem probléma.
+CASE5;D2.2.2;Aneszteziológus;Gondoljuk át az erőforrásokat. Más aneszteziológus is ügyeletben van, ez nem probléma.
+CASE5;D2.3.2;Aneszteziológus;Gondoljuk át az erőforrásokat. Más aneszteziológus is ügyeletben van, ez nem probléma.
+CASE5;D2.4.2;Aneszteziológus;Gondoljuk át az erőforrásokat. Más aneszteziológus is ügyeletben van, ez nem probléma.
 CASE5;D2.2.3;Műtőssegéd;Ön a sebész, önnek kellene aggódnia.
-CASE5;D2.2.4;Aneszteziológus ;Kérem szóljon, amennyiben a segítségére lehetek.
+CASE5;D2.2.4;Aneszteziológus;Kérem szóljon, amennyiben a segítségére lehetek.
 CASE5;Q2.3;Aneszteziológus asszisztens;Nem tudok ketté osztódni! Tisztában kellene lenniük azzal, hogy ilyen megtörténhet.
-CASE5;D2.3.3;Aneszteziológus ;Nem tudom, nem az én feladatom ismerni mások időbeosztását.
+CASE5;D2.3.3;Aneszteziológus;Nem tudom, nem az én feladatom ismerni mások időbeosztását.
 CASE5;D2.3.4;Első asszisztens;Ne zavarja a sebészt, ezt most be kell fejeznünk.
 CASE5;Q2.4;Műszerelő műtősnő;Nem tudom, mit akarnak tőlünk, de nem is érdekel.
 CASE5;D2.4.3;Műtőssegéd;Én sem tudom, én csak felvettem a telefont és tájékoztattam Önt.
@@ -45,7 +45,7 @@ CASE5;D3;Operatőr;Ne térjünk el a tárgytól. Anesztézia szemponjából rend
 CASE5;Q3.1;Műszerelő műtősnő;Mindig ugyanaz történik, mindent a főnöknek kell megoldania.
 CASE5;D3.1.1;Operatőr;Nyugodjunk meg, feszülten nem oldahtunk meg semmit.
 CASE5;D3.1.2;Műtőssegéd;Nem ez az első alkalom, hogy ilyen problémávl állunk szemben, azonban mindig sikerült megoldani. Gondoljuk át a lehetőségeket.
-CASE5;D3.1.3;Aneszteziológus ;Én már részt vettem a feladatban, de egyedül nem tudom megoldani.
+CASE5;D3.1.3;Aneszteziológus;Én már részt vettem a feladatban, de egyedül nem tudom megoldani.
 CASE5;D3.1.4;Első asszisztens;Nem is az én feladatom, de tennünk kell valamit!
 CASE5;Q3.2;Műtőssegéd;Nem ez az első alkalom, hogy ilyen problémávl állunk szemben, azonban mindig sikerült megoldani. 
 CASE5;D3.2.1;Operatőr;Vállveregetés nélkül elemezzük a lehetőségeket...
@@ -56,6 +56,11 @@ CASE5;D3.3.1;Operatőr;Nyugodjunk meg! Kiabálással nem oldunk meg semmit.
 CASE5;D3.3.2.1;Műtőssegéd;Javaslom, hogy a műtőssegéd maradjon ebben a műtőben. A másik 2 kolléga pedig a másik műtőben lássa el a műtőssegédi és aneszteziológiai asszisztensi feladatokat.
 CASE5;D3.3.4;Operatőr;Többet ne kiabáljon velem!
 CASE5;Q3.4;Műtőssegéd;Ön szerint nekem kellene megoldanom? Nem hiszem!
+CASE5;Q3.4.1;Operatőr;Nyugodjunk meg! Kiabálással nem oldunk meg semmit.
+CASE5;Q3.4.2;Aneszteziológus;Nem ez az első alkalom, hogy ilyen problémávl állunk szemben, azonban mindig sikerült megoldani. Gondoljuk át a lehetőségeket.
+CASE5;Q3.4.3;Aneszteziológus;Én már részt vettem a feladatban, de egyedül nem tudom megoldani.
+CASE5;D3.3.3;Aneszteziológus;Én már részt vettem a feladatban, de egyedül nem tudom megoldani.
+CASE5;Q3.4.4;Műtőssegéd;Nem is az én feladatom, de tennünk kell valamit!
 CASE5;Q4;Operatőr;Az anesztézia megoldódott. Az első asszisztens és én nem hagyhatjuk el a műtőt. Asszisztencia, hogyan oldjuk ezt meg?
 CASE5;D4.1;Aneszteziológus asszisztens;Asszisztencia? Természetesen! Nem nekünk kell mindent megoldani.
 CASE5;D4.2;Első asszisztens;Semmi közöm hozzá, nem azért vagyok itt, hogy más munkáját végezzem!
@@ -69,10 +74,10 @@ CASE5;D5.2;Műszerelő műtősnő;Azért vagyok itt, hogy a munkámat végezzem,
 CASE5;D5.2.1;Műtőssegéd;Nem segít ez a hozzáállás.
 CASE5;D5.3;Első asszisztens;Szerezzek egy másik műtéti teamet? Nekem kellene ezt megoldani?
 CASE5;D5.3.1;Műtőssegéd;Nincs más team ügyeletben.
-CASE5;D5.4;Aneszteziológus ;Megtettem ami tőlem telt. Miért kell tovább hallganom ezt?
+CASE5;D5.4;Aneszteziológus;Megtettem ami tőlem telt. Miért kell tovább hallganom ezt?
 CASE5;D5.4.1;Műtőssegéd;Ezt a döntést közösen kell meghoznunk.
 CASE5;Q6;Operatőr;Ez nem segíti a megoldást. Hogyan garantálhatjuk a betegek biztonságát úgy hogy közben a második műtő is elinduljon?
-CASE5;D6.1;Aneszteziológus ;Sok beszédnek sok az alja. Mi a megoldás?
+CASE5;D6.1;Aneszteziológus;Sok beszédnek sok az alja. Mi a megoldás?
 CASE5;D6.1.1;Operatőr;Mi ez a hozzáállás? Megoldást keresünk!
 CASE5;D6.2;Műtőssegéd;A szabályzat szerint osszuk két részre az asszisztenciát.
 CASE5;D6.2.1;Operatőr;Találjuk meg a legjobb megoldást.
@@ -86,7 +91,7 @@ CASE5;D7.1.1;Műtőssegéd;Nuygodjunk meg és álljunk hozzá konstruktívan.
 CASE5;D7.2;Műszerelő műtősnő;Mégis hogy vagy ez? Ne számítson rám!
 CASE5;D7.3;Operatőr;Az ügyeletben lévő nővér átveszi a műtőssegéd feladatait és ő koordinálja az asszisztenciát.
 CASE5;D7.3.1;Műtőssegéd;Nagyon jó, teljesen egyetértek.
-CASE5;D7.4;Aneszteziológus ;Egyetértek. Hiányolni fogjuk.
+CASE5;D7.4;Aneszteziológus;Egyetértek. Hiányolni fogjuk.
 CASE5;Q8;Műtőssegéd;A legideálisabb az lenne, ha két asszisztensi csapat állna rendelkezésre. Mivel ez nem lehetséges, a rendelkezésre alló forrásokból kell kihoznunk a legtöbbet.
 CASE5;D8.1;Aneszteziológus asszisztens;Mindig ugyanazok oldják meg a feladatokat! Elegem van!
 CASE5;D8.1.1;Műtőssegéd;Nem a legjobb, de döntést kell hoznunk.
@@ -100,10 +105,10 @@ CASE5;D9.1.1;Operatőr;Jelenleg nem ez a téma.
 CASE5;D9.2;Műszerelő műtősnő;Meg kell fizetniük egy másik asszisztensi csapatot.
 CASE5;D9.3;Első asszisztens;A szabályok mindenkire vonatkoznak.
 CASE5;D9.3.1;Operatőr;Örülök hogy egyetértenek. Folytassuk!
-CASE5;D9.4;Aneszteziológus ;Miről beszél? Egyszerűen nem értem...
+CASE5;D9.4;Aneszteziológus;Miről beszél? Egyszerűen nem értem...
 CASE5;D9.4.1;Operatőr;A probléma megoldásának módjáról.
 CASE5;Q10;Műtőssegéd;A javaslatom az lenne, hogy a műtőssegéd maradjon ebben a műtőben, a műtősnő és az aneszteziológus asszisztens pedig menjen át a másik műtőbe.
-CASE5;D10.1;Aneszteziológus ;Hogyan? Ki készítette össze a gyógyszereket?
+CASE5;D10.1;Aneszteziológus;Hogyan? Ki készítette össze a gyógyszereket?
 CASE5;D10.2;Első asszisztens;Ez opció? Ki fogja előkészíteni a műszereket?Nekem kellene?
 CASE5;D10.3;Műszerelő műtősnő;Így kell távoznom, hiányolni fognak.
 CASE5;D10.4;Operatőr;Nagyon jó, végre egy megoldás.
@@ -161,17 +166,24 @@ CASE5;D16.3.1;Operatőr;Csapatként kell együttműködnünk. A rendelkezésre �
 CASE5;D16.4;Operatőr;Döntöttem. Vállalom a felelősséget, mert a helyzet tükrében ezt tartom a legjobb megoldásnak.
 CASE5;D16.4.1;Műtőssegéd;Főműtősnőként én is egyetértek és vállalom az asszisztencia részéről a felelősséget.
 CASE5;END1;Operatőr;Mindenki térjen vissza a munkához és tegyünk meg minden tőlünk telhetőt ezekért a betegekért.
+CASE5;A16.1;Operatőr;Mindenki térjen vissza a munkához és tegyünk meg minden tőlünk telhetőt ezekért a betegekért.
+CASE5;A16.2;Operatőr;Mindenki térjen vissza a munkához és tegyünk meg minden tőlünk telhetőt ezekért a betegekért.
+CASE5;A16.3;Operatőr;Mindenki térjen vissza a munkához és tegyünk meg minden tőlünk telhetőt ezekért a betegekért.
+CASE5;A16.4;Operatőr;Mindenki térjen vissza a munkához és tegyünk meg minden tőlünk telhetőt ezekért a betegekért.
 CASE5;Q17;Aneszteziológus;Ameddig az aneszteziológus asszisztens segít, addig tudom vállalni a felelősséget mindkét műtőért.
 CASE5;D17.1;Első asszisztens;Miért beszélünk erről ennyit? Fejezzük már be végre valahára!
 CASE5;D17.2;Aneszteziológus asszisztens;Nekem kellene maradnom, a műtőssegéd pedig menjen át a másik műtőbe.
 CASE5;D17.3;Aneszteziológus asszisztens;Számomra ez nem megfelelő megoldás.
 CASE5;D17.4;Operatőr;Ez csapatmunka, mindenkinek részt kell vennie benne ahhoz, megtaláljuk a legjobb megoldást.
 CASE5;Q18;Műtőssegéd;Az ajánlások alapján két csoportra tudjuk osztani az asszisztenciát.
-CASE5;D18.1;Első asszisztens;Azt szeretné, ha átmennék a másik műtőbe?
+CASE5;Q18.1;Első asszisztens;Azt szeretné, ha átmennék a másik műtőbe?
 CASE5;D18.1.1;Műtőssegéd;Nyugodjunk meg és álljunk konstruktívan a kérdéshez.
 CASE5;D18.1.2;Aneszteziológus asszisztens;Én sem. Nem akarom vállalni ezért a felelősséget.
-CASE5;D18.2;Műszerelő műtősnő;Ezt mégis hogyan? Ne számítson rám!
-CASE5;D18.3;Operatőr;A főnővér a műtőssegéd. Ő szervezi meg a csapatokat.
+CASE5;Q18.2;Műszerelő műtősnő;Ezt mégis hogyan? Ne számítson rám!
+CASE5;Q18.3;Operatőr;A főnővér a műtőssegéd. Ő szervezi meg a csapatokat.
 CASE5;D18.3.1;Műtőssegéd;Nagyon jó. Teljesen egyetértek.
 CASE5;D18.3.2;Aneszteziológus asszisztens;Ne számítson rám. Nem vállalom a felelősséget.
 CASE5;END2;Operatőr;Mivel nincs egyetértés, ezért csak azt tehetjük hogy ezt minél hamarabb befejzzük és reméljük a legjobbakat az anya és gyermeke számára.
+CASE5;A18.1.2;Operatőr;Mivel nincs egyetértés, ezért csak azt tehetjük hogy ezt minél hamarabb befejzzük és reméljük a legjobbakat az anya és gyermeke számára.
+CASE5;A18.2.2;Operatőr;Mivel nincs egyetértés, ezért csak azt tehetjük hogy ezt minél hamarabb befejzzük és reméljük a legjobbakat az anya és gyermeke számára.
+CASE5;A18.3.2;Operatőr;Mivel nincs egyetértés, ezért csak azt tehetjük hogy ezt minél hamarabb befejzzük és reméljük a legjobbakat az anya és gyermeke számára.
