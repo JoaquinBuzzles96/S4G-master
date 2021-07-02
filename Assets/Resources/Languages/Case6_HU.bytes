@@ -49,12 +49,14 @@ CASE6;D3.2.3;Aneszteziológus;Ez nem az én felelősségem!
 CASE6;D3.3.3;Aneszteziológus;Ez nem az én felelősségem!
 CASE6;D3.1.4;Első asszisztens;Ez nem az én felelősségem! De valamit tennünk kell.
 CASE6;Q3.2;Műtőssegéd;Nem először történik ilyen, eddig is mindig megtaláltuk.
+CASE6;D3.4.2;Műtőssegéd;Nem először történik ilyen, eddig is mindig megtaláltuk.
 CASE6;D3.2.1;Urológus;Talán mégis a hasüregben hagytuk...
 CASE6;D3.2.2;Első asszisztens;Rendben, próbáljuk meg megoldani, de akkor sem az én felelősségem.
 CASE6;D3.2.4;Első asszisztens;Bármit, csak végre fejezzük már be!
 CASE6;Q3.3;Első asszisztens;Biztos vagyok benne, hogy itt van valahol. Csak kérem siessünk, mert egy másik beteg vár rám egy másik műtőben.
 CASE6;D3.3.1;Urológus;Nyugodjunk meg. Türelmetlenséggel nem oldunk meg semmit.
 CASE6;D3.3.2;"Aneszteziológus;Nem először fordul elő, de végül mindig megtaláltuk.
+CASE6;D3.4.3;"Aneszteziológus;Nem először fordul elő, de végül mindig megtaláltuk.
 CASE6;D3.3.4;Urológus;Ez az ön felelőssége is, kérem vegyen részt a probléma megoldásában.
 CASE6;Q3.4;Aneszteziológus asszisztens;Mi történik, ha mégsem találnánk meg?
 CASE6;D3.4.4;Urológus;Kérem fejezze be, nincs időnk kétségbeesni.
@@ -86,12 +88,15 @@ CASE6;Q6.4;Aneszteziológus;Egyetértek!
 CASE6;D6.4.1;Műszerelő műtősnő;Ez volt a legjobb megoldás.
 CASE6;D6.4.2;Első asszisztens;Végre!
 CASE6;D6.4.3;Műszerelő műtősnő;Mindig adnak nekem munkát!
-CASE6;D7;Urológus;A röntgen nem talált semmit, eszerint a buci nincs a hasüregben. Megtettük amit tudtunk. Dokumentáljuk a történteket a műtéti naplóba és tájékoztatjuk a beteget.
-CASE6;Q7.1;Első asszisztens;Ez a legjobb amit tehetünk.
-CASE6;Q7.2;Műtőssegéd;Tájékoztatom a következő műtéti teamet a döntésről.
-CASE6;Q7.3;Aneszteziológus;A főműtősnő átveszi a műtőssegéd szerepét és megszervezi az asszisztensi teameket.
-CASE6;Q7.4;Aneszteziológus;Egyetértek. Előkészítem a beteget az ébresztésre.
-CASE6;END;Narrator;A műtéti team befejezte a műtétet, a beteget felébresztették és tájékoztaták a hiányzó buciról. Ezt a műtéti naplóban is részletesen rögzítették. A következő 4 napban a beteg állapota stabil volt, steril szobába került, a sebei szépen gyógyultak, graft kilökődésre, gyulladásra utaló jel nem volt.A kórházban minden pénteken teljesen kitakarítják és fertőtlenítik a műtőblokkot, amelyet délután, a műtéti program végén hajtanak végre. A megfelelő higiénia érdekében a berendezéseket - beleértve a műtőasztalokat is - elmozdítják. Ekkor a hiányzó buci előkerült a műtőasztal lába alól. Valószínűleg a műtét alatt a buci leeshetett, és valaki véletlenül berúgta a műtőasztal alá. 
+CASE6;Q7;Urológus;A röntgen nem talált semmit, eszerint a buci nincs a hasüregben. Megtettük amit tudtunk. Dokumentáljuk a történteket a műtéti naplóba és tájékoztatjuk a beteget.
+CASE6;D7.1;Első asszisztens;Ez a legjobb amit tehetünk.
+CASE6;D7.2;Műtőssegéd;Tájékoztatom a következő műtéti teamet a döntésről.
+CASE6;D7.3;Aneszteziológus;A főműtősnő átveszi a műtőssegéd szerepét és megszervezi az asszisztensi teameket.
+CASE6;D7.4;Aneszteziológus;Egyetértek. Előkészítem a beteget az ébresztésre.
+CASE6;A7.1;Narrator;A műtéti team befejezte a műtétet, a beteget felébresztették és tájékoztaták a hiányzó buciról. Ezt a műtéti naplóban is részletesen rögzítették. A következő 4 napban a beteg állapota stabil volt, steril szobába került, a sebei szépen gyógyultak, graft kilökődésre, gyulladásra utaló jel nem volt.A kórházban minden pénteken teljesen kitakarítják és fertőtlenítik a műtőblokkot, amelyet délután, a műtéti program végén hajtanak végre. A megfelelő higiénia érdekében a berendezéseket - beleértve a műtőasztalokat is - elmozdítják. Ekkor a hiányzó buci előkerült a műtőasztal lába alól. Valószínűleg a műtét alatt a buci leeshetett, és valaki véletlenül berúgta a műtőasztal alá. 
+CASE6;A7.2;Narrator;A műtéti team befejezte a műtétet, a beteget felébresztették és tájékoztaták a hiányzó buciról. Ezt a műtéti naplóban is részletesen rögzítették. A következő 4 napban a beteg állapota stabil volt, steril szobába került, a sebei szépen gyógyultak, graft kilökődésre, gyulladásra utaló jel nem volt.A kórházban minden pénteken teljesen kitakarítják és fertőtlenítik a műtőblokkot, amelyet délután, a műtéti program végén hajtanak végre. A megfelelő higiénia érdekében a berendezéseket - beleértve a műtőasztalokat is - elmozdítják. Ekkor a hiányzó buci előkerült a műtőasztal lába alól. Valószínűleg a műtét alatt a buci leeshetett, és valaki véletlenül berúgta a műtőasztal alá. 
+CASE6;A7.3;Narrator;A műtéti team befejezte a műtétet, a beteget felébresztették és tájékoztaták a hiányzó buciról. Ezt a műtéti naplóban is részletesen rögzítették. A következő 4 napban a beteg állapota stabil volt, steril szobába került, a sebei szépen gyógyultak, graft kilökődésre, gyulladásra utaló jel nem volt.A kórházban minden pénteken teljesen kitakarítják és fertőtlenítik a műtőblokkot, amelyet délután, a műtéti program végén hajtanak végre. A megfelelő higiénia érdekében a berendezéseket - beleértve a műtőasztalokat is - elmozdítják. Ekkor a hiányzó buci előkerült a műtőasztal lába alól. Valószínűleg a műtét alatt a buci leeshetett, és valaki véletlenül berúgta a műtőasztal alá. 
+CASE6;A7.4;Narrator;A műtéti team befejezte a műtétet, a beteget felébresztették és tájékoztaták a hiányzó buciról. Ezt a műtéti naplóban is részletesen rögzítették. A következő 4 napban a beteg állapota stabil volt, steril szobába került, a sebei szépen gyógyultak, graft kilökődésre, gyulladásra utaló jel nem volt.A kórházban minden pénteken teljesen kitakarítják és fertőtlenítik a műtőblokkot, amelyet délután, a műtéti program végén hajtanak végre. A megfelelő higiénia érdekében a berendezéseket - beleértve a műtőasztalokat is - elmozdítják. Ekkor a hiányzó buci előkerült a műtőasztal lába alól. Valószínűleg a műtét alatt a buci leeshetett, és valaki véletlenül berúgta a műtőasztal alá. 
 CASE6;D3.4.1;Urológus;Nyugodjunk meg, ingerülten semmit nem tudunk megoldani.
 CASE6;D6.1.3;Műtőssegéd;Mindig nekem adnak munkát!
 CASE6;D6.1.2;Műszerelő műtősnő;Követnünk kell az előírásokat!
