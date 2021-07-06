@@ -149,7 +149,6 @@ public class SendMail : MonoBehaviour
 
         MailMessage mail = new MailMessage();
         SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-        m_UserMail = "joakilm2@gmail.com";
         mail.From = new MailAddress("S4GameViralStudios@gmail.com");
         mail.To.Add(m_UserMail);
         mail.Subject = "S4G TEST";
@@ -168,7 +167,6 @@ public class SendMail : MonoBehaviour
     {
         MailMessage mail = new MailMessage();
         SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-        m_UserMail = "joakilm2@gmail.com";
         mail.From = new MailAddress("S4GameViralStudios@gmail.com");
         mail.To.Add(m_UserMail);
         mail.Subject = "Test Mail";

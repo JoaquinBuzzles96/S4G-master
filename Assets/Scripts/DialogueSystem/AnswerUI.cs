@@ -31,8 +31,8 @@ public class AnswerUI : MonoBehaviour
         {
             //description.text = $"(id: {questionData.QuestionName}) {LanguageManager.Instance.GetQuestionSpeaker(questionData)}: {LanguageManager.Instance.GetQuestionDescription(questionData)}";
             //Definitivo --> description.text = $"{LanguageManager.Instance.GetDialogueSpeaker(dialogues[0])}: {LanguageManager.Instance.GetDialogueText(dialogues[0])}"; 
-            description.text = $"(id: {dialogues[0].DialogueName}) {LanguageManager.Instance.GetDialogueSpeaker(dialogues[0])}: {LanguageManager.Instance.GetDialogueText(dialogues[0])}"; 
-            //description.text = $"{LanguageManager.Instance.GetDialogueSpeaker(dialogues[0])}: {LanguageManager.Instance.GetDialogueText(dialogues[0])}"; 
+            //description.text = $"(id: {dialogues[0].DialogueName}) {LanguageManager.Instance.GetDialogueSpeaker(dialogues[0])}: {LanguageManager.Instance.GetDialogueText(dialogues[0])}"; 
+            description.text = $"{LanguageManager.Instance.GetDialogueSpeaker(dialogues[0])}: {LanguageManager.Instance.GetDialogueText(dialogues[0])}"; 
             //Debug.Log($"Se ha asignado el primer dialogo de la respuesta {answerData.AnswerName}, dialogo = {description.text}");
         }
         else
