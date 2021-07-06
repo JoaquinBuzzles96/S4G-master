@@ -1,70 +1,70 @@
-CASE3;S1;NARRADOR;La localización del escenario es el quirófano de endoscopia. El paciente está en posición para la colonoscopia. El teatro tiene el equipo común. La colonoscopia bajo anestesia general está programada. 
-CASE3;Q1;NARRADOR;¿Como reaccionaras?
-CASE3;D1.1;NARRADOR;Todos los miembros del equipo están en sus sitios, tú eres el Endoscopista 1  y estás sosteniendo el endoscopio preparado para la inserción. Entonces preguntas:
+CASE3;S1;NARRADOR;La localización de este escenario es el quirófano de endoscopia. El paciente está en posición de colonoscopia (acostado sobre su lado izquierdo). El quirófano tiene el equipamiento común. La colonoscopia bajo anestesia general está programada. 
+CASE3;Q1;NARRADOR;¿Cómo reaccionas?
+CASE3;D1.1;NARRADOR;Todos los miembros del equipo están en sus sitios, tú eres el Endoscopista principal y sostienes el endoscopio preparado para la inserción
 CASE3;D1.2;Endoscopista 1;¿Estamos listos? ¿Podemos empezar?
 CASE3;D1.3;Anestesiólogo;Sí, todo esta bien.
 CASE3;D1.1.1;Endoscopista 1;¿No tienes que llevar la mascarilla? ¿Sigues alguna regla especial de la que no esté informado?
-CASE3;D1.1.2;Endoscopista 1;No tienes la mascarilla puesta, póntela.
-CASE3;D1.1.3;Endoscopista 1;¡Coge la mascarilla inmediatamente! Deberías llevarla durante la endoscopia, es una parte básica del código de vestimenta.
-CASE3;D1.1.4;Endoscopista 1;¡Esto es increíble! Sal de aquí inmediatamente y vuelve cuando sepas como vestirte apropiadamente para la operación.
+CASE3;D1.1.2;Endoscopista 1;No tienes la mascarilla puesta, póntela por favor.
+CASE3;D1.1.3;Endoscopista 1;¡Coge la mascarilla inmediatamente! Deberías llevarla durante la endoscopia, es parte del código básico de vestimenta.
+CASE3;D1.1.4;Endoscopista 1;¡Esto es increíble! Sal inmediatamente y vuelve cuando sepas cómo vestirte adecuadamente para la intervención.
 CASE3;D1.5;Endoscopista 1;Disculpa, no me había dado cuenta.
 CASE3;D2.1;NARRADOR;La enfermera de endoscopia se pone la máscara y empieza el procedimiento. Introduces el endoscopio y te giras hacia la enfermera. 
-CASE3;D2.2;Endoscopista 1;Estamos empezando la resección endoscópica de la mucosa del cáncer de recto temprano. Es un tipo de procedimiento muy especial. ¿Has verificado los hallazgos endoscópicos?
+CASE3;D2.2;Endoscopista 1;Estamos empezando la resección endoscópica de la mucosa del cáncer de recto temprano. Es un tipo de procedimiento muy específico. ¿Has verificado antes los hallazgos endoscópicos?
 CASE3;D2.3;Enfermera de endoscopia;Sí, los he verificado.
-CASE3;D2.1.1;Endoscopista 1;En tu caso, eso es algo casi para celebrar...
+CASE3;D2.1.1;Endoscopista 1;En tu caso, esto es casi un motivo de celebración...
 CASE3;D2.1.2;Endoscopista 1;¡Muy bien! ¡Me alegra escuchar eso! Es bueno cuando una enfermera está al tanto del procedimiento planeado de antemano.
 CASE3;D2.1.3;Endoscopista 1;Excelente, entonces espero que tu trabajo sea mejor que tu código de vestimenta para la endoscopia.
 CASE3;D2.1.4;Endoscopista 1;Bien.
-CASE3;D3.1;NARRADOR;La enfermera de endoscopia comienza a llorar y sale corriendo del teatro. Tras un rato, entra otra enfermera. 
+CASE3;D3.1;NARRADOR;La enfermera de endoscopia comienza a llorar y sale corriendo del quirófano. Tras un rato, entra otra enfermera.
 CASE3;D4.1;Endoscopista 1;Inyector.
 CASE3;D4.2;Enfermera de endoscopia;Disculpa, no te he entendido.
 CASE3;D4.4;Enfermera de endoscopia;¿Es este?
 CASE3;D4.5;Endoscopista 1;Sí, claro, cual si no. ¿Has asistido alguna vez durante una resección endoscópica de la mucosa?
-CASE3;D4.6;Enfermera de endoscopia;He visto este tipo de cirugías varias veces, pero no la he experimentado por mi cuenta, aún. Con suerte, lo podré manejar.
-CASE3;D4.1.1;Endoscopista 1;Vete inmediatamente y envíame a una enfermera experimentada en este tipo de procedimientos.  
-CASE3;D4.1.2;Endoscopista 1;Ese es tu problema, no me importa, deberías haberlo dicho antes. ¡Solo te advierto de cualquier problema! 
-CASE3;D4.1.3;Endoscopista 1;¿Estás segura de que podrás manejarlo? 
-CASE3;D4.1.4;Endoscopista 1;Perfecto, yo también creo que podremos manejarlo juntos. En cualquier caso, por favor, asegúrate de que haya una enfermera de repuesto disponible por si necesitas ayuda.
+CASE3;D4.6;Enfermera de endoscopia;He visto este tipo de cirugía varias veces, pero no la he experimentado por mí misma, todavía. Con suerte, lo conseguiré.
+CASE3;D4.1.1;Endoscopista 1;Sal inmediatamente y asegúrate que una enfermera experimentada vendrá lo antes posible.
+CASE3;D4.1.2;Endoscopista 1;Ese es tu problema, no me importa, deberías haberlo dicho antes. ¡Sólo te estoy advirtiendo!
+CASE3;D4.1.3;Endoscopista 1;¿Estás segura de que podrás conseguirlo? 
+CASE3;D4.1.4;Endoscopista 1;Perfecto, yo también creo que lo conseguiremos juntos. En cualquier caso, por favor, asegúrate de que una enfermera experimentada esté disponible si es necesario.
 CASE3;D6.1;Endoscopista 1;Lazo de polipectomía.
-CASE3;D6.2;NARRADOR;La enferemera de endoscopia te pasa el lazo y trabajas. De repente, extraes el lazo del endoscopio y se lo das a la enfermera. La enfermera lo pone de vuelta en la mesa.
-CASE3;D6.3;Endoscopista 1;Ha estallado el vaso, veo sangrado intenso, pásame el fórceps. ¡Rápido!
-CASE3;D6.4;NARRADOR;La enfermera rebusca repetidamente entre las herramientas de la mesa, hasta que te da una herramienta.
-CASE3;D6.5;Endoscopista 2;Esa no es la herramienta correcta.
-CASE3;A6.1;NARRADOR;Emociones negativas vinculadas a manifestaciones físicas de agresión - como tirar objetos a los asistentes – son absolutamente inapropiados. 
-CASE3;A6.2;NARRADOR;Emociones negativas junto a la coerción psicológica “el paciente se desangrará hasta morir por tu culpa” con absolutamente inaceptables. 
-CASE3;D6.1.1;NARRADOR;Lanzas el intrumento de vuelta a la enfermera y le gritas:
+CASE3;D6.2;NARRADOR;La enferemera de endoscopia pasa al endoscopista 1 el lazo. El endoscopista 1 trabaja, de repente coge el lazo y se lo da a la enfermera de endoscopia. La enfermera de endoscopia lo deja a un lado en la mesa de instrumental.
+CASE3;D6.3;Endoscopista 1;Ha estallado el vaso, veo la intensa hemorragia, pasa los Coagraspers. ¡Rápido!
+CASE3;D6.4;NARRADOR;La enfermera de endoscopia busca repetidamente entre los instrumentos en la mesa de instrumental. Finalmente, le pasa algo al endoscopista 1.
+CASE3;D6.5;Endoscopista 2;Este no es el instrumental correcto.
+CASE3;A6.1;NARRADOR;Emociones negativas vinculadas a manifestaciones físicas de agresión - tirar objetos – son absolutamente inapropiados. 
+CASE3;A6.2;NARRADOR;Emociones negativas junto a la coerción psicológica “el paciente se desangrará hasta morir por tu culpa” son absolutamente inaceptables. 
+CASE3;D6.1.1;NARRADOR;Lanzas el intrumento de vuelta a la enfermera y le gritas.
 CASE3;D6.2.1;Endoscopista 1;¡No quería eso! ¿Qué me estás pasando?
-CASE3;D6.1.2;NARRADOR;Le das la herramienta de vuelta a la enfermera y dices:
-CASE3;D6.2.2;Endoscopista 1;Esto no es el fórceps Coagrasper, dámelo rápido, o el paciente se desangrará hasta morir por tu culpa.
-CASE3;D6.3.1;Endoscopista 1;Quería un fórceps Coagrasper, por favor, dámelo.
-CASE3;D6.1.4;Endoscopista 1;Esto no es el fórceps Coagrasper, ¿Lo has preparado?
+CASE3;D6.1.2;NARRADOR;Devuelves el instrumental a la enfermera de endoscopia y dices:
+CASE3;D6.2.2;Endoscopista 1;¡Estos no son los fórceps Coagrasper! Dámelos rápidamente, o el paciente se desangrará hasta morir por tu culpa.
+CASE3;D6.3.1;Endoscopista 1;Quería unos fórceps Coagrasper, por favor pásamelos.
+CASE3;D6.1.4;Endoscopista 1;Estos no son Coagrasper, ¿Los has preparado?
 CASE3;D6.4.1;Endoscopista 1; Por favor, ayude a la enfermera.
-CASE3;D6.4.2;NARRADOR;El endoscopista 2 y la enfermera de endoscopia buscan la herramienta correcta juntos en la mesa de accesorios.
-CASE3;D7.1;NARRADOR;La enfermera pasa la herramienta correcta y trabajas. Paras la hemorragia y devuelves la herramienta a la enfermera. 
+CASE3;D6.4.2;NARRADOR;El endoscopista 2 y la enfermera de endoscopia buscan juntos el instrumental correcto en la mesa de instrumental.
+CASE3;D7.1;NARRADOR;La enfermera de endoscopia pasa el instrumental correcto, mientras trabajas. Paras la hemorragia, devuelves el instrumental a la enfermera.
 CASE3;D7.2;Endoscopista 1;El sangrado ha parado. ¿Cómo está la situación?
 CASE3;D7.3;Anestesiólogo;El paciente está estable, podemos continuar.
 CASE3;D7.4;Endoscopista 1;Dame un hemoclip, por favor.
-CASE3;D7.1.1;Endoscopista 1;No he entendido ni una palabra. ¿Puedes hablar de forma que te entienda y alto?
-CASE3;D7.1.2;Endoscopista 1;Disculpa, no te he entendido. Por favor, haba más alto, lento y claro.
+CASE3;D7.1.1;Endoscopista 1;No entiendo nada. ¿Puedes hablar de forma comprensible y en voz alta? 
+CASE3;D7.1.2;Endoscopista 1;Disculpa, no te he entendido. Por favor, habla más alto, lento y claro.
 CASE3;D7.1.3;Endoscopista 1;¿Qué? !Qué!
-CASE3;D7.1.4;Endoscopista 1;No puedes asistir, no puedes hablar, esto ya es lo máximo. Podría haberme asistido a mí mismo. 
-CASE3;D8.1;NARRADOR;La enfermera busca nerviosa entre las herramientas, la agarra y se le cae. 
+CASE3;D7.1.4;Endoscopista 1;No puedes asistir, no puedes hablar, es horrible, podría haberme asistido yo mismo. 
+CASE3;D8.1;NARRADOR;La enfermera de endoscopia busca nerviosa entre el instrumental, agarra el instrumento y se le cae. 
 CASE3;D8.2;Anestesiólogo;Probablemente has dormido mal, ¿verdad?
 CASE3;D8.1.1;Endoscopista 1;¿Cómo está el paciente? ¿Qué tal está la presión sanguínea?
 CASE3;D8.2.1;Endoscopista 1;Le puede pasar a cualquiera.
-CASE3;D8.1.2;Endoscopista 1;Por favor, métete en tus asuntos. El paciente está inquieto, no podemos trabajar de forma adecuada.  
+CASE3;D8.1.2;Endoscopista 1;Por favor, preocúpate de tus asuntos. El paciente está inquieto, no podemos trabajar correctamente.  
 CASE3;D8.1.3;Endoscopista 1;Seguid trabajando.
-CASE3;D8.1.4;Endoscopista 1;Probablemente hoy no es tú mejor día.
+CASE3;D8.1.4;Endoscopista 1;Probablemente hoy estés completamente fuera si.
 CASE3;D9.1;NARRADOR;Dirigiendóte a la enfermera de endoscopia.
-CASE3;A9.2;NARRADOR;Los insultos personales son absolultamente inaceptables.
-CASE3;D9.1.1;Endoscopista 1;Vete inmediatamente y llama a la jefa de enfermería.
+CASE3;A9.2;NARRADOR;Los insultos personales son absolutamente inaceptables.
+CASE3;D9.1.1;Endoscopista 1;Sal inmediatamente y llama a la enfermera jefe.
 CASE3;D9.1.2;Endoscopista 1;¡Eres absolutamente inútil!
-CASE3;D9.1.3;Endoscopista 1;¿Hay alguna enfermera disponible para ayudarte? El paciente está complicado. No te preocupes y avisa a una, por favor. 
+CASE3;D9.1.3;Endoscopista 1;¿Hay alguna enfermera disponible para ayudarte? El paciente es complicado. No te preocupes y llámala, por favor. 
 CASE3;D9.1.4;Endoscopista 1;¡¿Debería asistirme a mí mismo?!
 CASE3;D10.1;NARRADOR;La segunda enfermera viene y empieza a ayudar a la primera.
 CASE3;D11.1;NARRADOR;La secretaria entra a la habitación de forma inesperada, y se dirige a ti:
 CASE3;D11.2;Secretario;¿Vas a terminar el procedimiento, por favor? Hay otros cuatro pacientes en la sala de espera, los cuáles han sido programados y están nerviosos.
-CASE3;D11.3;NARRADOR;Las personas externas no deberían tener acceso al teatro. 
+CASE3;D11.3;NARRADOR;Las personas externas que molestan no deberían acceder al quirófano.  
 CASE3;D11.1.1;Endoscopista 1;Por favor, describa la situación a los pacientes programados y asegúrese de que nadie más nos moleste.
 CASE3;D11.1.2;Endoscopista 1;Reprograma las citas de los pacientes en distintos tiempos.
 CASE3;D11.1.3;Endoscopista 1;¡Vete inmediatamente y no nos molestes!
