@@ -391,6 +391,11 @@ public class UI_Manager : MonoBehaviour
     {
         //string path = $"Audio/Case5_EN/{_audio}";
         //TEMPORALMENTE LO VAMOS A FORZAR AL INGLES:
+        if (LanguageManager.Instance.languageSelected == "ES")
+        {
+            return $"Audio/{caso}_ES/{_audio}";
+        }
+
         return $"Audio/{caso}_EN/{_audio}";
 
         /*
