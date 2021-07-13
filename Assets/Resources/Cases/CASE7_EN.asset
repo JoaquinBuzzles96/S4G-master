@@ -766,9 +766,6 @@ MonoBehaviour:
   - BaseNodeGuid: b9ce1a13-3b43-4dcf-86f2-6bd2bce11ee7
     PortName: Dialogue
     TargetNodeGuid: 3f620098-4aeb-46b0-8c0f-01629bc534fc
-  - BaseNodeGuid: c4c311c2-cd85-46a4-a15e-f06ec0783e38
-    PortName: Dialogue
-    TargetNodeGuid: f5065643-d3e8-4629-a9f0-65699f2cfd36
   - BaseNodeGuid: 4c5634d0-62f4-4a60-b840-6dc457844c88
     PortName: Dialogue
     TargetNodeGuid: c91013da-5516-4220-9869-39fe596ad0e9
@@ -841,9 +838,6 @@ MonoBehaviour:
   - BaseNodeGuid: f62b96de-bf9c-4acf-ba35-377de902293e
     PortName: Dialogue
     TargetNodeGuid: 9828b140-cdaa-4349-832f-e2c513e1665d
-  - BaseNodeGuid: 1347faf7-b20c-45d0-9e31-0ec32e0ae4fb
-    PortName: Dialogue
-    TargetNodeGuid: e32854de-9e0c-4113-b969-6c362f562883
   - BaseNodeGuid: 3769729a-2ae6-4d26-beb8-443678ad8fc7
     PortName: Dialogue
     TargetNodeGuid: cd69ad93-20d0-46a8-ad01-c3e9d2def6df
@@ -928,6 +922,12 @@ MonoBehaviour:
   - BaseNodeGuid: 1ccf5775-f21a-42e3-afb7-cd7442aed48a
     PortName: Dialogue
     TargetNodeGuid: 8e5097a0-d8af-4bc8-a0cf-74999225376f
+  - BaseNodeGuid: c4c311c2-cd85-46a4-a15e-f06ec0783e38
+    PortName: Dialogue
+    TargetNodeGuid: f5065643-d3e8-4629-a9f0-65699f2cfd36
+  - BaseNodeGuid: 1347faf7-b20c-45d0-9e31-0ec32e0ae4fb
+    PortName: Dialogue
+    TargetNodeGuid: e32854de-9e0c-4113-b969-6c362f562883
   SituationNodeData:
   - Guid: 36ff957a-4d51-4c5f-aad8-6d3fcf183744
     SituationName: S1B
@@ -1076,21 +1076,21 @@ MonoBehaviour:
     Position: {x: 479, y: 514}
   - Guid: 792a9256-6b56-4617-80bf-390fd1eea8a6
     QuestionName: Q3
-    Description: How would you answer?
+    Description: How would you react?
     audioId: Q3
     speaker: Narrator
     nodeType: 1
     Position: {x: 78, y: 1697}
   - Guid: 8582dc4a-256d-4617-a81e-c2855a14e5e6
     QuestionName: Q1B
-    Description: How would you proceed?
+    Description: How would you react?
     audioId: Q2
     speaker: Narrator
     nodeType: 1
     Position: {x: 2534, y: 578}
   - Guid: 7d3a7ddf-f30b-47d7-b523-f77f8b089e4e
     QuestionName: Q4B
-    Description: How would you answer?
+    Description: How would you react?
     audioId: Q3
     speaker: Narrator
     nodeType: 1
@@ -1111,14 +1111,14 @@ MonoBehaviour:
     Position: {x: 5295, y: 713}
   - Guid: 4f23b467-24c4-4009-90f2-c892e74ea790
     QuestionName: Q4A
-    Description: How would you answer?
+    Description: How would you react?
     audioId: Q3
     speaker: Narrator
     nodeType: 1
     Position: {x: 1597, y: 1817}
   - Guid: ebf90eaf-538b-4be9-81d1-0ec19926cc6b
     QuestionName: Q5
-    Description: How would you answer?
+    Description: How would you react?
     audioId: Q3
     speaker: Narrator
     nodeType: 1
