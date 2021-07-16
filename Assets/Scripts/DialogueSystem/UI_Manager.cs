@@ -1196,6 +1196,13 @@ public class UI_Manager : MonoBehaviour
         ExitButton.SetActive(true);
     }
 
+    IEnumerator SendEmail()
+    {
+        yield return null; //esperamos un frame para que se cargue el panel y ya luego enviamos el correo
+
+        SendMail.Instance.SendEmail();
+    }
+
     public string GetDefaultFeedback()
     {
         switch (LanguageManager.Instance.languageSelected)
