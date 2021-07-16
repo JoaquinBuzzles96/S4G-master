@@ -42,6 +42,7 @@ public class SpecialCases : MonoBehaviour
     public string currentTool = "";
     public string nurseTool = "";
     bool isExtraNurse = false;
+    string nurseName;
 
     #endregion
 
@@ -55,11 +56,11 @@ public class SpecialCases : MonoBehaviour
             {
                 if (currentNurse == 2)
                 {
-                    real_audio_id = audio_id + "2";
+                    //real_audio_id = audio_id + "2"; //TODO: Esto esta comentado hasta que tengamos las voces de las enfermeras extra si es que llegan
                 }
                 else if (currentNurse == 3)
                 {
-                    real_audio_id = audio_id + "3";
+                    //real_audio_id = audio_id + "3";
                 }
 
                 //Debug.Log($"Vamos a cargar el audio {real_audio_id} de la enfermera {currentNurse}");
@@ -73,8 +74,12 @@ public class SpecialCases : MonoBehaviour
     {
         Case3Resources.Instance.mask.SetActive(true);
         Debug.Log($"currentNurse = {currentNurse}");
-        UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().canvasName.text = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().canvasName.text + $" {currentNurse}";
-        UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurseExtra"].gameObject.GetComponent<HandPosition>().canvasName.text = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurseExtra"].gameObject.GetComponent<HandPosition>().canvasName.text + $" {currentNurse + 1}";
+        if (currentNurse == 2) //entra cuando ya se ha incrementado
+        {
+            nurseName = UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().canvasName.text;
+        }
+        UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurse"].gameObject.GetComponent<HandPosition>().canvasName.text = nurseName + $" {currentNurse}";
+        UI_Manager.Instance.dictionaryCharacteres["EndoscopyNurseExtra"].gameObject.GetComponent<HandPosition>().canvasName.text = nurseName + $" {currentNurse + 1}";
     }
 
     public void CheckSituation(string situation_id) //SITUATION 5 AND 3
