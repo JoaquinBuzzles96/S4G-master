@@ -44,6 +44,8 @@ public class SpecialCases : MonoBehaviour
     bool isExtraNurse = false;
     string nurseName;
 
+    public Rigidbody toolToThrow;
+
     #endregion
 
     public string ChechkAudio(string audio_id, string _speaker)
@@ -804,6 +806,7 @@ public class SpecialCases : MonoBehaviour
     {
         Debug.Log($"Le tiras la herramienta a la cabeza");
         playingAnimation = true;
+
         anim = "Throw";
         yield return PlaySimpleAnim(UI_Manager.Instance.dictionaryCharacteres["Endoscopist1"].gameObject, anim);
         currentTool = "";
@@ -1538,6 +1541,20 @@ public class SpecialCases : MonoBehaviour
 
     IEnumerator PlaySimpleAnim(GameObject character, string animName, string propName = "Herramienta", string target = "Endoscopist1")
     {
+        if (animName == "Throw")
+        {
+            if (toolToThrow == null)
+            {
+                toolToThrow = GameObject.Find("HerramientaErronea")?.GetComponent<Rigidbody>();
+            }
+
+            if (toolToThrow != null)
+            {
+                toolToThrow.isKinematic = false;
+            }
+            
+        }
+
         //Parametros de entrada: quien hace la anumacion, nombre de la animacion, nombre de la herramienta, hacia quien hace la animacion
         playingAnimation = true;
         //IMPORTANTE: La animacion y la transicion deben de tener el mismo nombre para que funcione bien
