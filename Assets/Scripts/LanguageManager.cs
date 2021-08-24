@@ -45,7 +45,7 @@ public class LanguageManager : MonoBehaviour
 
         isThirdPerson = false;
 
-
+        //languageSelected = 
 
 
         //Testing
