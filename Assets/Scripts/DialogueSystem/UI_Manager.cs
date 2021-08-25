@@ -400,6 +400,11 @@ public class UI_Manager : MonoBehaviour
             Debug.Log($"Vamos a buscar en la ruta: Audio/{caso}_CZ/{_audio}");
             return $"Audio/{caso}_CZ/{_audio}";
         }
+        else if (LanguageManager.Instance.languageSelected == "HU")
+        {
+            Debug.Log($"Vamos a buscar en la ruta: Audio/{caso}_HU/{_audio}");
+            return $"Audio/{caso}_HU/{_audio}";
+        }
 
         return $"Audio/{caso}_EN/{_audio}";
 
