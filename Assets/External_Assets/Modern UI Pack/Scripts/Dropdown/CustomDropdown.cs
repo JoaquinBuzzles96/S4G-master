@@ -20,7 +20,7 @@ namespace Michsky.UI.ModernUIPack
         public GameObject itemObject;
         public GameObject scrollbar;
         public VerticalLayoutGroup itemList;
-        [HideInInspector] public Transform currentListParent;
+        public Transform currentListParent;
         public Transform listParent;
         public AudioSource soundSource;
 

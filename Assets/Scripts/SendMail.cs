@@ -140,7 +140,7 @@ public class SendMail : MonoBehaviour
             "\n Case: " + LanguageManager.Instance.caseSelected +
             "\n Languague: " + LanguageManager.Instance.languageSelected +
             "\n Total time: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds." +
-            "\n Total score:" + UI_Manager.Instance.totalScore +
+            "\n Total score:" + UI_Manager.Instance.scorePercentage + " %"+
             "\n Total decisions:" + UI_Manager.Instance.totalDecisions +
             "\n Correct decisions:" + UI_Manager.Instance.totalCorrectAnswers +
             UI_Manager.Instance.playereRoute;

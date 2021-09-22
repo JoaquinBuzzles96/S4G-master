@@ -48,7 +48,7 @@ public class QuestionUI : MonoBehaviour
     AnswerNodeData correctAnswer;
     int maxScore;
 
-    int timerLimit = 25; //TODO: Poner a 25 segundos de nuevo
+    public int timerLimit = 25;
     int scorePenalty = 5;
     int scorePenalty2 = 5;
 

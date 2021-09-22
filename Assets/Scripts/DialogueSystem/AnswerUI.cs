@@ -63,9 +63,19 @@ public class AnswerUI : MonoBehaviour
     public void OnSelectAnswer()
     {
         UI_Manager.Instance.totalDecisions++;
-        if (answerData.IsCorrect)
+        if (answerData.score > 0)
         {
-            UI_Manager.Instance.totalCorrectAnswers++;
+            //Comprobar lo que ha tardado, si ha tardado mas de la mitad solo se suma 0.5
+            if (Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) > QuestionUI.Instance.timerLimit)
+            {
+                UI_Manager.Instance.totalCorrectAnswers = UI_Manager.Instance.totalCorrectAnswers + 0.5f;
+            }
+            else
+            {
+                UI_Manager.Instance.totalCorrectAnswers = UI_Manager.Instance.totalCorrectAnswers + 1f;
+            }
+
+
         }
         QuestionUI.Instance.arrowBlink.ResetValues();
         UI_Manager.Instance.AddTextToRoute("The answer was: " + answerData.AnswerName + "\n" + "Time to answer: " + Mathf.RoundToInt(Time.time - UI_Manager.Instance.lastTime) + " seconds.\n Score: " + answerData.score+ "\n");

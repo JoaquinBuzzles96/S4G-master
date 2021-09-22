@@ -700,9 +700,6 @@ MonoBehaviour:
   - BaseNodeGuid: 221af4f8-6e54-4cbe-89c6-da4a7e298e0f
     PortName: Dialogue
     TargetNodeGuid: b07ca209-0065-40b7-9ac6-69c5670d2225
-  - BaseNodeGuid: 221af4f8-6e54-4cbe-89c6-da4a7e298e0f
-    PortName: Situation
-    TargetNodeGuid: 7acbb3dd-582f-4627-a44a-47b59dda81b0
   - BaseNodeGuid: 88cfc11e-11a0-4a36-9084-adcb8861a231
     PortName: Dialogue
     TargetNodeGuid: b6d8ddae-183e-48c7-a49f-eadba4cf475a
@@ -718,15 +715,9 @@ MonoBehaviour:
   - BaseNodeGuid: be46a910-9c6b-4812-a535-d3d67a2c4791
     PortName: Dialogue
     TargetNodeGuid: ea799ff5-748e-4403-b4f8-7b26cca38c63
-  - BaseNodeGuid: be46a910-9c6b-4812-a535-d3d67a2c4791
-    PortName: Situation
-    TargetNodeGuid: 7acbb3dd-582f-4627-a44a-47b59dda81b0
   - BaseNodeGuid: b29423c6-1884-466e-9b65-c6ad65f3c0c5
     PortName: Dialogue
     TargetNodeGuid: 07fffd98-5443-4c99-96ed-bb191ea3b019
-  - BaseNodeGuid: b29423c6-1884-466e-9b65-c6ad65f3c0c5
-    PortName: Situation
-    TargetNodeGuid: 7acbb3dd-582f-4627-a44a-47b59dda81b0
   - BaseNodeGuid: abf6ae05-e497-413b-bc63-d2d6be410b97
     PortName: Dialogue
     TargetNodeGuid: cc146472-e421-4ae8-aa03-9dc665032261
@@ -736,9 +727,6 @@ MonoBehaviour:
   - BaseNodeGuid: 00bb2c0c-36b8-4993-9cad-a6cc504c19a5
     PortName: Dialogue
     TargetNodeGuid: 872d35e2-de73-4738-8afc-3e8c0b0333b4
-  - BaseNodeGuid: 00bb2c0c-36b8-4993-9cad-a6cc504c19a5
-    PortName: Situation
-    TargetNodeGuid: 7acbb3dd-582f-4627-a44a-47b59dda81b0
   - BaseNodeGuid: bd872938-9f83-4c1c-b717-0bf8cda3784a
     PortName: Dialogue
     TargetNodeGuid: 70e7aa29-ed30-490a-bfc9-3192dc180cd1
@@ -772,9 +760,6 @@ MonoBehaviour:
   - BaseNodeGuid: db799846-b2ea-4076-9a3b-e468d3465cca
     PortName: Dialogue
     TargetNodeGuid: a4687849-0090-40e7-9f82-42b0089e7575
-  - BaseNodeGuid: db799846-b2ea-4076-9a3b-e468d3465cca
-    PortName: Situation
-    TargetNodeGuid: 7acbb3dd-582f-4627-a44a-47b59dda81b0
   - BaseNodeGuid: 3e4e2757-45ea-4521-b941-e108c590c9ce
     PortName: Dialogue
     TargetNodeGuid: a2b1a97a-c5b8-4d6a-94a5-b2d4f93571e4
@@ -784,9 +769,6 @@ MonoBehaviour:
   - BaseNodeGuid: f0796001-324b-4bcb-866b-c9a3e45844b2
     PortName: Dialogue
     TargetNodeGuid: f1cf7da4-0279-4461-9d9b-6ca9f41cd766
-  - BaseNodeGuid: f0796001-324b-4bcb-866b-c9a3e45844b2
-    PortName: Situation
-    TargetNodeGuid: 7acbb3dd-582f-4627-a44a-47b59dda81b0
   - BaseNodeGuid: edf68ebb-f5b6-4ea1-b1a2-8f3616e10343
     PortName: Dialogue
     TargetNodeGuid: 06388a4a-72be-43f7-a739-9870e9b454eb
@@ -811,9 +793,6 @@ MonoBehaviour:
   - BaseNodeGuid: 8f48aef5-30bb-4924-a8d4-2ac4d493153f
     PortName: Dialogue
     TargetNodeGuid: bab6861e-0488-4626-92fd-3139f491abc4
-  - BaseNodeGuid: 8f48aef5-30bb-4924-a8d4-2ac4d493153f
-    PortName: Situation
-    TargetNodeGuid: 7025cac0-4523-446e-9535-5253708cd667
   - BaseNodeGuid: 5202da51-8fa8-4f44-af9c-6bb5e765863a
     PortName: Dialogue
     TargetNodeGuid: a6f5c34f-6161-45dd-b9ed-f815afc0335d
@@ -838,6 +817,27 @@ MonoBehaviour:
   - BaseNodeGuid: 1bfef044-1cf2-4cdb-966e-11d1a27e4561
     PortName: Dialogue
     TargetNodeGuid: 04dc3512-3f83-4b75-8577-6809a4e3510d
+  - BaseNodeGuid: 00bb2c0c-36b8-4993-9cad-a6cc504c19a5
+    PortName: Situation
+    TargetNodeGuid: 03d67d61-6e08-4efb-aea6-783c49782a73
+  - BaseNodeGuid: 221af4f8-6e54-4cbe-89c6-da4a7e298e0f
+    PortName: Situation
+    TargetNodeGuid: 03d67d61-6e08-4efb-aea6-783c49782a73
+  - BaseNodeGuid: f0796001-324b-4bcb-866b-c9a3e45844b2
+    PortName: Situation
+    TargetNodeGuid: 03d67d61-6e08-4efb-aea6-783c49782a73
+  - BaseNodeGuid: 8f48aef5-30bb-4924-a8d4-2ac4d493153f
+    PortName: Situation
+    TargetNodeGuid: 03d67d61-6e08-4efb-aea6-783c49782a73
+  - BaseNodeGuid: be46a910-9c6b-4812-a535-d3d67a2c4791
+    PortName: Situation
+    TargetNodeGuid: 03d67d61-6e08-4efb-aea6-783c49782a73
+  - BaseNodeGuid: b29423c6-1884-466e-9b65-c6ad65f3c0c5
+    PortName: Situation
+    TargetNodeGuid: 03d67d61-6e08-4efb-aea6-783c49782a73
+  - BaseNodeGuid: db799846-b2ea-4076-9a3b-e468d3465cca
+    PortName: Situation
+    TargetNodeGuid: 03d67d61-6e08-4efb-aea6-783c49782a73
   SituationNodeData:
   - Guid: 83b140d6-f9f8-4933-a24b-af3e5ea92be6
     SituationName: S1

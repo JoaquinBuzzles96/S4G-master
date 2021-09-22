@@ -93,9 +93,10 @@ public class UI_Manager : MonoBehaviour
     [HideInInspector]
     public string playereRoute = "";
     public int totalScore; 
-    public int totalCorrectAnswers; 
-    public int totalDecisions; 
+    public float totalCorrectAnswers; 
+    public float totalDecisions; 
     public float lastTime;
+    public int scorePercentage;
 
 
     //Camera positions
@@ -967,6 +968,7 @@ public class UI_Manager : MonoBehaviour
             dictionaryCharacteres["Anaesthesiologist"].gameObject.SetActive(true);
             //dictionaryCharacteres["HeadSurgeon"].gameObject.SetActive(true);
             dictionaryCharacteres["CirculatingNurse"].gameObject.SetActive(true);
+            dictionaryCharacteres["AnaesthesiaNurse"].gameObject.SetActive(true);
             //dictionaryCharacteres["Patient"].gameObject.SetActive(true);
         }
         else if (currentCase == Cases.Case7)
@@ -1170,10 +1172,15 @@ public class UI_Manager : MonoBehaviour
         {
             totalScore = 0;
         }
+
+        //Caslculamos en porcentaje:
+        scorePercentage = (int)((totalCorrectAnswers / totalDecisions) * 100);
+
+
         if (answer == null) //default feedback
         {
             string feedback = GetDefaultFeedback();
-            feedbackText.text = $"{feedback} \n Score: {totalScore}";
+            feedbackText.text = $"{feedback} \n Score: {scorePercentage} %";
             //Add feedback to email
             //AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
             AddTextToRoute($"Feedback: {feedback}");
@@ -1181,18 +1188,17 @@ public class UI_Manager : MonoBehaviour
         }
         else
         {
-            //TODO: Obtener este feedback traducido
             string feedbackTranslated = LanguageManager.Instance.GetFeedback(answer);
             if (isValid(feedbackTranslated))
             {
                 StartCoroutine(PlaySimpleDialogue(answer.audioId, nextButtonFeedback));
             }
             
-            feedbackText.text = $"{feedbackTranslated} \n Score: {totalScore}";
+            feedbackText.text = $"{feedbackTranslated} \n Score: {scorePercentage} %";
             //Add feedback to email
             AddTextToRoute("\n Total time playing: " + Mathf.RoundToInt(Time.time / 60) + " minuts and " + Mathf.RoundToInt(Time.time % 60) + " seconds.");
             AddTextToRoute($"Feedback: {feedbackTranslated}");
-            AddTextToRoute($"Final score: {totalScore}");
+            AddTextToRoute($"Final score: {scorePercentage} %");
 
         }
 
