@@ -5703,7 +5703,7 @@ Transform:
   - {fileID: 1119863533}
   - {fileID: 824063145}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &110836758 stripped
 Transform:
@@ -12006,7 +12006,7 @@ Transform:
   - {fileID: 1190316989}
   - {fileID: 38604360}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &244207142
 Mesh:
@@ -133146,6 +133146,7 @@ MonoBehaviour:
   prop: {fileID: 1410339198}
   currentTool: 
   nurseTool: 
+  toolToThrow: {fileID: 0}
 --- !u!4 &8032381319744113802
 Transform:
   m_ObjectHideFlags: 0
