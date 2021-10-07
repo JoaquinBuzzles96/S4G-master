@@ -1,4 +1,16 @@
-﻿using System.Collections;
+﻿/*  ------ S4Game Consortium --------------
+*  This library is free software; you can redistribute it and/or
+*  modify it under the terms of the GNU Lesser General Public
+*  License as published by the Free Software Foundation; either
+*  version 3 of the License, or (at your option) any later version.
+*  This library is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+*  Lesser General Public License for more details.
+*  You should have received a copy of the GNU Lesser General Public
+*  License along with this library; if not, write to the Free Software
+*  CCMIJU, Carretera Nacional 521, Km 41.8 – 1007, Cáceres, Spain*/
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -73,30 +85,6 @@ public class LanguageManager : MonoBehaviour
             case7LanguageData = new List<DialogueDataBean>();
             case9LanguageData = new List<DialogueDataBean>();
 
-            /* if (languageSelected != "EN")
-             {
-                 ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{UI_Manager.Instance.currentCase}_{languageSelected}.csv");
-             }
-            */
-            //C:\Users\Joaquin\Documents\GitHub\S4G-master\Assets\StreamingAssets\Resources\Languages\Case3_PT.csv".
-            //Debug.Log($" antes del switch: C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv");
-            //Application.streamingAssetsPath + $"/Resources/Cases/{caso}_{LanguageManager.Instance.languageSelected}";
-
-            /* OPCION 1 QUE NO FUNCIONA
-            //VR (ANDROID)
-            string path = Application.streamingAssetsPath + $"/Languages/{caseSelected}_{languageSelected}.csv";
-            //string path = Application.persistentDataPath + $"/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv";
-            Debug.Log("ANDROID PATH: " + path);
-            //WINDOWS
-
-#if UNITY_EDITOR_WIN || UNITY_EDITOR || UNITY_STANDALONE_WIN || UNITY_STANDALONE
-            path = System.IO.Directory.GetCurrentDirectory() + $"/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv";
-            Debug.Log("DESKTOP PATH: " + path);
-#endif
-            ReadCSVLanguages(path);
-            */
-
-            //OPCION ALTERNATIVA: 
             TextAsset list = Resources.Load($"Languages/{caseSelected}_{languageSelected}", typeof(TextAsset)) as TextAsset;
             //Debug.Log("Antes de la conversion a string: " + list.text);
 
@@ -120,28 +108,6 @@ public class LanguageManager : MonoBehaviour
             //ReadCSVLanguages(System.IO.Directory.GetCurrentDirectory() + $"/Assets/Resources/Languages/{caseSelected}_{languageSelected}.csv");
             //ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
         }
-
-        /*
-        switch (caseSelected)
-        {
-            case "CASE3":
-                Debug.Log($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
-                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case3_{languageSelected}.csv");
-                break;
-            case "CASE5":
-                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case5_{languageSelected}.csv"); 
-                break;
-            case "CASE6":
-                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case6_{languageSelected}.csv");
-                break;
-            case "CASE7":
-                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case7_{languageSelected}.csv");
-                break;
-            case "CASE9":
-                ReadCSVLanguages($"C:/Users/Joaquin/Documents/GitHub/S4G-master/Assets/Resources/Languages/Case9_{languageSelected}.csv");
-                break;
-        }
-        */
     }
 
 

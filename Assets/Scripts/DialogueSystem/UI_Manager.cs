@@ -1,4 +1,16 @@
-﻿using System.Collections;
+﻿/*  ------ S4Game Consortium --------------
+*  This library is free software; you can redistribute it and/or
+*  modify it under the terms of the GNU Lesser General Public
+*  License as published by the Free Software Foundation; either
+*  version 3 of the License, or (at your option) any later version.
+*  This library is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+*  Lesser General Public License for more details.
+*  You should have received a copy of the GNU Lesser General Public
+*  License along with this library; if not, write to the Free Software
+*  CCMIJU, Carretera Nacional 521, Km 41.8 – 1007, Cáceres, Spain*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -1070,7 +1082,7 @@ public class UI_Manager : MonoBehaviour
         }
         
         nextButtonContext.SetActive(false);
-        StartCoroutine(PlaySimpleDialogue(situation.audioId)); //TESTING: , nextButtonContext
+        StartCoroutine(PlaySimpleDialogue(situation.audioId));
 
         //Debug.Log($"Se ha configurado el contexto de la situacion {situation.SituationName}");
 
@@ -1124,16 +1136,6 @@ public class UI_Manager : MonoBehaviour
         lastSituation = situation;
 
         currentQuestion = Random.Range(0, questions.Count); //COGEMOS UNA ALEATORIA
-
-        /*
-        if (currentQuestion == lastQuestion) //SI ES LA MISMA QUE LA ANTERIOR CAMBIAMOS --> ESTO HABRA QUE MODIFICARLO PARA QUE SEA UN CJECH SI HSE HA HECHO EN ALGUN MOMENTO
-        {
-            currentQuestion++;
-            currentQuestion = currentQuestion % questions.Count;
-            //Debug.Log($"Como la pregunta era la misma que la anterior la cambiamos: current: {currentQuestion} last: {lastQuestion}");
-        }
-        */
-        //Debug.Log("Vamos a configurar el question data");
 
         screen3.GetComponent<QuestionUI>().questionData = questions[currentQuestion];
         screen3.GetComponent<QuestionUI>().SetupQuestion(lastOption, situation);
@@ -1201,10 +1203,6 @@ public class UI_Manager : MonoBehaviour
             AddTextToRoute($"Final score: {scorePercentage} %");
 
         }
-
-        //StartCoroutine(SpecialCases.Instance.ExitRoom());
-        
-
         //Send email
         Debug.Log("Enviamos un mail con la infomacion");
         SendMail.Instance.SendEmail();
