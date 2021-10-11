@@ -1,4 +1,16 @@
-﻿using System.Collections;
+﻿/*  ------ S4Game Consortium --------------
+*  This library is free software; you can redistribute it and/or
+*  modify it under the terms of the GNU Lesser General Public
+*  License as published by the Free Software Foundation; either
+*  version 3 of the License, or (at your option) any later version.
+*  This library is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+*  Lesser General Public License for more details.
+*  You should have received a copy of the GNU Lesser General Public
+*  License along with this library; if not, write to the Free Software
+*  CCMIJU, Carretera Nacional 521, Km 41.8 – 1007, Cáceres, Spain*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -78,6 +90,12 @@ public class OptionsManager : MonoBehaviour
     {
         Debug.Log($"Vamos a intentar cargar el caso {selectedCase.text} con el idioma {LanguageManager.Instance.languageSelected}");
 
+        //TODO: Comprobar aqui que caso esta seleccionado y actualizar el idioma!!
+
+        //Actualizamos el idioma
+        LanguageManager.Instance.UpdateLanguage();
+
+
         if (IsInfoValid())
         {
             if (selectedCase.text != null && selectedCase.text != "")
@@ -147,7 +165,8 @@ public class OptionsManager : MonoBehaviour
 
     public bool IsInfoValid()
     {
-        return true; //temporal hasta que arreglemos el teclado
+        //No pedimos verificacion, si quisieramos hay que quitar el return
+        return true; 
         //nos devolvera true si se han completado los camopos de name y correo
         if (SendMail.Instance.m_UserName == "Usuario Default" || SendMail.Instance.m_UserName == "" || SendMail.Instance.m_UserMail == "s4game@viralstudios.es" || SendMail.Instance.m_UserMail == "") 
         {

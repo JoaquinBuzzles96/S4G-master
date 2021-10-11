@@ -85,6 +85,7 @@ namespace Michsky.UI.ModernUIPack
 
         void Start()
         {
+            Debug.Log("Entramos en el start del dropdown");
             try
             {
                 dropdownAnimator = gameObject.GetComponent<Animator>();
@@ -92,7 +93,7 @@ namespace Michsky.UI.ModernUIPack
 
                 if (dropdownItems.Count != 0)
                 {
-                    SetupDropdown();
+                    SetupDropdown(true); //suponemos que es el de idiomas
                 }
                 else //si esta vacio suponemos que es el dropdown de cases
                 {
@@ -122,8 +123,8 @@ namespace Michsky.UI.ModernUIPack
             {
                 if (invokeAtStart == true)
                     dropdownItems[PlayerPrefs.GetInt(dropdownTag + "Dropdown")].OnItemSelection.Invoke();
-                else
-                    ChangeDropdownInfo(PlayerPrefs.GetInt(dropdownTag + "Dropdown"));
+                //else
+                  //  ChangeDropdownInfo(PlayerPrefs.GetInt(dropdownTag + "Dropdown"));
             }
         }
 
@@ -154,7 +155,7 @@ namespace Michsky.UI.ModernUIPack
                 }
             }
             //Debug.Log($"Ahora vamos a hacer el setup del dropdown");
-            SetupDropdown();
+            SetupDropdown(false);
         }
 
         private bool Exists(string element)
@@ -181,7 +182,7 @@ namespace Michsky.UI.ModernUIPack
             }
         }
 
-        public void SetupDropdown()
+        public void SetupDropdown(bool isLanguage = false) 
         {
             foreach (Transform child in itemParent)
                 GameObject.Destroy(child.gameObject);
@@ -222,10 +223,47 @@ namespace Michsky.UI.ModernUIPack
                     dropdownItems[i].OnItemSelection.Invoke();
             }
 
+            //English seria el primero
 
             selectedText.text = dropdownItems[selectedItemIndex].itemName;
             selectedImage.sprite = dropdownItems[selectedItemIndex].itemIcon;
             currentListParent = transform.parent;
+
+            Debug.Log("Vamos a comprobar si es el DROPDOWN de idiomas!");
+
+            //Asignar aqui el selected.text en caso de ser un languague
+            if (isLanguage)
+            {
+                UpdateLanguage(selectedText.text);
+            }
+        }
+
+        public void UpdateLanguage(string language)
+        {
+            Debug.Log("Es el dropdown de idiomas");
+            switch (language)
+            {
+                case "English":
+                    Debug.Log("El idioma seleccionado es ingles");
+                    LanguageManager.Instance.SelectLanguage("EN");
+                    break;
+                case "Español":
+                    Debug.Log("El idioma seleccionado es español");
+                    LanguageManager.Instance.SelectLanguage("ES");
+                    break;
+                case "Português":
+                    Debug.Log("El idioma seleccionado es portugues");
+                    LanguageManager.Instance.SelectLanguage("PT");
+                    break;
+                case "Čeština":
+                    Debug.Log("El idioma seleccionado es checo");
+                    LanguageManager.Instance.SelectLanguage("CZ");
+                    break;
+                case "Hungarian":
+                    Debug.Log("El idioma seleccionado es hungaro");
+                    LanguageManager.Instance.SelectLanguage("HU");
+                    break;
+            }
         }
 
         public void ChangeDropdownInfo(int itemIndex)
