@@ -197,7 +197,19 @@ public class QuestionUI : MonoBehaviour
         bool penalty1 = true;
 
         //esperamos a que acabe el audio antes de empezar el timer:
-        yield return new WaitForSeconds(UI_Manager.Instance.audioSource.clip.length + 1f);
+        float timerAux = 0.5f;
+        try
+        {
+            timerAux = UI_Manager.Instance.audioSource.clip.length;
+
+        }
+        catch (System.Exception)
+        {
+
+        }
+
+
+        yield return new WaitForSeconds(timerAux + 1f);
 
         //en un futuro esto se sacara del question data, de momento lo seteamos a mano
  
