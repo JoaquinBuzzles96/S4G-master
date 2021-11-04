@@ -1,4 +1,5 @@
 # S4Game Project
+![logo-S4-game](https://user-images.githubusercontent.com/34502879/140333382-17bb3411-f6de-45f2-940b-0169289d1691.png)
 Project reference number: 2018-1-ES01-KA202-050943
 
 In this repository you can find the source code for the S4Game serious game. For further information, please visit our project website: https://s4game.eu/
